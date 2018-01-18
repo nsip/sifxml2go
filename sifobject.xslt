@@ -1,0 +1,114 @@
+<xsl:stylesheet version="1.0"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:sif="http://sifassociation.org/SpecGen"
+  xmlns:exsl="http://exslt.org/common"
+  xmlns:str="http://exslt.org/strings"
+  extension-element-prefixes="exsl"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:output method="text"  encoding="utf-8"/>
+
+  <xsl:strip-space elements="*" />
+
+  <xsl:template match="/">
+    package xml
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="text()">
+    <xsl:value-of select="normalize-space()"/>
+  </xsl:template>
+
+  <xsl:template match="//sif:Key | //sif:EventsReported | //sif:Description | //sif:Intro | //sif:Characteristics | //xhtml:Example"/>
+
+  <xsl:template match="/sif:DataObject | //sif:CommonElement">
+    type <xsl:apply-templates/>
+    <xsl:if test="sif:Item[2]">
+      }
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="/sif:DataObject/sif:Item[1] | //sif:CommonElement/sif:Item[1]">
+    <xsl:choose>
+      <xsl:when test="../sif:Item[2]">
+        <xsl:value-of select="sif:Element"/> struct { 
+      </xsl:when>
+      <xsl:otherwise> 
+        <xsl:choose>
+          <xsl:when test="sif:Element">
+            <xsl:value-of select="sif:Element"/> 
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="sif:Attribute"/> 
+          </xsl:otherwise>
+        </xsl:choose> <xsl:text> </xsl:text> 
+        <xsl:call-template name="type_extract">
+          <xsl:with-param name="type" select="sif:Type"/>
+          <xsl:with-param name="characteristics" select="sif:Characteristics"/>
+        </xsl:call-template> 
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="/sif:DataObject/sif:Item[position()>1] | //sif:CommonElement/sif:Item[position()>1]">
+    <xsl:variable name="indent" select=' string-length(sif:Element) - string-length(translate(sif:Element, "/", ""))'/>
+    <xsl:if test="$indent>0"> ##<xsl:value-of select="$indent"/> </xsl:if>
+    <xsl:choose>
+      <xsl:when test="sif:Element">
+        <xsl:call-template name="safe_name">
+          <xsl:with-param name="name" select="normalize-space(sif:Element)"/> 
+        </xsl:call-template>
+        <xsl:text> </xsl:text> 
+        <xsl:call-template name="type_extract">
+          <xsl:with-param name="type" select="sif:Type"/>
+          <xsl:with-param name="characteristics" select="sif:Characteristics"/>
+        </xsl:call-template> `xml:"<xsl:value-of select="translate(sif:Element, '/', '')"/>"`
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="safe_name">
+          <xsl:with-param name="name" select="normalize-space(sif:Attribute)"/> 
+        </xsl:call-template>
+        <xsl:text> </xsl:text> 
+        <xsl:call-template name="type_extract">
+          <xsl:with-param name="type" select="sif:Type"/>
+          <xsl:with-param name="characteristics" select="sif:Characteristics"/>
+        </xsl:call-template> `xml:"<xsl:value-of select="translate(sif:Attribute, '/', '')"/>,attr"`
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="safe_name">
+    <xsl:param name="name"/>
+    <xsl:choose>
+      <xsl:when test="contains($name, ':')">
+        <xsl:variable name='lowers' select='"abcdefghijklmnopqrstuvwxyz"' />
+        <xsl:variable name='uppers' select='"ABCDEFGHIJKLMNOPQRSTUVWXYZ"' />
+        <xsl:variable name='localname' select='substring-after($name,":")' />
+        <!-- https://stackoverflow.com/questions/13122545/convert-first-character-of-each-word-to-upper-case -->
+        <xsl:value-of select='concat(
+          translate(substring($localname, 1, 1), $lowers, $uppers),
+          translate(substring($localname, 2), $uppers, $lowers),
+          " "
+          )' />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="translate($name, '/', '')"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="type_extract">
+    <xsl:param name="type"/>
+    <xsl:param name="characteristics"/>
+    <xsl:if test="'R' = substring($characteristics, string-length($characteristics))">[]</xsl:if>
+    <xsl:choose>
+      <xsl:when test="exsl:node-set($type)/@ref = 'CommonTypes'">
+        <xsl:value-of select="exsl:node-set($type)/@name"/>
+      </xsl:when>
+      <xsl:otherwise>string</xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+
+</xsl:stylesheet>
