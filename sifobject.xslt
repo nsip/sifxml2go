@@ -11,7 +11,6 @@
   <xsl:strip-space elements="*" />
 
   <xsl:template match="/">
-    package xml
     <xsl:apply-templates/>
   </xsl:template>
 
@@ -23,15 +22,24 @@
 
   <xsl:template match="/sif:DataObject | //sif:CommonElement">
     type <xsl:apply-templates/>
-    <xsl:if test="sif:Item[2]">
+    <xsl:if test="sif:Item[2] | sif:Choice">
       }
     </xsl:if>
   </xsl:template>
 
   <xsl:template match="/sif:DataObject/sif:Item[1] | //sif:CommonElement/sif:Item[1]">
     <xsl:choose>
-      <xsl:when test="../sif:Item[2]">
-        <xsl:value-of select="sif:Element"/> struct { 
+      <xsl:when test="../sif:Item[2] | ../sif:Choice">
+        <xsl:value-of select="sif:Element"/> struct {
+        <xsl:if test="sif:Type">
+          <xsl:text>%Inherits: </xsl:text> 
+          <xsl:call-template name="type_extract">
+            <xsl:with-param name="type" select="sif:Type | sif:Values | sif:Union"/>
+            <xsl:with-param name="characteristics" select="M"/>
+            <!-- the characteristics on the base item of a common element is meaningless -->
+            </xsl:call-template> <xsl:text> ;
+          </xsl:text>
+        </xsl:if>
       </xsl:when>
       <xsl:otherwise> 
         <xsl:choose>
@@ -43,36 +51,32 @@
           </xsl:otherwise>
         </xsl:choose> <xsl:text> </xsl:text> 
         <xsl:call-template name="type_extract">
-          <xsl:with-param name="type" select="sif:Type"/>
+          <xsl:with-param name="type" select="sif:Type | sif:Values | sif:Union"/>
           <xsl:with-param name="characteristics" select="sif:Characteristics"/>
         </xsl:call-template> 
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="/sif:DataObject/sif:Item[position()>1] | //sif:CommonElement/sif:Item[position()>1]">
+  <xsl:template match="/sif:DataObject/sif:Item[position()>1] | //sif:CommonElement/sif:Item[position()>1] | /sif:DataObject//sif:Choice/sif:Item | //sif:CommonElement/sif:Choice/sif:Item ">
     <xsl:variable name="indent" select=' string-length(sif:Element) - string-length(translate(sif:Element, "/", ""))'/>
     <xsl:if test="$indent>0"> ##<xsl:value-of select="$indent"/> </xsl:if>
     <xsl:choose>
       <xsl:when test="sif:Element">
-        <xsl:call-template name="safe_name">
-          <xsl:with-param name="name" select="normalize-space(sif:Element)"/> 
-        </xsl:call-template>
-        <xsl:text> </xsl:text> 
+        <xsl:value-of select="translate(sif:Element, '/', '')"/>
+        <xsl:text>: </xsl:text> 
         <xsl:call-template name="type_extract">
-          <xsl:with-param name="type" select="sif:Type"/>
+          <xsl:with-param name="type" select="sif:Type | sif:Values | sif:Union"/>
           <xsl:with-param name="characteristics" select="sif:Characteristics"/>
-        </xsl:call-template> `xml:"<xsl:value-of select="translate(sif:Element, '/', '')"/>"`
+        </xsl:call-template> `xml:"<xsl:value-of select="translate(sif:Element, '/', '')"/>"`;
       </xsl:when>
       <xsl:otherwise>
-        <xsl:call-template name="safe_name">
-          <xsl:with-param name="name" select="normalize-space(sif:Attribute)"/> 
-        </xsl:call-template>
-        <xsl:text> </xsl:text> 
+        <xsl:value-of select="translate(sif:Attribute, '/', '')"/>
+        <xsl:text>: </xsl:text> 
         <xsl:call-template name="type_extract">
-          <xsl:with-param name="type" select="sif:Type"/>
+          <xsl:with-param name="type" select="sif:Type | sif:Values | sif:Union"/>
           <xsl:with-param name="characteristics" select="sif:Characteristics"/>
-        </xsl:call-template> `xml:"<xsl:value-of select="translate(sif:Attribute, '/', '')"/>,attr"`
+        </xsl:call-template> `xml:"<xsl:value-of select="translate(sif:Attribute, '/', '')"/>,attr"`;
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -104,6 +108,9 @@
     <xsl:choose>
       <xsl:when test="exsl:node-set($type)/@ref = 'CommonTypes'">
         <xsl:value-of select="exsl:node-set($type)/@name"/>
+      </xsl:when>
+      <xsl:when test="not($type)">
+        <xsl:text>EMPTY</xsl:text>
       </xsl:when>
       <xsl:otherwise>string</xsl:otherwise>
     </xsl:choose>
