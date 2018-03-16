@@ -1,4 +1,4 @@
-print "package xml\n\n";
+print "package sifxml\n\n";
 
 while(<>) {
   s/Inherits://;
