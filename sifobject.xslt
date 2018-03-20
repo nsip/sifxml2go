@@ -109,6 +109,9 @@
       <xsl:when test="exsl:node-set($type)/@ref = 'CodeSets'">
         <xsl:text>string</xsl:text>
       </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@ref = 'ExternalCodeSets'">
+        <xsl:text>string</xsl:text>
+      </xsl:when>
       <xsl:when test="exsl:node-set($type)/@ref = 'CommonTypes'">
         <xsl:value-of select="exsl:node-set($type)/@name"/>
       </xsl:when>
