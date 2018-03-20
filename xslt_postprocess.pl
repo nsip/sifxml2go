@@ -38,9 +38,12 @@ sub inherited_types(@) {
   my @lines = @_;
   my @lines1 = ();
   foreach (@lines) {
-    if (/%Inherits/) {
-      s/%Inherits: string ;/%Value: string `xml:",chardata"`/;
+    if (/%Inherits: (string|xs:\S+|AUCodeSet\S+) ;/) {
+      s/%Inherits: \S+ ;/%Value: string `xml:",chardata"`/;
       $hold = $_;
+    } elsif (/%Inherits/) {
+      s/%Inherits: (\S+) ;/$1/;
+      push @lines1, $_;
     } else {
       s/^/%/ if ($hold and not /\}/);
       push @lines1, $_ unless /\}/;

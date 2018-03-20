@@ -109,6 +109,9 @@
       <xsl:when test="exsl:node-set($type)/@ref = 'CommonTypes'">
         <xsl:value-of select="exsl:node-set($type)/@name"/>
       </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name">
+        <xsl:value-of select="exsl:node-set($type)/@name"/>
+      </xsl:when>
       <xsl:when test="not($type)">
         <xsl:text>EMPTY</xsl:text>
       </xsl:when>
