@@ -1,9 +1,13 @@
 #!/bin/bash
-rm -fr specgen_input
-git clone https://github.com/nsip/specgen_input.git
+#rm -fr specgen_input
+#git clone https://github.com/nsip/specgen_input.git
 mkdir -p sifxml
 mkdir -p sifgraphql
 echo "" > sifgraphql/sif-schema.graphql
+echo "package sifxml\n" > sifxml/examples.go
+# echo "import (\n\"testing\"\n)\n" >> sifxml/examples.go
+
+
 for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
   if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]]; then
     continue
@@ -21,3 +25,17 @@ cat specgen_input/80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml >> data.
 echo '</root>' >> data.xml
 xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/DataModel.go
 xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
+
+for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
+  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]]; then
+    continue
+  fi
+  perl sifexamples.pl "$filename" >> sifxml/examples.go
+done
+for filename in ./specgen_input/06_DataModel/Custom/AU/*.xml; do
+  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]]; then
+    continue
+  fi
+  perl sifexamples.pl "$filename" >> sifxml/examples.go
+done
+cat sifxml/examples.go | perl siftest.pl > sifxml/sifxml_test.go
