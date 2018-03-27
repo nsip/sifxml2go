@@ -2,6 +2,7 @@ while(<>) {
   if(m#</xhtml:Example>#) {
     $example = 0;
     $out =~ s/ xml:lang="en"//;
+    $out =~ s/<!--.*?-->//g;
     ($object) = $out =~ m/<(\S+)/;
     print "var test_$name = `$out`\n";
     $name = "";

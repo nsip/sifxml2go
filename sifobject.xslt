@@ -106,6 +106,9 @@
     <xsl:param name="characteristics"/>
     <xsl:if test="'R' = substring($characteristics, string-length($characteristics))">[]</xsl:if>
     <xsl:choose>
+      <xsl:when test="exsl:node-set($type)/@name = 'IdRefType'">
+        <xsl:text>string</xsl:text>
+      </xsl:when>
       <xsl:when test="exsl:node-set($type)/@ref = 'CodeSets'">
         <xsl:text>string</xsl:text>
       </xsl:when>
