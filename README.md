@@ -25,6 +25,6 @@ The `run.sh` script also extracts all examples from specgen, and generates unit 
 
 The `run.sh` script also converts these XML definitions into GraphQL schemas (output to `/sifgraphql`). However those conversions do not currently deal with type extensions (for example, NameOfRecordType is an extension of BaseNameType, but is not populated in the GraphQL schema. So right now, no names work.)
 
-The project further converts those XML struct definitions into XML structs that can be consumed by the (https://github.com/clbanning/mxj)[MXJ] library, which maps between string maps and structs (`sh mxj.sh`, output to `/sifxmlmxj`). These definitions are used by the https://github.com/nsip/nias3 project, which uses the map structures to map SIF/XML documents to triples and back.
+The project further converts those XML struct definitions into XML structs that can be consumed by the [https://github.com/clbanning/mxj](MXJ) library, which maps between string maps and structs (`sh mxj.sh`, output to `/sifxmlmxj`). These definitions are used by the https://github.com/nsip/nias3 project, which uses the map structures to map SIF/XML documents to triples and back.
 
 The project is not currently set up to generate JSON output from XML structs. (The sifxmlmxj structures are tagged for JSON, but their JSON is specific to the MXJ map structures: a variant of Goessner notation, with `-` prefixing XML attributes. We have had to use `Value` instead of `#text` for values of elements with attributes, because Golang does not permit navigating object paths with hash prefixes.)
