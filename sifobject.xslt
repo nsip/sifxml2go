@@ -58,6 +58,28 @@
     </xsl:choose>
   </xsl:template>
 
+
+  <xsl:template match="//sif:Grouping/sif:CodeSet">
+        <xsl:apply-templates/>
+  ]
+  </xsl:template>
+
+  <xsl:template match="//sif:Grouping/sif:CodeSet/sif:ID">
+    ENUM <xsl:value-of select="../../@code"/><xsl:value-of select="translate(., ' ()[]/-', '')"/> [
+  </xsl:template>
+
+  <xsl:template match="//sif:Grouping/sif:CodeSet/sif:Values/sif:Value/sif:Text">
+  </xsl:template>
+
+  <xsl:template match="//sif:Grouping/sif:CodeSet/sif:Values/sif:Value[1]/sif:Code">
+    <xsl:value-of select="."/>
+    </xsl:template>
+
+    <xsl:template match="//sif:Grouping/sif:CodeSet/sif:Values/sif:Value[position()>1]/sif:Code">
+    <xsl:text>, </xsl:text>
+    <xsl:value-of select="."/>
+    </xsl:template>
+
   <xsl:template match="/sif:DataObject/sif:Item[position()>1] | //sif:CommonElement/sif:Item[position()>1] | /sif:DataObject//sif:Choice/sif:Item | //sif:CommonElement/sif:Choice/sif:Item ">
     <xsl:variable name="indent" select=' string-length(sif:Element) - string-length(translate(sif:Element, "/", ""))'/>
     <xsl:if test="$indent>0"> ##<xsl:value-of select="$indent"/> </xsl:if>

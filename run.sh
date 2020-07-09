@@ -60,6 +60,13 @@ echo '</root>' >> data.xml
 xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/DataModel.go
 xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
 
+echo '<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" >' > codesets.xml
+cat specgen_input/80_BackMatter/Custom/DataModel-CodeSets-Custom.xml >> codesets.xml
+cat specgen_input/80_BackMatter/Custom/DataModel-ExternalCodeSets-Custom.xml >> codesets.xml
+echo '</root>' >> codesets.xml
+
+xsltproc sifobject.xslt codesets.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/Codesets.go
+
 # 4. Examples
 
 for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do

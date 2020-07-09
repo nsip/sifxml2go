@@ -28,11 +28,34 @@ while(<>) {
   push @lines, $_;
 }
 
-@lines = indent_attrs(xsi_types(inherited_types(@lines)));
+@lines = indent_attrs(xsi_types(inherited_types(codesets(@lines))));
 while(grep(/#/, @lines)) {
   @lines = resolve_embedded(@lines);
 }
 (resolve_attrs(@lines));
+
+
+
+sub codesets(@) {
+  my @lines = @_;
+  my @lines1 = ();
+  while ($_ = shift @lines) {
+    if (/ENUM (\S+) \[/) {
+      $type = $1;
+      push @lines1, "type $type string\n";
+      $_ = shift @lines;
+      s/^\s+|\s+$//g;
+      @elems = split /, /;
+      push @lines1, "var ${type}_values = []string{";
+      push @lines1, join(", ", map("\"$_\"", @elems));
+      push @lines1, "}";
+      shift @lines;
+    } else {
+      push @lines1, $_;
+    }
+  }
+  return @lines1;
+}
 
 
 sub inherited_types(@) {
@@ -185,9 +208,9 @@ sub resolve_embedded(@) {
         push @lines2, sprintf ("}\n");
       }
 =cut
-        if ($prev_indent eq '##1' or !$indent) {
-          push @lines2, sprintf ("}\n");
-        }
+if ($prev_indent eq '##1' or !$indent) {
+  push @lines2, sprintf ("}\n");
+}
       }
     } else {
       $indent = "" if /^\stype /;
