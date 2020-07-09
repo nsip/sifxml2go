@@ -39,7 +39,7 @@ for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/ReportAuthorityInfo.xml" ]] ; then
     continue
   fi
-  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/$(basename "$filename" .xml).go
+  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl -s struct2go.pl -o > sifxml/$(basename "$filename" .xml).go
   xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
 done
 for filename in ./specgen_input/06_DataModel/Custom/AU/*.xml; do
@@ -49,7 +49,7 @@ for filename in ./specgen_input/06_DataModel/Custom/AU/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/$(basename "$filename" .xml).go
+  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl -s struct2go.pl -o > sifxml/$(basename "$filename" .xml).go
   xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
 done
 

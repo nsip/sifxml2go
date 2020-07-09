@@ -13,8 +13,14 @@ import (
 var emptytag1 = regexp.MustCompile(`(?s:\\s*<[^>/]+></[^>]+>\\s*)`)
 var emptytag2 = regexp.MustCompile(`(?s:\\s*<[^>/]+/>\\s*)`)
 var emptytag3 = regexp.MustCompile(`(?s:\\s+[^>='" ]+=(''|""))`)
+var pointzero1 = regexp.MustCompile(`(?s:>(\\d*)\\.0+<)`)
+var pointzero2 = regexp.MustCompile(`(?s:>(\\d*\\.\\d+?)0+<)`)
+var noleadpoint = regexp.MustCompile(`(?s:>(\\.\\d+)<)`)
 
 func stripEmptyTags(s []byte) []byte {
+        s = pointzero1.ReplaceAll(s, []byte(">\$1<"))
+        s = pointzero2.ReplaceAll(s, []byte(">\$1<"))
+        s = noleadpoint.ReplaceAll(s, []byte(">0\$1<"))
         s = emptytag1.ReplaceAll(s, []byte(""))
         s = emptytag1.ReplaceAll(s, []byte(""))
         s = emptytag1.ReplaceAll(s, []byte(""))

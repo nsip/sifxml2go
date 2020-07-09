@@ -1,24 +1,26 @@
 package sifxml
 
 
+type StudentPeriodAttendances []StudentPeriodAttendance
+
     type StudentPeriodAttendance struct {
-        RefId RefIdType `xml:"RefId,attr"`
-      StudentPersonalRefId string `xml:"StudentPersonalRefId"`
-      SchoolInfoRefId string `xml:"SchoolInfoRefId"`
-      Date string `xml:"Date"`
-      SessionInfoRefId string `xml:"SessionInfoRefId"`
-      ScheduledActivityRefId string `xml:"ScheduledActivityRefId"`
-      TimetablePeriod string `xml:"TimetablePeriod"`
-      TimeIn string `xml:"TimeIn"`
-      TimeOut string `xml:"TimeOut"`
-      AttendanceCode AttendanceCodeType `xml:"AttendanceCode"`
-      AttendanceStatus string `xml:"AttendanceStatus"`
-      SchoolYear SchoolYearType `xml:"SchoolYear"`
-      AuditInfo AuditInfoType `xml:"AuditInfo"`
-      AttendanceComment string `xml:"AttendanceComment"`
-      LocalCodeList LocalCodeListType `xml:"LocalCodeList"`
-      SIF_Metadata SIF_MetadataType `xml:"SIF_Metadata"`
-      SIF_ExtendedElements SIF_ExtendedElementsType `xml:"SIF_ExtendedElements"`
+        RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
+      StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
+      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
+      Date *string `xml:"Date,omitempty" json:"Date"`
+      SessionInfoRefId *string `xml:"SessionInfoRefId,omitempty" json:"SessionInfoRefId"`
+      ScheduledActivityRefId *string `xml:"ScheduledActivityRefId,omitempty" json:"ScheduledActivityRefId"`
+      TimetablePeriod *string `xml:"TimetablePeriod,omitempty" json:"TimetablePeriod"`
+      TimeIn *string `xml:"TimeIn,omitempty" json:"TimeIn"`
+      TimeOut *string `xml:"TimeOut,omitempty" json:"TimeOut"`
+      AttendanceCode *AttendanceCodeType `xml:"AttendanceCode,omitempty" json:"AttendanceCode"`
+      AttendanceStatus *string `xml:"AttendanceStatus,omitempty" json:"AttendanceStatus"`
+      SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear"`
+      AuditInfo *AuditInfoType `xml:"AuditInfo,omitempty" json:"AuditInfo"`
+      AttendanceComment *string `xml:"AttendanceComment,omitempty" json:"AttendanceComment"`
+      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
+      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
+      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`
       
       }
     

@@ -32,13 +32,18 @@ while(<>) {
 while(grep(/#/, @lines)) {
   @lines = resolve_embedded(@lines);
 }
-resolve_attrs(@lines);
+(resolve_attrs(@lines));
+
 
 sub inherited_types(@) {
   my @lines = @_;
   my @lines1 = ();
   foreach (@lines) {
-    if (/%Inherits: (string|xs:\S+|AUCodeSet\S+) ;/) {
+    if (/%Inherits: (int|float64|bool) ;/) {
+      $type = $1;
+      s/%Inherits: \S+ ;/%Value: $type `xml:",chardata"`/;
+      $hold = $_;
+    } elsif (/%Inherits: (string|xs:\S+|AUCodeSet\S+) ;/) {
       s/%Inherits: \S+ ;/%Value: string `xml:",chardata"`/;
       $hold = $_;
     } elsif (/%Inherits/) {
@@ -54,7 +59,6 @@ sub inherited_types(@) {
       $hold = '';
     }
   }
-  #foreach (@lines1) { print ;}
   return @lines1;
 }
 
@@ -70,6 +74,26 @@ sub xsi_types(@) {
   }
   return @lines1;
 }
+
+sub add_json(@) {
+  my @lines = @_;
+  my @lines1 = ();
+  my ($prev);
+  my @obj = ();
+  foreach (@lines) {
+    if (m/\btype /) {
+      push @lines1 , @obj;
+      @obj = ();
+    }
+    s/`xml:"([^,]+),attr"`/`xml:"\1,attr" json:"\1"`/;
+    s/`xml:",chardata"`/`xml:",chardata" json:"value"`/;
+    s/`xml:"([^,]+)"`/`xml:"\1,omitempty" json:"\1"`/;
+    push @obj, $_;
+  }
+  push @lines1 , @obj;
+  return @lines1;
+}
+
 
 sub indent_attrs(@) {
   my @lines = @_;
@@ -112,7 +136,6 @@ sub indent_attrs(@) {
     $prev_object = $object if $object;
   }
   foreach (@lines1) { s/%//; }
-#foreach (@lines1) { print ;}
   return @lines1;
 }
 
@@ -180,7 +203,6 @@ sub resolve_embedded(@) {
     $prev_object = $object if $object;
   }
   push @lines1, $prev;
-#foreach (@lines1, @lines2) { print;}
   return (@lines1, @lines2);
 }
 

@@ -118,6 +118,51 @@
       <xsl:when test="exsl:node-set($type)/@ref = 'CommonTypes'">
         <xsl:value-of select="exsl:node-set($type)/@name"/>
       </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:unsignedInt'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:integer'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:decimal'">
+        <xsl:text>float64</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:byte'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:int'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:long'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:negativeInteger'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:nonNegativeInteger'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:positiveInteger'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:short'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:unsignedLong'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:unsignedShort'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:unsignedByte'">
+        <xsl:text>int</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:decimal'">
+        <xsl:text>float64</xsl:text>
+      </xsl:when>
+      <xsl:when test="exsl:node-set($type)/@name = 'xs:boolean'">
+        <xsl:text>bool</xsl:text>
+      </xsl:when>
       <xsl:when test="substring(exsl:node-set($type)/@name, 1, 3) = 'xs:'">
         <xsl:text>string</xsl:text>
       </xsl:when>

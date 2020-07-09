@@ -13,11 +13,11 @@
       Prerequisites: PrerequisitesType 
       Students: StudentsType 
       SourceObjects: SourceObjectsType 
-      Points: String 
+      Points: int 
       ActivityTime: ActivityTimeType 
       AssessmentRefId: String 
-      MaxAttemptsAllowed: String 
-      ActivityWeight: String 
+      MaxAttemptsAllowed: int 
+      ActivityWeight: float64 
       Evaluation: Activity_Evaluation 
       LearningResources: LearningResourcesType 
       LocalCodeList: LocalCodeListType 
@@ -46,7 +46,7 @@
       AggregateStatisticInfoRefId: String 
       Characteristics: CharacteristicsType 
       Excluded: String 
-      Value: String 
+      Value: float64 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
       SIF_ExtendedElements: SIF_ExtendedElementsType 
@@ -82,7 +82,7 @@
       SchoolInfoRefId: String 
       SchoolYear: SchoolYearType 
       CalendarDateType: CalendarDateInfoType 
-      CalendarDateNumber: String 
+      CalendarDateNumber: int 
       StudentAttendance: AttendanceInfoType 
       TeacherAttendance: AttendanceInfoType 
       AdministratorAttendance: AttendanceInfoType 
@@ -98,14 +98,14 @@
       SchoolYear: SchoolYearType 
       LocalId: LocalIdType 
       Description: String 
-      DaysInSession: String 
+      DaysInSession: int 
       StartDate: String 
       EndDate: String 
       FirstInstructionDate: String 
       LastInstructionDate: String 
       GraduationDate: GraduationDateType 
-      InstructionalMinutes: String 
-      MinutesPerDay: String 
+      InstructionalMinutes: int 
+      MinutesPerDay: int 
       YearLevels: YearLevelsType 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
@@ -140,11 +140,11 @@
       SchoolInfoRefId: String 
       GradingCategory: String 
       Description: String 
-      PointsPossible: String 
+      PointsPossible: int 
       CreateDate: String 
       DueDate: String 
-      Weight: String 
-      MaxAttemptsAllowed: String 
+      Weight: float64 
+      MaxAttemptsAllowed: int 
       DetailedDescriptionURL: String 
       DetailedDescriptionBinary: String 
       AssessmentType: String 
@@ -169,9 +169,9 @@
       GradingAssignmentRefId: String 
       StaffPersonalRefId: String 
       DateGraded: String 
-      ExpectedScore: String 
-      ScorePoints: String 
-      ScorePercent: String 
+      ExpectedScore: bool 
+      ScorePoints: int 
+      ScorePercent: float64 
       ScoreLetter: String 
       ScoreDescription: String 
       SubscoreList: NAPSubscoreListType 
@@ -302,17 +302,17 @@
       SchoolInfoRefId: String 
       YearLevels: YearLevelsType 
       Name: String 
-      PercentageMinimum: String 
-      PercentageMaximum: String 
-      PercentagePassingGrade: String 
-      NumericPrecision: String 
-      NumericScale: String 
-      NumericLow: String 
-      NumericHigh: String 
-      NumericPassingGrade: String 
+      PercentageMinimum: float64 
+      PercentageMaximum: float64 
+      PercentagePassingGrade: float64 
+      NumericPrecision: int 
+      NumericScale: int 
+      NumericLow: float64 
+      NumericHigh: float64 
+      NumericPassingGrade: float64 
       ValidLetterMarkList: ValidLetterMarkListType 
       Narrative: String 
-      NarrativeMaximumSize: String 
+      NarrativeMaximumSize: int 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
       SIF_ExtendedElements: SIF_ExtendedElementsType 
@@ -369,7 +369,7 @@ type PersonPicture_PictureSource {
       Booker: String 
       Reason: String 
       ScheduledActivityRefId: String 
-      KeepOld: String 
+      KeepOld: bool 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
       SIF_ExtendedElements: SIF_ExtendedElementsType 
@@ -427,8 +427,8 @@ type ResourceUsage_SIF_RefId {
       Description: String 
       Building: String 
       HomeroomNumber: String 
-      Size: String 
-      Capacity: String 
+      Size: float64 
+      Capacity: int 
       PhoneNumber: PhoneNumberType 
       RoomType: String 
       AvailableForTimetable: String 
@@ -513,7 +513,7 @@ type ResourceUsage_SIF_RefId {
       PhoneNumberList: PhoneNumberListType 
       SessionType: String 
       YearLevels: YearLevelsType 
-      ARIA: String 
+      ARIA: float64 
       OperationalStatus: OperationalStatusType 
       FederalElectorate: String 
       Campus: CampusContainerType 
@@ -608,7 +608,7 @@ type ResourceUsage_SIF_RefId {
       PrimaryAssignment: String 
       JobStartDate: String 
       JobEndDate: String 
-      JobFTE: String 
+      JobFTE: float64 
       JobFunction: String 
       EmploymentStatus: String 
       StaffSubjectList: StaffSubjectListType 
@@ -680,14 +680,14 @@ type ResourceUsage_SIF_RefId {
       SchoolYear: SchoolYearType 
       StartDate: String 
       EndDate: String 
-      StartDay: String 
-      EndDay: String 
-      FTE: String 
-      DaysAttended: String 
-      ExcusedAbsences: String 
-      UnexcusedAbsences: String 
-      DaysTardy: String 
-      DaysInMembership: String 
+      StartDay: int 
+      EndDay: int 
+      FTE: float64 
+      DaysAttended: float64 
+      ExcusedAbsences: float64 
+      UnexcusedAbsences: float64 
+      DaysTardy: float64 
+      DaysInMembership: float64 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
       SIF_ExtendedElements: SIF_ExtendedElementsType 
@@ -731,7 +731,7 @@ type ResourceUsage_SIF_RefId {
       HouseholdList: HouseholdListType 
       ContactFlags: ContactFlagsType 
       MainlySpeaksEnglishAtHome: String 
-      ContactSequence: String 
+      ContactSequence: int 
       ContactSequenceSource: String 
       SchoolInfoRefId: String 
       LocalCodeList: LocalCodeListType 
@@ -751,7 +751,7 @@ type ResourceUsage_SIF_RefId {
       AttendanceStatus: String 
       TimeIn: String 
       TimeOut: String 
-      AbsenceValue: String 
+      AbsenceValue: float64 
       AttendanceNote: String 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
@@ -804,11 +804,11 @@ type ResourceUsage_SIF_RefId {
       NOREPDate: String 
       PlacementParentalConsentDate: String 
       ProgramPlacementDate: String 
-      ExtendedSchoolYear: String 
-      ExtendedDay: String 
+      ExtendedSchoolYear: bool 
+      ExtendedDay: bool 
       ProgramAvailability: ProgramAvailabilityType 
       EntryPerson: String 
-      StudentSpecialEducationFTE: String 
+      StudentSpecialEducationFTE: float64 
       ParticipationContact: String 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
@@ -900,7 +900,7 @@ type ResourceUsage_SIF_RefId {
       ExitDate: String 
       ExitStatus: StudentExitStatusContainerType 
       ExitType: StudentExitContainerType 
-      FTE: String 
+      FTE: float64 
       FTPTStatus: String 
       FFPOS: String 
       CatchmentStatus: CatchmentStatusContainerType 
@@ -916,7 +916,7 @@ type ResourceUsage_SIF_RefId {
       PublishingPermissionList: PublishingPermissionListType 
       DisabilityLevelOfAdjustment: String 
       DisabilityCategory: String 
-      CensusAge: String 
+      CensusAge: float64 
       DistanceEducationStudent: String 
       BoardingStatus: String 
       InternationalStudent: String 
@@ -1039,11 +1039,11 @@ type SystemRole_RoleScopeRefId {
       TimeTableSubjectRefId: RefIdType 
       TimeTableSubjectLocalId: LocalIdType 
       KeyLearningArea: String 
-      Semester: String 
+      Semester: int 
       StudentList: StudentListType 
       TeacherList: TeacherListType 
-      MinClassSize: String 
-      MaxClassSize: String 
+      MinClassSize: int 
+      MaxClassSize: int 
       TeachingGroupPeriodList: TeachingGroupPeriodListType 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
@@ -1058,7 +1058,7 @@ type SystemRole_RoleScopeRefId {
       StartDate: String 
       EndDate: String 
       Description: String 
-      RelativeDuration: String 
+      RelativeDuration: float64 
       TermCode: String 
       Track: String 
       TermSpan: String 
@@ -1077,9 +1077,9 @@ type SystemRole_RoleScopeRefId {
       SchoolYear: SchoolYearType 
       LocalId: LocalIdType 
       Title: String 
-      DaysPerCycle: String 
-      PeriodsPerDay: String 
-      TeachingPeriodsPerDay: String 
+      DaysPerCycle: int 
+      PeriodsPerDay: int 
+      TeachingPeriodsPerDay: int 
       SchoolLocalId: LocalIdType 
       SchoolName: String 
       TimeTableCreationDate: String 
@@ -1139,11 +1139,11 @@ type SystemRole_RoleScopeRefId {
       SubjectShortName: String 
       SubjectLongName: String 
       SubjectType: String 
-      ProposedMaxClassSize: String 
-      ProposedMinClassSize: String 
+      ProposedMaxClassSize: float64 
+      ProposedMinClassSize: float64 
       SchoolInfoRefId: String 
       SchoolLocalId: LocalIdType 
-      Semester: String 
+      Semester: int 
       SchoolYear: SchoolYearType 
       OtherCodeList: OtherCodeListType 
       LocalCodeList: LocalCodeListType 
@@ -1222,7 +1222,7 @@ type SystemRole_RoleScopeRefId {
     type WellbeingEvent {
         RefId: RefIdType 
       StudentPersonalRefId: String 
-      GroupIndicator: String 
+      GroupIndicator: bool 
       SchoolInfoRefId: String 
       EventId: LocalIdType 
       WellbeingEventNotes: String 
@@ -1423,7 +1423,7 @@ type SystemRole_RoleScopeRefId {
       Ledger: String 
       ChargedLocationInfoRefId: String 
       NetAmount: MonetaryAmountType 
-      TaxRate: String 
+      TaxRate: float64 
       TaxType: String 
       TaxAmount: MonetaryAmountType 
       CreatedBy: String 
@@ -1482,11 +1482,11 @@ type SystemRole_RoleScopeRefId {
       ElectronicIdList: ElectronicIdListType 
       TransactionList: LibraryTransactionListType 
       MessageList: LibraryMessageListType 
-      NumberOfCheckouts: String 
-      NumberOfOverdues: String 
-      NumberOfFines: String 
+      NumberOfCheckouts: int 
+      NumberOfOverdues: int 
+      NumberOfFines: int 
       FineAmount: MonetaryAmountType 
-      NumberOfRefunds: String 
+      NumberOfRefunds: int 
       RefundAmount: MonetaryAmountType 
       SIF_Metadata: SIF_MetadataType 
       SIF_ExtendedElements: SIF_ExtendedElementsType 
@@ -1524,10 +1524,10 @@ type SystemRole_RoleScopeRefId {
       StartTime: String 
       LapsedTimeTest: String 
       ExemptionReason: String 
-      PersonalDetailsChanged: String 
-      PSIOtherIdMatch: String 
-      PossibleDuplicate: String 
-      DOBRange: String 
+      PersonalDetailsChanged: bool 
+      PSIOtherIdMatch: bool 
+      PossibleDuplicate: bool 
+      DOBRange: bool 
       TestDisruptionList: TestDisruptionListType 
       Adjustment: AdjustmentContainerType 
       LocalCodeList: LocalCodeListType 
@@ -1538,7 +1538,7 @@ type SystemRole_RoleScopeRefId {
     
     type NAPStudentResponseSet {
         RefId: RefIdType 
-      ReportExclusionFlag: String 
+      ReportExclusionFlag: bool 
       CalibrationSampleFlag: String 
       EquatingSampleFlag: String 
       PathTakenForDomain: String 
@@ -1579,11 +1579,11 @@ type SystemRole_RoleScopeRefId {
       SchoolACARAId: LocalIdType 
       NAPTestRefId: String 
       NAPTestLocalId: LocalIdType 
-      DomainNationalAverage: String 
-      DomainSchoolAverage: String 
-      DomainJurisdictionAverage: String 
-      DomainTopNational60Percent: String 
-      DomainBottomNational60Percent: String 
+      DomainNationalAverage: float64 
+      DomainSchoolAverage: float64 
+      DomainJurisdictionAverage: float64 
+      DomainTopNational60Percent: float64 
+      DomainBottomNational60Percent: float64 
       LocalCodeList: LocalCodeListType 
       SIF_Metadata: SIF_MetadataType 
       SIF_ExtendedElements: SIF_ExtendedElementsType 
@@ -1617,7 +1617,7 @@ type SystemRole_RoleScopeRefId {
       FinancialAccountRefIdList: FinancialAccountRefIdListType 
       AccountCodeList: AccountCodeListType 
       TransactionDescription: String 
-      TaxRate: String 
+      TaxRate: float64 
       TaxAmount: MonetaryAmountType 
       TransactionMethod: String 
       ChequeNumber: String 
@@ -1638,7 +1638,7 @@ type SystemRole_RoleScopeRefId {
       EmployeePersonalRefId: String 
       PurchasingItems: PurchasingItemsType 
       CreationDate: String 
-      TaxRate: String 
+      TaxRate: float64 
       TaxAmount: MonetaryAmountType 
       TotalAmount: MonetaryAmountType 
       UpdateDate: String 
@@ -1703,7 +1703,7 @@ type SystemRole_RoleScopeRefId {
     type MonetaryAmountType {
           Currency: String 
       
-        Value: String 
+        Value: float64 
       }
     
     type ObjectNameType String
@@ -1830,12 +1830,12 @@ type SystemRole_RoleScopeRefId {
         StatsCohortId: LocalIdType 
       StatsIndigenousStudentType: String 
       CohortGender: String 
-      DaysInReferencePeriod: String 
-      PossibleSchoolDays: String 
-      AttendanceDays: String 
-      AttendanceLess90Percent: String 
-      AttendanceGTE90Percent: String 
-      PossibleSchoolDaysGT90PercentAttendance: String 
+      DaysInReferencePeriod: int 
+      PossibleSchoolDays: int 
+      AttendanceDays: float64 
+      AttendanceLess90Percent: int 
+      AttendanceGTE90Percent: int 
+      PossibleSchoolDaysGT90PercentAttendance: int 
       
       }
     
@@ -1931,16 +1931,16 @@ type SystemRole_RoleScopeRefId {
       StaffActivity: StaffActivityExtensionType 
       CohortGender: String 
       CohortIndigenousType: String 
-      PrimaryFTE: String 
-      SecondaryFTE: String 
-      JobFTE: String 
-      Headcount: String 
+      PrimaryFTE: float64 
+      SecondaryFTE: float64 
+      JobFTE: float64 
+      Headcount: int 
       
       }
     
     type StaffAssignmentMostRecentContainerType {
-        PrimaryFTE: String 
-      SecondaryFTE: String 
+        PrimaryFTE: float64 
+      SecondaryFTE: float64 
       
       }
     
@@ -1952,7 +1952,7 @@ type SystemRole_RoleScopeRefId {
     type CensusStudentType {
         StudentCohortId: LocalIdType 
       YearLevel: YearLevelType 
-      CensusAge: String 
+      CensusAge: int 
       CohortGender: String 
       CohortIndigenousType: String 
       EducationMode: String 
@@ -1960,8 +1960,8 @@ type SystemRole_RoleScopeRefId {
       OverseasStudent: String 
       DisabilityLevelOfAdjustment: String 
       DisabilityCategory: String 
-      FTE: String 
-      Headcount: String 
+      FTE: float64 
+      Headcount: int 
       
       }
     
@@ -2020,10 +2020,10 @@ type SystemRole_RoleScopeRefId {
     
     type FQItemType {
         FQItemCode: String 
-      TuitionAmount: String 
-      BoardingAmount: String 
-      SystemAmount: String 
-      DioceseAmount: String 
+      TuitionAmount: float64 
+      BoardingAmount: float64 
+      SystemAmount: float64 
+      DioceseAmount: float64 
       FQComments: String 
       
       }
@@ -2052,9 +2052,9 @@ type SystemRole_RoleScopeRefId {
       SchoolYear: SchoolYearType 
       LocalId: LocalIdType 
       Title: String 
-      DaysPerCycle: String 
-      PeriodsPerDay: String 
-      TeachingPeriodsPerDay: String 
+      DaysPerCycle: int 
+      PeriodsPerDay: int 
+      TeachingPeriodsPerDay: int 
       SchoolLocalId: LocalIdType 
       SchoolName: String 
       TimeTableCreationDate: String 
@@ -2111,11 +2111,11 @@ type SystemRole_RoleScopeRefId {
       SchoolCourseLocalId: LocalIdType 
       TimeTableSubjectRefId: RefIdType 
       TimeTableSubjectLocalId: LocalIdType 
-      Semester: String 
+      Semester: int 
       StudentList: StudentListType 
       TeacherList: TeacherListType 
-      MinClassSize: String 
-      MaxClassSize: String 
+      MinClassSize: int 
+      MaxClassSize: int 
       TeachingGroupPeriodList: TeachingGroupPeriodListType 
       
       }
@@ -2129,7 +2129,7 @@ type SystemRole_RoleScopeRefId {
         LocalisedCode: String 
       Description: String 
       Element: String 
-      ListIndex: String 
+      ListIndex: int 
       
       }
     
@@ -2182,7 +2182,7 @@ type SystemRole_RoleScopeRefId {
       }
     
     type StandardHierarchyLevelType {
-        Number: String 
+        Number: int 
       Description: String 
       
       }
@@ -2223,7 +2223,7 @@ type SystemRole_RoleScopeRefId {
     
     type ValidLetterMarkType {
         Code: String 
-      NumericEquivalent: String 
+      NumericEquivalent: float64 
       Description: String 
       
       }
@@ -2246,13 +2246,13 @@ type SystemRole_RoleScopeRefId {
     
     type AssignmentScoreType {
         GradingAssignmentScoreRefId: String 
-      Weight: String 
+      Weight: float64 
       
       }
     
     type GradeType {
-        Percentage: String 
-      Numeric: String 
+        Percentage: float64 
+      Numeric: float64 
       Letter: String 
       Narrative: String 
       MarkInfoRefId: String 
@@ -2368,7 +2368,7 @@ type SystemRole_RoleScopeRefId {
         SuspensionCategory: String 
       SuspensionNotes: String 
       WithdrawalTimeList: WithdrawalTimeListType 
-      Duration: String 
+      Duration: float64 
       AdvisementDate: String 
       ResolutionMeetingTime: String 
       ResolutionNotes: String 
@@ -2443,17 +2443,17 @@ type SystemRole_RoleScopeRefId {
       Subdomain: String 
       WritingGenre: String 
       ItemDescriptor: String 
-      ReleasedStatus: String 
+      ReleasedStatus: bool 
       MarkingType: String 
-      MultipleChoiceOptionCount: String 
+      MultipleChoiceOptionCount: int 
       CorrectAnswer: String 
-      MaximumScore: String 
-      ItemDifficulty: String 
-      ItemDifficultyLogit5: String 
-      ItemDifficultyLogit62: String 
-      ItemDifficultyLogit5SE: String 
-      ItemDifficultyLogit62SE: String 
-      ItemProficiencyBand: String 
+      MaximumScore: float64 
+      ItemDifficulty: float64 
+      ItemDifficultyLogit5: float64 
+      ItemDifficultyLogit62: float64 
+      ItemDifficultyLogit5SE: float64 
+      ItemDifficultyLogit62SE: float64 
+      ItemProficiencyBand: int 
       ItemProficiencyLevel: String 
       ExemplarURL: String 
       ItemSubstitutedForList: SubstituteItemListType 
@@ -2467,8 +2467,8 @@ type SystemRole_RoleScopeRefId {
         NAPTestletLocalId: LocalIdType 
       TestletName: String 
       Node: String 
-      LocationInStage: String 
-      TestletMaximumScore: String 
+      LocationInStage: int 
+      TestletMaximumScore: float64 
       
       }
     
@@ -2479,14 +2479,14 @@ type SystemRole_RoleScopeRefId {
       TestType: String 
       Domain: String 
       TestYear: SchoolYearType 
-      StagesCount: String 
+      StagesCount: int 
       DomainBands: DomainBandsContainerType 
       DomainProficiency: DomainProficiencyContainerType 
       
       }
     
     type PlausibleScaledValueListType {
-        PlausibleScaledValue: [String] 
+        PlausibleScaledValue: [float64] 
       
       }
     
@@ -2509,7 +2509,7 @@ type SystemRole_RoleScopeRefId {
     
     type CodeFrameTestItemType {
         TestItemRefId: String 
-      SequenceNumber: String 
+      SequenceNumber: int 
       TestItemContent: NAPTestItemContentType 
       
       }
@@ -2520,38 +2520,38 @@ type SystemRole_RoleScopeRefId {
       }
     
     type DomainBandsContainerType {
-        Band1Lower: String 
-      Band1Upper: String 
-      Band2Lower: String 
-      Band2Upper: String 
-      Band3Lower: String 
-      Band3Upper: String 
-      Band4Lower: String 
-      Band4Upper: String 
-      Band5Lower: String 
-      Band5Upper: String 
-      Band6Lower: String 
-      Band6Upper: String 
-      Band7Lower: String 
-      Band7Upper: String 
-      Band8Lower: String 
-      Band8Upper: String 
-      Band9Lower: String 
-      Band9Upper: String 
-      Band10Lower: String 
-      Band10Upper: String 
+        Band1Lower: float64 
+      Band1Upper: float64 
+      Band2Lower: float64 
+      Band2Upper: float64 
+      Band3Lower: float64 
+      Band3Upper: float64 
+      Band4Lower: float64 
+      Band4Upper: float64 
+      Band5Lower: float64 
+      Band5Upper: float64 
+      Band6Lower: float64 
+      Band6Upper: float64 
+      Band7Lower: float64 
+      Band7Upper: float64 
+      Band8Lower: float64 
+      Band8Upper: float64 
+      Band9Lower: float64 
+      Band9Upper: float64 
+      Band10Lower: float64 
+      Band10Upper: float64 
       
       }
     
     type DomainProficiencyContainerType {
-        Level1Lower: String 
-      Level1Upper: String 
-      Level2Lower: String 
-      Level2Upper: String 
-      Level3Lower: String 
-      Level3Upper: String 
-      Level4Lower: String 
-      Level4Upper: String 
+        Level1Lower: float64 
+      Level1Upper: float64 
+      Level2Lower: float64 
+      Level2Upper: float64 
+      Level3Lower: float64 
+      Level3Upper: float64 
+      Level4Lower: float64 
+      Level4Upper: float64 
       
       }
     
@@ -2563,7 +2563,7 @@ type SystemRole_RoleScopeRefId {
     type NAPTestItem2Type {
         TestItemRefId: String 
       TestItemLocalId: LocalIdType 
-      SequenceNumber: String 
+      SequenceNumber: int 
       
       }
     
@@ -2587,7 +2587,7 @@ type SystemRole_RoleScopeRefId {
     type NAPTestletResponseType {
         NAPTestletRefId: String 
       NAPTestletLocalId: LocalIdType 
-      TestletSubScore: String 
+      TestletSubScore: float64 
       ItemResponseList: NAPTestletItemResponseListType 
       
       }
@@ -2602,10 +2602,10 @@ type SystemRole_RoleScopeRefId {
       NAPTestItemLocalId: LocalIdType 
       Response: String 
       ResponseCorrectness: String 
-      Score: String 
+      Score: float64 
       LapsedTimeItem: String 
-      SequenceNumber: String 
-      ItemWeight: String 
+      SequenceNumber: int 
+      ItemWeight: float64 
       SubscoreList: NAPSubscoreListType 
       
       }
@@ -2617,17 +2617,17 @@ type SystemRole_RoleScopeRefId {
     
     type NAPSubscoreType {
         SubscoreType: String 
-      SubscoreValue: String 
+      SubscoreValue: float64 
       
       }
     
     type DomainScoreType {
-        RawScore: String 
-      ScaledScoreValue: String 
-      ScaledScoreLogitValue: String 
-      ScaledScoreStandardError: String 
-      ScaledScoreLogitStandardError: String 
-      StudentDomainBand: String 
+        RawScore: float64 
+      ScaledScoreValue: float64 
+      ScaledScoreLogitValue: float64 
+      ScaledScoreStandardError: float64 
+      ScaledScoreLogitStandardError: float64 
+      StudentDomainBand: int 
       StudentProficiency: String 
       PlausibleScaledValueList: PlausibleScaledValueListType 
       
@@ -2651,7 +2651,7 @@ type SystemRole_RoleScopeRefId {
       }
     
     type ScoreType {
-        MaxScoreValue: String 
+        MaxScoreValue: float64 
       ScoreDescriptionList: ScoreDescriptionListType 
       
       }
@@ -2662,7 +2662,7 @@ type SystemRole_RoleScopeRefId {
       }
     
     type ScoreDescriptionType {
-        ScoreValue: String 
+        ScoreValue: float64 
       Descriptor: String 
       
       }
@@ -2676,7 +2676,7 @@ type SystemRole_RoleScopeRefId {
         StimulusLocalId: LocalIdType 
       TextGenre: String 
       TextType: String 
-      WordCount: String 
+      WordCount: int 
       TextDescriptor: String 
       Content: String 
       
@@ -2870,7 +2870,7 @@ type SystemRole_RoleScopeRefId {
     
     type AttendanceInfoType {
         CountsTowardAttendance: String 
-      AttendanceValue: String 
+      AttendanceValue: float64 
       
       }
     
@@ -2925,7 +2925,7 @@ type SystemRole_RoleScopeRefId {
         SchoolLocalId: LocalIdType 
       HomeroomLocalId: LocalIdType 
       YearLevel: YearLevelType 
-      FTE: String 
+      FTE: float64 
       Parent1Language: String 
       Parent2Language: String 
       Parent1EmploymentType: String 
@@ -2946,7 +2946,7 @@ type SystemRole_RoleScopeRefId {
       OtherSchoolName: String 
       DisabilityLevelOfAdjustment: String 
       DisabilityCategory: String 
-      CensusAge: String 
+      CensusAge: int 
       DistanceEducationStudent: String 
       BoardingStatus: String 
       
@@ -2988,7 +2988,7 @@ type SystemRole_RoleScopeRefId {
       }
     
     type HouseholdContactInfoType {
-        PreferenceNumber: String 
+        PreferenceNumber: int 
       HouseholdContactId: LocalIdType 
       HouseholdSalutation: String 
       AddressList: AddressListType 
@@ -3029,7 +3029,7 @@ type SystemRole_RoleScopeRefId {
       AttendanceStatus: String 
       StartTime: String 
       EndTime: String 
-      DurationValue: String 
+      DurationValue: float64 
       TimeTableSubjectRefId: RefIdType 
       AttendanceNote: String 
       
@@ -3067,7 +3067,7 @@ type SystemRole_RoleScopeRefId {
       }
     
     type StaffSubjectType {
-        PreferenceNumber: String 
+        PreferenceNumber: int 
       SubjectLocalId: LocalIdType 
       TimeTableSubjectRefId: RefIdType 
       
@@ -3090,7 +3090,7 @@ type SystemRole_RoleScopeRefId {
       FinishTime: String 
       Credit: String 
       Supervision: String 
-      Weighting: String 
+      Weighting: float64 
       
       }
     
@@ -3128,7 +3128,7 @@ type SystemRole_RoleScopeRefId {
       TotalCost: MonetaryAmountType 
       QuantityDelivered: String 
       CancelledOrder: String 
-      TaxRate: String 
+      TaxRate: float64 
       ExpenseAccounts: ExpenseAccountsType 
       
       }
@@ -3228,7 +3228,7 @@ type SystemRole_RoleScopeRefId {
       }
     
     type StudentSubjectChoiceType {
-        PreferenceNumber: String 
+        PreferenceNumber: int 
       SubjectLocalId: LocalIdType 
       StudyDescription: SubjectAreaType 
       OtherSchoolLocalId: LocalIdType 
@@ -3358,7 +3358,7 @@ type SystemRole_RoleScopeRefId {
       FinancialAccountRefId: String 
       AccountCode: String 
       TransactionDescription: String 
-      TaxRate: String 
+      TaxRate: float64 
       TaxAmount: MonetaryAmountType 
       
       }
@@ -3462,7 +3462,7 @@ type SystemRole_RoleScopeRefId {
       StartTime: String 
       EndTime: String 
       RegularSchoolPeriod: String 
-      InstructionalMinutes: String 
+      InstructionalMinutes: int 
       UseInAttendanceCalculations: String 
       
       }
@@ -3704,14 +3704,14 @@ type SystemRole_RoleScopeRefId {
       Number: String 
       Extension: String 
       ListedStatus: String 
-      Preference: String 
+      Preference: int 
       
       }
     
     type CountryType String
     type GridLocationType {
-        Latitude: String 
-      Longitude: String 
+        Latitude: float64 
+      Longitude: float64 
       
       }
     
@@ -3804,7 +3804,7 @@ type SystemRole_RoleScopeRefId {
       StartDateTime: String 
       EndDateTime: String 
       SpanGaps: TimeElementType_SpanGaps 
-      IsCurrent: String 
+      IsCurrent: bool 
       
       }
     
@@ -3912,7 +3912,7 @@ type PersonInvolvementType_PersonRefId {
 }
 type ActivityTimeType_Duration {
       Units: String 
-      Value: String 
+      Value: int 
 }
 type SourceObjectsType_SourceObject {
       SIF_RefObject: String 

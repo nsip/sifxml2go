@@ -1,30 +1,32 @@
 package sifxml
 
 
+type StaffAssignments []StaffAssignment
+
     type StaffAssignment struct {
-        RefId RefIdType `xml:"RefId,attr"`
-      SchoolInfoRefId string `xml:"SchoolInfoRefId"`
-      SchoolYear SchoolYearType `xml:"SchoolYear"`
-      StaffPersonalRefId string `xml:"StaffPersonalRefId"`
-      Description string `xml:"Description"`
-      PrimaryAssignment string `xml:"PrimaryAssignment"`
-      JobStartDate string `xml:"JobStartDate"`
-      JobEndDate string `xml:"JobEndDate"`
-      JobFTE string `xml:"JobFTE"`
-      JobFunction string `xml:"JobFunction"`
-      EmploymentStatus string `xml:"EmploymentStatus"`
-      StaffSubjectList StaffSubjectListType `xml:"StaffSubjectList"`
-      StaffActivity StaffActivityExtensionType `xml:"StaffActivity"`
-      YearLevels YearLevelsType `xml:"YearLevels"`
-      CasualReliefTeacher string `xml:"CasualReliefTeacher"`
-      Homegroup string `xml:"Homegroup"`
-      House string `xml:"House"`
-      CalendarSummaryList CalendarSummaryListType `xml:"CalendarSummaryList"`
-      PreviousSchoolName string `xml:"PreviousSchoolName"`
-      AvailableForTimetable string `xml:"AvailableForTimetable"`
-      LocalCodeList LocalCodeListType `xml:"LocalCodeList"`
-      SIF_Metadata SIF_MetadataType `xml:"SIF_Metadata"`
-      SIF_ExtendedElements SIF_ExtendedElementsType `xml:"SIF_ExtendedElements"`
+        RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
+      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
+      SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear"`
+      StaffPersonalRefId *string `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId"`
+      Description *string `xml:"Description,omitempty" json:"Description"`
+      PrimaryAssignment *string `xml:"PrimaryAssignment,omitempty" json:"PrimaryAssignment"`
+      JobStartDate *string `xml:"JobStartDate,omitempty" json:"JobStartDate"`
+      JobEndDate *string `xml:"JobEndDate,omitempty" json:"JobEndDate"`
+      JobFTE *float64 `xml:"JobFTE,omitempty" json:"JobFTE"`
+      JobFunction *string `xml:"JobFunction,omitempty" json:"JobFunction"`
+      EmploymentStatus *string `xml:"EmploymentStatus,omitempty" json:"EmploymentStatus"`
+      StaffSubjectList *StaffSubjectListType `xml:"StaffSubjectList,omitempty" json:"StaffSubjectList"`
+      StaffActivity *StaffActivityExtensionType `xml:"StaffActivity,omitempty" json:"StaffActivity"`
+      YearLevels *YearLevelsType `xml:"YearLevels,omitempty" json:"YearLevels"`
+      CasualReliefTeacher *string `xml:"CasualReliefTeacher,omitempty" json:"CasualReliefTeacher"`
+      Homegroup *string `xml:"Homegroup,omitempty" json:"Homegroup"`
+      House *string `xml:"House,omitempty" json:"House"`
+      CalendarSummaryList *CalendarSummaryListType `xml:"CalendarSummaryList,omitempty" json:"CalendarSummaryList"`
+      PreviousSchoolName *string `xml:"PreviousSchoolName,omitempty" json:"PreviousSchoolName"`
+      AvailableForTimetable *string `xml:"AvailableForTimetable,omitempty" json:"AvailableForTimetable"`
+      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
+      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
+      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`
       
       }
     

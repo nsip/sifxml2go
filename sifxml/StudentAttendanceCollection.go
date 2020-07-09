@@ -1,16 +1,18 @@
 package sifxml
 
 
+type StudentAttendanceCollections []StudentAttendanceCollection
+
     type StudentAttendanceCollection struct {
-        RefId RefIdType `xml:"RefId,attr"`
-      StudentAttendanceCollectionYear SchoolYearType `xml:"StudentAttendanceCollectionYear"`
-      RoundCode string `xml:"RoundCode"`
-      ReportingAuthorityCommonwealthId string `xml:"ReportingAuthorityCommonwealthId"`
-      SoftwareVendorInfo SoftwareVendorInfoContainerType `xml:"SoftwareVendorInfo"`
-      StudentAttendanceCollectionReportingList StudentAttendanceCollectionReportingListType `xml:"StudentAttendanceCollectionReportingList"`
-      LocalCodeList LocalCodeListType `xml:"LocalCodeList"`
-      SIF_Metadata SIF_MetadataType `xml:"SIF_Metadata"`
-      SIF_ExtendedElements SIF_ExtendedElementsType `xml:"SIF_ExtendedElements"`
+        RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
+      StudentAttendanceCollectionYear *SchoolYearType `xml:"StudentAttendanceCollectionYear,omitempty" json:"StudentAttendanceCollectionYear"`
+      RoundCode *string `xml:"RoundCode,omitempty" json:"RoundCode"`
+      ReportingAuthorityCommonwealthId *string `xml:"ReportingAuthorityCommonwealthId,omitempty" json:"ReportingAuthorityCommonwealthId"`
+      SoftwareVendorInfo *SoftwareVendorInfoContainerType `xml:"SoftwareVendorInfo,omitempty" json:"SoftwareVendorInfo"`
+      StudentAttendanceCollectionReportingList *StudentAttendanceCollectionReportingListType `xml:"StudentAttendanceCollectionReportingList,omitempty" json:"StudentAttendanceCollectionReportingList"`
+      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
+      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
+      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`
       
       }
     

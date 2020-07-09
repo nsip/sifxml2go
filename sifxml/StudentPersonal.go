@@ -1,38 +1,40 @@
 package sifxml
 
 
+type StudentPersonals []StudentPersonal
+
     type StudentPersonal struct {
-        RefId RefIdType `xml:"RefId,attr"`
-      AlertMessages AlertMessagesType `xml:"AlertMessages"`
-      MedicalAlertMessages MedicalAlertMessagesType `xml:"MedicalAlertMessages"`
-      LocalId LocalIdType `xml:"LocalId"`
-      StateProvinceId StateProvinceIdType `xml:"StateProvinceId"`
-      ElectronicIdList ElectronicIdListType `xml:"ElectronicIdList"`
-      OtherIdList OtherIdListType `xml:"OtherIdList"`
-      PersonInfo PersonInfoType `xml:"PersonInfo"`
-      ProjectedGraduationYear ProjectedGraduationYearType `xml:"ProjectedGraduationYear"`
-      OnTimeGraduationYear OnTimeGraduationYearType `xml:"OnTimeGraduationYear"`
-      GraduationDate GraduationDateType `xml:"GraduationDate"`
-      MostRecent StudentMostRecentContainerType `xml:"MostRecent"`
-      AcceptableUsePolicy string `xml:"AcceptableUsePolicy"`
-      GiftedTalented string `xml:"GiftedTalented"`
-      EconomicDisadvantage string `xml:"EconomicDisadvantage"`
-      ESL string `xml:"ESL"`
-      ESLDateAssessed string `xml:"ESLDateAssessed"`
-      YoungCarersRole string `xml:"YoungCarersRole"`
-      Disability string `xml:"Disability"`
-      IntegrationAide string `xml:"IntegrationAide"`
-      EducationSupport string `xml:"EducationSupport"`
-      HomeSchooledStudent string `xml:"HomeSchooledStudent"`
-      Sensitive string `xml:"Sensitive"`
-      OfflineDelivery string `xml:"OfflineDelivery"`
-      ESLSupport string `xml:"ESLSupport"`
-      PrePrimaryEducation string `xml:"PrePrimaryEducation"`
-      PrePrimaryEducationHours string `xml:"PrePrimaryEducationHours"`
-      FirstAUSchoolEnrollment string `xml:"FirstAUSchoolEnrollment"`
-      LocalCodeList LocalCodeListType `xml:"LocalCodeList"`
-      SIF_Metadata SIF_MetadataType `xml:"SIF_Metadata"`
-      SIF_ExtendedElements SIF_ExtendedElementsType `xml:"SIF_ExtendedElements"`
+        RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
+      AlertMessages *AlertMessagesType `xml:"AlertMessages,omitempty" json:"AlertMessages"`
+      MedicalAlertMessages *MedicalAlertMessagesType `xml:"MedicalAlertMessages,omitempty" json:"MedicalAlertMessages"`
+      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
+      StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId"`
+      ElectronicIdList *ElectronicIdListType `xml:"ElectronicIdList,omitempty" json:"ElectronicIdList"`
+      OtherIdList *OtherIdListType `xml:"OtherIdList,omitempty" json:"OtherIdList"`
+      PersonInfo *PersonInfoType `xml:"PersonInfo,omitempty" json:"PersonInfo"`
+      ProjectedGraduationYear *ProjectedGraduationYearType `xml:"ProjectedGraduationYear,omitempty" json:"ProjectedGraduationYear"`
+      OnTimeGraduationYear *OnTimeGraduationYearType `xml:"OnTimeGraduationYear,omitempty" json:"OnTimeGraduationYear"`
+      GraduationDate *GraduationDateType `xml:"GraduationDate,omitempty" json:"GraduationDate"`
+      MostRecent *StudentMostRecentContainerType `xml:"MostRecent,omitempty" json:"MostRecent"`
+      AcceptableUsePolicy *string `xml:"AcceptableUsePolicy,omitempty" json:"AcceptableUsePolicy"`
+      GiftedTalented *string `xml:"GiftedTalented,omitempty" json:"GiftedTalented"`
+      EconomicDisadvantage *string `xml:"EconomicDisadvantage,omitempty" json:"EconomicDisadvantage"`
+      ESL *string `xml:"ESL,omitempty" json:"ESL"`
+      ESLDateAssessed *string `xml:"ESLDateAssessed,omitempty" json:"ESLDateAssessed"`
+      YoungCarersRole *string `xml:"YoungCarersRole,omitempty" json:"YoungCarersRole"`
+      Disability *string `xml:"Disability,omitempty" json:"Disability"`
+      IntegrationAide *string `xml:"IntegrationAide,omitempty" json:"IntegrationAide"`
+      EducationSupport *string `xml:"EducationSupport,omitempty" json:"EducationSupport"`
+      HomeSchooledStudent *string `xml:"HomeSchooledStudent,omitempty" json:"HomeSchooledStudent"`
+      Sensitive *string `xml:"Sensitive,omitempty" json:"Sensitive"`
+      OfflineDelivery *string `xml:"OfflineDelivery,omitempty" json:"OfflineDelivery"`
+      ESLSupport *string `xml:"ESLSupport,omitempty" json:"ESLSupport"`
+      PrePrimaryEducation *string `xml:"PrePrimaryEducation,omitempty" json:"PrePrimaryEducation"`
+      PrePrimaryEducationHours *string `xml:"PrePrimaryEducationHours,omitempty" json:"PrePrimaryEducationHours"`
+      FirstAUSchoolEnrollment *string `xml:"FirstAUSchoolEnrollment,omitempty" json:"FirstAUSchoolEnrollment"`
+      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
+      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
+      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`
       
       }
     

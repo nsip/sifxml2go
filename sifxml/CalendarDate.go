@@ -1,20 +1,22 @@
 package sifxml
 
 
+type CalendarDates []CalendarDate
+
     type CalendarDate struct {
-        CalendarDateRefId string `xml:"CalendarDateRefId,attr"`
-      Date string `xml:"Date"`
-      CalendarSummaryRefId string `xml:"CalendarSummaryRefId"`
-      SchoolInfoRefId string `xml:"SchoolInfoRefId"`
-      SchoolYear SchoolYearType `xml:"SchoolYear"`
-      CalendarDateType CalendarDateInfoType `xml:"CalendarDateType"`
-      CalendarDateNumber string `xml:"CalendarDateNumber"`
-      StudentAttendance AttendanceInfoType `xml:"StudentAttendance"`
-      TeacherAttendance AttendanceInfoType `xml:"TeacherAttendance"`
-      AdministratorAttendance AttendanceInfoType `xml:"AdministratorAttendance"`
-      LocalCodeList LocalCodeListType `xml:"LocalCodeList"`
-      SIF_Metadata SIF_MetadataType `xml:"SIF_Metadata"`
-      SIF_ExtendedElements SIF_ExtendedElementsType `xml:"SIF_ExtendedElements"`
+        CalendarDateRefId *string `xml:"CalendarDateRefId,attr" json:"CalendarDateRefId"`
+      Date *string `xml:"Date,omitempty" json:"Date"`
+      CalendarSummaryRefId *string `xml:"CalendarSummaryRefId,omitempty" json:"CalendarSummaryRefId"`
+      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
+      SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear"`
+      CalendarDateType *CalendarDateInfoType `xml:"CalendarDateType,omitempty" json:"CalendarDateType"`
+      CalendarDateNumber *int `xml:"CalendarDateNumber,omitempty" json:"CalendarDateNumber"`
+      StudentAttendance *AttendanceInfoType `xml:"StudentAttendance,omitempty" json:"StudentAttendance"`
+      TeacherAttendance *AttendanceInfoType `xml:"TeacherAttendance,omitempty" json:"TeacherAttendance"`
+      AdministratorAttendance *AttendanceInfoType `xml:"AdministratorAttendance,omitempty" json:"AdministratorAttendance"`
+      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
+      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
+      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`
       
       }
     
