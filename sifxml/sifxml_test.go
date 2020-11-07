@@ -3,6 +3,7 @@ package sifxml
 import (
         "encoding/xml"
         "github.com/clbanning/mxj"
+        "github.com/creasty/defaults"
         "reflect"
         "regexp"
         "strings"
@@ -46,6 +47,8 @@ func Test_test_ActivityExample1(t *testing.T) {
         a := Activity{}
         err := xml.Unmarshal([]byte(test_ActivityExample1), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_ActivityExample1)))
@@ -59,6 +62,8 @@ func Test_test_ActivityExample1(t *testing.T) {
 func Test_test_ActivityExample2(t *testing.T) {
         a := Activity{}
         err := xml.Unmarshal([]byte(test_ActivityExample2), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -74,6 +79,8 @@ func Test_test_AggregateCharacteristicInfo(t *testing.T) {
         a := AggregateCharacteristicInfo{}
         err := xml.Unmarshal([]byte(test_AggregateCharacteristicInfo), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_AggregateCharacteristicInfo)))
@@ -87,6 +94,8 @@ func Test_test_AggregateCharacteristicInfo(t *testing.T) {
 func Test_test_AggregateStatisticFact(t *testing.T) {
         a := AggregateStatisticFact{}
         err := xml.Unmarshal([]byte(test_AggregateStatisticFact), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -102,6 +111,8 @@ func Test_test_AggregateStatisticInfo(t *testing.T) {
         a := AggregateStatisticInfo{}
         err := xml.Unmarshal([]byte(test_AggregateStatisticInfo), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_AggregateStatisticInfo)))
@@ -115,6 +126,8 @@ func Test_test_AggregateStatisticInfo(t *testing.T) {
 func Test_test_CalendarDate(t *testing.T) {
         a := CalendarDate{}
         err := xml.Unmarshal([]byte(test_CalendarDate), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -130,6 +143,8 @@ func Test_test_CalendarSummary(t *testing.T) {
         a := CalendarSummary{}
         err := xml.Unmarshal([]byte(test_CalendarSummary), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_CalendarSummary)))
@@ -143,6 +158,8 @@ func Test_test_CalendarSummary(t *testing.T) {
 func Test_test_EquipmentInfoExample(t *testing.T) {
         a := EquipmentInfo{}
         err := xml.Unmarshal([]byte(test_EquipmentInfoExample), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -158,6 +175,8 @@ func Test_test_GradingAssignment(t *testing.T) {
         a := GradingAssignment{}
         err := xml.Unmarshal([]byte(test_GradingAssignment), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_GradingAssignment)))
@@ -172,6 +191,8 @@ func Test_test_GradingAssignmentScore(t *testing.T) {
         a := GradingAssignmentScore{}
         err := xml.Unmarshal([]byte(test_GradingAssignmentScore), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_GradingAssignmentScore)))
@@ -182,23 +203,27 @@ func Test_test_GradingAssignmentScore(t *testing.T) {
                 t.Fatalf("test_GradingAssignmentScore not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_GradingAssignmentScore))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0275(t *testing.T) {
+func Test_test_example0781(t *testing.T) {
         a := Identity{}
-        err := xml.Unmarshal([]byte(test_example0275), &a)
+        err := xml.Unmarshal([]byte(test_example0781), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0275)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0781)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0275 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0275))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0781 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0781))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_IdentitypublishedbyMicrosoftActiveDirectory(t *testing.T) {
         a := Identity{}
         err := xml.Unmarshal([]byte(test_IdentitypublishedbyMicrosoftActiveDirectory), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -214,6 +239,8 @@ func Test_test_IdentitypublishedbyanOpenIDprovider(t *testing.T) {
         a := Identity{}
         err := xml.Unmarshal([]byte(test_IdentitypublishedbyanOpenIDprovider), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_IdentitypublishedbyanOpenIDprovider)))
@@ -227,6 +254,8 @@ func Test_test_IdentitypublishedbyanOpenIDprovider(t *testing.T) {
 func Test_test_LEAInfo(t *testing.T) {
         a := LEAInfo{}
         err := xml.Unmarshal([]byte(test_LEAInfo), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -242,6 +271,8 @@ func Test_test_LearningResource(t *testing.T) {
         a := LearningResource{}
         err := xml.Unmarshal([]byte(test_LearningResource), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_LearningResource)))
@@ -255,6 +286,8 @@ func Test_test_LearningResource(t *testing.T) {
 func Test_test_LearningResourcePackage(t *testing.T) {
         a := LearningResourcePackage{}
         err := xml.Unmarshal([]byte(test_LearningResourcePackage), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -270,6 +303,8 @@ func Test_test_LearningStandardItem(t *testing.T) {
         a := LearningStandardItem{}
         err := xml.Unmarshal([]byte(test_LearningStandardItem), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_LearningStandardItem)))
@@ -283,6 +318,8 @@ func Test_test_LearningStandardItem(t *testing.T) {
 func Test_test_MarkValueInfo(t *testing.T) {
         a := MarkValueInfo{}
         err := xml.Unmarshal([]byte(test_MarkValueInfo), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -298,6 +335,8 @@ func Test_test_PersonPicture(t *testing.T) {
         a := PersonPicture{}
         err := xml.Unmarshal([]byte(test_PersonPicture), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_PersonPicture)))
@@ -311,6 +350,8 @@ func Test_test_PersonPicture(t *testing.T) {
 func Test_test_PersonalisedPlan(t *testing.T) {
         a := PersonalisedPlan{}
         err := xml.Unmarshal([]byte(test_PersonalisedPlan), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -326,6 +367,8 @@ func Test_test_ResourceBookingExample(t *testing.T) {
         a := ResourceBooking{}
         err := xml.Unmarshal([]byte(test_ResourceBookingExample), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_ResourceBookingExample)))
@@ -339,6 +382,8 @@ func Test_test_ResourceBookingExample(t *testing.T) {
 func Test_test_ResourceUsage(t *testing.T) {
         a := ResourceUsage{}
         err := xml.Unmarshal([]byte(test_ResourceUsage), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -354,6 +399,8 @@ func Test_test_RoomInfoExample(t *testing.T) {
         a := RoomInfo{}
         err := xml.Unmarshal([]byte(test_RoomInfoExample), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_RoomInfoExample)))
@@ -367,6 +414,8 @@ func Test_test_RoomInfoExample(t *testing.T) {
 func Test_test_ScheduledActivityExample(t *testing.T) {
         a := ScheduledActivity{}
         err := xml.Unmarshal([]byte(test_ScheduledActivityExample), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -382,6 +431,8 @@ func Test_test_SchoolCourseInfoExample(t *testing.T) {
         a := SchoolCourseInfo{}
         err := xml.Unmarshal([]byte(test_SchoolCourseInfoExample), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_SchoolCourseInfoExample)))
@@ -395,6 +446,8 @@ func Test_test_SchoolCourseInfoExample(t *testing.T) {
 func Test_test_SchoolInfo(t *testing.T) {
         a := SchoolInfo{}
         err := xml.Unmarshal([]byte(test_SchoolInfo), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -410,6 +463,8 @@ func Test_test_SchoolPrograms(t *testing.T) {
         a := SchoolPrograms{}
         err := xml.Unmarshal([]byte(test_SchoolPrograms), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_SchoolPrograms)))
@@ -423,6 +478,8 @@ func Test_test_SchoolPrograms(t *testing.T) {
 func Test_test_SectionInfoExample1(t *testing.T) {
         a := SectionInfo{}
         err := xml.Unmarshal([]byte(test_SectionInfoExample1), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -438,6 +495,8 @@ func Test_test_SessionInfoExample(t *testing.T) {
         a := SessionInfo{}
         err := xml.Unmarshal([]byte(test_SessionInfoExample), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_SessionInfoExample)))
@@ -451,6 +510,8 @@ func Test_test_SessionInfoExample(t *testing.T) {
 func Test_test_StaffAssignment(t *testing.T) {
         a := StaffAssignment{}
         err := xml.Unmarshal([]byte(test_StaffAssignment), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -466,6 +527,8 @@ func Test_test_StaffPersonal(t *testing.T) {
         a := StaffPersonal{}
         err := xml.Unmarshal([]byte(test_StaffPersonal), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StaffPersonal)))
@@ -479,6 +542,8 @@ func Test_test_StaffPersonal(t *testing.T) {
 func Test_test_StudentActivityInfo(t *testing.T) {
         a := StudentActivityInfo{}
         err := xml.Unmarshal([]byte(test_StudentActivityInfo), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -494,6 +559,8 @@ func Test_test_StudentActivityParticipation(t *testing.T) {
         a := StudentActivityParticipation{}
         err := xml.Unmarshal([]byte(test_StudentActivityParticipation), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentActivityParticipation)))
@@ -507,6 +574,8 @@ func Test_test_StudentActivityParticipation(t *testing.T) {
 func Test_test_StudentAttendanceSummary(t *testing.T) {
         a := StudentAttendanceSummary{}
         err := xml.Unmarshal([]byte(test_StudentAttendanceSummary), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -522,6 +591,8 @@ func Test_test_StudentAttendanceTimeListExample(t *testing.T) {
         a := StudentAttendanceTimeList{}
         err := xml.Unmarshal([]byte(test_StudentAttendanceTimeListExample), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentAttendanceTimeListExample)))
@@ -535,6 +606,8 @@ func Test_test_StudentAttendanceTimeListExample(t *testing.T) {
 func Test_test_StudentAttendanceTimeListExample2(t *testing.T) {
         a := StudentAttendanceTimeList{}
         err := xml.Unmarshal([]byte(test_StudentAttendanceTimeListExample2), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -550,6 +623,8 @@ func Test_test_StudentContactPersonalExample(t *testing.T) {
         a := StudentContactPersonal{}
         err := xml.Unmarshal([]byte(test_StudentContactPersonalExample), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentContactPersonalExample)))
@@ -563,6 +638,8 @@ func Test_test_StudentContactPersonalExample(t *testing.T) {
 func Test_test_StudentContactRelationship(t *testing.T) {
         a := StudentContactRelationship{}
         err := xml.Unmarshal([]byte(test_StudentContactRelationship), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -578,6 +655,8 @@ func Test_test_StudentDailyAttendance(t *testing.T) {
         a := StudentDailyAttendance{}
         err := xml.Unmarshal([]byte(test_StudentDailyAttendance), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentDailyAttendance)))
@@ -591,6 +670,8 @@ func Test_test_StudentDailyAttendance(t *testing.T) {
 func Test_test_StudentGrade(t *testing.T) {
         a := StudentGrade{}
         err := xml.Unmarshal([]byte(test_StudentGrade), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -606,6 +687,8 @@ func Test_test_StudentParticipation(t *testing.T) {
         a := StudentParticipation{}
         err := xml.Unmarshal([]byte(test_StudentParticipation), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentParticipation)))
@@ -620,6 +703,8 @@ func Test_test_StudentPeriodAttendanceExample(t *testing.T) {
         a := StudentPeriodAttendance{}
         err := xml.Unmarshal([]byte(test_StudentPeriodAttendanceExample), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentPeriodAttendanceExample)))
@@ -630,23 +715,27 @@ func Test_test_StudentPeriodAttendanceExample(t *testing.T) {
                 t.Fatalf("test_StudentPeriodAttendanceExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentPeriodAttendanceExample))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0829(t *testing.T) {
+func Test_test_example0460(t *testing.T) {
         a := StudentPersonal{}
-        err := xml.Unmarshal([]byte(test_example0829), &a)
+        err := xml.Unmarshal([]byte(test_example0460), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0829)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0460)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0829 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0829))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0460 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0460))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentSchoolEnrollment(t *testing.T) {
         a := StudentSchoolEnrollment{}
         err := xml.Unmarshal([]byte(test_StudentSchoolEnrollment), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -662,6 +751,8 @@ func Test_test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedprevi
         a := StudentScoreJudgementAgainstStandard{}
         err := xml.Unmarshal([]byte(test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously)))
@@ -675,6 +766,8 @@ func Test_test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedprevi
 func Test_test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublished(t *testing.T) {
         a := StudentScoreJudgementAgainstStandard{}
         err := xml.Unmarshal([]byte(test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublished), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -690,6 +783,8 @@ func Test_test_StudentSectionEnrollment(t *testing.T) {
         a := StudentSectionEnrollment{}
         err := xml.Unmarshal([]byte(test_StudentSectionEnrollment), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_StudentSectionEnrollment)))
@@ -703,6 +798,8 @@ func Test_test_StudentSectionEnrollment(t *testing.T) {
 func Test_test_SystemRole(t *testing.T) {
         a := SystemRole{}
         err := xml.Unmarshal([]byte(test_SystemRole), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -718,6 +815,8 @@ func Test_test_TeachingGroup(t *testing.T) {
         a := TeachingGroup{}
         err := xml.Unmarshal([]byte(test_TeachingGroup), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_TeachingGroup)))
@@ -731,6 +830,8 @@ func Test_test_TeachingGroup(t *testing.T) {
 func Test_test_TermInfo(t *testing.T) {
         a := TermInfo{}
         err := xml.Unmarshal([]byte(test_TermInfo), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -746,6 +847,8 @@ func Test_test_TimeTable(t *testing.T) {
         a := TimeTable{}
         err := xml.Unmarshal([]byte(test_TimeTable), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_TimeTable)))
@@ -759,6 +862,8 @@ func Test_test_TimeTable(t *testing.T) {
 func Test_test_TimeTableCell(t *testing.T) {
         a := TimeTableCell{}
         err := xml.Unmarshal([]byte(test_TimeTableCell), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -774,6 +879,8 @@ func Test_test_TimeTableSubject(t *testing.T) {
         a := TimeTableSubject{}
         err := xml.Unmarshal([]byte(test_TimeTableSubject), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_TimeTableSubject)))
@@ -787,6 +894,8 @@ func Test_test_TimeTableSubject(t *testing.T) {
 func Test_test_WellbeingAlert(t *testing.T) {
         a := WellbeingAlert{}
         err := xml.Unmarshal([]byte(test_WellbeingAlert), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -802,6 +911,8 @@ func Test_test_WellbeingAppeal(t *testing.T) {
         a := WellbeingAppeal{}
         err := xml.Unmarshal([]byte(test_WellbeingAppeal), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_WellbeingAppeal)))
@@ -815,6 +926,8 @@ func Test_test_WellbeingAppeal(t *testing.T) {
 func Test_test_WellbeingCharacteristic(t *testing.T) {
         a := WellbeingCharacteristic{}
         err := xml.Unmarshal([]byte(test_WellbeingCharacteristic), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -830,6 +943,8 @@ func Test_test_WellbeingEvent(t *testing.T) {
         a := WellbeingEvent{}
         err := xml.Unmarshal([]byte(test_WellbeingEvent), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_WellbeingEvent)))
@@ -843,6 +958,8 @@ func Test_test_WellbeingEvent(t *testing.T) {
 func Test_test_WellbeingEvent2(t *testing.T) {
         a := WellbeingEvent{}
         err := xml.Unmarshal([]byte(test_WellbeingEvent2), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -858,6 +975,8 @@ func Test_test_WellbeingEvent3(t *testing.T) {
         a := WellbeingEvent{}
         err := xml.Unmarshal([]byte(test_WellbeingEvent3), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_WellbeingEvent3)))
@@ -871,6 +990,8 @@ func Test_test_WellbeingEvent3(t *testing.T) {
 func Test_test_WellbeingPersonLink(t *testing.T) {
         a := WellbeingPersonLink{}
         err := xml.Unmarshal([]byte(test_WellbeingPersonLink), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -886,6 +1007,8 @@ func Test_test_WellbeingPersonLink2(t *testing.T) {
         a := WellbeingPersonLink{}
         err := xml.Unmarshal([]byte(test_WellbeingPersonLink2), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_WellbeingPersonLink2)))
@@ -899,6 +1022,8 @@ func Test_test_WellbeingPersonLink2(t *testing.T) {
 func Test_test_WellbeingPersonLink3(t *testing.T) {
         a := WellbeingPersonLink{}
         err := xml.Unmarshal([]byte(test_WellbeingPersonLink3), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -914,6 +1039,8 @@ func Test_test_WellbeingPersonLink4(t *testing.T) {
         a := WellbeingPersonLink{}
         err := xml.Unmarshal([]byte(test_WellbeingPersonLink4), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_WellbeingPersonLink4)))
@@ -927,6 +1054,8 @@ func Test_test_WellbeingPersonLink4(t *testing.T) {
 func Test_test_WellbeingResponse(t *testing.T) {
         a := WellbeingResponse{}
         err := xml.Unmarshal([]byte(test_WellbeingResponse), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -942,6 +1071,8 @@ func Test_test_ChargedLocation(t *testing.T) {
         a := ChargedLocationInfo{}
         err := xml.Unmarshal([]byte(test_ChargedLocation), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_ChargedLocation)))
@@ -955,6 +1086,8 @@ func Test_test_ChargedLocation(t *testing.T) {
 func Test_test_CollectionRound(t *testing.T) {
         a := CollectionRound{}
         err := xml.Unmarshal([]byte(test_CollectionRound), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -970,6 +1103,8 @@ func Test_test_CollectionStatus(t *testing.T) {
         a := CollectionStatus{}
         err := xml.Unmarshal([]byte(test_CollectionStatus), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_CollectionStatus)))
@@ -983,6 +1118,8 @@ func Test_test_CollectionStatus(t *testing.T) {
 func Test_test_Debtor(t *testing.T) {
         a := Debtor{}
         err := xml.Unmarshal([]byte(test_Debtor), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -998,6 +1135,8 @@ func Test_test_FinancialAccount(t *testing.T) {
         a := FinancialAccount{}
         err := xml.Unmarshal([]byte(test_FinancialAccount), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_FinancialAccount)))
@@ -1011,6 +1150,8 @@ func Test_test_FinancialAccount(t *testing.T) {
 func Test_test_FinancialQuestionnaireCollection(t *testing.T) {
         a := FinancialQuestionnaireCollection{}
         err := xml.Unmarshal([]byte(test_FinancialQuestionnaireCollection), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -1026,6 +1167,8 @@ func Test_test_Invoice(t *testing.T) {
         a := Invoice{}
         err := xml.Unmarshal([]byte(test_Invoice), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_Invoice)))
@@ -1039,6 +1182,8 @@ func Test_test_Invoice(t *testing.T) {
 func Test_test_Journal(t *testing.T) {
         a := Journal{}
         err := xml.Unmarshal([]byte(test_Journal), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -1054,6 +1199,8 @@ func Test_test_NAPCodeFrameexample1(t *testing.T) {
         a := NAPCodeFrame{}
         err := xml.Unmarshal([]byte(test_NAPCodeFrameexample1), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_NAPCodeFrameexample1)))
@@ -1067,6 +1214,8 @@ func Test_test_NAPCodeFrameexample1(t *testing.T) {
 func Test_test_NAPEventStudentLink(t *testing.T) {
         a := NAPEventStudentLink{}
         err := xml.Unmarshal([]byte(test_NAPEventStudentLink), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -1082,6 +1231,8 @@ func Test_test_NAPStudentResponseSet(t *testing.T) {
         a := NAPStudentResponseSet{}
         err := xml.Unmarshal([]byte(test_NAPStudentResponseSet), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_NAPStudentResponseSet)))
@@ -1095,6 +1246,8 @@ func Test_test_NAPStudentResponseSet(t *testing.T) {
 func Test_test_NAPTest(t *testing.T) {
         a := NAPTest{}
         err := xml.Unmarshal([]byte(test_NAPTest), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -1110,6 +1263,8 @@ func Test_test_NAPTestItem(t *testing.T) {
         a := NAPTestItem{}
         err := xml.Unmarshal([]byte(test_NAPTestItem), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_NAPTestItem)))
@@ -1123,6 +1278,8 @@ func Test_test_NAPTestItem(t *testing.T) {
 func Test_test_NAPTestScoreSummary(t *testing.T) {
         a := NAPTestScoreSummary{}
         err := xml.Unmarshal([]byte(test_NAPTestScoreSummary), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -1138,6 +1295,8 @@ func Test_test_NAPTestlet(t *testing.T) {
         a := NAPTestlet{}
         err := xml.Unmarshal([]byte(test_NAPTestlet), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_NAPTestlet)))
@@ -1152,6 +1311,8 @@ func Test_test_PaymentReceipt(t *testing.T) {
         a := PaymentReceipt{}
         err := xml.Unmarshal([]byte(test_PaymentReceipt), &a)
         errcheck(t, err)
+        err = defaults.Set(&a)
+        errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
         want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_PaymentReceipt)))
@@ -1162,23 +1323,27 @@ func Test_test_PaymentReceipt(t *testing.T) {
                 t.Fatalf("test_PaymentReceipt not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PaymentReceipt))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0637(t *testing.T) {
+func Test_test_example0292(t *testing.T) {
         a := PurchaseOrder{}
-        err := xml.Unmarshal([]byte(test_example0637), &a)
+        err := xml.Unmarshal([]byte(test_example0292), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0637)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0292)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0637 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0637))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0292 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0292))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentAttendanceCollectionExample2(t *testing.T) {
         a := StudentAttendanceCollection{}
         err := xml.Unmarshal([]byte(test_StudentAttendanceCollectionExample2), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
@@ -1193,6 +1358,8 @@ func Test_test_StudentAttendanceCollectionExample2(t *testing.T) {
 func Test_test_VendorInfo(t *testing.T) {
         a := VendorInfo{}
         err := xml.Unmarshal([]byte(test_VendorInfo), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)

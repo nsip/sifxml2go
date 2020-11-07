@@ -65,7 +65,9 @@
   </xsl:template>
 
   <xsl:template match="//sif:Grouping/sif:CodeSet/sif:ID">
-    ENUM <xsl:value-of select="../../@code"/><xsl:value-of select="translate(., ' ()[]/-', '')"/> [
+    ENUM <xsl:value-of select="../../@code"/><xsl:call-template name="camel_case">
+      <xsl:with-param name="name" select="."/>
+    </xsl:call-template> [
   </xsl:template>
 
   <xsl:template match="//sif:Grouping/sif:CodeSet/sif:Values/sif:Value/sif:Text">
@@ -113,8 +115,7 @@
         <!-- https://stackoverflow.com/questions/13122545/convert-first-character-of-each-word-to-upper-case -->
         <xsl:value-of select='concat(
           translate(substring($localname, 1, 1), $lowers, $uppers),
-          translate(substring($localname, 2), $uppers, $lowers),
-          " "
+          translate(substring($localname, 2), $uppers, $lowers)
           )' />
       </xsl:when>
       <xsl:otherwise>
@@ -122,6 +123,19 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
+    <xsl:template name="camel_case">
+      <xsl:param name="name"/>
+<xsl:variable name='lowers' select='"abcdefghijklmnopqrstuvwxyz"' />
+<xsl:variable name='uppers' select='"ABCDEFGHIJKLMNOPQRSTUVWXYZ"' />
+    <xsl:for-each select='str:split($name, " ")'>
+      <xsl:value-of select='translate(concat(
+          translate(substring(., 1, 1), $lowers, $uppers),
+          substring(., 2)
+          ), " ()[]/-", ""
+        )' />
+    </xsl:for-each>
+    </xsl:template>
 
   <xsl:template name="type_extract">
     <xsl:param name="type"/>
@@ -132,10 +146,12 @@
         <xsl:text>string</xsl:text>
       </xsl:when>
       <xsl:when test="exsl:node-set($type)/@ref = 'CodeSets'">
-        <xsl:text>string</xsl:text>
+        <!--<xsl:text>string</xsl:text>-->
+        <xsl:value-of select="exsl:node-set($type)/@name"/>
       </xsl:when>
       <xsl:when test="exsl:node-set($type)/@ref = 'ExternalCodeSets'">
-        <xsl:text>string</xsl:text>
+        <!--<xsl:text>string</xsl:text>-->
+        <xsl:value-of select="exsl:node-set($type)/@name"/>
       </xsl:when>
       <xsl:when test="exsl:node-set($type)/@ref = 'CommonTypes'">
         <xsl:value-of select="exsl:node-set($type)/@name"/>
@@ -196,6 +212,7 @@
       </xsl:when>
       <xsl:otherwise>string</xsl:otherwise>
     </xsl:choose>
+    <xsl:if test="'O' = substring($characteristics, string-length($characteristics))"> OPT</xsl:if>
   </xsl:template>
 
 

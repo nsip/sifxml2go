@@ -34,14 +34,13 @@ while(grep(/#/, @lines)) {
 }
 (resolve_attrs(@lines));
 
-
-
 sub codesets(@) {
   my @lines = @_;
   my @lines1 = ();
   while ($_ = shift @lines) {
     if (/ENUM (\S+) \[/) {
       $type = $1;
+      $type .= "Type" ;#unless $type =~ m/Type$/;
       push @lines1, "type $type string\n";
       $_ = shift @lines;
       s/^\s+|\s+$//g;
@@ -123,6 +122,7 @@ sub indent_attrs(@) {
   my @lines1 = ();
   my ($prev);
   foreach (@lines) {
+    s/ OPT / / if m/,attr/;
     ($object) = /\btype (\w+)/;
     ($indent, $term, $array, $type, $xml) = /^\s*(?:##(\d))?(\S+)\s+(\[\])?(\S+)\s(\S*)/;
     ($indent, $term, $array, $type, $xml) = () if $term eq 'type';

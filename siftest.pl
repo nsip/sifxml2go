@@ -4,6 +4,7 @@ package sifxml
 import (
         "encoding/xml"
         "github.com/clbanning/mxj"
+        "github.com/creasty/defaults"
         "reflect"
         "regexp"
         "strings"
@@ -52,6 +53,8 @@ while(<>) {
 func Test_$var(t *testing.T) {
         a := $object\{\}
         err := xml.Unmarshal([]byte($var), &a)
+        errcheck(t, err)
+        err = defaults.Set(&a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
