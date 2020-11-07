@@ -5,7 +5,7 @@ import (
         "github.com/clbanning/mxj"
         "reflect"
         "regexp"
-        "strings"
+        //"strings"
         "testing"
 )
 
@@ -20,6 +20,7 @@ func stripEmptyTags(s []byte) []byte {
         s = pointzero1.ReplaceAll(s, []byte(">$1<"))
         s = pointzero2.ReplaceAll(s, []byte(">$1<"))
         s = noleadpoint.ReplaceAll(s, []byte(">0$1<"))
+        /*
         s = emptytag1.ReplaceAll(s, []byte(""))
         s = emptytag1.ReplaceAll(s, []byte(""))
         s = emptytag1.ReplaceAll(s, []byte(""))
@@ -34,6 +35,7 @@ func stripEmptyTags(s []byte) []byte {
           }
         }
         s = []byte(strings.Join(arr, ""))
+        */
         return s
 }
 
@@ -53,7 +55,7 @@ func Test_test_ActivityExample1(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_ActivityExample1 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ActivityExample1))), string(stripEmptyTags(output)))
+                t.Fatalf("test_ActivityExample1 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ActivityExample1))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_ActivityExample2(t *testing.T) {
@@ -67,7 +69,7 @@ func Test_test_ActivityExample2(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_ActivityExample2 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ActivityExample2))), string(stripEmptyTags(output)))
+                t.Fatalf("test_ActivityExample2 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ActivityExample2))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_AggregateCharacteristicInfo(t *testing.T) {
@@ -81,7 +83,7 @@ func Test_test_AggregateCharacteristicInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_AggregateCharacteristicInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_AggregateCharacteristicInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_AggregateCharacteristicInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_AggregateCharacteristicInfo))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_AggregateStatisticFact(t *testing.T) {
@@ -95,7 +97,7 @@ func Test_test_AggregateStatisticFact(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_AggregateStatisticFact not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_AggregateStatisticFact))), string(stripEmptyTags(output)))
+                t.Fatalf("test_AggregateStatisticFact not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_AggregateStatisticFact))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_AggregateStatisticInfo(t *testing.T) {
@@ -109,7 +111,7 @@ func Test_test_AggregateStatisticInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_AggregateStatisticInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_AggregateStatisticInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_AggregateStatisticInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_AggregateStatisticInfo))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_CalendarDate(t *testing.T) {
@@ -123,7 +125,7 @@ func Test_test_CalendarDate(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_CalendarDate not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CalendarDate))), string(stripEmptyTags(output)))
+                t.Fatalf("test_CalendarDate not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CalendarDate))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_CalendarSummary(t *testing.T) {
@@ -137,7 +139,7 @@ func Test_test_CalendarSummary(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_CalendarSummary not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CalendarSummary))), string(stripEmptyTags(output)))
+                t.Fatalf("test_CalendarSummary not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CalendarSummary))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_EquipmentInfoExample(t *testing.T) {
@@ -151,7 +153,7 @@ func Test_test_EquipmentInfoExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_EquipmentInfoExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_EquipmentInfoExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_EquipmentInfoExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_EquipmentInfoExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_GradingAssignment(t *testing.T) {
@@ -165,7 +167,7 @@ func Test_test_GradingAssignment(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_GradingAssignment not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_GradingAssignment))), string(stripEmptyTags(output)))
+                t.Fatalf("test_GradingAssignment not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_GradingAssignment))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_GradingAssignmentScore(t *testing.T) {
@@ -179,21 +181,21 @@ func Test_test_GradingAssignmentScore(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_GradingAssignmentScore not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_GradingAssignmentScore))), string(stripEmptyTags(output)))
+                t.Fatalf("test_GradingAssignmentScore not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_GradingAssignmentScore))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0275(t *testing.T) {
+func Test_test_example0560(t *testing.T) {
         a := Identity{}
-        err := xml.Unmarshal([]byte(test_example0275), &a)
+        err := xml.Unmarshal([]byte(test_example0560), &a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0275)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0560)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0275 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0275))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0560 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0560))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_IdentitypublishedbyMicrosoftActiveDirectory(t *testing.T) {
@@ -207,7 +209,7 @@ func Test_test_IdentitypublishedbyMicrosoftActiveDirectory(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_IdentitypublishedbyMicrosoftActiveDirectory not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_IdentitypublishedbyMicrosoftActiveDirectory))), string(stripEmptyTags(output)))
+                t.Fatalf("test_IdentitypublishedbyMicrosoftActiveDirectory not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_IdentitypublishedbyMicrosoftActiveDirectory))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_IdentitypublishedbyanOpenIDprovider(t *testing.T) {
@@ -221,7 +223,7 @@ func Test_test_IdentitypublishedbyanOpenIDprovider(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_IdentitypublishedbyanOpenIDprovider not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_IdentitypublishedbyanOpenIDprovider))), string(stripEmptyTags(output)))
+                t.Fatalf("test_IdentitypublishedbyanOpenIDprovider not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_IdentitypublishedbyanOpenIDprovider))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_LEAInfo(t *testing.T) {
@@ -235,7 +237,7 @@ func Test_test_LEAInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_LEAInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LEAInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_LEAInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LEAInfo))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_LearningResource(t *testing.T) {
@@ -249,7 +251,7 @@ func Test_test_LearningResource(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_LearningResource not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LearningResource))), string(stripEmptyTags(output)))
+                t.Fatalf("test_LearningResource not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LearningResource))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_LearningResourcePackage(t *testing.T) {
@@ -263,7 +265,7 @@ func Test_test_LearningResourcePackage(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_LearningResourcePackage not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LearningResourcePackage))), string(stripEmptyTags(output)))
+                t.Fatalf("test_LearningResourcePackage not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LearningResourcePackage))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_LearningStandardItem(t *testing.T) {
@@ -277,7 +279,7 @@ func Test_test_LearningStandardItem(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_LearningStandardItem not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LearningStandardItem))), string(stripEmptyTags(output)))
+                t.Fatalf("test_LearningStandardItem not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_LearningStandardItem))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_MarkValueInfo(t *testing.T) {
@@ -291,7 +293,7 @@ func Test_test_MarkValueInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_MarkValueInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_MarkValueInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_MarkValueInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_MarkValueInfo))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_PersonPicture(t *testing.T) {
@@ -305,7 +307,7 @@ func Test_test_PersonPicture(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_PersonPicture not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PersonPicture))), string(stripEmptyTags(output)))
+                t.Fatalf("test_PersonPicture not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PersonPicture))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_PersonalisedPlan(t *testing.T) {
@@ -319,7 +321,7 @@ func Test_test_PersonalisedPlan(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_PersonalisedPlan not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PersonalisedPlan))), string(stripEmptyTags(output)))
+                t.Fatalf("test_PersonalisedPlan not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PersonalisedPlan))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_ResourceBookingExample(t *testing.T) {
@@ -333,7 +335,7 @@ func Test_test_ResourceBookingExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_ResourceBookingExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ResourceBookingExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_ResourceBookingExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ResourceBookingExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_ResourceUsage(t *testing.T) {
@@ -347,7 +349,7 @@ func Test_test_ResourceUsage(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_ResourceUsage not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ResourceUsage))), string(stripEmptyTags(output)))
+                t.Fatalf("test_ResourceUsage not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ResourceUsage))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_RoomInfoExample(t *testing.T) {
@@ -361,7 +363,7 @@ func Test_test_RoomInfoExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_RoomInfoExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_RoomInfoExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_RoomInfoExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_RoomInfoExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_ScheduledActivityExample(t *testing.T) {
@@ -375,7 +377,7 @@ func Test_test_ScheduledActivityExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_ScheduledActivityExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ScheduledActivityExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_ScheduledActivityExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ScheduledActivityExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_SchoolCourseInfoExample(t *testing.T) {
@@ -389,7 +391,7 @@ func Test_test_SchoolCourseInfoExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_SchoolCourseInfoExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SchoolCourseInfoExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_SchoolCourseInfoExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SchoolCourseInfoExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_SchoolInfo(t *testing.T) {
@@ -403,7 +405,7 @@ func Test_test_SchoolInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_SchoolInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SchoolInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_SchoolInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SchoolInfo))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_SchoolPrograms(t *testing.T) {
@@ -417,7 +419,7 @@ func Test_test_SchoolPrograms(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_SchoolPrograms not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SchoolPrograms))), string(stripEmptyTags(output)))
+                t.Fatalf("test_SchoolPrograms not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SchoolPrograms))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_SectionInfoExample1(t *testing.T) {
@@ -431,7 +433,7 @@ func Test_test_SectionInfoExample1(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_SectionInfoExample1 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SectionInfoExample1))), string(stripEmptyTags(output)))
+                t.Fatalf("test_SectionInfoExample1 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SectionInfoExample1))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_SessionInfoExample(t *testing.T) {
@@ -445,7 +447,7 @@ func Test_test_SessionInfoExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_SessionInfoExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SessionInfoExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_SessionInfoExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SessionInfoExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StaffAssignment(t *testing.T) {
@@ -459,7 +461,7 @@ func Test_test_StaffAssignment(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StaffAssignment not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StaffAssignment))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StaffAssignment not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StaffAssignment))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StaffPersonal(t *testing.T) {
@@ -473,7 +475,7 @@ func Test_test_StaffPersonal(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StaffPersonal not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StaffPersonal))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StaffPersonal not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StaffPersonal))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentActivityInfo(t *testing.T) {
@@ -487,7 +489,7 @@ func Test_test_StudentActivityInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentActivityInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentActivityInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentActivityInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentActivityInfo))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentActivityParticipation(t *testing.T) {
@@ -501,7 +503,7 @@ func Test_test_StudentActivityParticipation(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentActivityParticipation not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentActivityParticipation))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentActivityParticipation not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentActivityParticipation))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentAttendanceSummary(t *testing.T) {
@@ -515,7 +517,7 @@ func Test_test_StudentAttendanceSummary(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentAttendanceSummary not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceSummary))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentAttendanceSummary not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceSummary))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentAttendanceTimeListExample(t *testing.T) {
@@ -529,7 +531,7 @@ func Test_test_StudentAttendanceTimeListExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentAttendanceTimeListExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceTimeListExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentAttendanceTimeListExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceTimeListExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentAttendanceTimeListExample2(t *testing.T) {
@@ -543,7 +545,7 @@ func Test_test_StudentAttendanceTimeListExample2(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentAttendanceTimeListExample2 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceTimeListExample2))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentAttendanceTimeListExample2 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceTimeListExample2))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentContactPersonalExample(t *testing.T) {
@@ -557,7 +559,7 @@ func Test_test_StudentContactPersonalExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentContactPersonalExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentContactPersonalExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentContactPersonalExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentContactPersonalExample))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentContactRelationship(t *testing.T) {
@@ -571,7 +573,7 @@ func Test_test_StudentContactRelationship(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentContactRelationship not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentContactRelationship))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentContactRelationship not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentContactRelationship))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentDailyAttendance(t *testing.T) {
@@ -585,7 +587,7 @@ func Test_test_StudentDailyAttendance(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentDailyAttendance not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentDailyAttendance))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentDailyAttendance not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentDailyAttendance))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentGrade(t *testing.T) {
@@ -599,7 +601,7 @@ func Test_test_StudentGrade(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentGrade not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentGrade))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentGrade not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentGrade))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentParticipation(t *testing.T) {
@@ -613,7 +615,7 @@ func Test_test_StudentParticipation(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentParticipation not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentParticipation))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentParticipation not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentParticipation))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentPeriodAttendanceExample(t *testing.T) {
@@ -627,21 +629,21 @@ func Test_test_StudentPeriodAttendanceExample(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentPeriodAttendanceExample not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentPeriodAttendanceExample))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentPeriodAttendanceExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentPeriodAttendanceExample))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0829(t *testing.T) {
+func Test_test_example0448(t *testing.T) {
         a := StudentPersonal{}
-        err := xml.Unmarshal([]byte(test_example0829), &a)
+        err := xml.Unmarshal([]byte(test_example0448), &a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0829)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0448)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0829 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0829))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0448 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0448))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentSchoolEnrollment(t *testing.T) {
@@ -655,7 +657,7 @@ func Test_test_StudentSchoolEnrollment(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentSchoolEnrollment not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentSchoolEnrollment))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentSchoolEnrollment not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentSchoolEnrollment))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously(t *testing.T) {
@@ -669,7 +671,7 @@ func Test_test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedprevi
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublished(t *testing.T) {
@@ -683,7 +685,7 @@ func Test_test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsP
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublished not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublished))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublished not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublished))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentSectionEnrollment(t *testing.T) {
@@ -697,7 +699,7 @@ func Test_test_StudentSectionEnrollment(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentSectionEnrollment not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentSectionEnrollment))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentSectionEnrollment not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentSectionEnrollment))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_SystemRole(t *testing.T) {
@@ -711,7 +713,7 @@ func Test_test_SystemRole(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_SystemRole not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SystemRole))), string(stripEmptyTags(output)))
+                t.Fatalf("test_SystemRole not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_SystemRole))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_TeachingGroup(t *testing.T) {
@@ -725,7 +727,7 @@ func Test_test_TeachingGroup(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_TeachingGroup not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TeachingGroup))), string(stripEmptyTags(output)))
+                t.Fatalf("test_TeachingGroup not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TeachingGroup))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_TermInfo(t *testing.T) {
@@ -739,7 +741,7 @@ func Test_test_TermInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_TermInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TermInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_TermInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TermInfo))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_TimeTable(t *testing.T) {
@@ -753,7 +755,7 @@ func Test_test_TimeTable(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_TimeTable not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TimeTable))), string(stripEmptyTags(output)))
+                t.Fatalf("test_TimeTable not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TimeTable))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_TimeTableCell(t *testing.T) {
@@ -767,7 +769,7 @@ func Test_test_TimeTableCell(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_TimeTableCell not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TimeTableCell))), string(stripEmptyTags(output)))
+                t.Fatalf("test_TimeTableCell not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TimeTableCell))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_TimeTableSubject(t *testing.T) {
@@ -781,7 +783,7 @@ func Test_test_TimeTableSubject(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_TimeTableSubject not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TimeTableSubject))), string(stripEmptyTags(output)))
+                t.Fatalf("test_TimeTableSubject not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_TimeTableSubject))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingAlert(t *testing.T) {
@@ -795,7 +797,7 @@ func Test_test_WellbeingAlert(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingAlert not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingAlert))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingAlert not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingAlert))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingAppeal(t *testing.T) {
@@ -809,7 +811,7 @@ func Test_test_WellbeingAppeal(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingAppeal not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingAppeal))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingAppeal not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingAppeal))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingCharacteristic(t *testing.T) {
@@ -823,7 +825,7 @@ func Test_test_WellbeingCharacteristic(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingCharacteristic not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingCharacteristic))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingCharacteristic not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingCharacteristic))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingEvent(t *testing.T) {
@@ -837,7 +839,7 @@ func Test_test_WellbeingEvent(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingEvent not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingEvent))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingEvent not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingEvent))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingEvent2(t *testing.T) {
@@ -851,7 +853,7 @@ func Test_test_WellbeingEvent2(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingEvent2 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingEvent2))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingEvent2 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingEvent2))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingEvent3(t *testing.T) {
@@ -865,7 +867,7 @@ func Test_test_WellbeingEvent3(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingEvent3 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingEvent3))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingEvent3 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingEvent3))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingPersonLink(t *testing.T) {
@@ -879,7 +881,7 @@ func Test_test_WellbeingPersonLink(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingPersonLink not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingPersonLink not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingPersonLink2(t *testing.T) {
@@ -893,7 +895,7 @@ func Test_test_WellbeingPersonLink2(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingPersonLink2 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink2))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingPersonLink2 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink2))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingPersonLink3(t *testing.T) {
@@ -907,7 +909,7 @@ func Test_test_WellbeingPersonLink3(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingPersonLink3 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink3))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingPersonLink3 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink3))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingPersonLink4(t *testing.T) {
@@ -921,7 +923,7 @@ func Test_test_WellbeingPersonLink4(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingPersonLink4 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink4))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingPersonLink4 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingPersonLink4))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_WellbeingResponse(t *testing.T) {
@@ -935,7 +937,7 @@ func Test_test_WellbeingResponse(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_WellbeingResponse not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingResponse))), string(stripEmptyTags(output)))
+                t.Fatalf("test_WellbeingResponse not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_WellbeingResponse))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_ChargedLocation(t *testing.T) {
@@ -949,7 +951,7 @@ func Test_test_ChargedLocation(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_ChargedLocation not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ChargedLocation))), string(stripEmptyTags(output)))
+                t.Fatalf("test_ChargedLocation not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_ChargedLocation))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_CollectionRound(t *testing.T) {
@@ -963,7 +965,7 @@ func Test_test_CollectionRound(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_CollectionRound not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CollectionRound))), string(stripEmptyTags(output)))
+                t.Fatalf("test_CollectionRound not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CollectionRound))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_CollectionStatus(t *testing.T) {
@@ -977,7 +979,7 @@ func Test_test_CollectionStatus(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_CollectionStatus not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CollectionStatus))), string(stripEmptyTags(output)))
+                t.Fatalf("test_CollectionStatus not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_CollectionStatus))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_Debtor(t *testing.T) {
@@ -991,7 +993,7 @@ func Test_test_Debtor(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_Debtor not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_Debtor))), string(stripEmptyTags(output)))
+                t.Fatalf("test_Debtor not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_Debtor))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_FinancialAccount(t *testing.T) {
@@ -1005,7 +1007,7 @@ func Test_test_FinancialAccount(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_FinancialAccount not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_FinancialAccount))), string(stripEmptyTags(output)))
+                t.Fatalf("test_FinancialAccount not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_FinancialAccount))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_FinancialQuestionnaireCollection(t *testing.T) {
@@ -1019,7 +1021,7 @@ func Test_test_FinancialQuestionnaireCollection(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_FinancialQuestionnaireCollection not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_FinancialQuestionnaireCollection))), string(stripEmptyTags(output)))
+                t.Fatalf("test_FinancialQuestionnaireCollection not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_FinancialQuestionnaireCollection))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_Invoice(t *testing.T) {
@@ -1033,7 +1035,7 @@ func Test_test_Invoice(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_Invoice not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_Invoice))), string(stripEmptyTags(output)))
+                t.Fatalf("test_Invoice not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_Invoice))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_Journal(t *testing.T) {
@@ -1047,7 +1049,7 @@ func Test_test_Journal(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_Journal not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_Journal))), string(stripEmptyTags(output)))
+                t.Fatalf("test_Journal not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_Journal))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_NAPCodeFrameexample1(t *testing.T) {
@@ -1061,7 +1063,7 @@ func Test_test_NAPCodeFrameexample1(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_NAPCodeFrameexample1 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPCodeFrameexample1))), string(stripEmptyTags(output)))
+                t.Fatalf("test_NAPCodeFrameexample1 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPCodeFrameexample1))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_NAPEventStudentLink(t *testing.T) {
@@ -1075,7 +1077,7 @@ func Test_test_NAPEventStudentLink(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_NAPEventStudentLink not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPEventStudentLink))), string(stripEmptyTags(output)))
+                t.Fatalf("test_NAPEventStudentLink not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPEventStudentLink))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_NAPStudentResponseSet(t *testing.T) {
@@ -1089,7 +1091,7 @@ func Test_test_NAPStudentResponseSet(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_NAPStudentResponseSet not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPStudentResponseSet))), string(stripEmptyTags(output)))
+                t.Fatalf("test_NAPStudentResponseSet not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPStudentResponseSet))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_NAPTest(t *testing.T) {
@@ -1103,7 +1105,7 @@ func Test_test_NAPTest(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_NAPTest not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTest))), string(stripEmptyTags(output)))
+                t.Fatalf("test_NAPTest not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTest))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_NAPTestItem(t *testing.T) {
@@ -1117,7 +1119,7 @@ func Test_test_NAPTestItem(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_NAPTestItem not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTestItem))), string(stripEmptyTags(output)))
+                t.Fatalf("test_NAPTestItem not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTestItem))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_NAPTestScoreSummary(t *testing.T) {
@@ -1131,7 +1133,7 @@ func Test_test_NAPTestScoreSummary(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_NAPTestScoreSummary not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTestScoreSummary))), string(stripEmptyTags(output)))
+                t.Fatalf("test_NAPTestScoreSummary not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTestScoreSummary))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_NAPTestlet(t *testing.T) {
@@ -1145,7 +1147,7 @@ func Test_test_NAPTestlet(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_NAPTestlet not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTestlet))), string(stripEmptyTags(output)))
+                t.Fatalf("test_NAPTestlet not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_NAPTestlet))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_PaymentReceipt(t *testing.T) {
@@ -1159,21 +1161,21 @@ func Test_test_PaymentReceipt(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_PaymentReceipt not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PaymentReceipt))), string(stripEmptyTags(output)))
+                t.Fatalf("test_PaymentReceipt not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PaymentReceipt))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0637(t *testing.T) {
+func Test_test_example0773(t *testing.T) {
         a := PurchaseOrder{}
-        err := xml.Unmarshal([]byte(test_example0637), &a)
+        err := xml.Unmarshal([]byte(test_example0773), &a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0637)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0773)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0637 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0637))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0773 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0773))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentAttendanceCollectionExample2(t *testing.T) {
@@ -1187,7 +1189,7 @@ func Test_test_StudentAttendanceCollectionExample2(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_StudentAttendanceCollectionExample2 not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceCollectionExample2))), string(stripEmptyTags(output)))
+                t.Fatalf("test_StudentAttendanceCollectionExample2 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentAttendanceCollectionExample2))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_VendorInfo(t *testing.T) {
@@ -1201,6 +1203,6 @@ func Test_test_VendorInfo(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_VendorInfo not DeepEqual:\nmv: %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_VendorInfo))), string(stripEmptyTags(output)))
+                t.Fatalf("test_VendorInfo not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_VendorInfo))), string(stripEmptyTags(output)))
         }
 }

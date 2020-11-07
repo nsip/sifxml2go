@@ -9,12 +9,12 @@ type GradingAssignments []GradingAssignment
       StudentPersonalRefIdList *StudentsType `xml:"StudentPersonalRefIdList,omitempty" json:"StudentPersonalRefIdList"`
       SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       GradingCategory *string `xml:"GradingCategory,omitempty" json:"GradingCategory"`
-      Description *string `xml:"Description,omitempty" json:"Description"`
-      PointsPossible *int `xml:"PointsPossible,omitempty" json:"PointsPossible"`
+      Description *string `xml:"Description" json:"Description"`
+      PointsPossible *int `xml:"PointsPossible" json:"PointsPossible"`
       CreateDate *string `xml:"CreateDate,omitempty" json:"CreateDate"`
       DueDate *string `xml:"DueDate,omitempty" json:"DueDate"`
-      Weight *float64 `xml:"Weight,omitempty" json:"Weight"`
-      MaxAttemptsAllowed *int `xml:"MaxAttemptsAllowed,omitempty" json:"MaxAttemptsAllowed"`
+      Weight *float64 `xml:"Weight" json:"Weight"`
+      MaxAttemptsAllowed *int `xml:"MaxAttemptsAllowed" json:"MaxAttemptsAllowed"`
       DetailedDescriptionURL *string `xml:"DetailedDescriptionURL,omitempty" json:"DetailedDescriptionURL"`
       DetailedDescriptionBinary *string `xml:"DetailedDescriptionBinary,omitempty" json:"DetailedDescriptionBinary"`
       AssessmentType *string `xml:"AssessmentType,omitempty" json:"AssessmentType"`

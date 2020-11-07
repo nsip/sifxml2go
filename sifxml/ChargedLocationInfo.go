@@ -5,9 +5,9 @@ type ChargedLocationInfos []ChargedLocationInfo
 
     type ChargedLocationInfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      LocationType *string `xml:"LocationType,omitempty" json:"LocationType"`
-      SiteCategory *string `xml:"SiteCategory,omitempty" json:"SiteCategory"`
-      Name *string `xml:"Name,omitempty" json:"Name"`
+      LocationType *string `xml:"LocationType" json:"LocationType"`
+      SiteCategory *string `xml:"SiteCategory" json:"SiteCategory"`
+      Name *string `xml:"Name" json:"Name"`
       Description *string `xml:"Description,omitempty" json:"Description"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId"`

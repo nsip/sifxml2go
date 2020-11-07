@@ -6,10 +6,10 @@ type PersonalisedPlans []PersonalisedPlan
     type PersonalisedPlan struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
-      PersonalisedPlanCategory *string `xml:"PersonalisedPlanCategory,omitempty" json:"PersonalisedPlanCategory"`
-      PersonalisedPlanStartDate *string `xml:"PersonalisedPlanStartDate,omitempty" json:"PersonalisedPlanStartDate"`
+      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      SchoolInfoRefId *string `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
+      PersonalisedPlanCategory *AUCodeSetsPersonalisedPlanType `xml:"PersonalisedPlanCategory" json:"PersonalisedPlanCategory"`
+      PersonalisedPlanStartDate *string `xml:"PersonalisedPlanStartDate" json:"PersonalisedPlanStartDate"`
       PersonalisedPlanEndDate *string `xml:"PersonalisedPlanEndDate,omitempty" json:"PersonalisedPlanEndDate"`
       PersonalisedPlanReviewDate *string `xml:"PersonalisedPlanReviewDate,omitempty" json:"PersonalisedPlanReviewDate"`
       PersonalisedPlanNotes *string `xml:"PersonalisedPlanNotes,omitempty" json:"PersonalisedPlanNotes"`

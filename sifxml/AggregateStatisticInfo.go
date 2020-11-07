@@ -5,8 +5,8 @@ type AggregateStatisticInfos []AggregateStatisticInfo
 
     type AggregateStatisticInfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      StatisticName *string `xml:"StatisticName,omitempty" json:"StatisticName"`
-      CalculationRule *AggregateStatisticInfo_CalculationRule `xml:"CalculationRule,omitempty" json:"CalculationRule"`
+      StatisticName *string `xml:"StatisticName" json:"StatisticName"`
+      CalculationRule *AggregateStatisticInfo_CalculationRule
       ApprovalDate *string `xml:"ApprovalDate,omitempty" json:"ApprovalDate"`
       ExpirationDate *string `xml:"ExpirationDate,omitempty" json:"ExpirationDate"`
       ExclusionRules *ExclusionRulesType `xml:"ExclusionRules,omitempty" json:"ExclusionRules"`

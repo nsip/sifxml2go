@@ -5,8 +5,8 @@ type StudentSectionEnrollments []StudentSectionEnrollment
 
     type StudentSectionEnrollment struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
-      SectionInfoRefId *string `xml:"SectionInfoRefId,omitempty" json:"SectionInfoRefId"`
+      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      SectionInfoRefId *string `xml:"SectionInfoRefId" json:"SectionInfoRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear"`
       EntryDate *string `xml:"EntryDate,omitempty" json:"EntryDate"`
       ExitDate *string `xml:"ExitDate,omitempty" json:"ExitDate"`

@@ -4,23 +4,23 @@ package sifxml
     type ReportPackageType AbstractContentPackageType
     type AbstractContentPackageType struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      XMLData *AbstractContentPackageType_XMLData `xml:"XMLData,omitempty" json:"XMLData"`
-      TextData *AbstractContentPackageType_TextData `xml:"TextData,omitempty" json:"TextData"`
-      BinaryData *AbstractContentPackageType_BinaryData `xml:"BinaryData,omitempty" json:"BinaryData"`
-      Reference *AbstractContentPackageType_Reference `xml:"Reference,omitempty" json:"Reference"`
+      XMLData *AbstractContentPackageType_XMLData `xml:"XMLData" json:"XMLData"`
+      TextData *AbstractContentPackageType_TextData `xml:"TextData" json:"TextData"`
+      BinaryData *AbstractContentPackageType_BinaryData `xml:"BinaryData" json:"BinaryData"`
+      Reference *AbstractContentPackageType_Reference `xml:"Reference" json:"Reference"`
       
       }
     
     type AbstractContentElementType struct {
-      XMLData *AbstractContentElementType_XMLData `xml:"XMLData,omitempty" json:"XMLData"`
-      TextData *AbstractContentElementType_TextData `xml:"TextData,omitempty" json:"TextData"`
-      BinaryData *AbstractContentElementType_BinaryData `xml:"BinaryData,omitempty" json:"BinaryData"`
-      Reference *AbstractContentElementType_Reference `xml:"Reference,omitempty" json:"Reference"`
+      XMLData *AbstractContentElementType_XMLData `xml:"XMLData" json:"XMLData"`
+      TextData *AbstractContentElementType_TextData `xml:"TextData" json:"TextData"`
+      BinaryData *AbstractContentElementType_BinaryData `xml:"BinaryData" json:"BinaryData"`
+      Reference *AbstractContentElementType_Reference `xml:"Reference" json:"Reference"`
       
       }
     
     type MonetaryAmountType struct {
-          Currency *string `xml:"Currency,attr" json:"Currency"`
+          Currency *ISO4217CurrencyNamesAndCodeElementsType `xml:"Currency,attr" json:"Currency"`
       
         Value *float64 `xml:",chardata" json:"value"`
       }
@@ -40,7 +40,7 @@ package sifxml
     type ExtendedContentType string
     type SelectedContentType string
     type LibraryTransactionListType struct {
-        Transaction *[]LibraryTransactionType `xml:"Transaction,omitempty" json:"Transaction"`
+        Transaction *[]LibraryTransactionType `xml:"Transaction" json:"Transaction"`
       
       }
     
@@ -54,52 +54,54 @@ package sifxml
     
     type LibraryItemInfoType struct {
         Type *string `xml:"Type,attr" json:"Type"`
-      TypeCodeset *string `xml:"TypeCodeset,attr" json:"TypeCodeset"`
-      Title *string `xml:"Title,omitempty" json:"Title"`
+      Title *string `xml:"Title" json:"Title"`
       Author *string `xml:"Author,omitempty" json:"Author"`
       ElectronicId *ElectronicIdType `xml:"ElectronicId,omitempty" json:"ElectronicId"`
       CallNumber *string `xml:"CallNumber,omitempty" json:"CallNumber"`
-      Price *MonetaryAmountType `xml:"Price,omitempty" json:"Price"`
+      ISBN *string `xml:"ISBN,omitempty" json:"ISBN"`
+      Cost *MonetaryAmountType `xml:"Cost,omitempty" json:"Cost"`
+      ReplacementCost *MonetaryAmountType `xml:"ReplacementCost,omitempty" json:"ReplacementCost"`
       
       }
     
     type CheckoutInfoType struct {
-        ReturnBy *string `xml:"ReturnBy,omitempty" json:"ReturnBy"`
+        CheckedOutOn *string `xml:"CheckedOutOn" json:"CheckedOutOn"`
+      ReturnBy *string `xml:"ReturnBy" json:"ReturnBy"`
+      RenewalCount *int `xml:"RenewalCount" json:"RenewalCount"`
       
       }
     
     type FineInfoListType struct {
-        FineInfo *[]FineInfoType `xml:"FineInfo,omitempty" json:"FineInfo"`
+        FineInfo *[]FineInfoType `xml:"FineInfo" json:"FineInfo"`
       
       }
     
     type FineInfoType struct {
         Type *string `xml:"Type,attr" json:"Type"`
-      TypeCodeset *string `xml:"TypeCodeset,attr" json:"TypeCodeset"`
-      Assessed *string `xml:"Assessed,omitempty" json:"Assessed"`
+      Assessed *string `xml:"Assessed" json:"Assessed"`
       Description *string `xml:"Description,omitempty" json:"Description"`
-      Amount *MonetaryAmountType `xml:"Amount,omitempty" json:"Amount"`
+      Amount *MonetaryAmountType `xml:"Amount" json:"Amount"`
       Reference *string `xml:"Reference,omitempty" json:"Reference"`
       
       }
     
     type HoldInfoListType struct {
-        HoldInfo *[]HoldInfoType `xml:"HoldInfo,omitempty" json:"HoldInfo"`
+        HoldInfo *[]HoldInfoType `xml:"HoldInfo" json:"HoldInfo"`
       
       }
     
     type HoldInfoType struct {
         Type *string `xml:"Type,attr" json:"Type"`
-      TypeCodeset *string `xml:"TypeCodeset,attr" json:"TypeCodeset"`
-      DatePlaced *string `xml:"DatePlaced,omitempty" json:"DatePlaced"`
+      DatePlaced *string `xml:"DatePlaced" json:"DatePlaced"`
       DateNeeded *string `xml:"DateNeeded,omitempty" json:"DateNeeded"`
+      ReservationExpiry *string `xml:"ReservationExpiry,omitempty" json:"ReservationExpiry"`
       MadeAvailable *string `xml:"MadeAvailable,omitempty" json:"MadeAvailable"`
       Expires *string `xml:"Expires,omitempty" json:"Expires"`
       
       }
     
     type LibraryMessageListType struct {
-        Message *[]LibraryMessageType `xml:"Message,omitempty" json:"Message"`
+        Message *[]LibraryMessageType `xml:"Message" json:"Message"`
       
       }
     
@@ -107,12 +109,12 @@ package sifxml
         Priority *string `xml:"Priority,attr" json:"Priority"`
       PriorityCodeset *string `xml:"PriorityCodeset,attr" json:"PriorityCodeset"`
       Sent *string `xml:"Sent,omitempty" json:"Sent"`
-      Text *string `xml:"Text,omitempty" json:"Text"`
+      Text *string `xml:"Text" json:"Text"`
       
       }
     
     type StudentAttendanceCollectionReportingListType struct {
-        StudentAttendanceCollectionReporting *[]StudentAttendanceCollectionReportingType `xml:"StudentAttendanceCollectionReporting,omitempty" json:"StudentAttendanceCollectionReporting"`
+        StudentAttendanceCollectionReporting *[]StudentAttendanceCollectionReportingType `xml:"StudentAttendanceCollectionReporting" json:"StudentAttendanceCollectionReporting"`
       
       }
     
@@ -121,45 +123,45 @@ package sifxml
       SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId"`
-      CommonwealthId *string `xml:"CommonwealthId,omitempty" json:"CommonwealthId"`
+      CommonwealthId *string `xml:"CommonwealthId" json:"CommonwealthId"`
       ACARAId *string `xml:"ACARAId,omitempty" json:"ACARAId"`
       EntityName *string `xml:"EntityName,omitempty" json:"EntityName"`
-      EntityContact *EntityContactInfoType `xml:"EntityContact,omitempty" json:"EntityContact"`
+      EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
       StatsCohortYearLevelList *StatsCohortYearLevelListType `xml:"StatsCohortYearLevelList,omitempty" json:"StatsCohortYearLevelList"`
       
       }
     
     type StatsCohortYearLevelListType struct {
-        StatsCohortYearLevel *[]StatsCohortYearLevelType `xml:"StatsCohortYearLevel,omitempty" json:"StatsCohortYearLevel"`
+        StatsCohortYearLevel *[]StatsCohortYearLevelType `xml:"StatsCohortYearLevel" json:"StatsCohortYearLevel"`
       
       }
     
     type StatsCohortYearLevelType struct {
-        CohortYearLevel *YearLevelType `xml:"CohortYearLevel,omitempty" json:"CohortYearLevel"`
-      StatsCohortList *StatsCohortListType `xml:"StatsCohortList,omitempty" json:"StatsCohortList"`
+        CohortYearLevel *YearLevelType `xml:"CohortYearLevel" json:"CohortYearLevel"`
+      StatsCohortList *StatsCohortListType `xml:"StatsCohortList" json:"StatsCohortList"`
       
       }
     
     type StatsCohortListType struct {
-        StatsCohort *[]StatsCohortType `xml:"StatsCohort,omitempty" json:"StatsCohort"`
+        StatsCohort *[]StatsCohortType `xml:"StatsCohort" json:"StatsCohort"`
       
       }
     
     type StatsCohortType struct {
-        StatsCohortId *LocalIdType `xml:"StatsCohortId,omitempty" json:"StatsCohortId"`
-      StatsIndigenousStudentType *string `xml:"StatsIndigenousStudentType,omitempty" json:"StatsIndigenousStudentType"`
-      CohortGender *string `xml:"CohortGender,omitempty" json:"CohortGender"`
-      DaysInReferencePeriod *int `xml:"DaysInReferencePeriod,omitempty" json:"DaysInReferencePeriod"`
-      PossibleSchoolDays *int `xml:"PossibleSchoolDays,omitempty" json:"PossibleSchoolDays"`
-      AttendanceDays *float64 `xml:"AttendanceDays,omitempty" json:"AttendanceDays"`
-      AttendanceLess90Percent *int `xml:"AttendanceLess90Percent,omitempty" json:"AttendanceLess90Percent"`
-      AttendanceGTE90Percent *int `xml:"AttendanceGTE90Percent,omitempty" json:"AttendanceGTE90Percent"`
-      PossibleSchoolDaysGT90PercentAttendance *int `xml:"PossibleSchoolDaysGT90PercentAttendance,omitempty" json:"PossibleSchoolDaysGT90PercentAttendance"`
+        StatsCohortId *LocalIdType `xml:"StatsCohortId" json:"StatsCohortId"`
+      StatsIndigenousStudentType *string `xml:"StatsIndigenousStudentType" json:"StatsIndigenousStudentType"`
+      CohortGender *string `xml:"CohortGender" json:"CohortGender"`
+      DaysInReferencePeriod *int `xml:"DaysInReferencePeriod" json:"DaysInReferencePeriod"`
+      PossibleSchoolDays *int `xml:"PossibleSchoolDays" json:"PossibleSchoolDays"`
+      AttendanceDays *float64 `xml:"AttendanceDays" json:"AttendanceDays"`
+      AttendanceLess90Percent *int `xml:"AttendanceLess90Percent" json:"AttendanceLess90Percent"`
+      AttendanceGTE90Percent *int `xml:"AttendanceGTE90Percent" json:"AttendanceGTE90Percent"`
+      PossibleSchoolDaysGT90PercentAttendance *int `xml:"PossibleSchoolDaysGT90PercentAttendance" json:"PossibleSchoolDaysGT90PercentAttendance"`
       
       }
     
     type AddressCollectionReportingListType struct {
-        AddressCollectionReporting *[]AddressCollectionReportingType `xml:"AddressCollectionReporting,omitempty" json:"AddressCollectionReporting"`
+        AddressCollectionReporting *[]AddressCollectionReportingType `xml:"AddressCollectionReporting" json:"AddressCollectionReporting"`
       
       }
     
@@ -168,124 +170,124 @@ package sifxml
       SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId"`
-      CommonwealthId *string `xml:"CommonwealthId,omitempty" json:"CommonwealthId"`
+      CommonwealthId *string `xml:"CommonwealthId" json:"CommonwealthId"`
       ACARAId *string `xml:"ACARAId,omitempty" json:"ACARAId"`
       EntityName *string `xml:"EntityName,omitempty" json:"EntityName"`
-      EntityContact *EntityContactInfoType `xml:"EntityContact,omitempty" json:"EntityContact"`
+      EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
       AGContextualQuestionList *AGContextualQuestionListType `xml:"AGContextualQuestionList,omitempty" json:"AGContextualQuestionList"`
       AddressCollectionStudentList *AddressCollectionStudentListType `xml:"AddressCollectionStudentList,omitempty" json:"AddressCollectionStudentList"`
       
       }
     
     type AddressCollectionStudentListType struct {
-        AddressCollectionStudent *[]AddressCollectionStudentType `xml:"AddressCollectionStudent,omitempty" json:"AddressCollectionStudent"`
+        AddressCollectionStudent *[]AddressCollectionStudentType `xml:"AddressCollectionStudent" json:"AddressCollectionStudent"`
       
       }
     
     type AddressCollectionStudentType struct {
-        LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      EducationLevel *string `xml:"EducationLevel,omitempty" json:"EducationLevel"`
-      BoardingStatus *string `xml:"BoardingStatus,omitempty" json:"BoardingStatus"`
-      ReportingParent2 *string `xml:"ReportingParent2,omitempty" json:"ReportingParent2"`
-      StudentAddress *AddressType `xml:"StudentAddress,omitempty" json:"StudentAddress"`
-      Parent1 *AGParentType `xml:"Parent1,omitempty" json:"Parent1"`
+        LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
+      EducationLevel *AUCodeSetsEducationLevelType `xml:"EducationLevel" json:"EducationLevel"`
+      BoardingStatus *AUCodeSetsBoardingType `xml:"BoardingStatus,omitempty" json:"BoardingStatus"`
+      ReportingParent2 *string `xml:"ReportingParent2" json:"ReportingParent2"`
+      StudentAddress *AddressType `xml:"StudentAddress" json:"StudentAddress"`
+      Parent1 *AGParentType `xml:"Parent1" json:"Parent1"`
       Parent2 *AGParentType `xml:"Parent2,omitempty" json:"Parent2"`
       
       }
     
     type AGParentType struct {
-        ParentName *NameOfRecordType `xml:"ParentName,omitempty" json:"ParentName"`
-      AddressSameAsStudent *string `xml:"AddressSameAsStudent,omitempty" json:"AddressSameAsStudent"`
-      ParentAddress *AddressType `xml:"ParentAddress,omitempty" json:"ParentAddress"`
+        ParentName *NameOfRecordType `xml:"ParentName" json:"ParentName"`
+      AddressSameAsStudent *AUCodeSetsYesOrNoCategoryType `xml:"AddressSameAsStudent" json:"AddressSameAsStudent"`
+      ParentAddress *AddressType `xml:"ParentAddress" json:"ParentAddress"`
       
       }
     
     type AGRoundListType struct {
-        AGRound *[]AGRoundType `xml:"AGRound,omitempty" json:"AGRound"`
+        AGRound *[]AGRoundType `xml:"AGRound" json:"AGRound"`
       
       }
     
     type AGRoundType struct {
-        RoundCode *string `xml:"RoundCode,omitempty" json:"RoundCode"`
-      RoundName *string `xml:"RoundName,omitempty" json:"RoundName"`
-      StartDate *string `xml:"StartDate,omitempty" json:"StartDate"`
-      DueDate *string `xml:"DueDate,omitempty" json:"DueDate"`
-      EndDate *string `xml:"EndDate,omitempty" json:"EndDate"`
+        RoundCode *string `xml:"RoundCode" json:"RoundCode"`
+      RoundName *string `xml:"RoundName" json:"RoundName"`
+      StartDate *string `xml:"StartDate" json:"StartDate"`
+      DueDate *string `xml:"DueDate" json:"DueDate"`
+      EndDate *string `xml:"EndDate" json:"EndDate"`
       
       }
     
     type AGContextualQuestionListType struct {
-        AGContextualQuestion *[]AGContextualQuestionType `xml:"AGContextualQuestion,omitempty" json:"AGContextualQuestion"`
+        AGContextualQuestion *[]AGContextualQuestionType `xml:"AGContextualQuestion" json:"AGContextualQuestion"`
       
       }
     
     type AGContextualQuestionType struct {
-        AGContextCode *string `xml:"AGContextCode,omitempty" json:"AGContextCode"`
-      AGAnswer *string `xml:"AGAnswer,omitempty" json:"AGAnswer"`
+        AGContextCode *AUCodeSetsAGContextQuestionType `xml:"AGContextCode" json:"AGContextCode"`
+      AGAnswer *string `xml:"AGAnswer" json:"AGAnswer"`
       
       }
     
     type CensusReportingListType struct {
-        CensusReporting *[]CensusReportingType `xml:"CensusReporting,omitempty" json:"CensusReporting"`
+        CensusReporting *[]CensusReportingType `xml:"CensusReporting" json:"CensusReporting"`
       
       }
     
     type CensusReportingType struct {
         EntityLevel *string `xml:"EntityLevel,omitempty" json:"EntityLevel"`
-      CommonwealthId *string `xml:"CommonwealthId,omitempty" json:"CommonwealthId"`
+      CommonwealthId *string `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *string `xml:"EntityName,omitempty" json:"EntityName"`
-      EntityContact *EntityContactInfoType `xml:"EntityContact,omitempty" json:"EntityContact"`
+      EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
       CensusStaffList *CensusStaffListType `xml:"CensusStaffList,omitempty" json:"CensusStaffList"`
       CensusStudentList *CensusStudentListType `xml:"CensusStudentList,omitempty" json:"CensusStudentList"`
       
       }
     
     type CensusStaffListType struct {
-        CensusStaff *[]CensusStaffType `xml:"CensusStaff,omitempty" json:"CensusStaff"`
+        CensusStaff *[]CensusStaffType `xml:"CensusStaff" json:"CensusStaff"`
       
       }
     
     type CensusStaffType struct {
-        StaffCohortId *LocalIdType `xml:"StaffCohortId,omitempty" json:"StaffCohortId"`
-      StaffActivity *StaffActivityExtensionType `xml:"StaffActivity,omitempty" json:"StaffActivity"`
-      CohortGender *string `xml:"CohortGender,omitempty" json:"CohortGender"`
-      CohortIndigenousType *string `xml:"CohortIndigenousType,omitempty" json:"CohortIndigenousType"`
-      PrimaryFTE *float64 `xml:"PrimaryFTE,omitempty" json:"PrimaryFTE"`
-      SecondaryFTE *float64 `xml:"SecondaryFTE,omitempty" json:"SecondaryFTE"`
-      JobFTE *float64 `xml:"JobFTE,omitempty" json:"JobFTE"`
-      Headcount *int `xml:"Headcount,omitempty" json:"Headcount"`
+        StaffCohortId *LocalIdType `xml:"StaffCohortId" json:"StaffCohortId"`
+      StaffActivity *StaffActivityExtensionType `xml:"StaffActivity" json:"StaffActivity"`
+      CohortGender *string `xml:"CohortGender" json:"CohortGender"`
+      CohortIndigenousType *string `xml:"CohortIndigenousType" json:"CohortIndigenousType"`
+      PrimaryFTE *float64 `xml:"PrimaryFTE" json:"PrimaryFTE"`
+      SecondaryFTE *float64 `xml:"SecondaryFTE" json:"SecondaryFTE"`
+      JobFTE *float64 `xml:"JobFTE" json:"JobFTE"`
+      Headcount *int `xml:"Headcount" json:"Headcount"`
       
       }
     
     type StaffAssignmentMostRecentContainerType struct {
-        PrimaryFTE *float64 `xml:"PrimaryFTE,omitempty" json:"PrimaryFTE"`
-      SecondaryFTE *float64 `xml:"SecondaryFTE,omitempty" json:"SecondaryFTE"`
+        PrimaryFTE *float64 `xml:"PrimaryFTE" json:"PrimaryFTE"`
+      SecondaryFTE *float64 `xml:"SecondaryFTE" json:"SecondaryFTE"`
       
       }
     
     type CensusStudentListType struct {
-        CensusStudent *[]CensusStudentType `xml:"CensusStudent,omitempty" json:"CensusStudent"`
+        CensusStudent *[]CensusStudentType `xml:"CensusStudent" json:"CensusStudent"`
       
       }
     
     type CensusStudentType struct {
-        StudentCohortId *LocalIdType `xml:"StudentCohortId,omitempty" json:"StudentCohortId"`
-      YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel"`
-      CensusAge *int `xml:"CensusAge,omitempty" json:"CensusAge"`
-      CohortGender *string `xml:"CohortGender,omitempty" json:"CohortGender"`
-      CohortIndigenousType *string `xml:"CohortIndigenousType,omitempty" json:"CohortIndigenousType"`
-      EducationMode *string `xml:"EducationMode,omitempty" json:"EducationMode"`
-      StudentOnVisa *string `xml:"StudentOnVisa,omitempty" json:"StudentOnVisa"`
-      OverseasStudent *string `xml:"OverseasStudent,omitempty" json:"OverseasStudent"`
-      DisabilityLevelOfAdjustment *string `xml:"DisabilityLevelOfAdjustment,omitempty" json:"DisabilityLevelOfAdjustment"`
-      DisabilityCategory *string `xml:"DisabilityCategory,omitempty" json:"DisabilityCategory"`
-      FTE *float64 `xml:"FTE,omitempty" json:"FTE"`
-      Headcount *int `xml:"Headcount,omitempty" json:"Headcount"`
+        StudentCohortId *LocalIdType `xml:"StudentCohortId" json:"StudentCohortId"`
+      YearLevel *YearLevelType `xml:"YearLevel" json:"YearLevel"`
+      CensusAge *int `xml:"CensusAge" json:"CensusAge"`
+      CohortGender *string `xml:"CohortGender" json:"CohortGender"`
+      CohortIndigenousType *string `xml:"CohortIndigenousType" json:"CohortIndigenousType"`
+      EducationMode *string `xml:"EducationMode" json:"EducationMode"`
+      StudentOnVisa *string `xml:"StudentOnVisa" json:"StudentOnVisa"`
+      OverseasStudent *string `xml:"OverseasStudent" json:"OverseasStudent"`
+      DisabilityLevelOfAdjustment *string `xml:"DisabilityLevelOfAdjustment" json:"DisabilityLevelOfAdjustment"`
+      DisabilityCategory *string `xml:"DisabilityCategory" json:"DisabilityCategory"`
+      FTE *float64 `xml:"FTE" json:"FTE"`
+      Headcount *int `xml:"Headcount" json:"Headcount"`
       
       }
     
     type AGReportingObjectResponseListType struct {
-        AGReportingObjectResponse *[]AGReportingObjectResponseType `xml:"AGReportingObjectResponse,omitempty" json:"AGReportingObjectResponse"`
+        AGReportingObjectResponse *[]AGReportingObjectResponseType `xml:"AGReportingObjectResponse" json:"AGReportingObjectResponse"`
       
       }
     
@@ -294,61 +296,61 @@ package sifxml
       SIFRefId *string `xml:"SIFRefId,omitempty" json:"SIFRefId"`
       HTTPStatusCode *string `xml:"HTTPStatusCode,omitempty" json:"HTTPStatusCode"`
       ErrorText *string `xml:"ErrorText,omitempty" json:"ErrorText"`
-      CommonwealthId *string `xml:"CommonwealthId,omitempty" json:"CommonwealthId"`
+      CommonwealthId *string `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *string `xml:"EntityName,omitempty" json:"EntityName"`
-      AGSubmissionStatusCode *string `xml:"AGSubmissionStatusCode,omitempty" json:"AGSubmissionStatusCode"`
+      AGSubmissionStatusCode *AUCodeSetsAGSubmissionStatusType `xml:"AGSubmissionStatusCode" json:"AGSubmissionStatusCode"`
       AGRuleList *AGRuleListType `xml:"AGRuleList,omitempty" json:"AGRuleList"`
       
       }
     
     type FQReportingListType struct {
-        FQReporting *[]FQReportingType `xml:"FQReporting,omitempty" json:"FQReporting"`
+        FQReporting *[]FQReportingType `xml:"FQReporting" json:"FQReporting"`
       
       }
     
     type FQReportingType struct {
-        EntityLevel *string `xml:"EntityLevel,omitempty" json:"EntityLevel"`
+        EntityLevel *string `xml:"EntityLevel" json:"EntityLevel"`
       SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId"`
-      CommonwealthId *string `xml:"CommonwealthId,omitempty" json:"CommonwealthId"`
+      CommonwealthId *string `xml:"CommonwealthId" json:"CommonwealthId"`
       ACARAId *string `xml:"ACARAId,omitempty" json:"ACARAId"`
       EntityName *string `xml:"EntityName,omitempty" json:"EntityName"`
-      EntityContact *EntityContactInfoType `xml:"EntityContact,omitempty" json:"EntityContact"`
+      EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
       FQContextualQuestionList *FQContextualQuestionListType `xml:"FQContextualQuestionList,omitempty" json:"FQContextualQuestionList"`
-      FQItemList *FQItemListType `xml:"FQItemList,omitempty" json:"FQItemList"`
+      FQItemList *FQItemListType `xml:"FQItemList" json:"FQItemList"`
       AGRuleList *AGRuleListType `xml:"AGRuleList,omitempty" json:"AGRuleList"`
       
       }
     
     type FQContextualQuestionListType struct {
-        FQContextualQuestion *[]FQContextualQuestionType `xml:"FQContextualQuestion,omitempty" json:"FQContextualQuestion"`
+        FQContextualQuestion *[]FQContextualQuestionType `xml:"FQContextualQuestion" json:"FQContextualQuestion"`
       
       }
     
     type FQContextualQuestionType struct {
-        FQContext *string `xml:"FQContext,omitempty" json:"FQContext"`
-      FQAnswer *string `xml:"FQAnswer,omitempty" json:"FQAnswer"`
+        FQContext *string `xml:"FQContext" json:"FQContext"`
+      FQAnswer *string `xml:"FQAnswer" json:"FQAnswer"`
       
       }
     
     type FQItemListType struct {
-        FQItem *[]FQItemType `xml:"FQItem,omitempty" json:"FQItem"`
+        FQItem *[]FQItemType `xml:"FQItem" json:"FQItem"`
       
       }
     
     type FQItemType struct {
-        FQItemCode *string `xml:"FQItemCode,omitempty" json:"FQItemCode"`
-      TuitionAmount *float64 `xml:"TuitionAmount,omitempty" json:"TuitionAmount"`
-      BoardingAmount *float64 `xml:"BoardingAmount,omitempty" json:"BoardingAmount"`
-      SystemAmount *float64 `xml:"SystemAmount,omitempty" json:"SystemAmount"`
-      DioceseAmount *float64 `xml:"DioceseAmount,omitempty" json:"DioceseAmount"`
+        FQItemCode *string `xml:"FQItemCode" json:"FQItemCode"`
+      TuitionAmount *float64 `xml:"TuitionAmount" json:"TuitionAmount"`
+      BoardingAmount *float64 `xml:"BoardingAmount" json:"BoardingAmount"`
+      SystemAmount *float64 `xml:"SystemAmount" json:"SystemAmount"`
+      DioceseAmount *float64 `xml:"DioceseAmount" json:"DioceseAmount"`
       FQComments *string `xml:"FQComments,omitempty" json:"FQComments"`
       
       }
     
     type AGRuleListType struct {
-        AGRule *[]AGRuleType `xml:"AGRule,omitempty" json:"AGRule"`
+        AGRule *[]AGRuleType `xml:"AGRule" json:"AGRule"`
       
       }
     
@@ -361,37 +363,37 @@ package sifxml
       }
     
     type SoftwareVendorInfoContainerType struct {
-        SoftwareProduct *string `xml:"SoftwareProduct,omitempty" json:"SoftwareProduct"`
-      SoftwareVersion *string `xml:"SoftwareVersion,omitempty" json:"SoftwareVersion"`
+        SoftwareProduct *string `xml:"SoftwareProduct" json:"SoftwareProduct"`
+      SoftwareVersion *string `xml:"SoftwareVersion" json:"SoftwareVersion"`
       
       }
     
     type TimeTableScheduleType struct {
         SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
-      SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear"`
+      SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      Title *string `xml:"Title,omitempty" json:"Title"`
-      DaysPerCycle *int `xml:"DaysPerCycle,omitempty" json:"DaysPerCycle"`
-      PeriodsPerDay *int `xml:"PeriodsPerDay,omitempty" json:"PeriodsPerDay"`
-      TeachingPeriodsPerDay *int `xml:"TeachingPeriodsPerDay,omitempty" json:"TeachingPeriodsPerDay"`
+      Title *string `xml:"Title" json:"Title"`
+      DaysPerCycle *int `xml:"DaysPerCycle" json:"DaysPerCycle"`
+      PeriodsPerDay *int `xml:"PeriodsPerDay" json:"PeriodsPerDay"`
+      TeachingPeriodsPerDay *int `xml:"TeachingPeriodsPerDay" json:"TeachingPeriodsPerDay"`
       SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId"`
       SchoolName *string `xml:"SchoolName,omitempty" json:"SchoolName"`
       TimeTableCreationDate *string `xml:"TimeTableCreationDate,omitempty" json:"TimeTableCreationDate"`
       StartDate *string `xml:"StartDate,omitempty" json:"StartDate"`
       EndDate *string `xml:"EndDate,omitempty" json:"EndDate"`
-      TimeTableDayList *TimeTableDayListType `xml:"TimeTableDayList,omitempty" json:"TimeTableDayList"`
+      TimeTableDayList *TimeTableDayListType `xml:"TimeTableDayList" json:"TimeTableDayList"`
       
       }
     
     type TimeTableScheduleCellListType struct {
-        TimeTableScheduleCell *[]TimeTableScheduleCellType `xml:"TimeTableScheduleCell,omitempty" json:"TimeTableScheduleCell"`
+        TimeTableScheduleCell *[]TimeTableScheduleCellType `xml:"TimeTableScheduleCell" json:"TimeTableScheduleCell"`
       
       }
     
     type TimeTableScheduleCellType struct {
-        TimeTableScheduleCellLocalId *LocalIdType `xml:"TimeTableScheduleCellLocalId,omitempty" json:"TimeTableScheduleCellLocalId"`
+        TimeTableScheduleCellLocalId *LocalIdType `xml:"TimeTableScheduleCellLocalId" json:"TimeTableScheduleCellLocalId"`
       TimeTableSubjectRefId *string `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
-      TeachingGroupGUID *string `xml:"TeachingGroupGUID,omitempty" json:"TeachingGroupGUID"`
+      TeachingGroupGUID *string `xml:"TeachingGroupGUID" json:"TeachingGroupGUID"`
       RoomInfoRefId *string `xml:"RoomInfoRefId,omitempty" json:"RoomInfoRefId"`
       StaffPersonalRefId *string `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId"`
       TimeTableLocalId *LocalIdType `xml:"TimeTableLocalId,omitempty" json:"TimeTableLocalId"`
@@ -399,9 +401,9 @@ package sifxml
       TeachingGroupLocalId *LocalIdType `xml:"TeachingGroupLocalId,omitempty" json:"TeachingGroupLocalId"`
       RoomNumber *HomeroomNumberType `xml:"RoomNumber,omitempty" json:"RoomNumber"`
       StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId"`
-      DayId *LocalIdType `xml:"DayId,omitempty" json:"DayId"`
-      PeriodId *LocalIdType `xml:"PeriodId,omitempty" json:"PeriodId"`
-      CellType *string `xml:"CellType,omitempty" json:"CellType"`
+      DayId *LocalIdType `xml:"DayId" json:"DayId"`
+      PeriodId *LocalIdType `xml:"PeriodId" json:"PeriodId"`
+      CellType *string `xml:"CellType" json:"CellType"`
       SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId"`
       TeacherList *ScheduledTeacherListType `xml:"TeacherList,omitempty" json:"TeacherList"`
@@ -410,15 +412,15 @@ package sifxml
       }
     
     type TeachingGroupScheduleListType struct {
-        TeachingGroupSchedule *[]TeachingGroupScheduleType `xml:"TeachingGroupSchedule,omitempty" json:"TeachingGroupSchedule"`
+        TeachingGroupSchedule *[]TeachingGroupScheduleType `xml:"TeachingGroupSchedule" json:"TeachingGroupSchedule"`
       
       }
     
     type TeachingGroupScheduleType struct {
-        EditorGUID *RefIdType `xml:"EditorGUID,omitempty" json:"EditorGUID"`
-      SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear"`
-      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      ShortName *string `xml:"ShortName,omitempty" json:"ShortName"`
+        EditorGUID *RefIdType `xml:"EditorGUID" json:"EditorGUID"`
+      SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
+      LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
+      ShortName *string `xml:"ShortName" json:"ShortName"`
       LongName *string `xml:"LongName,omitempty" json:"LongName"`
       GroupType *string `xml:"GroupType,omitempty" json:"GroupType"`
       Set *string `xml:"Set,omitempty" json:"Set"`
@@ -430,66 +432,66 @@ package sifxml
       SchoolCourseLocalId *LocalIdType `xml:"SchoolCourseLocalId,omitempty" json:"SchoolCourseLocalId"`
       TimeTableSubjectRefId *RefIdType `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
       TimeTableSubjectLocalId *LocalIdType `xml:"TimeTableSubjectLocalId,omitempty" json:"TimeTableSubjectLocalId"`
-      Semester *int `xml:"Semester,omitempty" json:"Semester"`
+      Semester *int `xml:"Semester" json:"Semester"`
       StudentList *StudentListType `xml:"StudentList,omitempty" json:"StudentList"`
       TeacherList *TeacherListType `xml:"TeacherList,omitempty" json:"TeacherList"`
-      MinClassSize *int `xml:"MinClassSize,omitempty" json:"MinClassSize"`
-      MaxClassSize *int `xml:"MaxClassSize,omitempty" json:"MaxClassSize"`
+      MinClassSize *int `xml:"MinClassSize" json:"MinClassSize"`
+      MaxClassSize *int `xml:"MaxClassSize" json:"MaxClassSize"`
       TeachingGroupPeriodList *TeachingGroupPeriodListType `xml:"TeachingGroupPeriodList,omitempty" json:"TeachingGroupPeriodList"`
       
       }
     
     type LocalCodeListType struct {
-        LocalCode *[]LocalCodeType `xml:"LocalCode,omitempty" json:"LocalCode"`
+        LocalCode *[]LocalCodeType `xml:"LocalCode" json:"LocalCode"`
       
       }
     
     type LocalCodeType struct {
-        LocalisedCode *string `xml:"LocalisedCode,omitempty" json:"LocalisedCode"`
+        LocalisedCode *string `xml:"LocalisedCode" json:"LocalisedCode"`
       Description *string `xml:"Description,omitempty" json:"Description"`
       Element *string `xml:"Element,omitempty" json:"Element"`
-      ListIndex *int `xml:"ListIndex,omitempty" json:"ListIndex"`
+      ListIndex *int `xml:"ListIndex" json:"ListIndex"`
       
       }
     
     type StudentGroupListType struct {
-        StudentGroup *[]StudentGroupType `xml:"StudentGroup,omitempty" json:"StudentGroup"`
+        StudentGroup *[]StudentGroupType `xml:"StudentGroup" json:"StudentGroup"`
       
       }
     
     type StudentGroupType struct {
-        GroupCategory *string `xml:"GroupCategory,omitempty" json:"GroupCategory"`
-      GroupLocalId *LocalIdType `xml:"GroupLocalId,omitempty" json:"GroupLocalId"`
+        GroupCategory *AUCodeSetsGroupCategoryCodeType `xml:"GroupCategory" json:"GroupCategory"`
+      GroupLocalId *LocalIdType `xml:"GroupLocalId" json:"GroupLocalId"`
       GroupDescription *string `xml:"GroupDescription,omitempty" json:"GroupDescription"`
       
       }
     
     type PublishingPermissionListType struct {
-        PublishingPermission *[]PublishingPermissionType `xml:"PublishingPermission,omitempty" json:"PublishingPermission"`
+        PublishingPermission *[]PublishingPermissionType `xml:"PublishingPermission" json:"PublishingPermission"`
       
       }
     
     type PublishingPermissionType struct {
-        PermissionCategory *string `xml:"PermissionCategory,omitempty" json:"PermissionCategory"`
-      PermissionValue *string `xml:"PermissionValue,omitempty" json:"PermissionValue"`
+        PermissionCategory *AUCodeSetsPermissionCategoryCodeType `xml:"PermissionCategory" json:"PermissionCategory"`
+      PermissionValue *AUCodeSetsYesOrNoCategoryType `xml:"PermissionValue" json:"PermissionValue"`
       
       }
     
     type EntityContactInfoType struct {
-        Name *NameType `xml:"Name,omitempty" json:"Name"`
+        Name *NameType `xml:"Name" json:"Name"`
       PositionTitle *string `xml:"PositionTitle,omitempty" json:"PositionTitle"`
       Role *string `xml:"Role,omitempty" json:"Role"`
       RegistrationDetails *string `xml:"RegistrationDetails,omitempty" json:"RegistrationDetails"`
       Qualifications *string `xml:"Qualifications,omitempty" json:"Qualifications"`
       Address *AddressType `xml:"Address,omitempty" json:"Address"`
-      Email *EmailType `xml:"Email,omitempty" json:"Email"`
-      PhoneNumber *PhoneNumberType `xml:"PhoneNumber,omitempty" json:"PhoneNumber"`
+      Email *EmailType `xml:"Email" json:"Email"`
+      PhoneNumber *PhoneNumberType `xml:"PhoneNumber" json:"PhoneNumber"`
       
       }
     
     type CopyRightContainerType struct {
-        Date *string `xml:"Date,omitempty" json:"Date"`
-      Holder *string `xml:"Holder,omitempty" json:"Holder"`
+        Date *string `xml:"Date" json:"Date"`
+      Holder *string `xml:"Holder" json:"Holder"`
       
       }
     
@@ -501,31 +503,31 @@ package sifxml
       }
     
     type StandardHierarchyLevelType struct {
-        Number *int `xml:"Number,omitempty" json:"Number"`
-      Description *string `xml:"Description,omitempty" json:"Description"`
+        Number *int `xml:"Number" json:"Number"`
+      Description *string `xml:"Description" json:"Description"`
       
       }
     
     type StandardIdentifierType struct {
-        YearCreated *string `xml:"YearCreated,omitempty" json:"YearCreated"`
-      ACStrandSubjectArea *ACStrandSubjectAreaType `xml:"ACStrandSubjectArea,omitempty" json:"ACStrandSubjectArea"`
-      StandardNumber *string `xml:"StandardNumber,omitempty" json:"StandardNumber"`
-      YearLevels *YearLevelsType `xml:"YearLevels,omitempty" json:"YearLevels"`
+        YearCreated *string `xml:"YearCreated" json:"YearCreated"`
+      ACStrandSubjectArea *ACStrandSubjectAreaType `xml:"ACStrandSubjectArea" json:"ACStrandSubjectArea"`
+      StandardNumber *string `xml:"StandardNumber" json:"StandardNumber"`
+      YearLevels *YearLevelsType `xml:"YearLevels" json:"YearLevels"`
       Benchmark *string `xml:"Benchmark,omitempty" json:"Benchmark"`
       YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel"`
       IndicatorNumber *string `xml:"IndicatorNumber,omitempty" json:"IndicatorNumber"`
       AlternateIdentificationCodes *AlternateIdentificationCodeListType `xml:"AlternateIdentificationCodes,omitempty" json:"AlternateIdentificationCodes"`
-      Organization *string `xml:"Organization,omitempty" json:"Organization"`
+      Organization *string `xml:"Organization" json:"Organization"`
       
       }
     
     type AlternateIdentificationCodeListType struct {
-        AlternateIdentificationCode *[]string `xml:"AlternateIdentificationCode,omitempty" json:"AlternateIdentificationCode"`
+        AlternateIdentificationCode *[]string `xml:"AlternateIdentificationCode" json:"AlternateIdentificationCode"`
       
       }
     
     type RelatedLearningStandardItemRefIdListType struct {
-        LearningStandardItemRefId *[]RelatedLearningStandardItemRefIdType `xml:"LearningStandardItemRefId,omitempty" json:"LearningStandardItemRefId"`
+        LearningStandardItemRefId *[]RelatedLearningStandardItemRefIdType `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
       
       }
     
@@ -536,19 +538,19 @@ package sifxml
       }
     
     type ValidLetterMarkListType struct {
-        ValidLetterMark *[]ValidLetterMarkType `xml:"ValidLetterMark,omitempty" json:"ValidLetterMark"`
+        ValidLetterMark *[]ValidLetterMarkType `xml:"ValidLetterMark" json:"ValidLetterMark"`
       
       }
     
     type ValidLetterMarkType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
-      NumericEquivalent *float64 `xml:"NumericEquivalent,omitempty" json:"NumericEquivalent"`
+        Code *string `xml:"Code" json:"Code"`
+      NumericEquivalent *float64 `xml:"NumericEquivalent" json:"NumericEquivalent"`
       Description *string `xml:"Description,omitempty" json:"Description"`
       
       }
     
     type StudentGradeMarkersListType struct {
-        Marker *[]MarkerType `xml:"Marker,omitempty" json:"Marker"`
+        Marker *[]MarkerType `xml:"Marker" json:"Marker"`
       
       }
     
@@ -559,27 +561,27 @@ package sifxml
       }
     
     type GradingScoreListType struct {
-        GradingAssignmentScore *[]AssignmentScoreType `xml:"GradingAssignmentScore,omitempty" json:"GradingAssignmentScore"`
+        GradingAssignmentScore *[]AssignmentScoreType `xml:"GradingAssignmentScore" json:"GradingAssignmentScore"`
       
       }
     
     type AssignmentScoreType struct {
         GradingAssignmentScoreRefId *string `xml:"GradingAssignmentScoreRefId,omitempty" json:"GradingAssignmentScoreRefId"`
-      Weight *float64 `xml:"Weight,omitempty" json:"Weight"`
+      Weight *float64 `xml:"Weight" json:"Weight"`
       
       }
     
     type GradeType struct {
-        Percentage *float64 `xml:"Percentage,omitempty" json:"Percentage"`
-      Numeric *float64 `xml:"Numeric,omitempty" json:"Numeric"`
-      Letter *string `xml:"Letter,omitempty" json:"Letter"`
+        Percentage *float64 `xml:"Percentage" json:"Percentage"`
+      Numeric *float64 `xml:"Numeric" json:"Numeric"`
+      Letter *string `xml:"Letter" json:"Letter"`
       Narrative *string `xml:"Narrative,omitempty" json:"Narrative"`
       MarkInfoRefId *string `xml:"MarkInfoRefId,omitempty" json:"MarkInfoRefId"`
       
       }
     
     type LearningStandardListType struct {
-        LearningStandard *[]LearningStandardType `xml:"LearningStandard,omitempty" json:"LearningStandard"`
+        LearningStandard *[]LearningStandardType `xml:"LearningStandard" json:"LearningStandard"`
       
       }
     
@@ -591,24 +593,24 @@ package sifxml
       }
     
     type AssignmentListType struct {
-        GradingAssignmentRefId *[]string `xml:"GradingAssignmentRefId,omitempty" json:"GradingAssignmentRefId"`
+        GradingAssignmentRefId *[]string `xml:"GradingAssignmentRefId" json:"GradingAssignmentRefId"`
       
       }
     
     type GenericRubricType struct {
-        RubricType *string `xml:"RubricType,omitempty" json:"RubricType"`
-      ScoreList *ScoreListType `xml:"ScoreList,omitempty" json:"ScoreList"`
+        RubricType *string `xml:"RubricType" json:"RubricType"`
+      ScoreList *ScoreListType `xml:"ScoreList" json:"ScoreList"`
       Descriptor *string `xml:"Descriptor,omitempty" json:"Descriptor"`
       
       }
     
     type SymptomListType struct {
-        Symptom *[]string `xml:"Symptom,omitempty" json:"Symptom"`
+        Symptom *[]string `xml:"Symptom" json:"Symptom"`
       
       }
     
     type MedicationListType struct {
-        Medication *[]MedicationType `xml:"Medication,omitempty" json:"Medication"`
+        Medication *[]MedicationType `xml:"Medication" json:"Medication"`
       
       }
     
@@ -622,30 +624,30 @@ package sifxml
       }
     
     type WellbeingEventCategoryListType struct {
-        WellbeingEventCategory *[]WellbeingEventCategoryType `xml:"WellbeingEventCategory,omitempty" json:"WellbeingEventCategory"`
+        WellbeingEventCategory *[]WellbeingEventCategoryType `xml:"WellbeingEventCategory" json:"WellbeingEventCategory"`
       
       }
     
     type WellbeingEventCategoryType struct {
-        EventCategory *string `xml:"EventCategory,omitempty" json:"EventCategory"`
-      WellbeingEventSubCategoryList *WellbeingEventSubCategoryListType `xml:"WellbeingEventSubCategoryList,omitempty" json:"WellbeingEventSubCategoryList"`
+        EventCategory *string `xml:"EventCategory" json:"EventCategory"`
+      WellbeingEventSubCategoryList *WellbeingEventSubCategoryListType `xml:"WellbeingEventSubCategoryList" json:"WellbeingEventSubCategoryList"`
       
       }
     
     type WellbeingEventSubCategoryListType struct {
-        WellbeingEventSubCategory *[]string `xml:"WellbeingEventSubCategory,omitempty" json:"WellbeingEventSubCategory"`
+        WellbeingEventSubCategory *[]string `xml:"WellbeingEventSubCategory" json:"WellbeingEventSubCategory"`
       
       }
     
     type WellbeingEventLocationDetailsType struct {
-        EventLocation *string `xml:"EventLocation,omitempty" json:"EventLocation"`
+        EventLocation *AUCodeSetsWellbeingEventLocationType `xml:"EventLocation" json:"EventLocation"`
       Class *string `xml:"Class,omitempty" json:"Class"`
       FurtherLocationNotes *string `xml:"FurtherLocationNotes,omitempty" json:"FurtherLocationNotes"`
       
       }
     
     type FollowUpActionListType struct {
-        FollowUpAction *[]FollowUpActionType `xml:"FollowUpAction,omitempty" json:"FollowUpAction"`
+        FollowUpAction *[]FollowUpActionType `xml:"FollowUpAction" json:"FollowUpAction"`
       
       }
     
@@ -657,24 +659,24 @@ package sifxml
       }
     
     type PersonInvolvementListType struct {
-        PersonInvolvement *[]PersonInvolvementType `xml:"PersonInvolvement,omitempty" json:"PersonInvolvement"`
+        PersonInvolvement *[]PersonInvolvementType `xml:"PersonInvolvement" json:"PersonInvolvement"`
       
       }
     
     type PersonInvolvementType struct {
-      PersonRefId *PersonInvolvementType_PersonRefId `xml:"PersonRefId,omitempty" json:"PersonRefId"`
+      PersonRefId *PersonInvolvementType_PersonRefId
       ShortName *string `xml:"ShortName,omitempty" json:"ShortName"`
       HowInvolved *string `xml:"HowInvolved,omitempty" json:"HowInvolved"`
       
       }
     
     type WithdrawalTimeListType struct {
-        Withdrawal *[]WithdrawalType `xml:"Withdrawal,omitempty" json:"Withdrawal"`
+        Withdrawal *[]WithdrawalType `xml:"Withdrawal" json:"Withdrawal"`
       
       }
     
     type WithdrawalType struct {
-        WithdrawalDate *string `xml:"WithdrawalDate,omitempty" json:"WithdrawalDate"`
+        WithdrawalDate *string `xml:"WithdrawalDate" json:"WithdrawalDate"`
       WithdrawalStartTime *string `xml:"WithdrawalStartTime,omitempty" json:"WithdrawalStartTime"`
       WithdrawalEndTime *string `xml:"WithdrawalEndTime,omitempty" json:"WithdrawalEndTime"`
       TimeTableSubjectRefId *string `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
@@ -684,35 +686,35 @@ package sifxml
       }
     
     type SuspensionContainerType struct {
-        SuspensionCategory *string `xml:"SuspensionCategory,omitempty" json:"SuspensionCategory"`
+        SuspensionCategory *AUCodeSetsSuspensionCategoryType `xml:"SuspensionCategory" json:"SuspensionCategory"`
       SuspensionNotes *string `xml:"SuspensionNotes,omitempty" json:"SuspensionNotes"`
       WithdrawalTimeList *WithdrawalTimeListType `xml:"WithdrawalTimeList,omitempty" json:"WithdrawalTimeList"`
-      Duration *float64 `xml:"Duration,omitempty" json:"Duration"`
+      Duration *float64 `xml:"Duration" json:"Duration"`
       AdvisementDate *string `xml:"AdvisementDate,omitempty" json:"AdvisementDate"`
       ResolutionMeetingTime *string `xml:"ResolutionMeetingTime,omitempty" json:"ResolutionMeetingTime"`
       ResolutionNotes *string `xml:"ResolutionNotes,omitempty" json:"ResolutionNotes"`
       EarlyReturnDate *string `xml:"EarlyReturnDate,omitempty" json:"EarlyReturnDate"`
-      Status *string `xml:"Status,omitempty" json:"Status"`
+      Status *AUCodeSetsWellbeingStatusType `xml:"Status,omitempty" json:"Status"`
       
       }
     
     type DetentionContainerType struct {
-        DetentionCategory *string `xml:"DetentionCategory,omitempty" json:"DetentionCategory"`
+        DetentionCategory *AUCodeSetsDetentionCategoryType `xml:"DetentionCategory" json:"DetentionCategory"`
       DetentionDate *string `xml:"DetentionDate,omitempty" json:"DetentionDate"`
       DetentionLocation *string `xml:"DetentionLocation,omitempty" json:"DetentionLocation"`
       DetentionNotes *string `xml:"DetentionNotes,omitempty" json:"DetentionNotes"`
-      Status *string `xml:"Status,omitempty" json:"Status"`
+      Status *AUCodeSetsWellbeingStatusType `xml:"Status,omitempty" json:"Status"`
       
       }
     
     type PlanRequiredContainerType struct {
         PlanRequiredList *PlanRequiredListType `xml:"PlanRequiredList,omitempty" json:"PlanRequiredList"`
-      Status *string `xml:"Status,omitempty" json:"Status"`
+      Status *AUCodeSetsWellbeingStatusType `xml:"Status,omitempty" json:"Status"`
       
       }
     
     type PlanRequiredListType struct {
-        Plan *[]WellbeingPlanType `xml:"Plan,omitempty" json:"Plan"`
+        Plan *[]WellbeingPlanType `xml:"Plan" json:"Plan"`
       
       }
     
@@ -727,7 +729,7 @@ package sifxml
       AwardType *string `xml:"AwardType,omitempty" json:"AwardType"`
       AwardDescription *string `xml:"AwardDescription,omitempty" json:"AwardDescription"`
       AwardNotes *string `xml:"AwardNotes,omitempty" json:"AwardNotes"`
-      Status *string `xml:"Status,omitempty" json:"Status"`
+      Status *AUCodeSetsWellbeingStatusType `xml:"Status,omitempty" json:"Status"`
       
       }
     
@@ -736,17 +738,17 @@ package sifxml
       OtherResponseType *string `xml:"OtherResponseType,omitempty" json:"OtherResponseType"`
       OtherResponseDescription *string `xml:"OtherResponseDescription,omitempty" json:"OtherResponseDescription"`
       OtherResponseNotes *string `xml:"OtherResponseNotes,omitempty" json:"OtherResponseNotes"`
-      Status *string `xml:"Status,omitempty" json:"Status"`
+      Status *AUCodeSetsWellbeingStatusType `xml:"Status,omitempty" json:"Status"`
       
       }
     
     type WellbeingDocumentListType struct {
-        Document *[]WellbeingDocumentType `xml:"Document,omitempty" json:"Document"`
+        Document *[]WellbeingDocumentType `xml:"Document" json:"Document"`
       
       }
     
     type WellbeingDocumentType struct {
-        Location *string `xml:"Location,omitempty" json:"Location"`
+        Location *string `xml:"Location" json:"Location"`
       Sensitivity *string `xml:"Sensitivity,omitempty" json:"Sensitivity"`
       URL *string `xml:"URL,omitempty" json:"URL"`
       DocumentType *string `xml:"DocumentType,omitempty" json:"DocumentType"`
@@ -756,23 +758,23 @@ package sifxml
       }
     
     type NAPTestItemContentType struct {
-        NAPTestItemLocalId *LocalIdType `xml:"NAPTestItemLocalId,omitempty" json:"NAPTestItemLocalId"`
-      ItemName *string `xml:"ItemName,omitempty" json:"ItemName"`
-      ItemType *string `xml:"ItemType,omitempty" json:"ItemType"`
-      Subdomain *string `xml:"Subdomain,omitempty" json:"Subdomain"`
-      WritingGenre *string `xml:"WritingGenre,omitempty" json:"WritingGenre"`
-      ItemDescriptor *string `xml:"ItemDescriptor,omitempty" json:"ItemDescriptor"`
-      ReleasedStatus *bool `xml:"ReleasedStatus,omitempty" json:"ReleasedStatus"`
-      MarkingType *string `xml:"MarkingType,omitempty" json:"MarkingType"`
-      MultipleChoiceOptionCount *int `xml:"MultipleChoiceOptionCount,omitempty" json:"MultipleChoiceOptionCount"`
+        NAPTestItemLocalId *LocalIdType `xml:"NAPTestItemLocalId" json:"NAPTestItemLocalId"`
+      ItemName *string `xml:"ItemName" json:"ItemName"`
+      ItemType *AUCodeSetsNAPTestItemTypeType `xml:"ItemType" json:"ItemType"`
+      Subdomain *string `xml:"Subdomain" json:"Subdomain"`
+      WritingGenre *AUCodeSetsNAPWritingGenreType `xml:"WritingGenre,omitempty" json:"WritingGenre"`
+      ItemDescriptor *string `xml:"ItemDescriptor" json:"ItemDescriptor"`
+      ReleasedStatus *bool `xml:"ReleasedStatus" json:"ReleasedStatus"`
+      MarkingType *AUCodeSetsNAPTestItemMarkingTypeType `xml:"MarkingType" json:"MarkingType"`
+      MultipleChoiceOptionCount *int `xml:"MultipleChoiceOptionCount" json:"MultipleChoiceOptionCount"`
       CorrectAnswer *string `xml:"CorrectAnswer,omitempty" json:"CorrectAnswer"`
-      MaximumScore *float64 `xml:"MaximumScore,omitempty" json:"MaximumScore"`
-      ItemDifficulty *float64 `xml:"ItemDifficulty,omitempty" json:"ItemDifficulty"`
-      ItemDifficultyLogit5 *float64 `xml:"ItemDifficultyLogit5,omitempty" json:"ItemDifficultyLogit5"`
-      ItemDifficultyLogit62 *float64 `xml:"ItemDifficultyLogit62,omitempty" json:"ItemDifficultyLogit62"`
-      ItemDifficultyLogit5SE *float64 `xml:"ItemDifficultyLogit5SE,omitempty" json:"ItemDifficultyLogit5SE"`
-      ItemDifficultyLogit62SE *float64 `xml:"ItemDifficultyLogit62SE,omitempty" json:"ItemDifficultyLogit62SE"`
-      ItemProficiencyBand *int `xml:"ItemProficiencyBand,omitempty" json:"ItemProficiencyBand"`
+      MaximumScore *float64 `xml:"MaximumScore" json:"MaximumScore"`
+      ItemDifficulty *float64 `xml:"ItemDifficulty" json:"ItemDifficulty"`
+      ItemDifficultyLogit5 *float64 `xml:"ItemDifficultyLogit5" json:"ItemDifficultyLogit5"`
+      ItemDifficultyLogit62 *float64 `xml:"ItemDifficultyLogit62" json:"ItemDifficultyLogit62"`
+      ItemDifficultyLogit5SE *float64 `xml:"ItemDifficultyLogit5SE" json:"ItemDifficultyLogit5SE"`
+      ItemDifficultyLogit62SE *float64 `xml:"ItemDifficultyLogit62SE" json:"ItemDifficultyLogit62SE"`
+      ItemProficiencyBand *int `xml:"ItemProficiencyBand" json:"ItemProficiencyBand"`
       ItemProficiencyLevel *string `xml:"ItemProficiencyLevel,omitempty" json:"ItemProficiencyLevel"`
       ExemplarURL *string `xml:"ExemplarURL,omitempty" json:"ExemplarURL"`
       ItemSubstitutedForList *SubstituteItemListType `xml:"ItemSubstitutedForList,omitempty" json:"ItemSubstitutedForList"`
@@ -783,257 +785,257 @@ package sifxml
       }
     
     type NAPTestletContentType struct {
-        NAPTestletLocalId *LocalIdType `xml:"NAPTestletLocalId,omitempty" json:"NAPTestletLocalId"`
+        NAPTestletLocalId *LocalIdType `xml:"NAPTestletLocalId" json:"NAPTestletLocalId"`
       TestletName *string `xml:"TestletName,omitempty" json:"TestletName"`
       Node *string `xml:"Node,omitempty" json:"Node"`
-      LocationInStage *int `xml:"LocationInStage,omitempty" json:"LocationInStage"`
-      TestletMaximumScore *float64 `xml:"TestletMaximumScore,omitempty" json:"TestletMaximumScore"`
+      LocationInStage *int `xml:"LocationInStage" json:"LocationInStage"`
+      TestletMaximumScore *float64 `xml:"TestletMaximumScore" json:"TestletMaximumScore"`
       
       }
     
     type NAPTestContentType struct {
-        NAPTestLocalId *LocalIdType `xml:"NAPTestLocalId,omitempty" json:"NAPTestLocalId"`
-      TestName *string `xml:"TestName,omitempty" json:"TestName"`
-      TestLevel *YearLevelType `xml:"TestLevel,omitempty" json:"TestLevel"`
-      TestType *string `xml:"TestType,omitempty" json:"TestType"`
-      Domain *string `xml:"Domain,omitempty" json:"Domain"`
-      TestYear *SchoolYearType `xml:"TestYear,omitempty" json:"TestYear"`
-      StagesCount *int `xml:"StagesCount,omitempty" json:"StagesCount"`
-      DomainBands *DomainBandsContainerType `xml:"DomainBands,omitempty" json:"DomainBands"`
-      DomainProficiency *DomainProficiencyContainerType `xml:"DomainProficiency,omitempty" json:"DomainProficiency"`
+        NAPTestLocalId *LocalIdType `xml:"NAPTestLocalId" json:"NAPTestLocalId"`
+      TestName *string `xml:"TestName" json:"TestName"`
+      TestLevel *YearLevelType `xml:"TestLevel" json:"TestLevel"`
+      TestType *AUCodeSetsNAPTestTypeType `xml:"TestType" json:"TestType"`
+      Domain *AUCodeSetsNAPTestDomainType `xml:"Domain" json:"Domain"`
+      TestYear *SchoolYearType `xml:"TestYear" json:"TestYear"`
+      StagesCount *int `xml:"StagesCount" json:"StagesCount"`
+      DomainBands *DomainBandsContainerType `xml:"DomainBands" json:"DomainBands"`
+      DomainProficiency *DomainProficiencyContainerType `xml:"DomainProficiency" json:"DomainProficiency"`
       
       }
     
     type PlausibleScaledValueListType struct {
-        PlausibleScaledValue *[]float64 `xml:"PlausibleScaledValue,omitempty" json:"PlausibleScaledValue"`
+        PlausibleScaledValue *[]float64 `xml:"PlausibleScaledValue" json:"PlausibleScaledValue"`
       
       }
     
     type SubstituteItemListType struct {
-        SubstituteItem *[]SubstituteItemType `xml:"SubstituteItem,omitempty" json:"SubstituteItem"`
+        SubstituteItem *[]SubstituteItemType `xml:"SubstituteItem" json:"SubstituteItem"`
       
       }
     
     type SubstituteItemType struct {
-        SubstituteItemRefId *string `xml:"SubstituteItemRefId,omitempty" json:"SubstituteItemRefId"`
+        SubstituteItemRefId *string `xml:"SubstituteItemRefId" json:"SubstituteItemRefId"`
       SubstituteItemLocalId *LocalIdType `xml:"SubstituteItemLocalId,omitempty" json:"SubstituteItemLocalId"`
-      PNPCodeList *PNPCodeListType `xml:"PNPCodeList,omitempty" json:"PNPCodeList"`
+      PNPCodeList *PNPCodeListType `xml:"PNPCodeList" json:"PNPCodeList"`
       
       }
     
     type CodeFrameTestItemListType struct {
-        TestItem *[]CodeFrameTestItemType `xml:"TestItem,omitempty" json:"TestItem"`
+        TestItem *[]CodeFrameTestItemType `xml:"TestItem" json:"TestItem"`
       
       }
     
     type CodeFrameTestItemType struct {
-        TestItemRefId *string `xml:"TestItemRefId,omitempty" json:"TestItemRefId"`
-      SequenceNumber *int `xml:"SequenceNumber,omitempty" json:"SequenceNumber"`
-      TestItemContent *NAPTestItemContentType `xml:"TestItemContent,omitempty" json:"TestItemContent"`
+        TestItemRefId *string `xml:"TestItemRefId" json:"TestItemRefId"`
+      SequenceNumber *int `xml:"SequenceNumber" json:"SequenceNumber"`
+      TestItemContent *NAPTestItemContentType `xml:"TestItemContent" json:"TestItemContent"`
       
       }
     
     type StimulusLocalIdListType struct {
-        StimulusLocalId *[]LocalIdType `xml:"StimulusLocalId,omitempty" json:"StimulusLocalId"`
+        StimulusLocalId *[]LocalIdType `xml:"StimulusLocalId" json:"StimulusLocalId"`
       
       }
     
     type DomainBandsContainerType struct {
-        Band1Lower *float64 `xml:"Band1Lower,omitempty" json:"Band1Lower"`
-      Band1Upper *float64 `xml:"Band1Upper,omitempty" json:"Band1Upper"`
-      Band2Lower *float64 `xml:"Band2Lower,omitempty" json:"Band2Lower"`
-      Band2Upper *float64 `xml:"Band2Upper,omitempty" json:"Band2Upper"`
-      Band3Lower *float64 `xml:"Band3Lower,omitempty" json:"Band3Lower"`
-      Band3Upper *float64 `xml:"Band3Upper,omitempty" json:"Band3Upper"`
-      Band4Lower *float64 `xml:"Band4Lower,omitempty" json:"Band4Lower"`
-      Band4Upper *float64 `xml:"Band4Upper,omitempty" json:"Band4Upper"`
-      Band5Lower *float64 `xml:"Band5Lower,omitempty" json:"Band5Lower"`
-      Band5Upper *float64 `xml:"Band5Upper,omitempty" json:"Band5Upper"`
-      Band6Lower *float64 `xml:"Band6Lower,omitempty" json:"Band6Lower"`
-      Band6Upper *float64 `xml:"Band6Upper,omitempty" json:"Band6Upper"`
-      Band7Lower *float64 `xml:"Band7Lower,omitempty" json:"Band7Lower"`
-      Band7Upper *float64 `xml:"Band7Upper,omitempty" json:"Band7Upper"`
-      Band8Lower *float64 `xml:"Band8Lower,omitempty" json:"Band8Lower"`
-      Band8Upper *float64 `xml:"Band8Upper,omitempty" json:"Band8Upper"`
-      Band9Lower *float64 `xml:"Band9Lower,omitempty" json:"Band9Lower"`
-      Band9Upper *float64 `xml:"Band9Upper,omitempty" json:"Band9Upper"`
-      Band10Lower *float64 `xml:"Band10Lower,omitempty" json:"Band10Lower"`
-      Band10Upper *float64 `xml:"Band10Upper,omitempty" json:"Band10Upper"`
+        Band1Lower *float64 `xml:"Band1Lower" json:"Band1Lower"`
+      Band1Upper *float64 `xml:"Band1Upper" json:"Band1Upper"`
+      Band2Lower *float64 `xml:"Band2Lower" json:"Band2Lower"`
+      Band2Upper *float64 `xml:"Band2Upper" json:"Band2Upper"`
+      Band3Lower *float64 `xml:"Band3Lower" json:"Band3Lower"`
+      Band3Upper *float64 `xml:"Band3Upper" json:"Band3Upper"`
+      Band4Lower *float64 `xml:"Band4Lower" json:"Band4Lower"`
+      Band4Upper *float64 `xml:"Band4Upper" json:"Band4Upper"`
+      Band5Lower *float64 `xml:"Band5Lower" json:"Band5Lower"`
+      Band5Upper *float64 `xml:"Band5Upper" json:"Band5Upper"`
+      Band6Lower *float64 `xml:"Band6Lower" json:"Band6Lower"`
+      Band6Upper *float64 `xml:"Band6Upper" json:"Band6Upper"`
+      Band7Lower *float64 `xml:"Band7Lower" json:"Band7Lower"`
+      Band7Upper *float64 `xml:"Band7Upper" json:"Band7Upper"`
+      Band8Lower *float64 `xml:"Band8Lower" json:"Band8Lower"`
+      Band8Upper *float64 `xml:"Band8Upper" json:"Band8Upper"`
+      Band9Lower *float64 `xml:"Band9Lower" json:"Band9Lower"`
+      Band9Upper *float64 `xml:"Band9Upper" json:"Band9Upper"`
+      Band10Lower *float64 `xml:"Band10Lower" json:"Band10Lower"`
+      Band10Upper *float64 `xml:"Band10Upper" json:"Band10Upper"`
       
       }
     
     type DomainProficiencyContainerType struct {
-        Level1Lower *float64 `xml:"Level1Lower,omitempty" json:"Level1Lower"`
-      Level1Upper *float64 `xml:"Level1Upper,omitempty" json:"Level1Upper"`
-      Level2Lower *float64 `xml:"Level2Lower,omitempty" json:"Level2Lower"`
-      Level2Upper *float64 `xml:"Level2Upper,omitempty" json:"Level2Upper"`
-      Level3Lower *float64 `xml:"Level3Lower,omitempty" json:"Level3Lower"`
-      Level3Upper *float64 `xml:"Level3Upper,omitempty" json:"Level3Upper"`
-      Level4Lower *float64 `xml:"Level4Lower,omitempty" json:"Level4Lower"`
-      Level4Upper *float64 `xml:"Level4Upper,omitempty" json:"Level4Upper"`
+        Level1Lower *float64 `xml:"Level1Lower" json:"Level1Lower"`
+      Level1Upper *float64 `xml:"Level1Upper" json:"Level1Upper"`
+      Level2Lower *float64 `xml:"Level2Lower" json:"Level2Lower"`
+      Level2Upper *float64 `xml:"Level2Upper" json:"Level2Upper"`
+      Level3Lower *float64 `xml:"Level3Lower" json:"Level3Lower"`
+      Level3Upper *float64 `xml:"Level3Upper" json:"Level3Upper"`
+      Level4Lower *float64 `xml:"Level4Lower" json:"Level4Lower"`
+      Level4Upper *float64 `xml:"Level4Upper" json:"Level4Upper"`
       
       }
     
     type NAPTestItemListType struct {
-        TestItem *[]NAPTestItem2Type `xml:"TestItem,omitempty" json:"TestItem"`
+        TestItem *[]NAPTestItem2Type `xml:"TestItem" json:"TestItem"`
       
       }
     
     type NAPTestItem2Type struct {
-        TestItemRefId *string `xml:"TestItemRefId,omitempty" json:"TestItemRefId"`
-      TestItemLocalId *LocalIdType `xml:"TestItemLocalId,omitempty" json:"TestItemLocalId"`
-      SequenceNumber *int `xml:"SequenceNumber,omitempty" json:"SequenceNumber"`
+        TestItemRefId *string `xml:"TestItemRefId" json:"TestItemRefId"`
+      TestItemLocalId *LocalIdType `xml:"TestItemLocalId" json:"TestItemLocalId"`
+      SequenceNumber *int `xml:"SequenceNumber" json:"SequenceNumber"`
       
       }
     
     type NAPCodeFrameTestletListType struct {
-        Testlet *[]NAPTestletCodeFrameType `xml:"Testlet,omitempty" json:"Testlet"`
+        Testlet *[]NAPTestletCodeFrameType `xml:"Testlet" json:"Testlet"`
       
       }
     
     type NAPTestletCodeFrameType struct {
         NAPTestletRefId *string `xml:"NAPTestletRefId,omitempty" json:"NAPTestletRefId"`
-      TestletContent *NAPTestletContentType `xml:"TestletContent,omitempty" json:"TestletContent"`
-      TestItemList *CodeFrameTestItemListType `xml:"TestItemList,omitempty" json:"TestItemList"`
+      TestletContent *NAPTestletContentType `xml:"TestletContent" json:"TestletContent"`
+      TestItemList *CodeFrameTestItemListType `xml:"TestItemList" json:"TestItemList"`
       
       }
     
     type NAPStudentResponseTestletListType struct {
-        Testlet *[]NAPTestletResponseType `xml:"Testlet,omitempty" json:"Testlet"`
+        Testlet *[]NAPTestletResponseType `xml:"Testlet" json:"Testlet"`
       
       }
     
     type NAPTestletResponseType struct {
         NAPTestletRefId *string `xml:"NAPTestletRefId,omitempty" json:"NAPTestletRefId"`
-      NAPTestletLocalId *LocalIdType `xml:"NAPTestletLocalId,omitempty" json:"NAPTestletLocalId"`
-      TestletSubScore *float64 `xml:"TestletSubScore,omitempty" json:"TestletSubScore"`
-      ItemResponseList *NAPTestletItemResponseListType `xml:"ItemResponseList,omitempty" json:"ItemResponseList"`
+      NAPTestletLocalId *LocalIdType `xml:"NAPTestletLocalId" json:"NAPTestletLocalId"`
+      TestletSubScore *float64 `xml:"TestletSubScore" json:"TestletSubScore"`
+      ItemResponseList *NAPTestletItemResponseListType `xml:"ItemResponseList" json:"ItemResponseList"`
       
       }
     
     type NAPTestletItemResponseListType struct {
-        ItemResponse *[]NAPTestletResponseItemType `xml:"ItemResponse,omitempty" json:"ItemResponse"`
+        ItemResponse *[]NAPTestletResponseItemType `xml:"ItemResponse" json:"ItemResponse"`
       
       }
     
     type NAPTestletResponseItemType struct {
         NAPTestItemRefId *string `xml:"NAPTestItemRefId,omitempty" json:"NAPTestItemRefId"`
-      NAPTestItemLocalId *LocalIdType `xml:"NAPTestItemLocalId,omitempty" json:"NAPTestItemLocalId"`
+      NAPTestItemLocalId *LocalIdType `xml:"NAPTestItemLocalId" json:"NAPTestItemLocalId"`
       Response *string `xml:"Response,omitempty" json:"Response"`
-      ResponseCorrectness *string `xml:"ResponseCorrectness,omitempty" json:"ResponseCorrectness"`
-      Score *float64 `xml:"Score,omitempty" json:"Score"`
+      ResponseCorrectness *AUCodeSetsNAPResponseCorrectnessType `xml:"ResponseCorrectness" json:"ResponseCorrectness"`
+      Score *float64 `xml:"Score" json:"Score"`
       LapsedTimeItem *string `xml:"LapsedTimeItem,omitempty" json:"LapsedTimeItem"`
-      SequenceNumber *int `xml:"SequenceNumber,omitempty" json:"SequenceNumber"`
-      ItemWeight *float64 `xml:"ItemWeight,omitempty" json:"ItemWeight"`
+      SequenceNumber *int `xml:"SequenceNumber" json:"SequenceNumber"`
+      ItemWeight *float64 `xml:"ItemWeight" json:"ItemWeight"`
       SubscoreList *NAPSubscoreListType `xml:"SubscoreList,omitempty" json:"SubscoreList"`
       
       }
     
     type NAPSubscoreListType struct {
-        Subscore *[]NAPSubscoreType `xml:"Subscore,omitempty" json:"Subscore"`
+        Subscore *[]NAPSubscoreType `xml:"Subscore" json:"Subscore"`
       
       }
     
     type NAPSubscoreType struct {
-        SubscoreType *string `xml:"SubscoreType,omitempty" json:"SubscoreType"`
-      SubscoreValue *float64 `xml:"SubscoreValue,omitempty" json:"SubscoreValue"`
+        SubscoreType *string `xml:"SubscoreType" json:"SubscoreType"`
+      SubscoreValue *float64 `xml:"SubscoreValue" json:"SubscoreValue"`
       
       }
     
     type DomainScoreType struct {
-        RawScore *float64 `xml:"RawScore,omitempty" json:"RawScore"`
-      ScaledScoreValue *float64 `xml:"ScaledScoreValue,omitempty" json:"ScaledScoreValue"`
-      ScaledScoreLogitValue *float64 `xml:"ScaledScoreLogitValue,omitempty" json:"ScaledScoreLogitValue"`
-      ScaledScoreStandardError *float64 `xml:"ScaledScoreStandardError,omitempty" json:"ScaledScoreStandardError"`
-      ScaledScoreLogitStandardError *float64 `xml:"ScaledScoreLogitStandardError,omitempty" json:"ScaledScoreLogitStandardError"`
-      StudentDomainBand *int `xml:"StudentDomainBand,omitempty" json:"StudentDomainBand"`
+        RawScore *float64 `xml:"RawScore" json:"RawScore"`
+      ScaledScoreValue *float64 `xml:"ScaledScoreValue" json:"ScaledScoreValue"`
+      ScaledScoreLogitValue *float64 `xml:"ScaledScoreLogitValue" json:"ScaledScoreLogitValue"`
+      ScaledScoreStandardError *float64 `xml:"ScaledScoreStandardError" json:"ScaledScoreStandardError"`
+      ScaledScoreLogitStandardError *float64 `xml:"ScaledScoreLogitStandardError" json:"ScaledScoreLogitStandardError"`
+      StudentDomainBand *int `xml:"StudentDomainBand" json:"StudentDomainBand"`
       StudentProficiency *string `xml:"StudentProficiency,omitempty" json:"StudentProficiency"`
-      PlausibleScaledValueList *PlausibleScaledValueListType `xml:"PlausibleScaledValueList,omitempty" json:"PlausibleScaledValueList"`
+      PlausibleScaledValueList *PlausibleScaledValueListType `xml:"PlausibleScaledValueList" json:"PlausibleScaledValueList"`
       
       }
     
     type NAPWritingRubricListType struct {
-        NAPWritingRubric *[]NAPWritingRubricType `xml:"NAPWritingRubric,omitempty" json:"NAPWritingRubric"`
+        NAPWritingRubric *[]NAPWritingRubricType `xml:"NAPWritingRubric" json:"NAPWritingRubric"`
       
       }
     
     type NAPWritingRubricType struct {
-        RubricType *string `xml:"RubricType,omitempty" json:"RubricType"`
-      ScoreList *ScoreListType `xml:"ScoreList,omitempty" json:"ScoreList"`
+        RubricType *string `xml:"RubricType" json:"RubricType"`
+      ScoreList *ScoreListType `xml:"ScoreList" json:"ScoreList"`
       Descriptor *string `xml:"Descriptor,omitempty" json:"Descriptor"`
       
       }
     
     type ScoreListType struct {
-        Score *[]ScoreType `xml:"Score,omitempty" json:"Score"`
+        Score *[]ScoreType `xml:"Score" json:"Score"`
       
       }
     
     type ScoreType struct {
-        MaxScoreValue *float64 `xml:"MaxScoreValue,omitempty" json:"MaxScoreValue"`
-      ScoreDescriptionList *ScoreDescriptionListType `xml:"ScoreDescriptionList,omitempty" json:"ScoreDescriptionList"`
+        MaxScoreValue *float64 `xml:"MaxScoreValue" json:"MaxScoreValue"`
+      ScoreDescriptionList *ScoreDescriptionListType `xml:"ScoreDescriptionList" json:"ScoreDescriptionList"`
       
       }
     
     type ScoreDescriptionListType struct {
-        ScoreDescription *[]ScoreDescriptionType `xml:"ScoreDescription,omitempty" json:"ScoreDescription"`
+        ScoreDescription *[]ScoreDescriptionType `xml:"ScoreDescription" json:"ScoreDescription"`
       
       }
     
     type ScoreDescriptionType struct {
-        ScoreValue *float64 `xml:"ScoreValue,omitempty" json:"ScoreValue"`
+        ScoreValue *float64 `xml:"ScoreValue" json:"ScoreValue"`
       Descriptor *string `xml:"Descriptor,omitempty" json:"Descriptor"`
       
       }
     
     type StimulusListType struct {
-        Stimulus *[]StimulusType `xml:"Stimulus,omitempty" json:"Stimulus"`
+        Stimulus *[]StimulusType `xml:"Stimulus" json:"Stimulus"`
       
       }
     
     type StimulusType struct {
-        StimulusLocalId *LocalIdType `xml:"StimulusLocalId,omitempty" json:"StimulusLocalId"`
+        StimulusLocalId *LocalIdType `xml:"StimulusLocalId" json:"StimulusLocalId"`
       TextGenre *string `xml:"TextGenre,omitempty" json:"TextGenre"`
       TextType *string `xml:"TextType,omitempty" json:"TextType"`
-      WordCount *int `xml:"WordCount,omitempty" json:"WordCount"`
+      WordCount *int `xml:"WordCount" json:"WordCount"`
       TextDescriptor *string `xml:"TextDescriptor,omitempty" json:"TextDescriptor"`
-      Content *string `xml:"Content,omitempty" json:"Content"`
+      Content *string `xml:"Content" json:"Content"`
       
       }
     
     type ContentDescriptionListType struct {
-        ContentDescription *[]string `xml:"ContentDescription,omitempty" json:"ContentDescription"`
+        ContentDescription *[]string `xml:"ContentDescription" json:"ContentDescription"`
       
       }
     
     type PNPCodeListType struct {
-        PNPCode *[]string `xml:"PNPCode,omitempty" json:"PNPCode"`
+        PNPCode *[]AUCodeSetsPNPCodeType `xml:"PNPCode" json:"PNPCode"`
       
       }
     
     type AdjustmentContainerType struct {
-        PNPCodeList *PNPCodeListType `xml:"PNPCodeList,omitempty" json:"PNPCodeList"`
+        PNPCodeList *PNPCodeListType `xml:"PNPCodeList" json:"PNPCodeList"`
       BookletType *string `xml:"BookletType,omitempty" json:"BookletType"`
       
       }
     
     type TestDisruptionListType struct {
-        TestDisruption *[]TestDisruptionType `xml:"TestDisruption,omitempty" json:"TestDisruption"`
+        TestDisruption *[]TestDisruptionType `xml:"TestDisruption" json:"TestDisruption"`
       
       }
     
     type TestDisruptionType struct {
-        Event *string `xml:"Event,omitempty" json:"Event"`
+        Event *string `xml:"Event" json:"Event"`
       
       }
     
     type CalendarSummaryListType struct {
-        CalendarSummaryRefId *[]string `xml:"CalendarSummaryRefId,omitempty" json:"CalendarSummaryRefId"`
+        CalendarSummaryRefId *[]string `xml:"CalendarSummaryRefId" json:"CalendarSummaryRefId"`
       
       }
     
     type VisaSubClassType struct {
-        Code *VisaSubClassCodeType `xml:"Code,omitempty" json:"Code"`
+        Code *VisaSubClassCodeType `xml:"Code" json:"Code"`
       VisaExpiryDate *string `xml:"VisaExpiryDate,omitempty" json:"VisaExpiryDate"`
       ATEExpiryDate *string `xml:"ATEExpiryDate,omitempty" json:"ATEExpiryDate"`
       ATEStartDate *string `xml:"ATEStartDate,omitempty" json:"ATEStartDate"`
@@ -1042,49 +1044,49 @@ package sifxml
       }
     
     type VisaSubClassListType struct {
-        VisaSubClass *[]VisaSubClassType `xml:"VisaSubClass,omitempty" json:"VisaSubClass"`
+        VisaSubClass *[]VisaSubClassType `xml:"VisaSubClass" json:"VisaSubClass"`
       
       }
     
     type VisaSubClassCodeType string
     type LanguageBaseType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
-      LanguageType *string `xml:"LanguageType,omitempty" json:"LanguageType"`
+      LanguageType *AUCodeSetsLanguageTypeType `xml:"LanguageType,omitempty" json:"LanguageType"`
       Dialect *string `xml:"Dialect,omitempty" json:"Dialect"`
       
       }
     
     type ReligiousEventListType struct {
-        ReligiousEvent *[]ReligiousEventType `xml:"ReligiousEvent,omitempty" json:"ReligiousEvent"`
+        ReligiousEvent *[]ReligiousEventType `xml:"ReligiousEvent" json:"ReligiousEvent"`
       
       }
     
     type ReligiousEventType struct {
-        Type *string `xml:"Type,omitempty" json:"Type"`
-      Date *string `xml:"Date,omitempty" json:"Date"`
+        Type *string `xml:"Type" json:"Type"`
+      Date *string `xml:"Date" json:"Date"`
       
       }
     
     type ReligionType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsAustralianStandardClassificationOfReligiousGroupsASCRGType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type DwellingArrangementType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsDwellingArrangementType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type CountryListType struct {
-        CountryOfCitizenship *[]CountryType `xml:"CountryOfCitizenship,omitempty" json:"CountryOfCitizenship"`
+        CountryOfCitizenship *[]CountryType `xml:"CountryOfCitizenship" json:"CountryOfCitizenship"`
       
       }
     
     type CountryList2Type struct {
-        CountryOfResidency *[]CountryType `xml:"CountryOfResidency,omitempty" json:"CountryOfResidency"`
+        CountryOfResidency *[]CountryType `xml:"CountryOfResidency" json:"CountryOfResidency"`
       
       }
     
@@ -1101,8 +1103,8 @@ package sifxml
       }
     
     type ActivityTimeType struct {
-        CreationDate *string `xml:"CreationDate,omitempty" json:"CreationDate"`
-      Duration *ActivityTimeType_Duration `xml:"Duration,omitempty" json:"Duration"`
+        CreationDate *string `xml:"CreationDate" json:"CreationDate"`
+      Duration *ActivityTimeType_Duration
       StartDate *string `xml:"StartDate,omitempty" json:"StartDate"`
       FinishDate *string `xml:"FinishDate,omitempty" json:"FinishDate"`
       DueDate *string `xml:"DueDate,omitempty" json:"DueDate"`
@@ -1122,91 +1124,91 @@ package sifxml
       }
     
     type LocationOfInstructionType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsReceivingLocationOfInstructionType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type LanguageOfInstructionType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type MediumOfInstructionType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsMediumOfInstructionType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type StudentActivityType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsActivityInvolvementCodeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type ContactFlagsType struct {
-        ParentLegalGuardian *string `xml:"ParentLegalGuardian,omitempty" json:"ParentLegalGuardian"`
-      PickupRights *string `xml:"PickupRights,omitempty" json:"PickupRights"`
-      LivesWith *string `xml:"LivesWith,omitempty" json:"LivesWith"`
-      AccessToRecords *string `xml:"AccessToRecords,omitempty" json:"AccessToRecords"`
-      ReceivesAssessmentReport *string `xml:"ReceivesAssessmentReport,omitempty" json:"ReceivesAssessmentReport"`
-      EmergencyContact *string `xml:"EmergencyContact,omitempty" json:"EmergencyContact"`
-      HasCustody *string `xml:"HasCustody,omitempty" json:"HasCustody"`
-      DisciplinaryContact *string `xml:"DisciplinaryContact,omitempty" json:"DisciplinaryContact"`
-      AttendanceContact *string `xml:"AttendanceContact,omitempty" json:"AttendanceContact"`
-      PrimaryCareProvider *string `xml:"PrimaryCareProvider,omitempty" json:"PrimaryCareProvider"`
-      FeesBilling *string `xml:"FeesBilling,omitempty" json:"FeesBilling"`
-      FeesAccess *string `xml:"FeesAccess,omitempty" json:"FeesAccess"`
-      FamilyMail *string `xml:"FamilyMail,omitempty" json:"FamilyMail"`
-      InterventionOrder *string `xml:"InterventionOrder,omitempty" json:"InterventionOrder"`
+        ParentLegalGuardian *AUCodeSetsYesOrNoCategoryType `xml:"ParentLegalGuardian" json:"ParentLegalGuardian"`
+      PickupRights *AUCodeSetsYesOrNoCategoryType `xml:"PickupRights" json:"PickupRights"`
+      LivesWith *AUCodeSetsYesOrNoCategoryType `xml:"LivesWith" json:"LivesWith"`
+      AccessToRecords *AUCodeSetsYesOrNoCategoryType `xml:"AccessToRecords" json:"AccessToRecords"`
+      ReceivesAssessmentReport *AUCodeSetsYesOrNoCategoryType `xml:"ReceivesAssessmentReport" json:"ReceivesAssessmentReport"`
+      EmergencyContact *AUCodeSetsYesOrNoCategoryType `xml:"EmergencyContact" json:"EmergencyContact"`
+      HasCustody *AUCodeSetsYesOrNoCategoryType `xml:"HasCustody" json:"HasCustody"`
+      DisciplinaryContact *AUCodeSetsYesOrNoCategoryType `xml:"DisciplinaryContact" json:"DisciplinaryContact"`
+      AttendanceContact *AUCodeSetsYesOrNoCategoryType `xml:"AttendanceContact" json:"AttendanceContact"`
+      PrimaryCareProvider *AUCodeSetsYesOrNoCategoryType `xml:"PrimaryCareProvider" json:"PrimaryCareProvider"`
+      FeesBilling *AUCodeSetsYesOrNoCategoryType `xml:"FeesBilling" json:"FeesBilling"`
+      FeesAccess *AUCodeSetsYesOrNoCategoryType `xml:"FeesAccess" json:"FeesAccess"`
+      FamilyMail *AUCodeSetsYesOrNoCategoryType `xml:"FamilyMail" json:"FamilyMail"`
+      InterventionOrder *AUCodeSetsYesOrNoCategoryType `xml:"InterventionOrder" json:"InterventionOrder"`
       
       }
     
     type AgencyType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsEducationAgencyTypeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type YearRangeType struct {
-        Start *YearLevelType `xml:"Start,omitempty" json:"Start"`
-      End *YearLevelType `xml:"End,omitempty" json:"End"`
+        Start *YearLevelType `xml:"Start" json:"Start"`
+      End *YearLevelType `xml:"End" json:"End"`
       
       }
     
     type CreationUserType struct {
         Type *string `xml:"Type,attr" json:"Type"`
-      UserId *string `xml:"UserId,omitempty" json:"UserId"`
+      UserId *string `xml:"UserId" json:"UserId"`
       
       }
     
     type AuditInfoType struct {
-        CreationUser *CreationUserType `xml:"CreationUser,omitempty" json:"CreationUser"`
-      CreationDateTime *string `xml:"CreationDateTime,omitempty" json:"CreationDateTime"`
+        CreationUser *CreationUserType `xml:"CreationUser" json:"CreationUser"`
+      CreationDateTime *string `xml:"CreationDateTime" json:"CreationDateTime"`
       
       }
     
     type AttendanceInfoType struct {
-        CountsTowardAttendance *string `xml:"CountsTowardAttendance,omitempty" json:"CountsTowardAttendance"`
-      AttendanceValue *float64 `xml:"AttendanceValue,omitempty" json:"AttendanceValue"`
+        CountsTowardAttendance *string `xml:"CountsTowardAttendance" json:"CountsTowardAttendance"`
+      AttendanceValue *float64 `xml:"AttendanceValue" json:"AttendanceValue"`
       
       }
     
     type CalendarDateInfoType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsCalendarEventType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type ProgramAvailabilityType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSets0211ProgramAvailabilityType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type ReferralSourceType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSets0792IdentificationProcedureType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
@@ -1217,25 +1219,25 @@ package sifxml
       }
     
     type CatchmentStatusContainerType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsPublicSchoolCatchmentStatusType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type StudentExitStatusContainerType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsExitWithdrawalStatusType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type StudentExitContainerType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsExitWithdrawalTypeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type StudentEntryContainerType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsEntryTypeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
@@ -1244,30 +1246,30 @@ package sifxml
         SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId"`
       HomeroomLocalId *LocalIdType `xml:"HomeroomLocalId,omitempty" json:"HomeroomLocalId"`
       YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel"`
-      FTE *float64 `xml:"FTE,omitempty" json:"FTE"`
-      Parent1Language *string `xml:"Parent1Language,omitempty" json:"Parent1Language"`
-      Parent2Language *string `xml:"Parent2Language,omitempty" json:"Parent2Language"`
-      Parent1EmploymentType *string `xml:"Parent1EmploymentType,omitempty" json:"Parent1EmploymentType"`
-      Parent2EmploymentType *string `xml:"Parent2EmploymentType,omitempty" json:"Parent2EmploymentType"`
-      Parent1SchoolEducationLevel *string `xml:"Parent1SchoolEducationLevel,omitempty" json:"Parent1SchoolEducationLevel"`
-      Parent2SchoolEducationLevel *string `xml:"Parent2SchoolEducationLevel,omitempty" json:"Parent2SchoolEducationLevel"`
-      Parent1NonSchoolEducation *string `xml:"Parent1NonSchoolEducation,omitempty" json:"Parent1NonSchoolEducation"`
-      Parent2NonSchoolEducation *string `xml:"Parent2NonSchoolEducation,omitempty" json:"Parent2NonSchoolEducation"`
+      FTE *float64 `xml:"FTE" json:"FTE"`
+      Parent1Language *AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType `xml:"Parent1Language,omitempty" json:"Parent1Language"`
+      Parent2Language *AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType `xml:"Parent2Language,omitempty" json:"Parent2Language"`
+      Parent1EmploymentType *AUCodeSetsEmploymentTypeType `xml:"Parent1EmploymentType,omitempty" json:"Parent1EmploymentType"`
+      Parent2EmploymentType *AUCodeSetsEmploymentTypeType `xml:"Parent2EmploymentType,omitempty" json:"Parent2EmploymentType"`
+      Parent1SchoolEducationLevel *AUCodeSetsSchoolEducationLevelTypeType `xml:"Parent1SchoolEducationLevel,omitempty" json:"Parent1SchoolEducationLevel"`
+      Parent2SchoolEducationLevel *AUCodeSetsSchoolEducationLevelTypeType `xml:"Parent2SchoolEducationLevel,omitempty" json:"Parent2SchoolEducationLevel"`
+      Parent1NonSchoolEducation *AUCodeSetsNonSchoolEducationType `xml:"Parent1NonSchoolEducation,omitempty" json:"Parent1NonSchoolEducation"`
+      Parent2NonSchoolEducation *AUCodeSetsNonSchoolEducationType `xml:"Parent2NonSchoolEducation,omitempty" json:"Parent2NonSchoolEducation"`
       LocalCampusId *LocalIdType `xml:"LocalCampusId,omitempty" json:"LocalCampusId"`
       SchoolACARAId *LocalIdType `xml:"SchoolACARAId,omitempty" json:"SchoolACARAId"`
       TestLevel *YearLevelType `xml:"TestLevel,omitempty" json:"TestLevel"`
       Homegroup *string `xml:"Homegroup,omitempty" json:"Homegroup"`
       ClassCode *string `xml:"ClassCode,omitempty" json:"ClassCode"`
-      MembershipType *string `xml:"MembershipType,omitempty" json:"MembershipType"`
-      FFPOS *string `xml:"FFPOS,omitempty" json:"FFPOS"`
+      MembershipType *AUCodeSetsSchoolEnrollmentTypeType `xml:"MembershipType,omitempty" json:"MembershipType"`
+      FFPOS *AUCodeSetsFFPOSStatusCodeType `xml:"FFPOS,omitempty" json:"FFPOS"`
       ReportingSchoolId *LocalIdType `xml:"ReportingSchoolId,omitempty" json:"ReportingSchoolId"`
       OtherEnrollmentSchoolACARAId *LocalIdType `xml:"OtherEnrollmentSchoolACARAId,omitempty" json:"OtherEnrollmentSchoolACARAId"`
       OtherSchoolName *string `xml:"OtherSchoolName,omitempty" json:"OtherSchoolName"`
       DisabilityLevelOfAdjustment *string `xml:"DisabilityLevelOfAdjustment,omitempty" json:"DisabilityLevelOfAdjustment"`
       DisabilityCategory *string `xml:"DisabilityCategory,omitempty" json:"DisabilityCategory"`
-      CensusAge *int `xml:"CensusAge,omitempty" json:"CensusAge"`
-      DistanceEducationStudent *string `xml:"DistanceEducationStudent,omitempty" json:"DistanceEducationStudent"`
-      BoardingStatus *string `xml:"BoardingStatus,omitempty" json:"BoardingStatus"`
+      CensusAge *int `xml:"CensusAge" json:"CensusAge"`
+      DistanceEducationStudent *AUCodeSetsYesOrNoCategoryType `xml:"DistanceEducationStudent,omitempty" json:"DistanceEducationStudent"`
+      BoardingStatus *AUCodeSetsBoardingType `xml:"BoardingStatus,omitempty" json:"BoardingStatus"`
       
       }
     
@@ -1281,7 +1283,7 @@ package sifxml
       }
     
     type StaffActivityExtensionType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsStaffActivityType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
@@ -1294,20 +1296,20 @@ package sifxml
       }
     
     type CampusContainerType struct {
-        ParentSchoolId *string `xml:"ParentSchoolId,omitempty" json:"ParentSchoolId"`
-      SchoolCampusId *string `xml:"SchoolCampusId,omitempty" json:"SchoolCampusId"`
-      CampusType *string `xml:"CampusType,omitempty" json:"CampusType"`
-      AdminStatus *string `xml:"AdminStatus,omitempty" json:"AdminStatus"`
+        ParentSchoolId *string `xml:"ParentSchoolId" json:"ParentSchoolId"`
+      SchoolCampusId *string `xml:"SchoolCampusId" json:"SchoolCampusId"`
+      CampusType *AUCodeSetsSchoolLevelType `xml:"CampusType,omitempty" json:"CampusType"`
+      AdminStatus *AUCodeSetsYesOrNoCategoryType `xml:"AdminStatus" json:"AdminStatus"`
       
       }
     
     type HouseholdContactInfoListType struct {
-        HouseholdContactInfo *[]HouseholdContactInfoType `xml:"HouseholdContactInfo,omitempty" json:"HouseholdContactInfo"`
+        HouseholdContactInfo *[]HouseholdContactInfoType `xml:"HouseholdContactInfo" json:"HouseholdContactInfo"`
       
       }
     
     type HouseholdContactInfoType struct {
-        PreferenceNumber *int `xml:"PreferenceNumber,omitempty" json:"PreferenceNumber"`
+        PreferenceNumber *int `xml:"PreferenceNumber" json:"PreferenceNumber"`
       HouseholdContactId *LocalIdType `xml:"HouseholdContactId,omitempty" json:"HouseholdContactId"`
       HouseholdSalutation *string `xml:"HouseholdSalutation,omitempty" json:"HouseholdSalutation"`
       AddressList *AddressListType `xml:"AddressList,omitempty" json:"AddressList"`
@@ -1317,53 +1319,53 @@ package sifxml
       }
     
     type StatementCodesType struct {
-        StatementCode *[]string `xml:"StatementCode,omitempty" json:"StatementCode"`
+        StatementCode *[]string `xml:"StatementCode" json:"StatementCode"`
       
       }
     
     type StatementsType struct {
-        Statement *[]string `xml:"Statement,omitempty" json:"Statement"`
+        Statement *[]string `xml:"Statement" json:"Statement"`
       
       }
     
     type ProgramFundingSourcesType struct {
-        ProgramFundingSource *[]ProgramFundingSourceType `xml:"ProgramFundingSource,omitempty" json:"ProgramFundingSource"`
+        ProgramFundingSource *[]ProgramFundingSourceType `xml:"ProgramFundingSource" json:"ProgramFundingSource"`
       
       }
     
     type ProgramFundingSourceType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsProgramFundingSourceCodeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type AttendanceTimesType struct {
-        AttendanceTime *[]AttendanceTimeType `xml:"AttendanceTime,omitempty" json:"AttendanceTime"`
+        AttendanceTime *[]AttendanceTimeType `xml:"AttendanceTime" json:"AttendanceTime"`
       
       }
     
     type AttendanceTimeType struct {
         AttendanceType *string `xml:"AttendanceType,omitempty" json:"AttendanceType"`
-      AttendanceCode *AttendanceCodeType `xml:"AttendanceCode,omitempty" json:"AttendanceCode"`
-      AttendanceStatus *string `xml:"AttendanceStatus,omitempty" json:"AttendanceStatus"`
-      StartTime *string `xml:"StartTime,omitempty" json:"StartTime"`
-      EndTime *string `xml:"EndTime,omitempty" json:"EndTime"`
-      DurationValue *float64 `xml:"DurationValue,omitempty" json:"DurationValue"`
+      AttendanceCode *AttendanceCodeType `xml:"AttendanceCode" json:"AttendanceCode"`
+      AttendanceStatus *AUCodeSetsAttendanceStatusType `xml:"AttendanceStatus" json:"AttendanceStatus"`
+      StartTime *string `xml:"StartTime" json:"StartTime"`
+      EndTime *string `xml:"EndTime" json:"EndTime"`
+      DurationValue *float64 `xml:"DurationValue" json:"DurationValue"`
       TimeTableSubjectRefId *RefIdType `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
       AttendanceNote *string `xml:"AttendanceNote,omitempty" json:"AttendanceNote"`
       
       }
     
     type PeriodAttendancesType struct {
-        PeriodAttendance *[]PeriodAttendanceType `xml:"PeriodAttendance,omitempty" json:"PeriodAttendance"`
+        PeriodAttendance *[]PeriodAttendanceType `xml:"PeriodAttendance" json:"PeriodAttendance"`
       
       }
     
     type PeriodAttendanceType struct {
         AttendanceType *string `xml:"AttendanceType,omitempty" json:"AttendanceType"`
-      AttendanceCode *AttendanceCodeType `xml:"AttendanceCode,omitempty" json:"AttendanceCode"`
-      AttendanceStatus *string `xml:"AttendanceStatus,omitempty" json:"AttendanceStatus"`
-      Date *string `xml:"Date,omitempty" json:"Date"`
+      AttendanceCode *AttendanceCodeType `xml:"AttendanceCode" json:"AttendanceCode"`
+      AttendanceStatus *AUCodeSetsAttendanceStatusType `xml:"AttendanceStatus" json:"AttendanceStatus"`
+      Date *string `xml:"Date" json:"Date"`
       SessionInfoRefId *string `xml:"SessionInfoRefId,omitempty" json:"SessionInfoRefId"`
       ScheduledActivityRefId *string `xml:"ScheduledActivityRefId,omitempty" json:"ScheduledActivityRefId"`
       TimetablePeriod *string `xml:"TimetablePeriod,omitempty" json:"TimetablePeriod"`
@@ -1381,114 +1383,114 @@ package sifxml
       }
     
     type StaffSubjectListType struct {
-        StaffSubject *[]StaffSubjectType `xml:"StaffSubject,omitempty" json:"StaffSubject"`
+        StaffSubject *[]StaffSubjectType `xml:"StaffSubject" json:"StaffSubject"`
       
       }
     
     type StaffSubjectType struct {
-        PreferenceNumber *int `xml:"PreferenceNumber,omitempty" json:"PreferenceNumber"`
+        PreferenceNumber *int `xml:"PreferenceNumber" json:"PreferenceNumber"`
       SubjectLocalId *LocalIdType `xml:"SubjectLocalId,omitempty" json:"SubjectLocalId"`
       TimeTableSubjectRefId *RefIdType `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
       
       }
     
     type TeachingGroupListType struct {
-        TeachingGroupRefId *[]string `xml:"TeachingGroupRefId,omitempty" json:"TeachingGroupRefId"`
+        TeachingGroupRefId *[]string `xml:"TeachingGroupRefId" json:"TeachingGroupRefId"`
       
       }
     
     type ScheduledTeacherListType struct {
-        TeacherCover *[]TeacherCoverType `xml:"TeacherCover,omitempty" json:"TeacherCover"`
+        TeacherCover *[]TeacherCoverType `xml:"TeacherCover" json:"TeacherCover"`
       
       }
     
     type TeacherCoverType struct {
-        StaffPersonalRefId *string `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId"`
+        StaffPersonalRefId *string `xml:"StaffPersonalRefId" json:"StaffPersonalRefId"`
       StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId"`
       StartTime *string `xml:"StartTime,omitempty" json:"StartTime"`
       FinishTime *string `xml:"FinishTime,omitempty" json:"FinishTime"`
-      Credit *string `xml:"Credit,omitempty" json:"Credit"`
-      Supervision *string `xml:"Supervision,omitempty" json:"Supervision"`
-      Weighting *float64 `xml:"Weighting,omitempty" json:"Weighting"`
+      Credit *AUCodeSetsTeacherCoverCreditType `xml:"Credit,omitempty" json:"Credit"`
+      Supervision *AUCodeSetsTeacherCoverSupervisionType `xml:"Supervision,omitempty" json:"Supervision"`
+      Weighting *float64 `xml:"Weighting" json:"Weighting"`
       
       }
     
     type RoomListType struct {
-        RoomInfoRefId *[]string `xml:"RoomInfoRefId,omitempty" json:"RoomInfoRefId"`
+        RoomInfoRefId *[]string `xml:"RoomInfoRefId" json:"RoomInfoRefId"`
       
       }
     
     type StaffListType struct {
-        StaffPersonalRefId *[]string `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId"`
+        StaffPersonalRefId *[]string `xml:"StaffPersonalRefId" json:"StaffPersonalRefId"`
       
       }
     
     type AuthorsType struct {
-        Author *[]string `xml:"Author,omitempty" json:"Author"`
+        Author *[]string `xml:"Author" json:"Author"`
       
       }
     
     type OrganizationsType struct {
-        Organization *[]string `xml:"Organization,omitempty" json:"Organization"`
+        Organization *[]string `xml:"Organization" json:"Organization"`
       
       }
     
     type PurchasingItemsType struct {
-        PurchasingItem *[]PurchasingItemType `xml:"PurchasingItem,omitempty" json:"PurchasingItem"`
+        PurchasingItem *[]PurchasingItemType `xml:"PurchasingItem" json:"PurchasingItem"`
       
       }
     
     type PurchasingItemType struct {
         ItemNumber *string `xml:"ItemNumber,omitempty" json:"ItemNumber"`
-      ItemDescription *string `xml:"ItemDescription,omitempty" json:"ItemDescription"`
+      ItemDescription *string `xml:"ItemDescription" json:"ItemDescription"`
       LocalItemId *LocalIdType `xml:"LocalItemId,omitempty" json:"LocalItemId"`
       Quantity *string `xml:"Quantity,omitempty" json:"Quantity"`
       UnitCost *MonetaryAmountType `xml:"UnitCost,omitempty" json:"UnitCost"`
       TotalCost *MonetaryAmountType `xml:"TotalCost,omitempty" json:"TotalCost"`
       QuantityDelivered *string `xml:"QuantityDelivered,omitempty" json:"QuantityDelivered"`
-      CancelledOrder *string `xml:"CancelledOrder,omitempty" json:"CancelledOrder"`
-      TaxRate *float64 `xml:"TaxRate,omitempty" json:"TaxRate"`
+      CancelledOrder *AUCodeSetsYesOrNoCategoryType `xml:"CancelledOrder,omitempty" json:"CancelledOrder"`
+      TaxRate *float64 `xml:"TaxRate" json:"TaxRate"`
       ExpenseAccounts *ExpenseAccountsType `xml:"ExpenseAccounts,omitempty" json:"ExpenseAccounts"`
       
       }
     
     type ExpenseAccountsType struct {
-        ExpenseAccount *[]ExpenseAccountType `xml:"ExpenseAccount,omitempty" json:"ExpenseAccount"`
+        ExpenseAccount *[]ExpenseAccountType `xml:"ExpenseAccount" json:"ExpenseAccount"`
       
       }
     
     type ExpenseAccountType struct {
-        AccountCode *string `xml:"AccountCode,omitempty" json:"AccountCode"`
-      Amount *MonetaryAmountType `xml:"Amount,omitempty" json:"Amount"`
+        AccountCode *string `xml:"AccountCode" json:"AccountCode"`
+      Amount *MonetaryAmountType `xml:"Amount" json:"Amount"`
       FinancialAccountRefId *string `xml:"FinancialAccountRefId,omitempty" json:"FinancialAccountRefId"`
       AccountingPeriod *LocalIdType `xml:"AccountingPeriod,omitempty" json:"AccountingPeriod"`
       
       }
     
     type SchoolProgramListType struct {
-        Program *[]SchoolProgramType `xml:"Program,omitempty" json:"Program"`
+        Program *[]SchoolProgramType `xml:"Program" json:"Program"`
       
       }
     
     type SchoolProgramType struct {
         Category *string `xml:"Category,omitempty" json:"Category"`
-      Type *string `xml:"Type,omitempty" json:"Type"`
+      Type *string `xml:"Type" json:"Type"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type LearningObjectivesType struct {
-        LearningObjective *[]string `xml:"LearningObjective,omitempty" json:"LearningObjective"`
+        LearningObjective *[]string `xml:"LearningObjective" json:"LearningObjective"`
       
       }
     
     type RecognitionListType struct {
-        Recognition *[]string `xml:"Recognition,omitempty" json:"Recognition"`
+        Recognition *[]string `xml:"Recognition" json:"Recognition"`
       
       }
     
     type LResourcesType struct {
-        LearningResourceRefId *[]ResourcesType `xml:"LearningResourceRefId,omitempty" json:"LearningResourceRefId"`
+        LearningResourceRefId *[]ResourcesType `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
       
       }
     
@@ -1499,22 +1501,22 @@ package sifxml
       }
     
     type SourceObjectsType struct {
-      SourceObject *[]SourceObjectsType_SourceObject `xml:"SourceObject,omitempty" json:"SourceObject"`
+      SourceObject *[]SourceObjectsType_SourceObject `xml:"SourceObject" json:"SourceObject"`
       
       }
     
     type StudentsType struct {
-        StudentPersonalRefId *[]string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
+        StudentPersonalRefId *[]string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       
       }
     
     type PrerequisitesType struct {
-        Prerequisite *[]string `xml:"Prerequisite,omitempty" json:"Prerequisite"`
+        Prerequisite *[]string `xml:"Prerequisite" json:"Prerequisite"`
       
       }
     
     type EssentialMaterialsType struct {
-        EssentialMaterial *[]string `xml:"EssentialMaterial,omitempty" json:"EssentialMaterial"`
+        EssentialMaterial *[]string `xml:"EssentialMaterial" json:"EssentialMaterial"`
       
       }
     
@@ -1524,12 +1526,12 @@ package sifxml
       }
     
     type SoftwareRequirementListType struct {
-        SoftwareRequirement *[]SoftwareRequirementType `xml:"SoftwareRequirement,omitempty" json:"SoftwareRequirement"`
+        SoftwareRequirement *[]SoftwareRequirementType `xml:"SoftwareRequirement" json:"SoftwareRequirement"`
       
       }
     
     type SoftwareRequirementType struct {
-        SoftwareTitle *string `xml:"SoftwareTitle,omitempty" json:"SoftwareTitle"`
+        SoftwareTitle *string `xml:"SoftwareTitle" json:"SoftwareTitle"`
       Version *string `xml:"Version,omitempty" json:"Version"`
       Vendor *string `xml:"Vendor,omitempty" json:"Vendor"`
       OS *string `xml:"OS,omitempty" json:"OS"`
@@ -1537,51 +1539,51 @@ package sifxml
       }
     
     type HouseholdListType struct {
-        Household *[]LocalIdType `xml:"Household,omitempty" json:"Household"`
+        Household *[]LocalIdType `xml:"Household" json:"Household"`
       
       }
     
     type StudentSubjectChoiceListType struct {
-        StudentSubjectChoice *[]StudentSubjectChoiceType `xml:"StudentSubjectChoice,omitempty" json:"StudentSubjectChoice"`
+        StudentSubjectChoice *[]StudentSubjectChoiceType `xml:"StudentSubjectChoice" json:"StudentSubjectChoice"`
       
       }
     
     type StudentSubjectChoiceType struct {
-        PreferenceNumber *int `xml:"PreferenceNumber,omitempty" json:"PreferenceNumber"`
-      SubjectLocalId *LocalIdType `xml:"SubjectLocalId,omitempty" json:"SubjectLocalId"`
+        PreferenceNumber *int `xml:"PreferenceNumber" json:"PreferenceNumber"`
+      SubjectLocalId *LocalIdType `xml:"SubjectLocalId" json:"SubjectLocalId"`
       StudyDescription *SubjectAreaType `xml:"StudyDescription,omitempty" json:"StudyDescription"`
       OtherSchoolLocalId *LocalIdType `xml:"OtherSchoolLocalId,omitempty" json:"OtherSchoolLocalId"`
       
       }
     
     type IdentityAssertionsType struct {
-      IdentityAssertion *[]IdentityAssertionsType_IdentityAssertion `xml:"IdentityAssertion,omitempty" json:"IdentityAssertion"`
+      IdentityAssertion *[]IdentityAssertionsType_IdentityAssertion `xml:"IdentityAssertion" json:"IdentityAssertion"`
       
       }
     
     type LearningStandardsType struct {
-        LearningStandardItemRefId *[]string `xml:"LearningStandardItemRefId,omitempty" json:"LearningStandardItemRefId"`
+        LearningStandardItemRefId *[]string `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
       
       }
     
     type LearningResourcesType struct {
-        LearningResourceRefId *[]string `xml:"LearningResourceRefId,omitempty" json:"LearningResourceRefId"`
+        LearningResourceRefId *[]string `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
       
       }
     
     type LearningStandardsDocumentType struct {
-        LearningStandardDocumentRefId *[]string `xml:"LearningStandardDocumentRefId,omitempty" json:"LearningStandardDocumentRefId"`
+        LearningStandardDocumentRefId *[]string `xml:"LearningStandardDocumentRefId" json:"LearningStandardDocumentRefId"`
       
       }
     
     type ComponentsType struct {
-        Component *[]ComponentType `xml:"Component,omitempty" json:"Component"`
+        Component *[]ComponentType `xml:"Component" json:"Component"`
       
       }
     
     type ComponentType struct {
-        Name *string `xml:"Name,omitempty" json:"Name"`
-      Reference *string `xml:"Reference,omitempty" json:"Reference"`
+        Name *string `xml:"Name" json:"Name"`
+      Reference *string `xml:"Reference" json:"Reference"`
       Description *string `xml:"Description,omitempty" json:"Description"`
       Strategies *StrategiesType `xml:"Strategies,omitempty" json:"Strategies"`
       AssociatedObjects *AssociatedObjectsType `xml:"AssociatedObjects,omitempty" json:"AssociatedObjects"`
@@ -1589,17 +1591,17 @@ package sifxml
       }
     
     type StrategiesType struct {
-        Strategy *[]string `xml:"Strategy,omitempty" json:"Strategy"`
+        Strategy *[]string `xml:"Strategy" json:"Strategy"`
       
       }
     
     type AssociatedObjectsType struct {
-      AssociatedObject *[]AssociatedObjectsType_AssociatedObject `xml:"AssociatedObject,omitempty" json:"AssociatedObject"`
+      AssociatedObject *[]AssociatedObjectsType_AssociatedObject `xml:"AssociatedObject" json:"AssociatedObject"`
       
       }
     
     type EvaluationsType struct {
-        Evaluation *[]EvaluationType `xml:"Evaluation,omitempty" json:"Evaluation"`
+        Evaluation *[]EvaluationType `xml:"Evaluation" json:"Evaluation"`
       
       }
     
@@ -1612,44 +1614,44 @@ package sifxml
       }
     
     type ApprovalsType struct {
-        Approval *[]ApprovalType `xml:"Approval,omitempty" json:"Approval"`
+        Approval *[]ApprovalType `xml:"Approval" json:"Approval"`
       
       }
     
     type ApprovalType struct {
-        Organization *string `xml:"Organization,omitempty" json:"Organization"`
-      Date *string `xml:"Date,omitempty" json:"Date"`
+        Organization *string `xml:"Organization" json:"Organization"`
+      Date *string `xml:"Date" json:"Date"`
       
       }
     
     type MediaTypesType struct {
-        MediaType *[]string `xml:"MediaType,omitempty" json:"MediaType"`
+        MediaType *[]string `xml:"MediaType" json:"MediaType"`
       
       }
     
     type LEAContactListType struct {
-        LEAContact *[]LEAContactType `xml:"LEAContact,omitempty" json:"LEAContact"`
+        LEAContact *[]LEAContactType `xml:"LEAContact" json:"LEAContact"`
       
       }
     
     type LEAContactType struct {
         PublishInDirectory *PublishInDirectoryType `xml:"PublishInDirectory,omitempty" json:"PublishInDirectory"`
-      ContactInfo *ContactInfoType `xml:"ContactInfo,omitempty" json:"ContactInfo"`
+      ContactInfo *ContactInfoType `xml:"ContactInfo" json:"ContactInfo"`
       
       }
     
     type FinancialAccountRefIdListType struct {
-        FinancialAccountRefId *[]string `xml:"FinancialAccountRefId,omitempty" json:"FinancialAccountRefId"`
+        FinancialAccountRefId *[]string `xml:"FinancialAccountRefId" json:"FinancialAccountRefId"`
       
       }
     
     type AccountCodeListType struct {
-        AccountCode *[]string `xml:"AccountCode,omitempty" json:"AccountCode"`
+        AccountCode *[]string `xml:"AccountCode" json:"AccountCode"`
       
       }
     
     type JournalAdjustmentListType struct {
-        JournalAdjustment *[]JournalAdjustmentType `xml:"JournalAdjustment,omitempty" json:"JournalAdjustment"`
+        JournalAdjustment *[]JournalAdjustmentType `xml:"JournalAdjustment" json:"JournalAdjustment"`
       
       }
     
@@ -1660,12 +1662,12 @@ package sifxml
       CreditAccountCode *string `xml:"CreditAccountCode,omitempty" json:"CreditAccountCode"`
       GSTCodeOriginal *string `xml:"GSTCodeOriginal,omitempty" json:"GSTCodeOriginal"`
       GSTCodeReplacement *string `xml:"GSTCodeReplacement,omitempty" json:"GSTCodeReplacement"`
-      LineAdjustmentAmount *MonetaryAmountType `xml:"LineAdjustmentAmount,omitempty" json:"LineAdjustmentAmount"`
+      LineAdjustmentAmount *MonetaryAmountType `xml:"LineAdjustmentAmount" json:"LineAdjustmentAmount"`
       
       }
     
     type PaymentReceiptLineListType struct {
-        PaymentReceiptLine *[]PaymentReceiptLineType `xml:"PaymentReceiptLine,omitempty" json:"PaymentReceiptLine"`
+        PaymentReceiptLine *[]PaymentReceiptLineType `xml:"PaymentReceiptLine" json:"PaymentReceiptLine"`
       
       }
     
@@ -1673,22 +1675,22 @@ package sifxml
         InvoiceRefId *string `xml:"InvoiceRefId,omitempty" json:"InvoiceRefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
       LocalPaymentReceiptLineId *LocalIdType `xml:"LocalPaymentReceiptLineId,omitempty" json:"LocalPaymentReceiptLineId"`
-      TransactionAmount *DebitOrCreditAmountType `xml:"TransactionAmount,omitempty" json:"TransactionAmount"`
+      TransactionAmount *DebitOrCreditAmountType `xml:"TransactionAmount" json:"TransactionAmount"`
       FinancialAccountRefId *string `xml:"FinancialAccountRefId,omitempty" json:"FinancialAccountRefId"`
       AccountCode *string `xml:"AccountCode,omitempty" json:"AccountCode"`
       TransactionDescription *string `xml:"TransactionDescription,omitempty" json:"TransactionDescription"`
-      TaxRate *float64 `xml:"TaxRate,omitempty" json:"TaxRate"`
+      TaxRate *float64 `xml:"TaxRate" json:"TaxRate"`
       TaxAmount *MonetaryAmountType `xml:"TaxAmount,omitempty" json:"TaxAmount"`
       
       }
     
     type PasswordListType struct {
-      Password *[]PasswordListType_Password `xml:"Password,omitempty" json:"Password"`
+      Password *[]PasswordListType_Password `xml:"Password" json:"Password"`
       
       }
     
     type ExclusionRulesType struct {
-        ExclusionRule *[]ExclusionRuleType `xml:"ExclusionRule,omitempty" json:"ExclusionRule"`
+        ExclusionRule *[]ExclusionRuleType `xml:"ExclusionRule" json:"ExclusionRule"`
       
       }
     
@@ -1699,12 +1701,12 @@ package sifxml
       }
     
     type CharacteristicsType struct {
-        AggregateCharacteristicInfoRefId *[]string `xml:"AggregateCharacteristicInfoRefId,omitempty" json:"AggregateCharacteristicInfoRefId"`
+        AggregateCharacteristicInfoRefId *[]string `xml:"AggregateCharacteristicInfoRefId" json:"AggregateCharacteristicInfoRefId"`
       
       }
     
     type ContactsType struct {
-        Contact *[]ContactType `xml:"Contact,omitempty" json:"Contact"`
+        Contact *[]ContactType `xml:"Contact" json:"Contact"`
       
       }
     
@@ -1717,7 +1719,7 @@ package sifxml
       }
     
     type TeachingGroupPeriodListType struct {
-        TeachingGroupPeriod *[]TeachingGroupPeriodType `xml:"TeachingGroupPeriod,omitempty" json:"TeachingGroupPeriod"`
+        TeachingGroupPeriod *[]TeachingGroupPeriodType `xml:"TeachingGroupPeriod" json:"TeachingGroupPeriod"`
       
       }
     
@@ -1725,95 +1727,95 @@ package sifxml
         TimeTableCellRefId *string `xml:"TimeTableCellRefId,omitempty" json:"TimeTableCellRefId"`
       RoomNumber *HomeroomNumberType `xml:"RoomNumber,omitempty" json:"RoomNumber"`
       StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId"`
-      DayId *LocalIdType `xml:"DayId,omitempty" json:"DayId"`
-      PeriodId *LocalIdType `xml:"PeriodId,omitempty" json:"PeriodId"`
-      StartTime *string `xml:"StartTime,omitempty" json:"StartTime"`
+      DayId *LocalIdType `xml:"DayId" json:"DayId"`
+      PeriodId *LocalIdType `xml:"PeriodId" json:"PeriodId"`
+      StartTime *string `xml:"StartTime" json:"StartTime"`
       CellType *string `xml:"CellType,omitempty" json:"CellType"`
       
       }
     
     type TeacherListType struct {
-        TeachingGroupTeacher *[]TeachingGroupTeacherType `xml:"TeachingGroupTeacher,omitempty" json:"TeachingGroupTeacher"`
+        TeachingGroupTeacher *[]TeachingGroupTeacherType `xml:"TeachingGroupTeacher" json:"TeachingGroupTeacher"`
       
       }
     
     type TeachingGroupTeacherType struct {
-        StaffPersonalRefId *string `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId"`
-      StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId"`
+        StaffPersonalRefId *string `xml:"StaffPersonalRefId" json:"StaffPersonalRefId"`
+      StaffLocalId *LocalIdType `xml:"StaffLocalId" json:"StaffLocalId"`
       Name *NameOfRecordType `xml:"Name,omitempty" json:"Name"`
-      Association *string `xml:"Association,omitempty" json:"Association"`
+      Association *string `xml:"Association" json:"Association"`
       
       }
     
     type StudentListType struct {
-        TeachingGroupStudent *[]TeachingGroupStudentType `xml:"TeachingGroupStudent,omitempty" json:"TeachingGroupStudent"`
+        TeachingGroupStudent *[]TeachingGroupStudentType `xml:"TeachingGroupStudent" json:"TeachingGroupStudent"`
       
       }
     
     type TeachingGroupStudentType struct {
-        StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
-      StudentLocalId *LocalIdType `xml:"StudentLocalId,omitempty" json:"StudentLocalId"`
+        StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      StudentLocalId *LocalIdType `xml:"StudentLocalId" json:"StudentLocalId"`
       Name *NameOfRecordType `xml:"Name,omitempty" json:"Name"`
       
       }
     
     type TimeTableDayListType struct {
-        TimeTableDay *[]TimeTableDayType `xml:"TimeTableDay,omitempty" json:"TimeTableDay"`
+        TimeTableDay *[]TimeTableDayType `xml:"TimeTableDay" json:"TimeTableDay"`
       
       }
     
     type TimeTableDayType struct {
-        DayId *LocalIdType `xml:"DayId,omitempty" json:"DayId"`
-      DayTitle *string `xml:"DayTitle,omitempty" json:"DayTitle"`
-      TimeTablePeriodList *TimeTablePeriodListType `xml:"TimeTablePeriodList,omitempty" json:"TimeTablePeriodList"`
+        DayId *LocalIdType `xml:"DayId" json:"DayId"`
+      DayTitle *string `xml:"DayTitle" json:"DayTitle"`
+      TimeTablePeriodList *TimeTablePeriodListType `xml:"TimeTablePeriodList" json:"TimeTablePeriodList"`
       
       }
     
     type TimeTablePeriodListType struct {
-        TimeTablePeriod *[]TimeTablePeriodType `xml:"TimeTablePeriod,omitempty" json:"TimeTablePeriod"`
+        TimeTablePeriod *[]TimeTablePeriodType `xml:"TimeTablePeriod" json:"TimeTablePeriod"`
       
       }
     
     type TimeTablePeriodType struct {
-        PeriodId *LocalIdType `xml:"PeriodId,omitempty" json:"PeriodId"`
-      PeriodTitle *string `xml:"PeriodTitle,omitempty" json:"PeriodTitle"`
+        PeriodId *LocalIdType `xml:"PeriodId" json:"PeriodId"`
+      PeriodTitle *string `xml:"PeriodTitle" json:"PeriodTitle"`
       BellPeriod *string `xml:"BellPeriod,omitempty" json:"BellPeriod"`
       StartTime *string `xml:"StartTime,omitempty" json:"StartTime"`
       EndTime *string `xml:"EndTime,omitempty" json:"EndTime"`
       RegularSchoolPeriod *string `xml:"RegularSchoolPeriod,omitempty" json:"RegularSchoolPeriod"`
-      InstructionalMinutes *int `xml:"InstructionalMinutes,omitempty" json:"InstructionalMinutes"`
+      InstructionalMinutes *int `xml:"InstructionalMinutes" json:"InstructionalMinutes"`
       UseInAttendanceCalculations *string `xml:"UseInAttendanceCalculations,omitempty" json:"UseInAttendanceCalculations"`
       
       }
     
     type NAPLANClassListType struct {
-        ClassCode *[]string `xml:"ClassCode,omitempty" json:"ClassCode"`
+        ClassCode *[]string `xml:"ClassCode" json:"ClassCode"`
       
       }
     
     type SchoolGroupListType struct {
-        SchoolGroup *[]LocalIdType `xml:"SchoolGroup,omitempty" json:"SchoolGroup"`
+        SchoolGroup *[]LocalIdType `xml:"SchoolGroup" json:"SchoolGroup"`
       
       }
     
     type YearLevelEnrollmentListType struct {
-        YearLevelEnrollment *[]YearLevelEnrollmentType `xml:"YearLevelEnrollment,omitempty" json:"YearLevelEnrollment"`
+        YearLevelEnrollment *[]YearLevelEnrollmentType `xml:"YearLevelEnrollment" json:"YearLevelEnrollment"`
       
       }
     
     type YearLevelEnrollmentType struct {
-        Year *string `xml:"Year,omitempty" json:"Year"`
-      Enrollment *string `xml:"Enrollment,omitempty" json:"Enrollment"`
+        Year *AUCodeSetsYearLevelCodeType `xml:"Year" json:"Year"`
+      Enrollment *string `xml:"Enrollment" json:"Enrollment"`
       
       }
     
     type SchoolFocusListType struct {
-        SchoolFocus *[]string `xml:"SchoolFocus,omitempty" json:"SchoolFocus"`
+        SchoolFocus *[]AUCodeSetsSchoolFocusCodeType `xml:"SchoolFocus" json:"SchoolFocus"`
       
       }
     
     type AlertMessagesType struct {
-        AlertMessage *[]AlertMessageType `xml:"AlertMessage,omitempty" json:"AlertMessage"`
+        AlertMessage *[]AlertMessageType `xml:"AlertMessage" json:"AlertMessage"`
       
       }
     
@@ -1824,7 +1826,7 @@ package sifxml
       }
     
     type MedicalAlertMessagesType struct {
-        MedicalAlertMessage *[]MedicalAlertMessageType `xml:"MedicalAlertMessage,omitempty" json:"MedicalAlertMessage"`
+        MedicalAlertMessage *[]MedicalAlertMessageType `xml:"MedicalAlertMessage" json:"MedicalAlertMessage"`
       
       }
     
@@ -1835,7 +1837,7 @@ package sifxml
       }
     
     type OtherIdListType struct {
-        OtherId *[]OtherIdType `xml:"OtherId,omitempty" json:"OtherId"`
+        OtherId *[]OtherIdType `xml:"OtherId" json:"OtherId"`
       
       }
     
@@ -1847,15 +1849,15 @@ package sifxml
     
     type BaseNameType struct {
         Title *string `xml:"Title,omitempty" json:"Title"`
-      FamilyName *string `xml:"FamilyName,omitempty" json:"FamilyName"`
-      GivenName *string `xml:"GivenName,omitempty" json:"GivenName"`
+      FamilyName *string `xml:"FamilyName" json:"FamilyName"`
+      GivenName *string `xml:"GivenName" json:"GivenName"`
       MiddleName *string `xml:"MiddleName,omitempty" json:"MiddleName"`
-      FamilyNameFirst *string `xml:"FamilyNameFirst,omitempty" json:"FamilyNameFirst"`
+      FamilyNameFirst *AUCodeSetsYesOrNoCategoryType `xml:"FamilyNameFirst,omitempty" json:"FamilyNameFirst"`
       PreferredFamilyName *string `xml:"PreferredFamilyName,omitempty" json:"PreferredFamilyName"`
-      PreferredFamilyNameFirst *string `xml:"PreferredFamilyNameFirst,omitempty" json:"PreferredFamilyNameFirst"`
+      PreferredFamilyNameFirst *AUCodeSetsYesOrNoCategoryType `xml:"PreferredFamilyNameFirst,omitempty" json:"PreferredFamilyNameFirst"`
       PreferredGivenName *string `xml:"PreferredGivenName,omitempty" json:"PreferredGivenName"`
       Suffix *string `xml:"Suffix,omitempty" json:"Suffix"`
-      FullName *string `xml:"FullName,omitempty" json:"FullName"`
+      FullName *string `xml:"FullName" json:"FullName"`
       
       }
     
@@ -1867,7 +1869,7 @@ package sifxml
     
     type OtherNameType struct {
         BaseNameType
-          Type *string `xml:"Type,attr" json:"Type"`
+          Type *AUCodeSetsNameUsageTypeType `xml:"Type,attr" json:"Type"`
       
       }
     
@@ -1876,24 +1878,24 @@ package sifxml
     type LocationType struct {
         Type *string `xml:"Type,attr" json:"Type"`
       LocationName *string `xml:"LocationName,omitempty" json:"LocationName"`
-      LocationRefId *LocationType_LocationRefId `xml:"LocationRefId,omitempty" json:"LocationRefId"`
+      LocationRefId *LocationType_LocationRefId
       
       }
     
     type StateProvinceIdType string
     type AttendanceCodeType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsAttendanceCodeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type YearLevelType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsYearLevelCodeType `xml:"Code" json:"Code"`
       
       }
     
     type PersonInfoType struct {
-        Name *NameOfRecordType `xml:"Name,omitempty" json:"Name"`
+        Name *NameOfRecordType `xml:"Name" json:"Name"`
       OtherNames *OtherNamesType `xml:"OtherNames,omitempty" json:"OtherNames"`
       Demographics *DemographicsType `xml:"Demographics,omitempty" json:"Demographics"`
       AddressList *AddressListType `xml:"AddressList,omitempty" json:"AddressList"`
@@ -1904,13 +1906,13 @@ package sifxml
       }
     
     type YearLevelsType struct {
-        YearLevel *[]YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel"`
+        YearLevel *[]YearLevelType `xml:"YearLevel" json:"YearLevel"`
       
       }
     
     type SchoolURLType string
     type PrincipalInfoType struct {
-        ContactName *NameOfRecordType `xml:"ContactName,omitempty" json:"ContactName"`
+        ContactName *NameOfRecordType `xml:"ContactName" json:"ContactName"`
       ContactTitle *string `xml:"ContactTitle,omitempty" json:"ContactTitle"`
       PhoneNumberList *PhoneNumberListType `xml:"PhoneNumberList,omitempty" json:"PhoneNumberList"`
       EmailList *EmailListType `xml:"EmailList,omitempty" json:"EmailList"`
@@ -1919,18 +1921,18 @@ package sifxml
     
     type SchoolContactType struct {
         PublishInDirectory *PublishInDirectoryType `xml:"PublishInDirectory,omitempty" json:"PublishInDirectory"`
-      ContactInfo *ContactInfoType `xml:"ContactInfo,omitempty" json:"ContactInfo"`
+      ContactInfo *ContactInfoType `xml:"ContactInfo" json:"ContactInfo"`
       
       }
     
     type SchoolContactListType struct {
-        SchoolContact *[]SchoolContactType `xml:"SchoolContact,omitempty" json:"SchoolContact"`
+        SchoolContact *[]SchoolContactType `xml:"SchoolContact" json:"SchoolContact"`
       
       }
     
-    type PublishInDirectoryType string
+    type PublishInDirectoryType AUCodeSetsYesOrNoCategoryType
     type ContactInfoType struct {
-        Name *NameType `xml:"Name,omitempty" json:"Name"`
+        Name *NameType `xml:"Name" json:"Name"`
       PositionTitle *string `xml:"PositionTitle,omitempty" json:"PositionTitle"`
       Role *string `xml:"Role,omitempty" json:"Role"`
       RegistrationDetails *string `xml:"RegistrationDetails,omitempty" json:"RegistrationDetails"`
@@ -1959,15 +1961,15 @@ package sifxml
       }
     
     type AddressType struct {
-        Type *string `xml:"Type,attr" json:"Type"`
-      Role *string `xml:"Role,attr" json:"Role"`
+        Type *AUCodeSetsAddressTypeType `xml:"Type,attr" json:"Type"`
+      Role *AUCodeSetsAddressRoleType `xml:"Role,attr" json:"Role"`
       EffectiveFromDate *string `xml:"EffectiveFromDate,omitempty" json:"EffectiveFromDate"`
       EffectiveToDate *string `xml:"EffectiveToDate,omitempty" json:"EffectiveToDate"`
-      Street *AddressStreetType `xml:"Street,omitempty" json:"Street"`
-      City *string `xml:"City,omitempty" json:"City"`
-      StateProvince *StateProvinceType `xml:"StateProvince,omitempty" json:"StateProvince"`
+      Street *AddressStreetType `xml:"Street" json:"Street"`
+      City *string `xml:"City" json:"City"`
+      StateProvince *StateProvinceType `xml:"StateProvince" json:"StateProvince"`
       Country *CountryType `xml:"Country,omitempty" json:"Country"`
-      PostalCode *string `xml:"PostalCode,omitempty" json:"PostalCode"`
+      PostalCode *string `xml:"PostalCode" json:"PostalCode"`
       GridLocation *GridLocationType `xml:"GridLocation,omitempty" json:"GridLocation"`
       MapReference *MapReferenceType `xml:"MapReference,omitempty" json:"MapReference"`
       RadioContact *string `xml:"RadioContact,omitempty" json:"RadioContact"`
@@ -1980,14 +1982,14 @@ package sifxml
     
     type MapReferenceType struct {
         Type *string `xml:"Type,attr" json:"Type"`
-      XCoordinate *string `xml:"XCoordinate,omitempty" json:"XCoordinate"`
-      YCoordinate *string `xml:"YCoordinate,omitempty" json:"YCoordinate"`
+      XCoordinate *string `xml:"XCoordinate" json:"XCoordinate"`
+      YCoordinate *string `xml:"YCoordinate" json:"YCoordinate"`
       MapNumber *string `xml:"MapNumber,omitempty" json:"MapNumber"`
       
       }
     
     type StatisticalAreasType struct {
-        StatisticalArea *[]StatisticalAreaType `xml:"StatisticalArea,omitempty" json:"StatisticalArea"`
+        StatisticalArea *[]StatisticalAreaType `xml:"StatisticalArea" json:"StatisticalArea"`
       
       }
     
@@ -1998,102 +2000,102 @@ package sifxml
       }
     
     type AddressListType struct {
-        Address *[]AddressType `xml:"Address,omitempty" json:"Address"`
+        Address *[]AddressType `xml:"Address" json:"Address"`
       
       }
     
     type EmailListType struct {
-        Email *[]EmailType `xml:"Email,omitempty" json:"Email"`
+        Email *[]EmailType `xml:"Email" json:"Email"`
       
       }
     
     type EmailType struct {
-          Type *string `xml:"Type,attr" json:"Type"`
+          Type *AUCodeSetsEmailTypeType `xml:"Type,attr" json:"Type"`
       
         Value *string `xml:",chardata" json:"value"`
       }
     
     type PhoneNumberListType struct {
-        PhoneNumber *[]PhoneNumberType `xml:"PhoneNumber,omitempty" json:"PhoneNumber"`
+        PhoneNumber *[]PhoneNumberType `xml:"PhoneNumber" json:"PhoneNumber"`
       
       }
     
     type PhoneNumberType struct {
-        Type *string `xml:"Type,attr" json:"Type"`
-      Number *string `xml:"Number,omitempty" json:"Number"`
+        Type *AUCodeSetsTelephoneNumberTypeType `xml:"Type,attr" json:"Type"`
+      Number *string `xml:"Number" json:"Number"`
       Extension *string `xml:"Extension,omitempty" json:"Extension"`
-      ListedStatus *string `xml:"ListedStatus,omitempty" json:"ListedStatus"`
-      Preference *int `xml:"Preference,omitempty" json:"Preference"`
+      ListedStatus *AUCodeSetsYesOrNoCategoryType `xml:"ListedStatus,omitempty" json:"ListedStatus"`
+      Preference *int `xml:"Preference" json:"Preference"`
       
       }
     
-    type CountryType string
+    type CountryType AUCodeSetsStandardAustralianClassificationOfCountriesSACCType
     type GridLocationType struct {
-        Latitude *float64 `xml:"Latitude,omitempty" json:"Latitude"`
-      Longitude *float64 `xml:"Longitude,omitempty" json:"Longitude"`
+        Latitude *float64 `xml:"Latitude" json:"Latitude"`
+      Longitude *float64 `xml:"Longitude" json:"Longitude"`
       
       }
     
-    type OperationalStatusType string
+    type OperationalStatusType AUCodeSetsOperationalStatusType
     type StateProvinceType string
     type SchoolYearType string
     type ElectronicIdListType struct {
-        ElectronicId *[]ElectronicIdType `xml:"ElectronicId,omitempty" json:"ElectronicId"`
+        ElectronicId *[]ElectronicIdType `xml:"ElectronicId" json:"ElectronicId"`
       
       }
     
     type ElectronicIdType struct {
-          Type *string `xml:"Type,attr" json:"Type"`
+          Type *AUCodeSetsElectronicIdTypeType `xml:"Type,attr" json:"Type"`
       
         Value *string `xml:",chardata" json:"value"`
       }
     
     type OtherNamesType struct {
-        Name *[]OtherNameType `xml:"Name,omitempty" json:"Name"`
+        Name *[]OtherNameType `xml:"Name" json:"Name"`
       
       }
     
     type DemographicsType struct {
-        IndigenousStatus *string `xml:"IndigenousStatus,omitempty" json:"IndigenousStatus"`
-      Sex *string `xml:"Sex,omitempty" json:"Sex"`
+        IndigenousStatus *AUCodeSetsIndigenousStatusType `xml:"IndigenousStatus,omitempty" json:"IndigenousStatus"`
+      Sex *AUCodeSetsSexCodeType `xml:"Sex,omitempty" json:"Sex"`
       BirthDate *BirthDateType `xml:"BirthDate,omitempty" json:"BirthDate"`
       DateOfDeath *string `xml:"DateOfDeath,omitempty" json:"DateOfDeath"`
-      BirthDateVerification *string `xml:"BirthDateVerification,omitempty" json:"BirthDateVerification"`
+      BirthDateVerification *AUCodeSetsBirthdateVerificationType `xml:"BirthDateVerification,omitempty" json:"BirthDateVerification"`
       PlaceOfBirth *string `xml:"PlaceOfBirth,omitempty" json:"PlaceOfBirth"`
       StateOfBirth *StateProvinceType `xml:"StateOfBirth,omitempty" json:"StateOfBirth"`
       CountryOfBirth *CountryType `xml:"CountryOfBirth,omitempty" json:"CountryOfBirth"`
       CountriesOfCitizenship *CountryListType `xml:"CountriesOfCitizenship,omitempty" json:"CountriesOfCitizenship"`
       CountriesOfResidency *CountryList2Type `xml:"CountriesOfResidency,omitempty" json:"CountriesOfResidency"`
       CountryArrivalDate *string `xml:"CountryArrivalDate,omitempty" json:"CountryArrivalDate"`
-      AustralianCitizenshipStatus *string `xml:"AustralianCitizenshipStatus,omitempty" json:"AustralianCitizenshipStatus"`
+      AustralianCitizenshipStatus *AUCodeSetsAustralianCitizenshipStatusType `xml:"AustralianCitizenshipStatus,omitempty" json:"AustralianCitizenshipStatus"`
       EnglishProficiency *EnglishProficiencyType `xml:"EnglishProficiency,omitempty" json:"EnglishProficiency"`
       LanguageList *LanguageListType `xml:"LanguageList,omitempty" json:"LanguageList"`
       DwellingArrangement *DwellingArrangementType `xml:"DwellingArrangement,omitempty" json:"DwellingArrangement"`
       Religion *ReligionType `xml:"Religion,omitempty" json:"Religion"`
       ReligiousEventList *ReligiousEventListType `xml:"ReligiousEventList,omitempty" json:"ReligiousEventList"`
       ReligiousRegion *string `xml:"ReligiousRegion,omitempty" json:"ReligiousRegion"`
-      PermanentResident *string `xml:"PermanentResident,omitempty" json:"PermanentResident"`
+      PermanentResident *AUCodeSetsPermanentResidentStatusType `xml:"PermanentResident,omitempty" json:"PermanentResident"`
       VisaSubClass *VisaSubClassCodeType `xml:"VisaSubClass,omitempty" json:"VisaSubClass"`
       VisaStatisticalCode *string `xml:"VisaStatisticalCode,omitempty" json:"VisaStatisticalCode"`
       VisaExpiryDate *string `xml:"VisaExpiryDate,omitempty" json:"VisaExpiryDate"`
       VisaSubClassList *VisaSubClassListType `xml:"VisaSubClassList,omitempty" json:"VisaSubClassList"`
-      LBOTE *string `xml:"LBOTE,omitempty" json:"LBOTE"`
-      InterpreterRequired *string `xml:"InterpreterRequired,omitempty" json:"InterpreterRequired"`
-      ImmunisationCertificateStatus *string `xml:"ImmunisationCertificateStatus,omitempty" json:"ImmunisationCertificateStatus"`
-      CulturalBackground *string `xml:"CulturalBackground,omitempty" json:"CulturalBackground"`
-      MaritalStatus *string `xml:"MaritalStatus,omitempty" json:"MaritalStatus"`
+      LBOTE *AUCodeSetsYesOrNoCategoryType `xml:"LBOTE,omitempty" json:"LBOTE"`
+      InterpreterRequired *AUCodeSetsYesOrNoCategoryType `xml:"InterpreterRequired,omitempty" json:"InterpreterRequired"`
+      ImmunisationCertificateStatus *AUCodeSetsImmunisationCertificateStatusType `xml:"ImmunisationCertificateStatus,omitempty" json:"ImmunisationCertificateStatus"`
+      CulturalBackground *AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType `xml:"CulturalBackground,omitempty" json:"CulturalBackground"`
+      MaritalStatus *AUCodeSetsMaritalStatusAIHWType `xml:"MaritalStatus,omitempty" json:"MaritalStatus"`
       MedicareNumber *string `xml:"MedicareNumber,omitempty" json:"MedicareNumber"`
       
       }
     
     type EnglishProficiencyType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsEnglishProficiencyType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type LanguageListType struct {
-        Language *[]LanguageBaseType `xml:"Language,omitempty" json:"Language"`
+        Language *[]LanguageBaseType `xml:"Language" json:"Language"`
       
       }
     
@@ -2101,68 +2103,68 @@ package sifxml
     type ProjectedGraduationYearType string
     type OnTimeGraduationYearType string
     type RelationshipType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *AUCodeSetsRelationshipToStudentType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
-    type EducationalLevelType string
+    type EducationalLevelType AUCodeSetsSchoolEducationLevelTypeType
     type GraduationDateType PartialDateType
     type NameType struct {
         BaseNameType
-          Type *string `xml:"Type,attr" json:"Type"`
+          Type *AUCodeSetsNameUsageTypeType `xml:"Type,attr" json:"Type"`
       
       }
     
     type HomeroomNumberType string
     type TimeElementType struct {
-        Type *string `xml:"Type,omitempty" json:"Type"`
-      Code *string `xml:"Code,omitempty" json:"Code"`
-      Name *string `xml:"Name,omitempty" json:"Name"`
-      Value *string `xml:"Value,omitempty" json:"Value"`
+        Type *string `xml:"Type" json:"Type"`
+      Code *string `xml:"Code" json:"Code"`
+      Name *string `xml:"Name" json:"Name"`
+      Value *string `xml:"Value" json:"Value"`
       StartDateTime *string `xml:"StartDateTime,omitempty" json:"StartDateTime"`
       EndDateTime *string `xml:"EndDateTime,omitempty" json:"EndDateTime"`
-      SpanGaps *TimeElementType_SpanGaps `xml:"SpanGaps,omitempty" json:"SpanGaps"`
-      IsCurrent *bool `xml:"IsCurrent,omitempty" json:"IsCurrent"`
+      SpanGaps *TimeElementType_SpanGaps
+      IsCurrent *bool `xml:"IsCurrent" json:"IsCurrent"`
       
       }
     
     type LifeCycleType struct {
-      Created *LifeCycleType_Created `xml:"Created,omitempty" json:"Created"`
-      ModificationHistory *LifeCycleType_ModificationHistory `xml:"ModificationHistory,omitempty" json:"ModificationHistory"`
-      TimeElements *LifeCycleType_TimeElements `xml:"TimeElements,omitempty" json:"TimeElements"`
+      Created *LifeCycleType_Created
+      ModificationHistory *LifeCycleType_ModificationHistory
+      TimeElements *LifeCycleType_TimeElements
       
       }
     
     type OtherCodeListType struct {
-      OtherCode *[]OtherCodeListType_OtherCode `xml:"OtherCode,omitempty" json:"OtherCode"`
+      OtherCode *[]OtherCodeListType_OtherCode `xml:"OtherCode" json:"OtherCode"`
       
       }
     
     type ProgramStatusType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *string `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type SubjectAreaListType struct {
-        SubjectArea *[]SubjectAreaType `xml:"SubjectArea,omitempty" json:"SubjectArea"`
+        SubjectArea *[]SubjectAreaType `xml:"SubjectArea" json:"SubjectArea"`
       
       }
     
     type ACStrandAreaListType struct {
-        ACStrandSubjectArea *[]ACStrandSubjectAreaType `xml:"ACStrandSubjectArea,omitempty" json:"ACStrandSubjectArea"`
+        ACStrandSubjectArea *[]ACStrandSubjectAreaType `xml:"ACStrandSubjectArea" json:"ACStrandSubjectArea"`
       
       }
     
     type SubjectAreaType struct {
-        Code *string `xml:"Code,omitempty" json:"Code"`
+        Code *string `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList"`
       
       }
     
     type ACStrandSubjectAreaType struct {
-        ACStrand *string `xml:"ACStrand,omitempty" json:"ACStrand"`
+        ACStrand *AUCodeSetsACStrandType `xml:"ACStrand" json:"ACStrand"`
       SubjectArea *SubjectAreaType `xml:"SubjectArea,omitempty" json:"SubjectArea"`
       
       }
@@ -2173,12 +2175,12 @@ package sifxml
       }
     
     type SIF_ExtendedElementsType struct {
-      SIF_ExtendedElement *[]SIF_ExtendedElementsType_SIF_ExtendedElement `xml:"SIF_ExtendedElement,omitempty" json:"SIF_ExtendedElement"`
+      SIF_ExtendedElement *[]SIF_ExtendedElementsType_SIF_ExtendedElement `xml:"SIF_ExtendedElement" json:"SIF_ExtendedElement"`
       
       }
     
     type SIF_MetadataType struct {
-      TimeElements *SIF_MetadataType_TimeElements `xml:"TimeElements,omitempty" json:"TimeElements"`
+      TimeElements *SIF_MetadataType_TimeElements
       LifeCycle *LifeCycleType `xml:"LifeCycle,omitempty" json:"LifeCycle"`
       EducationFilter *EducationFilterType `xml:"EducationFilter,omitempty" json:"EducationFilter"`
       
@@ -2202,7 +2204,7 @@ type AbstractContentPackageType_BinaryData struct {
 type AbstractContentPackageType_Reference struct {
       MIMEType *string `xml:"MIMEType,attr" json:"MIMEType"`
       Description *string `xml:"Description,attr" json:"Description"`
-       URL *string `xml:"URL,omitempty" json:"URL"`
+       URL *string `xml:"URL" json:"URL"`
 }
 type AbstractContentElementType_XMLData struct {
       Description *string `xml:"Description,attr" json:"Description"`
@@ -2223,7 +2225,7 @@ type AbstractContentElementType_BinaryData struct {
 type AbstractContentElementType_Reference struct {
       MIMEType *string `xml:"MIMEType,attr" json:"MIMEType"`
       Description *string `xml:"Description,attr" json:"Description"`
-       URL *string `xml:"URL,omitempty" json:"URL"`
+       URL *string `xml:"URL" json:"URL"`
 }
 type PersonInvolvementType_PersonRefId struct {
       SIF_RefObject *string `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
@@ -2255,17 +2257,17 @@ type LocationType_LocationRefId struct {
       Value *string `xml:",chardata" json:"value"`
 }
 type TimeElementType_SpanGaps struct {
-      SpanGap *[]TimeElementType_SpanGap `xml:"SpanGap,omitempty" json:"SpanGap"`
+      SpanGap *[]TimeElementType_SpanGap `xml:"SpanGap" json:"SpanGap"`
 }
 type LifeCycleType_Created struct {
-       DateTime *string `xml:"DateTime,omitempty" json:"DateTime"`
-      Creators *LifeCycleType_Creators `xml:"Creators,omitempty" json:"Creators"`
+       DateTime *string `xml:"DateTime" json:"DateTime"`
+      Creators *LifeCycleType_Creators
 }
 type LifeCycleType_ModificationHistory struct {
-      Modified *[]LifeCycleType_Modified `xml:"Modified,omitempty" json:"Modified"`
+      Modified *[]LifeCycleType_Modified `xml:"Modified" json:"Modified"`
 }
 type LifeCycleType_TimeElements struct {
-       TimeElement *[]TimeElementType `xml:"TimeElement,omitempty" json:"TimeElement"`
+       TimeElement *[]TimeElementType `xml:"TimeElement" json:"TimeElement"`
 }
 type OtherCodeListType_OtherCode struct {
       Codeset *string `xml:"Codeset,attr" json:"Codeset"`
@@ -2278,25 +2280,25 @@ type SIF_ExtendedElementsType_SIF_ExtendedElement struct {
       Value *ExtendedContentType `xml:",chardata" json:"value"`
 }
 type SIF_MetadataType_TimeElements struct {
-       TimeElement *[]TimeElementType `xml:"TimeElement,omitempty" json:"TimeElement"`
+       TimeElement *[]TimeElementType `xml:"TimeElement" json:"TimeElement"`
 }
 type TimeElementType_SpanGap struct {
-       Type *string `xml:"Type,omitempty" json:"Type"`
-       Code *string `xml:"Code,omitempty" json:"Code"`
-       Name *string `xml:"Name,omitempty" json:"Name"`
-       Value *string `xml:"Value,omitempty" json:"Value"`
+       Type *string `xml:"Type" json:"Type"`
+       Code *string `xml:"Code" json:"Code"`
+       Name *string `xml:"Name" json:"Name"`
+       Value *string `xml:"Value" json:"Value"`
        StartDateTime *string `xml:"StartDateTime,omitempty" json:"StartDateTime"`
        EndDateTime *string `xml:"EndDateTime,omitempty" json:"EndDateTime"`
 }
 type LifeCycleType_Creators struct {
-      Creator *[]LifeCycleType_Creator `xml:"Creator,omitempty" json:"Creator"`
+      Creator *[]LifeCycleType_Creator `xml:"Creator" json:"Creator"`
 }
 type LifeCycleType_Modified struct {
-       By *string `xml:"By,omitempty" json:"By"`
-       DateTime *string `xml:"DateTime,omitempty" json:"DateTime"`
+       By *string `xml:"By" json:"By"`
+       DateTime *string `xml:"DateTime" json:"DateTime"`
        Description *string `xml:"Description,omitempty" json:"Description"`
 }
 type LifeCycleType_Creator struct {
-       Name *string `xml:"Name,omitempty" json:"Name"`
-       ID *string `xml:"ID,omitempty" json:"ID"`
+       Name *string `xml:"Name" json:"Name"`
+       ID *string `xml:"ID" json:"ID"`
 }

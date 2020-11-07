@@ -6,11 +6,11 @@ type VendorInfos []VendorInfo
     type VendorInfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      Name *string `xml:"Name,omitempty" json:"Name"`
+      Name *string `xml:"Name" json:"Name"`
       ContactInfo *ContactInfoType `xml:"ContactInfo,omitempty" json:"ContactInfo"`
       CustomerId *string `xml:"CustomerId,omitempty" json:"CustomerId"`
       ABN *string `xml:"ABN,omitempty" json:"ABN"`
-      RegisteredForGST *string `xml:"RegisteredForGST,omitempty" json:"RegisteredForGST"`
+      RegisteredForGST *AUCodeSetsYesOrNoCategoryType `xml:"RegisteredForGST,omitempty" json:"RegisteredForGST"`
       PaymentTerms *string `xml:"PaymentTerms,omitempty" json:"PaymentTerms"`
       BPay *string `xml:"BPay,omitempty" json:"BPay"`
       BSB *string `xml:"BSB,omitempty" json:"BSB"`

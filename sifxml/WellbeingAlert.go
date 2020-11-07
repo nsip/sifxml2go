@@ -6,14 +6,14 @@ type WellbeingAlerts []WellbeingAlert
     type WellbeingAlert struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
-      Date *string `xml:"Date,omitempty" json:"Date"`
+      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      SchoolInfoRefId *string `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
+      Date *string `xml:"Date" json:"Date"`
       WellbeingAlertStartDate *string `xml:"WellbeingAlertStartDate,omitempty" json:"WellbeingAlertStartDate"`
       WellbeingAlertEndDate *string `xml:"WellbeingAlertEndDate,omitempty" json:"WellbeingAlertEndDate"`
-      WellbeingAlertCategory *string `xml:"WellbeingAlertCategory,omitempty" json:"WellbeingAlertCategory"`
+      WellbeingAlertCategory *AUCodeSetsWellbeingAlertCategoryType `xml:"WellbeingAlertCategory" json:"WellbeingAlertCategory"`
       WellbeingAlertDescription *string `xml:"WellbeingAlertDescription,omitempty" json:"WellbeingAlertDescription"`
-      EnrolmentRestricted *string `xml:"EnrolmentRestricted,omitempty" json:"EnrolmentRestricted"`
+      EnrolmentRestricted *AUCodeSetsYesOrNoCategoryType `xml:"EnrolmentRestricted,omitempty" json:"EnrolmentRestricted"`
       AlertAudience *string `xml:"AlertAudience,omitempty" json:"AlertAudience"`
       AlertSeverity *string `xml:"AlertSeverity,omitempty" json:"AlertSeverity"`
       AlertKeyContact *string `xml:"AlertKeyContact,omitempty" json:"AlertKeyContact"`

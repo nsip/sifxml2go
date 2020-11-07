@@ -5,7 +5,7 @@ type StudentGrades []StudentGrade
 
     type StudentGrade struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
+      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       Homegroup *string `xml:"Homegroup,omitempty" json:"Homegroup"`
       YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel"`
       TeachingGroupShortName *string `xml:"TeachingGroupShortName,omitempty" json:"TeachingGroupShortName"`

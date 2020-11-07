@@ -6,11 +6,11 @@ type WellbeingAppeals []WellbeingAppeal
     type WellbeingAppeal struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
-      WellbeingResponseRefId *string `xml:"WellbeingResponseRefId,omitempty" json:"WellbeingResponseRefId"`
+      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      SchoolInfoRefId *string `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
+      WellbeingResponseRefId *string `xml:"WellbeingResponseRefId" json:"WellbeingResponseRefId"`
       LocalAppealId *LocalIdType `xml:"LocalAppealId,omitempty" json:"LocalAppealId"`
-      AppealStatusCode *string `xml:"AppealStatusCode,omitempty" json:"AppealStatusCode"`
+      AppealStatusCode *AUCodeSetsWellbeingAppealStatusType `xml:"AppealStatusCode,omitempty" json:"AppealStatusCode"`
       Date *string `xml:"Date,omitempty" json:"Date"`
       AppealNotes *string `xml:"AppealNotes,omitempty" json:"AppealNotes"`
       AppealOutcome *string `xml:"AppealOutcome,omitempty" json:"AppealOutcome"`

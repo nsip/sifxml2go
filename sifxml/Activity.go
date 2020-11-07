@@ -16,12 +16,12 @@ type Activitys []Activity
       Prerequisites *PrerequisitesType `xml:"Prerequisites,omitempty" json:"Prerequisites"`
       Students *StudentsType `xml:"Students,omitempty" json:"Students"`
       SourceObjects *SourceObjectsType `xml:"SourceObjects,omitempty" json:"SourceObjects"`
-      Points *int `xml:"Points,omitempty" json:"Points"`
-      ActivityTime *ActivityTimeType `xml:"ActivityTime,omitempty" json:"ActivityTime"`
+      Points *int `xml:"Points" json:"Points"`
+      ActivityTime *ActivityTimeType `xml:"ActivityTime" json:"ActivityTime"`
       AssessmentRefId *string `xml:"AssessmentRefId,omitempty" json:"AssessmentRefId"`
-      MaxAttemptsAllowed *int `xml:"MaxAttemptsAllowed,omitempty" json:"MaxAttemptsAllowed"`
-      ActivityWeight *float64 `xml:"ActivityWeight,omitempty" json:"ActivityWeight"`
-      Evaluation *Activity_Evaluation `xml:"Evaluation,omitempty" json:"Evaluation"`
+      MaxAttemptsAllowed *int `xml:"MaxAttemptsAllowed" json:"MaxAttemptsAllowed"`
+      ActivityWeight *float64 `xml:"ActivityWeight" json:"ActivityWeight"`
+      Evaluation *Activity_Evaluation
       LearningResources *LearningResourcesType `xml:"LearningResources,omitempty" json:"LearningResources"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`

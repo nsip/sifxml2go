@@ -174,7 +174,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0275 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0560 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -1500,7 +1500,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0829 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0448 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -2724,7 +2724,7 @@ var test_LibraryPatronStatus = `
 
         <ElectronicId Type="01">P 7676</ElectronicId>
 
-        <ElectronicId Type="02">200606300007676JJI</ElectronicId>
+        <ElectronicId Type="02">201906300007676JJI</ElectronicId>
 
         <ElectronicId Type="03">1234</ElectronicId>
 
@@ -2746,13 +2746,15 @@ var test_LibraryPatronStatus = `
 
             <CallNumber>YA JACQ</CallNumber>
 
-            <Price>6.99</Price>
+            <Cost>6.99</Cost>
+            
+            <ReplacementCost>7.5</ReplacementCost>
 
           </ItemInfo>
 
           <CheckoutInfo>
 
-            <ReturnBy>2006-01-04T23:59:59-05:00</ReturnBy>
+            <ReturnBy>2019-01-04T23:59:59-05:00</ReturnBy>
 
           </CheckoutInfo>
 
@@ -2760,7 +2762,7 @@ var test_LibraryPatronStatus = `
 
             <FineInfo Type="Overdue">
 
-              <Assessed>2006-01-06T13:19:00-05:00</Assessed>
+              <Assessed>2019-01-06T13:19:00-05:00</Assessed>
 
               <Description>ESTIMATED FINE FOR OVERDUE ITEM</Description>
 
@@ -2784,7 +2786,7 @@ var test_LibraryPatronStatus = `
 
             <CallNumber>YA JACQ</CallNumber>
 
-            <Price>7.49</Price>
+            <Cost>7.49</Cost>
 
           </ItemInfo>
 
@@ -2792,13 +2794,15 @@ var test_LibraryPatronStatus = `
 
             <HoldInfo Type="Ready">
 
-              <DatePlaced>2005-12-18</DatePlaced>
+              <DatePlaced>2018-12-18</DatePlaced>
 
-              <DateNeeded>2006-01-16</DateNeeded>
+              <DateNeeded>2019-01-16</DateNeeded>
+              
+              <ReservationExpiry>2019-01-31</ReservationExpiry>
 
-              <MadeAvailable>2006-01-05</MadeAvailable>
+              <MadeAvailable>2019-01-05</MadeAvailable>
 
-              <Expires>2006-02-01</Expires>
+              <Expires>2019-02-01</Expires>
 
             </HoldInfo>
 
@@ -2820,7 +2824,7 @@ var test_LibraryPatronStatus = `
 
             <HoldInfo Type="NotReady">
 
-              <DatePlaced>2005-12-18</DatePlaced>
+              <DatePlaced>2018-12-18</DatePlaced>
 
             </HoldInfo>
 
@@ -2838,13 +2842,14 @@ var test_LibraryPatronStatus = `
 
             <ElectronicId Type="01">98770000178215</ElectronicId>
 
-            <Price>57.18</Price>
+            <Cost>57.18</Cost>
 
           </ItemInfo>
 
           <CheckoutInfo>
+            <CheckedOutOn>2019-05-15T23:59:59-05:00</CheckedOutOn>
 
-            <ReturnBy>2006-06-15T23:59:59-05:00</ReturnBy>
+            <ReturnBy>2019-06-15T23:59:59-05:00</ReturnBy>
 
           </CheckoutInfo>
 
@@ -2866,7 +2871,7 @@ var test_LibraryPatronStatus = `
 
             <FineInfo Type="Refund">
 
-              <Assessed>2006-01-02T09:29:00-05:00</Assessed>
+              <Assessed>2019-01-02T09:29:00-05:00</Assessed>
 
               <Description>Lost item returned</Description>
 
@@ -2884,7 +2889,7 @@ var test_LibraryPatronStatus = `
 
             <FineInfo Type="Other">
 
-              <Assessed>2006-01-04T10:14:00-05:00</Assessed>
+              <Assessed>2019-01-04T10:14:00-05:00</Assessed>
 
               <Description>Running in library</Description>
 
@@ -2910,7 +2915,7 @@ var test_LibraryPatronStatus = `
 
         <Message Priority="Urgent">
 
-          <Sent>2006-01-12T14:01:00-05:00</Sent>
+          <Sent>2019-01-12T14:01:00-05:00</Sent>
 
           <Text>This is an URGENT message!</Text>
 
@@ -2919,6 +2924,7 @@ var test_LibraryPatronStatus = `
       </MessageList>
 
       <NumberOfCheckouts>1</NumberOfCheckouts>
+      <NumberOfHoldItems>2</NumberOfHoldItems>
 
       <NumberOfOverdues>1</NumberOfOverdues>
 
@@ -4037,7 +4043,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0637 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0773 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>

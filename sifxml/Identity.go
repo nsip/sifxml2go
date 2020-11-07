@@ -5,8 +5,8 @@ type Identitys []Identity
 
     type Identity struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      SIF_RefId *Identity_SIF_RefId `xml:"SIF_RefId,omitempty" json:"SIF_RefId"`
-      AuthenticationSource *string `xml:"AuthenticationSource,omitempty" json:"AuthenticationSource"`
+      SIF_RefId *Identity_SIF_RefId `xml:"SIF_RefId" json:"SIF_RefId"`
+      AuthenticationSource *string `xml:"AuthenticationSource" json:"AuthenticationSource"`
       IdentityAssertions *IdentityAssertionsType `xml:"IdentityAssertions,omitempty" json:"IdentityAssertions"`
       PasswordList *PasswordListType `xml:"PasswordList,omitempty" json:"PasswordList"`
       AuthenticationSourceGlobalUID *string `xml:"AuthenticationSourceGlobalUID,omitempty" json:"AuthenticationSourceGlobalUID"`

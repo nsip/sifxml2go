@@ -6,9 +6,9 @@ type WellbeingCharacteristics []WellbeingCharacteristic
     type WellbeingCharacteristic struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId"`
+      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
-      WellbeingCharacteristicClassification *string `xml:"WellbeingCharacteristicClassification,omitempty" json:"WellbeingCharacteristicClassification"`
+      WellbeingCharacteristicClassification *AUCodeSetsWellbeingCharacteristicClassificationType `xml:"WellbeingCharacteristicClassification" json:"WellbeingCharacteristicClassification"`
       WellbeingCharacteristicStartDate *string `xml:"WellbeingCharacteristicStartDate,omitempty" json:"WellbeingCharacteristicStartDate"`
       WellbeingCharacteristicEndDate *string `xml:"WellbeingCharacteristicEndDate,omitempty" json:"WellbeingCharacteristicEndDate"`
       WellbeingCharacteristicReviewDate *string `xml:"WellbeingCharacteristicReviewDate,omitempty" json:"WellbeingCharacteristicReviewDate"`
@@ -22,8 +22,8 @@ type WellbeingCharacteristics []WellbeingCharacteristic
       EmergencyManagement *string `xml:"EmergencyManagement,omitempty" json:"EmergencyManagement"`
       EmergencyResponsePlan *string `xml:"EmergencyResponsePlan,omitempty" json:"EmergencyResponsePlan"`
       Trigger *string `xml:"Trigger,omitempty" json:"Trigger"`
-      ConfidentialFlag *string `xml:"ConfidentialFlag,omitempty" json:"ConfidentialFlag"`
-      Alert *string `xml:"Alert,omitempty" json:"Alert"`
+      ConfidentialFlag *AUCodeSetsYesOrNoCategoryType `xml:"ConfidentialFlag,omitempty" json:"ConfidentialFlag"`
+      Alert *AUCodeSetsYesOrNoCategoryType `xml:"Alert,omitempty" json:"Alert"`
       MedicationList *MedicationListType `xml:"MedicationList,omitempty" json:"MedicationList"`
       DocumentList *WellbeingDocumentListType `xml:"DocumentList,omitempty" json:"DocumentList"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`

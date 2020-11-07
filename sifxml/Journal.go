@@ -10,8 +10,8 @@ type Journals []Journal
       CreditFinancialAccountRefId *string `xml:"CreditFinancialAccountRefId,omitempty" json:"CreditFinancialAccountRefId"`
       DebitAccountCode *string `xml:"DebitAccountCode,omitempty" json:"DebitAccountCode"`
       CreditAccountCode *string `xml:"CreditAccountCode,omitempty" json:"CreditAccountCode"`
-      OriginatingTransactionRefId *Journal_OriginatingTransactionRefId `xml:"OriginatingTransactionRefId,omitempty" json:"OriginatingTransactionRefId"`
-      Amount *MonetaryAmountType `xml:"Amount,omitempty" json:"Amount"`
+      OriginatingTransactionRefId *Journal_OriginatingTransactionRefId
+      Amount *MonetaryAmountType `xml:"Amount" json:"Amount"`
       GSTCodeOriginal *string `xml:"GSTCodeOriginal,omitempty" json:"GSTCodeOriginal"`
       GSTCodeReplacement *string `xml:"GSTCodeReplacement,omitempty" json:"GSTCodeReplacement"`
       Note *string `xml:"Note,omitempty" json:"Note"`

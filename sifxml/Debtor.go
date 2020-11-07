@@ -6,7 +6,7 @@ type Debtors []Debtor
     type Debtor struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      BilledEntity *Debtor_BilledEntity `xml:"BilledEntity,omitempty" json:"BilledEntity"`
+      BilledEntity *Debtor_BilledEntity `xml:"BilledEntity" json:"BilledEntity"`
       AddressList *AddressListType `xml:"AddressList,omitempty" json:"AddressList"`
       BillingName *string `xml:"BillingName,omitempty" json:"BillingName"`
       BillingNote *string `xml:"BillingNote,omitempty" json:"BillingNote"`

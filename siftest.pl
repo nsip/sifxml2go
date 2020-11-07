@@ -6,7 +6,7 @@ import (
         "github.com/clbanning/mxj"
         "reflect"
         "regexp"
-        "strings"
+        //"strings"
         "testing"
 )
 
@@ -21,6 +21,7 @@ func stripEmptyTags(s []byte) []byte {
         s = pointzero1.ReplaceAll(s, []byte(">\$1<"))
         s = pointzero2.ReplaceAll(s, []byte(">\$1<"))
         s = noleadpoint.ReplaceAll(s, []byte(">0\$1<"))
+        /*
         s = emptytag1.ReplaceAll(s, []byte(""))
         s = emptytag1.ReplaceAll(s, []byte(""))
         s = emptytag1.ReplaceAll(s, []byte(""))
@@ -35,6 +36,7 @@ func stripEmptyTags(s []byte) []byte {
           }
         }
         s = []byte(strings.Join(arr, ""))
+        */
         return s
 }
 
@@ -60,7 +62,7 @@ func Test_$var(t *testing.T) {
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("$var not DeepEqual:\\nmv: \%+v\\nwant: \%+v\\n%s\\n%s\\n", mv, want, string(stripEmptyTags([]byte($var))), string(stripEmptyTags(output)))
+                t.Fatalf("$var not DeepEqual:\\nmv  : \%+v\\nwant: \%+v\\n%s\\n%s\\n", mv, want, string(stripEmptyTags([]byte($var))), string(stripEmptyTags(output)))
         }
 }
 END

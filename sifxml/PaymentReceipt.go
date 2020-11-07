@@ -6,19 +6,19 @@ type PaymentReceipts []PaymentReceipt
     type PaymentReceipt struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      TransactionType *string `xml:"TransactionType,omitempty" json:"TransactionType"`
+      TransactionType *string `xml:"TransactionType" json:"TransactionType"`
       InvoiceRefId *string `xml:"InvoiceRefId,omitempty" json:"InvoiceRefId"`
       PaymentReceiptLineList *PaymentReceiptLineListType `xml:"PaymentReceiptLineList,omitempty" json:"PaymentReceiptLineList"`
       VendorInfoRefId *string `xml:"VendorInfoRefId,omitempty" json:"VendorInfoRefId"`
       DebtorRefId *string `xml:"DebtorRefId,omitempty" json:"DebtorRefId"`
       ChargedLocationInfoRefId *string `xml:"ChargedLocationInfoRefId,omitempty" json:"ChargedLocationInfoRefId"`
-      TransactionDate *string `xml:"TransactionDate,omitempty" json:"TransactionDate"`
-      TransactionAmount *DebitOrCreditAmountType `xml:"TransactionAmount,omitempty" json:"TransactionAmount"`
-      ReceivedTransactionId *string `xml:"ReceivedTransactionId,omitempty" json:"ReceivedTransactionId"`
+      TransactionDate *string `xml:"TransactionDate" json:"TransactionDate"`
+      TransactionAmount *DebitOrCreditAmountType `xml:"TransactionAmount" json:"TransactionAmount"`
+      ReceivedTransactionId *string `xml:"ReceivedTransactionId" json:"ReceivedTransactionId"`
       FinancialAccountRefIdList *FinancialAccountRefIdListType `xml:"FinancialAccountRefIdList,omitempty" json:"FinancialAccountRefIdList"`
       AccountCodeList *AccountCodeListType `xml:"AccountCodeList,omitempty" json:"AccountCodeList"`
       TransactionDescription *string `xml:"TransactionDescription,omitempty" json:"TransactionDescription"`
-      TaxRate *float64 `xml:"TaxRate,omitempty" json:"TaxRate"`
+      TaxRate *float64 `xml:"TaxRate" json:"TaxRate"`
       TaxAmount *MonetaryAmountType `xml:"TaxAmount,omitempty" json:"TaxAmount"`
       TransactionMethod *string `xml:"TransactionMethod,omitempty" json:"TransactionMethod"`
       ChequeNumber *string `xml:"ChequeNumber,omitempty" json:"ChequeNumber"`
