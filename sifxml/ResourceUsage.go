@@ -19,10 +19,10 @@ type ResourceUsages []ResourceUsage
        LocalDescription *string `xml:"LocalDescription,omitempty" json:"LocalDescription"`
 }
 type ResourceUsage_ResourceReportColumnList struct {
-      ResourceReportColumn *[]ResourceUsage_ResourceReportColumn `xml:"ResourceReportColumn" json:"ResourceReportColumn"`
+      ResourceReportColumn []ResourceUsage_ResourceReportColumn `xml:"ResourceReportColumn" json:"ResourceReportColumn"`
 }
 type ResourceUsage_ResourceReportLineList struct {
-      ResourceReportLine *[]ResourceUsage_ResourceReportLine `xml:"ResourceReportLine" json:"ResourceReportLine"`
+      ResourceReportLine []ResourceUsage_ResourceReportLine `xml:"ResourceReportLine" json:"ResourceReportLine"`
 }
 type ResourceUsage_ResourceReportColumn struct {
        ColumnName *string `xml:"ColumnName" json:"ColumnName"`

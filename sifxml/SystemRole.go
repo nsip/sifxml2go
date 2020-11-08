@@ -17,21 +17,21 @@ type SystemRoles []SystemRole
       Value *string `xml:",chardata" json:"value"`
 }
 type SystemRole_SystemContextList struct {
-      SystemContext *[]SystemRole_SystemContext `xml:"SystemContext" json:"SystemContext"`
+      SystemContext []SystemRole_SystemContext `xml:"SystemContext" json:"SystemContext"`
 }
 type SystemRole_SystemContext struct {
       SystemId *string `xml:"SystemId,attr" json:"SystemId"`
       RoleList *SystemRole_RoleList
 }
 type SystemRole_RoleList struct {
-      Role *[]SystemRole_Role `xml:"Role" json:"Role"`
+      Role []SystemRole_Role `xml:"Role" json:"Role"`
 }
 type SystemRole_Role struct {
       RoleId *string `xml:"RoleId,attr" json:"RoleId"`
       RoleScopeList *SystemRole_RoleScopeList
 }
 type SystemRole_RoleScopeList struct {
-      RoleScope *[]SystemRole_RoleScope `xml:"RoleScope" json:"RoleScope"`
+      RoleScope []SystemRole_RoleScope `xml:"RoleScope" json:"RoleScope"`
 }
 type SystemRole_RoleScope struct {
        RoleScopeName *string `xml:"RoleScopeName" json:"RoleScopeName"`

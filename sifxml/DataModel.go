@@ -40,7 +40,7 @@ package sifxml
     type ExtendedContentType string
     type SelectedContentType string
     type LibraryTransactionListType struct {
-        Transaction *[]LibraryTransactionType `xml:"Transaction" json:"Transaction"`
+        Transaction []LibraryTransactionType `xml:"Transaction" json:"Transaction"`
       
       }
     
@@ -72,7 +72,7 @@ package sifxml
       }
     
     type FineInfoListType struct {
-        FineInfo *[]FineInfoType `xml:"FineInfo" json:"FineInfo"`
+        FineInfo []FineInfoType `xml:"FineInfo" json:"FineInfo"`
       
       }
     
@@ -86,7 +86,7 @@ package sifxml
       }
     
     type HoldInfoListType struct {
-        HoldInfo *[]HoldInfoType `xml:"HoldInfo" json:"HoldInfo"`
+        HoldInfo []HoldInfoType `xml:"HoldInfo" json:"HoldInfo"`
       
       }
     
@@ -101,7 +101,7 @@ package sifxml
       }
     
     type LibraryMessageListType struct {
-        Message *[]LibraryMessageType `xml:"Message" json:"Message"`
+        Message []LibraryMessageType `xml:"Message" json:"Message"`
       
       }
     
@@ -114,7 +114,7 @@ package sifxml
       }
     
     type StudentAttendanceCollectionReportingListType struct {
-        StudentAttendanceCollectionReporting *[]StudentAttendanceCollectionReportingType `xml:"StudentAttendanceCollectionReporting" json:"StudentAttendanceCollectionReporting"`
+        StudentAttendanceCollectionReporting []StudentAttendanceCollectionReportingType `xml:"StudentAttendanceCollectionReporting" json:"StudentAttendanceCollectionReporting"`
       
       }
     
@@ -132,7 +132,7 @@ package sifxml
       }
     
     type StatsCohortYearLevelListType struct {
-        StatsCohortYearLevel *[]StatsCohortYearLevelType `xml:"StatsCohortYearLevel" json:"StatsCohortYearLevel"`
+        StatsCohortYearLevel []StatsCohortYearLevelType `xml:"StatsCohortYearLevel" json:"StatsCohortYearLevel"`
       
       }
     
@@ -143,7 +143,7 @@ package sifxml
       }
     
     type StatsCohortListType struct {
-        StatsCohort *[]StatsCohortType `xml:"StatsCohort" json:"StatsCohort"`
+        StatsCohort []StatsCohortType `xml:"StatsCohort" json:"StatsCohort"`
       
       }
     
@@ -161,7 +161,7 @@ package sifxml
       }
     
     type AddressCollectionReportingListType struct {
-        AddressCollectionReporting *[]AddressCollectionReportingType `xml:"AddressCollectionReporting" json:"AddressCollectionReporting"`
+        AddressCollectionReporting []AddressCollectionReportingType `xml:"AddressCollectionReporting" json:"AddressCollectionReporting"`
       
       }
     
@@ -180,7 +180,7 @@ package sifxml
       }
     
     type AddressCollectionStudentListType struct {
-        AddressCollectionStudent *[]AddressCollectionStudentType `xml:"AddressCollectionStudent" json:"AddressCollectionStudent"`
+        AddressCollectionStudent []AddressCollectionStudentType `xml:"AddressCollectionStudent" json:"AddressCollectionStudent"`
       
       }
     
@@ -203,7 +203,7 @@ package sifxml
       }
     
     type AGRoundListType struct {
-        AGRound *[]AGRoundType `xml:"AGRound" json:"AGRound"`
+        AGRound []AGRoundType `xml:"AGRound" json:"AGRound"`
       
       }
     
@@ -217,7 +217,7 @@ package sifxml
       }
     
     type AGContextualQuestionListType struct {
-        AGContextualQuestion *[]AGContextualQuestionType `xml:"AGContextualQuestion" json:"AGContextualQuestion"`
+        AGContextualQuestion []AGContextualQuestionType `xml:"AGContextualQuestion" json:"AGContextualQuestion"`
       
       }
     
@@ -228,7 +228,7 @@ package sifxml
       }
     
     type CensusReportingListType struct {
-        CensusReporting *[]CensusReportingType `xml:"CensusReporting" json:"CensusReporting"`
+        CensusReporting []CensusReportingType `xml:"CensusReporting" json:"CensusReporting"`
       
       }
     
@@ -243,7 +243,7 @@ package sifxml
       }
     
     type CensusStaffListType struct {
-        CensusStaff *[]CensusStaffType `xml:"CensusStaff" json:"CensusStaff"`
+        CensusStaff []CensusStaffType `xml:"CensusStaff" json:"CensusStaff"`
       
       }
     
@@ -266,7 +266,7 @@ package sifxml
       }
     
     type CensusStudentListType struct {
-        CensusStudent *[]CensusStudentType `xml:"CensusStudent" json:"CensusStudent"`
+        CensusStudent []CensusStudentType `xml:"CensusStudent" json:"CensusStudent"`
       
       }
     
@@ -287,7 +287,7 @@ package sifxml
       }
     
     type AGReportingObjectResponseListType struct {
-        AGReportingObjectResponse *[]AGReportingObjectResponseType `xml:"AGReportingObjectResponse" json:"AGReportingObjectResponse"`
+        AGReportingObjectResponse []AGReportingObjectResponseType `xml:"AGReportingObjectResponse" json:"AGReportingObjectResponse"`
       
       }
     
@@ -304,7 +304,7 @@ package sifxml
       }
     
     type FQReportingListType struct {
-        FQReporting *[]FQReportingType `xml:"FQReporting" json:"FQReporting"`
+        FQReporting []FQReportingType `xml:"FQReporting" json:"FQReporting"`
       
       }
     
@@ -324,7 +324,7 @@ package sifxml
       }
     
     type FQContextualQuestionListType struct {
-        FQContextualQuestion *[]FQContextualQuestionType `xml:"FQContextualQuestion" json:"FQContextualQuestion"`
+        FQContextualQuestion []FQContextualQuestionType `xml:"FQContextualQuestion" json:"FQContextualQuestion"`
       
       }
     
@@ -335,7 +335,7 @@ package sifxml
       }
     
     type FQItemListType struct {
-        FQItem *[]FQItemType `xml:"FQItem" json:"FQItem"`
+        FQItem []FQItemType `xml:"FQItem" json:"FQItem"`
       
       }
     
@@ -350,7 +350,7 @@ package sifxml
       }
     
     type AGRuleListType struct {
-        AGRule *[]AGRuleType `xml:"AGRule" json:"AGRule"`
+        AGRule []AGRuleType `xml:"AGRule" json:"AGRule"`
       
       }
     
@@ -386,7 +386,7 @@ package sifxml
       }
     
     type TimeTableScheduleCellListType struct {
-        TimeTableScheduleCell *[]TimeTableScheduleCellType `xml:"TimeTableScheduleCell" json:"TimeTableScheduleCell"`
+        TimeTableScheduleCell []TimeTableScheduleCellType `xml:"TimeTableScheduleCell" json:"TimeTableScheduleCell"`
       
       }
     
@@ -412,7 +412,7 @@ package sifxml
       }
     
     type TeachingGroupScheduleListType struct {
-        TeachingGroupSchedule *[]TeachingGroupScheduleType `xml:"TeachingGroupSchedule" json:"TeachingGroupSchedule"`
+        TeachingGroupSchedule []TeachingGroupScheduleType `xml:"TeachingGroupSchedule" json:"TeachingGroupSchedule"`
       
       }
     
@@ -442,7 +442,7 @@ package sifxml
       }
     
     type LocalCodeListType struct {
-        LocalCode *[]LocalCodeType `xml:"LocalCode" json:"LocalCode"`
+        LocalCode []LocalCodeType `xml:"LocalCode" json:"LocalCode"`
       
       }
     
@@ -455,7 +455,7 @@ package sifxml
       }
     
     type StudentGroupListType struct {
-        StudentGroup *[]StudentGroupType `xml:"StudentGroup" json:"StudentGroup"`
+        StudentGroup []StudentGroupType `xml:"StudentGroup" json:"StudentGroup"`
       
       }
     
@@ -467,7 +467,7 @@ package sifxml
       }
     
     type PublishingPermissionListType struct {
-        PublishingPermission *[]PublishingPermissionType `xml:"PublishingPermission" json:"PublishingPermission"`
+        PublishingPermission []PublishingPermissionType `xml:"PublishingPermission" json:"PublishingPermission"`
       
       }
     
@@ -522,12 +522,12 @@ package sifxml
       }
     
     type AlternateIdentificationCodeListType struct {
-        AlternateIdentificationCode *[]string `xml:"AlternateIdentificationCode" json:"AlternateIdentificationCode"`
+        AlternateIdentificationCode []string `xml:"AlternateIdentificationCode" json:"AlternateIdentificationCode"`
       
       }
     
     type RelatedLearningStandardItemRefIdListType struct {
-        LearningStandardItemRefId *[]RelatedLearningStandardItemRefIdType `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
+        LearningStandardItemRefId []RelatedLearningStandardItemRefIdType `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
       
       }
     
@@ -538,7 +538,7 @@ package sifxml
       }
     
     type ValidLetterMarkListType struct {
-        ValidLetterMark *[]ValidLetterMarkType `xml:"ValidLetterMark" json:"ValidLetterMark"`
+        ValidLetterMark []ValidLetterMarkType `xml:"ValidLetterMark" json:"ValidLetterMark"`
       
       }
     
@@ -550,7 +550,7 @@ package sifxml
       }
     
     type StudentGradeMarkersListType struct {
-        Marker *[]MarkerType `xml:"Marker" json:"Marker"`
+        Marker []MarkerType `xml:"Marker" json:"Marker"`
       
       }
     
@@ -561,7 +561,7 @@ package sifxml
       }
     
     type GradingScoreListType struct {
-        GradingAssignmentScore *[]AssignmentScoreType `xml:"GradingAssignmentScore" json:"GradingAssignmentScore"`
+        GradingAssignmentScore []AssignmentScoreType `xml:"GradingAssignmentScore" json:"GradingAssignmentScore"`
       
       }
     
@@ -581,7 +581,7 @@ package sifxml
       }
     
     type LearningStandardListType struct {
-        LearningStandard *[]LearningStandardType `xml:"LearningStandard" json:"LearningStandard"`
+        LearningStandard []LearningStandardType `xml:"LearningStandard" json:"LearningStandard"`
       
       }
     
@@ -593,7 +593,7 @@ package sifxml
       }
     
     type AssignmentListType struct {
-        GradingAssignmentRefId *[]string `xml:"GradingAssignmentRefId" json:"GradingAssignmentRefId"`
+        GradingAssignmentRefId []string `xml:"GradingAssignmentRefId" json:"GradingAssignmentRefId"`
       
       }
     
@@ -605,12 +605,12 @@ package sifxml
       }
     
     type SymptomListType struct {
-        Symptom *[]string `xml:"Symptom" json:"Symptom"`
+        Symptom []string `xml:"Symptom" json:"Symptom"`
       
       }
     
     type MedicationListType struct {
-        Medication *[]MedicationType `xml:"Medication" json:"Medication"`
+        Medication []MedicationType `xml:"Medication" json:"Medication"`
       
       }
     
@@ -624,7 +624,7 @@ package sifxml
       }
     
     type WellbeingEventCategoryListType struct {
-        WellbeingEventCategory *[]WellbeingEventCategoryType `xml:"WellbeingEventCategory" json:"WellbeingEventCategory"`
+        WellbeingEventCategory []WellbeingEventCategoryType `xml:"WellbeingEventCategory" json:"WellbeingEventCategory"`
       
       }
     
@@ -635,7 +635,7 @@ package sifxml
       }
     
     type WellbeingEventSubCategoryListType struct {
-        WellbeingEventSubCategory *[]string `xml:"WellbeingEventSubCategory" json:"WellbeingEventSubCategory"`
+        WellbeingEventSubCategory []string `xml:"WellbeingEventSubCategory" json:"WellbeingEventSubCategory"`
       
       }
     
@@ -647,7 +647,7 @@ package sifxml
       }
     
     type FollowUpActionListType struct {
-        FollowUpAction *[]FollowUpActionType `xml:"FollowUpAction" json:"FollowUpAction"`
+        FollowUpAction []FollowUpActionType `xml:"FollowUpAction" json:"FollowUpAction"`
       
       }
     
@@ -659,7 +659,7 @@ package sifxml
       }
     
     type PersonInvolvementListType struct {
-        PersonInvolvement *[]PersonInvolvementType `xml:"PersonInvolvement" json:"PersonInvolvement"`
+        PersonInvolvement []PersonInvolvementType `xml:"PersonInvolvement" json:"PersonInvolvement"`
       
       }
     
@@ -671,7 +671,7 @@ package sifxml
       }
     
     type WithdrawalTimeListType struct {
-        Withdrawal *[]WithdrawalType `xml:"Withdrawal" json:"Withdrawal"`
+        Withdrawal []WithdrawalType `xml:"Withdrawal" json:"Withdrawal"`
       
       }
     
@@ -714,7 +714,7 @@ package sifxml
       }
     
     type PlanRequiredListType struct {
-        Plan *[]WellbeingPlanType `xml:"Plan" json:"Plan"`
+        Plan []WellbeingPlanType `xml:"Plan" json:"Plan"`
       
       }
     
@@ -743,7 +743,7 @@ package sifxml
       }
     
     type WellbeingDocumentListType struct {
-        Document *[]WellbeingDocumentType `xml:"Document" json:"Document"`
+        Document []WellbeingDocumentType `xml:"Document" json:"Document"`
       
       }
     
@@ -807,12 +807,12 @@ package sifxml
       }
     
     type PlausibleScaledValueListType struct {
-        PlausibleScaledValue *[]float64 `xml:"PlausibleScaledValue" json:"PlausibleScaledValue"`
+        PlausibleScaledValue []float64 `xml:"PlausibleScaledValue" json:"PlausibleScaledValue"`
       
       }
     
     type SubstituteItemListType struct {
-        SubstituteItem *[]SubstituteItemType `xml:"SubstituteItem" json:"SubstituteItem"`
+        SubstituteItem []SubstituteItemType `xml:"SubstituteItem" json:"SubstituteItem"`
       
       }
     
@@ -824,7 +824,7 @@ package sifxml
       }
     
     type CodeFrameTestItemListType struct {
-        TestItem *[]CodeFrameTestItemType `xml:"TestItem" json:"TestItem"`
+        TestItem []CodeFrameTestItemType `xml:"TestItem" json:"TestItem"`
       
       }
     
@@ -836,7 +836,7 @@ package sifxml
       }
     
     type StimulusLocalIdListType struct {
-        StimulusLocalId *[]LocalIdType `xml:"StimulusLocalId" json:"StimulusLocalId"`
+        StimulusLocalId []LocalIdType `xml:"StimulusLocalId" json:"StimulusLocalId"`
       
       }
     
@@ -877,7 +877,7 @@ package sifxml
       }
     
     type NAPTestItemListType struct {
-        TestItem *[]NAPTestItem2Type `xml:"TestItem" json:"TestItem"`
+        TestItem []NAPTestItem2Type `xml:"TestItem" json:"TestItem"`
       
       }
     
@@ -889,7 +889,7 @@ package sifxml
       }
     
     type NAPCodeFrameTestletListType struct {
-        Testlet *[]NAPTestletCodeFrameType `xml:"Testlet" json:"Testlet"`
+        Testlet []NAPTestletCodeFrameType `xml:"Testlet" json:"Testlet"`
       
       }
     
@@ -901,7 +901,7 @@ package sifxml
       }
     
     type NAPStudentResponseTestletListType struct {
-        Testlet *[]NAPTestletResponseType `xml:"Testlet" json:"Testlet"`
+        Testlet []NAPTestletResponseType `xml:"Testlet" json:"Testlet"`
       
       }
     
@@ -914,7 +914,7 @@ package sifxml
       }
     
     type NAPTestletItemResponseListType struct {
-        ItemResponse *[]NAPTestletResponseItemType `xml:"ItemResponse" json:"ItemResponse"`
+        ItemResponse []NAPTestletResponseItemType `xml:"ItemResponse" json:"ItemResponse"`
       
       }
     
@@ -932,7 +932,7 @@ package sifxml
       }
     
     type NAPSubscoreListType struct {
-        Subscore *[]NAPSubscoreType `xml:"Subscore" json:"Subscore"`
+        Subscore []NAPSubscoreType `xml:"Subscore" json:"Subscore"`
       
       }
     
@@ -955,7 +955,7 @@ package sifxml
       }
     
     type NAPWritingRubricListType struct {
-        NAPWritingRubric *[]NAPWritingRubricType `xml:"NAPWritingRubric" json:"NAPWritingRubric"`
+        NAPWritingRubric []NAPWritingRubricType `xml:"NAPWritingRubric" json:"NAPWritingRubric"`
       
       }
     
@@ -967,7 +967,7 @@ package sifxml
       }
     
     type ScoreListType struct {
-        Score *[]ScoreType `xml:"Score" json:"Score"`
+        Score []ScoreType `xml:"Score" json:"Score"`
       
       }
     
@@ -978,7 +978,7 @@ package sifxml
       }
     
     type ScoreDescriptionListType struct {
-        ScoreDescription *[]ScoreDescriptionType `xml:"ScoreDescription" json:"ScoreDescription"`
+        ScoreDescription []ScoreDescriptionType `xml:"ScoreDescription" json:"ScoreDescription"`
       
       }
     
@@ -989,7 +989,7 @@ package sifxml
       }
     
     type StimulusListType struct {
-        Stimulus *[]StimulusType `xml:"Stimulus" json:"Stimulus"`
+        Stimulus []StimulusType `xml:"Stimulus" json:"Stimulus"`
       
       }
     
@@ -1004,12 +1004,12 @@ package sifxml
       }
     
     type ContentDescriptionListType struct {
-        ContentDescription *[]string `xml:"ContentDescription" json:"ContentDescription"`
+        ContentDescription []string `xml:"ContentDescription" json:"ContentDescription"`
       
       }
     
     type PNPCodeListType struct {
-        PNPCode *[]AUCodeSetsPNPCodeType `xml:"PNPCode" json:"PNPCode"`
+        PNPCode []AUCodeSetsPNPCodeType `xml:"PNPCode" json:"PNPCode"`
       
       }
     
@@ -1020,7 +1020,7 @@ package sifxml
       }
     
     type TestDisruptionListType struct {
-        TestDisruption *[]TestDisruptionType `xml:"TestDisruption" json:"TestDisruption"`
+        TestDisruption []TestDisruptionType `xml:"TestDisruption" json:"TestDisruption"`
       
       }
     
@@ -1030,7 +1030,7 @@ package sifxml
       }
     
     type CalendarSummaryListType struct {
-        CalendarSummaryRefId *[]string `xml:"CalendarSummaryRefId" json:"CalendarSummaryRefId"`
+        CalendarSummaryRefId []string `xml:"CalendarSummaryRefId" json:"CalendarSummaryRefId"`
       
       }
     
@@ -1044,7 +1044,7 @@ package sifxml
       }
     
     type VisaSubClassListType struct {
-        VisaSubClass *[]VisaSubClassType `xml:"VisaSubClass" json:"VisaSubClass"`
+        VisaSubClass []VisaSubClassType `xml:"VisaSubClass" json:"VisaSubClass"`
       
       }
     
@@ -1058,7 +1058,7 @@ package sifxml
       }
     
     type ReligiousEventListType struct {
-        ReligiousEvent *[]ReligiousEventType `xml:"ReligiousEvent" json:"ReligiousEvent"`
+        ReligiousEvent []ReligiousEventType `xml:"ReligiousEvent" json:"ReligiousEvent"`
       
       }
     
@@ -1081,12 +1081,12 @@ package sifxml
       }
     
     type CountryListType struct {
-        CountryOfCitizenship *[]CountryType `xml:"CountryOfCitizenship" json:"CountryOfCitizenship"`
+        CountryOfCitizenship []CountryType `xml:"CountryOfCitizenship" json:"CountryOfCitizenship"`
       
       }
     
     type CountryList2Type struct {
-        CountryOfResidency *[]CountryType `xml:"CountryOfResidency" json:"CountryOfResidency"`
+        CountryOfResidency []CountryType `xml:"CountryOfResidency" json:"CountryOfResidency"`
       
       }
     
@@ -1304,7 +1304,7 @@ package sifxml
       }
     
     type HouseholdContactInfoListType struct {
-        HouseholdContactInfo *[]HouseholdContactInfoType `xml:"HouseholdContactInfo" json:"HouseholdContactInfo"`
+        HouseholdContactInfo []HouseholdContactInfoType `xml:"HouseholdContactInfo" json:"HouseholdContactInfo"`
       
       }
     
@@ -1319,17 +1319,17 @@ package sifxml
       }
     
     type StatementCodesType struct {
-        StatementCode *[]string `xml:"StatementCode" json:"StatementCode"`
+        StatementCode []string `xml:"StatementCode" json:"StatementCode"`
       
       }
     
     type StatementsType struct {
-        Statement *[]string `xml:"Statement" json:"Statement"`
+        Statement []string `xml:"Statement" json:"Statement"`
       
       }
     
     type ProgramFundingSourcesType struct {
-        ProgramFundingSource *[]ProgramFundingSourceType `xml:"ProgramFundingSource" json:"ProgramFundingSource"`
+        ProgramFundingSource []ProgramFundingSourceType `xml:"ProgramFundingSource" json:"ProgramFundingSource"`
       
       }
     
@@ -1340,7 +1340,7 @@ package sifxml
       }
     
     type AttendanceTimesType struct {
-        AttendanceTime *[]AttendanceTimeType `xml:"AttendanceTime" json:"AttendanceTime"`
+        AttendanceTime []AttendanceTimeType `xml:"AttendanceTime" json:"AttendanceTime"`
       
       }
     
@@ -1357,7 +1357,7 @@ package sifxml
       }
     
     type PeriodAttendancesType struct {
-        PeriodAttendance *[]PeriodAttendanceType `xml:"PeriodAttendance" json:"PeriodAttendance"`
+        PeriodAttendance []PeriodAttendanceType `xml:"PeriodAttendance" json:"PeriodAttendance"`
       
       }
     
@@ -1383,7 +1383,7 @@ package sifxml
       }
     
     type StaffSubjectListType struct {
-        StaffSubject *[]StaffSubjectType `xml:"StaffSubject" json:"StaffSubject"`
+        StaffSubject []StaffSubjectType `xml:"StaffSubject" json:"StaffSubject"`
       
       }
     
@@ -1395,12 +1395,12 @@ package sifxml
       }
     
     type TeachingGroupListType struct {
-        TeachingGroupRefId *[]string `xml:"TeachingGroupRefId" json:"TeachingGroupRefId"`
+        TeachingGroupRefId []string `xml:"TeachingGroupRefId" json:"TeachingGroupRefId"`
       
       }
     
     type ScheduledTeacherListType struct {
-        TeacherCover *[]TeacherCoverType `xml:"TeacherCover" json:"TeacherCover"`
+        TeacherCover []TeacherCoverType `xml:"TeacherCover" json:"TeacherCover"`
       
       }
     
@@ -1416,27 +1416,27 @@ package sifxml
       }
     
     type RoomListType struct {
-        RoomInfoRefId *[]string `xml:"RoomInfoRefId" json:"RoomInfoRefId"`
+        RoomInfoRefId []string `xml:"RoomInfoRefId" json:"RoomInfoRefId"`
       
       }
     
     type StaffListType struct {
-        StaffPersonalRefId *[]string `xml:"StaffPersonalRefId" json:"StaffPersonalRefId"`
+        StaffPersonalRefId []string `xml:"StaffPersonalRefId" json:"StaffPersonalRefId"`
       
       }
     
     type AuthorsType struct {
-        Author *[]string `xml:"Author" json:"Author"`
+        Author []string `xml:"Author" json:"Author"`
       
       }
     
     type OrganizationsType struct {
-        Organization *[]string `xml:"Organization" json:"Organization"`
+        Organization []string `xml:"Organization" json:"Organization"`
       
       }
     
     type PurchasingItemsType struct {
-        PurchasingItem *[]PurchasingItemType `xml:"PurchasingItem" json:"PurchasingItem"`
+        PurchasingItem []PurchasingItemType `xml:"PurchasingItem" json:"PurchasingItem"`
       
       }
     
@@ -1455,7 +1455,7 @@ package sifxml
       }
     
     type ExpenseAccountsType struct {
-        ExpenseAccount *[]ExpenseAccountType `xml:"ExpenseAccount" json:"ExpenseAccount"`
+        ExpenseAccount []ExpenseAccountType `xml:"ExpenseAccount" json:"ExpenseAccount"`
       
       }
     
@@ -1468,7 +1468,7 @@ package sifxml
       }
     
     type SchoolProgramListType struct {
-        Program *[]SchoolProgramType `xml:"Program" json:"Program"`
+        Program []SchoolProgramType `xml:"Program" json:"Program"`
       
       }
     
@@ -1480,17 +1480,17 @@ package sifxml
       }
     
     type LearningObjectivesType struct {
-        LearningObjective *[]string `xml:"LearningObjective" json:"LearningObjective"`
+        LearningObjective []string `xml:"LearningObjective" json:"LearningObjective"`
       
       }
     
     type RecognitionListType struct {
-        Recognition *[]string `xml:"Recognition" json:"Recognition"`
+        Recognition []string `xml:"Recognition" json:"Recognition"`
       
       }
     
     type LResourcesType struct {
-        LearningResourceRefId *[]ResourcesType `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
+        LearningResourceRefId []ResourcesType `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
       
       }
     
@@ -1501,22 +1501,22 @@ package sifxml
       }
     
     type SourceObjectsType struct {
-      SourceObject *[]SourceObjectsType_SourceObject `xml:"SourceObject" json:"SourceObject"`
+      SourceObject []SourceObjectsType_SourceObject `xml:"SourceObject" json:"SourceObject"`
       
       }
     
     type StudentsType struct {
-        StudentPersonalRefId *[]string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+        StudentPersonalRefId []string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       
       }
     
     type PrerequisitesType struct {
-        Prerequisite *[]string `xml:"Prerequisite" json:"Prerequisite"`
+        Prerequisite []string `xml:"Prerequisite" json:"Prerequisite"`
       
       }
     
     type EssentialMaterialsType struct {
-        EssentialMaterial *[]string `xml:"EssentialMaterial" json:"EssentialMaterial"`
+        EssentialMaterial []string `xml:"EssentialMaterial" json:"EssentialMaterial"`
       
       }
     
@@ -1526,7 +1526,7 @@ package sifxml
       }
     
     type SoftwareRequirementListType struct {
-        SoftwareRequirement *[]SoftwareRequirementType `xml:"SoftwareRequirement" json:"SoftwareRequirement"`
+        SoftwareRequirement []SoftwareRequirementType `xml:"SoftwareRequirement" json:"SoftwareRequirement"`
       
       }
     
@@ -1539,12 +1539,12 @@ package sifxml
       }
     
     type HouseholdListType struct {
-        Household *[]LocalIdType `xml:"Household" json:"Household"`
+        Household []LocalIdType `xml:"Household" json:"Household"`
       
       }
     
     type StudentSubjectChoiceListType struct {
-        StudentSubjectChoice *[]StudentSubjectChoiceType `xml:"StudentSubjectChoice" json:"StudentSubjectChoice"`
+        StudentSubjectChoice []StudentSubjectChoiceType `xml:"StudentSubjectChoice" json:"StudentSubjectChoice"`
       
       }
     
@@ -1557,27 +1557,27 @@ package sifxml
       }
     
     type IdentityAssertionsType struct {
-      IdentityAssertion *[]IdentityAssertionsType_IdentityAssertion `xml:"IdentityAssertion" json:"IdentityAssertion"`
+      IdentityAssertion []IdentityAssertionsType_IdentityAssertion `xml:"IdentityAssertion" json:"IdentityAssertion"`
       
       }
     
     type LearningStandardsType struct {
-        LearningStandardItemRefId *[]string `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
+        LearningStandardItemRefId []string `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
       
       }
     
     type LearningResourcesType struct {
-        LearningResourceRefId *[]string `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
+        LearningResourceRefId []string `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
       
       }
     
     type LearningStandardsDocumentType struct {
-        LearningStandardDocumentRefId *[]string `xml:"LearningStandardDocumentRefId" json:"LearningStandardDocumentRefId"`
+        LearningStandardDocumentRefId []string `xml:"LearningStandardDocumentRefId" json:"LearningStandardDocumentRefId"`
       
       }
     
     type ComponentsType struct {
-        Component *[]ComponentType `xml:"Component" json:"Component"`
+        Component []ComponentType `xml:"Component" json:"Component"`
       
       }
     
@@ -1591,17 +1591,17 @@ package sifxml
       }
     
     type StrategiesType struct {
-        Strategy *[]string `xml:"Strategy" json:"Strategy"`
+        Strategy []string `xml:"Strategy" json:"Strategy"`
       
       }
     
     type AssociatedObjectsType struct {
-      AssociatedObject *[]AssociatedObjectsType_AssociatedObject `xml:"AssociatedObject" json:"AssociatedObject"`
+      AssociatedObject []AssociatedObjectsType_AssociatedObject `xml:"AssociatedObject" json:"AssociatedObject"`
       
       }
     
     type EvaluationsType struct {
-        Evaluation *[]EvaluationType `xml:"Evaluation" json:"Evaluation"`
+        Evaluation []EvaluationType `xml:"Evaluation" json:"Evaluation"`
       
       }
     
@@ -1614,7 +1614,7 @@ package sifxml
       }
     
     type ApprovalsType struct {
-        Approval *[]ApprovalType `xml:"Approval" json:"Approval"`
+        Approval []ApprovalType `xml:"Approval" json:"Approval"`
       
       }
     
@@ -1625,12 +1625,12 @@ package sifxml
       }
     
     type MediaTypesType struct {
-        MediaType *[]string `xml:"MediaType" json:"MediaType"`
+        MediaType []string `xml:"MediaType" json:"MediaType"`
       
       }
     
     type LEAContactListType struct {
-        LEAContact *[]LEAContactType `xml:"LEAContact" json:"LEAContact"`
+        LEAContact []LEAContactType `xml:"LEAContact" json:"LEAContact"`
       
       }
     
@@ -1641,17 +1641,17 @@ package sifxml
       }
     
     type FinancialAccountRefIdListType struct {
-        FinancialAccountRefId *[]string `xml:"FinancialAccountRefId" json:"FinancialAccountRefId"`
+        FinancialAccountRefId []string `xml:"FinancialAccountRefId" json:"FinancialAccountRefId"`
       
       }
     
     type AccountCodeListType struct {
-        AccountCode *[]string `xml:"AccountCode" json:"AccountCode"`
+        AccountCode []string `xml:"AccountCode" json:"AccountCode"`
       
       }
     
     type JournalAdjustmentListType struct {
-        JournalAdjustment *[]JournalAdjustmentType `xml:"JournalAdjustment" json:"JournalAdjustment"`
+        JournalAdjustment []JournalAdjustmentType `xml:"JournalAdjustment" json:"JournalAdjustment"`
       
       }
     
@@ -1667,7 +1667,7 @@ package sifxml
       }
     
     type PaymentReceiptLineListType struct {
-        PaymentReceiptLine *[]PaymentReceiptLineType `xml:"PaymentReceiptLine" json:"PaymentReceiptLine"`
+        PaymentReceiptLine []PaymentReceiptLineType `xml:"PaymentReceiptLine" json:"PaymentReceiptLine"`
       
       }
     
@@ -1685,12 +1685,12 @@ package sifxml
       }
     
     type PasswordListType struct {
-      Password *[]PasswordListType_Password `xml:"Password" json:"Password"`
+      Password []PasswordListType_Password `xml:"Password" json:"Password"`
       
       }
     
     type ExclusionRulesType struct {
-        ExclusionRule *[]ExclusionRuleType `xml:"ExclusionRule" json:"ExclusionRule"`
+        ExclusionRule []ExclusionRuleType `xml:"ExclusionRule" json:"ExclusionRule"`
       
       }
     
@@ -1701,12 +1701,12 @@ package sifxml
       }
     
     type CharacteristicsType struct {
-        AggregateCharacteristicInfoRefId *[]string `xml:"AggregateCharacteristicInfoRefId" json:"AggregateCharacteristicInfoRefId"`
+        AggregateCharacteristicInfoRefId []string `xml:"AggregateCharacteristicInfoRefId" json:"AggregateCharacteristicInfoRefId"`
       
       }
     
     type ContactsType struct {
-        Contact *[]ContactType `xml:"Contact" json:"Contact"`
+        Contact []ContactType `xml:"Contact" json:"Contact"`
       
       }
     
@@ -1719,7 +1719,7 @@ package sifxml
       }
     
     type TeachingGroupPeriodListType struct {
-        TeachingGroupPeriod *[]TeachingGroupPeriodType `xml:"TeachingGroupPeriod" json:"TeachingGroupPeriod"`
+        TeachingGroupPeriod []TeachingGroupPeriodType `xml:"TeachingGroupPeriod" json:"TeachingGroupPeriod"`
       
       }
     
@@ -1735,7 +1735,7 @@ package sifxml
       }
     
     type TeacherListType struct {
-        TeachingGroupTeacher *[]TeachingGroupTeacherType `xml:"TeachingGroupTeacher" json:"TeachingGroupTeacher"`
+        TeachingGroupTeacher []TeachingGroupTeacherType `xml:"TeachingGroupTeacher" json:"TeachingGroupTeacher"`
       
       }
     
@@ -1748,7 +1748,7 @@ package sifxml
       }
     
     type StudentListType struct {
-        TeachingGroupStudent *[]TeachingGroupStudentType `xml:"TeachingGroupStudent" json:"TeachingGroupStudent"`
+        TeachingGroupStudent []TeachingGroupStudentType `xml:"TeachingGroupStudent" json:"TeachingGroupStudent"`
       
       }
     
@@ -1760,7 +1760,7 @@ package sifxml
       }
     
     type TimeTableDayListType struct {
-        TimeTableDay *[]TimeTableDayType `xml:"TimeTableDay" json:"TimeTableDay"`
+        TimeTableDay []TimeTableDayType `xml:"TimeTableDay" json:"TimeTableDay"`
       
       }
     
@@ -1772,7 +1772,7 @@ package sifxml
       }
     
     type TimeTablePeriodListType struct {
-        TimeTablePeriod *[]TimeTablePeriodType `xml:"TimeTablePeriod" json:"TimeTablePeriod"`
+        TimeTablePeriod []TimeTablePeriodType `xml:"TimeTablePeriod" json:"TimeTablePeriod"`
       
       }
     
@@ -1789,17 +1789,17 @@ package sifxml
       }
     
     type NAPLANClassListType struct {
-        ClassCode *[]string `xml:"ClassCode" json:"ClassCode"`
+        ClassCode []string `xml:"ClassCode" json:"ClassCode"`
       
       }
     
     type SchoolGroupListType struct {
-        SchoolGroup *[]LocalIdType `xml:"SchoolGroup" json:"SchoolGroup"`
+        SchoolGroup []LocalIdType `xml:"SchoolGroup" json:"SchoolGroup"`
       
       }
     
     type YearLevelEnrollmentListType struct {
-        YearLevelEnrollment *[]YearLevelEnrollmentType `xml:"YearLevelEnrollment" json:"YearLevelEnrollment"`
+        YearLevelEnrollment []YearLevelEnrollmentType `xml:"YearLevelEnrollment" json:"YearLevelEnrollment"`
       
       }
     
@@ -1810,12 +1810,12 @@ package sifxml
       }
     
     type SchoolFocusListType struct {
-        SchoolFocus *[]AUCodeSetsSchoolFocusCodeType `xml:"SchoolFocus" json:"SchoolFocus"`
+        SchoolFocus []AUCodeSetsSchoolFocusCodeType `xml:"SchoolFocus" json:"SchoolFocus"`
       
       }
     
     type AlertMessagesType struct {
-        AlertMessage *[]AlertMessageType `xml:"AlertMessage" json:"AlertMessage"`
+        AlertMessage []AlertMessageType `xml:"AlertMessage" json:"AlertMessage"`
       
       }
     
@@ -1826,7 +1826,7 @@ package sifxml
       }
     
     type MedicalAlertMessagesType struct {
-        MedicalAlertMessage *[]MedicalAlertMessageType `xml:"MedicalAlertMessage" json:"MedicalAlertMessage"`
+        MedicalAlertMessage []MedicalAlertMessageType `xml:"MedicalAlertMessage" json:"MedicalAlertMessage"`
       
       }
     
@@ -1837,7 +1837,7 @@ package sifxml
       }
     
     type OtherIdListType struct {
-        OtherId *[]OtherIdType `xml:"OtherId" json:"OtherId"`
+        OtherId []OtherIdType `xml:"OtherId" json:"OtherId"`
       
       }
     
@@ -1906,7 +1906,7 @@ package sifxml
       }
     
     type YearLevelsType struct {
-        YearLevel *[]YearLevelType `xml:"YearLevel" json:"YearLevel"`
+        YearLevel []YearLevelType `xml:"YearLevel" json:"YearLevel"`
       
       }
     
@@ -1926,7 +1926,7 @@ package sifxml
       }
     
     type SchoolContactListType struct {
-        SchoolContact *[]SchoolContactType `xml:"SchoolContact" json:"SchoolContact"`
+        SchoolContact []SchoolContactType `xml:"SchoolContact" json:"SchoolContact"`
       
       }
     
@@ -1989,7 +1989,7 @@ package sifxml
       }
     
     type StatisticalAreasType struct {
-        StatisticalArea *[]StatisticalAreaType `xml:"StatisticalArea" json:"StatisticalArea"`
+        StatisticalArea []StatisticalAreaType `xml:"StatisticalArea" json:"StatisticalArea"`
       
       }
     
@@ -2000,12 +2000,12 @@ package sifxml
       }
     
     type AddressListType struct {
-        Address *[]AddressType `xml:"Address" json:"Address"`
+        Address []AddressType `xml:"Address" json:"Address"`
       
       }
     
     type EmailListType struct {
-        Email *[]EmailType `xml:"Email" json:"Email"`
+        Email []EmailType `xml:"Email" json:"Email"`
       
       }
     
@@ -2016,7 +2016,7 @@ package sifxml
       }
     
     type PhoneNumberListType struct {
-        PhoneNumber *[]PhoneNumberType `xml:"PhoneNumber" json:"PhoneNumber"`
+        PhoneNumber []PhoneNumberType `xml:"PhoneNumber" json:"PhoneNumber"`
       
       }
     
@@ -2040,7 +2040,7 @@ package sifxml
     type StateProvinceType string
     type SchoolYearType string
     type ElectronicIdListType struct {
-        ElectronicId *[]ElectronicIdType `xml:"ElectronicId" json:"ElectronicId"`
+        ElectronicId []ElectronicIdType `xml:"ElectronicId" json:"ElectronicId"`
       
       }
     
@@ -2051,7 +2051,7 @@ package sifxml
       }
     
     type OtherNamesType struct {
-        Name *[]OtherNameType `xml:"Name" json:"Name"`
+        Name []OtherNameType `xml:"Name" json:"Name"`
       
       }
     
@@ -2095,7 +2095,7 @@ package sifxml
       }
     
     type LanguageListType struct {
-        Language *[]LanguageBaseType `xml:"Language" json:"Language"`
+        Language []LanguageBaseType `xml:"Language" json:"Language"`
       
       }
     
@@ -2137,7 +2137,7 @@ package sifxml
       }
     
     type OtherCodeListType struct {
-      OtherCode *[]OtherCodeListType_OtherCode `xml:"OtherCode" json:"OtherCode"`
+      OtherCode []OtherCodeListType_OtherCode `xml:"OtherCode" json:"OtherCode"`
       
       }
     
@@ -2148,12 +2148,12 @@ package sifxml
       }
     
     type SubjectAreaListType struct {
-        SubjectArea *[]SubjectAreaType `xml:"SubjectArea" json:"SubjectArea"`
+        SubjectArea []SubjectAreaType `xml:"SubjectArea" json:"SubjectArea"`
       
       }
     
     type ACStrandAreaListType struct {
-        ACStrandSubjectArea *[]ACStrandSubjectAreaType `xml:"ACStrandSubjectArea" json:"ACStrandSubjectArea"`
+        ACStrandSubjectArea []ACStrandSubjectAreaType `xml:"ACStrandSubjectArea" json:"ACStrandSubjectArea"`
       
       }
     
@@ -2175,7 +2175,7 @@ package sifxml
       }
     
     type SIF_ExtendedElementsType struct {
-      SIF_ExtendedElement *[]SIF_ExtendedElementsType_SIF_ExtendedElement `xml:"SIF_ExtendedElement" json:"SIF_ExtendedElement"`
+      SIF_ExtendedElement []SIF_ExtendedElementsType_SIF_ExtendedElement `xml:"SIF_ExtendedElement" json:"SIF_ExtendedElement"`
       
       }
     
@@ -2257,17 +2257,17 @@ type LocationType_LocationRefId struct {
       Value *string `xml:",chardata" json:"value"`
 }
 type TimeElementType_SpanGaps struct {
-      SpanGap *[]TimeElementType_SpanGap `xml:"SpanGap" json:"SpanGap"`
+      SpanGap []TimeElementType_SpanGap `xml:"SpanGap" json:"SpanGap"`
 }
 type LifeCycleType_Created struct {
        DateTime *string `xml:"DateTime" json:"DateTime"`
       Creators *LifeCycleType_Creators
 }
 type LifeCycleType_ModificationHistory struct {
-      Modified *[]LifeCycleType_Modified `xml:"Modified" json:"Modified"`
+      Modified []LifeCycleType_Modified `xml:"Modified" json:"Modified"`
 }
 type LifeCycleType_TimeElements struct {
-       TimeElement *[]TimeElementType `xml:"TimeElement" json:"TimeElement"`
+       TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
 }
 type OtherCodeListType_OtherCode struct {
       Codeset *string `xml:"Codeset,attr" json:"Codeset"`
@@ -2280,7 +2280,7 @@ type SIF_ExtendedElementsType_SIF_ExtendedElement struct {
       Value *ExtendedContentType `xml:",chardata" json:"value"`
 }
 type SIF_MetadataType_TimeElements struct {
-       TimeElement *[]TimeElementType `xml:"TimeElement" json:"TimeElement"`
+       TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
 }
 type TimeElementType_SpanGap struct {
        Type *string `xml:"Type" json:"Type"`
@@ -2291,7 +2291,7 @@ type TimeElementType_SpanGap struct {
        EndDateTime *string `xml:"EndDateTime,omitempty" json:"EndDateTime"`
 }
 type LifeCycleType_Creators struct {
-      Creator *[]LifeCycleType_Creator `xml:"Creator" json:"Creator"`
+      Creator []LifeCycleType_Creator `xml:"Creator" json:"Creator"`
 }
 type LifeCycleType_Modified struct {
        By *string `xml:"By" json:"By"`

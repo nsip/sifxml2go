@@ -22,7 +22,7 @@ while(<>) {
   # We use pointer for all values, so we can introduce NULL for omitempty
   # distinct from 0 for numeric: https://stackoverflow.com/a/38487668
   s/ OPT//;
-  s/^(\s*\S+\s+)(\S+\s+)`/\1*\2`/; # name type `...`
+  s/^(\s*\S+\s+)([^\[\s ]\S*\s+)`/\1*\2`/; # name type `...`
   s/^(\s*\S+\s+)(\S+\s*)$/\1*\2/; # name alias
   print;
 }
