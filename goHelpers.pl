@@ -2,10 +2,16 @@
 %types = ();
 %list = ();
 %inherit = ();
+%codeset = ();
 
 while(<>) {
   print STDERR $_;
   chomp;
+  if (m/^\s*var\s+\S+\s+=\s+\[\]/) {
+    ($name) = m/^\s*var\s+(\S+)\s+=\s+\[\]/;
+    $name =~ s/_values//;
+    $codeset{$name}++;
+  }
   if (m/^\s*type\s/) {
     ($name, $type) = m/^\s*type\s*(\S+)\s+(\S+)/;
     if ($type eq 'struct') {
@@ -44,6 +50,10 @@ foreach $k (keys %alias) {
 
 print <<"END";
 package sifxml
+
+import (
+  "log"
+  )
 
 func IntCreate(x int) *int {
   return &x
@@ -90,15 +100,17 @@ foreach $n (keys %list) {
   if ($list{$n}{TYPE} eq "bool" or $alias{$list{$n}{TYPE}} eq "bool") {
     $emptytype= "false";
   }
+  $cv = codeset_validate($list{$n}{TYPE}, 0);
   print <<"END";
-  func (t *$n) Add(v $list{$n}{TYPE}) *$n {
+  func (t *$n) Add(value $list{$n}{TYPE}) *$n {
+    $cv
         if t == nil {
                 t = ${n}Create(${n}\{\})
         }
         if t.$list{$n}{KEY} == nil {
                 t.$list{$n}{KEY} = make([]$list{$n}{TYPE}, 0)
         }
-        t.$list{$n}{KEY} = append(t.$list{$n}{KEY}, v)
+        t.$list{$n}{KEY} = append(t.$list{$n}{KEY}, value)
         return t
 }
 
@@ -152,7 +164,9 @@ sub setswitch($) {
 END
   if ($alias{$t}) {
     $cr = typecreate($alias{$t});
+    $cv = codeset_validate($t, 1);
     print <<"END";
+    $cv
                       n.$s = ((*$t)(${cr}Create(value.($alias{$t}))))
 END
   } else {
@@ -171,3 +185,20 @@ sub typecreate($) {
   elsif ($s eq "int") { return "Int"; }
   else { return $s; }
 }
+
+sub codeset_validate($$) {
+  my ($t, $interface) = @_;
+  return "" unless $codeset{$t};
+  my $cast = $interface ? "value.(string)" : "string(value)";
+  return <<"END";
+  present := false
+  for _, b := range ${t}_values {
+        if b == $cast {
+          present = true
+        }
+    }
+    if (!present) {
+      log.Fatalf("%s is not present in %s\\n", value, "${t}_values")
+      }
+END
+}       

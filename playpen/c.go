@@ -109,4 +109,6 @@ func main() {
 	</StudentAttendanceCollection>
 
 	*/
+	new.StudentAttendanceCollectionReportingList.Last().StatsCohortYearLevelList.Last().CohortYearLevel.Set("Code", "FRED")
+	/* crashes */
 }
