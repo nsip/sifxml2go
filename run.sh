@@ -67,6 +67,8 @@ echo '</root>' >> codesets.xml
 
 xsltproc sifobject.xslt codesets.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/Codesets.go
 
+cat sifxml/[A-Z]*.go | perl goHelpers.pl > sifxml/Helpers.go
+
 # 4. Examples
 
 for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do

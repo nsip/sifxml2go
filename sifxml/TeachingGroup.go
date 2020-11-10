@@ -10,7 +10,7 @@ type TeachingGroups []TeachingGroup
       ShortName *string `xml:"ShortName" json:"ShortName"`
       LongName *string `xml:"LongName,omitempty" json:"LongName"`
       GroupType *string `xml:"GroupType,omitempty" json:"GroupType"`
-      Set *string `xml:"Set,omitempty" json:"Set"`
+      Sett *string `xml:"Set,omitempty" json:"Set"`
       Block *string `xml:"Block,omitempty" json:"Block"`
       CurriculumLevel *string `xml:"CurriculumLevel,omitempty" json:"CurriculumLevel"`
       SchoolInfoRefId *RefIdType `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`

@@ -37,8 +37,7 @@ type AUCodeSetsYearLevelCodeType string
 var AUCodeSetsYearLevelCodeType_values = []string{"0", "1", "10", "11", "12", "13", "2", "3", "4", "5", "6", "7", "8", "9", "K", "P", "K3", "K4", "CC", "PS", "UG", "11MINUS", "12PLUS", "UGJunSec", "UGPri", "UGSec", "UGSnrSec"}
 
 type AggregateStatisticFact struct {
-	RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-	/* RefId                       *string              `xml:"RefId,attr" json:"RefId"` */
+	RefId                       *RefIdType                    `xml:"RefId,attr" json:"RefId"`
 	AggregateStatisticInfoRefId *string                       `xml:"AggregateStatisticInfoRefId" json:"AggregateStatisticInfoRefId"`
 	Characteristics             *CharacteristicsType          `xml:"Characteristics" json:"Characteristics"`
 	Excluded                    *string                       `xml:"Excluded,omitempty" json:"Excluded"`

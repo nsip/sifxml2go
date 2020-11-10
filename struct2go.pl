@@ -1,9 +1,12 @@
 print "package sifxml\n\n";
 
+# perl -s struct2go.pl -o : sets $o : run with individual objects
+# perl struct2go.pl : run with data model file
+
 while(<>) {
   s/Inherits://;
 
-  # perl -s -struct2go.pl -o
+  # perl -s struct2go.pl -o
   if (m/\btype (\S+)/ && !$seen && $o) {
     print "type $1s []$1\n\n";
     $seen++;
@@ -24,5 +27,7 @@ while(<>) {
   s/ OPT//;
   s/^(\s*\S+\s+)([^\[\s ]\S*\s+)`/\1*\2`/; # name type `...`
   s/^(\s*\S+\s+)(\S+\s*)$/\1*\2/; # name alias
+  # Set is a reserved name
+  s/^(\s*)Set(\s+)/\1Sett\2/;
   print;
 }
