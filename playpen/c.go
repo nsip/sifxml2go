@@ -61,4 +61,52 @@ func main() {
 	output, err = xml.MarshalIndent(new, "", "  ")
 	errcheck(err)
 	fmt.Println(string(output))
+
+	/* OUTPUT GENERATED:
+
+	<StudentAttendanceCollection RefId="ABC">
+	  <RoundCode>DEF</RoundCode>
+	  <ReportingAuthorityCommonwealthId>GHI</ReportingAuthorityCommonwealthId>
+	  <StudentAttendanceCollectionReportingList>
+	    <StudentAttendanceCollectionReporting>
+	      <StatsCohortYearLevelList>
+	        <StatsCohortYearLevel>
+	          <CohortYearLevel>
+	            <Code>12</Code>
+	          </CohortYearLevel>
+	          <StatsCohortList>
+	            <StatsCohort>
+	              <StatsCohortId>1</StatsCohortId>
+	              <DaysInReferencePeriod>5</DaysInReferencePeriod>
+	            </StatsCohort>
+	          </StatsCohortList>
+	        </StatsCohortYearLevel>
+	      </StatsCohortYearLevelList>
+	    </StudentAttendanceCollectionReporting>
+	    <StudentAttendanceCollectionReporting>
+	      <EntityLevel>2222</EntityLevel>
+	      <EntityContact>
+	        <Name Type="LGL">
+	          <FamilyName>Jackson</FamilyName>
+	          <FamilyNameFirst>Y</FamilyNameFirst>
+	        </Name>
+	        <PositionTitle>Teacher</PositionTitle>
+	      </EntityContact>
+	      <StatsCohortYearLevelList>
+	        <StatsCohortYearLevel>
+	          <CohortYearLevel>
+	            <Code>11</Code>
+	          </CohortYearLevel>
+	          <StatsCohortList>
+	            <StatsCohort>
+	              <StatsCohortId>22</StatsCohortId>
+	            </StatsCohort>
+	          </StatsCohortList>
+	        </StatsCohortYearLevel>
+	      </StatsCohortYearLevelList>
+	    </StudentAttendanceCollectionReporting>
+	  </StudentAttendanceCollectionReportingList>
+	</StudentAttendanceCollection>
+
+	*/
 }
