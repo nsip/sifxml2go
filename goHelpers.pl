@@ -1,3 +1,4 @@
+%alias_orig = ();
 %alias = ();
 %types = ();
 %list = ();
@@ -42,6 +43,9 @@ while(<>) {
   }
 }
 
+foreach $k (keys %alias) {
+  $alias_orig{$k} = $alias{$k};
+}
 foreach $k (keys %alias) {
   if ($alias{$alias{$k}}) {
     $alias{$k} = $alias{$alias{$k}};
@@ -188,6 +192,10 @@ sub typecreate($) {
 
 sub codeset_validate($$) {
   my ($t, $interface) = @_;
+  if($t eq "CountryType") {
+    $t=$t;
+  }
+  $t = $alias_orig{$t} if $alias_orig{$t} && $codeset{$alias_orig{$t}};
   return "" unless $codeset{$t};
   my $cast = $interface ? "value.(string)" : "string(value)";
   return <<"END";
