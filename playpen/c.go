@@ -62,6 +62,15 @@ func main() {
 	errcheck(err)
 	fmt.Println(string(output))
 
+	/*
+		StudentAttendanceCollectionReportingList :
+		  EntityLevel: "2222"
+		  EntityContact:
+		     PositionTitle: Teacher
+		     Name:
+		       Type: "LGL"
+	*/
+
 	/* OUTPUT GENERATED:
 
 	<StudentAttendanceCollection RefId="ABC">
