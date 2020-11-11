@@ -25,24 +25,24 @@ func main() {
 	new.Set("RoundCode", "DEF")
 	new.Set("ReportingAuthorityCommonwealthId", "GHI")
 	/*
-		new.Characteristics = new.Characteristics.Add("XYZ")
-		new.Characteristics = new.Characteristics.Add("UVW")
+		new.Characteristics = new.Characteristics.Append("XYZ")
+		new.Characteristics = new.Characteristics.Append("UVW")
 	*/
 
 	s := sifxml.StatsCohortType{}
 	s.Set("StatsCohortId", "1")
 	s.Set("DaysInReferencePeriod", 5)
 	s_arr := sifxml.StatsCohortListType{}
-	s_arr.Add(s)
+	s_arr.Append(s)
 	y := sifxml.YearLevelType{}
 	y.Set("Code", "12")
 	s1 := sifxml.StatsCohortYearLevelType{}
 	s1.Set("CohortYearLevel", y)
 	s1.Set("StatsCohortList", s_arr)
 	sa := sifxml.StudentAttendanceCollectionReportingType{}
-	sa.StatsCohortYearLevelList = sa.StatsCohortYearLevelList.Add(s1)
+	sa.StatsCohortYearLevelList = sa.StatsCohortYearLevelList.Append(s1)
 	sa_arr := sifxml.StudentAttendanceCollectionReportingListType{}
-	sa_arr.Add(sa)
+	sa_arr.Append(sa)
 	new.Set("StudentAttendanceCollectionReportingList", sa_arr)
 
 	new.StudentAttendanceCollectionReportingList = new.StudentAttendanceCollectionReportingList.AddNew()

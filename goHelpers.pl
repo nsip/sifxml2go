@@ -102,7 +102,7 @@ foreach $n (keys %list) {
   }
   $cv = codeset_validate($list{$n}{TYPE}, 0);
   print <<"END";
-  func (t *$n) Add(value $list{$n}{TYPE}) *$n {
+  func (t *$n) Append(value $list{$n}{TYPE}) *$n {
     $cv
         if t == nil {
                 t = ${n}Create(${n}\{\})
