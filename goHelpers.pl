@@ -56,7 +56,11 @@ print <<"END";
 package sifxml
 
 import (
+  "fmt"
   "log"
+  "reflect"
+
+      "github.com/ulule/deepcopier"
   )
 
 func IntCreate(x int) *int {
@@ -86,6 +90,12 @@ func ${n}Create(x $n) *$n {
 func (n *$n) New() *$n {
         return ${n}Create($n\{\})
 }
+
+func (n *$n) Clone() $n {
+  resource := &$n\{\}
+  deepcopier.Copy(n).To(resource)
+  return *resource
+  }
 
 END
 }
@@ -134,11 +144,50 @@ func (t *$n) Last() *$list{$n}{TYPE} {
 }
 
 END
+
+  if ($list{$n}{TYPE} eq "string" or $alias{$list{$n}{TYPE}} eq "string") {
+      print <<"END";
+      func (t *$n) AppendString(value interface{}) *$n {
+        return t.Append(($list{$n}{TYPE})(fmt.Sprint(reflect.ValueOf(value).Elem().Interface())))
+        }
+END
+  }
+}
+
+foreach $n (keys %alias_orig) {
+  print <<"END";
+func (t *$n) String() string {
+  return fmt.Sprint(reflect.ValueOf(*t))
+  }
+END
 }
 
 foreach $n (keys %types) {
   next if $list{$n};
   print <<"END";
+
+func (t *$n) CopyString(key string, value interface{}) *$n {
+  return t.Set(key, fmt.Sprint(reflect.ValueOf(value).Elem().Interface()))
+}
+
+func (n *$n) Unset(key string) *$n {
+        switch key {
+END
+  foreach $s (keys %{$types{$n}}) {
+    unsetswitch($s, $types{$n}{$s});
+  }
+  if ($inherit{$n}) {
+    foreach $s (keys %{$types{$inherit{$n}}}) {
+      unsetswitch($s, $types{$inherit{$n}}{$s});
+    }
+  }
+  print <<"END";
+        default:
+          log.Fatalf("%s is not a valid element name in %s\\n", key, "$n")
+        }
+        return n
+}
+
 func (n *$n) Set(key string, value interface{}) *$n {
         if n == nil {
                 n = ${n}Create($n\{\})
@@ -154,6 +203,8 @@ END
     }
   }
   print <<"END";
+        default:
+          log.Fatalf("%s is not a valid element name in %s\\n", key, "$n")
         }
         return n
 }
@@ -161,7 +212,15 @@ END
 END
 }
 
-sub setswitch($) {
+sub unsetswitch($) {
+  my ($s) = @_;
+  print << "END";
+  case "$s":
+   n.$s = nil
+END
+}
+
+sub setswitch($$) {
   my ($s, $t) = @_;
   print <<"END";
     case "$s":
