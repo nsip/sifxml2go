@@ -8,23 +8,23 @@ type Invoices []Invoice
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
       InvoicedEntity *Invoice_InvoicedEntity `xml:"InvoicedEntity" json:"InvoicedEntity"`
       FormNumber *LocalIdType `xml:"FormNumber,omitempty" json:"FormNumber"`
-      BillingDate *string `xml:"BillingDate" json:"BillingDate"`
-      TransactionDescription *string `xml:"TransactionDescription" json:"TransactionDescription"`
+      BillingDate *String `xml:"BillingDate" json:"BillingDate"`
+      TransactionDescription *String `xml:"TransactionDescription" json:"TransactionDescription"`
       BilledAmount *DebitOrCreditAmountType `xml:"BilledAmount" json:"BilledAmount"`
-      Ledger *string `xml:"Ledger" json:"Ledger"`
-      ChargedLocationInfoRefId *string `xml:"ChargedLocationInfoRefId,omitempty" json:"ChargedLocationInfoRefId"`
+      Ledger *String `xml:"Ledger" json:"Ledger"`
+      ChargedLocationInfoRefId *String `xml:"ChargedLocationInfoRefId,omitempty" json:"ChargedLocationInfoRefId"`
       NetAmount *MonetaryAmountType `xml:"NetAmount,omitempty" json:"NetAmount"`
-      TaxRate *float64 `xml:"TaxRate" json:"TaxRate"`
-      TaxType *string `xml:"TaxType,omitempty" json:"TaxType"`
+      TaxRate *Float `xml:"TaxRate,omitempty" json:"TaxRate"`
+      TaxType *String `xml:"TaxType,omitempty" json:"TaxType"`
       TaxAmount *MonetaryAmountType `xml:"TaxAmount,omitempty" json:"TaxAmount"`
-      CreatedBy *string `xml:"CreatedBy,omitempty" json:"CreatedBy"`
-      ApprovedBy *string `xml:"ApprovedBy,omitempty" json:"ApprovedBy"`
-      ItemDetail *string `xml:"ItemDetail,omitempty" json:"ItemDetail"`
-      DueDate *string `xml:"DueDate,omitempty" json:"DueDate"`
+      CreatedBy *String `xml:"CreatedBy,omitempty" json:"CreatedBy"`
+      ApprovedBy *String `xml:"ApprovedBy,omitempty" json:"ApprovedBy"`
+      ItemDetail *String `xml:"ItemDetail,omitempty" json:"ItemDetail"`
+      DueDate *String `xml:"DueDate,omitempty" json:"DueDate"`
       FinancialAccountRefIdList *FinancialAccountRefIdListType `xml:"FinancialAccountRefIdList,omitempty" json:"FinancialAccountRefIdList"`
       AccountCodeList *AccountCodeListType `xml:"AccountCodeList,omitempty" json:"AccountCodeList"`
       AccountingPeriod *LocalIdType `xml:"AccountingPeriod,omitempty" json:"AccountingPeriod"`
-      RelatedPurchaseOrderRefId *string `xml:"RelatedPurchaseOrderRefId,omitempty" json:"RelatedPurchaseOrderRefId"`
+      RelatedPurchaseOrderRefId *String `xml:"RelatedPurchaseOrderRefId,omitempty" json:"RelatedPurchaseOrderRefId"`
       PurchasingItems *PurchasingItemsType `xml:"PurchasingItems,omitempty" json:"PurchasingItems"`
       Voluntary *AUCodeSetsYesOrNoCategoryType `xml:"Voluntary,omitempty" json:"Voluntary"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
@@ -33,6 +33,6 @@ type Invoices []Invoice
       
       }
     type Invoice_InvoicedEntity struct {
-      SIF_RefObject *string `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
-      Value *string `xml:",chardata" json:"value"`
+      SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      Value *String `xml:",chardata" json:"value"`
 }

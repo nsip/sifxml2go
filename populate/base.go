@@ -1,6 +1,7 @@
 package populate
 
 import (
+	"../sifxml"
 	"encoding/xml"
 	"fmt"
 	"log"
@@ -137,19 +138,20 @@ func random_seq_gen_reset(key string) {
 	random_sequences[key] = make(map[int]bool)
 }
 
-func birth_year(yearlevel int) string {
+func birth_year(yearlevel_str string) (string, error) {
 	minyear := time.Now().Year() - 5
 	gofakeit.Seed(0)
+	yearlevel := yearlevel2yr(yearlevel_str)
 	return gofakeit.DateRange(time.Date(minyear-yearlevel-1, time.January, 1, 0, 0, 0, 0, time.UTC),
-		time.Date(minyear-yearlevel, time.December, 31, 0, 0, 0, 0, time.UTC)).Format("2006-01-02")
+		time.Date(minyear-yearlevel, time.December, 31, 0, 0, 0, 0, time.UTC)).Format("2006-01-02"), nil
 }
 
-// assumes probabilities ranked in descending order from 1.0 to 0, and that cardinality of
-// probabilities is one less than that of options
+// assumes probabilities ranked in descending order from 1.0 to 0 (final probability 0), and that cardinality of
+// probabilities is same as that of options
 func threshold_rand_strings(probabilities []float64, options []string) string {
 	r := rand.Float64()
-	if len(probabilities) != len(options)-1 {
-		log.Fatalf("threshold_rand_strings: The cardinality of %+v is not one less than the cardinality of %+v", probabilities, options)
+	if len(probabilities) != len(options) {
+		log.Fatalf("threshold_rand_strings: The cardinality of %+v is not same as the cardinality of %+v", probabilities, options)
 	}
 	for i, prob := range probabilities {
 		if r > prob {
@@ -159,18 +161,82 @@ func threshold_rand_strings(probabilities []float64, options []string) string {
 	return options[len(options)-1]
 }
 
-func school_name() string {
+func school_name(schooltype string) string {
 	gofakeit.Seed(0)
-	return gofakeit.City() + " " + randomStringFromSlice([]string{"Academy", "Grammar", "College"})
+	school := randomStringFromSlice([]string{"Academy", "Grammar", "College"})
+	switch schooltype {
+	case "Camp":
+		school = "Camp"
+	case "Commty":
+		school = "Community College"
+	case "EarlyCh":
+		school = "Childcare Centre"
+	case "JunPri":
+		school = "Primary School"
+	case "Kgarten":
+		school = "Kindergarten"
+	case "Kind":
+		school = "Kindergarten"
+	case "Lang":
+		school = "Language School"
+	case "MCH":
+		school = "Maternal Child Health Centre"
+	case "Middle":
+		school = "Middle School"
+	case "PreSch":
+		school = "Preschool"
+	case "Pri/Sec":
+		school = "College"
+	case "Prim":
+		school = "Primary School"
+	case "Sec":
+		school = "Secondary College"
+	case "Senior":
+		school = "Secondary College"
+	case "Spec/P-12":
+		school = "Special School"
+	case "Spec/Pri":
+		school = "Special School"
+	case "Spec/Sec":
+		school = "Special School"
+	case "Special":
+		school = "Special School"
+	case "Supp":
+		school = "Support Centre"
+	}
+	return gofakeit.City() + " " + school
 }
 
-func create_email(given string, middle string, family string) string {
+func create_email(given string, middle string, family string, domain string) string {
+	return family + "." + given + "." + string((middle)[0]) + "@" + domain
+}
+
+func create_school_email_domain(school *sifxml.SchoolInfo) string {
 	domain := randomStringFromSlice([]string{"mail.vic.edu.au", "people.vic.edu.au", "vic.edu.au", "dashboard.vic.edu.au", "distance.vic.edu.au"})
-	return family + "." + given + "." + string(middle[0]) + "@" + domain
+	state := school.AddressList.Last().StateProvince.String()
+	return strings.Replace(domain, "vic", strings.ToLower(state), 1)
+}
+
+func create_commercial_email_domain() string {
+	gofakeit.Seed(0)
+	return gofakeit.DomainName()
 }
 
 func create_phone_number(state *string) string {
 	return fmt.Sprintf("04%08d", rand.Intn(100000000))
+}
+
+func random_date(from string, to string) string {
+	gofakeit.Seed(0)
+	t1, err := time.Parse("2006-01-02", from)
+	if err != nil {
+		log.Fatalf("%s is in an illegal date format", from)
+	}
+	t2, err := time.Parse("2006-01-02", to)
+	if err != nil {
+		log.Fatalf("%s is in an illegal date format", to)
+	}
+	return gofakeit.DateRange(t1, t2).Format("2006-01-02")
 }
 
 func teachingGroupLongName(shortname string) string {
@@ -219,4 +285,94 @@ func teachingGroupKLA(shortname string) string {
 		return "H"
 	}
 	return "???"
+}
+
+func yearlevel2yr(yr string) int {
+	switch yr {
+	case "0":
+		return 0
+	case "1":
+		return 1
+	case "2":
+		return 2
+	case "3":
+		return 3
+	case "4":
+		return 4
+	case "5":
+		return 5
+	case "6":
+		return 6
+	case "7":
+		return 7
+	case "8":
+		return 8
+	case "9":
+		return 9
+	case "10":
+		return 10
+	case "11":
+		return 11
+	case "12":
+		return 12
+	case "13":
+		return 13
+	case "11MINUS":
+		return 6
+	case "12PLUS":
+		return 7
+	case "P":
+		return 0
+	case "K":
+		return -1
+	case "K4":
+		return -1
+	case "K3":
+		return -2
+	case "CC":
+		return -2
+	case "PS":
+		return -2
+	case "UG":
+		return rand.Intn(12) + 1
+	case "UGPri":
+		return rand.Intn(6) + 1
+	case "UGSec":
+		return rand.Intn(6) + 7
+	case "UGJunSec":
+		return rand.Intn(4) + 7
+	case "UGSnrSec":
+		return rand.Intn(2) + 11
+	}
+	return 1
+}
+
+func Schooltype2Yearlevels(schooltype string) []string {
+	switch schooltype {
+	case "EarlyCh":
+		return []string{"CC"}
+	case "JunPri":
+		return []string{"1", "2", "3"}
+	case "Kgarten":
+		return []string{"K"}
+	case "Kind":
+		return []string{"PS", "K"}
+	case "Middle":
+		return []string{"5", "6", "7", "8"}
+	case "PreSch":
+		return []string{"PS"}
+	case "Pri/Sec":
+		return []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
+	case "Spec/P-12":
+		return []string{"P", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
+	case "Spec/Sec":
+		return []string{"7", "8", "9", "10", "11", "12"}
+	case "Prim":
+		return []string{"1", "2", "3", "4", "5", "6"}
+	case "Sec":
+		return []string{"7", "8", "9", "10", "11", "12"}
+	case "Senior":
+		return []string{"11", "12"}
+	}
+	return []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
 }

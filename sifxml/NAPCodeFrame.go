@@ -5,7 +5,7 @@ type NAPCodeFrames []NAPCodeFrame
 
     type NAPCodeFrame struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      NAPTestRefId *string `xml:"NAPTestRefId" json:"NAPTestRefId"`
+      NAPTestRefId *String `xml:"NAPTestRefId" json:"NAPTestRefId"`
       TestContent *NAPTestContentType `xml:"TestContent" json:"TestContent"`
       TestletList *NAPCodeFrameTestletListType `xml:"TestletList" json:"TestletList"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`

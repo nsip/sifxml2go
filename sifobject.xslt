@@ -213,6 +213,7 @@
       <xsl:otherwise>string</xsl:otherwise>
     </xsl:choose>
     <xsl:if test="'O' = substring($characteristics, string-length($characteristics))"> OPT</xsl:if>
+    <xsl:if test="'C' = substring($characteristics, string-length($characteristics))"> OPT</xsl:if>
   </xsl:template>
 
 

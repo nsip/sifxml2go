@@ -5,18 +5,18 @@ type TimeTables []TimeTable
 
     type TimeTable struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
+      SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      Title *string `xml:"Title" json:"Title"`
-      DaysPerCycle *int `xml:"DaysPerCycle" json:"DaysPerCycle"`
-      PeriodsPerDay *int `xml:"PeriodsPerDay" json:"PeriodsPerDay"`
-      TeachingPeriodsPerDay *int `xml:"TeachingPeriodsPerDay" json:"TeachingPeriodsPerDay"`
+      Title *String `xml:"Title" json:"Title"`
+      DaysPerCycle *Int `xml:"DaysPerCycle" json:"DaysPerCycle"`
+      PeriodsPerDay *Int `xml:"PeriodsPerDay" json:"PeriodsPerDay"`
+      TeachingPeriodsPerDay *Int `xml:"TeachingPeriodsPerDay,omitempty" json:"TeachingPeriodsPerDay"`
       SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId"`
-      SchoolName *string `xml:"SchoolName,omitempty" json:"SchoolName"`
-      TimeTableCreationDate *string `xml:"TimeTableCreationDate,omitempty" json:"TimeTableCreationDate"`
-      StartDate *string `xml:"StartDate,omitempty" json:"StartDate"`
-      EndDate *string `xml:"EndDate,omitempty" json:"EndDate"`
+      SchoolName *String `xml:"SchoolName,omitempty" json:"SchoolName"`
+      TimeTableCreationDate *String `xml:"TimeTableCreationDate,omitempty" json:"TimeTableCreationDate"`
+      StartDate *String `xml:"StartDate,omitempty" json:"StartDate"`
+      EndDate *String `xml:"EndDate,omitempty" json:"EndDate"`
       TimeTableDayList *TimeTableDayListType `xml:"TimeTableDayList" json:"TimeTableDayList"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`

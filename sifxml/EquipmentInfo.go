@@ -5,13 +5,13 @@ type EquipmentInfos []EquipmentInfo
 
     type EquipmentInfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      Name *string `xml:"Name" json:"Name"`
-      Description *string `xml:"Description,omitempty" json:"Description"`
+      Name *String `xml:"Name" json:"Name"`
+      Description *String `xml:"Description,omitempty" json:"Description"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
       AssetNumber *LocalIdType `xml:"AssetNumber,omitempty" json:"AssetNumber"`
-      InvoiceRefId *string `xml:"InvoiceRefId,omitempty" json:"InvoiceRefId"`
-      PurchaseOrderRefId *string `xml:"PurchaseOrderRefId,omitempty" json:"PurchaseOrderRefId"`
-      EquipmentType *string `xml:"EquipmentType,omitempty" json:"EquipmentType"`
+      InvoiceRefId *String `xml:"InvoiceRefId,omitempty" json:"InvoiceRefId"`
+      PurchaseOrderRefId *String `xml:"PurchaseOrderRefId,omitempty" json:"PurchaseOrderRefId"`
+      EquipmentType *String `xml:"EquipmentType,omitempty" json:"EquipmentType"`
       SIF_RefId *EquipmentInfo_SIF_RefId
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
@@ -19,6 +19,6 @@ type EquipmentInfos []EquipmentInfo
       
       }
     type EquipmentInfo_SIF_RefId struct {
-      SIF_RefObject *string `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
-      Value *string `xml:",chardata" json:"value"`
+      SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      Value *String `xml:",chardata" json:"value"`
 }

@@ -170,9 +170,9 @@
       StaffPersonalRefId: String OPT 
       DateGraded: String OPT 
       ExpectedScore: bool OPT 
-      ScorePoints: int 
-      ScorePercent: float64 
-      ScoreLetter: String 
+      ScorePoints: int OPT 
+      ScorePercent: float64 OPT 
+      ScoreLetter: String OPT 
       ScoreDescription: String OPT 
       SubscoreList: NAPSubscoreListType OPT 
       TeacherJudgement: String OPT 
@@ -310,7 +310,7 @@
       NumericLow: float64 OPT 
       NumericHigh: float64 OPT 
       NumericPassingGrade: float64 OPT 
-      ValidLetterMarkList: ValidLetterMarkListType 
+      ValidLetterMarkList: ValidLetterMarkListType OPT 
       Narrative: String 
       NarrativeMaximumSize: int OPT 
       LocalCodeList: LocalCodeListType OPT 
@@ -471,8 +471,8 @@ type ResourceUsage_SIF_RefId {
         RefId: RefIdType 
       SchoolInfoRefId: String 
       SchoolLocalId: LocalIdType OPT 
-      SchoolYear: SchoolYearType 
-      TermInfoRefId: String 
+      SchoolYear: SchoolYearType OPT 
+      TermInfoRefId: String OPT 
       CourseCode: String 
       StateCourseCode: String OPT 
       DistrictCourseCode: String OPT 
@@ -560,8 +560,8 @@ type ResourceUsage_SIF_RefId {
       SchoolCourseInfoRefId: String 
       LocalId: LocalIdType 
       Description: String OPT 
-      SchoolYear: SchoolYearType 
-      TermInfoRefId: String 
+      SchoolYear: SchoolYearType OPT 
+      TermInfoRefId: String OPT 
       MediumOfInstruction: MediumOfInstructionType OPT 
       LanguageOfInstruction: LanguageOfInstructionType OPT 
       LocationOfInstruction: LocationOfInstructionType OPT 
@@ -586,7 +586,7 @@ type ResourceUsage_SIF_RefId {
       TeachingGroupLocalId: LocalIdType 
       SchoolLocalId: LocalIdType OPT 
       StaffPersonalLocalId: LocalIdType OPT 
-      RoomNumber: String 
+      RoomNumber: String OPT 
       DayId: LocalIdType 
       PeriodId: LocalIdType 
       SessionDate: String 
@@ -729,11 +729,11 @@ type ResourceUsage_SIF_RefId {
       Relationship: RelationshipType 
       ParentRelationshipStatus: String OPT 
       HouseholdList: HouseholdListType OPT 
-      ContactFlags: ContactFlagsType 
+      ContactFlags: ContactFlagsType OPT 
       MainlySpeaksEnglishAtHome: AUCodeSetsYesOrNoCategoryType OPT 
       ContactSequence: int OPT 
       ContactSequenceSource: AUCodeSetsSourceCodeTypeType OPT 
-      SchoolInfoRefId: String 
+      SchoolInfoRefId: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -749,9 +749,9 @@ type ResourceUsage_SIF_RefId {
       DayValue: AUCodeSetsDayValueCodeType OPT 
       AttendanceCode: AttendanceCodeType 
       AttendanceStatus: AUCodeSetsAttendanceStatusType 
-      TimeIn: String 
-      TimeOut: String 
-      AbsenceValue: float64 
+      TimeIn: String OPT 
+      TimeOut: String OPT 
+      AbsenceValue: float64 OPT 
       AttendanceNote: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
@@ -897,7 +897,7 @@ type ResourceUsage_SIF_RefId {
       House: String OPT 
       IndividualLearningPlan: AUCodeSetsYesOrNoCategoryType OPT 
       Calendar: StudentSchoolEnrollment_Calendar OPT
-      ExitDate: String 
+      ExitDate: String OPT 
       ExitStatus: StudentExitStatusContainerType OPT 
       ExitType: StudentExitContainerType OPT 
       FTE: float64 OPT 
@@ -945,25 +945,25 @@ type StudentSchoolEnrollment_Calendar {
     type StudentScoreJudgementAgainstStandard {
         RefId: RefIdType 
       SchoolYear: SchoolYearType 
-      TermInfoRefId: String 
-      LocalTermCode: LocalIdType 
-      StudentPersonalRefId: String 
-      StudentStateProvinceId: StateProvinceIdType 
-      StudentLocalId: LocalIdType 
+      TermInfoRefId: String OPT 
+      LocalTermCode: LocalIdType OPT 
+      StudentPersonalRefId: String OPT 
+      StudentStateProvinceId: StateProvinceIdType OPT 
+      StudentLocalId: LocalIdType OPT 
       YearLevel: YearLevelType 
-      TeachingGroupRefId: String 
-      ClassLocalId: String 
-      StaffPersonalRefId: String 
-      StaffLocalId: LocalIdType 
-      LearningStandardList: LearningStandardListType 
-      CurriculumCode: LocalIdType 
-      CurriculumNodeCode: LocalIdType 
+      TeachingGroupRefId: String OPT 
+      ClassLocalId: String OPT 
+      StaffPersonalRefId: String OPT 
+      StaffLocalId: LocalIdType OPT 
+      LearningStandardList: LearningStandardListType OPT 
+      CurriculumCode: LocalIdType OPT 
+      CurriculumNodeCode: LocalIdType OPT 
       Score: String 
       SpecialCircumstanceLocalCode: LocalIdType OPT 
       ManagedPathwayLocalCode: LocalIdType OPT 
-      SchoolInfoRefId: String 
-      SchoolLocalId: LocalIdType 
-      SchoolCommonwealthId: String 
+      SchoolInfoRefId: String OPT 
+      SchoolLocalId: LocalIdType OPT 
+      SchoolCommonwealthId: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -1014,8 +1014,8 @@ type SystemRole_RoleScopeList {
       RoleScope: [SystemRole_RoleScope] 
 }
 type SystemRole_RoleScope {
-       RoleScopeName: String 
-      RoleScopeRefId: SystemRole_RoleScopeRefId 
+       RoleScopeName: String OPT 
+      RoleScopeRefId: SystemRole_RoleScopeRefId OPT
 }
 type SystemRole_RoleScopeRefId {
       SIF_RefObject: String 
@@ -1131,8 +1131,8 @@ type SystemRole_RoleScopeRefId {
     type TimeTableSubject {
         RefId: RefIdType 
       SubjectLocalId: LocalIdType 
-      AcademicYear: YearLevelType 
-      AcademicYearRange: YearRangeType 
+      AcademicYear: YearLevelType OPT 
+      AcademicYearRange: YearRangeType OPT 
       CourseLocalId: LocalIdType OPT 
       SchoolCourseInfoRefId: RefIdType OPT 
       Faculty: String OPT 
@@ -1160,7 +1160,7 @@ type SystemRole_RoleScopeRefId {
       Date: String 
       WellbeingAlertStartDate: String OPT 
       WellbeingAlertEndDate: String OPT 
-      WellbeingAlertCategory: AUCodeSetsWellbeingAlertCategoryType 
+      WellbeingAlertCategory: AUCodeSetsWellbeingAlertCategoryType OPT 
       WellbeingAlertDescription: String OPT 
       EnrolmentRestricted: AUCodeSetsYesOrNoCategoryType OPT 
       AlertAudience: String OPT 
@@ -1195,7 +1195,7 @@ type SystemRole_RoleScopeRefId {
       LocalId: LocalIdType OPT 
       StudentPersonalRefId: String 
       SchoolInfoRefId: String OPT 
-      WellbeingCharacteristicClassification: AUCodeSetsWellbeingCharacteristicClassificationType 
+      WellbeingCharacteristicClassification: AUCodeSetsWellbeingCharacteristicClassificationType OPT 
       WellbeingCharacteristicStartDate: String OPT 
       WellbeingCharacteristicEndDate: String OPT 
       WellbeingCharacteristicReviewDate: String OPT 
@@ -1221,8 +1221,8 @@ type SystemRole_RoleScopeRefId {
     
     type WellbeingEvent {
         RefId: RefIdType 
-      StudentPersonalRefId: String 
-      GroupIndicator: bool 
+      StudentPersonalRefId: String OPT 
+      GroupIndicator: bool OPT 
       SchoolInfoRefId: String 
       EventId: LocalIdType OPT 
       WellbeingEventNotes: String OPT 
@@ -1236,7 +1236,7 @@ type SystemRole_RoleScopeRefId {
       WellbeingEventDescription: String OPT 
       WellbeingEventTimePeriod: AUCodeSetsWellbeingEventTimePeriodType 
       ConfidentialFlag: AUCodeSetsYesOrNoCategoryType OPT 
-      PersonInvolvementList: PersonInvolvementListType 
+      PersonInvolvementList: PersonInvolvementListType OPT 
       FollowUpActionList: FollowUpActionListType OPT 
       Status: AUCodeSetsWellbeingStatusType OPT 
       DocumentList: WellbeingDocumentListType OPT 
@@ -1255,9 +1255,9 @@ type SystemRole_RoleScopeRefId {
       PersonRefId: WellbeingPersonLink_PersonRefId OPT
       ShortName: String OPT 
       HowInvolved: String OPT 
-      OtherPersonId: LocalIdType 
-      OtherPersonContactDetails: String 
-      PersonRole: String 
+      OtherPersonId: LocalIdType OPT 
+      OtherPersonContactDetails: String OPT 
+      PersonRole: String OPT 
       FollowUpActionList: FollowUpActionListType OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
@@ -1277,7 +1277,7 @@ type SystemRole_RoleScopeRefId {
       Date: String 
       WellbeingResponseStartDate: String 
       WellbeingResponseEndDate: String OPT 
-      WellbeingResponseCategory: AUCodeSetsWellbeingResponseCategoryType 
+      WellbeingResponseCategory: AUCodeSetsWellbeingResponseCategoryType OPT 
       WellbeingResponseNotes: String OPT 
       PersonInvolvementList: PersonInvolvementListType OPT 
       Suspension: SuspensionContainerType OPT 
@@ -1476,8 +1476,8 @@ type SystemRole_RoleScopeRefId {
     type LibraryPatronStatus {
         RefId: RefIdType 
       LibraryType: String 
-      PatronRefId: String 
-      PatronLocalId: LocalIdType 
+      PatronRefId: String OPT 
+      PatronLocalId: LocalIdType OPT 
       PatronRefObject: String 
       PatronName: NameOfRecordType OPT 
       ElectronicIdList: ElectronicIdListType OPT 
@@ -1523,9 +1523,9 @@ type SystemRole_RoleScopeRefId {
       ParticipationCode: AUCodeSetsNAPParticipationCodeType 
       ParticipationText: String 
       Device: String OPT 
-      Date: String 
-      StartTime: String 
-      LapsedTimeTest: String 
+      Date: String OPT 
+      StartTime: String OPT 
+      LapsedTimeTest: String OPT 
       ExemptionReason: String OPT 
       PersonalDetailsChanged: bool OPT 
       PSIOtherIdMatch: bool OPT 
@@ -1544,14 +1544,14 @@ type SystemRole_RoleScopeRefId {
       ReportExclusionFlag: bool 
       CalibrationSampleFlag: String OPT 
       EquatingSampleFlag: String OPT 
-      PathTakenForDomain: String 
-      ParallelTest: String 
+      PathTakenForDomain: String OPT 
+      ParallelTest: String OPT 
       StudentPersonalRefId: String OPT 
       PlatformStudentIdentifier: LocalIdType 
       NAPTestRefId: String OPT 
       NAPTestLocalId: LocalIdType 
-      DomainScore: DomainScoreType 
-      TestletList: NAPStudentResponseTestletListType 
+      DomainScore: DomainScoreType OPT 
+      TestletList: NAPStudentResponseTestletListType OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -1688,18 +1688,18 @@ type SystemRole_RoleScopeRefId {
     type ReportPackageType AbstractContentPackageType
     type AbstractContentPackageType {
         RefId: RefIdType 
-      XMLData: AbstractContentPackageType_XMLData 
-      TextData: AbstractContentPackageType_TextData 
-      BinaryData: AbstractContentPackageType_BinaryData 
-      Reference: AbstractContentPackageType_Reference 
+      XMLData: AbstractContentPackageType_XMLData OPT
+      TextData: AbstractContentPackageType_TextData OPT
+      BinaryData: AbstractContentPackageType_BinaryData OPT
+      Reference: AbstractContentPackageType_Reference OPT
       
       }
     
     type AbstractContentElementType {
-      XMLData: AbstractContentElementType_XMLData 
-      TextData: AbstractContentElementType_TextData 
-      BinaryData: AbstractContentElementType_BinaryData 
-      Reference: AbstractContentElementType_Reference 
+      XMLData: AbstractContentElementType_XMLData OPT
+      TextData: AbstractContentElementType_TextData OPT
+      BinaryData: AbstractContentElementType_BinaryData OPT
+      Reference: AbstractContentElementType_Reference OPT
       
       }
     
@@ -2174,8 +2174,8 @@ type SystemRole_RoleScopeRefId {
       }
     
     type CopyRightContainerType {
-        Date: String 
-      Holder: String 
+        Date: String OPT 
+      Holder: String OPT 
       
       }
     
@@ -2256,9 +2256,9 @@ type SystemRole_RoleScopeRefId {
       }
     
     type GradeType {
-        Percentage: float64 
-      Numeric: float64 
-      Letter: String 
+        Percentage: float64 OPT 
+      Numeric: float64 OPT 
+      Letter: String OPT 
       Narrative: String OPT 
       MarkInfoRefId: String OPT 
       
@@ -2314,7 +2314,7 @@ type SystemRole_RoleScopeRefId {
     
     type WellbeingEventCategoryType {
         EventCategory: String 
-      WellbeingEventSubCategoryList: WellbeingEventSubCategoryListType 
+      WellbeingEventSubCategoryList: WellbeingEventSubCategoryListType OPT 
       
       }
     
@@ -2450,7 +2450,7 @@ type SystemRole_RoleScopeRefId {
       ItemDescriptor: String 
       ReleasedStatus: bool 
       MarkingType: AUCodeSetsNAPTestItemMarkingTypeType 
-      MultipleChoiceOptionCount: int 
+      MultipleChoiceOptionCount: int OPT 
       CorrectAnswer: String OPT 
       MaximumScore: float64 
       ItemDifficulty: float64 
@@ -2832,20 +2832,20 @@ type SystemRole_RoleScopeRefId {
       }
     
     type ContactFlagsType {
-        ParentLegalGuardian: AUCodeSetsYesOrNoCategoryType 
-      PickupRights: AUCodeSetsYesOrNoCategoryType 
-      LivesWith: AUCodeSetsYesOrNoCategoryType 
-      AccessToRecords: AUCodeSetsYesOrNoCategoryType 
-      ReceivesAssessmentReport: AUCodeSetsYesOrNoCategoryType 
-      EmergencyContact: AUCodeSetsYesOrNoCategoryType 
-      HasCustody: AUCodeSetsYesOrNoCategoryType 
-      DisciplinaryContact: AUCodeSetsYesOrNoCategoryType 
-      AttendanceContact: AUCodeSetsYesOrNoCategoryType 
-      PrimaryCareProvider: AUCodeSetsYesOrNoCategoryType 
-      FeesBilling: AUCodeSetsYesOrNoCategoryType 
-      FeesAccess: AUCodeSetsYesOrNoCategoryType 
-      FamilyMail: AUCodeSetsYesOrNoCategoryType 
-      InterventionOrder: AUCodeSetsYesOrNoCategoryType 
+        ParentLegalGuardian: AUCodeSetsYesOrNoCategoryType OPT 
+      PickupRights: AUCodeSetsYesOrNoCategoryType OPT 
+      LivesWith: AUCodeSetsYesOrNoCategoryType OPT 
+      AccessToRecords: AUCodeSetsYesOrNoCategoryType OPT 
+      ReceivesAssessmentReport: AUCodeSetsYesOrNoCategoryType OPT 
+      EmergencyContact: AUCodeSetsYesOrNoCategoryType OPT 
+      HasCustody: AUCodeSetsYesOrNoCategoryType OPT 
+      DisciplinaryContact: AUCodeSetsYesOrNoCategoryType OPT 
+      AttendanceContact: AUCodeSetsYesOrNoCategoryType OPT 
+      PrimaryCareProvider: AUCodeSetsYesOrNoCategoryType OPT 
+      FeesBilling: AUCodeSetsYesOrNoCategoryType OPT 
+      FeesAccess: AUCodeSetsYesOrNoCategoryType OPT 
+      FamilyMail: AUCodeSetsYesOrNoCategoryType OPT 
+      InterventionOrder: AUCodeSetsYesOrNoCategoryType OPT 
       
       }
     
@@ -2980,7 +2980,7 @@ type SystemRole_RoleScopeRefId {
       }
     
     type CampusContainerType {
-        ParentSchoolId: String 
+        ParentSchoolId: String OPT 
       SchoolCampusId: String 
       CampusType: AUCodeSetsSchoolLevelType OPT 
       AdminStatus: AUCodeSetsYesOrNoCategoryType 
@@ -3412,8 +3412,8 @@ type SystemRole_RoleScopeRefId {
       RoomNumber: HomeroomNumberType OPT 
       StaffLocalId: LocalIdType OPT 
       DayId: LocalIdType 
-      PeriodId: LocalIdType 
-      StartTime: String 
+      PeriodId: LocalIdType OPT 
+      StartTime: String OPT 
       CellType: String OPT 
       
       }
@@ -3424,8 +3424,8 @@ type SystemRole_RoleScopeRefId {
       }
     
     type TeachingGroupTeacherType {
-        StaffPersonalRefId: String 
-      StaffLocalId: LocalIdType 
+        StaffPersonalRefId: String OPT 
+      StaffLocalId: LocalIdType OPT 
       Name: NameOfRecordType OPT 
       Association: String 
       
@@ -3437,8 +3437,8 @@ type SystemRole_RoleScopeRefId {
       }
     
     type TeachingGroupStudentType {
-        StudentPersonalRefId: String 
-      StudentLocalId: LocalIdType 
+        StudentPersonalRefId: String OPT 
+      StudentLocalId: LocalIdType OPT 
       Name: NameOfRecordType OPT 
       
       }
@@ -3533,15 +3533,15 @@ type SystemRole_RoleScopeRefId {
     
     type BaseNameType {
         Title: String OPT 
-      FamilyName: String 
-      GivenName: String 
+      FamilyName: String OPT 
+      GivenName: String OPT 
       MiddleName: String OPT 
       FamilyNameFirst: AUCodeSetsYesOrNoCategoryType OPT 
       PreferredFamilyName: String OPT 
       PreferredFamilyNameFirst: AUCodeSetsYesOrNoCategoryType OPT 
       PreferredGivenName: String OPT 
       Suffix: String OPT 
-      FullName: String 
+      FullName: String OPT 
       
       }
     
@@ -3651,7 +3651,7 @@ type SystemRole_RoleScopeRefId {
       EffectiveToDate: String OPT 
       Street: AddressStreetType 
       City: String 
-      StateProvince: StateProvinceType 
+      StateProvince: StateProvinceType OPT 
       Country: CountryType OPT 
       PostalCode: String 
       GridLocation: GridLocationType OPT 

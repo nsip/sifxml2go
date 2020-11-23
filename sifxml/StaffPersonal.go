@@ -10,7 +10,7 @@ type StaffPersonals []StaffPersonal
       ElectronicIdList *ElectronicIdListType `xml:"ElectronicIdList,omitempty" json:"ElectronicIdList"`
       OtherIdList *OtherIdListType `xml:"OtherIdList,omitempty" json:"OtherIdList"`
       PersonInfo *PersonInfoType `xml:"PersonInfo" json:"PersonInfo"`
-      Title *string `xml:"Title,omitempty" json:"Title"`
+      Title *String `xml:"Title,omitempty" json:"Title"`
       EmploymentStatus *AUCodeSetsStaffStatusType `xml:"EmploymentStatus,omitempty" json:"EmploymentStatus"`
       MostRecent *StaffMostRecentContainerType `xml:"MostRecent,omitempty" json:"MostRecent"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`

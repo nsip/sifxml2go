@@ -6,13 +6,13 @@ type WellbeingResponses []WellbeingResponse
     type WellbeingResponse struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
-      Date *string `xml:"Date" json:"Date"`
-      WellbeingResponseStartDate *string `xml:"WellbeingResponseStartDate" json:"WellbeingResponseStartDate"`
-      WellbeingResponseEndDate *string `xml:"WellbeingResponseEndDate,omitempty" json:"WellbeingResponseEndDate"`
-      WellbeingResponseCategory *AUCodeSetsWellbeingResponseCategoryType `xml:"WellbeingResponseCategory" json:"WellbeingResponseCategory"`
-      WellbeingResponseNotes *string `xml:"WellbeingResponseNotes,omitempty" json:"WellbeingResponseNotes"`
+      StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
+      Date *String `xml:"Date" json:"Date"`
+      WellbeingResponseStartDate *String `xml:"WellbeingResponseStartDate" json:"WellbeingResponseStartDate"`
+      WellbeingResponseEndDate *String `xml:"WellbeingResponseEndDate,omitempty" json:"WellbeingResponseEndDate"`
+      WellbeingResponseCategory *AUCodeSetsWellbeingResponseCategoryType `xml:"WellbeingResponseCategory,omitempty" json:"WellbeingResponseCategory"`
+      WellbeingResponseNotes *String `xml:"WellbeingResponseNotes,omitempty" json:"WellbeingResponseNotes"`
       PersonInvolvementList *PersonInvolvementListType `xml:"PersonInvolvementList,omitempty" json:"PersonInvolvementList"`
       Suspension *SuspensionContainerType `xml:"Suspension,omitempty" json:"Suspension"`
       Detention *DetentionContainerType `xml:"Detention,omitempty" json:"Detention"`

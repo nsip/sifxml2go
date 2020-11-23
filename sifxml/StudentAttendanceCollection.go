@@ -6,8 +6,8 @@ type StudentAttendanceCollections []StudentAttendanceCollection
     type StudentAttendanceCollection struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StudentAttendanceCollectionYear *SchoolYearType `xml:"StudentAttendanceCollectionYear" json:"StudentAttendanceCollectionYear"`
-      RoundCode *string `xml:"RoundCode" json:"RoundCode"`
-      ReportingAuthorityCommonwealthId *string `xml:"ReportingAuthorityCommonwealthId,omitempty" json:"ReportingAuthorityCommonwealthId"`
+      RoundCode *String `xml:"RoundCode" json:"RoundCode"`
+      ReportingAuthorityCommonwealthId *String `xml:"ReportingAuthorityCommonwealthId,omitempty" json:"ReportingAuthorityCommonwealthId"`
       SoftwareVendorInfo *SoftwareVendorInfoContainerType `xml:"SoftwareVendorInfo,omitempty" json:"SoftwareVendorInfo"`
       StudentAttendanceCollectionReportingList *StudentAttendanceCollectionReportingListType `xml:"StudentAttendanceCollectionReportingList,omitempty" json:"StudentAttendanceCollectionReportingList"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`

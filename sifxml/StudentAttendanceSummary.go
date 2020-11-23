@@ -4,20 +4,20 @@ package sifxml
 type StudentAttendanceSummarys []StudentAttendanceSummary
 
     type StudentAttendanceSummary struct {
-        StudentAttendanceSummaryRefId *string `xml:"StudentAttendanceSummaryRefId,attr" json:"StudentAttendanceSummaryRefId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
+        StudentAttendanceSummaryRefId *String `xml:"StudentAttendanceSummaryRefId,attr" json:"StudentAttendanceSummaryRefId"`
+      StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
-      StartDate *string `xml:"StartDate" json:"StartDate"`
-      EndDate *string `xml:"EndDate" json:"EndDate"`
-      StartDay *int `xml:"StartDay" json:"StartDay"`
-      EndDay *int `xml:"EndDay" json:"EndDay"`
-      FTE *float64 `xml:"FTE" json:"FTE"`
-      DaysAttended *float64 `xml:"DaysAttended" json:"DaysAttended"`
-      ExcusedAbsences *float64 `xml:"ExcusedAbsences" json:"ExcusedAbsences"`
-      UnexcusedAbsences *float64 `xml:"UnexcusedAbsences" json:"UnexcusedAbsences"`
-      DaysTardy *float64 `xml:"DaysTardy" json:"DaysTardy"`
-      DaysInMembership *float64 `xml:"DaysInMembership" json:"DaysInMembership"`
+      StartDate *String `xml:"StartDate" json:"StartDate"`
+      EndDate *String `xml:"EndDate" json:"EndDate"`
+      StartDay *Int `xml:"StartDay,omitempty" json:"StartDay"`
+      EndDay *Int `xml:"EndDay,omitempty" json:"EndDay"`
+      FTE *Float `xml:"FTE,omitempty" json:"FTE"`
+      DaysAttended *Float `xml:"DaysAttended" json:"DaysAttended"`
+      ExcusedAbsences *Float `xml:"ExcusedAbsences" json:"ExcusedAbsences"`
+      UnexcusedAbsences *Float `xml:"UnexcusedAbsences" json:"UnexcusedAbsences"`
+      DaysTardy *Float `xml:"DaysTardy,omitempty" json:"DaysTardy"`
+      DaysInMembership *Float `xml:"DaysInMembership" json:"DaysInMembership"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`

@@ -16,8 +16,8 @@ type PersonPictures []PersonPicture
       
       }
     type PersonPicture_ParentObjectRefId struct {
-      SIF_RefObject *string `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
-      Value *string `xml:",chardata" json:"value"`
+      SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      Value *String `xml:",chardata" json:"value"`
 }
 type PersonPicture_PictureSource struct {
       Type *AUCodeSetsPictureSourceType `xml:"Type,attr" json:"Type"`

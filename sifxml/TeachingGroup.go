@@ -7,12 +7,12 @@ type TeachingGroups []TeachingGroup
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
-      ShortName *string `xml:"ShortName" json:"ShortName"`
-      LongName *string `xml:"LongName,omitempty" json:"LongName"`
-      GroupType *string `xml:"GroupType,omitempty" json:"GroupType"`
-      Sett *string `xml:"Set,omitempty" json:"Set"`
-      Block *string `xml:"Block,omitempty" json:"Block"`
-      CurriculumLevel *string `xml:"CurriculumLevel,omitempty" json:"CurriculumLevel"`
+      ShortName *String `xml:"ShortName" json:"ShortName"`
+      LongName *String `xml:"LongName,omitempty" json:"LongName"`
+      GroupType *String `xml:"GroupType,omitempty" json:"GroupType"`
+      Sett *String `xml:"Set,omitempty" json:"Set"`
+      Block *String `xml:"Block,omitempty" json:"Block"`
+      CurriculumLevel *String `xml:"CurriculumLevel,omitempty" json:"CurriculumLevel"`
       SchoolInfoRefId *RefIdType `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId"`
       SchoolCourseInfoRefId *RefIdType `xml:"SchoolCourseInfoRefId,omitempty" json:"SchoolCourseInfoRefId"`
@@ -20,11 +20,11 @@ type TeachingGroups []TeachingGroup
       TimeTableSubjectRefId *RefIdType `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
       TimeTableSubjectLocalId *LocalIdType `xml:"TimeTableSubjectLocalId,omitempty" json:"TimeTableSubjectLocalId"`
       KeyLearningArea *AUCodeSetsACStrandType `xml:"KeyLearningArea,omitempty" json:"KeyLearningArea"`
-      Semester *int `xml:"Semester" json:"Semester"`
+      Semester *Int `xml:"Semester,omitempty" json:"Semester"`
       StudentList *StudentListType `xml:"StudentList,omitempty" json:"StudentList"`
       TeacherList *TeacherListType `xml:"TeacherList,omitempty" json:"TeacherList"`
-      MinClassSize *int `xml:"MinClassSize" json:"MinClassSize"`
-      MaxClassSize *int `xml:"MaxClassSize" json:"MaxClassSize"`
+      MinClassSize *Int `xml:"MinClassSize,omitempty" json:"MinClassSize"`
+      MaxClassSize *Int `xml:"MaxClassSize,omitempty" json:"MaxClassSize"`
       TeachingGroupPeriodList *TeachingGroupPeriodListType `xml:"TeachingGroupPeriodList,omitempty" json:"TeachingGroupPeriodList"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`

@@ -5,8 +5,8 @@ type Activitys []Activity
 
     type Activity struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      Title *string `xml:"Title,omitempty" json:"Title"`
-      Preamble *string `xml:"Preamble,omitempty" json:"Preamble"`
+      Title *String `xml:"Title,omitempty" json:"Title"`
+      Preamble *String `xml:"Preamble,omitempty" json:"Preamble"`
       TechnicalRequirements *TechnicalRequirementsType `xml:"TechnicalRequirements,omitempty" json:"TechnicalRequirements"`
       SoftwareRequirementList *SoftwareRequirementListType `xml:"SoftwareRequirementList,omitempty" json:"SoftwareRequirementList"`
       EssentialMaterials *EssentialMaterialsType `xml:"EssentialMaterials,omitempty" json:"EssentialMaterials"`
@@ -16,11 +16,11 @@ type Activitys []Activity
       Prerequisites *PrerequisitesType `xml:"Prerequisites,omitempty" json:"Prerequisites"`
       Students *StudentsType `xml:"Students,omitempty" json:"Students"`
       SourceObjects *SourceObjectsType `xml:"SourceObjects,omitempty" json:"SourceObjects"`
-      Points *int `xml:"Points" json:"Points"`
+      Points *Int `xml:"Points,omitempty" json:"Points"`
       ActivityTime *ActivityTimeType `xml:"ActivityTime" json:"ActivityTime"`
-      AssessmentRefId *string `xml:"AssessmentRefId,omitempty" json:"AssessmentRefId"`
-      MaxAttemptsAllowed *int `xml:"MaxAttemptsAllowed" json:"MaxAttemptsAllowed"`
-      ActivityWeight *float64 `xml:"ActivityWeight" json:"ActivityWeight"`
+      AssessmentRefId *String `xml:"AssessmentRefId,omitempty" json:"AssessmentRefId"`
+      MaxAttemptsAllowed *Int `xml:"MaxAttemptsAllowed,omitempty" json:"MaxAttemptsAllowed"`
+      ActivityWeight *Float `xml:"ActivityWeight,omitempty" json:"ActivityWeight"`
       Evaluation *Activity_Evaluation
       LearningResources *LearningResourcesType `xml:"LearningResources,omitempty" json:"LearningResources"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
@@ -29,6 +29,6 @@ type Activitys []Activity
       
       }
     type Activity_Evaluation struct {
-      EvaluationType *string `xml:"EvaluationType,attr" json:"EvaluationType"`
-       Description *string `xml:"Description,omitempty" json:"Description"`
+      EvaluationType *String `xml:"EvaluationType,attr" json:"EvaluationType"`
+       Description *String `xml:"Description,omitempty" json:"Description"`
 }

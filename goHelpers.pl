@@ -4,10 +4,15 @@
 %list = ();
 %inherit = ();
 %codeset = ();
+@object = ();
 
 while(<>) {
   print STDERR $_;
   chomp;
+  if (m/^type (\S+?)s \[\]\1$/) {
+    ($name) = (m/^type (\S+?)s \[\]\1/);
+    push @object, $name;
+  }
   if (m/^\s*var\s+\S+\s+=\s+\[\]/) {
     ($name) = m/^\s*var\s+(\S+)\s+=\s+\[\]/;
     $name =~ s/_values//;
@@ -51,6 +56,11 @@ foreach $k (keys %alias) {
     $alias{$k} = $alias{$alias{$k}};
   }
 } 
+foreach $k (keys %alias) {
+  if ($alias{$alias{$k}}) {
+    $alias{$k} = $alias{$alias{$k}};
+  }
+} 
 
 print <<"END";
 package sifxml
@@ -60,7 +70,8 @@ import (
   "log"
   "reflect"
 
-      "github.com/ulule/deepcopier"
+  //"github.com/jinzhu/copier"
+  "github.com/mohae/deepcopy"
   )
 
 func IntCreate(x int) *int {
@@ -71,8 +82,8 @@ func FloatCreate(x float64) *float64 {
   return &x
 }
 
-func StringCreate(x string) *string {
-  return &x
+func StringCreate(x string) *String {
+  return (*String)(&x)
 }
 
 func BoolCreate(x bool) *bool {
@@ -80,6 +91,14 @@ func BoolCreate(x bool) *bool {
 }
 
 END
+
+foreach $n (@object) {
+  print <<"END";
+func ${n}Slice() []*$n {
+  return make([]*$n, 0)
+  }
+END
+}
 
 foreach $n (keys %types) {
   print <<"END";
@@ -91,11 +110,14 @@ func (n *$n) New() *$n {
         return ${n}Create($n\{\})
 }
 
-func (n *$n) Clone() $n {
-  resource := &$n\{\}
-  deepcopier.Copy(n).To(resource)
+/*
+func (value *$n) Clone() $n {
+  //resource := &$n\{\}
+  //copier.Copy(resource, value)
+  resource := deepcopy.Copy(value)
   return *resource
   }
+  */
 
 END
 }
@@ -155,11 +177,34 @@ END
 }
 
 foreach $n (keys %alias_orig) {
+  if ($alias{$n} eq 'string') {
   print <<"END";
 func (t *$n) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
 END
+}
+ if ($alias{$n} eq 'int') {
+  print <<"END";
+func (t *$n) Int() int {
+  return int((reflect.ValueOf(*t).Interface()).($n))
+  }
+END
+}
+ if ($alias{$n} eq 'bool') {
+  print <<"END";
+func (t *$n) Bool() bool {
+  return bool((reflect.ValueOf(*t).Interface()).($n))
+  }
+END
+}
+ if ($alias{$n} eq 'float64') {
+  print <<"END";
+func (t *$n) Float() float64 {
+  return float64((reflect.ValueOf(*t).Interface()).($n))
+  }
+END
+}
 }
 
 foreach $n (keys %types) {
@@ -168,6 +213,18 @@ foreach $n (keys %types) {
 
 func (t *$n) CopyString(key string, value interface{}) *$n {
   return t.Set(key, fmt.Sprint(reflect.ValueOf(value).Elem().Interface()))
+}
+
+
+func (t *$n) CopyClone(key string, value interface{}) *$n {
+  if value == nil || reflect.ValueOf(value).IsNil() {
+    return t
+    }
+  //resource := reflect.New(reflect.TypeOf(value).Elem())
+  //copier.Copy(resource, value)
+  resource := deepcopy.Copy(value)
+  //return t.Set(key, resource.Elem().Interface())
+  return t.Set(key, reflect.ValueOf(resource).Elem().Interface())
 }
 
 func (n *$n) Unset(key string) *$n {

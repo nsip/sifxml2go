@@ -5,9 +5,9 @@ type StudentAttendanceTimeLists []StudentAttendanceTimeList
 
     type StudentAttendanceTimeList struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      StudentPersonalRefId *string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
-      Date *string `xml:"Date" json:"Date"`
+      StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
+      SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
+      Date *String `xml:"Date" json:"Date"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       AttendanceTimes *AttendanceTimesType `xml:"AttendanceTimes,omitempty" json:"AttendanceTimes"`
       PeriodAttendances *PeriodAttendancesType `xml:"PeriodAttendances,omitempty" json:"PeriodAttendances"`

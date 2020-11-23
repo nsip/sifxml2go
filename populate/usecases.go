@@ -24,18 +24,18 @@ Use case creators will by default create all the objects they need, but can opti
 /* counts of staff and students per school */
 func MakeTeachingGroupsBare(studentcount int, staffcount int, schoolcount int) TG_usecase {
 	ret := TG_usecase{
-		Schools:        make([]*sifxml.SchoolInfo, 0),
-		Students:       make([]*sifxml.StudentPersonal, 0),
-		Staff:          make([]*sifxml.StaffPersonal, 0),
-		Enrolments:     make([]*sifxml.StudentSchoolEnrollment, 0),
-		Assignments:    make([]*sifxml.StaffAssignment, 0),
-		TeachingGroups: make([]*sifxml.TeachingGroup, 0),
+		Schools:        sifxml.SchoolInfoSlice(),
+		Students:       sifxml.StudentPersonalSlice(),
+		Staff:          sifxml.StaffPersonalSlice(),
+		Enrolments:     sifxml.StudentSchoolEnrollmentSlice(),
+		Assignments:    sifxml.StaffAssignmentSlice(),
+		TeachingGroups: sifxml.TeachingGroupSlice(),
 	}
 	for i := 0; i < schoolcount; i++ {
-		school := Create_SchoolInfo()
+		school := Create_SchoolInfo("Pri/Sec")
 		staff := Create_StaffPersonals(staffcount)
 		assignments := Create_StaffAssignments(staff, school)
-		students := Create_StudentPersonals(studentcount)
+		students := Create_StudentPersonals(studentcount, Schooltype2Yearlevels("Pri/Sec"))
 		enrolments := Create_StudentSchoolEnrollments(students, school)
 
 		in := MakeTeachingGroups(school, staff, assignments, students, enrolments)
@@ -53,12 +53,12 @@ func MakeTeachingGroupsBare(studentcount int, staffcount int, schoolcount int) T
 /* presupposed for a single school */
 func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal, assignments []*sifxml.StaffAssignment, students []*sifxml.StudentPersonal, enrolments []*sifxml.StudentSchoolEnrollment) TG_usecase {
 	ret := TG_usecase{
-		Schools:        make([]*sifxml.SchoolInfo, 0),
+		Schools:        sifxml.SchoolInfoSlice(),
 		Students:       students,
 		Staff:          staff,
 		Enrolments:     enrolments,
 		Assignments:    assignments,
-		TeachingGroups: make([]*sifxml.TeachingGroup, 0),
+		TeachingGroups: sifxml.TeachingGroupSlice(),
 	}
 	ret.Schools = append(ret.Schools, school)
 	yrs := []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
@@ -66,11 +66,11 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 
 	/* split up staff */
 	staffcount := len(staff)
-	primarystaff := make([]*sifxml.StaffPersonal, 0)
+	primarystaff := sifxml.StaffPersonalSlice()
 	for i := 0; i < staffcount/2; i++ {
 		primarystaff = append(primarystaff, staff[i])
 	}
-	secondarystaff := make([]*sifxml.StaffPersonal, 0)
+	secondarystaff := sifxml.StaffPersonalSlice()
 	for i := staffcount / 2; i < staffcount; i++ {
 		secondarystaff = append(secondarystaff, staff[i])
 	}
@@ -83,7 +83,7 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 		staffpersubject_count = 1
 	}
 	for _, s := range subjects {
-		subjectstaff[s] = make([]*sifxml.StaffPersonal, 0)
+		subjectstaff[s] = sifxml.StaffPersonalSlice()
 		for j := 0; j < staffpersubject_count; j++ {
 			idx := random_seq_gen(fmt.Sprintf("%s-%s", school.RefId.String(), s), len(secondarystaff))
 			subjectstaff[s] = append(subjectstaff[s], secondarystaff[idx])
@@ -93,7 +93,7 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 	/* split up students */
 	studentsperyr := make(map[string][]*sifxml.StudentPersonal)
 	for _, y := range yrs {
-		studentsperyr[y] = make([]*sifxml.StudentPersonal, 0)
+		studentsperyr[y] = sifxml.StudentPersonalSlice()
 	}
 	for _, s := range students {
 		studentsperyr[s.MostRecent.YearLevel.Code.String()] = append(studentsperyr[s.MostRecent.YearLevel.Code.String()], s)
@@ -102,11 +102,11 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 	/* 1 teacher per group out of primary staff, students only in 1 group, no subject distinctions */
 	for _, y := range []string{"1", "2", "3", "4", "5", "6"} {
 		for studentidx := 0; studentidx*20 < len(studentsperyr[y]); studentidx++ {
-			class_students := make([]*sifxml.StudentPersonal, 0)
+			class_students := sifxml.StudentPersonalSlice()
 			for i := studentidx * 20; i < len(studentsperyr[y]) && i < studentidx*20+20; i++ {
 				class_students = append(class_students, studentsperyr[y][i])
 			}
-			class_teachers := make([]*sifxml.StaffPersonal, 0)
+			class_teachers := sifxml.StaffPersonalSlice()
 			class_teachers = append(class_teachers, primarystaff[rand.Intn(len(primarystaff))])
 			tg := Create_TeachingGroup(school, class_students, class_teachers)
 			tg.Set("ShortName", y+string(65+studentidx))
@@ -119,11 +119,11 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 	/* 1 teacher per group out of secondary staff, students only in 1 group, no subject distinctions */
 	for _, y := range []string{"7", "8", "9"} {
 		for studentidx := 0; studentidx*20 < len(studentsperyr[y]); studentidx++ {
-			class_students := make([]*sifxml.StudentPersonal, 0)
+			class_students := sifxml.StudentPersonalSlice()
 			for i := studentidx * 20; i < len(studentsperyr[y]) && i < studentidx*20+20; i++ {
 				class_students = append(class_students, studentsperyr[y][i])
 			}
-			class_teachers := make([]*sifxml.StaffPersonal, 0)
+			class_teachers := sifxml.StaffPersonalSlice()
 			class_teachers = append(class_teachers, secondarystaff[rand.Intn(len(secondarystaff))])
 			tg := Create_TeachingGroup(school, class_students, class_teachers)
 			tg.Set("ShortName", y+string(65+studentidx))
@@ -146,7 +146,7 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 		}
 		subject2students := make(map[string][]*sifxml.StudentPersonal)
 		for _, s := range subjects {
-			subject2students[s] = make([]*sifxml.StudentPersonal, 0)
+			subject2students[s] = sifxml.StudentPersonalSlice()
 		}
 		for k, v := range student2subjects {
 			for _, s := range v {
@@ -156,11 +156,11 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 
 		for _, s := range subjects {
 			for studentidx := 0; studentidx*20 < len(subject2students[s]); studentidx++ {
-				class_students := make([]*sifxml.StudentPersonal, 0)
+				class_students := sifxml.StudentPersonalSlice()
 				for i := studentidx * 20; i < len(subject2students[s]) && i < studentidx*20+20; i++ {
 					class_students = append(class_students, subject2students[s][i])
 				}
-				class_teachers := make([]*sifxml.StaffPersonal, 0)
+				class_teachers := sifxml.StaffPersonalSlice()
 				class_teachers = append(class_teachers, subjectstaff[s][rand.Intn(len(subjectstaff[s]))])
 				tg := Create_TeachingGroup(school, class_students, class_teachers)
 				tg.Set("ShortName", s+" "+y+string(65+studentidx))

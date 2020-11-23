@@ -20,7 +20,7 @@ type StudentPersonals []StudentPersonal
       GiftedTalented *AUCodeSetsYesOrNoCategoryType `xml:"GiftedTalented,omitempty" json:"GiftedTalented"`
       EconomicDisadvantage *AUCodeSetsYesOrNoCategoryType `xml:"EconomicDisadvantage,omitempty" json:"EconomicDisadvantage"`
       ESL *AUCodeSetsYesOrNoCategoryType `xml:"ESL,omitempty" json:"ESL"`
-      ESLDateAssessed *string `xml:"ESLDateAssessed,omitempty" json:"ESLDateAssessed"`
+      ESLDateAssessed *String `xml:"ESLDateAssessed,omitempty" json:"ESLDateAssessed"`
       YoungCarersRole *AUCodeSetsYesOrNoCategoryType `xml:"YoungCarersRole,omitempty" json:"YoungCarersRole"`
       Disability *AUCodeSetsYesOrNoCategoryType `xml:"Disability,omitempty" json:"Disability"`
       IntegrationAide *AUCodeSetsYesOrNoCategoryType `xml:"IntegrationAide,omitempty" json:"IntegrationAide"`
@@ -29,9 +29,9 @@ type StudentPersonals []StudentPersonal
       Sensitive *AUCodeSetsYesOrNoCategoryType `xml:"Sensitive,omitempty" json:"Sensitive"`
       OfflineDelivery *AUCodeSetsYesOrNoCategoryType `xml:"OfflineDelivery,omitempty" json:"OfflineDelivery"`
       ESLSupport *AUCodeSetsYesOrNoCategoryType `xml:"ESLSupport,omitempty" json:"ESLSupport"`
-      PrePrimaryEducation *string `xml:"PrePrimaryEducation,omitempty" json:"PrePrimaryEducation"`
+      PrePrimaryEducation *String `xml:"PrePrimaryEducation,omitempty" json:"PrePrimaryEducation"`
       PrePrimaryEducationHours *AUCodeSetsPrePrimaryHoursType `xml:"PrePrimaryEducationHours,omitempty" json:"PrePrimaryEducationHours"`
-      FirstAUSchoolEnrollment *string `xml:"FirstAUSchoolEnrollment,omitempty" json:"FirstAUSchoolEnrollment"`
+      FirstAUSchoolEnrollment *String `xml:"FirstAUSchoolEnrollment,omitempty" json:"FirstAUSchoolEnrollment"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`

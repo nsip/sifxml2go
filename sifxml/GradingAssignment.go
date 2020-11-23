@@ -5,21 +5,21 @@ type GradingAssignments []GradingAssignment
 
     type GradingAssignment struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      TeachingGroupRefId *string `xml:"TeachingGroupRefId,omitempty" json:"TeachingGroupRefId"`
+      TeachingGroupRefId *String `xml:"TeachingGroupRefId,omitempty" json:"TeachingGroupRefId"`
       StudentPersonalRefIdList *StudentsType `xml:"StudentPersonalRefIdList,omitempty" json:"StudentPersonalRefIdList"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
-      GradingCategory *string `xml:"GradingCategory,omitempty" json:"GradingCategory"`
-      Description *string `xml:"Description" json:"Description"`
-      PointsPossible *int `xml:"PointsPossible" json:"PointsPossible"`
-      CreateDate *string `xml:"CreateDate,omitempty" json:"CreateDate"`
-      DueDate *string `xml:"DueDate,omitempty" json:"DueDate"`
-      Weight *float64 `xml:"Weight" json:"Weight"`
-      MaxAttemptsAllowed *int `xml:"MaxAttemptsAllowed" json:"MaxAttemptsAllowed"`
-      DetailedDescriptionURL *string `xml:"DetailedDescriptionURL,omitempty" json:"DetailedDescriptionURL"`
-      DetailedDescriptionBinary *string `xml:"DetailedDescriptionBinary,omitempty" json:"DetailedDescriptionBinary"`
-      AssessmentType *string `xml:"AssessmentType,omitempty" json:"AssessmentType"`
-      LevelAssessed *string `xml:"LevelAssessed,omitempty" json:"LevelAssessed"`
-      AssignmentPurpose *string `xml:"AssignmentPurpose,omitempty" json:"AssignmentPurpose"`
+      SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
+      GradingCategory *String `xml:"GradingCategory,omitempty" json:"GradingCategory"`
+      Description *String `xml:"Description" json:"Description"`
+      PointsPossible *Int `xml:"PointsPossible" json:"PointsPossible"`
+      CreateDate *String `xml:"CreateDate,omitempty" json:"CreateDate"`
+      DueDate *String `xml:"DueDate,omitempty" json:"DueDate"`
+      Weight *Float `xml:"Weight,omitempty" json:"Weight"`
+      MaxAttemptsAllowed *Int `xml:"MaxAttemptsAllowed,omitempty" json:"MaxAttemptsAllowed"`
+      DetailedDescriptionURL *String `xml:"DetailedDescriptionURL,omitempty" json:"DetailedDescriptionURL"`
+      DetailedDescriptionBinary *String `xml:"DetailedDescriptionBinary,omitempty" json:"DetailedDescriptionBinary"`
+      AssessmentType *String `xml:"AssessmentType,omitempty" json:"AssessmentType"`
+      LevelAssessed *String `xml:"LevelAssessed,omitempty" json:"LevelAssessed"`
+      AssignmentPurpose *String `xml:"AssignmentPurpose,omitempty" json:"AssignmentPurpose"`
       SubAssignmentList *AssignmentListType `xml:"SubAssignmentList,omitempty" json:"SubAssignmentList"`
       RubricScoringGuide *GenericRubricType `xml:"RubricScoringGuide,omitempty" json:"RubricScoringGuide"`
       PrerequisiteList *PrerequisitesType `xml:"PrerequisiteList,omitempty" json:"PrerequisiteList"`

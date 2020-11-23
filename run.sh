@@ -58,6 +58,8 @@ cat specgen_input/80_BackMatter/Generic-CommonTypes.xml >> data.xml
 cat specgen_input/80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml >> data.xml
 echo '</root>' >> data.xml
 xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/DataModel.go
+echo "type String string\ntype Int int\ntype Float float64\ntype Bool bool" >> sifxml/DataModel.go
+
 xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
 
 echo '<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://sifassociation.org/SpecGen" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" >' > codesets.xml

@@ -5,11 +5,11 @@ type TimeTableCells []TimeTableCell
 
     type TimeTableCell struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      TimeTableRefId *string `xml:"TimeTableRefId" json:"TimeTableRefId"`
-      TimeTableSubjectRefId *string `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
-      TeachingGroupRefId *string `xml:"TeachingGroupRefId" json:"TeachingGroupRefId"`
-      RoomInfoRefId *string `xml:"RoomInfoRefId,omitempty" json:"RoomInfoRefId"`
-      StaffPersonalRefId *string `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId"`
+      TimeTableRefId *String `xml:"TimeTableRefId" json:"TimeTableRefId"`
+      TimeTableSubjectRefId *String `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId"`
+      TeachingGroupRefId *String `xml:"TeachingGroupRefId" json:"TeachingGroupRefId"`
+      RoomInfoRefId *String `xml:"RoomInfoRefId,omitempty" json:"RoomInfoRefId"`
+      StaffPersonalRefId *String `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId"`
       TimeTableLocalId *LocalIdType `xml:"TimeTableLocalId,omitempty" json:"TimeTableLocalId"`
       SubjectLocalId *LocalIdType `xml:"SubjectLocalId,omitempty" json:"SubjectLocalId"`
       TeachingGroupLocalId *LocalIdType `xml:"TeachingGroupLocalId,omitempty" json:"TeachingGroupLocalId"`
@@ -17,8 +17,8 @@ type TimeTableCells []TimeTableCell
       StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId"`
       DayId *LocalIdType `xml:"DayId" json:"DayId"`
       PeriodId *LocalIdType `xml:"PeriodId" json:"PeriodId"`
-      CellType *string `xml:"CellType" json:"CellType"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
+      CellType *String `xml:"CellType" json:"CellType"`
+      SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`
       SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId"`
       TeacherList *ScheduledTeacherListType `xml:"TeacherList,omitempty" json:"TeacherList"`
       RoomList *RoomListType `xml:"RoomList,omitempty" json:"RoomList"`

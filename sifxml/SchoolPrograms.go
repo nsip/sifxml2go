@@ -5,7 +5,7 @@ type SchoolProgramss []SchoolPrograms
 
     type SchoolPrograms struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      SchoolInfoRefId *string `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
+      SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear"`
       SchoolProgramList *SchoolProgramListType `xml:"SchoolProgramList,omitempty" json:"SchoolProgramList"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`

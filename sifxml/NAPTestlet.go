@@ -5,7 +5,7 @@ type NAPTestlets []NAPTestlet
 
     type NAPTestlet struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      NAPTestRefId *string `xml:"NAPTestRefId,omitempty" json:"NAPTestRefId"`
+      NAPTestRefId *String `xml:"NAPTestRefId,omitempty" json:"NAPTestRefId"`
       NAPTestLocalId *LocalIdType `xml:"NAPTestLocalId" json:"NAPTestLocalId"`
       TestletContent *NAPTestletContentType `xml:"TestletContent" json:"TestletContent"`
       TestItemList *NAPTestItemListType `xml:"TestItemList" json:"TestItemList"`
