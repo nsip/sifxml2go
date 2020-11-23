@@ -70,30 +70,29 @@ import (
   "log"
   "reflect"
 
-  //"github.com/jinzhu/copier"
   "github.com/mohae/deepcopy"
   )
 
-func IntCreate(x int) *int {
-  return &x
+type Prop struct {
+  Key string
+  Value interface{}
 }
 
-func FloatCreate(x float64) *float64 {
-  return &x
-}
+func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
 
-func StringCreate(x string) *String {
-  return (*String)(&x)
-}
-
-func BoolCreate(x bool) *bool {
-  return &x
-}
+ 	vstr, ok := value.(string)
+ 	if !ok {
+ 		return ok
+ 	}
+ 	_, ok = codeset[vstr]
+ 	return ok
+ }
 
 END
 
 foreach $n (@object) {
   print <<"END";
+  // XXXXX
 func ${n}Slice() []*$n {
   return make([]*$n, 0)
   }
@@ -101,47 +100,34 @@ END
 }
 
 foreach $n (keys %types) {
+  next if %alias_orig{$n};
   print <<"END";
-func ${n}Create(x $n) *$n {
-        return &x
-}
-
-func (n *$n) New() *$n {
-        return ${n}Create($n\{\})
-}
-
-/*
-func (value *$n) Clone() $n {
-  //resource := &$n\{\}
-  //copier.Copy(resource, value)
-  resource := deepcopy.Copy(value)
-  return *resource
+  func ${n}Pointer(value interface{}) (*$n, bool) {
+switch t := value.(type) {
+        case *$n:
+                return value.(*$n), true
+        case $n:
+                v, _ := value.($n)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to $n\\n", t, value)
+        }
+        return nil, false
   }
-  */
-
 END
 }
 
+
 foreach $n (keys %list) {
-  $emptytype= "$list{$n}{TYPE}\{\}";
-  if ($list{$n}{TYPE} eq "string" or $alias{$list{$n}{TYPE}} eq "string") {
-    $emptytype= "\"\"";
-  }
-  if ($list{$n}{TYPE} eq "float64" or $alias{$list{$n}{TYPE}} eq "float64") {
-    $emptytype= "0";
-  }
-  if ($list{$n}{TYPE} eq "int" or $alias{$list{$n}{TYPE}} eq "int") {
-    $emptytype= "0";
-  }
-  if ($list{$n}{TYPE} eq "bool" or $alias{$list{$n}{TYPE}} eq "bool") {
-    $emptytype= "false";
-  }
-  $cv = codeset_validate($list{$n}{TYPE}, 0);
+  $emptytype= emptytype($list{$n}{TYPE});
+      $cv = codeset_validate($$list{$n}{TYPE});
   print <<"END";
+
+  // Matt's Append is my AddNew
   func (t *$n) Append(value $list{$n}{TYPE}) *$n {
     $cv
         if t == nil {
-                t = ${n}Create(${n}\{\})
+                t, _ = ${n}Pointer(${n}\{\})
         }
         if t.$list{$n}{KEY} == nil {
                 t.$list{$n}{KEY} = make([]$list{$n}{TYPE}, 0)
@@ -152,7 +138,7 @@ foreach $n (keys %list) {
 
 func (t *$n) AddNew() *$n {
         if t == nil {
-                t = ${n}Create(${n}\{\})
+                t, _ = ${n}Pointer(${n}\{\})
         }
         if t.$list{$n}{KEY} == nil {
                 t.$list{$n}{KEY} = make([]$list{$n}{TYPE}, 0)
@@ -162,6 +148,9 @@ func (t *$n) AddNew() *$n {
 }
 
 func (t *$n) Last() *$list{$n}{TYPE} {
+  if t.$list{$n}{KEY} == nil {
+    t = t.AddNew()
+    }
         return &(t.$list{$n}{KEY}\[len(t.$list{$n}{KEY})-1])
 }
 
@@ -179,29 +168,129 @@ END
 foreach $n (keys %alias_orig) {
   if ($alias{$n} eq 'string') {
   print <<"END";
+  // XXXXX
 func (t *$n) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
+
+func ${n}Pointer(value interface{}) (*$n, bool) {
+switch t := value.(type) {
+ 	case *$n:
+ 		return value.(*$n), true
+        case $n:
+ 		v, _ := value.($n)
+ 		return &v, true
+ 	case *string:
+ 		vstr, _ := value.(*string)
+ 		v := $n(*vstr)
+ 		return &v, true
+ 	case string:
+ 		vstr, _ := value.(string)
+ 		v := $n(vstr)
+ 		return &v, true
+ 	default:
+ 		fmt.Printf("Warning: cannot resolve %T (%v) to $n\\n", t, value)
+ 	}
+ 	return nil, false
+  }
+
+
 END
 }
  if ($alias{$n} eq 'int') {
   print <<"END";
+  // XXXXX
 func (t *$n) Int() int {
   return int((reflect.ValueOf(*t).Interface()).($n))
   }
+
+func ${n}Pointer(value interface{}) (*$n, bool) {
+switch t := value.(type) {
+        case *$n:
+                return value.(*$n), true
+        case $n:
+                v, _ := value.($n)
+                return &v, true
+        case *int:
+ 		vstr, _ := value.(*int)
+ 		v := $n(*vstr)
+ 		return &v, true
+        case int:
+                vstr, _ := value.(int)
+                v := $n(vstr)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to $n\\n", t, value)
+        }
+        return nil, false
+  }
+
 END
 }
  if ($alias{$n} eq 'bool') {
   print <<"END";
+  // XXXXX
 func (t *$n) Bool() bool {
   return bool((reflect.ValueOf(*t).Interface()).($n))
   }
+
+  func ${n}Pointer(value interface{}) (*$n, bool) {
+switch t := value.(type) {
+        case *$n:
+                return value.(*$n), true
+        case $n:
+                v, _ := value.($n)
+                return &v, true
+        case *bool:
+                vstr, _ := value.(*bool)
+                v := $n(*vstr)
+                return &v, true
+        case bool:
+                vstr, _ := value.(bool)
+                v := $n(vstr)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to $n\\n", t, value)
+        }
+        return nil, false
+  }
+
 END
 }
  if ($alias{$n} eq 'float64') {
   print <<"END";
+  // XXXXX
 func (t *$n) Float() float64 {
   return float64((reflect.ValueOf(*t).Interface()).($n))
+  }
+
+   func ${n}Pointer(value interface{}) (*$n, bool) {
+switch t := value.(type) {
+        case *$n:
+                return value.(*$n), true
+        case $n:
+                v, _ := value.($n)
+                return &v, true
+        case *float64:
+                vstr, _ := value.(*float64)
+                v := $n(*vstr)
+                return &v, true
+        case float64:
+                vstr, _ := value.(float64)
+                v := $n(vstr)
+                return &v, true
+        case *float32:
+                vstr, _ := value.(*float32)
+                v := $n(float64(*vstr))
+                return &v, true
+        case float32:
+                vstr, _ := value.(float32)
+                v := $n(float64(vstr))
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to $n\\n", t, value)
+        }
+        return nil, false
   }
 END
 }
@@ -211,22 +300,22 @@ foreach $n (keys %types) {
   next if $list{$n};
   print <<"END";
 
+  // XXXXX
 func (t *$n) CopyString(key string, value interface{}) *$n {
-  return t.Set(key, fmt.Sprint(reflect.ValueOf(value).Elem().Interface()))
+  return t.SetProperty(key, fmt.Sprint(reflect.ValueOf(value).Elem().Interface()))
 }
 
 
+  // XXXXX
 func (t *$n) CopyClone(key string, value interface{}) *$n {
   if value == nil || reflect.ValueOf(value).IsNil() {
     return t
     }
-  //resource := reflect.New(reflect.TypeOf(value).Elem())
-  //copier.Copy(resource, value)
   resource := deepcopy.Copy(value)
-  //return t.Set(key, resource.Elem().Interface())
-  return t.Set(key, reflect.ValueOf(resource).Elem().Interface())
+  return t.SetProperty(key, reflect.ValueOf(resource).Elem().Interface())
 }
 
+  // XXXXX
 func (n *$n) Unset(key string) *$n {
         switch key {
 END
@@ -245,9 +334,9 @@ END
         return n
 }
 
-func (n *$n) Set(key string, value interface{}) *$n {
+func (n *$n) SetProperty(key string, value interface{}) *$n {
         if n == nil {
-                n = ${n}Create($n\{\})
+                n, _ = ${n}Pointer(${n}\{\})
         }
         switch key {
 END
@@ -267,6 +356,15 @@ END
 }
 
 END
+
+  foreach $s (keys %{$types{$n}}) {
+    readfunction($n, $s, $types{$n}{$s});
+  }
+  if ($inherit{$n}) {
+    foreach $s (keys %{$types{$inherit{$n}}}) {
+      readfunction($n, $s, $types{$inherit{$n}}{$s});
+    }
+  }
 }
 
 sub unsetswitch($) {
@@ -277,6 +375,35 @@ sub unsetswitch($) {
 END
 }
 
+sub readfunction($$$){
+  my ($n, $s, $t) = @_;
+  $emptytype = emptytype($t);
+  print <<"END";
+  func (s *$n) ${s}Read() *$t {
+    if s.$s == nil {
+END
+  if($alias{$t}) {
+    $cr = typecreate($alias{$t});
+  print <<"END";
+    if v, ok:= ${cr}Pointer($emptytype); ok {
+      s.$s = ((*$t)(v))
+      }
+END
+  } else {
+     $cr = typecreate($t);
+  print <<"END";
+     if v, ok:= ${cr}Pointer($emptytype); ok {
+      s.$s = v
+      }
+END
+  }
+  print <<"END";
+      }
+      return s.$s
+    }
+END
+}
+
 sub setswitch($$) {
   my ($s, $t) = @_;
   print <<"END";
@@ -284,15 +411,19 @@ sub setswitch($$) {
 END
   if ($alias{$t}) {
     $cr = typecreate($alias{$t});
-    $cv = codeset_validate($t, 1);
+    $cv = codeset_validate($t);
     print <<"END";
     $cv
-                      n.$s = ((*$t)(${cr}Create(value.($alias{$t}))))
+    if v, ok:= ${cr}Pointer(value); ok {
+      n.$s = ((*$t)(v))
+      }
 END
   } else {
     $cr = typecreate($t);
     print <<"END";
-                      n.$s = ${cr}Create(value.($t))
+    if v, ok:= ${cr}Pointer(value); ok {
+      n.$s = v
+      }
 END
   }
 }
@@ -306,23 +437,31 @@ sub typecreate($) {
   else { return $s; }
 }
 
-sub codeset_validate($$) {
-  my ($t, $interface) = @_;
-  if($t eq "CountryType") {
-    $t=$t;
-  }
+sub codeset_validate($) {
+  my ($t) = @_;
   $t = $alias_orig{$t} if $alias_orig{$t} && $codeset{$alias_orig{$t}};
   return "" unless $codeset{$t};
-  my $cast = $interface ? "value.(string)" : "string(value)";
-  return <<"END";
-  present := false
-  for _, b := range ${t}_values {
-        if b == $cast {
-          present = true
-        }
-    }
-    if (!present) {
+return << "END";
+    if !CodesetContains(${t}_map, value) {
       log.Fatalf("%s is not present in %s\\n", value, "${t}_values")
       }
 END
 }       
+
+sub emptytype($) {
+  my ($t) = @_;
+  $emptytype= "$t\{\}";
+  if ($t eq "string" or $alias{$t} eq "string") {
+    $emptytype= "\"\"";
+  }
+  if ($t eq "float64" or $alias{$t} eq "float64") {
+    $emptytype= "0";
+  }
+  if ($t eq "int" or $alias{$t} eq "int") {
+    $emptytype= "0";
+  }
+  if ($t eq "bool" or $alias{$t} eq "bool") {
+    $emptytype= "false";
+  }
+  return $emptytype;
+}

@@ -109,8 +109,8 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 			class_teachers := sifxml.StaffPersonalSlice()
 			class_teachers = append(class_teachers, primarystaff[rand.Intn(len(primarystaff))])
 			tg := Create_TeachingGroup(school, class_students, class_teachers)
-			tg.Set("ShortName", y+string(65+studentidx))
-			tg.Set("LongName", y+string(65+studentidx))
+			tg.SetProperty("ShortName", y+string(65+studentidx))
+			tg.SetProperty("LongName", y+string(65+studentidx))
 			tg.Unset("KeyLearningArea")
 			ret.TeachingGroups = append(ret.TeachingGroups, tg)
 		}
@@ -126,8 +126,8 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 			class_teachers := sifxml.StaffPersonalSlice()
 			class_teachers = append(class_teachers, secondarystaff[rand.Intn(len(secondarystaff))])
 			tg := Create_TeachingGroup(school, class_students, class_teachers)
-			tg.Set("ShortName", y+string(65+studentidx))
-			tg.Set("LongName", y+string(65+studentidx))
+			tg.SetProperty("ShortName", y+string(65+studentidx))
+			tg.SetProperty("LongName", y+string(65+studentidx))
 			tg.Unset("KeyLearningArea")
 			ret.TeachingGroups = append(ret.TeachingGroups, tg)
 		}
@@ -163,9 +163,9 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 				class_teachers := sifxml.StaffPersonalSlice()
 				class_teachers = append(class_teachers, subjectstaff[s][rand.Intn(len(subjectstaff[s]))])
 				tg := Create_TeachingGroup(school, class_students, class_teachers)
-				tg.Set("ShortName", s+" "+y+string(65+studentidx))
-				tg.Set("LongName", teachingGroupLongName(s)+" "+y+string(65+studentidx))
-				tg.Set("KeyLearningArea", teachingGroupKLA(s))
+				tg.SetProperty("ShortName", s+" "+y+string(65+studentidx))
+				tg.SetProperty("LongName", teachingGroupLongName(s)+" "+y+string(65+studentidx))
+				tg.SetProperty("KeyLearningArea", teachingGroupKLA(s))
 				ret.TeachingGroups = append(ret.TeachingGroups, tg)
 			}
 		}

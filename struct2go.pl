@@ -14,7 +14,7 @@ while(<>) {
 
 
   @parts = split /(`)/;
-  $parts[0] =~ s/://g;
+  $parts[0] =~ s/://g unless $parts[0] =~ /map\[/;
   $_ = join('', @parts);
   s/;//g;
   s/`xml:"([^,]+),attr"`/`xml:"\1,attr" json:"\1"`/;
@@ -26,8 +26,6 @@ while(<>) {
   s/ OPT//;
   s/^(\s*\S+\s+)([^\[\s ]\S*\s+)`/\1*\2`/; # name type `...`
   s/^(\s*\S+\s+)(\S+\s*)$/\1*\2/; # name alias
-  # Set is a reserved name
-  s/^(\s*)Set(\s+)/\1Sett\2/;
   # We will make String a local type, so that we can apply methods to it shared by the alias types like codesets
   s/ \*string / *String /;
   # Ditto the other primitives

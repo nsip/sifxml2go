@@ -423,7 +423,7 @@ package sifxml
       ShortName *String `xml:"ShortName" json:"ShortName"`
       LongName *String `xml:"LongName,omitempty" json:"LongName"`
       GroupType *String `xml:"GroupType,omitempty" json:"GroupType"`
-      Sett *String `xml:"Set,omitempty" json:"Set"`
+      Set *String `xml:"Set,omitempty" json:"Set"`
       Block *String `xml:"Block,omitempty" json:"Block"`
       CurriculumLevel *String `xml:"CurriculumLevel,omitempty" json:"CurriculumLevel"`
       SchoolInfoRefId *RefIdType `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId"`

@@ -47,6 +47,9 @@ sub codesets(@) {
       @elems = split /, /;
       push @lines1, "var ${type}_values = []string{";
       push @lines1, join(", ", map("\"$_\"", @elems));
+      push @lines1, "}\n";
+      push @lines1, "var ${type}_map = map[string]struct{}{";
+      push @lines1, join(", ", map("\"$_\"\: struct{}{}", @elems));
       push @lines1, "}";
       shift @lines;
     } else {

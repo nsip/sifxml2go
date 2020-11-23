@@ -22,15 +22,15 @@ func create_address(state string) sifxml.AddressType {
 	postcode := postcode_seeded(state)
 
 	ret := sifxml.AddressType{}
-	ret.Set("Type", "0123")
-	ret.Set("Role", "012A")
-	ret.Street = ret.Street.New()
-	ret.Street.Set("StreetNumber", gofakeit.StreetNumber())
-	ret.Street.Set("StreetName", gofakeit.StreetName())
-	ret.Street.Set("StreetType", randomStringFromSlice([]string{"Avenue", "Boulevard", "Cove", "Court", "Crescent", "Drive", "Esplanade", "Lane", "Place", "Road", "Square", "Street", "Terrace", "Walk", "Way"}))
-	ret.Set("City", gofakeit.City())
-	ret.Set("StateProvince", state)
-	ret.Set("PostalCode", postcode)
+	ret.SetProperty("Type", "0123")
+	ret.SetProperty("Role", "012A")
+	//ret.Street = ret.Street.New()
+	ret.StreetRead().SetProperty("StreetNumber", gofakeit.StreetNumber())
+	ret.Street.SetProperty("StreetName", gofakeit.StreetName())
+	ret.Street.SetProperty("StreetType", randomStringFromSlice([]string{"Avenue", "Boulevard", "Cove", "Court", "Crescent", "Drive", "Esplanade", "Lane", "Place", "Road", "Square", "Street", "Terrace", "Walk", "Way"}))
+	ret.SetProperty("City", gofakeit.City())
+	ret.SetProperty("StateProvince", state)
+	ret.SetProperty("PostalCode", postcode)
 	return ret
 }
 
@@ -39,13 +39,13 @@ func addTeachers(t *sifxml.ScheduledTeacherListType, staff []*sifxml.StaffPerson
 		t = t.AddNew()
 		t.Last().CopyString("StaffPersonalRefId", s.RefId)
 		t.Last().CopyString("StaffLocalId", s.LocalId)
-		t.Last().Set("StartTime", start.Format("15:04:05"))
-		t.Last().Set("FinishTime", finish.Format("15:04:05"))
-		t.Last().Set("Weighting", 1.0)
+		t.Last().SetProperty("StartTime", start.Format("15:04:05"))
+		t.Last().SetProperty("FinishTime", finish.Format("15:04:05"))
+		t.Last().SetProperty("Weighting", 1.0)
 		if rand.Float64() > 0.6 {
-			t.Last().Set("Credit", threshold_rand_strings([]float64{0.75, 0.5, 0.25, 0}, []string{"Casual", "Extra", "In-Lieu", "Underload"}))
+			t.Last().SetProperty("Credit", threshold_rand_strings([]float64{0.75, 0.5, 0.25, 0}, []string{"Casual", "Extra", "In-Lieu", "Underload"}))
 		}
-		t.Last().Set("Supervision", threshold_rand_strings([]float64{0.9, 0.8, 0}, []string{"MergedClass", "MinimalSupervision", "Normal"}))
+		t.Last().SetProperty("Supervision", threshold_rand_strings([]float64{0.9, 0.8, 0}, []string{"MergedClass", "MinimalSupervision", "Normal"}))
 	}
 	return t
 }
@@ -66,41 +66,46 @@ func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	birthyr, birthyr_err := birth_year(yearlevel)
 
 	ret := sifxml.StudentPersonal{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.Set("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
-	ret.PersonInfo = ret.PersonInfo.New()
-	ret.PersonInfo.Name = ret.PersonInfo.Name.New()
-	ret.PersonInfo.Name.Set("Type", "LGL")
-	ret.PersonInfo.Name.Set("FamilyName", person.LastName)
-	ret.PersonInfo.Name.Set("GivenName", person.FirstName)
-	ret.PersonInfo.Name.Set("MiddleName", middlename)
-	ret.PersonInfo.Demographics = ret.PersonInfo.Demographics.New()
-	ret.PersonInfo.Demographics.Set("Sex", sex_seeded(person.Gender))
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
+	//ret.PersonInfo = ret.PersonInfo.New()
+	//ret.PersonInfoRead().Name = ret.PersonInfo.Name.New()
+	ret.PersonInfoRead().NameRead().SetProperty("Type", "LGL")
+	ret.PersonInfo.Name.SetProperty("FamilyName", person.LastName)
+	ret.PersonInfo.Name.SetProperty("GivenName", person.FirstName)
+	ret.PersonInfo.Name.SetProperty("MiddleName", middlename)
+	//ret.PersonInfo.Demographics = ret.PersonInfo.Demographics.New()
+	ret.PersonInfo.DemographicsRead().SetProperty("Sex", sex_seeded(person.Gender))
 	if birthyr_err == nil {
-		ret.PersonInfo.Demographics.Set("BirthDate", birthyr)
+		ret.PersonInfo.Demographics.SetProperty("BirthDate", birthyr)
 	}
-	ret.PersonInfo.Demographics.Set("IndigenousStatus", threshold_rand_strings([]float64{0.2, 0.15, 0.1, 0.5, 0}, []string{"4", "1", "2", "3", "9"}))
-	ret.PersonInfo.Demographics.Set("CountryOfBirth", "1101")
+	ret.PersonInfo.Demographics.SetProperty("IndigenousStatus", threshold_rand_strings([]float64{0.2, 0.15, 0.1, 0.5, 0}, []string{"4", "1", "2", "3", "9"}))
+	ret.PersonInfo.Demographics.SetProperty("CountryOfBirth", "1101")
 	ret.PersonInfo.EmailList = ret.PersonInfo.EmailList.AddNew()
-	ret.PersonInfo.EmailList.Last().Set("Type", "01")
-	ret.PersonInfo.EmailList.Last().Set("Value", create_email(person.FirstName, middlename, person.LastName, "example.edu.au"))
-	ret.MostRecent = ret.MostRecent.New()
+	ret.PersonInfo.EmailList.Last().SetProperty("Type", "01")
+	ret.PersonInfo.EmailList.Last().SetProperty("Value", create_email(person.FirstName, middlename, person.LastName, "example.edu.au"))
+	//ret.MostRecent = ret.MostRecent.New()
 	if hasParent1 {
-		ret.MostRecent.Set("Parent1Language", "1201")
-		ret.MostRecent.Set("Parent1EmploymentType", randomStringFromSlice(sifxml.AUCodeSetsEmploymentTypeType_values))
-		ret.MostRecent.Set("Parent1SchoolEducationLevel", randomStringFromSlice(sifxml.AUCodeSetsSchoolEducationLevelTypeType_values))
-		ret.MostRecent.Set("Parent1NonSchoolEducation", randomStringFromSlice(sifxml.AUCodeSetsNonSchoolEducationType_values))
+		ret.MostRecentRead().SetProperty("Parent1Language", "1201")
+		ret.MostRecent.SetProperty("Parent1EmploymentType", randomStringFromSlice(sifxml.AUCodeSetsEmploymentTypeType_values))
+		ret.MostRecent.SetProperty("Parent1SchoolEducationLevel", randomStringFromSlice(sifxml.AUCodeSetsSchoolEducationLevelTypeType_values))
+		ret.MostRecent.SetProperty("Parent1NonSchoolEducation", randomStringFromSlice(sifxml.AUCodeSetsNonSchoolEducationType_values))
 	}
 	if hasParent2 {
-		ret.MostRecent.Set("Parent2Language", "1201")
-		ret.MostRecent.Set("Parent2EmploymentType", randomStringFromSlice(sifxml.AUCodeSetsEmploymentTypeType_values))
-		ret.MostRecent.Set("Parent2SchoolEducationLevel", randomStringFromSlice(sifxml.AUCodeSetsSchoolEducationLevelTypeType_values))
-		ret.MostRecent.Set("Parent2NonSchoolEducation", randomStringFromSlice(sifxml.AUCodeSetsNonSchoolEducationType_values))
+		ret.MostRecentRead().SetProperty("Parent2Language", "1201")
+		ret.MostRecent.SetProperty("Parent2EmploymentType", randomStringFromSlice(sifxml.AUCodeSetsEmploymentTypeType_values))
+		ret.MostRecent.SetProperty("Parent2SchoolEducationLevel", randomStringFromSlice(sifxml.AUCodeSetsSchoolEducationLevelTypeType_values))
+		ret.MostRecent.SetProperty("Parent2NonSchoolEducation", randomStringFromSlice(sifxml.AUCodeSetsNonSchoolEducationType_values))
 	}
-	ret.MostRecent.YearLevel = ret.MostRecent.YearLevel.New()
-	ret.MostRecent.YearLevel.Set("Code", yearlevel)
-	return sifxml.StudentPersonalCreate(ret)
+	//ret.MostRecent.YearLevel = ret.MostRecent.YearLevel.New()
+	ret.MostRecent.YearLevelRead().SetProperty("Code", yearlevel)
+	if out, ok := sifxml.StudentPersonalPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to StudentPersonal: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_StudentPersonals(count int, yearlevels []string) []*sifxml.StudentPersonal {
@@ -121,24 +126,29 @@ func Create_SchoolInfo(schooltype string) *sifxml.SchoolInfo {
 	}
 
 	ret := sifxml.SchoolInfo{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", local_id)
-	ret.Set("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 9999)+1))
-	ret.Set("CommonwealthId", strconv.Itoa(random_seq_gen("schoolCommonwealthId", 9999)+1))
-	ret.Set("SchoolName", school_name(schooltype))
-	ret.Campus = ret.Campus.New()
-	ret.Campus.Set("ParentSchoolId", local_id)
-	ret.Campus.Set("SchoolCampusId", strconv.Itoa(rand.Intn(4)+1))
-	ret.Campus.Set("AdminStatus", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
-	ret.Campus.Set("CampusType", schooltype)
-	ret.Set("SchoolSector", "Gov")
-	ret.Set("OperationalStatus", "O")
-	ret.Set("IndependentSchool", "N")
-	ret.Set("SchoolType", schooltype)
-	ret.Set("ARIA", 1.0)
-	ret.Set("Entity_Open", "1990-01-01")
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", local_id)
+	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 9999)+1))
+	ret.SetProperty("CommonwealthId", strconv.Itoa(random_seq_gen("schoolCommonwealthId", 9999)+1))
+	ret.SetProperty("SchoolName", school_name(schooltype))
+	//ret.Campus = ret.Campus.New()
+	ret.CampusRead().SetProperty("ParentSchoolId", local_id)
+	ret.Campus.SetProperty("SchoolCampusId", strconv.Itoa(rand.Intn(4)+1))
+	ret.Campus.SetProperty("AdminStatus", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.Campus.SetProperty("CampusType", schooltype)
+	ret.SetProperty("SchoolSector", "Gov")
+	ret.SetProperty("OperationalStatus", "O")
+	ret.SetProperty("IndependentSchool", "N")
+	ret.SetProperty("SchoolType", schooltype)
+	ret.SetProperty("ARIA", 1.0)
+	ret.SetProperty("Entity_Open", "1990-01-01")
 	ret.AddressList = ret.AddressList.Append(create_address(state))
-	return sifxml.SchoolInfoCreate(ret)
+	if out, ok := sifxml.SchoolInfoPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to SchoolInfo: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_SchoolInfos(count int) []*sifxml.SchoolInfo {
@@ -151,12 +161,12 @@ func Create_SchoolInfos(count int) []*sifxml.SchoolInfo {
 
 func Create_StudentSchoolEnrollment(student *sifxml.StudentPersonal, school *sifxml.SchoolInfo) *sifxml.StudentSchoolEnrollment {
 	ret := sifxml.StudentSchoolEnrollment{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("MembershipType", "01")
-	ret.Set("SchoolYear", this_year())
-	ret.Set("TimeFrame", "C")
-	ret.Set("FTE", 1.0)
-	ret.Set("EntryDate", this_year()+"-01-25")
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("MembershipType", "01")
+	ret.SetProperty("SchoolYear", this_year())
+	ret.SetProperty("TimeFrame", "C")
+	ret.SetProperty("FTE", 1.0)
+	ret.SetProperty("EntryDate", this_year()+"-01-25")
 
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
@@ -165,17 +175,22 @@ func Create_StudentSchoolEnrollment(student *sifxml.StudentPersonal, school *sif
 		ret.CopyString("StudentPersonalRefId", student.RefId)
 	}
 
-	ret.YearLevel = ret.YearLevel.New()
+	//ret.YearLevel = ret.YearLevel.New()
 	if student != nil && student.MostRecent != nil && student.MostRecent.YearLevel != nil {
-		ret.YearLevel.CopyString("Code", student.MostRecent.YearLevel.Code)
+		ret.YearLevelRead().CopyString("Code", student.MostRecent.YearLevel.Code)
 	} else {
-		ret.YearLevel.Set("Code", strconv.Itoa(rand.Intn(12)+1))
+		ret.YearLevelRead().SetProperty("Code", strconv.Itoa(rand.Intn(12)+1))
 	}
 	if school != nil && student != nil {
-		student.PersonInfo.EmailList.Last().Set("Value", create_email(student.PersonInfo.Name.GivenName.String(), student.PersonInfo.Name.MiddleName.String(), student.PersonInfo.Name.FamilyName.String(), create_school_email_domain(school)))
+		student.PersonInfo.EmailList.Last().SetProperty("Value", create_email(student.PersonInfo.Name.GivenName.String(), student.PersonInfo.Name.MiddleName.String(), student.PersonInfo.Name.FamilyName.String(), create_school_email_domain(school)))
 	}
 
-	return sifxml.StudentSchoolEnrollmentCreate(ret)
+	if out, ok := sifxml.StudentSchoolEnrollmentPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to StudentSchoolEnrollment: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_StudentSchoolEnrollments(students []*sifxml.StudentPersonal, school *sifxml.SchoolInfo) []*sifxml.StudentSchoolEnrollment {
@@ -192,32 +207,37 @@ func Create_StaffPersonal() *sifxml.StaffPersonal {
 	middlename := gofakeit.FirstName()
 
 	ret := sifxml.StaffPersonal{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.Set("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
-	ret.Set("EmploymentStatus", "A")
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
+	ret.SetProperty("EmploymentStatus", "A")
 	ret.OtherIdList = ret.OtherIdList.AddNew()
-	ret.OtherIdList.Last().Set("Type", "DET_USER_ID")
-	ret.OtherIdList.Last().Set("Value", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
+	ret.OtherIdList.Last().SetProperty("Type", "DET_USER_ID")
+	ret.OtherIdList.Last().SetProperty("Value", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
 	ret.OtherIdList = ret.OtherIdList.AddNew()
-	ret.OtherIdList.Last().Set("Type", threshold_rand_strings([]float64{0.1, 0}, []string{"pep", "cep"}))
-	ret.OtherIdList.Last().Set("Value", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
-	ret.PersonInfo = ret.PersonInfo.New()
-	ret.PersonInfo.Name = ret.PersonInfo.Name.New()
-	ret.PersonInfo.Name.Set("Type", "LGL")
-	ret.PersonInfo.Name.Set("FamilyName", person.LastName)
-	ret.PersonInfo.Name.Set("GivenName", person.FirstName)
-	ret.PersonInfo.Name.Set("PreferredGivenName", person.FirstName)
-	ret.PersonInfo.Name.Set("MiddleName", middlename)
-	ret.PersonInfo.Name.Set("Title", create_salutation(person.Gender))
-	ret.PersonInfo.Demographics = ret.PersonInfo.Demographics.New()
-	ret.PersonInfo.Demographics.Set("Sex", sex_seeded(person.Gender))
-	ret.PersonInfo.Demographics.Set("CountryOfBirth", "1101")
-	ret.PersonInfo.Demographics.Set("BirthDate", random_date(strconv.Itoa(time.Now().Year()-65)+"-01-01", strconv.Itoa(time.Now().Year()-25)+"-12-31"))
+	ret.OtherIdList.Last().SetProperty("Type", threshold_rand_strings([]float64{0.1, 0}, []string{"pep", "cep"}))
+	ret.OtherIdList.Last().SetProperty("Value", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
+	//ret.PersonInfo = ret.PersonInfo.New()
+	//ret.PersonInfo.Name = ret.PersonInfo.Name.New()
+	ret.PersonInfoRead().NameRead().SetProperty("Type", "LGL")
+	ret.PersonInfo.Name.SetProperty("FamilyName", person.LastName)
+	ret.PersonInfo.Name.SetProperty("GivenName", person.FirstName)
+	ret.PersonInfo.Name.SetProperty("PreferredGivenName", person.FirstName)
+	ret.PersonInfo.Name.SetProperty("MiddleName", middlename)
+	ret.PersonInfo.Name.SetProperty("Title", create_salutation(person.Gender))
+	//ret.PersonInfo.Demographics = ret.PersonInfo.Demographics.New()
+	ret.PersonInfo.DemographicsRead().SetProperty("Sex", sex_seeded(person.Gender))
+	ret.PersonInfo.Demographics.SetProperty("CountryOfBirth", "1101")
+	ret.PersonInfo.Demographics.SetProperty("BirthDate", random_date(strconv.Itoa(time.Now().Year()-65)+"-01-01", strconv.Itoa(time.Now().Year()-25)+"-12-31"))
 	ret.PersonInfo.EmailList = ret.PersonInfo.EmailList.AddNew()
-	ret.PersonInfo.EmailList.Last().Set("Type", "01")
-	ret.PersonInfo.EmailList.Last().Set("Value", create_email(person.FirstName, middlename, person.LastName, "example.edu.au"))
-	return sifxml.StaffPersonalCreate(ret)
+	ret.PersonInfo.EmailList.Last().SetProperty("Type", "01")
+	ret.PersonInfo.EmailList.Last().SetProperty("Value", create_email(person.FirstName, middlename, person.LastName, "example.edu.au"))
+	if out, ok := sifxml.StaffPersonalPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to StaffPersonal: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_StaffPersonals(count int) []*sifxml.StaffPersonal {
@@ -230,13 +250,13 @@ func Create_StaffPersonals(count int) []*sifxml.StaffPersonal {
 
 func Create_StaffAssignment(staff *sifxml.StaffPersonal, school *sifxml.SchoolInfo) *sifxml.StaffAssignment {
 	ret := sifxml.StaffAssignment{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("PrimaryAssignment", "Y")
-	ret.Set("SchoolYear", this_year())
-	ret.Set("JobStartDate", "1990-01-01")
-	ret.Set("JobFunction", "teacher")
-	ret.StaffActivity = ret.StaffActivity.New()
-	ret.StaffActivity.Set("Code", randomStringFromSlice(sifxml.AUCodeSetsStaffActivityType_values))
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("PrimaryAssignment", "Y")
+	ret.SetProperty("SchoolYear", this_year())
+	ret.SetProperty("JobStartDate", "1990-01-01")
+	ret.SetProperty("JobFunction", "teacher")
+	//ret.StaffActivity = ret.StaffActivity.New()
+	ret.StaffActivityRead().SetProperty("Code", randomStringFromSlice(sifxml.AUCodeSetsStaffActivityType_values))
 
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
@@ -245,9 +265,14 @@ func Create_StaffAssignment(staff *sifxml.StaffPersonal, school *sifxml.SchoolIn
 		ret.CopyString("StaffPersonalRefId", staff.RefId)
 	}
 	if school != nil && staff != nil {
-		staff.PersonInfo.EmailList.Last().Set("Value", create_email(staff.PersonInfo.Name.GivenName.String(), staff.PersonInfo.Name.MiddleName.String(), staff.PersonInfo.Name.FamilyName.String(), create_school_email_domain(school)))
+		staff.PersonInfo.EmailList.Last().SetProperty("Value", create_email(staff.PersonInfo.Name.GivenName.String(), staff.PersonInfo.Name.MiddleName.String(), staff.PersonInfo.Name.FamilyName.String(), create_school_email_domain(school)))
 	}
-	return sifxml.StaffAssignmentCreate(ret)
+	if out, ok := sifxml.StaffAssignmentPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to StaffAssignment: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_StaffAssignments(staff []*sifxml.StaffPersonal, school *sifxml.SchoolInfo) []*sifxml.StaffAssignment {
@@ -275,34 +300,34 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 	middlename := gofakeit.FirstName()
 
 	ret := sifxml.StudentContactPersonal{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.PersonInfo = ret.PersonInfo.New()
-	ret.PersonInfo.Name = ret.PersonInfo.Name.New()
-	ret.PersonInfo.Name.Set("Type", "LGL")
-	ret.PersonInfo.Name.Set("FamilyName", person.LastName)
-	ret.PersonInfo.Name.Set("GivenName", person.FirstName)
-	ret.PersonInfo.Name.Set("PreferredGivenName", person.FirstName)
-	ret.PersonInfo.Name.Set("PreferredFamilyName", person.LastName)
-	ret.PersonInfo.Name.Set("MiddleName", gofakeit.FirstName())
-	ret.PersonInfo.Name.Set("Title", create_salutation(person.Gender))
-	ret.PersonInfo.Demographics = ret.PersonInfo.Demographics.New()
-	ret.PersonInfo.Demographics.Set("Sex", sex_seeded(person.Gender))
-	ret.PersonInfo.Demographics.Set("CountryOfBirth", "1101")
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	//ret.PersonInfo = ret.PersonInfo.New()
+	//ret.PersonInfo.Name = ret.PersonInfo.Name.New()
+	ret.PersonInfoRead().NameRead().SetProperty("Type", "LGL")
+	ret.PersonInfo.Name.SetProperty("FamilyName", person.LastName)
+	ret.PersonInfo.Name.SetProperty("GivenName", person.FirstName)
+	ret.PersonInfo.Name.SetProperty("PreferredGivenName", person.FirstName)
+	ret.PersonInfo.Name.SetProperty("PreferredFamilyName", person.LastName)
+	ret.PersonInfo.Name.SetProperty("MiddleName", gofakeit.FirstName())
+	ret.PersonInfo.Name.SetProperty("Title", create_salutation(person.Gender))
+	//ret.PersonInfo.Demographics = ret.PersonInfo.Demographics.New()
+	ret.PersonInfo.DemographicsRead().SetProperty("Sex", sex_seeded(person.Gender))
+	ret.PersonInfo.Demographics.SetProperty("CountryOfBirth", "1101")
 	ret.PersonInfo.Demographics.LanguageList = ret.PersonInfo.Demographics.LanguageList.AddNew()
-	ret.PersonInfo.Demographics.LanguageList.Last().Set("Code", "1201")
-	ret.PersonInfo.Demographics.LanguageList.Last().Set("LanguageType", "1")
+	ret.PersonInfo.Demographics.LanguageList.Last().SetProperty("Code", "1201")
+	ret.PersonInfo.Demographics.LanguageList.Last().SetProperty("LanguageType", "1")
 	if rand.Float64() < 0.2 {
 		ret.PersonInfo.Demographics.LanguageList = ret.PersonInfo.Demographics.LanguageList.AddNew()
-		ret.PersonInfo.Demographics.LanguageList.Last().Set("Code", randomStringFromSlice([]string{"0002", "7101", "2401", "2201", "5203", "4202"}))
-		ret.PersonInfo.Demographics.LanguageList.Last().Set("LanguageType", "2")
+		ret.PersonInfo.Demographics.LanguageList.Last().SetProperty("Code", randomStringFromSlice([]string{"0002", "7101", "2401", "2201", "5203", "4202"}))
+		ret.PersonInfo.Demographics.LanguageList.Last().SetProperty("LanguageType", "2")
 	}
 	ret.PersonInfo.EmailList = ret.PersonInfo.EmailList.AddNew()
-	ret.PersonInfo.EmailList.Last().Set("Type", "01")
-	ret.PersonInfo.EmailList.Last().Set("Value", create_email(person.FirstName, middlename, person.LastName, create_commercial_email_domain()))
+	ret.PersonInfo.EmailList.Last().SetProperty("Type", "01")
+	ret.PersonInfo.EmailList.Last().SetProperty("Value", create_email(person.FirstName, middlename, person.LastName, create_commercial_email_domain()))
 	ret.PersonInfo.PhoneNumberList = ret.PersonInfo.PhoneNumberList.AddNew()
-	ret.PersonInfo.PhoneNumberList.Last().Set("Type", "0096")
-	ret.PersonInfo.PhoneNumberList.Last().Set("Number", create_phone_number(nil))
+	ret.PersonInfo.PhoneNumberList.Last().SetProperty("Type", "0096")
+	ret.PersonInfo.PhoneNumberList.Last().SetProperty("Number", create_phone_number(nil))
 	ret.PersonInfo.AddressList = ret.PersonInfo.AddressList.Append(create_address(state))
 	if student != nil && ordinal == 1 {
 		ret.CopyString("EmploymentType", student.MostRecent.Parent1EmploymentType)
@@ -313,37 +338,42 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 		ret.CopyString("SchoolEducationalLevel", student.MostRecent.Parent2SchoolEducationLevel)
 		ret.CopyString("NonSchoolEducation", student.MostRecent.Parent2NonSchoolEducation)
 	} else {
-		ret.Set("EmploymentType", randomStringFromSlice(sifxml.AUCodeSetsEmploymentTypeType_values))
-		ret.Set("SchoolEducationalLevel", randomStringFromSlice(sifxml.AUCodeSetsSchoolEducationLevelTypeType_values))
-		ret.Set("NonSchoolEducation", randomStringFromSlice(sifxml.AUCodeSetsNonSchoolEducationType_values))
+		ret.SetProperty("EmploymentType", randomStringFromSlice(sifxml.AUCodeSetsEmploymentTypeType_values))
+		ret.SetProperty("SchoolEducationalLevel", randomStringFromSlice(sifxml.AUCodeSetsSchoolEducationLevelTypeType_values))
+		ret.SetProperty("NonSchoolEducation", randomStringFromSlice(sifxml.AUCodeSetsNonSchoolEducationType_values))
 	}
 	if student != nil && rand.Float64() < 0.8 {
 		ret.PersonInfo.Name.CopyString("FamilyName", student.PersonInfo.Name.FamilyName)
 		ret.PersonInfo.Name.CopyString("PreferredFamilyName", student.PersonInfo.Name.FamilyName)
 	}
-	return sifxml.StudentContactPersonalCreate(ret)
+	if out, ok := sifxml.StudentContactPersonalPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to StudentContactPersonal: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_StudentContactRelationship(student *sifxml.StudentPersonal, contact *sifxml.StudentContactPersonal) *sifxml.StudentContactRelationship {
 	ret := sifxml.StudentContactRelationship{}
-	ret.Set("StudentContactRelationshipRefId", create_GUID())
-	ret.Relationship = ret.Relationship.New()
-	ret.Relationship.Set("Code", threshold_rand_strings([]float64{0.26, 0.24, 0.22, 0.2, 0.18, 0.16, 0.14, 0.12, 0.10, 0.08, 0.04, 0.02, 0}, []string{"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13"}))
-	ret.ContactFlags = ret.ContactFlags.New()
-	ret.ContactFlags.Set("ParentLegalGuardian", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("PickupRights", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("LivesWith", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("AccessToRecords", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("ReceivesAssessmentReport", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("EmergencyContact", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("HasCustody", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("DisciplinaryContact", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("AttendanceContact", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("PrimaryCareProvider", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("FeesBilling", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("FeesAccess", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("FamilyMail", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
-	ret.ContactFlags.Set("InterventionOrder", threshold_rand_strings([]float64{0.1, 0}, []string{"N", "Y"}))
+	ret.SetProperty("StudentContactRelationshipRefId", create_GUID())
+	//ret.Relationship = ret.Relationship.New()
+	ret.RelationshipRead().SetProperty("Code", threshold_rand_strings([]float64{0.26, 0.24, 0.22, 0.2, 0.18, 0.16, 0.14, 0.12, 0.10, 0.08, 0.04, 0.02, 0}, []string{"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13"}))
+	//ret.ContactFlags = ret.ContactFlags.New()
+	ret.ContactFlagsRead().SetProperty("ParentLegalGuardian", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("PickupRights", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("LivesWith", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("AccessToRecords", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("ReceivesAssessmentReport", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("EmergencyContact", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("HasCustody", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("DisciplinaryContact", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("AttendanceContact", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("PrimaryCareProvider", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("FeesBilling", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("FeesAccess", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("FamilyMail", threshold_rand_strings([]float64{0.9, 0}, []string{"N", "Y"}))
+	ret.ContactFlags.SetProperty("InterventionOrder", threshold_rand_strings([]float64{0.1, 0}, []string{"N", "Y"}))
 
 	if student != nil {
 		ret.CopyString("StudentPersonalRefId", student.RefId)
@@ -351,7 +381,12 @@ func Create_StudentContactRelationship(student *sifxml.StudentPersonal, contact 
 	if contact != nil {
 		ret.CopyString("StudentContactPersonalRefId", contact.RefId)
 	}
-	return sifxml.StudentContactRelationshipCreate(ret)
+	if out, ok := sifxml.StudentContactRelationshipPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to StudentContactRelationship: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_StudentContactPersonalAndRelationship(students []*sifxml.StudentPersonal) ([]*sifxml.StudentContactPersonal, []*sifxml.StudentContactRelationship) {
@@ -380,23 +415,28 @@ func Create_RoomInfoWithStaff(school *sifxml.SchoolInfo, staff []*sifxml.StaffPe
 	room_number := random_seq_gen("roomNumber", 1000)
 
 	ret := sifxml.RoomInfo{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.Set("RoomNumber", strconv.Itoa(room_number))
-	ret.Set("Description", fmt.Sprintf("Room %d", room_number))
-	ret.Set("Capacity", rand.Intn(50)+10)
-	ret.Set("Size", float64(rand.Intn(5)+2))
-	ret.Set("RoomType", randomStringFromSlice([]string{"Classroom", "Classroom", "Classroom", "Classroom", "Classroom", "Classroom", "Art", "Basketball court"}))
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("RoomNumber", strconv.Itoa(room_number))
+	ret.SetProperty("Description", fmt.Sprintf("Room %d", room_number))
+	ret.SetProperty("Capacity", rand.Intn(50)+10)
+	ret.SetProperty("Size", float64(rand.Intn(5)+2))
+	ret.SetProperty("RoomType", randomStringFromSlice([]string{"Classroom", "Classroom", "Classroom", "Classroom", "Classroom", "Classroom", "Art", "Basketball court"}))
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
 	}
 	if len(staff) > 1 {
-		ret.StaffList = ret.StaffList.New()
+		//ret.StaffList = ret.StaffList.New()
 		for _, s1 := range staff {
-			ret.StaffList = ret.StaffList.AppendString(s1.RefId)
+			ret.StaffList = ret.StaffListRead().AppendString(s1.RefId)
 		}
 	}
-	return sifxml.RoomInfoCreate(ret)
+	if out, ok := sifxml.RoomInfoPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to RoomInfo: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_RoomInfos(count int, school *sifxml.SchoolInfo) []*sifxml.RoomInfo {
@@ -411,51 +451,56 @@ func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentP
 	shortname := randomStringFromSlice([]string{"MAT", "ENG", "PHYS", "BIO", "CHEM", "COMP", "VIS", "ECON", "HIST"})
 
 	ret := sifxml.TeachingGroup{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.Set("ShortName", shortname)
-	ret.Set("LongName", teachingGroupLongName(shortname))
-	ret.Set("KeyLearningArea", teachingGroupKLA(shortname))
-	ret.Set("SchoolYear", this_year())
-	ret.Set("Semester", 1)
-	ret.Set("MinClassSize", 20)
-	ret.Set("MaxClassSize", 40)
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("ShortName", shortname)
+	ret.SetProperty("LongName", teachingGroupLongName(shortname))
+	ret.SetProperty("KeyLearningArea", teachingGroupKLA(shortname))
+	ret.SetProperty("SchoolYear", this_year())
+	ret.SetProperty("Semester", 1)
+	ret.SetProperty("MinClassSize", 20)
+	ret.SetProperty("MaxClassSize", 40)
 
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
 		ret.CopyString("SchoolLocalId", school.LocalId)
 	}
 	if len(students) > 1 {
-		ret.StudentList = ret.StudentList.New()
+		//ret.StudentList = ret.StudentList.New()
 		for _, s := range students {
-			ret.StudentList = ret.StudentList.AddNew()
+			ret.StudentList = ret.StudentListRead().AddNew()
 			ret.StudentList.Last().CopyString("StudentPersonalRefId", s.RefId)
 			ret.StudentList.Last().CopyString("StudentLocalId", s.LocalId)
 			ret.StudentList.Last().CopyClone("Name", s.PersonInfo.Name)
 		}
 	}
 	if len(staff) > 1 {
-		ret.TeacherList = ret.TeacherList.New()
+		//ret.TeacherList = ret.TeacherList.New()
 		for _, s := range staff {
-			ret.TeacherList = ret.TeacherList.AddNew()
+			ret.TeacherList = ret.TeacherListRead().AddNew()
 			ret.TeacherList.Last().CopyString("StaffPersonalRefId", s.RefId)
 			ret.TeacherList.Last().CopyString("StaffLocalId", s.LocalId)
 			ret.TeacherList.Last().CopyClone("Name", s.PersonInfo.Name)
 		}
 	}
-	return sifxml.TeachingGroupCreate(ret)
+	if out, ok := sifxml.TeachingGroupPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to TeachingGroup: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_FinancialAccount(parent *sifxml.FinancialAccount, location *sifxml.ChargedLocationInfo) *sifxml.FinancialAccount {
 	gofakeit.Seed(0)
 	ret := sifxml.FinancialAccount{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.Set("CreationDate", random_date("2012-01-01", "2015-12-31"))
-	ret.Set("CreationTime", gofakeit.Date().Format("15:04:05"))
-	ret.Set("AccountNumber", strconv.Itoa(random_seq_gen("financial_account_number", 99999999)+1))
-	ret.Set("Name", gofakeit.Name())
-	ret.Set("ClassType", randomStringFromSlice([]string{"Asset", "Liability", "Revenue", "Expense", "Other"}))
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("CreationDate", random_date("2012-01-01", "2015-12-31"))
+	ret.SetProperty("CreationTime", gofakeit.Date().Format("15:04:05"))
+	ret.SetProperty("AccountNumber", strconv.Itoa(random_seq_gen("financial_account_number", 99999999)+1))
+	ret.SetProperty("Name", gofakeit.Name())
+	ret.SetProperty("ClassType", randomStringFromSlice([]string{"Asset", "Liability", "Revenue", "Expense", "Other"}))
 
 	if parent != nil {
 		ret.CopyString("ParentAccountRefId", parent.RefId)
@@ -463,7 +508,12 @@ func Create_FinancialAccount(parent *sifxml.FinancialAccount, location *sifxml.C
 	if location != nil {
 		ret.CopyString("ChargedLocationInfoRefId", location.RefId)
 	}
-	return sifxml.FinancialAccountCreate(ret)
+	if out, ok := sifxml.FinancialAccountPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to FinacialAccount: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 /* parent and location are either empty, or match count in size */
@@ -495,32 +545,37 @@ func Create_ChargedLocationInfo(parent *sifxml.ChargedLocationInfo, school *sifx
 	state := create_state()
 
 	ret := sifxml.ChargedLocationInfo{}
-	ret.Set("RefId", create_GUID())
+	ret.SetProperty("RefId", create_GUID())
 	if parent != nil {
 		ret.CopyString("ParentChargedLocationInfoRefId", parent.RefId)
 	}
 	if school == nil {
 		gofakeit.Seed(0)
 		locationtype := randomStringFromSlice([]string{"HR", "Professional Development", "Accounting", "Management", "Cleaning"})
-		ret.Set("SiteCategory", "NonSchool")
-		ret.Set("LocationType", locationtype)
-		ret.Set("Name", gofakeit.Company()+" "+locationtype)
-		ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
+		ret.SetProperty("SiteCategory", "NonSchool")
+		ret.SetProperty("LocationType", locationtype)
+		ret.SetProperty("Name", gofakeit.Company()+" "+locationtype)
+		ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 		ret.AddressList = ret.AddressList.Append(create_address(state))
 		ret.PhoneNumberList = ret.PhoneNumberList.AddNew()
-		ret.PhoneNumberList.Last().Set("Type", "0096")
-		ret.PhoneNumberList.Last().Set("Number", create_phone_number(&state))
+		ret.PhoneNumberList.Last().SetProperty("Type", "0096")
+		ret.PhoneNumberList.Last().SetProperty("Number", create_phone_number(&state))
 	} else {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
-		ret.Set("SiteCategory", "School")
-		ret.Set("LocationType", "School")
+		ret.SetProperty("SiteCategory", "School")
+		ret.SetProperty("LocationType", "School")
 		ret.CopyString("Name", school.SchoolName)
 		ret.CopyString("LocalId", school.LocalId)
 		ret.CopyString("StateProvinceId", school.StateProvinceId)
 		ret.CopyClone("AddressList", school.AddressList)
 		ret.CopyClone("PhoneNumberList", school.PhoneNumberList)
 	}
-	return sifxml.ChargedLocationInfoCreate(ret)
+	if out, ok := sifxml.ChargedLocationInfoPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to ChargedLocationInfo: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_ChargedLocationInfos(count int, school []*sifxml.SchoolInfo) []*sifxml.ChargedLocationInfo {
@@ -549,34 +604,39 @@ func Create_VendorInfo() *sifxml.VendorInfo {
 	emaildomain := strings.ToLower(companyname) + "." + randomStringFromSlice([]string{"com.au", "com", "com.au", "org.au"})
 
 	ret := sifxml.VendorInfo{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.Set("Name", companyname+" "+companytype)
-	ret.Set("CustomerId", strconv.Itoa(random_seq_gen("customerid", 99999)+1000))
-	ret.Set("ABN", strconv.Itoa(random_seq_gen("abn", 99999999999)+1000000000))
-	ret.Set("RegisteredForGST", "Y")
-	ret.Set("PaymentTerms", "15 days")
-	ret.Set("BPay", strconv.Itoa(random_seq_gen("bpay", 999999)+10000))
-	ret.Set("BSB", strconv.Itoa(random_seq_gen("bsb", 999999)+10000))
-	ret.Set("AccountNumber", strconv.Itoa(random_seq_gen("account_number", 999999)+10000))
-	ret.Set("AccountName", companyname)
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("Name", companyname+" "+companytype)
+	ret.SetProperty("CustomerId", strconv.Itoa(random_seq_gen("customerid", 99999)+1000))
+	ret.SetProperty("ABN", strconv.Itoa(random_seq_gen("abn", 99999999999)+1000000000))
+	ret.SetProperty("RegisteredForGST", "Y")
+	ret.SetProperty("PaymentTerms", "15 days")
+	ret.SetProperty("BPay", strconv.Itoa(random_seq_gen("bpay", 999999)+10000))
+	ret.SetProperty("BSB", strconv.Itoa(random_seq_gen("bsb", 999999)+10000))
+	ret.SetProperty("AccountNumber", strconv.Itoa(random_seq_gen("account_number", 999999)+10000))
+	ret.SetProperty("AccountName", companyname)
 
-	ret.ContactInfo = ret.ContactInfo.New()
-	ret.ContactInfo.Name = ret.ContactInfo.Name.New()
-	ret.ContactInfo.Name.Set("Type", "LGL")
-	ret.ContactInfo.Name.Set("FamilyName", person.LastName)
-	ret.ContactInfo.Name.Set("GivenName", person.FirstName)
-	ret.ContactInfo.Set("PositionTitle", "Sales")
-	ret.ContactInfo.Set("Role", "Sales")
+	//ret.ContactInfo = ret.ContactInfo.New()
+	//ret.ContactInfo.Name = ret.ContactInfo.Name.New()
+	ret.ContactInfoRead().NameRead().SetProperty("Type", "LGL")
+	ret.ContactInfo.Name.SetProperty("FamilyName", person.LastName)
+	ret.ContactInfo.Name.SetProperty("GivenName", person.FirstName)
+	ret.ContactInfo.SetProperty("PositionTitle", "Sales")
+	ret.ContactInfo.SetProperty("Role", "Sales")
 
 	ret.ContactInfo.EmailList = ret.ContactInfo.EmailList.AddNew()
-	ret.ContactInfo.EmailList.Last().Set("Type", "01")
-	ret.ContactInfo.EmailList.Last().Set("Value", create_email(person.FirstName, middlename, person.LastName, emaildomain))
+	ret.ContactInfo.EmailList.Last().SetProperty("Type", "01")
+	ret.ContactInfo.EmailList.Last().SetProperty("Value", create_email(person.FirstName, middlename, person.LastName, emaildomain))
 	ret.ContactInfo.PhoneNumberList = ret.ContactInfo.PhoneNumberList.AddNew()
-	ret.ContactInfo.PhoneNumberList.Last().Set("Type", "0096")
-	ret.ContactInfo.PhoneNumberList.Last().Set("Number", create_phone_number(nil))
+	ret.ContactInfo.PhoneNumberList.Last().SetProperty("Type", "0096")
+	ret.ContactInfo.PhoneNumberList.Last().SetProperty("Number", create_phone_number(nil))
 
-	return sifxml.VendorInfoCreate(ret)
+	if out, ok := sifxml.VendorInfoPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to VendorInfo: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_VendorInfos(count int) []*sifxml.VendorInfo {
@@ -593,14 +653,14 @@ func Create_ScheduledActivity(school *sifxml.SchoolInfo, timetable *sifxml.TimeT
 	finishtime := starttime.Add(time.Hour * time.Duration(rand.Intn(3)))
 
 	ret := sifxml.ScheduledActivity{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("ActivityDate", random_date(this_year()+"-01-01", this_year()+"-12-31"))
-	ret.Set("StartTime", starttime.Format("15:04:05"))
-	ret.Set("FinishTime", finishtime.Format("15:04:05"))
-	ret.Set("CellType", "Excursion")
-	ret.Set("ActivityType", "Excursion")
-	ret.Set("Location", "Zoo")
-	ret.Set("ActivityName", "Zoo Excursion")
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("ActivityDate", random_date(this_year()+"-01-01", this_year()+"-12-31"))
+	ret.SetProperty("StartTime", starttime.Format("15:04:05"))
+	ret.SetProperty("FinishTime", finishtime.Format("15:04:05"))
+	ret.SetProperty("CellType", "Excursion")
+	ret.SetProperty("ActivityType", "Excursion")
+	ret.SetProperty("Location", "Zoo")
+	ret.SetProperty("ActivityName", "Zoo Excursion")
 
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
@@ -616,43 +676,53 @@ func Create_ScheduledActivity(school *sifxml.SchoolInfo, timetable *sifxml.TimeT
 		ret.CopyString("TimeTableSubjectRefId", timetablesubject.RefId)
 	}
 	if len(students) > 0 {
-		ret.StudentList = ret.StudentList.New()
+		//ret.StudentList = ret.StudentList.New()
 		for _, s := range rooms {
-			ret.StudentList = ret.StudentList.AppendString(s.RefId)
+			ret.StudentList = ret.StudentListRead().AppendString(s.RefId)
 		}
 	}
 	if len(rooms) > 0 {
-		ret.RoomList = ret.RoomList.New()
+		//ret.RoomList = ret.RoomList.New()
 		for _, s := range rooms {
-			ret.RoomList = ret.RoomList.AppendString(s.RefId)
+			ret.RoomList = ret.RoomListRead().AppendString(s.RefId)
 		}
 	}
 	if len(teachinggroups) > 0 {
-		ret.TeachingGroupList = ret.TeachingGroupList.New()
+		//ret.TeachingGroupList = ret.TeachingGroupList.New()
 		for _, s := range teachinggroups {
-			ret.TeachingGroupList = ret.TeachingGroupList.AppendString(s.RefId)
+			ret.TeachingGroupList = ret.TeachingGroupListRead().AppendString(s.RefId)
 		}
 	}
 	if len(staff) > 0 {
-		ret.TeacherList = ret.TeacherList.New()
-		ret.TeacherList = addTeachers(ret.TeacherList, staff, starttime, finishtime)
+		//ret.TeacherList = ret.TeacherList.New()
+		ret.TeacherList = addTeachers(ret.TeacherListRead(), staff, starttime, finishtime)
 	}
-	return sifxml.ScheduledActivityCreate(ret)
+	if out, ok := sifxml.ScheduledActivityPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to ScheduledActivity: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_CalendarSummary(school *sifxml.SchoolInfo) *sifxml.CalendarSummary {
 	ret := sifxml.CalendarSummary{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("SchoolYear", this_year())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.Set("DaysInSession", 67+67+68+75)
-	ret.Set("StartDate", this_year()+"-01-28")
-	ret.Set("EndDate", this_year()+"-12-19")
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("SchoolYear", this_year())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("DaysInSession", 67+67+68+75)
+	ret.SetProperty("StartDate", this_year()+"-01-28")
+	ret.SetProperty("EndDate", this_year()+"-12-19")
 
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
 	}
-	return sifxml.CalendarSummaryCreate(ret)
+	if out, ok := sifxml.CalendarSummaryPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to CalendarSummary: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup, students []*sifxml.StudentPersonal) *sifxml.GradingAssignment {
@@ -663,15 +733,15 @@ func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.T
 	description := gofakeit.LetterN(8)
 
 	ret := sifxml.GradingAssignment{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("GradingCategory", randomStringFromSlice([]string{"quiz", "essay", "project"}))
-	ret.Set("PointsPossible", 10)
-	ret.Set("CreateDate", createdate)
-	ret.Set("DueDate", duedate)
-	ret.Set("Weight", float64(rand.Intn(4)+2))
-	ret.Set("MaxAttemptsAllowed", 5)
-	ret.Set("Description", description)
-	ret.Set("DetailedDescriptionURL", "http://www.example.com/"+description)
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("GradingCategory", randomStringFromSlice([]string{"quiz", "essay", "project"}))
+	ret.SetProperty("PointsPossible", 10)
+	ret.SetProperty("CreateDate", createdate)
+	ret.SetProperty("DueDate", duedate)
+	ret.SetProperty("Weight", float64(rand.Intn(4)+2))
+	ret.SetProperty("MaxAttemptsAllowed", 5)
+	ret.SetProperty("Description", description)
+	ret.SetProperty("DetailedDescriptionURL", "http://www.example.com/"+description)
 
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
@@ -680,12 +750,17 @@ func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.T
 		ret.CopyString("TeachingGroupRefId", teachinggroup.RefId)
 	}
 	if len(students) > 0 {
-		ret.StudentPersonalRefIdList = ret.StudentPersonalRefIdList.New()
+		//ret.StudentPersonalRefIdList = ret.StudentPersonalRefIdList.New()
 		for _, s := range students {
-			ret.StudentPersonalRefIdList = ret.StudentPersonalRefIdList.AppendString(s.RefId)
+			ret.StudentPersonalRefIdList = ret.StudentPersonalRefIdListRead().AppendString(s.RefId)
 		}
 	}
-	return sifxml.GradingAssignmentCreate(ret)
+	if out, ok := sifxml.GradingAssignmentPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to GradingAssignment: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_GradingAssignments(count int, school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup, students []*sifxml.StudentPersonal) []*sifxml.GradingAssignment {
@@ -699,7 +774,7 @@ func Create_GradingAssignments(count int, school *sifxml.SchoolInfo, teachinggro
 func Create_GradingAssignmentScore(assignment *sifxml.GradingAssignment, school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup, student *sifxml.StudentPersonal, staff *sifxml.StaffPersonal) *sifxml.GradingAssignmentScore {
 	gofakeit.Seed(0)
 	ret := sifxml.GradingAssignmentScore{}
-	ret.Set("RefId", create_GUID())
+	ret.SetProperty("RefId", create_GUID())
 
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
@@ -718,16 +793,21 @@ func Create_GradingAssignmentScore(assignment *sifxml.GradingAssignment, school 
 	if assignment != nil {
 		ret.CopyString("GradingAssignmentRefId", assignment.RefId)
 		pointspossible := assignment.PointsPossible.Int()
-		ret.Set("ScorePoints", rand.Intn(pointspossible))
-		ret.Set("ScoreDescription", gofakeit.LoremIpsumSentence(10))
+		ret.SetProperty("ScorePoints", rand.Intn(pointspossible))
+		ret.SetProperty("ScoreDescription", gofakeit.LoremIpsumSentence(10))
 		duedate := assignment.DueDate.String()
 		dategraded_time, err := time.Parse("2006-01-02", duedate)
 		if err == nil {
 			dategraded := dategraded_time.Add(time.Hour * time.Duration(24*rand.Intn(7))).Format("2006-01-02")
-			ret.Set("DateGraded", dategraded)
+			ret.SetProperty("DateGraded", dategraded)
 		}
 	}
-	return sifxml.GradingAssignmentScoreCreate(ret)
+	if out, ok := sifxml.GradingAssignmentScorePointer(ret); !ok {
+		log.Fatalf("Could not create pointer to GradingAssignmentScore: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_GradingAssignmentScores(assignment *sifxml.GradingAssignment, school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup, students []*sifxml.StudentPersonal, staff *sifxml.StaffPersonal) []*sifxml.GradingAssignmentScore {
@@ -741,26 +821,31 @@ func Create_GradingAssignmentScores(assignment *sifxml.GradingAssignment, school
 /* assume only one of the arguments is populated */
 func Create_Debtor(student *sifxml.StudentPersonal, staff *sifxml.StaffPersonal, contact *sifxml.StudentContactPersonal, vendor *sifxml.VendorInfo) *sifxml.Debtor {
 	ret := sifxml.Debtor{}
-	ret.Set("RefId", create_GUID())
-	ret.Set("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 
-	ret.BilledEntity = ret.BilledEntity.New()
+	//ret.BilledEntity = ret.BilledEntity.New()
 	if student != nil {
-		ret.BilledEntity.Set("SIF_RefObject", "StudentPersonal")
+		ret.BilledEntityRead().SetProperty("SIF_RefObject", "StudentPersonal")
 		ret.BilledEntity.CopyString("Value", student.RefId)
 	} else if staff != nil {
-		ret.BilledEntity.Set("SIF_RefObject", "StaffPersonal")
+		ret.BilledEntityRead().SetProperty("SIF_RefObject", "StaffPersonal")
 		ret.BilledEntity.CopyString("Value", staff.RefId)
 	} else if contact != nil {
-		ret.BilledEntity.Set("SIF_RefObject", "StudenContactPersonal")
+		ret.BilledEntityRead().SetProperty("SIF_RefObject", "StudenContactPersonal")
 		ret.BilledEntity.CopyString("Value", contact.RefId)
 	} else if vendor != nil {
-		ret.BilledEntity.Set("SIF_RefObject", "VendorInfo")
+		ret.BilledEntityRead().SetProperty("SIF_RefObject", "VendorInfo")
 		ret.BilledEntity.CopyString("Value", vendor.RefId)
 	} else {
 		log.Fatalf("No billing entity passed to Create_Debtor()")
 	}
-	return sifxml.DebtorCreate(ret)
+	if out, ok := sifxml.DebtorPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to Debtor: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_Debtors(student []*sifxml.StudentPersonal, staff []*sifxml.StaffPersonal, contact []*sifxml.StudentContactPersonal, vendor []*sifxml.VendorInfo) []*sifxml.Debtor {
@@ -783,45 +868,45 @@ func Create_Debtors(student []*sifxml.StudentPersonal, staff []*sifxml.StaffPers
 /* if calendar_date_number = -1, ignore */
 func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.SchoolInfo, date time.Time, studentholiday bool, publicholiday bool, calendar_date_number int) *sifxml.CalendarDate {
 	ret := sifxml.CalendarDate{}
-	ret.Set("CalendarDateRefId", create_GUID())
-	ret.Set("Date", date.Format("2006-01-02"))
+	ret.SetProperty("CalendarDateRefId", create_GUID())
+	ret.SetProperty("Date", date.Format("2006-01-02"))
 
-	ret.CalendarDateType = ret.CalendarDateType.New()
+	//ret.CalendarDateType = ret.CalendarDateType.New()
 	if !studentholiday {
-		ret.CalendarDateType.Set("Code", "INST")
+		ret.CalendarDateTypeRead().SetProperty("Code", "INST")
 	} else if publicholiday {
-		ret.CalendarDateType.Set("Code", "0846")
+		ret.CalendarDateTypeRead().SetProperty("Code", "0846")
 	} else {
-		ret.CalendarDateType.Set("Code", "0845")
+		ret.CalendarDateTypeRead().SetProperty("Code", "0845")
 	}
 
-	ret.StudentAttendance = ret.StudentAttendance.New()
+	//ret.StudentAttendance = ret.StudentAttendance.New()
 	if studentholiday {
-		ret.StudentAttendance.Set("CountsTowardAttendance", "No")
-		ret.StudentAttendance.Set("AttendanceValue", 0.0)
+		ret.StudentAttendanceRead().SetProperty("CountsTowardAttendance", "No")
+		ret.StudentAttendanceRead().SetProperty("AttendanceValue", 0.0)
 	} else {
-		ret.StudentAttendance.Set("CountsTowardAttendance", "Yes")
-		ret.StudentAttendance.Set("AttendanceValue", 1.0)
+		ret.StudentAttendanceRead().SetProperty("CountsTowardAttendance", "Yes")
+		ret.StudentAttendance.SetProperty("AttendanceValue", 1.0)
 	}
-	ret.TeacherAttendance = ret.TeacherAttendance.New()
+	//ret.TeacherAttendance = ret.TeacherAttendance.New()
 	if publicholiday {
-		ret.TeacherAttendance.Set("CountsTowardAttendance", "No")
-		ret.TeacherAttendance.Set("AttendanceValue", 0.0)
+		ret.TeacherAttendanceRead().SetProperty("CountsTowardAttendance", "No")
+		ret.TeacherAttendance.SetProperty("AttendanceValue", 0.0)
 	} else {
-		ret.TeacherAttendance.Set("CountsTowardAttendance", "Yes")
-		ret.TeacherAttendance.Set("AttendanceValue", 1.0)
+		ret.TeacherAttendanceRead().SetProperty("CountsTowardAttendance", "Yes")
+		ret.TeacherAttendance.SetProperty("AttendanceValue", 1.0)
 	}
-	ret.AdministratorAttendance = ret.AdministratorAttendance.New()
+	//ret.AdministratorAttendance = ret.AdministratorAttendance.New()
 	if publicholiday {
-		ret.AdministratorAttendance.Set("CountsTowardAttendance", "No")
-		ret.AdministratorAttendance.Set("AttendanceValue", 0.0)
+		ret.AdministratorAttendanceRead().SetProperty("CountsTowardAttendance", "No")
+		ret.AdministratorAttendance.SetProperty("AttendanceValue", 0.0)
 	} else {
-		ret.AdministratorAttendance.Set("CountsTowardAttendance", "Yes")
-		ret.AdministratorAttendance.Set("AttendanceValue", 1.0)
+		ret.AdministratorAttendanceRead().SetProperty("CountsTowardAttendance", "Yes")
+		ret.AdministratorAttendance.SetProperty("AttendanceValue", 1.0)
 	}
 
 	if calendar_date_number != -1 {
-		ret.Set("CalendarDateNumber", calendar_date_number)
+		ret.SetProperty("CalendarDateNumber", calendar_date_number)
 	}
 	if calendar != nil {
 		ret.CopyString("CalendarSummaryRefId", calendar.RefId)
@@ -830,7 +915,12 @@ func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.School
 	if school != nil {
 		ret.CopyString("SchoolInfoRefId", school.RefId)
 	}
-	return sifxml.CalendarDateCreate(ret)
+	if out, ok := sifxml.CalendarDatePointer(ret); !ok {
+		log.Fatalf("Could not create pointer to CalendarDate: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }
 
 func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.SchoolInfo) []*sifxml.CalendarDate {
