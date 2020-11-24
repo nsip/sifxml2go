@@ -317,6 +317,14 @@ END
         return n
 }
 
+func (n *$n) SetProperties(props ...Prop) *$n {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+
 func (n *$n) SetProperty(key string, value interface{}) *$n {
         if n == nil {
                 n, _ = ${n}Pointer(${n}\{\})
