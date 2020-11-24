@@ -429,15 +429,11 @@ func Create_RoomInfos(count int, school *sifxml.SchoolInfo) []*sifxml.RoomInfo {
 	return ret
 }
 
-func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentPersonal, staff []*sifxml.StaffPersonal) *sifxml.TeachingGroup {
-	shortname := randomStringFromSlice([]string{"MAT", "ENG", "PHYS", "BIO", "CHEM", "COMP", "VIS", "ECON", "HIST"})
+func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentPersonal, staff []*sifxml.StaffPersonal, timetablesubject *sifxml.TimeTableSubject) *sifxml.TeachingGroup {
 
 	ret := sifxml.TeachingGroup{}
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
-	ret.SetProperty("ShortName", shortname)
-	ret.SetProperty("LongName", teachingGroupLongName(shortname))
-	ret.SetProperty("KeyLearningArea", teachingGroupKLA(shortname))
 	ret.SetProperty("SchoolYear", this_year())
 	ret.SetProperty("Semester", 1)
 	ret.SetProperty("MinClassSize", 20)
@@ -447,6 +443,18 @@ func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentP
 		ret.SetProperty("SchoolInfoRefId", school.RefId().String())
 		ret.SetProperty("SchoolLocalId", school.LocalId().String())
 	}
+
+	shortname := teachingSubject()
+	if timetablesubject == nil {
+	} else {
+		ret.SetProperty("TimeTableSubjectRefId", timetablesubject.RefId().String())
+		ret.SetProperty("TimeTableSubjectLocalId", timetablesubject.SubjectLocalId().String())
+		shortname = timetablesubject.SubjectShortName().String()
+	}
+	ret.SetProperty("ShortName", shortname)
+	ret.SetProperty("LongName", teachingSubjectLongName(shortname))
+	ret.SetProperty("KeyLearningArea", teachingGroupKLA(shortname))
+
 	if len(students) > 1 {
 		for _, s := range students {
 			ret.StudentList().AddNew()
@@ -911,4 +919,144 @@ func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.Schoo
 		calendar_date_number++
 	}
 	return ret
+}
+
+func Create_TimeTable(school *sifxml.SchoolInfo) *sifxml.TimeTable {
+	ret := sifxml.TimeTable{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("SchoolYear", this_year())
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("Title", "Timetable "+ret.RefId().String())
+	ret.SetProperty("DaysPerCycle", 10)
+	ret.SetProperty("PeriodsPerDay", 7)
+	ret.SetProperty("TeachingPeriodsPerDay", 6)
+
+	days := []string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"}
+	periods := periods()
+	for i := 0; i < 10; i++ {
+		ret.TimeTableDayList().AddNew()
+		ret.TimeTableDayList().Last().SetProperty("DayTitle", days[i%5])
+		ret.TimeTableDayList().Last().SetProperty("DayId", strconv.Itoa(i+1))
+		for j := 0; j < 6; j++ {
+			ret.TimeTableDayList().Last().TimeTablePeriodList().AddNew()
+			ret.TimeTableDayList().Last().TimeTablePeriodList().Last().SetProperty("PeriodTitle", periods[j])
+			ret.TimeTableDayList().Last().TimeTablePeriodList().Last().SetProperty("PeriodId", strconv.Itoa(j+1))
+		}
+	}
+
+	if school != nil {
+		ret.SetProperty("SchoolInfoRefId", school.RefId().String())
+		ret.SetProperty("SchoolLocalId", school.LocalId().String())
+		ret.SetProperty("SchoolName", school.SchoolName().String())
+	}
+	if out, ok := sifxml.TimeTablePointer(ret); !ok {
+		log.Fatalf("Could not create pointer to TimeTable: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCourseInfo, subject string, acyear string, acyear_end string, semester int) *sifxml.TimeTableSubject {
+	code := strconv.Itoa(random_seq_gen("timetablesubjects", 900) + 100)
+
+	ret := sifxml.TimeTableSubject{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("SchoolYear", this_year())
+
+	ret.SetProperty("SubjectShortName", subject)
+	ret.SetProperty("SubjectLongName", teachingSubjectLongName(subject))
+	ret.SetProperty("SubjectType", randomStringFromSlice([]string{"Core", "Elective", "?"}))
+	ret.SetProperty("SubjectLocalId", teachingSubjectLongName(subject)+" "+code)
+	ret.SetProperty("ProposedMinClassSize", float64(rand.Intn(15)+5))
+	ret.SetProperty("ProposedMaxClassSize", ret.ProposedMinClassSize().Float())
+	ret.SetProperty("Semester", semester)
+
+	ret.OtherCodeList().AddNew()
+	ret.OtherCodeList().Last().SetProperty("Codeset", "mycodeset")
+	ret.OtherCodeList().Last().SetProperty("Value", strconv.Itoa(random_seq_gen("other_timetablesubjects", 900)+100))
+
+	if school != nil {
+		ret.SetProperty("SchoolInfoRefId", school.RefId().String())
+		ret.SetProperty("SchoolLocalId", school.LocalId().String())
+	}
+	if course != nil {
+		ret.SetProperty("SchoolCourseInfoRefId", course.RefId().String())
+		ret.SetProperty("SchoolCourseLocalId", course.CourseCode().String())
+	}
+
+	if acyear_end == "" {
+		ret.AcademicYear().SetProperty("Code", acyear)
+	} else {
+		ret.AcademicYearRange().Start().SetProperty("Code", acyear)
+		ret.AcademicYearRange().End().SetProperty("Code", acyear_end)
+	}
+
+	if out, ok := sifxml.TimeTableSubjectPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to TimeTableSubject: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+func Create_TimeTableSubjects(school *sifxml.SchoolInfo) []*sifxml.TimeTableSubject {
+	ret := sifxml.TimeTableSubjectSlice()
+	for semester := 1; semester <= 2; semester++ {
+		for _, s := range all_teachingSubjects() {
+			for _, y := range Schooltype2Yearlevels(school.SchoolType().String()) {
+				ret = append(ret, Create_TimeTableSubject(school, nil, s, y, "", semester))
+			}
+		}
+	}
+	return ret
+}
+
+func Create_TimeTableCell(day string, period string, celltype string, school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, subject *sifxml.TimeTableSubject, teachinggroup *sifxml.TeachingGroup, room *sifxml.RoomInfo, rooms []*sifxml.RoomInfo, staff *sifxml.StaffPersonal, teachers []*sifxml.StaffPersonal) *sifxml.TimeTableCell {
+	ret := sifxml.TimeTableCell{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("DayId", day)
+	ret.SetProperty("PeriodId", period)
+	ret.SetProperty("CellType", celltype)
+
+	if school != nil {
+		ret.SetProperty("SchoolInfoRefId", school.RefId().String())
+		ret.SetProperty("SchoolLocalId", school.LocalId().String())
+	}
+	if timetable != nil {
+		ret.SetProperty("TimeTableRefId", timetable.RefId().String())
+		ret.SetProperty("TimeTableLocalId", timetable.LocalId().String())
+	}
+	if subject != nil {
+		ret.SetProperty("TimeTableSubjectRefId", subject.RefId().String())
+		ret.SetProperty("SubjectLocalId", subject.SubjectLocalId().String())
+	}
+	if teachinggroup != nil {
+		ret.SetProperty("TeachingGroupRefId", teachinggroup.RefId().String())
+		ret.SetProperty("TeachingGroupLocalId", teachinggroup.LocalId().String())
+	}
+	if room != nil {
+		ret.SetProperty("RoomInfoRefId", room.RefId().String())
+		ret.SetProperty("RoomNumber", room.RoomNumber().String())
+	}
+	if len(rooms) > 0 {
+		for _, s := range rooms {
+			ret.RoomList().AppendString(s.RefId().String())
+		}
+	}
+	if staff != nil {
+		ret.SetProperty("StaffPersonalRefId", staff.RefId().String())
+		ret.SetProperty("StaffLocalId", staff.LocalId().String())
+	}
+	if len(teachers) > 0 {
+		period_int, _ := strconv.Atoi(period)
+		addTeachers(ret.TeacherList(), teachers, periodStart(period_int), periodEnd(period_int))
+	}
+
+	if out, ok := sifxml.TimeTableCellPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to TimeTableCell: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
 }

@@ -8,12 +8,15 @@ import (
 )
 
 type TG_usecase struct {
-	Schools        []*sifxml.SchoolInfo
-	Students       []*sifxml.StudentPersonal
-	Staff          []*sifxml.StaffPersonal
-	Enrolments     []*sifxml.StudentSchoolEnrollment
-	Assignments    []*sifxml.StaffAssignment
-	TeachingGroups []*sifxml.TeachingGroup
+	Schools           []*sifxml.SchoolInfo
+	Students          []*sifxml.StudentPersonal
+	Staff             []*sifxml.StaffPersonal
+	Enrolments        []*sifxml.StudentSchoolEnrollment
+	Assignments       []*sifxml.StaffAssignment
+	TeachingGroups    []*sifxml.TeachingGroup
+	TimeTables        []*sifxml.TimeTable
+	TimeTableSubjects []*sifxml.TimeTableSubject
+	TimeTableCells    []*sifxml.TimeTableCell
 }
 
 /*
@@ -24,12 +27,15 @@ Use case creators will by default create all the objects they need, but can opti
 /* counts of staff and students per school */
 func MakeTeachingGroupsBare(studentcount int, staffcount int, schoolcount int) TG_usecase {
 	ret := TG_usecase{
-		Schools:        sifxml.SchoolInfoSlice(),
-		Students:       sifxml.StudentPersonalSlice(),
-		Staff:          sifxml.StaffPersonalSlice(),
-		Enrolments:     sifxml.StudentSchoolEnrollmentSlice(),
-		Assignments:    sifxml.StaffAssignmentSlice(),
-		TeachingGroups: sifxml.TeachingGroupSlice(),
+		Schools:           sifxml.SchoolInfoSlice(),
+		Students:          sifxml.StudentPersonalSlice(),
+		Staff:             sifxml.StaffPersonalSlice(),
+		Enrolments:        sifxml.StudentSchoolEnrollmentSlice(),
+		Assignments:       sifxml.StaffAssignmentSlice(),
+		TeachingGroups:    sifxml.TeachingGroupSlice(),
+		TimeTables:        sifxml.TimeTableSlice(),
+		TimeTableSubjects: sifxml.TimeTableSubjectSlice(),
+		TimeTableCells:    sifxml.TimeTableCellSlice(),
 	}
 	for i := 0; i < schoolcount; i++ {
 		school := Create_SchoolInfo("Pri/Sec")
@@ -46,6 +52,10 @@ func MakeTeachingGroupsBare(studentcount int, staffcount int, schoolcount int) T
 		ret.Enrolments = append(ret.Enrolments, in.Enrolments...)
 		ret.Assignments = append(ret.Assignments, in.Assignments...)
 		ret.TeachingGroups = append(ret.TeachingGroups, in.TeachingGroups...)
+		ret.TimeTables = append(ret.TimeTables, in.TimeTables...)
+		ret.TimeTableSubjects = append(ret.TimeTableSubjects, in.TimeTableSubjects...)
+		ret.TimeTableCells = append(ret.TimeTableCells, in.TimeTableCells...)
+		ret.TeachingGroups = append(ret.TeachingGroups, in.TeachingGroups...)
 	}
 	return ret
 }
@@ -53,16 +63,21 @@ func MakeTeachingGroupsBare(studentcount int, staffcount int, schoolcount int) T
 /* presupposed for a single school */
 func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal, assignments []*sifxml.StaffAssignment, students []*sifxml.StudentPersonal, enrolments []*sifxml.StudentSchoolEnrollment) TG_usecase {
 	ret := TG_usecase{
-		Schools:        sifxml.SchoolInfoSlice(),
-		Students:       students,
-		Staff:          staff,
-		Enrolments:     enrolments,
-		Assignments:    assignments,
-		TeachingGroups: sifxml.TeachingGroupSlice(),
+		Schools:           sifxml.SchoolInfoSlice(),
+		Students:          students,
+		Staff:             staff,
+		Enrolments:        enrolments,
+		Assignments:       assignments,
+		TeachingGroups:    sifxml.TeachingGroupSlice(),
+		TimeTables:        sifxml.TimeTableSlice(),
+		TimeTableSubjects: sifxml.TimeTableSubjectSlice(),
+		TimeTableCells:    sifxml.TimeTableCellSlice(),
 	}
 	ret.Schools = append(ret.Schools, school)
+	ret.TimeTables = append(ret.TimeTables, Create_TimeTable(school))
+
 	yrs := []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
-	subjects := []string{"MAT", "ENG", "PHYS", "BIO", "CHEM", "COMP", "VIS", "ECON", "HIST"}
+	subjects := all_teachingSubjects()
 
 	/* split up staff */
 	staffcount := len(staff)
@@ -108,7 +123,7 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 			}
 			class_teachers := sifxml.StaffPersonalSlice()
 			class_teachers = append(class_teachers, primarystaff[rand.Intn(len(primarystaff))])
-			tg := Create_TeachingGroup(school, class_students, class_teachers)
+			tg := Create_TeachingGroup(school, class_students, class_teachers, nil)
 			tg.SetProperty("ShortName", y+string(65+studentidx))
 			tg.SetProperty("LongName", y+string(65+studentidx))
 			tg.Unset("KeyLearningArea")
@@ -125,7 +140,7 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 			}
 			class_teachers := sifxml.StaffPersonalSlice()
 			class_teachers = append(class_teachers, secondarystaff[rand.Intn(len(secondarystaff))])
-			tg := Create_TeachingGroup(school, class_students, class_teachers)
+			tg := Create_TeachingGroup(school, class_students, class_teachers, nil)
 			tg.SetProperty("ShortName", y+string(65+studentidx))
 			tg.SetProperty("LongName", y+string(65+studentidx))
 			tg.Unset("KeyLearningArea")
@@ -162,11 +177,13 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 				}
 				class_teachers := sifxml.StaffPersonalSlice()
 				class_teachers = append(class_teachers, subjectstaff[s][rand.Intn(len(subjectstaff[s]))])
-				tg := Create_TeachingGroup(school, class_students, class_teachers)
+				tts := Create_TimeTableSubject(school, nil, s, y, "", rand.Intn(2)+1)
+				tg := Create_TeachingGroup(school, class_students, class_teachers, tts)
 				tg.SetProperty("ShortName", s+" "+y+string(65+studentidx))
-				tg.SetProperty("LongName", teachingGroupLongName(s)+" "+y+string(65+studentidx))
+				tg.SetProperty("LongName", teachingSubjectLongName(s)+" "+y+string(65+studentidx))
 				tg.SetProperty("KeyLearningArea", teachingGroupKLA(s))
 				ret.TeachingGroups = append(ret.TeachingGroups, tg)
+				ret.TimeTableSubjects = append(ret.TimeTableSubjects, tts)
 			}
 		}
 	}

@@ -252,7 +252,14 @@ func random_date(from string, to string) string {
 	return gofakeit.DateRange(t1, t2).Format("2006-01-02")
 }
 
-func teachingGroupLongName(shortname string) string {
+func all_teachingSubjects() []string {
+	return ([]string{"MAT", "ENG", "PHYS", "BIO", "CHEM", "COMP", "VIS", "ECON", "HIST"})
+}
+func teachingSubject() string {
+	return randomStringFromSlice(all_teachingSubjects())
+}
+
+func teachingSubjectLongName(shortname string) string {
 	switch shortname {
 	case "MAT":
 		return "Mathematics"
@@ -388,4 +395,22 @@ func Schooltype2Yearlevels(schooltype string) []string {
 		return []string{"11", "12"}
 	}
 	return []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
+}
+
+func periods() []string {
+	return []string{"9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM"}
+}
+
+func periodId2Hour(id int) int {
+	return 8 + id
+}
+
+func periodStart(id int) time.Time {
+	t, _ := time.Parse("2006-01-02T15:04:05.000Z", fmt.Sprintf("2000-01-01T%02d:05:00.000Z", periodId2Hour(id)))
+	return t
+}
+
+func periodEnd(id int) time.Time {
+	t, _ := time.Parse("2006-01-02T15:04:05.000Z", fmt.Sprintf("2000-01-01T%02d:55:00.000Z", periodId2Hour(id)))
+	return t
 }

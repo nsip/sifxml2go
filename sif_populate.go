@@ -43,7 +43,15 @@ func main() {
 	err = populate.PrintXML(rooms[3])
 	populate.Errcheck(err)
 
-	t := populate.Create_TeachingGroup(school, students, staff)
+	tt := populate.Create_TimeTable(school)
+	err = populate.PrintXML(tt)
+	populate.Errcheck(err)
+
+	tts := populate.Create_TimeTableSubjects(school)
+	err = populate.PrintXML(tts[3])
+	populate.Errcheck(err)
+
+	t := populate.Create_TeachingGroup(school, students, staff, tts[3])
 	err = populate.PrintXML(t)
 	populate.Errcheck(err)
 
@@ -67,7 +75,7 @@ func main() {
 	err = populate.PrintXML(v[3])
 	populate.Errcheck(err)
 
-	act := populate.Create_ScheduledActivity(school, nil, nil, nil, students, staff, make([]*sifxml.TeachingGroup, 0), rooms)
+	act := populate.Create_ScheduledActivity(school, tt, nil, tts[3], students, staff, make([]*sifxml.TeachingGroup, 0), rooms)
 	err = populate.PrintXML(act)
 	populate.Errcheck(err)
 
@@ -91,18 +99,27 @@ func main() {
 	err = populate.PrintXML(day[3])
 	populate.Errcheck(err)
 
-	ret := populate.MakeTeachingGroupsBare(400, 20, 10)
-	err = populate.PrintXML(ret.Schools)
+	cell := populate.Create_TimeTableCell("1", "1", "Teaching", school, tt, tts[3], t, rooms[3], rooms, staff[3], staff)
+	err = populate.PrintXML(cell)
 	populate.Errcheck(err)
-	err = populate.PrintXML(ret.Students)
-	populate.Errcheck(err)
-	err = populate.PrintXML(ret.Enrolments)
-	populate.Errcheck(err)
-	err = populate.PrintXML(ret.Staff)
-	populate.Errcheck(err)
-	err = populate.PrintXML(ret.Assignments)
-	populate.Errcheck(err)
-	err = populate.PrintXML(ret.TeachingGroups)
-	populate.Errcheck(err)
-	populate.PrintJSON(ret.TeachingGroups)
+	/*
+		ret := populate.MakeTeachingGroupsBare(400, 20, 10)
+		err = populate.PrintXML(ret.Schools)
+		populate.Errcheck(err)
+		err = populate.PrintXML(ret.Students)
+		populate.Errcheck(err)
+		err = populate.PrintXML(ret.Enrolments)
+		populate.Errcheck(err)
+		err = populate.PrintXML(ret.Staff)
+		populate.Errcheck(err)
+		err = populate.PrintXML(ret.Assignments)
+		populate.Errcheck(err)
+		err = populate.PrintXML(ret.TeachingGroups)
+		populate.Errcheck(err)
+		err = populate.PrintXML(ret.TimeTables)
+		populate.Errcheck(err)
+		err = populate.PrintXML(ret.TimeTableSubjects)
+		populate.Errcheck(err)
+		//populate.PrintJSON(ret.TeachingGroups)
+	*/
 }
