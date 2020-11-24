@@ -12,7 +12,6 @@ while(<>) {
     $seen++;
   }
 
-
   @parts = split /(`)/;
   $parts[0] =~ s/://g unless $parts[0] =~ /map\[/;
   $_ = join('', @parts);
@@ -21,7 +20,7 @@ while(<>) {
   s/`xml:",chardata"`/`xml:",chardata" json:"value"`/;
   $omitempty = "";
   $omitempty = ",omitempty" if m/ OPT/;
-  s/`xml:"([^,]+)"`/`xml:"\1$omitempty" json:"\1"`/;
+  s/`xml:"([^,]+)"`/`xml:"\1$omitempty" json:"\1$omitempty"`/;
   # We use pointer for all values, so we can introduce NULL for omitempty
   s/ OPT//;
   s/^(\s*\S+\s+)([^\[\s ]\S*\s+)`/\1*\2`/; # name type `...`

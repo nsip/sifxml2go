@@ -70,7 +70,7 @@ import (
   "log"
   "reflect"
 
-  "github.com/mohae/deepcopy"
+  "github.com/qdm12/reprint"
   )
 
 type Prop struct {
@@ -92,7 +92,6 @@ END
 
 foreach $n (@object) {
   print <<"END";
-  // XXXXX
 func ${n}Slice() []*$n {
   return make([]*$n, 0)
   }
@@ -114,16 +113,20 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+  func (t *$n) Clone() (*$n) {
+return reprint.This(t).(*$n)
+  }
 END
 }
 
 
+# Matt's Append is my AddNew
 foreach $n (keys %list) {
   $emptytype= emptytype($list{$n}{TYPE});
       $cv = codeset_validate($$list{$n}{TYPE});
   print <<"END";
 
-  // Matt's Append is my AddNew
   func (t *$n) Append(value $list{$n}{TYPE}) *$n {
     $cv
         if t == nil {
@@ -158,8 +161,8 @@ END
 
   if ($list{$n}{TYPE} eq "string" or $alias{$list{$n}{TYPE}} eq "string") {
       print <<"END";
-      func (t *$n) AppendString(value interface{}) *$n {
-        return t.Append(($list{$n}{TYPE})(fmt.Sprint(reflect.ValueOf(value).Elem().Interface())))
+      func (t *$n) AppendString(value string) *$n {
+        return t.Append(($list{$n}{TYPE})(value))
         }
 END
   }
@@ -168,7 +171,6 @@ END
 foreach $n (keys %alias_orig) {
   if ($alias{$n} eq 'string') {
   print <<"END";
-  // XXXXX
 func (t *$n) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
@@ -199,7 +201,6 @@ END
 }
  if ($alias{$n} eq 'int') {
   print <<"END";
-  // XXXXX
 func (t *$n) Int() int {
   return int((reflect.ValueOf(*t).Interface()).($n))
   }
@@ -229,7 +230,6 @@ END
 }
  if ($alias{$n} eq 'bool') {
   print <<"END";
-  // XXXXX
 func (t *$n) Bool() bool {
   return bool((reflect.ValueOf(*t).Interface()).($n))
   }
@@ -259,7 +259,6 @@ END
 }
  if ($alias{$n} eq 'float64') {
   print <<"END";
-  // XXXXX
 func (t *$n) Float() float64 {
   return float64((reflect.ValueOf(*t).Interface()).($n))
   }
@@ -300,31 +299,15 @@ foreach $n (keys %types) {
   next if $list{$n};
   print <<"END";
 
-  // XXXXX
-func (t *$n) CopyString(key string, value interface{}) *$n {
-  return t.SetProperty(key, fmt.Sprint(reflect.ValueOf(value).Elem().Interface()))
-}
-
-
-  // XXXXX
-func (t *$n) CopyClone(key string, value interface{}) *$n {
-  if value == nil || reflect.ValueOf(value).IsNil() {
-    return t
-    }
-  resource := deepcopy.Copy(value)
-  return t.SetProperty(key, reflect.ValueOf(resource).Elem().Interface())
-}
-
-  // XXXXX
 func (n *$n) Unset(key string) *$n {
         switch key {
 END
   foreach $s (keys %{$types{$n}}) {
-    unsetswitch($s, $types{$n}{$s});
+    unsetswitch($n, $s, $types{$n}{$s});
   }
   if ($inherit{$n}) {
     foreach $s (keys %{$types{$inherit{$n}}}) {
-      unsetswitch($s, $types{$inherit{$n}}{$s});
+      unsetswitch($n, $s, $types{$inherit{$n}}{$s});
     }
   }
   print <<"END";
@@ -341,11 +324,11 @@ func (n *$n) SetProperty(key string, value interface{}) *$n {
         switch key {
 END
   foreach $s (keys %{$types{$n}}) {
-    setswitch($s, $types{$n}{$s});
+    setswitch($n, $s, $types{$n}{$s});
   }
   if ($inherit{$n}) {
     foreach $s (keys %{$types{$inherit{$n}}}) {
-      setswitch($s, $types{$inherit{$n}}{$s});
+      setswitch($n, $s, $types{$inherit{$n}}{$s});
     }
   }
   print <<"END";
@@ -359,53 +342,68 @@ END
 
   foreach $s (keys %{$types{$n}}) {
     readfunction($n, $s, $types{$n}{$s});
+    isnil($n, $s, $types{$n}{$s});
   }
   if ($inherit{$n}) {
     foreach $s (keys %{$types{$inherit{$n}}}) {
       readfunction($n, $s, $types{$inherit{$n}}{$s});
+      isnil($n, $s, $types{$inherit{$n}}{$s});
     }
   }
 }
 
-sub unsetswitch($) {
-  my ($s) = @_;
+sub unsetswitch($$$) {
+  my ($n, $s, $t) = @_;
+  $lcn = lc $n;
   print << "END";
   case "$s":
-   n.$s = nil
+   n.$lcn.$s = nil
+END
+}
+
+sub isnil($$$) {
+  my ($n, $s, $t) = @_;
+  $lcn = lc $n;
+  print <<"END";
+  func (s *$n) ${s}_IsNil() bool {
+    return s.$s == nil || s.$lcn.$s == nil
+    }
 END
 }
 
 sub readfunction($$$){
   my ($n, $s, $t) = @_;
   $emptytype = emptytype($t);
+  $lcn = lc $n;
   print <<"END";
-  func (s *$n) ${s}Read() *$t {
-    if s.$s == nil {
+  func (s *$n) ${s}() *$t {
+    if s.$lcn.$s == nil {
 END
   if($alias{$t}) {
     $cr = typecreate($alias{$t});
   print <<"END";
     if v, ok:= ${cr}Pointer($emptytype); ok {
-      s.$s = ((*$t)(v))
+      s.$lcn.$s = ((*$t)(v))
       }
 END
   } else {
      $cr = typecreate($t);
   print <<"END";
      if v, ok:= ${cr}Pointer($emptytype); ok {
-      s.$s = v
+      s.$lcn.$s = v
       }
 END
   }
   print <<"END";
       }
-      return s.$s
+      return s.$lcn.$s
     }
 END
 }
 
-sub setswitch($$) {
-  my ($s, $t) = @_;
+sub setswitch($$$) {
+  my ($n, $s, $t) = @_;
+  $lcn = lc $n;
   print <<"END";
     case "$s":
 END
@@ -415,14 +413,14 @@ END
     print <<"END";
     $cv
     if v, ok:= ${cr}Pointer(value); ok {
-      n.$s = ((*$t)(v))
+      n.$lcn.$s = ((*$t)(v))
       }
 END
   } else {
     $cr = typecreate($t);
     print <<"END";
     if v, ok:= ${cr}Pointer(value); ok {
-      n.$s = v
+      n.$lcn.$s = v
       }
 END
   }

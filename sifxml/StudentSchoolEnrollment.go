@@ -4,6 +4,10 @@ package sifxml
 type StudentSchoolEnrollments []StudentSchoolEnrollment
 
     type StudentSchoolEnrollment struct {
+  studentschoolenrollment `xml:"StudentSchoolEnrollment" json:"StudentSchoolEnrollment"`
+}
+
+type studentschoolenrollment struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
@@ -11,60 +15,76 @@ type StudentSchoolEnrollments []StudentSchoolEnrollment
       TimeFrame *AUCodeSetsEnrollmentTimeFrameType `xml:"TimeFrame" json:"TimeFrame"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       EntryDate *String `xml:"EntryDate" json:"EntryDate"`
-      EntryType *StudentEntryContainerType `xml:"EntryType,omitempty" json:"EntryType"`
-      YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel"`
+      EntryType *StudentEntryContainerType `xml:"EntryType,omitempty" json:"EntryType,omitempty"`
+      YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel,omitempty"`
       Homeroom *StudentSchoolEnrollment_Homeroom
       Advisor *StudentSchoolEnrollment_Advisor
       Counselor *StudentSchoolEnrollment_Counselor
-      Homegroup *String `xml:"Homegroup,omitempty" json:"Homegroup"`
-      ACARASchoolId *LocalIdType `xml:"ACARASchoolId,omitempty" json:"ACARASchoolId"`
-      ClassCode *String `xml:"ClassCode,omitempty" json:"ClassCode"`
-      TestLevel *YearLevelType `xml:"TestLevel,omitempty" json:"TestLevel"`
-      ReportingSchool *AUCodeSetsYesOrNoCategoryType `xml:"ReportingSchool,omitempty" json:"ReportingSchool"`
-      House *String `xml:"House,omitempty" json:"House"`
-      IndividualLearningPlan *AUCodeSetsYesOrNoCategoryType `xml:"IndividualLearningPlan,omitempty" json:"IndividualLearningPlan"`
+      Homegroup *String `xml:"Homegroup,omitempty" json:"Homegroup,omitempty"`
+      ACARASchoolId *LocalIdType `xml:"ACARASchoolId,omitempty" json:"ACARASchoolId,omitempty"`
+      ClassCode *String `xml:"ClassCode,omitempty" json:"ClassCode,omitempty"`
+      TestLevel *YearLevelType `xml:"TestLevel,omitempty" json:"TestLevel,omitempty"`
+      ReportingSchool *AUCodeSetsYesOrNoCategoryType `xml:"ReportingSchool,omitempty" json:"ReportingSchool,omitempty"`
+      House *String `xml:"House,omitempty" json:"House,omitempty"`
+      IndividualLearningPlan *AUCodeSetsYesOrNoCategoryType `xml:"IndividualLearningPlan,omitempty" json:"IndividualLearningPlan,omitempty"`
       Calendar *StudentSchoolEnrollment_Calendar
-      ExitDate *String `xml:"ExitDate,omitempty" json:"ExitDate"`
-      ExitStatus *StudentExitStatusContainerType `xml:"ExitStatus,omitempty" json:"ExitStatus"`
-      ExitType *StudentExitContainerType `xml:"ExitType,omitempty" json:"ExitType"`
-      FTE *Float `xml:"FTE,omitempty" json:"FTE"`
-      FTPTStatus *AUCodeSetsFTPTStatusCodeType `xml:"FTPTStatus,omitempty" json:"FTPTStatus"`
-      FFPOS *AUCodeSetsFFPOSStatusCodeType `xml:"FFPOS,omitempty" json:"FFPOS"`
-      CatchmentStatus *CatchmentStatusContainerType `xml:"CatchmentStatus,omitempty" json:"CatchmentStatus"`
-      RecordClosureReason *String `xml:"RecordClosureReason,omitempty" json:"RecordClosureReason"`
-      PromotionInfo *PromotionInfoType `xml:"PromotionInfo,omitempty" json:"PromotionInfo"`
-      PreviousSchool *LocalIdType `xml:"PreviousSchool,omitempty" json:"PreviousSchool"`
-      PreviousSchoolName *String `xml:"PreviousSchoolName,omitempty" json:"PreviousSchoolName"`
-      DestinationSchool *LocalIdType `xml:"DestinationSchool,omitempty" json:"DestinationSchool"`
-      DestinationSchoolName *String `xml:"DestinationSchoolName,omitempty" json:"DestinationSchoolName"`
-      StudentSubjectChoiceList *StudentSubjectChoiceListType `xml:"StudentSubjectChoiceList,omitempty" json:"StudentSubjectChoiceList"`
-      StartedAtSchoolDate *String `xml:"StartedAtSchoolDate,omitempty" json:"StartedAtSchoolDate"`
-      StudentGroupList *StudentGroupListType `xml:"StudentGroupList,omitempty" json:"StudentGroupList"`
-      PublishingPermissionList *PublishingPermissionListType `xml:"PublishingPermissionList,omitempty" json:"PublishingPermissionList"`
-      DisabilityLevelOfAdjustment *String `xml:"DisabilityLevelOfAdjustment,omitempty" json:"DisabilityLevelOfAdjustment"`
-      DisabilityCategory *String `xml:"DisabilityCategory,omitempty" json:"DisabilityCategory"`
-      CensusAge *Float `xml:"CensusAge,omitempty" json:"CensusAge"`
-      DistanceEducationStudent *AUCodeSetsYesOrNoCategoryType `xml:"DistanceEducationStudent,omitempty" json:"DistanceEducationStudent"`
-      BoardingStatus *AUCodeSetsBoardingType `xml:"BoardingStatus,omitempty" json:"BoardingStatus"`
-      InternationalStudent *AUCodeSetsYesOrNoCategoryType `xml:"InternationalStudent,omitempty" json:"InternationalStudent"`
-      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
-      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
-      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`
+      ExitDate *String `xml:"ExitDate,omitempty" json:"ExitDate,omitempty"`
+      ExitStatus *StudentExitStatusContainerType `xml:"ExitStatus,omitempty" json:"ExitStatus,omitempty"`
+      ExitType *StudentExitContainerType `xml:"ExitType,omitempty" json:"ExitType,omitempty"`
+      FTE *Float `xml:"FTE,omitempty" json:"FTE,omitempty"`
+      FTPTStatus *AUCodeSetsFTPTStatusCodeType `xml:"FTPTStatus,omitempty" json:"FTPTStatus,omitempty"`
+      FFPOS *AUCodeSetsFFPOSStatusCodeType `xml:"FFPOS,omitempty" json:"FFPOS,omitempty"`
+      CatchmentStatus *CatchmentStatusContainerType `xml:"CatchmentStatus,omitempty" json:"CatchmentStatus,omitempty"`
+      RecordClosureReason *String `xml:"RecordClosureReason,omitempty" json:"RecordClosureReason,omitempty"`
+      PromotionInfo *PromotionInfoType `xml:"PromotionInfo,omitempty" json:"PromotionInfo,omitempty"`
+      PreviousSchool *LocalIdType `xml:"PreviousSchool,omitempty" json:"PreviousSchool,omitempty"`
+      PreviousSchoolName *String `xml:"PreviousSchoolName,omitempty" json:"PreviousSchoolName,omitempty"`
+      DestinationSchool *LocalIdType `xml:"DestinationSchool,omitempty" json:"DestinationSchool,omitempty"`
+      DestinationSchoolName *String `xml:"DestinationSchoolName,omitempty" json:"DestinationSchoolName,omitempty"`
+      StudentSubjectChoiceList *StudentSubjectChoiceListType `xml:"StudentSubjectChoiceList,omitempty" json:"StudentSubjectChoiceList,omitempty"`
+      StartedAtSchoolDate *String `xml:"StartedAtSchoolDate,omitempty" json:"StartedAtSchoolDate,omitempty"`
+      StudentGroupList *StudentGroupListType `xml:"StudentGroupList,omitempty" json:"StudentGroupList,omitempty"`
+      PublishingPermissionList *PublishingPermissionListType `xml:"PublishingPermissionList,omitempty" json:"PublishingPermissionList,omitempty"`
+      DisabilityLevelOfAdjustment *String `xml:"DisabilityLevelOfAdjustment,omitempty" json:"DisabilityLevelOfAdjustment,omitempty"`
+      DisabilityCategory *String `xml:"DisabilityCategory,omitempty" json:"DisabilityCategory,omitempty"`
+      CensusAge *Float `xml:"CensusAge,omitempty" json:"CensusAge,omitempty"`
+      DistanceEducationStudent *AUCodeSetsYesOrNoCategoryType `xml:"DistanceEducationStudent,omitempty" json:"DistanceEducationStudent,omitempty"`
+      BoardingStatus *AUCodeSetsBoardingType `xml:"BoardingStatus,omitempty" json:"BoardingStatus,omitempty"`
+      InternationalStudent *AUCodeSetsYesOrNoCategoryType `xml:"InternationalStudent,omitempty" json:"InternationalStudent,omitempty"`
+      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
+      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
+      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
     type StudentSchoolEnrollment_Homeroom struct {
+  studentschoolenrollment_homeroom `xml:"StudentSchoolEnrollment_Homeroom" json:"StudentSchoolEnrollment_Homeroom"`
+}
+
+type studentschoolenrollment_homeroom struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
 type StudentSchoolEnrollment_Advisor struct {
+  studentschoolenrollment_advisor `xml:"StudentSchoolEnrollment_Advisor" json:"StudentSchoolEnrollment_Advisor"`
+}
+
+type studentschoolenrollment_advisor struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
 type StudentSchoolEnrollment_Counselor struct {
+  studentschoolenrollment_counselor `xml:"StudentSchoolEnrollment_Counselor" json:"StudentSchoolEnrollment_Counselor"`
+}
+
+type studentschoolenrollment_counselor struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
 type StudentSchoolEnrollment_Calendar struct {
+  studentschoolenrollment_calendar `xml:"StudentSchoolEnrollment_Calendar" json:"StudentSchoolEnrollment_Calendar"`
+}
+
+type studentschoolenrollment_calendar struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

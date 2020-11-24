@@ -85,7 +85,7 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 	for _, s := range subjects {
 		subjectstaff[s] = sifxml.StaffPersonalSlice()
 		for j := 0; j < staffpersubject_count; j++ {
-			idx := random_seq_gen(fmt.Sprintf("%s-%s", school.RefId.String(), s), len(secondarystaff))
+			idx := random_seq_gen(fmt.Sprintf("%s-%s", school.RefId().String(), s), len(secondarystaff))
 			subjectstaff[s] = append(subjectstaff[s], secondarystaff[idx])
 		}
 	}
@@ -96,7 +96,7 @@ func MakeTeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal
 		studentsperyr[y] = sifxml.StudentPersonalSlice()
 	}
 	for _, s := range students {
-		studentsperyr[s.MostRecent.YearLevel.Code.String()] = append(studentsperyr[s.MostRecent.YearLevel.Code.String()], s)
+		studentsperyr[s.MostRecent().YearLevel().Code().String()] = append(studentsperyr[s.MostRecent().YearLevel().Code().String()], s)
 	}
 
 	/* 1 teacher per group out of primary staff, students only in 1 group, no subject distinctions */

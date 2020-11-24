@@ -8,11 +8,13 @@
 # 2. Empty target directories
 
 rm -rf sifxml
+rm -rf sifxml_tmp
 rm -rf sifgraphql
 mkdir -p sifxml
+mkdir -p sifxml_tmp
 mkdir -p sifgraphql
 echo "" > sifgraphql/sif-schema.graphql
-echo "package sifxml\n" > sifxml/examples.go
+echo "package sifxml\n" > sifxml_tmp/examples.go
 
 # 3. Extract all necessary information from specgen into flat files
 
@@ -39,7 +41,7 @@ for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/ReportAuthorityInfo.xml" ]] ; then
     continue
   fi
-  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl -s struct2go.pl -o > sifxml/$(basename "$filename" .xml).go
+  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl -s struct2go.pl -o > sifxml_tmp/$(basename "$filename" .xml).go
   xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
 done
 for filename in ./specgen_input/06_DataModel/Custom/AU/*.xml; do
@@ -49,7 +51,7 @@ for filename in ./specgen_input/06_DataModel/Custom/AU/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl -s struct2go.pl -o > sifxml/$(basename "$filename" .xml).go
+  xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl -s struct2go.pl -o > sifxml_tmp/$(basename "$filename" .xml).go
   xsltproc sifobject.xslt "$filename" | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
 done
 
@@ -57,8 +59,8 @@ echo '<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http
 cat specgen_input/80_BackMatter/Generic-CommonTypes.xml >> data.xml
 cat specgen_input/80_BackMatter/Custom/DataModel-CommonTypes-Custom.xml >> data.xml
 echo '</root>' >> data.xml
-xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/DataModel.go
-echo "type String string\ntype Int int\ntype Float float64\ntype Bool bool" >> sifxml/DataModel.go
+xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml_tmp/DataModel.go
+echo "type String string\ntype Int int\ntype Float float64\ntype Bool bool" >> sifxml_tmp/DataModel.go
 
 xsltproc sifobject.xslt data.xml | perl xslt_postprocess.pl | perl struct2graphql.pl >> sifgraphql/sif-schema.graphql
 
@@ -67,9 +69,13 @@ cat specgen_input/80_BackMatter/Custom/DataModel-CodeSets-Custom.xml >> codesets
 cat specgen_input/80_BackMatter/Custom/DataModel-ExternalCodeSets-Custom.xml >> codesets.xml
 echo '</root>' >> codesets.xml
 
-xsltproc sifobject.xslt codesets.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml/Codesets.go
+xsltproc sifobject.xslt codesets.xml | perl xslt_postprocess.pl | perl struct2go.pl > sifxml_tmp/Codesets.go
 
-cat sifxml/[A-Z]*.go | perl goHelpers.pl > sifxml/Helpers.go
+for filename in ./sifxml_tmp/*.go; do
+  cat "$filename" |  perl struct2go2.pl > sifxml/$(basename "$filename")
+done
+
+cat sifxml_tmp/[A-Z]*.go | perl goHelpers.pl > sifxml/Helpers.go
 
 # 4. Examples
 

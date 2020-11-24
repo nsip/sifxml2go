@@ -4,16 +4,20 @@ package sifxml
 type StudentContactPersonals []StudentContactPersonal
 
     type StudentContactPersonal struct {
+  studentcontactpersonal `xml:"StudentContactPersonal" json:"StudentContactPersonal"`
+}
+
+type studentcontactpersonal struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId"`
-      OtherIdList *OtherIdListType `xml:"OtherIdList,omitempty" json:"OtherIdList"`
+      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
+      OtherIdList *OtherIdListType `xml:"OtherIdList,omitempty" json:"OtherIdList,omitempty"`
       PersonInfo *PersonInfoType `xml:"PersonInfo" json:"PersonInfo"`
-      EmploymentType *AUCodeSetsEmploymentTypeType `xml:"EmploymentType,omitempty" json:"EmploymentType"`
-      SchoolEducationalLevel *EducationalLevelType `xml:"SchoolEducationalLevel,omitempty" json:"SchoolEducationalLevel"`
-      NonSchoolEducation *AUCodeSetsNonSchoolEducationType `xml:"NonSchoolEducation,omitempty" json:"NonSchoolEducation"`
-      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList"`
-      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata"`
-      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements"`
+      EmploymentType *AUCodeSetsEmploymentTypeType `xml:"EmploymentType,omitempty" json:"EmploymentType,omitempty"`
+      SchoolEducationalLevel *EducationalLevelType `xml:"SchoolEducationalLevel,omitempty" json:"SchoolEducationalLevel,omitempty"`
+      NonSchoolEducation *AUCodeSetsNonSchoolEducationType `xml:"NonSchoolEducation,omitempty" json:"NonSchoolEducation,omitempty"`
+      LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
+      SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
+      SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
     

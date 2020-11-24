@@ -2,10 +2,13 @@ package populate
 
 import (
 	"../sifxml"
+	"bytes"
+	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"log"
 	"math/rand"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -27,6 +30,16 @@ func PrintXML(record interface{}) error {
 	}
 	fmt.Println(string(output))
 	return nil
+}
+
+func PrintJSON(record interface{}) {
+	b, err := json.Marshal(record)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var out bytes.Buffer
+	json.Indent(&out, b, "=", "\t")
+	out.WriteTo(os.Stdout)
 }
 
 func create_GUID() string {
@@ -213,7 +226,7 @@ func create_email(given string, middle string, family string, domain string) str
 
 func create_school_email_domain(school *sifxml.SchoolInfo) string {
 	domain := randomStringFromSlice([]string{"mail.vic.edu.au", "people.vic.edu.au", "vic.edu.au", "dashboard.vic.edu.au", "distance.vic.edu.au"})
-	state := school.AddressList.Last().StateProvince.String()
+	state := school.AddressList().Last().StateProvince().String()
 	return strings.Replace(domain, "vic", strings.ToLower(state), 1)
 }
 

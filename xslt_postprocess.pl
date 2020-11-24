@@ -112,7 +112,7 @@ sub add_json(@) {
     }
     s/`xml:"([^,]+),attr"`/`xml:"\1,attr" json:"\1"`/;
     s/`xml:",chardata"`/`xml:",chardata" json:"value"`/;
-    s/`xml:"([^,]+)"`/`xml:"\1,omitempty" json:"\1"`/;
+    s/`xml:"([^,]+)"`/`xml:"\1,omitempty" json:"\1,omitempty"`/;
     push @obj, $_;
   }
   push @lines1 , @obj;
