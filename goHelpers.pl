@@ -157,6 +157,21 @@ func (t *$n) Last() *$list{$n}{TYPE} {
         return &(t.$list{$n}{KEY}\[len(t.$list{$n}{KEY})-1])
 }
 
+func (t *$n) Index(n int) *$list{$n}{TYPE} {
+  if t.$list{$n}{KEY} == nil {
+    t = t.AddNew()
+    }
+        return &(t.$list{$n}{KEY}\[n])
+}
+
+func (t *$n) Len() int {
+  if t.$list{$n}{KEY} == nil {
+    t = t.AddNew()
+    }
+        return len(t.$list{$n}{KEY})
+}
+
+
 END
 
   if ($list{$n}{TYPE} eq "string" or $alias{$list{$n}{TYPE}} eq "string") {

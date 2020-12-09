@@ -957,6 +957,7 @@ func Create_TimeTable(school *sifxml.SchoolInfo) *sifxml.TimeTable {
 	}
 }
 
+/* assuming that subject is the same enum value across year levels, and that TTS can be grouped on SubjectShortName = subject */
 func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCourseInfo, subject string, acyear string, acyear_end string, semester int) *sifxml.TimeTableSubject {
 	code := strconv.Itoa(random_seq_gen("timetablesubjects", 900) + 100)
 
@@ -967,7 +968,11 @@ func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCou
 	ret.SetProperty("SubjectShortName", subject)
 	ret.SetProperty("SubjectLongName", teachingSubjectLongName(subject))
 	ret.SetProperty("SubjectType", randomStringFromSlice([]string{"Core", "Elective", "?"}))
-	ret.SetProperty("SubjectLocalId", teachingSubjectLongName(subject)+" "+code)
+	if acyear_end == "" {
+		ret.SetProperty("SubjectLocalId", fmt.Sprintf("%s Y%s %s", teachingSubjectLongName(subject), acyear, code))
+	} else {
+		ret.SetProperty("SubjectLocalId", fmt.Sprintf("%s Y%s-%s %s", teachingSubjectLongName(subject), acyear, acyear_end, code))
+	}
 	ret.SetProperty("ProposedMinClassSize", float64(rand.Intn(15)+5))
 	ret.SetProperty("ProposedMaxClassSize", ret.ProposedMinClassSize().Float())
 	ret.SetProperty("Semester", semester)
@@ -1000,10 +1005,15 @@ func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCou
 	}
 }
 
-func Create_TimeTableSubjects(school *sifxml.SchoolInfo) []*sifxml.TimeTableSubject {
+func Create_TimeTableSubjects(school *sifxml.SchoolInfo, subjects []string) []*sifxml.TimeTableSubject {
+	random_seq_gen_reset("timetablesubjects")
+	random_seq_gen_reset("other_timetablesubjects")
+	if len(subjects) == 0 {
+		subjects = all_teachingSubjects()
+	}
 	ret := sifxml.TimeTableSubjectSlice()
 	for semester := 1; semester <= 2; semester++ {
-		for _, s := range all_teachingSubjects() {
+		for _, s := range subjects {
 			for _, y := range Schooltype2Yearlevels(school.SchoolType().String()) {
 				ret = append(ret, Create_TimeTableSubject(school, nil, s, y, "", semester))
 			}
