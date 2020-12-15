@@ -49,6 +49,19 @@ func addTeachers(t *sifxml.ScheduledTeacherListType, staff []*sifxml.StaffPerson
 	return t
 }
 
+func copyTeachingGroupPeriodFromCell(group *sifxml.TeachingGroup, cell *sifxml.TimeTableCell, start_times map[string]map[string]string) *sifxml.TeachingGroup {
+	group.TeachingGroupPeriodList().AddNew()
+	group.TeachingGroupPeriodList().Last().SetProperty("TimeTableCellRefId", cell.RefId().String())
+	group.TeachingGroupPeriodList().Last().SetProperty("RoomNumber", cell.RoomNumber().String())
+	group.TeachingGroupPeriodList().Last().SetProperty("StaffLocalId", cell.StaffLocalId().String())
+	group.TeachingGroupPeriodList().Last().SetProperty("DayId", cell.DayId().String())
+	group.TeachingGroupPeriodList().Last().SetProperty("PeriodId", cell.PeriodId().String())
+	group.TeachingGroupPeriodList().Last().SetProperty("StartTime", cell.RefId().String())
+	group.TeachingGroupPeriodList().Last().SetProperty("CellType", cell.CellType().String())
+	group.TeachingGroupPeriodList().Last().SetProperty("StartTime", start_times[cell.DayId().String()][cell.PeriodId().String()])
+	return group
+}
+
 /* if yearlevel = "", create any year level */
 func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	if yearlevel == "" {
@@ -408,7 +421,7 @@ func Create_RoomInfoWithStaff(school *sifxml.SchoolInfo, staff []*sifxml.StaffPe
 	if school != nil {
 		ret.SetProperty("SchoolInfoRefId", school.RefId().String())
 	}
-	if len(staff) > 1 {
+	if len(staff) > 0 {
 		for _, s1 := range staff {
 			ret.StaffList().AppendString(s1.RefId().String())
 		}
@@ -455,7 +468,7 @@ func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentP
 	ret.SetProperty("LongName", teachingSubjectLongName(shortname))
 	ret.SetProperty("KeyLearningArea", teachingGroupKLA(shortname))
 
-	if len(students) > 1 {
+	if len(students) > 0 {
 		for _, s := range students {
 			ret.StudentList().AddNew()
 			ret.StudentList().Last().SetProperty("StudentPersonalRefId", s.RefId().String())
@@ -463,7 +476,7 @@ func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentP
 			ret.StudentList().Last().SetProperty("Name", s.PersonInfo().Name().Clone())
 		}
 	}
-	if len(staff) > 1 {
+	if len(staff) > 0 {
 		for _, s := range staff {
 			ret.TeacherList().AddNew()
 			ret.TeacherList().Last().SetProperty("StaffPersonalRefId", s.RefId().String())
@@ -937,10 +950,12 @@ func Create_TimeTable(school *sifxml.SchoolInfo) *sifxml.TimeTable {
 		ret.TimeTableDayList().AddNew()
 		ret.TimeTableDayList().Last().SetProperty("DayTitle", days[i%5])
 		ret.TimeTableDayList().Last().SetProperty("DayId", strconv.Itoa(i+1))
-		for j := 0; j < 6; j++ {
+		for j := 0; j < 7; j++ {
 			ret.TimeTableDayList().Last().TimeTablePeriodList().AddNew()
 			ret.TimeTableDayList().Last().TimeTablePeriodList().Last().SetProperty("PeriodTitle", periods[j])
 			ret.TimeTableDayList().Last().TimeTablePeriodList().Last().SetProperty("PeriodId", strconv.Itoa(j+1))
+			ret.TimeTableDayList().Last().TimeTablePeriodList().Last().SetProperty("StartTime", periodStart(j+1).Format("15:04:05"))
+			ret.TimeTableDayList().Last().TimeTablePeriodList().Last().SetProperty("EndTime", periodEnd(j+1).Format("15:04:05"))
 		}
 	}
 

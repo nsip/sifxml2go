@@ -119,9 +119,9 @@ func main() {
 	populate.Errcheck(err)
 	err = populate.PrintXML(ret.TimeTableSubjects)
 	populate.Errcheck(err)
-	err = populate.PrintXML(ret.TeachingGroups)
-	populate.Errcheck(err)
 	err = populate.PrintXML(ret.TimeTableCells)
+	populate.Errcheck(err)
+	err = populate.PrintXML(ret.TeachingGroups)
 	populate.Errcheck(err)
 	//populate.PrintJSON(ret.TeachingGroups)
 

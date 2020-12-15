@@ -305,6 +305,16 @@ func MakeTimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, 
 	periodids := []string{"1", "2", "3", "5", "6", "7"}
 	seen := make(map[string]map[string]bool)
 
+	start_times := make(map[string]map[string]string)
+	for i := 0; i < timetable.TimeTableDayList().Len(); i++ {
+		dayid := timetable.TimeTableDayList().Index(i).DayId().String()
+		start_times[dayid] = make(map[string]string)
+		for j := 0; j < timetable.TimeTableDayList().Index(i).TimeTablePeriodList().Len(); j++ {
+			periodid := timetable.TimeTableDayList().Index(i).TimeTablePeriodList().Index(j).PeriodId().String()
+			start_times[dayid][periodid] = timetable.TimeTableDayList().Index(i).TimeTablePeriodList().Index(j).StartTime().String()
+		}
+	}
+
 	ret := sifxml.TimeTableCellSlice()
 	for _, g := range tg {
 		yrlvl := g.CurriculumLevel().String()
@@ -317,7 +327,9 @@ func MakeTimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, 
 					periodid := randomStringFromSlice(periodids)
 					for ; seen[dayid][periodid]; periodid = randomStringFromSlice(periodids) {
 					}
-					ret = append(ret, Create_TimeTableCell(dayid, periodid, "Teaching", school, timetable, subj, g, room, sifxml.RoomInfoSlice(), staff_map[g.TeacherList().Index(0).StaffPersonalRefId().String()], sifxml.StaffPersonalSlice()))
+					cell := Create_TimeTableCell(dayid, periodid, "Teaching", school, timetable, subj, g, room, sifxml.RoomInfoSlice(), staff_map[g.TeacherList().Index(0).StaffPersonalRefId().String()], sifxml.StaffPersonalSlice())
+					ret = append(ret, cell)
+					g = copyTeachingGroupPeriodFromCell(g, cell, start_times)
 				}
 			}
 		} else {
@@ -328,7 +340,9 @@ func MakeTimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, 
 				for ; seen[dayid][periodid]; periodid = randomStringFromSlice(periodids) {
 				}
 				room := rooms[rand.Intn(len(rooms))]
-				ret = append(ret, Create_TimeTableCell(dayid, periodid, "Teaching", school, timetable, tts_map[g.TimeTableSubjectRefId().String()], g, room, sifxml.RoomInfoSlice(), staff_map[g.TeacherList().Index(0).StaffPersonalRefId().String()], sifxml.StaffPersonalSlice()))
+				cell := Create_TimeTableCell(dayid, periodid, "Teaching", school, timetable, tts_map[g.TimeTableSubjectRefId().String()], g, room, sifxml.RoomInfoSlice(), staff_map[g.TeacherList().Index(0).StaffPersonalRefId().String()], sifxml.StaffPersonalSlice())
+				ret = append(ret, cell)
+				g = copyTeachingGroupPeriodFromCell(g, cell, start_times)
 			}
 		}
 	}
