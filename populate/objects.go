@@ -385,6 +385,7 @@ func Create_StudentContactRelationship(student *sifxml.StudentPersonal, contact 
 	}
 }
 
+/* no siblings */
 func Create_StudentContactPersonalAndRelationship(students []*sifxml.StudentPersonal) ([]*sifxml.StudentContactPersonal, []*sifxml.StudentContactRelationship) {
 	contacts := sifxml.StudentContactPersonalSlice()
 	relationships := sifxml.StudentContactRelationshipSlice()
@@ -506,8 +507,11 @@ func Create_FinancialAccount(parent *sifxml.FinancialAccount, location *sifxml.C
 	if parent != nil {
 		ret.SetProperty("ParentAccountRefId", parent.RefId().String())
 	}
-	if location != nil {
+	if location == nil {
+		ret.SetProperty("Name", gofakeit.Name())
+	} else {
 		ret.SetProperty("ChargedLocationInfoRefId", location.RefId().String())
+		ret.SetProperty("Name", location.Name().String())
 	}
 	if out, ok := sifxml.FinancialAccountPointer(ret); !ok {
 		log.Fatalf("Could not create pointer to FinacialAccount: %+v", ret)
@@ -518,7 +522,7 @@ func Create_FinancialAccount(parent *sifxml.FinancialAccount, location *sifxml.C
 }
 
 /* parent and location are either empty, or match count in size */
-func Create_FinancialAccounts(count int, parent []*sifxml.FinancialAccount, location []*sifxml.ChargedLocationInfo) []*sifxml.FinancialAccount {
+func Create_FinancialAccountsBase(count int, parent []*sifxml.FinancialAccount, location []*sifxml.ChargedLocationInfo) []*sifxml.FinancialAccount {
 	if len(parent) != 0 && len(location) != 0 {
 		if len(parent) != count {
 			log.Fatalf("Mismatch in count of financial accounts (%d) and count of parent financial accounts (%d)", count, len(parent))
@@ -540,6 +544,31 @@ func Create_FinancialAccounts(count int, parent []*sifxml.FinancialAccount, loca
 		ret = append(ret, Create_FinancialAccount(p, l))
 	}
 	return ret
+}
+
+/* half the accounts are children of other accounts. A third of all parent accounts are associated with a charged location; all children of that account are associated with the same charged location */
+func Create_FinancialAccounts(count int, location []*sifxml.ChargedLocationInfo) []*sifxml.FinancialAccount {
+	parent_account_count := count/2 + 1
+	parent_charge_locations := sifxml.ChargedLocationInfoSlice()
+	for i := 0; i < parent_account_count; i++ {
+		if rand.Float32() > 0.333 {
+			parent_charge_locations = append(parent_charge_locations, location[rand.Intn(len(location))])
+		} else {
+			parent_charge_locations = append(parent_charge_locations, nil)
+		}
+	}
+	parent_accounts := Create_FinancialAccountsBase(parent_account_count, sifxml.FinancialAccountSlice(), parent_charge_locations)
+
+	child_account_count := count - parent_account_count
+	child_charge_locations := sifxml.ChargedLocationInfoSlice()
+	child_parent_accounts := sifxml.FinancialAccountSlice()
+	for i := 0; i < child_account_count; i++ {
+		parent_id := rand.Intn(len(parent_accounts))
+		child_parent_accounts = append(child_parent_accounts, parent_accounts[parent_id])
+		child_charge_locations = append(child_charge_locations, parent_charge_locations[parent_id])
+	}
+	child_accounts := Create_FinancialAccountsBase(child_account_count, child_parent_accounts, child_charge_locations)
+	return append(parent_accounts, child_accounts...)
 }
 
 func Create_ChargedLocationInfo(parent *sifxml.ChargedLocationInfo, school *sifxml.SchoolInfo) *sifxml.ChargedLocationInfo {
@@ -1020,19 +1049,50 @@ func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCou
 	}
 }
 
-func Create_TimeTableSubjects(school *sifxml.SchoolInfo, subjects []string) []*sifxml.TimeTableSubject {
+/* assume terms are consecutive; offer each subject each term */
+func Create_TimeTableSubjects(school *sifxml.SchoolInfo, subjects []string, terms []*sifxml.TermInfo) []*sifxml.TimeTableSubject {
 	random_seq_gen_reset("timetablesubjects")
 	random_seq_gen_reset("other_timetablesubjects")
 	if len(subjects) == 0 {
 		subjects = all_teachingSubjects()
 	}
 	ret := sifxml.TimeTableSubjectSlice()
-	for semester := 1; semester <= 2; semester++ {
+	for term_no, _ := range terms {
 		for _, s := range subjects {
 			for _, y := range Schooltype2Yearlevels(school.SchoolType().String()) {
-				ret = append(ret, Create_TimeTableSubject(school, nil, s, y, "", semester))
+				ret = append(ret, Create_TimeTableSubject(school, nil, s, y, "", term_no+1))
 			}
 		}
+	}
+	return ret
+}
+
+func Create_TermInfo(school *sifxml.SchoolInfo, semester int) *sifxml.TermInfo {
+	ret := sifxml.TermInfo{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("SchoolInfoRefId", school.RefId().String())
+	ret.SetProperty("SchoolYear", this_year())
+	ret.SetProperty("StartDate", term_start_date(this_year(), semester))
+	ret.SetProperty("EndDate", term_end_date(this_year(), semester))
+	ret.SetProperty("TermCode", fmt.Sprintf("Term %d", semester))
+	ret.SetProperty("TermSpan", "0828")
+	ret.SetProperty("MarkingTerm", "Y")
+	ret.SetProperty("SchedulingTerm", "Y")
+	ret.SetProperty("AttendanceTerm", "Y")
+
+	if out, ok := sifxml.TermInfoPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to TermInfo: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+/* 2 a year */
+func Create_TermInfos(school *sifxml.SchoolInfo) []*sifxml.TermInfo {
+	ret := sifxml.TermInfoSlice()
+	for semester := 1; semester <= 2; semester++ {
+		ret = append(ret, Create_TermInfo(school, semester))
 	}
 	return ret
 }

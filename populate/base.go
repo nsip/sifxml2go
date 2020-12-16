@@ -414,3 +414,19 @@ func periodEnd(id int) time.Time {
 	t, _ := time.Parse("2006-01-02T15:04:05.000Z", fmt.Sprintf("2000-01-01T%02d:55:00.000Z", periodId2Hour(id)))
 	return t
 }
+
+func term_start_date(year string, semester int) string {
+	if semester == 1 {
+		return fmt.Sprintf("%s-02-01", year)
+	} else {
+		return fmt.Sprintf("%s-07-01", year)
+	}
+}
+
+func term_end_date(year string, semester int) string {
+	if semester == 1 {
+		return fmt.Sprintf("%s-05-30", year)
+	} else {
+		return fmt.Sprintf("%s-11-30", year)
+	}
+}

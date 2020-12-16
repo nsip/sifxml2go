@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-type TG_usecase struct {
+type UseCaseObjects struct {
 	Schools           []*sifxml.SchoolInfo
 	Students          []*sifxml.StudentPersonal
 	Staff             []*sifxml.StaffPersonal
@@ -18,6 +18,37 @@ type TG_usecase struct {
 	TimeTableSubjects []*sifxml.TimeTableSubject
 	TimeTableCells    []*sifxml.TimeTableCell
 	Rooms             []*sifxml.RoomInfo
+	Contacts          []*sifxml.StudentContactPersonal
+	Relationships     []*sifxml.StudentContactRelationship
+	FinancialAccounts []*sifxml.FinancialAccount
+	Vendors           []*sifxml.VendorInfo
+	Debtors           []*sifxml.Debtor
+	ChargedLocations  []*sifxml.ChargedLocationInfo
+	Terms             []*sifxml.TermInfo
+	CalendarSummarys  []*sifxml.CalendarSummary
+	CalendarDates     []*sifxml.CalendarDate
+}
+
+type MakeUsecaseCounts struct {
+	Students          int
+	Staff             int
+	Schools           int
+	Rooms             int
+	Vendors           int
+	ChargedLocations  int
+	FinancialAccounts int
+}
+
+type MakeUsecases struct {
+	DailyAttendance           bool
+	Financial                 bool
+	Enrolment                 bool
+	Gradebook                 bool
+	StudentAttendanceTimeList bool
+	TeacherJudgement          bool
+	Timetable                 bool
+	Wellbeing                 bool
+	Provisioning              bool
 }
 
 /*
@@ -25,9 +56,8 @@ The design of use cases is going to be different to the Perl, which retrieved ob
 Use case creators will by default create all the objects they need, but can optionally be fed objects to use.
 */
 
-/* counts of staff and students per school */
-func MakeTeachingGroupsBare(studentcount int, staffcount int, schoolcount int) TG_usecase {
-	ret := TG_usecase{
+func initUseCaseObjects() UseCaseObjects {
+	return UseCaseObjects{
 		Schools:           sifxml.SchoolInfoSlice(),
 		Students:          sifxml.StudentPersonalSlice(),
 		Staff:             sifxml.StaffPersonalSlice(),
@@ -38,33 +68,136 @@ func MakeTeachingGroupsBare(studentcount int, staffcount int, schoolcount int) T
 		TimeTableSubjects: sifxml.TimeTableSubjectSlice(),
 		TimeTableCells:    sifxml.TimeTableCellSlice(),
 		Rooms:             sifxml.RoomInfoSlice(),
+		Contacts:          sifxml.StudentContactPersonalSlice(),
+		Relationships:     sifxml.StudentContactRelationshipSlice(),
+		FinancialAccounts: sifxml.FinancialAccountSlice(),
+		Vendors:           sifxml.VendorInfoSlice(),
+		Debtors:           sifxml.DebtorSlice(),
+		ChargedLocations:  sifxml.ChargedLocationInfoSlice(),
+		Terms:             sifxml.TermInfoSlice(),
+		CalendarSummarys:  sifxml.CalendarSummarySlice(),
+		CalendarDates:     sifxml.CalendarDateSlice(),
 	}
-	for i := 0; i < schoolcount; i++ {
+}
+
+func appendUseCaseObjects(ret UseCaseObjects, add UseCaseObjects) UseCaseObjects {
+	ret.Schools = append(ret.Schools, add.Schools...)
+	ret.Students = append(ret.Students, add.Students...)
+	ret.Staff = append(ret.Staff, add.Staff...)
+	ret.Rooms = append(ret.Rooms, add.Rooms...)
+	ret.Enrolments = append(ret.Enrolments, add.Enrolments...)
+	ret.Assignments = append(ret.Assignments, add.Assignments...)
+	ret.TimeTables = append(ret.TimeTables, add.TimeTables...)
+	ret.TeachingGroups = append(ret.TeachingGroups, add.TeachingGroups...)
+	ret.TimeTableSubjects = append(ret.TimeTableSubjects, add.TimeTableSubjects...)
+	ret.TimeTableCells = append(ret.TimeTableCells, add.TimeTableCells...)
+	ret.Contacts = append(ret.Contacts, add.Contacts...)
+	ret.Relationships = append(ret.Relationships, add.Relationships...)
+	ret.FinancialAccounts = append(ret.FinancialAccounts, add.FinancialAccounts...)
+	ret.Vendors = append(ret.Vendors, add.Vendors...)
+	ret.Debtors = append(ret.Debtors, add.Debtors...)
+	ret.ChargedLocations = append(ret.ChargedLocations, add.ChargedLocations...)
+	ret.Terms = append(ret.Terms, add.Terms...)
+	ret.CalendarSummarys = append(ret.CalendarSummarys, add.CalendarSummarys...)
+	ret.CalendarDates = append(ret.CalendarDates, add.CalendarDates...)
+	return ret
+}
+
+func initcounts(counts MakeUsecaseCounts) MakeUsecaseCounts {
+	if counts.Schools == 0 {
+		counts.Schools = 1
+	}
+	if counts.Staff == 0 {
+		counts.Staff = 50
+	}
+	if counts.Students == 0 {
+		counts.Students = 500
+	}
+	if counts.Rooms == 0 {
+		counts.Rooms = 100
+	}
+	if counts.Vendors == 0 {
+		counts.Vendors = 20
+	}
+	if counts.ChargedLocations == 0 {
+		counts.ChargedLocations = 10
+	}
+	if counts.FinancialAccounts == 0 {
+		counts.FinancialAccounts = 100
+	}
+	return counts
+}
+
+/* counts of staff and students per school. Creates only the ingest objects consumed for HITS use case */
+func MakeUsecaseObjects(usecases MakeUsecases, counts MakeUsecaseCounts) UseCaseObjects {
+	ret := initUseCaseObjects()
+	counts = initcounts(counts)
+
+	for i := 0; i < counts.Schools; i++ {
 		school := Create_SchoolInfo("Pri/Sec")
-		staff := Create_StaffPersonals(staffcount)
-		assignments := Create_StaffAssignments(staff, school)
-		students := Create_StudentPersonals(studentcount, Schooltype2Yearlevels(school.SchoolType().String()))
-		enrolments := Create_StudentSchoolEnrollments(students, school)
-		timetable := Create_TimeTable(school)
-		subjects := all_teachingSubjects()
-		tts := Create_TimeTableSubjects(school, subjects)
-		rooms := Create_RoomInfos(100, school)
+		add := initUseCaseObjects()
+		add.Schools = append(add.Schools, school)
 
-		tg := MakeTeachingGroups(school, staff, students, tts)
-		cells := MakeTimeTableCells(school, timetable, tg, staff, rooms, tts)
+		if usecases.Provisioning || usecases.Gradebook || usecases.StudentAttendanceTimeList || usecases.Financial || usecases.TeacherJudgement || usecases.Timetable || usecases.Wellbeing || usecases.DailyAttendance {
+			add.Students = Create_StudentPersonals(counts.Students, Schooltype2Yearlevels(add.Schools[0].SchoolType().String()))
+			add.Enrolments = Create_StudentSchoolEnrollments(add.Students, add.Schools[0])
+		}
+		if usecases.Provisioning || usecases.Gradebook || usecases.StudentAttendanceTimeList || usecases.Financial || usecases.TeacherJudgement || usecases.Timetable || usecases.Wellbeing {
+			add.Staff = Create_StaffPersonals(counts.Staff)
+			add.Assignments = Create_StaffAssignments(add.Staff, add.Schools[0])
+		}
+		if usecases.Financial || usecases.Wellbeing {
+			add.Contacts, add.Relationships = Create_StudentContactPersonalAndRelationship(add.Students)
+		}
+		if usecases.Financial {
+			add.Vendors = Create_VendorInfos(counts.Vendors)
+			add.Debtors = Create_Debtors(add.Students, add.Staff, add.Contacts, add.Vendors)
+			add.ChargedLocations = Create_ChargedLocationInfos(counts.ChargedLocations, add.Schools)
+			add.FinancialAccounts = Create_FinancialAccounts(counts.FinancialAccounts, add.ChargedLocations)
+		}
+		if usecases.Provisioning || usecases.Gradebook || usecases.StudentAttendanceTimeList || usecases.TeacherJudgement || usecases.Timetable || usecases.Wellbeing {
+			add.Terms = Create_TermInfos(add.Schools[0])
+			subjects := all_teachingSubjects()
+			add.TimeTableSubjects = Create_TimeTableSubjects(add.Schools[0], subjects, add.Terms)
+		}
+		if usecases.Provisioning || usecases.Gradebook || usecases.StudentAttendanceTimeList || usecases.TeacherJudgement || usecases.Wellbeing {
 
-		ret.Schools = append(ret.Schools, school)
-		ret.Students = append(ret.Students, students...)
-		ret.Staff = append(ret.Staff, staff...)
-		ret.Rooms = append(ret.Rooms, rooms...)
-		ret.Enrolments = append(ret.Enrolments, enrolments...)
-		ret.Assignments = append(ret.Assignments, assignments...)
-		ret.TimeTables = append(ret.TimeTables, timetable)
-		ret.TeachingGroups = append(ret.TeachingGroups, tg...)
-		ret.TimeTableSubjects = append(ret.TimeTableSubjects, tts...)
-		ret.TimeTableCells = append(ret.TimeTableCells, cells...)
+			add.TeachingGroups = MakeTeachingGroups(add.Schools[0], add.Staff, add.Students, add.TimeTableSubjects)
+		}
+		if usecases.StudentAttendanceTimeList || usecases.Timetable || usecases.Wellbeing {
+			add.Rooms = Create_RoomInfos(counts.Rooms, add.Schools[0])
+		}
+		if usecases.StudentAttendanceTimeList || usecases.Wellbeing {
+			add.TimeTables = append(add.TimeTables, Create_TimeTable(school))
+			add.TimeTableCells = MakeTimeTableCells(add.Schools[0], add.TimeTables[0], add.TeachingGroups, add.Staff, add.Rooms, add.TimeTableSubjects)
+		}
+		if usecases.StudentAttendanceTimeList || usecases.Wellbeing {
+			/*
+				ScheduledActivitys
+			*/
+		}
+		if usecases.StudentAttendanceTimeList || usecases.DailyAttendance {
+			add.CalendarSummarys = append(add.CalendarSummarys, Create_CalendarSummary(add.Schools[0]))
+			add.CalendarDates = append(add.CalendarDates, Create_CalendarDates(add.CalendarSummarys[0], add.Schools[0])...)
+		}
+		if usecases.StudentAttendanceTimeList {
+			/*
+			  SessionInfos (redundant)
+			*/
+		}
+		if usecases.Timetable {
+			/*
+			  SchoolCourseInfo
+			*/
+		}
+
+		ret = appendUseCaseObjects(ret, add)
 	}
 	return ret
+}
+
+func classesPerWeek(yrlvl string, subject string) int {
+	return 2
 }
 
 func primaryOrSecondary(studentsperyr map[string][]*sifxml.StudentPersonal) (primary bool, secondary bool, snr_secondary bool) {
@@ -322,7 +455,7 @@ func MakeTimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, 
 			/* assign 2 cells a week of each subject available for that year level, in the same room */
 			room := rooms[rand.Intn(len(rooms))]
 			for _, subj := range tts2subj[yrlvl] {
-				for i := 0; i < 2; i++ {
+				for i := 0; i < classesPerWeek(yrlvl, subj.SubjectShortName().String()); i++ {
 					dayid := randomStringFromSlice(dayids)
 					periodid := randomStringFromSlice(periodids)
 					for ; seen[dayid][periodid]; periodid = randomStringFromSlice(periodids) {
@@ -334,7 +467,7 @@ func MakeTimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, 
 			}
 		} else {
 			/* assign 2 cells a week for each teaching group */
-			for i := 0; i < 2; i++ {
+			for i := 0; i < classesPerWeek(yrlvl, tts_map[g.TimeTableSubjectRefId().String()].SubjectShortName().String()); i++ {
 				dayid := randomStringFromSlice(dayids)
 				periodid := randomStringFromSlice(periodids)
 				for ; seen[dayid][periodid]; periodid = randomStringFromSlice(periodids) {
