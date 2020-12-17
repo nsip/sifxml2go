@@ -142,6 +142,12 @@ func main() {
 	populate.Errcheck(err)
 	err = populate.PrintXML(ret.CalendarDates)
 	populate.Errcheck(err)
+	err = populate.PrintXML(ret.SessionInfos)
+	populate.Errcheck(err)
+	err = populate.PrintXML(ret.SchoolCourses)
+	populate.Errcheck(err)
+	err = populate.PrintXML(ret.ScheduledActivities)
+	populate.Errcheck(err)
 	//populate.PrintJSON(ret.TeachingGroups)
 
 }

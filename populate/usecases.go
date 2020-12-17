@@ -8,25 +8,28 @@ import (
 )
 
 type UseCaseObjects struct {
-	Schools           []*sifxml.SchoolInfo
-	Students          []*sifxml.StudentPersonal
-	Staff             []*sifxml.StaffPersonal
-	Enrolments        []*sifxml.StudentSchoolEnrollment
-	Assignments       []*sifxml.StaffAssignment
-	TeachingGroups    []*sifxml.TeachingGroup
-	TimeTables        []*sifxml.TimeTable
-	TimeTableSubjects []*sifxml.TimeTableSubject
-	TimeTableCells    []*sifxml.TimeTableCell
-	Rooms             []*sifxml.RoomInfo
-	Contacts          []*sifxml.StudentContactPersonal
-	Relationships     []*sifxml.StudentContactRelationship
-	FinancialAccounts []*sifxml.FinancialAccount
-	Vendors           []*sifxml.VendorInfo
-	Debtors           []*sifxml.Debtor
-	ChargedLocations  []*sifxml.ChargedLocationInfo
-	Terms             []*sifxml.TermInfo
-	CalendarSummarys  []*sifxml.CalendarSummary
-	CalendarDates     []*sifxml.CalendarDate
+	Schools             []*sifxml.SchoolInfo
+	Students            []*sifxml.StudentPersonal
+	Staff               []*sifxml.StaffPersonal
+	Enrolments          []*sifxml.StudentSchoolEnrollment
+	Assignments         []*sifxml.StaffAssignment
+	TeachingGroups      []*sifxml.TeachingGroup
+	TimeTables          []*sifxml.TimeTable
+	TimeTableSubjects   []*sifxml.TimeTableSubject
+	TimeTableCells      []*sifxml.TimeTableCell
+	Rooms               []*sifxml.RoomInfo
+	Contacts            []*sifxml.StudentContactPersonal
+	Relationships       []*sifxml.StudentContactRelationship
+	FinancialAccounts   []*sifxml.FinancialAccount
+	Vendors             []*sifxml.VendorInfo
+	Debtors             []*sifxml.Debtor
+	ChargedLocations    []*sifxml.ChargedLocationInfo
+	Terms               []*sifxml.TermInfo
+	CalendarSummarys    []*sifxml.CalendarSummary
+	CalendarDates       []*sifxml.CalendarDate
+	SessionInfos        []*sifxml.SessionInfo
+	SchoolCourses       []*sifxml.SchoolCourseInfo
+	ScheduledActivities []*sifxml.ScheduledActivity
 }
 
 type MakeUsecaseCounts struct {
@@ -58,25 +61,28 @@ Use case creators will by default create all the objects they need, but can opti
 
 func initUseCaseObjects() UseCaseObjects {
 	return UseCaseObjects{
-		Schools:           sifxml.SchoolInfoSlice(),
-		Students:          sifxml.StudentPersonalSlice(),
-		Staff:             sifxml.StaffPersonalSlice(),
-		Enrolments:        sifxml.StudentSchoolEnrollmentSlice(),
-		Assignments:       sifxml.StaffAssignmentSlice(),
-		TeachingGroups:    sifxml.TeachingGroupSlice(),
-		TimeTables:        sifxml.TimeTableSlice(),
-		TimeTableSubjects: sifxml.TimeTableSubjectSlice(),
-		TimeTableCells:    sifxml.TimeTableCellSlice(),
-		Rooms:             sifxml.RoomInfoSlice(),
-		Contacts:          sifxml.StudentContactPersonalSlice(),
-		Relationships:     sifxml.StudentContactRelationshipSlice(),
-		FinancialAccounts: sifxml.FinancialAccountSlice(),
-		Vendors:           sifxml.VendorInfoSlice(),
-		Debtors:           sifxml.DebtorSlice(),
-		ChargedLocations:  sifxml.ChargedLocationInfoSlice(),
-		Terms:             sifxml.TermInfoSlice(),
-		CalendarSummarys:  sifxml.CalendarSummarySlice(),
-		CalendarDates:     sifxml.CalendarDateSlice(),
+		Schools:             sifxml.SchoolInfoSlice(),
+		Students:            sifxml.StudentPersonalSlice(),
+		Staff:               sifxml.StaffPersonalSlice(),
+		Enrolments:          sifxml.StudentSchoolEnrollmentSlice(),
+		Assignments:         sifxml.StaffAssignmentSlice(),
+		TeachingGroups:      sifxml.TeachingGroupSlice(),
+		TimeTables:          sifxml.TimeTableSlice(),
+		TimeTableSubjects:   sifxml.TimeTableSubjectSlice(),
+		TimeTableCells:      sifxml.TimeTableCellSlice(),
+		Rooms:               sifxml.RoomInfoSlice(),
+		Contacts:            sifxml.StudentContactPersonalSlice(),
+		Relationships:       sifxml.StudentContactRelationshipSlice(),
+		FinancialAccounts:   sifxml.FinancialAccountSlice(),
+		Vendors:             sifxml.VendorInfoSlice(),
+		Debtors:             sifxml.DebtorSlice(),
+		ChargedLocations:    sifxml.ChargedLocationInfoSlice(),
+		Terms:               sifxml.TermInfoSlice(),
+		CalendarSummarys:    sifxml.CalendarSummarySlice(),
+		CalendarDates:       sifxml.CalendarDateSlice(),
+		SessionInfos:        sifxml.SessionInfoSlice(),
+		SchoolCourses:       sifxml.SchoolCourseInfoSlice(),
+		ScheduledActivities: sifxml.ScheduledActivitySlice(),
 	}
 }
 
@@ -100,6 +106,9 @@ func appendUseCaseObjects(ret UseCaseObjects, add UseCaseObjects) UseCaseObjects
 	ret.Terms = append(ret.Terms, add.Terms...)
 	ret.CalendarSummarys = append(ret.CalendarSummarys, add.CalendarSummarys...)
 	ret.CalendarDates = append(ret.CalendarDates, add.CalendarDates...)
+	ret.SessionInfos = append(ret.SessionInfos, add.SessionInfos...)
+	ret.SchoolCourses = append(ret.SchoolCourses, add.SchoolCourses...)
+	ret.ScheduledActivities = append(ret.ScheduledActivities, add.ScheduledActivities...)
 	return ret
 }
 
@@ -171,24 +180,18 @@ func MakeUsecaseObjects(usecases MakeUsecases, counts MakeUsecaseCounts) UseCase
 			add.TimeTables = append(add.TimeTables, Create_TimeTable(school))
 			add.TimeTableCells = MakeTimeTableCells(add.Schools[0], add.TimeTables[0], add.TeachingGroups, add.Staff, add.Rooms, add.TimeTableSubjects)
 		}
-		if usecases.StudentAttendanceTimeList || usecases.Wellbeing {
-			/*
-				ScheduledActivitys
-			*/
-		}
 		if usecases.StudentAttendanceTimeList || usecases.DailyAttendance {
 			add.CalendarSummarys = append(add.CalendarSummarys, Create_CalendarSummary(add.Schools[0]))
 			add.CalendarDates = append(add.CalendarDates, Create_CalendarDates(add.CalendarSummarys[0], add.Schools[0])...)
 		}
+		if usecases.StudentAttendanceTimeList || usecases.Wellbeing {
+			add.ScheduledActivities = Create_ScheduledActivities(add.TimeTableCells, add.CalendarDates, add.TeachingGroups)
+		}
 		if usecases.StudentAttendanceTimeList {
-			/*
-			  SessionInfos (redundant)
-			*/
+			add.SessionInfos = Create_SessionInfos(add.TimeTableCells, add.CalendarDates)
 		}
 		if usecases.Timetable {
-			/*
-			  SchoolCourseInfo
-			*/
+			add.SchoolCourses = Create_SchoolCourseInfos(add.TimeTableSubjects, add.Terms)
 		}
 
 		ret = appendUseCaseObjects(ret, add)

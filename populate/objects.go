@@ -598,7 +598,10 @@ func Create_ChargedLocationInfo(parent *sifxml.ChargedLocationInfo, school *sifx
 		ret.SetProperty("LocalId", school.LocalId().String())
 		ret.SetProperty("StateProvinceId", school.StateProvinceId().String())
 		ret.SetProperty("AddressList", school.AddressList().Clone())
-		ret.SetProperty("PhoneNumberList", school.PhoneNumberList().Clone())
+		// Gotcha: accessing a value creates it, so we get empty value in source if we try to clone a nil value
+		if !school.PhoneNumberList_IsNil() {
+			ret.SetProperty("PhoneNumberList", school.PhoneNumberList().Clone())
+		}
 	}
 	if out, ok := sifxml.ChargedLocationInfoPointer(ret); !ok {
 		log.Fatalf("Could not create pointer to ChargedLocationInfo: %+v", ret)
@@ -1144,4 +1147,159 @@ func Create_TimeTableCell(day string, period string, celltype string, school *si
 	} else {
 		return out
 	}
+}
+
+func Create_SessionInfo(c *sifxml.TimeTableCell, date string) *sifxml.SessionInfo {
+	periodid, _ := strconv.Atoi(c.PeriodId().String())
+
+	ret := sifxml.SessionInfo{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("SchoolInfoRefId", c.SchoolInfoRefId().String())
+	ret.SetProperty("TimeTableCellRefId", c.RefId().String())
+	ret.SetProperty("SchoolYear", date[0:4])
+	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
+	ret.SetProperty("TimeTableSubjectLocalId", c.SubjectLocalId().String())
+	ret.SetProperty("TeachingGroupLocalId", c.TeachingGroupLocalId().String())
+	ret.SetProperty("SchoolLocalId", c.SchoolLocalId().String())
+	ret.SetProperty("StaffPersonalLocalId", c.StaffLocalId().String())
+	ret.SetProperty("RoomNumber", c.RoomNumber().String())
+	ret.SetProperty("DayId", c.DayId().String())
+	ret.SetProperty("PeriodId", c.PeriodId().String())
+	ret.SetProperty("SessionDate", date)
+	ret.SetProperty("StartTime", periodStart(periodid).Format("15:04:05"))
+	ret.SetProperty("FinishTime", periodEnd(periodid).Format("15:04:05"))
+	ret.SetProperty("RollMarked", "Y")
+
+	if out, ok := sifxml.SessionInfoPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to SessionInfo: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+/* presuppose weekly recurrence. presuppose full year not terms for timetable cell */
+func Create_SessionInfos(cells []*sifxml.TimeTableCell, dates []*sifxml.CalendarDate) []*sifxml.SessionInfo {
+	calendar := make(map[string]*sifxml.CalendarDate)
+	for _, d := range dates {
+		calendar[d.Date().String()] = d
+	}
+	ret := sifxml.SessionInfoSlice()
+	for _, c := range cells {
+		yr, _ := strconv.Atoi(this_year())
+		t := time.Date(yr, time.Month(1), 0, 0, 0, 0, 0, time.UTC)
+		dayid, _ := strconv.Atoi(c.DayId().String())
+		day := (8-int(t.Weekday()))%7 + dayid
+		end := time.Date(yr, time.Month(12), 31, 0, 0, 0, 0, time.UTC)
+		for t := time.Date(yr, time.Month(1), day, 0, 0, 0, 0, time.UTC); t.Before(end); t = t.Add(time.Hour * 24 * 7) {
+			date := t.Format("2006-01-02")
+			if _, ok := calendar[date]; ok {
+				if calendar[date].StudentAttendance().CountsTowardAttendance().String() == "Yes" {
+					ret = append(ret, Create_SessionInfo(c, date))
+				}
+			}
+		}
+	}
+	return ret
+}
+
+/* either period event (cell) or excursion for teaching group */
+func Create_ScheduledActivityBasic(date string, c *sifxml.TimeTableCell, tg *sifxml.TeachingGroup) *sifxml.ScheduledActivity {
+	ret := sifxml.ScheduledActivity{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("ActivityDate", date)
+	if c != nil {
+		ret.SetProperty("SchoolInfoRefId", c.SchoolInfoRefId().String())
+		ret.SetProperty("TimeTableCellRefId", c.RefId().String())
+		ret.SetProperty("DayId", c.DayId().String())
+		ret.SetProperty("PeriodId", c.PeriodId().String())
+		ret.SetProperty("TimeTableRefId", c.TimeTableRefId().String())
+		periodid, _ := strconv.Atoi(c.PeriodId().String())
+		ret.SetProperty("StartTime", periodStart(periodid).Format("15:04:05"))
+		ret.SetProperty("FinishTime", periodEnd(periodid).Format("15:04:05"))
+		ret.SetProperty("CellType", c.CellType().String())
+		if !c.TeacherList_IsNil() {
+			ret.SetProperty("TeacherList", c.TeacherList().Clone())
+		}
+		if !c.RoomList_IsNil() {
+			ret.SetProperty("RoomList", c.RoomList().Clone())
+		}
+	} else if tg != nil {
+		ret.SetProperty("SchoolInfoRefId", tg.SchoolInfoRefId().String())
+		ret.SetProperty("StartTime", "09:00:00")
+		ret.SetProperty("FinishTime", "15:00:00")
+		ret.SetProperty("Location", "Zoo")
+		ret.SetProperty("ActivityType", "Excursion")
+		ret.SetProperty("ActivityName", "Zoo Excursion")
+		ret.TeachingGroupList().AppendString(tg.RefId().String())
+	}
+
+	if out, ok := sifxml.ScheduledActivityPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to ScheduledActivity: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+/* presuppose weekly recurrence. presuppose full year not terms for timetable cell.
+Create one scheduled activity for each session, and one excursion for each teaching group*/
+func Create_ScheduledActivities(cells []*sifxml.TimeTableCell, dates []*sifxml.CalendarDate, tg []*sifxml.TeachingGroup) []*sifxml.ScheduledActivity {
+	calendar := make(map[string]*sifxml.CalendarDate)
+	for _, d := range dates {
+		calendar[d.Date().String()] = d
+	}
+	ret := sifxml.ScheduledActivitySlice()
+	for _, c := range cells {
+		yr, _ := strconv.Atoi(this_year())
+		t := time.Date(yr, time.Month(1), 0, 0, 0, 0, 0, time.UTC)
+		dayid, _ := strconv.Atoi(c.DayId().String())
+		day := (8-int(t.Weekday()))%7 + dayid
+		end := time.Date(yr, time.Month(12), 31, 0, 0, 0, 0, time.UTC)
+		for t := time.Date(yr, time.Month(1), day, 0, 0, 0, 0, time.UTC); t.Before(end); t = t.Add(time.Hour * 24 * 7) {
+			date := t.Format("2006-01-02")
+			if _, ok := calendar[date]; ok {
+				if calendar[date].StudentAttendance().CountsTowardAttendance().String() == "Yes" {
+					ret = append(ret, Create_ScheduledActivityBasic(date, c, nil))
+				}
+			}
+		}
+	}
+	for _, g := range tg {
+		for c := dates[rand.Intn(len(dates))]; c.StudentAttendance().CountsTowardAttendance().String() == "No"; c = dates[rand.Intn(len(dates))] {
+			date := c.Date().String()
+			ret = append(ret, Create_ScheduledActivityBasic(date, nil, g))
+		}
+	}
+	return ret
+}
+
+/* assume terms are consecutive, and that TimeTableSubject is incremental number of semester.
+Updates SchoolCourseInfoRefId on TimeTableSubject*/
+func Create_SchoolCourseInfo(s *sifxml.TimeTableSubject, terms []*sifxml.TermInfo) *sifxml.SchoolCourseInfo {
+	ret := sifxml.SchoolCourseInfo{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("SchoolInfoRefId", s.SchoolInfoRefId().String())
+	ret.SetProperty("SchoolLocalId", s.SchoolLocalId().String())
+	ret.SetProperty("SchoolYear", s.SchoolYear().String())
+	ret.SetProperty("CourseCode", fmt.Sprintf("%05d", random_seq_gen("course_code", 99999)+1))
+	ret.SetProperty("CourseTitle", s.SubjectLocalId().String())
+	ret.SetProperty("TermInfoRefId", terms[s.Semester().Int()-1].RefId().String())
+
+	s.SetProperty("SchoolCourseInfoRefId", ret.RefId().String())
+
+	if out, ok := sifxml.SchoolCourseInfoPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to SessionInfo: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+func Create_SchoolCourseInfos(subjects []*sifxml.TimeTableSubject, terms []*sifxml.TermInfo) []*sifxml.SchoolCourseInfo {
+	ret := sifxml.SchoolCourseInfoSlice()
+	for _, s := range subjects {
+		ret = append(ret, Create_SchoolCourseInfo(s, terms))
+	}
+	return ret
 }
