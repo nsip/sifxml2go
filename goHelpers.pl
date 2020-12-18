@@ -426,7 +426,7 @@ sub isnil($$$) {
   print <<"END";
 // Returns whether the element value for $s is nil in the container $n.
   func (s *$n) ${s}_IsNil() bool {
-    return s.$s == nil || s.$lcn.$s == nil
+    return s.$lcn.$s == nil
     }
 END
 }
