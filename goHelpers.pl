@@ -67,6 +67,7 @@ print <<"END";
 package sifxml
 
 import (
+  "errors"
   "fmt"
   "log"
   "reflect"
@@ -74,11 +75,13 @@ import (
   "github.com/qdm12/reprint"
   )
 
+// Property/Value pair, used to set multiple properties of a container together
 type Prop struct {
   Key string
   Value interface{}
 }
 
+// Check whether value is allowed in a codeset, based on the associated codeset values map
 func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
 
  	vstr, ok := value.(string)
@@ -93,6 +96,7 @@ END
 
 foreach $n (@object) {
   print <<"END";
+// Create a slice of pointers to the object type
 func ${n}Slice() []*$n {
   return make([]*$n, 0)
   }
@@ -100,8 +104,16 @@ END
 }
 
 foreach $n (keys %types) {
+print << "END";
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *$n) Clone() (*$n) {
+return reprint.This(t).(*$n)
+}
+END
   next if %alias_orig{$n};
   print <<"END";
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
   func ${n}Pointer(value interface{}) (*$n, bool) {
 switch t := value.(type) {
         case *$n:
@@ -114,10 +126,6 @@ switch t := value.(type) {
         }
         return nil, false
   }
-
-  func (t *$n) Clone() (*$n) {
-return reprint.This(t).(*$n)
-  }
 END
 }
 
@@ -128,6 +136,8 @@ foreach $n (keys %list) {
       $cv = codeset_validate($$list{$n}{TYPE});
   print <<"END";
 
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
   func (t *$n) Append(value $list{$n}{TYPE}) *$n {
     $cv
         if t == nil {
@@ -140,6 +150,7 @@ foreach $n (keys %list) {
         return t
 }
 
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
 func (t *$n) AddNew() *$n {
         if t == nil {
                 t, _ = ${n}Pointer(${n}\{\})
@@ -151,6 +162,7 @@ func (t *$n) AddNew() *$n {
         return t
 }
 
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
 func (t *$n) Last() *$list{$n}{TYPE} {
   if t.$list{$n}{KEY} == nil {
     t = t.AddNew()
@@ -158,13 +170,18 @@ func (t *$n) Last() *$list{$n}{TYPE} {
         return &(t.$list{$n}{KEY}\[len(t.$list{$n}{KEY})-1])
 }
 
-func (t *$n) Index(n int) *$list{$n}{TYPE} {
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *$n) Index(n int) (*$list{$n}{TYPE}, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
   if t.$list{$n}{KEY} == nil {
     t = t.AddNew()
     }
-        return &(t.$list{$n}{KEY}\[n])
+        return &(t.$list{$n}{KEY}\[n]), nil
 }
 
+// Length of the list.
 func (t *$n) Len() int {
   if t.$list{$n}{KEY} == nil {
     t = t.AddNew()
@@ -177,6 +194,7 @@ END
 
   if ($list{$n}{TYPE} eq "string" or $alias{$list{$n}{TYPE}} eq "string") {
       print <<"END";
+// Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *$n) AppendString(value string) *$n {
         return t.Append(($list{$n}{TYPE})(value))
         }
@@ -187,10 +205,13 @@ END
 foreach $n (keys %alias_orig) {
   if ($alias{$n} eq 'string') {
   print <<"END";
+// Return string value
 func (t *$n) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
 
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches $n. In the case of aliased types, accepts primitive values and converts them to the required alias.
 func ${n}Pointer(value interface{}) (*$n, bool) {
 switch t := value.(type) {
  	case *$n:
@@ -217,10 +238,13 @@ END
 }
  if ($alias{$n} eq 'int') {
   print <<"END";
+// Returns int value
 func (t *$n) Int() int {
   return int((reflect.ValueOf(*t).Interface()).($n))
   }
 
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches $n. In the case of aliased types, accepts primitive values and converts them to the required alias.
 func ${n}Pointer(value interface{}) (*$n, bool) {
 switch t := value.(type) {
         case *$n:
@@ -246,10 +270,14 @@ END
 }
  if ($alias{$n} eq 'bool') {
   print <<"END";
+// 
+// Returns bool value
 func (t *$n) Bool() bool {
   return bool((reflect.ValueOf(*t).Interface()).($n))
   }
 
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches $n. In the case of aliased types, accepts primitive values and converts them to the required alias.
   func ${n}Pointer(value interface{}) (*$n, bool) {
 switch t := value.(type) {
         case *$n:
@@ -275,10 +303,14 @@ END
 }
  if ($alias{$n} eq 'float64') {
   print <<"END";
+// Returns float64 value
 func (t *$n) Float() float64 {
   return float64((reflect.ValueOf(*t).Interface()).($n))
   }
 
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches $n. In the case of aliased types, accepts primitive values and converts them to the required alias.
+// Also deals with both Float32 and Float64 values.
    func ${n}Pointer(value interface{}) (*$n, bool) {
 switch t := value.(type) {
         case *$n:
@@ -315,6 +347,7 @@ foreach $n (keys %types) {
   next if $list{$n};
   print <<"END";
 
+// Set the value of a property to nil
 func (n *$n) Unset(key string) *$n {
         switch key {
 END
@@ -333,6 +366,7 @@ END
         return n
 }
 
+// Set a sequence of properties
 func (n *$n) SetProperties(props ...Prop) *$n {
  	for _, p := range props {
  		n.SetProperty(p.Key, p.Value)
@@ -340,7 +374,8 @@ func (n *$n) SetProperties(props ...Prop) *$n {
  	return n
  }
 
-
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
 func (n *$n) SetProperty(key string, value interface{}) *$n {
         if n == nil {
                 n, _ = ${n}Pointer(${n}\{\})
@@ -389,6 +424,7 @@ sub isnil($$$) {
   my ($n, $s, $t) = @_;
   $lcn = lc $n;
   print <<"END";
+// Returns whether the element value for $s is nil in the container $n.
   func (s *$n) ${s}_IsNil() bool {
     return s.$s == nil || s.$lcn.$s == nil
     }
@@ -400,6 +436,7 @@ sub readfunction($$$){
   $emptytype = emptytype($t);
   $lcn = lc $n;
   print <<"END";
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *$n) ${s}() *$t {
     if s.$lcn.$s == nil {
 END
