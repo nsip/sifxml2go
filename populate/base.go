@@ -1,7 +1,6 @@
 package populate
 
 import (
-	"../sifxml"
 	"bytes"
 	"encoding/json"
 	"encoding/xml"
@@ -13,8 +12,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/brianvoe/gofakeit"
+	"github.com/brianvoe/gofakeit/v5"
 	"github.com/google/uuid"
+	"github.com/nsip/sifxml2go/sifxml"
 )
 
 func Errcheck(err error) {

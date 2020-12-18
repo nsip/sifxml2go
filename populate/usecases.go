@@ -1,10 +1,11 @@
 package populate
 
 import (
-	"../sifxml"
 	"fmt"
 	"math/rand"
 	"strconv"
+
+	"github.com/nsip/sifxml2go/sifxml"
 )
 
 type UseCaseObjects struct {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./populate"
+	"github.com/nsip/sifxml2go/populate"
 	//"./sifxml"
 )
 

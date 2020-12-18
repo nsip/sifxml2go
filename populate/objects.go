@@ -1,7 +1,6 @@
 package populate
 
 import (
-	"../sifxml"
 	"fmt"
 	"log"
 	"math/rand"
@@ -9,7 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/brianvoe/gofakeit"
+	"github.com/brianvoe/gofakeit/v5"
+	"github.com/nsip/sifxml2go/sifxml"
 	"github.com/rickar/cal/v2"
 	"github.com/rickar/cal/v2/au"
 )

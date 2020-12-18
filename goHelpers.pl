@@ -63,6 +63,7 @@ foreach $k (keys %alias) {
 } 
 
 print <<"END";
+
 package sifxml
 
 import (
