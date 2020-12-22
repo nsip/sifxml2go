@@ -676,6 +676,7 @@ func Create_RoomInfoWithStaff(school *sifxml.SchoolInfo, staff []*sifxml.StaffPe
 func Create_RoomInfos(count int, school *sifxml.SchoolInfo) []*sifxml.RoomInfo {
 	ret := sifxml.RoomInfoSlice()
 	for i := 0; i < count; i++ {
+		random_seq_gen_reset("roomNumber")
 		ret = append(ret, Create_RoomInfo(school))
 	}
 	return ret
@@ -1730,7 +1731,7 @@ func Create_SessionInfo(c *sifxml.TimeTableCell, date string) *sifxml.SessionInf
 	ret.SetProperty("PeriodId", c.PeriodId().String())
 	ret.SetProperty("SessionDate", date)
 	ret.SetProperty("StartTime", PeriodStart(periodid).Format("15:04:05"))
-	ret.SetProperty("FinishTime", periodEnd(periodid).Format("15:04:05"))
+	ret.SetProperty("FinishTime", PeriodEnd(periodid).Format("15:04:05"))
 	ret.SetProperty("RollMarked", "Y")
 
 	if out, ok := sifxml.SessionInfoPointer(ret); !ok {
@@ -2163,10 +2164,10 @@ func Create_TeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPerso
 		studentsperyr[s.MostRecent().YearLevel().Code().String()] =
 			append(studentsperyr[s.MostRecent().YearLevel().Code().String()], s)
 	}
-	tts2subj, subjects := timeTableSubjects2yr2subj(subjects)
+	tts2subj, subjectnames := timeTableSubjects2yr2subj(subjects)
 	primary, secondary, snr_secondary := primaryOrSecondary(studentsperyr)
 	primarystaff, secondarystaff, subjectstaff := primaryOrSecondaryStaff(school, staff, primary, secondary,
-		snr_secondary, subjects)
+		snr_secondary, subjectnames)
 
 	if primary {
 		ret = append(ret, makePrimaryTeachingGroups(school, studentsperyr, primarystaff)...)
@@ -2175,7 +2176,7 @@ func Create_TeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPerso
 		ret = append(ret, makeSecondaryTeachingGroups(school, studentsperyr, secondarystaff)...)
 	}
 	if snr_secondary {
-		ret = append(ret, makeSnrSecondaryTeachingGroups(school, studentsperyr, subjectstaff, subjects,
+		ret = append(ret, makeSnrSecondaryTeachingGroups(school, studentsperyr, subjectstaff, subjectnames,
 			tts2subj)...)
 	}
 

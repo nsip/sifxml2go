@@ -239,6 +239,9 @@ func create_commercial_email_domain() string {
 }
 
 func create_phone_number(state *string) string {
+	if state == nil {
+		return "04"
+	}
 	var areacode string
 	switch *state {
 	case "ACT":
