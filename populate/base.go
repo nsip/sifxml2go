@@ -17,12 +17,14 @@ import (
 	"github.com/nsip/sifxml2go/sifxml"
 )
 
+// Abort on error.
 func Errcheck(err error) {
 	if err != nil {
 		log.Fatalf("Error %s", err)
 	}
 }
 
+// Marshal to XML, and print to output.
 func PrintXML(record interface{}) error {
 	output, err := xml.MarshalIndent(record, "", "  ")
 	if err != nil {
@@ -32,6 +34,7 @@ func PrintXML(record interface{}) error {
 	return nil
 }
 
+// Marshal to JSON, and print to output.
 func PrintJSON(record interface{}) {
 	b, err := json.Marshal(record)
 	if err != nil {
@@ -236,7 +239,28 @@ func create_commercial_email_domain() string {
 }
 
 func create_phone_number(state *string) string {
-	return fmt.Sprintf("04%08d", rand.Intn(100000000))
+	var areacode string
+	switch *state {
+	case "ACT":
+		areacode = "02"
+	case "NSW":
+		areacode = "02"
+	case "VIC":
+		areacode = "03"
+	case "TAS":
+		areacode = "03"
+	case "QLD":
+		areacode = "07"
+	case "WA":
+		areacode = "08"
+	case "SA":
+		areacode = "08"
+	case "NT":
+		areacode = "08"
+	default:
+		areacode = "04"
+	}
+	return fmt.Sprintf("%s%08d", areacode, rand.Intn(100000000))
 }
 
 func random_date(from string, to string) string {
@@ -252,11 +276,12 @@ func random_date(from string, to string) string {
 	return gofakeit.DateRange(t1, t2).Format("2006-01-02")
 }
 
-func all_teachingSubjects() []string {
+// Default selection of teaching subjects: "MAT", "ENG", "PHYS", "BIO", "CHEM", "COMP", "VIS", "ECON", "HIST".
+func All_teachingSubjects() []string {
 	return ([]string{"MAT", "ENG", "PHYS", "BIO", "CHEM", "COMP", "VIS", "ECON", "HIST"})
 }
 func teachingSubject() string {
-	return randomStringFromSlice(all_teachingSubjects())
+	return randomStringFromSlice(All_teachingSubjects())
 }
 
 func teachingSubjectLongName(shortname string) string {
@@ -283,7 +308,7 @@ func teachingSubjectLongName(shortname string) string {
 	return "???"
 }
 
-func teachingGroupKLA(shortname string) string {
+func TeachingGroupKLA(shortname string) string {
 	switch shortname {
 	case "MAT":
 		return "M"
@@ -367,6 +392,7 @@ func yearlevel2yr(yr string) int {
 	return 1
 }
 
+// Map the School Type schooltype to a slice of year levels that a school of that type offers.
 func Schooltype2Yearlevels(schooltype string) []string {
 	switch schooltype {
 	case "EarlyCh":
@@ -397,7 +423,8 @@ func Schooltype2Yearlevels(schooltype string) []string {
 	return []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
 }
 
-func periods() []string {
+// The permitted periods for a school day.
+func Periods() []string {
 	return []string{"9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM"}
 }
 
@@ -405,17 +432,20 @@ func periodId2Hour(id int) int {
 	return 8 + id
 }
 
-func periodStart(id int) time.Time {
+// Set the time that the period with PeriodID id starts; e.g. period 1 maps to 9:05.
+func PeriodStart(id int) time.Time {
 	t, _ := time.Parse("2006-01-02T15:04:05.000Z", fmt.Sprintf("2000-01-01T%02d:05:00.000Z", periodId2Hour(id)))
 	return t
 }
 
-func periodEnd(id int) time.Time {
+// Set the time that the period with PeriodID id ends; e.g. period 1 maps to 9:55.
+func PeriodEnd(id int) time.Time {
 	t, _ := time.Parse("2006-01-02T15:04:05.000Z", fmt.Sprintf("2000-01-01T%02d:55:00.000Z", periodId2Hour(id)))
 	return t
 }
 
-func term_start_date(year string, semester int) string {
+// Start date for the given semester in the given year. Set to February 1 and July 1.
+func Term_start_date(year string, semester int) string {
 	if semester == 1 {
 		return fmt.Sprintf("%s-02-01", year)
 	} else {
@@ -423,7 +453,8 @@ func term_start_date(year string, semester int) string {
 	}
 }
 
-func term_end_date(year string, semester int) string {
+// End date for the given semester in the given year. Set to May 30 and November 30.
+func Term_end_date(year string, semester int) string {
 	if semester == 1 {
 		return fmt.Sprintf("%s-05-30", year)
 	} else {
