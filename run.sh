@@ -36,7 +36,7 @@ for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
+  if #[[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/PersonPrivacyObligation.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/ReportAuthorityInfo.xml" ]] ; then
     continue
@@ -86,7 +86,7 @@ for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
+  if #[[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/PersonPrivacyObligation.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/ReportAuthorityInfo.xml" ]] ; then
     continue
@@ -100,9 +100,9 @@ for filename in ./specgen_input/06_DataModel/Custom/AU/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]]; then
-    continue
-  fi
+  #if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]]; then
+    #continue
+  #fi
   perl scripts/sifexamples.pl "$filename" >> sifxml/examples.go
 done
 

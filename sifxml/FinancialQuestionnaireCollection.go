@@ -11,7 +11,6 @@ type financialquestionnairecollection struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       FQYear *SchoolYearType `xml:"FQYear" json:"FQYear"`
       RoundCode *String `xml:"RoundCode" json:"RoundCode"`
-      ReportingAuthorityCommonwealthId *String `xml:"ReportingAuthorityCommonwealthId" json:"ReportingAuthorityCommonwealthId"`
       SoftwareVendorInfo *SoftwareVendorInfoContainerType `xml:"SoftwareVendorInfo" json:"SoftwareVendorInfo"`
       FQReportingList *FQReportingListType `xml:"FQReportingList,omitempty" json:"FQReportingList,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`

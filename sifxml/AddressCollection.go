@@ -11,7 +11,6 @@ type addresscollection struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       AddressCollectionYear *SchoolYearType `xml:"AddressCollectionYear" json:"AddressCollectionYear"`
       RoundCode *String `xml:"RoundCode" json:"RoundCode"`
-      ReportingAuthorityCommonwealthId *String `xml:"ReportingAuthorityCommonwealthId,omitempty" json:"ReportingAuthorityCommonwealthId,omitempty"`
       SoftwareVendorInfo *SoftwareVendorInfoContainerType `xml:"SoftwareVendorInfo,omitempty" json:"SoftwareVendorInfo,omitempty"`
       AddressCollectionReportingList *AddressCollectionReportingListType `xml:"AddressCollectionReportingList,omitempty" json:"AddressCollectionReportingList,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`

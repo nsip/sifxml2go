@@ -1,25 +1,12 @@
 package sifxml
 
 
-    type ReportPackageType AbstractContentPackageType
-    type AbstractContentPackageType struct {
-  abstractcontentpackagetype `xml:"AbstractContentPackageType" json:"AbstractContentPackageType"`
-}
-
-type abstractcontentpackagetype struct {
-        RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      XMLData *AbstractContentPackageType_XMLData
-      TextData *AbstractContentPackageType_TextData
-      BinaryData *AbstractContentPackageType_BinaryData
-      Reference *AbstractContentPackageType_Reference
-      
-      }
-    
     type AbstractContentElementType struct {
   abstractcontentelementtype `xml:"AbstractContentElementType" json:"AbstractContentElementType"`
 }
 
 type abstractcontentelementtype struct {
+        RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       XMLData *AbstractContentElementType_XMLData
       TextData *AbstractContentElementType_TextData
       BinaryData *AbstractContentElementType_BinaryData
@@ -51,6 +38,186 @@ type monetaryamounttype struct {
     type DefinedProtocolsType string
     type ExtendedContentType string
     type SelectedContentType string
+    type ResourceUsageContentTypeType struct {
+  resourceusagecontenttypetype `xml:"ResourceUsageContentTypeType" json:"ResourceUsageContentTypeType"`
+}
+
+type resourceusagecontenttypetype struct {
+        Code *AUCodeSetsResourceUsageContentTypeType `xml:"Code" json:"Code"`
+      LocalDescription *String `xml:"LocalDescription,omitempty" json:"LocalDescription,omitempty"`
+      
+      }
+    
+    type ResourceReportColumnListType struct {
+  resourcereportcolumnlisttype `xml:"ResourceReportColumnListType" json:"ResourceReportColumnListType"`
+}
+
+type resourcereportcolumnlisttype struct {
+        ResourceReportColumn []ResourceReportColumnType `xml:"ResourceReportColumn" json:"ResourceReportColumn"`
+      
+      }
+    
+    type ResourceReportColumnType struct {
+  resourcereportcolumntype `xml:"ResourceReportColumnType" json:"ResourceReportColumnType"`
+}
+
+type resourcereportcolumntype struct {
+        ColumnName *String `xml:"ColumnName" json:"ColumnName"`
+      ColumnDescription *String `xml:"ColumnDescription,omitempty" json:"ColumnDescription,omitempty"`
+      ColumnDelimiter *String `xml:"ColumnDelimiter,omitempty" json:"ColumnDelimiter,omitempty"`
+      
+      }
+    
+    type ResourceReportLineListType struct {
+  resourcereportlinelisttype `xml:"ResourceReportLineListType" json:"ResourceReportLineListType"`
+}
+
+type resourcereportlinelisttype struct {
+        ResourceReportLine []ResourceReportLineType `xml:"ResourceReportLine" json:"ResourceReportLine"`
+      
+      }
+    
+    type ReportUserRefIdType struct {
+  reportuserrefidtype `xml:"ReportUserRefIdType" json:"ReportUserRefIdType"`
+}
+
+type reportuserrefidtype struct {
+          SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type ResourceReportLineType struct {
+  resourcereportlinetype `xml:"ResourceReportLineType" json:"ResourceReportLineType"`
+}
+
+type resourcereportlinetype struct {
+        SIF_RefId *ReportUserRefIdType `xml:"SIF_RefId,omitempty" json:"SIF_RefId,omitempty"`
+      StartDate *String `xml:"StartDate" json:"StartDate"`
+      EndDate *String `xml:"EndDate,omitempty" json:"EndDate,omitempty"`
+      CurrentCost *MonetaryAmountType `xml:"CurrentCost" json:"CurrentCost"`
+      ReportRow *String `xml:"ReportRow" json:"ReportRow"`
+      
+      }
+    
+    type HomeroomType struct {
+  homeroomtype `xml:"HomeroomType" json:"HomeroomType"`
+}
+
+type homeroomtype struct {
+          SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type StaffRefIdType struct {
+  staffrefidtype `xml:"StaffRefIdType" json:"StaffRefIdType"`
+}
+
+type staffrefidtype struct {
+          SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type SystemRoleObjectRefIdType struct {
+  systemroleobjectrefidtype `xml:"SystemRoleObjectRefIdType" json:"SystemRoleObjectRefIdType"`
+}
+
+type systemroleobjectrefidtype struct {
+          SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type SystemContextListType struct {
+  systemcontextlisttype `xml:"SystemContextListType" json:"SystemContextListType"`
+}
+
+type systemcontextlisttype struct {
+        SystemContext []SystemContextType `xml:"SystemContext" json:"SystemContext"`
+      
+      }
+    
+    type SystemContextType struct {
+  systemcontexttype `xml:"SystemContextType" json:"SystemContextType"`
+}
+
+type systemcontexttype struct {
+        SystemId *String `xml:"SystemId,attr" json:"SystemId"`
+      RoleList *SystemRoleListType `xml:"RoleList,omitempty" json:"RoleList,omitempty"`
+      
+      }
+    
+    type SystemRoleListType struct {
+  systemrolelisttype `xml:"SystemRoleListType" json:"SystemRoleListType"`
+}
+
+type systemrolelisttype struct {
+        Role []SystemRoleElementType `xml:"Role" json:"Role"`
+      
+      }
+    
+    type SystemRoleElementType struct {
+  systemroleelementtype `xml:"SystemRoleElementType" json:"SystemRoleElementType"`
+}
+
+type systemroleelementtype struct {
+        RoleId *String `xml:"RoleId,attr" json:"RoleId"`
+      RoleScopeList *SystemRoleScopeListType `xml:"RoleScopeList,omitempty" json:"RoleScopeList,omitempty"`
+      
+      }
+    
+    type SystemRoleScopeListType struct {
+  systemrolescopelisttype `xml:"SystemRoleScopeListType" json:"SystemRoleScopeListType"`
+}
+
+type systemrolescopelisttype struct {
+        RoleScope []SystemRoleScopeType `xml:"RoleScope" json:"RoleScope"`
+      
+      }
+    
+    type SystemRoleScopeRefIdType struct {
+  systemrolescoperefidtype `xml:"SystemRoleScopeRefIdType" json:"SystemRoleScopeRefIdType"`
+}
+
+type systemrolescoperefidtype struct {
+          SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type SystemRoleScopeType struct {
+  systemrolescopetype `xml:"SystemRoleScopeType" json:"SystemRoleScopeType"`
+}
+
+type systemrolescopetype struct {
+        RoleScopeName *String `xml:"RoleScopeName,omitempty" json:"RoleScopeName,omitempty"`
+      RoleScopeRefId *SystemRoleScopeRefIdType `xml:"RoleScopeRefId,omitempty" json:"RoleScopeRefId,omitempty"`
+      
+      }
+    
+    type TravelDetailsContainerType struct {
+  traveldetailscontainertype `xml:"TravelDetailsContainerType" json:"TravelDetailsContainerType"`
+}
+
+type traveldetailscontainertype struct {
+        ToSchool *SchoolTravelType `xml:"ToSchool,omitempty" json:"ToSchool,omitempty"`
+      FromSchool *SchoolTravelType `xml:"FromSchool,omitempty" json:"FromSchool,omitempty"`
+      
+      }
+    
+    type SchoolTravelType struct {
+  schooltraveltype `xml:"SchoolTravelType" json:"SchoolTravelType"`
+}
+
+type schooltraveltype struct {
+        TravelMode *AUCodeSetsTravelModeType `xml:"TravelMode,omitempty" json:"TravelMode,omitempty"`
+      TravelDetails *String `xml:"TravelDetails,omitempty" json:"TravelDetails,omitempty"`
+      TravelAccompaniment *AUCodeSetsAccompanimentType `xml:"TravelAccompaniment,omitempty" json:"TravelAccompaniment,omitempty"`
+      
+      }
+    
     type LibraryTransactionListType struct {
   librarytransactionlisttype `xml:"LibraryTransactionListType" json:"LibraryTransactionListType"`
 }
@@ -179,12 +346,7 @@ type studentattendancecollectionreportinglisttype struct {
 }
 
 type studentattendancecollectionreportingtype struct {
-        EntityLevel *String `xml:"EntityLevel,omitempty" json:"EntityLevel,omitempty"`
-      SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId,omitempty"`
-      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
-      StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`
-      CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
-      ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
+        CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *String `xml:"EntityName,omitempty" json:"EntityName,omitempty"`
       EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
       StatsCohortYearLevelList *StatsCohortYearLevelListType `xml:"StatsCohortYearLevelList,omitempty" json:"StatsCohortYearLevelList,omitempty"`
@@ -250,12 +412,7 @@ type addresscollectionreportinglisttype struct {
 }
 
 type addresscollectionreportingtype struct {
-        EntityLevel *String `xml:"EntityLevel,omitempty" json:"EntityLevel,omitempty"`
-      SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId,omitempty"`
-      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
-      StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`
-      CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
-      ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
+        CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *String `xml:"EntityName,omitempty" json:"EntityName,omitempty"`
       EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
       AGContextualQuestionList *AGContextualQuestionListType `xml:"AGContextualQuestionList,omitempty" json:"AGContextualQuestionList,omitempty"`
@@ -465,12 +622,7 @@ type fqreportinglisttype struct {
 }
 
 type fqreportingtype struct {
-        EntityLevel *String `xml:"EntityLevel" json:"EntityLevel"`
-      SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId,omitempty"`
-      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
-      StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`
-      CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
-      ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
+        CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *String `xml:"EntityName,omitempty" json:"EntityName,omitempty"`
       EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
       FQContextualQuestionList *FQContextualQuestionListType `xml:"FQContextualQuestionList,omitempty" json:"FQContextualQuestionList,omitempty"`
@@ -3196,6 +3348,7 @@ type demographicstype struct {
       Sex *AUCodeSetsSexCodeType `xml:"Sex,omitempty" json:"Sex,omitempty"`
       BirthDate *BirthDateType `xml:"BirthDate,omitempty" json:"BirthDate,omitempty"`
       DateOfDeath *String `xml:"DateOfDeath,omitempty" json:"DateOfDeath,omitempty"`
+      Deceased *AUCodeSetsYesOrNoCategoryType `xml:"Deceased,omitempty" json:"Deceased,omitempty"`
       BirthDateVerification *AUCodeSetsBirthdateVerificationType `xml:"BirthDateVerification,omitempty" json:"BirthDateVerification,omitempty"`
       PlaceOfBirth *String `xml:"PlaceOfBirth,omitempty" json:"PlaceOfBirth,omitempty"`
       StateOfBirth *StateProvinceType `xml:"StateOfBirth,omitempty" json:"StateOfBirth,omitempty"`
@@ -3381,44 +3534,7 @@ type sif_metadatatype struct {
       EducationFilter *EducationFilterType `xml:"EducationFilter,omitempty" json:"EducationFilter,omitempty"`
       
       }
-    type AbstractContentPackageType_XMLData struct {
-  abstractcontentpackagetype_xmldata `xml:"AbstractContentPackageType_XMLData" json:"AbstractContentPackageType_XMLData"`
-}
-
-type abstractcontentpackagetype_xmldata struct {
-      Description *String `xml:"Description,attr" json:"Description"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type AbstractContentPackageType_TextData struct {
-  abstractcontentpackagetype_textdata `xml:"AbstractContentPackageType_TextData" json:"AbstractContentPackageType_TextData"`
-}
-
-type abstractcontentpackagetype_textdata struct {
-      MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
-      FileName *String `xml:"FileName,attr" json:"FileName"`
-      Description *String `xml:"Description,attr" json:"Description"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type AbstractContentPackageType_BinaryData struct {
-  abstractcontentpackagetype_binarydata `xml:"AbstractContentPackageType_BinaryData" json:"AbstractContentPackageType_BinaryData"`
-}
-
-type abstractcontentpackagetype_binarydata struct {
-      MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
-      FileName *String `xml:"FileName,attr" json:"FileName"`
-      Description *String `xml:"Description,attr" json:"Description"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type AbstractContentPackageType_Reference struct {
-  abstractcontentpackagetype_reference `xml:"AbstractContentPackageType_Reference" json:"AbstractContentPackageType_Reference"`
-}
-
-type abstractcontentpackagetype_reference struct {
-      MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
-      Description *String `xml:"Description,attr" json:"Description"`
-       URL *String `xml:"URL" json:"URL"`
-}
-type AbstractContentElementType_XMLData struct {
+    type AbstractContentElementType_XMLData struct {
   abstractcontentelementtype_xmldata `xml:"AbstractContentElementType_XMLData" json:"AbstractContentElementType_XMLData"`
 }
 
