@@ -72,8 +72,9 @@ echo '</root>' >> codesets.xml
 xsltproc scripts/sifobject.xslt codesets.xml | perl scripts/xslt_postprocess.pl | perl scripts/struct2go.pl > sifxml_tmp/Codesets.go
 
 for filename in ./sifxml_tmp/*.go; do
-  cat "$filename" |  perl struct2go2.pl > sifxml/$(basename "$filename")
+  cat "$filename" |  perl scripts/struct2go2.pl > sifxml/$(basename "$filename")
 done
+cat sifxml_tmp/DataModel.go |  perl -s scripts/struct2go2.pl -o > sifxml/DataModel.go
 
 cat sifxml_tmp/[A-Z]*.go | perl scripts/goHelpers.pl > sifxml/Helpers.go
 

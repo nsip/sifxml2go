@@ -2,7 +2,7 @@ package sifxml
 
 
     type AbstractContentElementType struct {
-  abstractcontentelementtype `xml:"AbstractContentElementType" json:"AbstractContentElementType"`
+  abstractcontentelementtype 
 }
 
 type abstractcontentelementtype struct {
@@ -15,7 +15,7 @@ type abstractcontentelementtype struct {
       }
     
     type MonetaryAmountType struct {
-  monetaryamounttype `xml:"MonetaryAmountType" json:"MonetaryAmountType"`
+  monetaryamounttype 
 }
 
 type monetaryamounttype struct {
@@ -39,7 +39,7 @@ type monetaryamounttype struct {
     type ExtendedContentType string
     type SelectedContentType string
     type ResourceUsageContentTypeType struct {
-  resourceusagecontenttypetype `xml:"ResourceUsageContentTypeType" json:"ResourceUsageContentTypeType"`
+  resourceusagecontenttypetype 
 }
 
 type resourceusagecontenttypetype struct {
@@ -49,7 +49,7 @@ type resourceusagecontenttypetype struct {
       }
     
     type ResourceReportColumnListType struct {
-  resourcereportcolumnlisttype `xml:"ResourceReportColumnListType" json:"ResourceReportColumnListType"`
+  resourcereportcolumnlisttype 
 }
 
 type resourcereportcolumnlisttype struct {
@@ -58,7 +58,7 @@ type resourcereportcolumnlisttype struct {
       }
     
     type ResourceReportColumnType struct {
-  resourcereportcolumntype `xml:"ResourceReportColumnType" json:"ResourceReportColumnType"`
+  resourcereportcolumntype 
 }
 
 type resourcereportcolumntype struct {
@@ -69,7 +69,7 @@ type resourcereportcolumntype struct {
       }
     
     type ResourceReportLineListType struct {
-  resourcereportlinelisttype `xml:"ResourceReportLineListType" json:"ResourceReportLineListType"`
+  resourcereportlinelisttype 
 }
 
 type resourcereportlinelisttype struct {
@@ -78,7 +78,7 @@ type resourcereportlinelisttype struct {
       }
     
     type ReportUserRefIdType struct {
-  reportuserrefidtype `xml:"ReportUserRefIdType" json:"ReportUserRefIdType"`
+  reportuserrefidtype 
 }
 
 type reportuserrefidtype struct {
@@ -88,7 +88,7 @@ type reportuserrefidtype struct {
       }
     
     type ResourceReportLineType struct {
-  resourcereportlinetype `xml:"ResourceReportLineType" json:"ResourceReportLineType"`
+  resourcereportlinetype 
 }
 
 type resourcereportlinetype struct {
@@ -101,7 +101,7 @@ type resourcereportlinetype struct {
       }
     
     type HomeroomType struct {
-  homeroomtype `xml:"HomeroomType" json:"HomeroomType"`
+  homeroomtype 
 }
 
 type homeroomtype struct {
@@ -111,7 +111,7 @@ type homeroomtype struct {
       }
     
     type StaffRefIdType struct {
-  staffrefidtype `xml:"StaffRefIdType" json:"StaffRefIdType"`
+  staffrefidtype 
 }
 
 type staffrefidtype struct {
@@ -121,7 +121,7 @@ type staffrefidtype struct {
       }
     
     type SystemRoleObjectRefIdType struct {
-  systemroleobjectrefidtype `xml:"SystemRoleObjectRefIdType" json:"SystemRoleObjectRefIdType"`
+  systemroleobjectrefidtype 
 }
 
 type systemroleobjectrefidtype struct {
@@ -131,7 +131,7 @@ type systemroleobjectrefidtype struct {
       }
     
     type SystemContextListType struct {
-  systemcontextlisttype `xml:"SystemContextListType" json:"SystemContextListType"`
+  systemcontextlisttype 
 }
 
 type systemcontextlisttype struct {
@@ -140,7 +140,7 @@ type systemcontextlisttype struct {
       }
     
     type SystemContextType struct {
-  systemcontexttype `xml:"SystemContextType" json:"SystemContextType"`
+  systemcontexttype 
 }
 
 type systemcontexttype struct {
@@ -150,7 +150,7 @@ type systemcontexttype struct {
       }
     
     type SystemRoleListType struct {
-  systemrolelisttype `xml:"SystemRoleListType" json:"SystemRoleListType"`
+  systemrolelisttype 
 }
 
 type systemrolelisttype struct {
@@ -159,7 +159,7 @@ type systemrolelisttype struct {
       }
     
     type SystemRoleElementType struct {
-  systemroleelementtype `xml:"SystemRoleElementType" json:"SystemRoleElementType"`
+  systemroleelementtype 
 }
 
 type systemroleelementtype struct {
@@ -169,7 +169,7 @@ type systemroleelementtype struct {
       }
     
     type SystemRoleScopeListType struct {
-  systemrolescopelisttype `xml:"SystemRoleScopeListType" json:"SystemRoleScopeListType"`
+  systemrolescopelisttype 
 }
 
 type systemrolescopelisttype struct {
@@ -178,7 +178,7 @@ type systemrolescopelisttype struct {
       }
     
     type SystemRoleScopeRefIdType struct {
-  systemrolescoperefidtype `xml:"SystemRoleScopeRefIdType" json:"SystemRoleScopeRefIdType"`
+  systemrolescoperefidtype 
 }
 
 type systemrolescoperefidtype struct {
@@ -188,7 +188,7 @@ type systemrolescoperefidtype struct {
       }
     
     type SystemRoleScopeType struct {
-  systemrolescopetype `xml:"SystemRoleScopeType" json:"SystemRoleScopeType"`
+  systemrolescopetype 
 }
 
 type systemrolescopetype struct {
@@ -198,7 +198,7 @@ type systemrolescopetype struct {
       }
     
     type TravelDetailsContainerType struct {
-  traveldetailscontainertype `xml:"TravelDetailsContainerType" json:"TravelDetailsContainerType"`
+  traveldetailscontainertype 
 }
 
 type traveldetailscontainertype struct {
@@ -208,7 +208,7 @@ type traveldetailscontainertype struct {
       }
     
     type SchoolTravelType struct {
-  schooltraveltype `xml:"SchoolTravelType" json:"SchoolTravelType"`
+  schooltraveltype 
 }
 
 type schooltraveltype struct {
@@ -219,7 +219,7 @@ type schooltraveltype struct {
       }
     
     type LibraryTransactionListType struct {
-  librarytransactionlisttype `xml:"LibraryTransactionListType" json:"LibraryTransactionListType"`
+  librarytransactionlisttype 
 }
 
 type librarytransactionlisttype struct {
@@ -228,7 +228,7 @@ type librarytransactionlisttype struct {
       }
     
     type LibraryTransactionType struct {
-  librarytransactiontype `xml:"LibraryTransactionType" json:"LibraryTransactionType"`
+  librarytransactiontype 
 }
 
 type librarytransactiontype struct {
@@ -240,7 +240,7 @@ type librarytransactiontype struct {
       }
     
     type LibraryItemInfoType struct {
-  libraryiteminfotype `xml:"LibraryItemInfoType" json:"LibraryItemInfoType"`
+  libraryiteminfotype 
 }
 
 type libraryiteminfotype struct {
@@ -256,7 +256,7 @@ type libraryiteminfotype struct {
       }
     
     type CheckoutInfoType struct {
-  checkoutinfotype `xml:"CheckoutInfoType" json:"CheckoutInfoType"`
+  checkoutinfotype 
 }
 
 type checkoutinfotype struct {
@@ -267,7 +267,7 @@ type checkoutinfotype struct {
       }
     
     type FineInfoListType struct {
-  fineinfolisttype `xml:"FineInfoListType" json:"FineInfoListType"`
+  fineinfolisttype 
 }
 
 type fineinfolisttype struct {
@@ -276,7 +276,7 @@ type fineinfolisttype struct {
       }
     
     type FineInfoType struct {
-  fineinfotype `xml:"FineInfoType" json:"FineInfoType"`
+  fineinfotype 
 }
 
 type fineinfotype struct {
@@ -289,7 +289,7 @@ type fineinfotype struct {
       }
     
     type HoldInfoListType struct {
-  holdinfolisttype `xml:"HoldInfoListType" json:"HoldInfoListType"`
+  holdinfolisttype 
 }
 
 type holdinfolisttype struct {
@@ -298,7 +298,7 @@ type holdinfolisttype struct {
       }
     
     type HoldInfoType struct {
-  holdinfotype `xml:"HoldInfoType" json:"HoldInfoType"`
+  holdinfotype 
 }
 
 type holdinfotype struct {
@@ -312,7 +312,7 @@ type holdinfotype struct {
       }
     
     type LibraryMessageListType struct {
-  librarymessagelisttype `xml:"LibraryMessageListType" json:"LibraryMessageListType"`
+  librarymessagelisttype 
 }
 
 type librarymessagelisttype struct {
@@ -321,7 +321,7 @@ type librarymessagelisttype struct {
       }
     
     type LibraryMessageType struct {
-  librarymessagetype `xml:"LibraryMessageType" json:"LibraryMessageType"`
+  librarymessagetype 
 }
 
 type librarymessagetype struct {
@@ -333,7 +333,7 @@ type librarymessagetype struct {
       }
     
     type StudentAttendanceCollectionReportingListType struct {
-  studentattendancecollectionreportinglisttype `xml:"StudentAttendanceCollectionReportingListType" json:"StudentAttendanceCollectionReportingListType"`
+  studentattendancecollectionreportinglisttype 
 }
 
 type studentattendancecollectionreportinglisttype struct {
@@ -342,7 +342,7 @@ type studentattendancecollectionreportinglisttype struct {
       }
     
     type StudentAttendanceCollectionReportingType struct {
-  studentattendancecollectionreportingtype `xml:"StudentAttendanceCollectionReportingType" json:"StudentAttendanceCollectionReportingType"`
+  studentattendancecollectionreportingtype 
 }
 
 type studentattendancecollectionreportingtype struct {
@@ -354,7 +354,7 @@ type studentattendancecollectionreportingtype struct {
       }
     
     type StatsCohortYearLevelListType struct {
-  statscohortyearlevellisttype `xml:"StatsCohortYearLevelListType" json:"StatsCohortYearLevelListType"`
+  statscohortyearlevellisttype 
 }
 
 type statscohortyearlevellisttype struct {
@@ -363,7 +363,7 @@ type statscohortyearlevellisttype struct {
       }
     
     type StatsCohortYearLevelType struct {
-  statscohortyearleveltype `xml:"StatsCohortYearLevelType" json:"StatsCohortYearLevelType"`
+  statscohortyearleveltype 
 }
 
 type statscohortyearleveltype struct {
@@ -373,7 +373,7 @@ type statscohortyearleveltype struct {
       }
     
     type StatsCohortListType struct {
-  statscohortlisttype `xml:"StatsCohortListType" json:"StatsCohortListType"`
+  statscohortlisttype 
 }
 
 type statscohortlisttype struct {
@@ -382,7 +382,7 @@ type statscohortlisttype struct {
       }
     
     type StatsCohortType struct {
-  statscohorttype `xml:"StatsCohortType" json:"StatsCohortType"`
+  statscohorttype 
 }
 
 type statscohorttype struct {
@@ -399,7 +399,7 @@ type statscohorttype struct {
       }
     
     type AddressCollectionReportingListType struct {
-  addresscollectionreportinglisttype `xml:"AddressCollectionReportingListType" json:"AddressCollectionReportingListType"`
+  addresscollectionreportinglisttype 
 }
 
 type addresscollectionreportinglisttype struct {
@@ -408,7 +408,7 @@ type addresscollectionreportinglisttype struct {
       }
     
     type AddressCollectionReportingType struct {
-  addresscollectionreportingtype `xml:"AddressCollectionReportingType" json:"AddressCollectionReportingType"`
+  addresscollectionreportingtype 
 }
 
 type addresscollectionreportingtype struct {
@@ -421,7 +421,7 @@ type addresscollectionreportingtype struct {
       }
     
     type AddressCollectionStudentListType struct {
-  addresscollectionstudentlisttype `xml:"AddressCollectionStudentListType" json:"AddressCollectionStudentListType"`
+  addresscollectionstudentlisttype 
 }
 
 type addresscollectionstudentlisttype struct {
@@ -430,7 +430,7 @@ type addresscollectionstudentlisttype struct {
       }
     
     type AddressCollectionStudentType struct {
-  addresscollectionstudenttype `xml:"AddressCollectionStudentType" json:"AddressCollectionStudentType"`
+  addresscollectionstudenttype 
 }
 
 type addresscollectionstudenttype struct {
@@ -445,7 +445,7 @@ type addresscollectionstudenttype struct {
       }
     
     type AGParentType struct {
-  agparenttype `xml:"AGParentType" json:"AGParentType"`
+  agparenttype 
 }
 
 type agparenttype struct {
@@ -456,7 +456,7 @@ type agparenttype struct {
       }
     
     type AGRoundListType struct {
-  agroundlisttype `xml:"AGRoundListType" json:"AGRoundListType"`
+  agroundlisttype 
 }
 
 type agroundlisttype struct {
@@ -465,7 +465,7 @@ type agroundlisttype struct {
       }
     
     type AGRoundType struct {
-  agroundtype `xml:"AGRoundType" json:"AGRoundType"`
+  agroundtype 
 }
 
 type agroundtype struct {
@@ -478,7 +478,7 @@ type agroundtype struct {
       }
     
     type AGContextualQuestionListType struct {
-  agcontextualquestionlisttype `xml:"AGContextualQuestionListType" json:"AGContextualQuestionListType"`
+  agcontextualquestionlisttype 
 }
 
 type agcontextualquestionlisttype struct {
@@ -487,7 +487,7 @@ type agcontextualquestionlisttype struct {
       }
     
     type AGContextualQuestionType struct {
-  agcontextualquestiontype `xml:"AGContextualQuestionType" json:"AGContextualQuestionType"`
+  agcontextualquestiontype 
 }
 
 type agcontextualquestiontype struct {
@@ -497,7 +497,7 @@ type agcontextualquestiontype struct {
       }
     
     type CensusReportingListType struct {
-  censusreportinglisttype `xml:"CensusReportingListType" json:"CensusReportingListType"`
+  censusreportinglisttype 
 }
 
 type censusreportinglisttype struct {
@@ -506,7 +506,7 @@ type censusreportinglisttype struct {
       }
     
     type CensusReportingType struct {
-  censusreportingtype `xml:"CensusReportingType" json:"CensusReportingType"`
+  censusreportingtype 
 }
 
 type censusreportingtype struct {
@@ -520,7 +520,7 @@ type censusreportingtype struct {
       }
     
     type CensusStaffListType struct {
-  censusstafflisttype `xml:"CensusStaffListType" json:"CensusStaffListType"`
+  censusstafflisttype 
 }
 
 type censusstafflisttype struct {
@@ -529,7 +529,7 @@ type censusstafflisttype struct {
       }
     
     type CensusStaffType struct {
-  censusstafftype `xml:"CensusStaffType" json:"CensusStaffType"`
+  censusstafftype 
 }
 
 type censusstafftype struct {
@@ -545,7 +545,7 @@ type censusstafftype struct {
       }
     
     type StaffAssignmentMostRecentContainerType struct {
-  staffassignmentmostrecentcontainertype `xml:"StaffAssignmentMostRecentContainerType" json:"StaffAssignmentMostRecentContainerType"`
+  staffassignmentmostrecentcontainertype 
 }
 
 type staffassignmentmostrecentcontainertype struct {
@@ -555,7 +555,7 @@ type staffassignmentmostrecentcontainertype struct {
       }
     
     type CensusStudentListType struct {
-  censusstudentlisttype `xml:"CensusStudentListType" json:"CensusStudentListType"`
+  censusstudentlisttype 
 }
 
 type censusstudentlisttype struct {
@@ -564,7 +564,7 @@ type censusstudentlisttype struct {
       }
     
     type CensusStudentType struct {
-  censusstudenttype `xml:"CensusStudentType" json:"CensusStudentType"`
+  censusstudenttype 
 }
 
 type censusstudenttype struct {
@@ -584,7 +584,7 @@ type censusstudenttype struct {
       }
     
     type AGReportingObjectResponseListType struct {
-  agreportingobjectresponselisttype `xml:"AGReportingObjectResponseListType" json:"AGReportingObjectResponseListType"`
+  agreportingobjectresponselisttype 
 }
 
 type agreportingobjectresponselisttype struct {
@@ -593,7 +593,7 @@ type agreportingobjectresponselisttype struct {
       }
     
     type AGReportingObjectResponseType struct {
-  agreportingobjectresponsetype `xml:"AGReportingObjectResponseType" json:"AGReportingObjectResponseType"`
+  agreportingobjectresponsetype 
 }
 
 type agreportingobjectresponsetype struct {
@@ -609,7 +609,7 @@ type agreportingobjectresponsetype struct {
       }
     
     type FQReportingListType struct {
-  fqreportinglisttype `xml:"FQReportingListType" json:"FQReportingListType"`
+  fqreportinglisttype 
 }
 
 type fqreportinglisttype struct {
@@ -618,7 +618,7 @@ type fqreportinglisttype struct {
       }
     
     type FQReportingType struct {
-  fqreportingtype `xml:"FQReportingType" json:"FQReportingType"`
+  fqreportingtype 
 }
 
 type fqreportingtype struct {
@@ -632,7 +632,7 @@ type fqreportingtype struct {
       }
     
     type FQContextualQuestionListType struct {
-  fqcontextualquestionlisttype `xml:"FQContextualQuestionListType" json:"FQContextualQuestionListType"`
+  fqcontextualquestionlisttype 
 }
 
 type fqcontextualquestionlisttype struct {
@@ -641,7 +641,7 @@ type fqcontextualquestionlisttype struct {
       }
     
     type FQContextualQuestionType struct {
-  fqcontextualquestiontype `xml:"FQContextualQuestionType" json:"FQContextualQuestionType"`
+  fqcontextualquestiontype 
 }
 
 type fqcontextualquestiontype struct {
@@ -651,7 +651,7 @@ type fqcontextualquestiontype struct {
       }
     
     type FQItemListType struct {
-  fqitemlisttype `xml:"FQItemListType" json:"FQItemListType"`
+  fqitemlisttype 
 }
 
 type fqitemlisttype struct {
@@ -660,7 +660,7 @@ type fqitemlisttype struct {
       }
     
     type FQItemType struct {
-  fqitemtype `xml:"FQItemType" json:"FQItemType"`
+  fqitemtype 
 }
 
 type fqitemtype struct {
@@ -674,7 +674,7 @@ type fqitemtype struct {
       }
     
     type AGRuleListType struct {
-  agrulelisttype `xml:"AGRuleListType" json:"AGRuleListType"`
+  agrulelisttype 
 }
 
 type agrulelisttype struct {
@@ -683,7 +683,7 @@ type agrulelisttype struct {
       }
     
     type AGRuleType struct {
-  agruletype `xml:"AGRuleType" json:"AGRuleType"`
+  agruletype 
 }
 
 type agruletype struct {
@@ -695,7 +695,7 @@ type agruletype struct {
       }
     
     type SoftwareVendorInfoContainerType struct {
-  softwarevendorinfocontainertype `xml:"SoftwareVendorInfoContainerType" json:"SoftwareVendorInfoContainerType"`
+  softwarevendorinfocontainertype 
 }
 
 type softwarevendorinfocontainertype struct {
@@ -705,7 +705,7 @@ type softwarevendorinfocontainertype struct {
       }
     
     type TimeTableScheduleType struct {
-  timetablescheduletype `xml:"TimeTableScheduleType" json:"TimeTableScheduleType"`
+  timetablescheduletype 
 }
 
 type timetablescheduletype struct {
@@ -726,7 +726,7 @@ type timetablescheduletype struct {
       }
     
     type TimeTableScheduleCellListType struct {
-  timetableschedulecelllisttype `xml:"TimeTableScheduleCellListType" json:"TimeTableScheduleCellListType"`
+  timetableschedulecelllisttype 
 }
 
 type timetableschedulecelllisttype struct {
@@ -735,7 +735,7 @@ type timetableschedulecelllisttype struct {
       }
     
     type TimeTableScheduleCellType struct {
-  timetableschedulecelltype `xml:"TimeTableScheduleCellType" json:"TimeTableScheduleCellType"`
+  timetableschedulecelltype 
 }
 
 type timetableschedulecelltype struct {
@@ -760,7 +760,7 @@ type timetableschedulecelltype struct {
       }
     
     type TeachingGroupScheduleListType struct {
-  teachinggroupschedulelisttype `xml:"TeachingGroupScheduleListType" json:"TeachingGroupScheduleListType"`
+  teachinggroupschedulelisttype 
 }
 
 type teachinggroupschedulelisttype struct {
@@ -769,7 +769,7 @@ type teachinggroupschedulelisttype struct {
       }
     
     type TeachingGroupScheduleType struct {
-  teachinggroupscheduletype `xml:"TeachingGroupScheduleType" json:"TeachingGroupScheduleType"`
+  teachinggroupscheduletype 
 }
 
 type teachinggroupscheduletype struct {
@@ -798,7 +798,7 @@ type teachinggroupscheduletype struct {
       }
     
     type LocalCodeListType struct {
-  localcodelisttype `xml:"LocalCodeListType" json:"LocalCodeListType"`
+  localcodelisttype 
 }
 
 type localcodelisttype struct {
@@ -807,7 +807,7 @@ type localcodelisttype struct {
       }
     
     type LocalCodeType struct {
-  localcodetype `xml:"LocalCodeType" json:"LocalCodeType"`
+  localcodetype 
 }
 
 type localcodetype struct {
@@ -819,7 +819,7 @@ type localcodetype struct {
       }
     
     type StudentGroupListType struct {
-  studentgrouplisttype `xml:"StudentGroupListType" json:"StudentGroupListType"`
+  studentgrouplisttype 
 }
 
 type studentgrouplisttype struct {
@@ -828,7 +828,7 @@ type studentgrouplisttype struct {
       }
     
     type StudentGroupType struct {
-  studentgrouptype `xml:"StudentGroupType" json:"StudentGroupType"`
+  studentgrouptype 
 }
 
 type studentgrouptype struct {
@@ -839,7 +839,7 @@ type studentgrouptype struct {
       }
     
     type PublishingPermissionListType struct {
-  publishingpermissionlisttype `xml:"PublishingPermissionListType" json:"PublishingPermissionListType"`
+  publishingpermissionlisttype 
 }
 
 type publishingpermissionlisttype struct {
@@ -848,7 +848,7 @@ type publishingpermissionlisttype struct {
       }
     
     type PublishingPermissionType struct {
-  publishingpermissiontype `xml:"PublishingPermissionType" json:"PublishingPermissionType"`
+  publishingpermissiontype 
 }
 
 type publishingpermissiontype struct {
@@ -858,7 +858,7 @@ type publishingpermissiontype struct {
       }
     
     type EntityContactInfoType struct {
-  entitycontactinfotype `xml:"EntityContactInfoType" json:"EntityContactInfoType"`
+  entitycontactinfotype 
 }
 
 type entitycontactinfotype struct {
@@ -874,7 +874,7 @@ type entitycontactinfotype struct {
       }
     
     type CopyRightContainerType struct {
-  copyrightcontainertype `xml:"CopyRightContainerType" json:"CopyRightContainerType"`
+  copyrightcontainertype 
 }
 
 type copyrightcontainertype struct {
@@ -884,7 +884,7 @@ type copyrightcontainertype struct {
       }
     
     type StandardsSettingBodyType struct {
-  standardssettingbodytype `xml:"StandardsSettingBodyType" json:"StandardsSettingBodyType"`
+  standardssettingbodytype 
 }
 
 type standardssettingbodytype struct {
@@ -895,7 +895,7 @@ type standardssettingbodytype struct {
       }
     
     type StandardHierarchyLevelType struct {
-  standardhierarchyleveltype `xml:"StandardHierarchyLevelType" json:"StandardHierarchyLevelType"`
+  standardhierarchyleveltype 
 }
 
 type standardhierarchyleveltype struct {
@@ -905,7 +905,7 @@ type standardhierarchyleveltype struct {
       }
     
     type StandardIdentifierType struct {
-  standardidentifiertype `xml:"StandardIdentifierType" json:"StandardIdentifierType"`
+  standardidentifiertype 
 }
 
 type standardidentifiertype struct {
@@ -922,7 +922,7 @@ type standardidentifiertype struct {
       }
     
     type AlternateIdentificationCodeListType struct {
-  alternateidentificationcodelisttype `xml:"AlternateIdentificationCodeListType" json:"AlternateIdentificationCodeListType"`
+  alternateidentificationcodelisttype 
 }
 
 type alternateidentificationcodelisttype struct {
@@ -931,7 +931,7 @@ type alternateidentificationcodelisttype struct {
       }
     
     type RelatedLearningStandardItemRefIdListType struct {
-  relatedlearningstandarditemrefidlisttype `xml:"RelatedLearningStandardItemRefIdListType" json:"RelatedLearningStandardItemRefIdListType"`
+  relatedlearningstandarditemrefidlisttype 
 }
 
 type relatedlearningstandarditemrefidlisttype struct {
@@ -940,7 +940,7 @@ type relatedlearningstandarditemrefidlisttype struct {
       }
     
     type RelatedLearningStandardItemRefIdType struct {
-  relatedlearningstandarditemrefidtype `xml:"RelatedLearningStandardItemRefIdType" json:"RelatedLearningStandardItemRefIdType"`
+  relatedlearningstandarditemrefidtype 
 }
 
 type relatedlearningstandarditemrefidtype struct {
@@ -950,7 +950,7 @@ type relatedlearningstandarditemrefidtype struct {
       }
     
     type ValidLetterMarkListType struct {
-  validlettermarklisttype `xml:"ValidLetterMarkListType" json:"ValidLetterMarkListType"`
+  validlettermarklisttype 
 }
 
 type validlettermarklisttype struct {
@@ -959,7 +959,7 @@ type validlettermarklisttype struct {
       }
     
     type ValidLetterMarkType struct {
-  validlettermarktype `xml:"ValidLetterMarkType" json:"ValidLetterMarkType"`
+  validlettermarktype 
 }
 
 type validlettermarktype struct {
@@ -970,7 +970,7 @@ type validlettermarktype struct {
       }
     
     type StudentGradeMarkersListType struct {
-  studentgrademarkerslisttype `xml:"StudentGradeMarkersListType" json:"StudentGradeMarkersListType"`
+  studentgrademarkerslisttype 
 }
 
 type studentgrademarkerslisttype struct {
@@ -979,7 +979,7 @@ type studentgrademarkerslisttype struct {
       }
     
     type MarkerType struct {
-  markertype `xml:"MarkerType" json:"MarkerType"`
+  markertype 
 }
 
 type markertype struct {
@@ -989,7 +989,7 @@ type markertype struct {
       }
     
     type GradingScoreListType struct {
-  gradingscorelisttype `xml:"GradingScoreListType" json:"GradingScoreListType"`
+  gradingscorelisttype 
 }
 
 type gradingscorelisttype struct {
@@ -998,7 +998,7 @@ type gradingscorelisttype struct {
       }
     
     type AssignmentScoreType struct {
-  assignmentscoretype `xml:"AssignmentScoreType" json:"AssignmentScoreType"`
+  assignmentscoretype 
 }
 
 type assignmentscoretype struct {
@@ -1008,7 +1008,7 @@ type assignmentscoretype struct {
       }
     
     type GradeType struct {
-  gradetype `xml:"GradeType" json:"GradeType"`
+  gradetype 
 }
 
 type gradetype struct {
@@ -1021,7 +1021,7 @@ type gradetype struct {
       }
     
     type LearningStandardListType struct {
-  learningstandardlisttype `xml:"LearningStandardListType" json:"LearningStandardListType"`
+  learningstandardlisttype 
 }
 
 type learningstandardlisttype struct {
@@ -1030,7 +1030,7 @@ type learningstandardlisttype struct {
       }
     
     type LearningStandardType struct {
-  learningstandardtype `xml:"LearningStandardType" json:"LearningStandardType"`
+  learningstandardtype 
 }
 
 type learningstandardtype struct {
@@ -1041,7 +1041,7 @@ type learningstandardtype struct {
       }
     
     type AssignmentListType struct {
-  assignmentlisttype `xml:"AssignmentListType" json:"AssignmentListType"`
+  assignmentlisttype 
 }
 
 type assignmentlisttype struct {
@@ -1050,7 +1050,7 @@ type assignmentlisttype struct {
       }
     
     type GenericRubricType struct {
-  genericrubrictype `xml:"GenericRubricType" json:"GenericRubricType"`
+  genericrubrictype 
 }
 
 type genericrubrictype struct {
@@ -1061,7 +1061,7 @@ type genericrubrictype struct {
       }
     
     type SymptomListType struct {
-  symptomlisttype `xml:"SymptomListType" json:"SymptomListType"`
+  symptomlisttype 
 }
 
 type symptomlisttype struct {
@@ -1070,7 +1070,7 @@ type symptomlisttype struct {
       }
     
     type MedicationListType struct {
-  medicationlisttype `xml:"MedicationListType" json:"MedicationListType"`
+  medicationlisttype 
 }
 
 type medicationlisttype struct {
@@ -1079,7 +1079,7 @@ type medicationlisttype struct {
       }
     
     type MedicationType struct {
-  medicationtype `xml:"MedicationType" json:"MedicationType"`
+  medicationtype 
 }
 
 type medicationtype struct {
@@ -1092,7 +1092,7 @@ type medicationtype struct {
       }
     
     type WellbeingEventCategoryListType struct {
-  wellbeingeventcategorylisttype `xml:"WellbeingEventCategoryListType" json:"WellbeingEventCategoryListType"`
+  wellbeingeventcategorylisttype 
 }
 
 type wellbeingeventcategorylisttype struct {
@@ -1101,7 +1101,7 @@ type wellbeingeventcategorylisttype struct {
       }
     
     type WellbeingEventCategoryType struct {
-  wellbeingeventcategorytype `xml:"WellbeingEventCategoryType" json:"WellbeingEventCategoryType"`
+  wellbeingeventcategorytype 
 }
 
 type wellbeingeventcategorytype struct {
@@ -1111,7 +1111,7 @@ type wellbeingeventcategorytype struct {
       }
     
     type WellbeingEventSubCategoryListType struct {
-  wellbeingeventsubcategorylisttype `xml:"WellbeingEventSubCategoryListType" json:"WellbeingEventSubCategoryListType"`
+  wellbeingeventsubcategorylisttype 
 }
 
 type wellbeingeventsubcategorylisttype struct {
@@ -1120,7 +1120,7 @@ type wellbeingeventsubcategorylisttype struct {
       }
     
     type WellbeingEventLocationDetailsType struct {
-  wellbeingeventlocationdetailstype `xml:"WellbeingEventLocationDetailsType" json:"WellbeingEventLocationDetailsType"`
+  wellbeingeventlocationdetailstype 
 }
 
 type wellbeingeventlocationdetailstype struct {
@@ -1131,7 +1131,7 @@ type wellbeingeventlocationdetailstype struct {
       }
     
     type FollowUpActionListType struct {
-  followupactionlisttype `xml:"FollowUpActionListType" json:"FollowUpActionListType"`
+  followupactionlisttype 
 }
 
 type followupactionlisttype struct {
@@ -1140,7 +1140,7 @@ type followupactionlisttype struct {
       }
     
     type FollowUpActionType struct {
-  followupactiontype `xml:"FollowUpActionType" json:"FollowUpActionType"`
+  followupactiontype 
 }
 
 type followupactiontype struct {
@@ -1151,7 +1151,7 @@ type followupactiontype struct {
       }
     
     type PersonInvolvementListType struct {
-  personinvolvementlisttype `xml:"PersonInvolvementListType" json:"PersonInvolvementListType"`
+  personinvolvementlisttype 
 }
 
 type personinvolvementlisttype struct {
@@ -1160,7 +1160,7 @@ type personinvolvementlisttype struct {
       }
     
     type PersonInvolvementType struct {
-  personinvolvementtype `xml:"PersonInvolvementType" json:"PersonInvolvementType"`
+  personinvolvementtype 
 }
 
 type personinvolvementtype struct {
@@ -1171,7 +1171,7 @@ type personinvolvementtype struct {
       }
     
     type WithdrawalTimeListType struct {
-  withdrawaltimelisttype `xml:"WithdrawalTimeListType" json:"WithdrawalTimeListType"`
+  withdrawaltimelisttype 
 }
 
 type withdrawaltimelisttype struct {
@@ -1180,7 +1180,7 @@ type withdrawaltimelisttype struct {
       }
     
     type WithdrawalType struct {
-  withdrawaltype `xml:"WithdrawalType" json:"WithdrawalType"`
+  withdrawaltype 
 }
 
 type withdrawaltype struct {
@@ -1194,7 +1194,7 @@ type withdrawaltype struct {
       }
     
     type SuspensionContainerType struct {
-  suspensioncontainertype `xml:"SuspensionContainerType" json:"SuspensionContainerType"`
+  suspensioncontainertype 
 }
 
 type suspensioncontainertype struct {
@@ -1211,7 +1211,7 @@ type suspensioncontainertype struct {
       }
     
     type DetentionContainerType struct {
-  detentioncontainertype `xml:"DetentionContainerType" json:"DetentionContainerType"`
+  detentioncontainertype 
 }
 
 type detentioncontainertype struct {
@@ -1224,7 +1224,7 @@ type detentioncontainertype struct {
       }
     
     type PlanRequiredContainerType struct {
-  planrequiredcontainertype `xml:"PlanRequiredContainerType" json:"PlanRequiredContainerType"`
+  planrequiredcontainertype 
 }
 
 type planrequiredcontainertype struct {
@@ -1234,7 +1234,7 @@ type planrequiredcontainertype struct {
       }
     
     type PlanRequiredListType struct {
-  planrequiredlisttype `xml:"PlanRequiredListType" json:"PlanRequiredListType"`
+  planrequiredlisttype 
 }
 
 type planrequiredlisttype struct {
@@ -1243,7 +1243,7 @@ type planrequiredlisttype struct {
       }
     
     type WellbeingPlanType struct {
-  wellbeingplantype `xml:"WellbeingPlanType" json:"WellbeingPlanType"`
+  wellbeingplantype 
 }
 
 type wellbeingplantype struct {
@@ -1253,7 +1253,7 @@ type wellbeingplantype struct {
       }
     
     type AwardContainerType struct {
-  awardcontainertype `xml:"AwardContainerType" json:"AwardContainerType"`
+  awardcontainertype 
 }
 
 type awardcontainertype struct {
@@ -1266,7 +1266,7 @@ type awardcontainertype struct {
       }
     
     type OtherWellbeingResponseContainerType struct {
-  otherwellbeingresponsecontainertype `xml:"OtherWellbeingResponseContainerType" json:"OtherWellbeingResponseContainerType"`
+  otherwellbeingresponsecontainertype 
 }
 
 type otherwellbeingresponsecontainertype struct {
@@ -1279,7 +1279,7 @@ type otherwellbeingresponsecontainertype struct {
       }
     
     type WellbeingDocumentListType struct {
-  wellbeingdocumentlisttype `xml:"WellbeingDocumentListType" json:"WellbeingDocumentListType"`
+  wellbeingdocumentlisttype 
 }
 
 type wellbeingdocumentlisttype struct {
@@ -1288,7 +1288,7 @@ type wellbeingdocumentlisttype struct {
       }
     
     type WellbeingDocumentType struct {
-  wellbeingdocumenttype `xml:"WellbeingDocumentType" json:"WellbeingDocumentType"`
+  wellbeingdocumenttype 
 }
 
 type wellbeingdocumenttype struct {
@@ -1302,7 +1302,7 @@ type wellbeingdocumenttype struct {
       }
     
     type NAPTestItemContentType struct {
-  naptestitemcontenttype `xml:"NAPTestItemContentType" json:"NAPTestItemContentType"`
+  naptestitemcontenttype 
 }
 
 type naptestitemcontenttype struct {
@@ -1333,7 +1333,7 @@ type naptestitemcontenttype struct {
       }
     
     type NAPTestletContentType struct {
-  naptestletcontenttype `xml:"NAPTestletContentType" json:"NAPTestletContentType"`
+  naptestletcontenttype 
 }
 
 type naptestletcontenttype struct {
@@ -1346,7 +1346,7 @@ type naptestletcontenttype struct {
       }
     
     type NAPTestContentType struct {
-  naptestcontenttype `xml:"NAPTestContentType" json:"NAPTestContentType"`
+  naptestcontenttype 
 }
 
 type naptestcontenttype struct {
@@ -1363,7 +1363,7 @@ type naptestcontenttype struct {
       }
     
     type PlausibleScaledValueListType struct {
-  plausiblescaledvaluelisttype `xml:"PlausibleScaledValueListType" json:"PlausibleScaledValueListType"`
+  plausiblescaledvaluelisttype 
 }
 
 type plausiblescaledvaluelisttype struct {
@@ -1372,7 +1372,7 @@ type plausiblescaledvaluelisttype struct {
       }
     
     type SubstituteItemListType struct {
-  substituteitemlisttype `xml:"SubstituteItemListType" json:"SubstituteItemListType"`
+  substituteitemlisttype 
 }
 
 type substituteitemlisttype struct {
@@ -1381,7 +1381,7 @@ type substituteitemlisttype struct {
       }
     
     type SubstituteItemType struct {
-  substituteitemtype `xml:"SubstituteItemType" json:"SubstituteItemType"`
+  substituteitemtype 
 }
 
 type substituteitemtype struct {
@@ -1392,7 +1392,7 @@ type substituteitemtype struct {
       }
     
     type CodeFrameTestItemListType struct {
-  codeframetestitemlisttype `xml:"CodeFrameTestItemListType" json:"CodeFrameTestItemListType"`
+  codeframetestitemlisttype 
 }
 
 type codeframetestitemlisttype struct {
@@ -1401,7 +1401,7 @@ type codeframetestitemlisttype struct {
       }
     
     type CodeFrameTestItemType struct {
-  codeframetestitemtype `xml:"CodeFrameTestItemType" json:"CodeFrameTestItemType"`
+  codeframetestitemtype 
 }
 
 type codeframetestitemtype struct {
@@ -1412,7 +1412,7 @@ type codeframetestitemtype struct {
       }
     
     type StimulusLocalIdListType struct {
-  stimuluslocalidlisttype `xml:"StimulusLocalIdListType" json:"StimulusLocalIdListType"`
+  stimuluslocalidlisttype 
 }
 
 type stimuluslocalidlisttype struct {
@@ -1421,7 +1421,7 @@ type stimuluslocalidlisttype struct {
       }
     
     type DomainBandsContainerType struct {
-  domainbandscontainertype `xml:"DomainBandsContainerType" json:"DomainBandsContainerType"`
+  domainbandscontainertype 
 }
 
 type domainbandscontainertype struct {
@@ -1449,7 +1449,7 @@ type domainbandscontainertype struct {
       }
     
     type DomainProficiencyContainerType struct {
-  domainproficiencycontainertype `xml:"DomainProficiencyContainerType" json:"DomainProficiencyContainerType"`
+  domainproficiencycontainertype 
 }
 
 type domainproficiencycontainertype struct {
@@ -1465,7 +1465,7 @@ type domainproficiencycontainertype struct {
       }
     
     type NAPTestItemListType struct {
-  naptestitemlisttype `xml:"NAPTestItemListType" json:"NAPTestItemListType"`
+  naptestitemlisttype 
 }
 
 type naptestitemlisttype struct {
@@ -1474,7 +1474,7 @@ type naptestitemlisttype struct {
       }
     
     type NAPTestItem2Type struct {
-  naptestitem2type `xml:"NAPTestItem2Type" json:"NAPTestItem2Type"`
+  naptestitem2type 
 }
 
 type naptestitem2type struct {
@@ -1485,7 +1485,7 @@ type naptestitem2type struct {
       }
     
     type NAPCodeFrameTestletListType struct {
-  napcodeframetestletlisttype `xml:"NAPCodeFrameTestletListType" json:"NAPCodeFrameTestletListType"`
+  napcodeframetestletlisttype 
 }
 
 type napcodeframetestletlisttype struct {
@@ -1494,7 +1494,7 @@ type napcodeframetestletlisttype struct {
       }
     
     type NAPTestletCodeFrameType struct {
-  naptestletcodeframetype `xml:"NAPTestletCodeFrameType" json:"NAPTestletCodeFrameType"`
+  naptestletcodeframetype 
 }
 
 type naptestletcodeframetype struct {
@@ -1505,7 +1505,7 @@ type naptestletcodeframetype struct {
       }
     
     type NAPStudentResponseTestletListType struct {
-  napstudentresponsetestletlisttype `xml:"NAPStudentResponseTestletListType" json:"NAPStudentResponseTestletListType"`
+  napstudentresponsetestletlisttype 
 }
 
 type napstudentresponsetestletlisttype struct {
@@ -1514,7 +1514,7 @@ type napstudentresponsetestletlisttype struct {
       }
     
     type NAPTestletResponseType struct {
-  naptestletresponsetype `xml:"NAPTestletResponseType" json:"NAPTestletResponseType"`
+  naptestletresponsetype 
 }
 
 type naptestletresponsetype struct {
@@ -1526,7 +1526,7 @@ type naptestletresponsetype struct {
       }
     
     type NAPTestletItemResponseListType struct {
-  naptestletitemresponselisttype `xml:"NAPTestletItemResponseListType" json:"NAPTestletItemResponseListType"`
+  naptestletitemresponselisttype 
 }
 
 type naptestletitemresponselisttype struct {
@@ -1535,7 +1535,7 @@ type naptestletitemresponselisttype struct {
       }
     
     type NAPTestletResponseItemType struct {
-  naptestletresponseitemtype `xml:"NAPTestletResponseItemType" json:"NAPTestletResponseItemType"`
+  naptestletresponseitemtype 
 }
 
 type naptestletresponseitemtype struct {
@@ -1552,7 +1552,7 @@ type naptestletresponseitemtype struct {
       }
     
     type NAPSubscoreListType struct {
-  napsubscorelisttype `xml:"NAPSubscoreListType" json:"NAPSubscoreListType"`
+  napsubscorelisttype 
 }
 
 type napsubscorelisttype struct {
@@ -1561,7 +1561,7 @@ type napsubscorelisttype struct {
       }
     
     type NAPSubscoreType struct {
-  napsubscoretype `xml:"NAPSubscoreType" json:"NAPSubscoreType"`
+  napsubscoretype 
 }
 
 type napsubscoretype struct {
@@ -1571,7 +1571,7 @@ type napsubscoretype struct {
       }
     
     type DomainScoreType struct {
-  domainscoretype `xml:"DomainScoreType" json:"DomainScoreType"`
+  domainscoretype 
 }
 
 type domainscoretype struct {
@@ -1587,7 +1587,7 @@ type domainscoretype struct {
       }
     
     type NAPWritingRubricListType struct {
-  napwritingrubriclisttype `xml:"NAPWritingRubricListType" json:"NAPWritingRubricListType"`
+  napwritingrubriclisttype 
 }
 
 type napwritingrubriclisttype struct {
@@ -1596,7 +1596,7 @@ type napwritingrubriclisttype struct {
       }
     
     type NAPWritingRubricType struct {
-  napwritingrubrictype `xml:"NAPWritingRubricType" json:"NAPWritingRubricType"`
+  napwritingrubrictype 
 }
 
 type napwritingrubrictype struct {
@@ -1607,7 +1607,7 @@ type napwritingrubrictype struct {
       }
     
     type ScoreListType struct {
-  scorelisttype `xml:"ScoreListType" json:"ScoreListType"`
+  scorelisttype 
 }
 
 type scorelisttype struct {
@@ -1616,7 +1616,7 @@ type scorelisttype struct {
       }
     
     type ScoreType struct {
-  scoretype `xml:"ScoreType" json:"ScoreType"`
+  scoretype 
 }
 
 type scoretype struct {
@@ -1626,7 +1626,7 @@ type scoretype struct {
       }
     
     type ScoreDescriptionListType struct {
-  scoredescriptionlisttype `xml:"ScoreDescriptionListType" json:"ScoreDescriptionListType"`
+  scoredescriptionlisttype 
 }
 
 type scoredescriptionlisttype struct {
@@ -1635,7 +1635,7 @@ type scoredescriptionlisttype struct {
       }
     
     type ScoreDescriptionType struct {
-  scoredescriptiontype `xml:"ScoreDescriptionType" json:"ScoreDescriptionType"`
+  scoredescriptiontype 
 }
 
 type scoredescriptiontype struct {
@@ -1645,7 +1645,7 @@ type scoredescriptiontype struct {
       }
     
     type StimulusListType struct {
-  stimuluslisttype `xml:"StimulusListType" json:"StimulusListType"`
+  stimuluslisttype 
 }
 
 type stimuluslisttype struct {
@@ -1654,7 +1654,7 @@ type stimuluslisttype struct {
       }
     
     type StimulusType struct {
-  stimulustype `xml:"StimulusType" json:"StimulusType"`
+  stimulustype 
 }
 
 type stimulustype struct {
@@ -1668,7 +1668,7 @@ type stimulustype struct {
       }
     
     type ContentDescriptionListType struct {
-  contentdescriptionlisttype `xml:"ContentDescriptionListType" json:"ContentDescriptionListType"`
+  contentdescriptionlisttype 
 }
 
 type contentdescriptionlisttype struct {
@@ -1677,7 +1677,7 @@ type contentdescriptionlisttype struct {
       }
     
     type PNPCodeListType struct {
-  pnpcodelisttype `xml:"PNPCodeListType" json:"PNPCodeListType"`
+  pnpcodelisttype 
 }
 
 type pnpcodelisttype struct {
@@ -1686,7 +1686,7 @@ type pnpcodelisttype struct {
       }
     
     type AdjustmentContainerType struct {
-  adjustmentcontainertype `xml:"AdjustmentContainerType" json:"AdjustmentContainerType"`
+  adjustmentcontainertype 
 }
 
 type adjustmentcontainertype struct {
@@ -1696,7 +1696,7 @@ type adjustmentcontainertype struct {
       }
     
     type TestDisruptionListType struct {
-  testdisruptionlisttype `xml:"TestDisruptionListType" json:"TestDisruptionListType"`
+  testdisruptionlisttype 
 }
 
 type testdisruptionlisttype struct {
@@ -1705,7 +1705,7 @@ type testdisruptionlisttype struct {
       }
     
     type TestDisruptionType struct {
-  testdisruptiontype `xml:"TestDisruptionType" json:"TestDisruptionType"`
+  testdisruptiontype 
 }
 
 type testdisruptiontype struct {
@@ -1714,7 +1714,7 @@ type testdisruptiontype struct {
       }
     
     type CalendarSummaryListType struct {
-  calendarsummarylisttype `xml:"CalendarSummaryListType" json:"CalendarSummaryListType"`
+  calendarsummarylisttype 
 }
 
 type calendarsummarylisttype struct {
@@ -1723,7 +1723,7 @@ type calendarsummarylisttype struct {
       }
     
     type VisaSubClassType struct {
-  visasubclasstype `xml:"VisaSubClassType" json:"VisaSubClassType"`
+  visasubclasstype 
 }
 
 type visasubclasstype struct {
@@ -1736,7 +1736,7 @@ type visasubclasstype struct {
       }
     
     type VisaSubClassListType struct {
-  visasubclasslisttype `xml:"VisaSubClassListType" json:"VisaSubClassListType"`
+  visasubclasslisttype 
 }
 
 type visasubclasslisttype struct {
@@ -1746,7 +1746,7 @@ type visasubclasslisttype struct {
     
     type VisaSubClassCodeType string
     type LanguageBaseType struct {
-  languagebasetype `xml:"LanguageBaseType" json:"LanguageBaseType"`
+  languagebasetype 
 }
 
 type languagebasetype struct {
@@ -1758,7 +1758,7 @@ type languagebasetype struct {
       }
     
     type ReligiousEventListType struct {
-  religiouseventlisttype `xml:"ReligiousEventListType" json:"ReligiousEventListType"`
+  religiouseventlisttype 
 }
 
 type religiouseventlisttype struct {
@@ -1767,7 +1767,7 @@ type religiouseventlisttype struct {
       }
     
     type ReligiousEventType struct {
-  religiouseventtype `xml:"ReligiousEventType" json:"ReligiousEventType"`
+  religiouseventtype 
 }
 
 type religiouseventtype struct {
@@ -1777,7 +1777,7 @@ type religiouseventtype struct {
       }
     
     type ReligionType struct {
-  religiontype `xml:"ReligionType" json:"ReligionType"`
+  religiontype 
 }
 
 type religiontype struct {
@@ -1787,7 +1787,7 @@ type religiontype struct {
       }
     
     type DwellingArrangementType struct {
-  dwellingarrangementtype `xml:"DwellingArrangementType" json:"DwellingArrangementType"`
+  dwellingarrangementtype 
 }
 
 type dwellingarrangementtype struct {
@@ -1797,7 +1797,7 @@ type dwellingarrangementtype struct {
       }
     
     type CountryListType struct {
-  countrylisttype `xml:"CountryListType" json:"CountryListType"`
+  countrylisttype 
 }
 
 type countrylisttype struct {
@@ -1806,7 +1806,7 @@ type countrylisttype struct {
       }
     
     type CountryList2Type struct {
-  countrylist2type `xml:"CountryList2Type" json:"CountryList2Type"`
+  countrylist2type 
 }
 
 type countrylist2type struct {
@@ -1815,7 +1815,7 @@ type countrylist2type struct {
       }
     
     type DebitOrCreditAmountType struct {
-  debitorcreditamounttype `xml:"DebitOrCreditAmountType" json:"DebitOrCreditAmountType"`
+  debitorcreditamounttype 
 }
 
 type debitorcreditamounttype struct {
@@ -1825,7 +1825,7 @@ type debitorcreditamounttype struct {
       }
     
     type ScheduledActivityOverrideType struct {
-  scheduledactivityoverridetype `xml:"ScheduledActivityOverrideType" json:"ScheduledActivityOverrideType"`
+  scheduledactivityoverridetype 
 }
 
 type scheduledactivityoverridetype struct {
@@ -1835,7 +1835,7 @@ type scheduledactivityoverridetype struct {
       }
     
     type ActivityTimeType struct {
-  activitytimetype `xml:"ActivityTimeType" json:"ActivityTimeType"`
+  activitytimetype 
 }
 
 type activitytimetype struct {
@@ -1848,7 +1848,7 @@ type activitytimetype struct {
       }
     
     type SchoolCourseInfoOverrideType struct {
-  schoolcourseinfooverridetype `xml:"SchoolCourseInfoOverrideType" json:"SchoolCourseInfoOverrideType"`
+  schoolcourseinfooverridetype 
 }
 
 type schoolcourseinfooverridetype struct {
@@ -1864,7 +1864,7 @@ type schoolcourseinfooverridetype struct {
       }
     
     type LocationOfInstructionType struct {
-  locationofinstructiontype `xml:"LocationOfInstructionType" json:"LocationOfInstructionType"`
+  locationofinstructiontype 
 }
 
 type locationofinstructiontype struct {
@@ -1874,7 +1874,7 @@ type locationofinstructiontype struct {
       }
     
     type LanguageOfInstructionType struct {
-  languageofinstructiontype `xml:"LanguageOfInstructionType" json:"LanguageOfInstructionType"`
+  languageofinstructiontype 
 }
 
 type languageofinstructiontype struct {
@@ -1884,7 +1884,7 @@ type languageofinstructiontype struct {
       }
     
     type MediumOfInstructionType struct {
-  mediumofinstructiontype `xml:"MediumOfInstructionType" json:"MediumOfInstructionType"`
+  mediumofinstructiontype 
 }
 
 type mediumofinstructiontype struct {
@@ -1894,7 +1894,7 @@ type mediumofinstructiontype struct {
       }
     
     type StudentActivityType struct {
-  studentactivitytype `xml:"StudentActivityType" json:"StudentActivityType"`
+  studentactivitytype 
 }
 
 type studentactivitytype struct {
@@ -1904,7 +1904,7 @@ type studentactivitytype struct {
       }
     
     type ContactFlagsType struct {
-  contactflagstype `xml:"ContactFlagsType" json:"ContactFlagsType"`
+  contactflagstype 
 }
 
 type contactflagstype struct {
@@ -1926,7 +1926,7 @@ type contactflagstype struct {
       }
     
     type AgencyType struct {
-  agencytype `xml:"AgencyType" json:"AgencyType"`
+  agencytype 
 }
 
 type agencytype struct {
@@ -1936,7 +1936,7 @@ type agencytype struct {
       }
     
     type YearRangeType struct {
-  yearrangetype `xml:"YearRangeType" json:"YearRangeType"`
+  yearrangetype 
 }
 
 type yearrangetype struct {
@@ -1946,7 +1946,7 @@ type yearrangetype struct {
       }
     
     type CreationUserType struct {
-  creationusertype `xml:"CreationUserType" json:"CreationUserType"`
+  creationusertype 
 }
 
 type creationusertype struct {
@@ -1956,7 +1956,7 @@ type creationusertype struct {
       }
     
     type AuditInfoType struct {
-  auditinfotype `xml:"AuditInfoType" json:"AuditInfoType"`
+  auditinfotype 
 }
 
 type auditinfotype struct {
@@ -1966,7 +1966,7 @@ type auditinfotype struct {
       }
     
     type AttendanceInfoType struct {
-  attendanceinfotype `xml:"AttendanceInfoType" json:"AttendanceInfoType"`
+  attendanceinfotype 
 }
 
 type attendanceinfotype struct {
@@ -1976,7 +1976,7 @@ type attendanceinfotype struct {
       }
     
     type CalendarDateInfoType struct {
-  calendardateinfotype `xml:"CalendarDateInfoType" json:"CalendarDateInfoType"`
+  calendardateinfotype 
 }
 
 type calendardateinfotype struct {
@@ -1986,7 +1986,7 @@ type calendardateinfotype struct {
       }
     
     type ProgramAvailabilityType struct {
-  programavailabilitytype `xml:"ProgramAvailabilityType" json:"ProgramAvailabilityType"`
+  programavailabilitytype 
 }
 
 type programavailabilitytype struct {
@@ -1996,7 +1996,7 @@ type programavailabilitytype struct {
       }
     
     type ReferralSourceType struct {
-  referralsourcetype `xml:"ReferralSourceType" json:"ReferralSourceType"`
+  referralsourcetype 
 }
 
 type referralsourcetype struct {
@@ -2006,7 +2006,7 @@ type referralsourcetype struct {
       }
     
     type PromotionInfoType struct {
-  promotioninfotype `xml:"PromotionInfoType" json:"PromotionInfoType"`
+  promotioninfotype 
 }
 
 type promotioninfotype struct {
@@ -2015,7 +2015,7 @@ type promotioninfotype struct {
       }
     
     type CatchmentStatusContainerType struct {
-  catchmentstatuscontainertype `xml:"CatchmentStatusContainerType" json:"CatchmentStatusContainerType"`
+  catchmentstatuscontainertype 
 }
 
 type catchmentstatuscontainertype struct {
@@ -2025,7 +2025,7 @@ type catchmentstatuscontainertype struct {
       }
     
     type StudentExitStatusContainerType struct {
-  studentexitstatuscontainertype `xml:"StudentExitStatusContainerType" json:"StudentExitStatusContainerType"`
+  studentexitstatuscontainertype 
 }
 
 type studentexitstatuscontainertype struct {
@@ -2035,7 +2035,7 @@ type studentexitstatuscontainertype struct {
       }
     
     type StudentExitContainerType struct {
-  studentexitcontainertype `xml:"StudentExitContainerType" json:"StudentExitContainerType"`
+  studentexitcontainertype 
 }
 
 type studentexitcontainertype struct {
@@ -2045,7 +2045,7 @@ type studentexitcontainertype struct {
       }
     
     type StudentEntryContainerType struct {
-  studententrycontainertype `xml:"StudentEntryContainerType" json:"StudentEntryContainerType"`
+  studententrycontainertype 
 }
 
 type studententrycontainertype struct {
@@ -2055,7 +2055,7 @@ type studententrycontainertype struct {
       }
     
     type StudentMostRecentContainerType struct {
-  studentmostrecentcontainertype `xml:"StudentMostRecentContainerType" json:"StudentMostRecentContainerType"`
+  studentmostrecentcontainertype 
 }
 
 type studentmostrecentcontainertype struct {
@@ -2090,7 +2090,7 @@ type studentmostrecentcontainertype struct {
       }
     
     type StaffMostRecentContainerType struct {
-  staffmostrecentcontainertype `xml:"StaffMostRecentContainerType" json:"StaffMostRecentContainerType"`
+  staffmostrecentcontainertype 
 }
 
 type staffmostrecentcontainertype struct {
@@ -2103,7 +2103,7 @@ type staffmostrecentcontainertype struct {
       }
     
     type StaffActivityExtensionType struct {
-  staffactivityextensiontype `xml:"StaffActivityExtensionType" json:"StaffActivityExtensionType"`
+  staffactivityextensiontype 
 }
 
 type staffactivityextensiontype struct {
@@ -2113,7 +2113,7 @@ type staffactivityextensiontype struct {
       }
     
     type TotalEnrollmentsType struct {
-  totalenrollmentstype `xml:"TotalEnrollmentsType" json:"TotalEnrollmentsType"`
+  totalenrollmentstype 
 }
 
 type totalenrollmentstype struct {
@@ -2124,7 +2124,7 @@ type totalenrollmentstype struct {
       }
     
     type CampusContainerType struct {
-  campuscontainertype `xml:"CampusContainerType" json:"CampusContainerType"`
+  campuscontainertype 
 }
 
 type campuscontainertype struct {
@@ -2136,7 +2136,7 @@ type campuscontainertype struct {
       }
     
     type HouseholdContactInfoListType struct {
-  householdcontactinfolisttype `xml:"HouseholdContactInfoListType" json:"HouseholdContactInfoListType"`
+  householdcontactinfolisttype 
 }
 
 type householdcontactinfolisttype struct {
@@ -2145,7 +2145,7 @@ type householdcontactinfolisttype struct {
       }
     
     type HouseholdContactInfoType struct {
-  householdcontactinfotype `xml:"HouseholdContactInfoType" json:"HouseholdContactInfoType"`
+  householdcontactinfotype 
 }
 
 type householdcontactinfotype struct {
@@ -2159,7 +2159,7 @@ type householdcontactinfotype struct {
       }
     
     type StatementCodesType struct {
-  statementcodestype `xml:"StatementCodesType" json:"StatementCodesType"`
+  statementcodestype 
 }
 
 type statementcodestype struct {
@@ -2168,7 +2168,7 @@ type statementcodestype struct {
       }
     
     type StatementsType struct {
-  statementstype `xml:"StatementsType" json:"StatementsType"`
+  statementstype 
 }
 
 type statementstype struct {
@@ -2177,7 +2177,7 @@ type statementstype struct {
       }
     
     type ProgramFundingSourcesType struct {
-  programfundingsourcestype `xml:"ProgramFundingSourcesType" json:"ProgramFundingSourcesType"`
+  programfundingsourcestype 
 }
 
 type programfundingsourcestype struct {
@@ -2186,7 +2186,7 @@ type programfundingsourcestype struct {
       }
     
     type ProgramFundingSourceType struct {
-  programfundingsourcetype `xml:"ProgramFundingSourceType" json:"ProgramFundingSourceType"`
+  programfundingsourcetype 
 }
 
 type programfundingsourcetype struct {
@@ -2196,7 +2196,7 @@ type programfundingsourcetype struct {
       }
     
     type AttendanceTimesType struct {
-  attendancetimestype `xml:"AttendanceTimesType" json:"AttendanceTimesType"`
+  attendancetimestype 
 }
 
 type attendancetimestype struct {
@@ -2205,7 +2205,7 @@ type attendancetimestype struct {
       }
     
     type AttendanceTimeType struct {
-  attendancetimetype `xml:"AttendanceTimeType" json:"AttendanceTimeType"`
+  attendancetimetype 
 }
 
 type attendancetimetype struct {
@@ -2221,7 +2221,7 @@ type attendancetimetype struct {
       }
     
     type PeriodAttendancesType struct {
-  periodattendancestype `xml:"PeriodAttendancesType" json:"PeriodAttendancesType"`
+  periodattendancestype 
 }
 
 type periodattendancestype struct {
@@ -2230,7 +2230,7 @@ type periodattendancestype struct {
       }
     
     type PeriodAttendanceType struct {
-  periodattendancetype `xml:"PeriodAttendanceType" json:"PeriodAttendanceType"`
+  periodattendancetype 
 }
 
 type periodattendancetype struct {
@@ -2255,7 +2255,7 @@ type periodattendancetype struct {
       }
     
     type StaffSubjectListType struct {
-  staffsubjectlisttype `xml:"StaffSubjectListType" json:"StaffSubjectListType"`
+  staffsubjectlisttype 
 }
 
 type staffsubjectlisttype struct {
@@ -2264,7 +2264,7 @@ type staffsubjectlisttype struct {
       }
     
     type StaffSubjectType struct {
-  staffsubjecttype `xml:"StaffSubjectType" json:"StaffSubjectType"`
+  staffsubjecttype 
 }
 
 type staffsubjecttype struct {
@@ -2275,7 +2275,7 @@ type staffsubjecttype struct {
       }
     
     type TeachingGroupListType struct {
-  teachinggrouplisttype `xml:"TeachingGroupListType" json:"TeachingGroupListType"`
+  teachinggrouplisttype 
 }
 
 type teachinggrouplisttype struct {
@@ -2284,7 +2284,7 @@ type teachinggrouplisttype struct {
       }
     
     type ScheduledTeacherListType struct {
-  scheduledteacherlisttype `xml:"ScheduledTeacherListType" json:"ScheduledTeacherListType"`
+  scheduledteacherlisttype 
 }
 
 type scheduledteacherlisttype struct {
@@ -2293,7 +2293,7 @@ type scheduledteacherlisttype struct {
       }
     
     type TeacherCoverType struct {
-  teachercovertype `xml:"TeacherCoverType" json:"TeacherCoverType"`
+  teachercovertype 
 }
 
 type teachercovertype struct {
@@ -2308,7 +2308,7 @@ type teachercovertype struct {
       }
     
     type RoomListType struct {
-  roomlisttype `xml:"RoomListType" json:"RoomListType"`
+  roomlisttype 
 }
 
 type roomlisttype struct {
@@ -2317,7 +2317,7 @@ type roomlisttype struct {
       }
     
     type StaffListType struct {
-  stafflisttype `xml:"StaffListType" json:"StaffListType"`
+  stafflisttype 
 }
 
 type stafflisttype struct {
@@ -2326,7 +2326,7 @@ type stafflisttype struct {
       }
     
     type AuthorsType struct {
-  authorstype `xml:"AuthorsType" json:"AuthorsType"`
+  authorstype 
 }
 
 type authorstype struct {
@@ -2335,7 +2335,7 @@ type authorstype struct {
       }
     
     type OrganizationsType struct {
-  organizationstype `xml:"OrganizationsType" json:"OrganizationsType"`
+  organizationstype 
 }
 
 type organizationstype struct {
@@ -2344,7 +2344,7 @@ type organizationstype struct {
       }
     
     type PurchasingItemsType struct {
-  purchasingitemstype `xml:"PurchasingItemsType" json:"PurchasingItemsType"`
+  purchasingitemstype 
 }
 
 type purchasingitemstype struct {
@@ -2353,7 +2353,7 @@ type purchasingitemstype struct {
       }
     
     type PurchasingItemType struct {
-  purchasingitemtype `xml:"PurchasingItemType" json:"PurchasingItemType"`
+  purchasingitemtype 
 }
 
 type purchasingitemtype struct {
@@ -2371,7 +2371,7 @@ type purchasingitemtype struct {
       }
     
     type ExpenseAccountsType struct {
-  expenseaccountstype `xml:"ExpenseAccountsType" json:"ExpenseAccountsType"`
+  expenseaccountstype 
 }
 
 type expenseaccountstype struct {
@@ -2380,7 +2380,7 @@ type expenseaccountstype struct {
       }
     
     type ExpenseAccountType struct {
-  expenseaccounttype `xml:"ExpenseAccountType" json:"ExpenseAccountType"`
+  expenseaccounttype 
 }
 
 type expenseaccounttype struct {
@@ -2392,7 +2392,7 @@ type expenseaccounttype struct {
       }
     
     type SchoolProgramListType struct {
-  schoolprogramlisttype `xml:"SchoolProgramListType" json:"SchoolProgramListType"`
+  schoolprogramlisttype 
 }
 
 type schoolprogramlisttype struct {
@@ -2401,7 +2401,7 @@ type schoolprogramlisttype struct {
       }
     
     type SchoolProgramType struct {
-  schoolprogramtype `xml:"SchoolProgramType" json:"SchoolProgramType"`
+  schoolprogramtype 
 }
 
 type schoolprogramtype struct {
@@ -2412,7 +2412,7 @@ type schoolprogramtype struct {
       }
     
     type LearningObjectivesType struct {
-  learningobjectivestype `xml:"LearningObjectivesType" json:"LearningObjectivesType"`
+  learningobjectivestype 
 }
 
 type learningobjectivestype struct {
@@ -2421,7 +2421,7 @@ type learningobjectivestype struct {
       }
     
     type RecognitionListType struct {
-  recognitionlisttype `xml:"RecognitionListType" json:"RecognitionListType"`
+  recognitionlisttype 
 }
 
 type recognitionlisttype struct {
@@ -2430,7 +2430,7 @@ type recognitionlisttype struct {
       }
     
     type LResourcesType struct {
-  lresourcestype `xml:"LResourcesType" json:"LResourcesType"`
+  lresourcestype 
 }
 
 type lresourcestype struct {
@@ -2439,7 +2439,7 @@ type lresourcestype struct {
       }
     
     type ResourcesType struct {
-  resourcestype `xml:"ResourcesType" json:"ResourcesType"`
+  resourcestype 
 }
 
 type resourcestype struct {
@@ -2449,7 +2449,7 @@ type resourcestype struct {
       }
     
     type SourceObjectsType struct {
-  sourceobjectstype `xml:"SourceObjectsType" json:"SourceObjectsType"`
+  sourceobjectstype 
 }
 
 type sourceobjectstype struct {
@@ -2458,7 +2458,7 @@ type sourceobjectstype struct {
       }
     
     type StudentsType struct {
-  studentstype `xml:"StudentsType" json:"StudentsType"`
+  studentstype 
 }
 
 type studentstype struct {
@@ -2467,7 +2467,7 @@ type studentstype struct {
       }
     
     type PrerequisitesType struct {
-  prerequisitestype `xml:"PrerequisitesType" json:"PrerequisitesType"`
+  prerequisitestype 
 }
 
 type prerequisitestype struct {
@@ -2476,7 +2476,7 @@ type prerequisitestype struct {
       }
     
     type EssentialMaterialsType struct {
-  essentialmaterialstype `xml:"EssentialMaterialsType" json:"EssentialMaterialsType"`
+  essentialmaterialstype 
 }
 
 type essentialmaterialstype struct {
@@ -2485,7 +2485,7 @@ type essentialmaterialstype struct {
       }
     
     type TechnicalRequirementsType struct {
-  technicalrequirementstype `xml:"TechnicalRequirementsType" json:"TechnicalRequirementsType"`
+  technicalrequirementstype 
 }
 
 type technicalrequirementstype struct {
@@ -2494,7 +2494,7 @@ type technicalrequirementstype struct {
       }
     
     type SoftwareRequirementListType struct {
-  softwarerequirementlisttype `xml:"SoftwareRequirementListType" json:"SoftwareRequirementListType"`
+  softwarerequirementlisttype 
 }
 
 type softwarerequirementlisttype struct {
@@ -2503,7 +2503,7 @@ type softwarerequirementlisttype struct {
       }
     
     type SoftwareRequirementType struct {
-  softwarerequirementtype `xml:"SoftwareRequirementType" json:"SoftwareRequirementType"`
+  softwarerequirementtype 
 }
 
 type softwarerequirementtype struct {
@@ -2515,7 +2515,7 @@ type softwarerequirementtype struct {
       }
     
     type HouseholdListType struct {
-  householdlisttype `xml:"HouseholdListType" json:"HouseholdListType"`
+  householdlisttype 
 }
 
 type householdlisttype struct {
@@ -2524,7 +2524,7 @@ type householdlisttype struct {
       }
     
     type StudentSubjectChoiceListType struct {
-  studentsubjectchoicelisttype `xml:"StudentSubjectChoiceListType" json:"StudentSubjectChoiceListType"`
+  studentsubjectchoicelisttype 
 }
 
 type studentsubjectchoicelisttype struct {
@@ -2533,7 +2533,7 @@ type studentsubjectchoicelisttype struct {
       }
     
     type StudentSubjectChoiceType struct {
-  studentsubjectchoicetype `xml:"StudentSubjectChoiceType" json:"StudentSubjectChoiceType"`
+  studentsubjectchoicetype 
 }
 
 type studentsubjectchoicetype struct {
@@ -2545,7 +2545,7 @@ type studentsubjectchoicetype struct {
       }
     
     type IdentityAssertionsType struct {
-  identityassertionstype `xml:"IdentityAssertionsType" json:"IdentityAssertionsType"`
+  identityassertionstype 
 }
 
 type identityassertionstype struct {
@@ -2554,7 +2554,7 @@ type identityassertionstype struct {
       }
     
     type LearningStandardsType struct {
-  learningstandardstype `xml:"LearningStandardsType" json:"LearningStandardsType"`
+  learningstandardstype 
 }
 
 type learningstandardstype struct {
@@ -2563,7 +2563,7 @@ type learningstandardstype struct {
       }
     
     type LearningResourcesType struct {
-  learningresourcestype `xml:"LearningResourcesType" json:"LearningResourcesType"`
+  learningresourcestype 
 }
 
 type learningresourcestype struct {
@@ -2572,7 +2572,7 @@ type learningresourcestype struct {
       }
     
     type LearningStandardsDocumentType struct {
-  learningstandardsdocumenttype `xml:"LearningStandardsDocumentType" json:"LearningStandardsDocumentType"`
+  learningstandardsdocumenttype 
 }
 
 type learningstandardsdocumenttype struct {
@@ -2581,7 +2581,7 @@ type learningstandardsdocumenttype struct {
       }
     
     type ComponentsType struct {
-  componentstype `xml:"ComponentsType" json:"ComponentsType"`
+  componentstype 
 }
 
 type componentstype struct {
@@ -2590,7 +2590,7 @@ type componentstype struct {
       }
     
     type ComponentType struct {
-  componenttype `xml:"ComponentType" json:"ComponentType"`
+  componenttype 
 }
 
 type componenttype struct {
@@ -2603,7 +2603,7 @@ type componenttype struct {
       }
     
     type StrategiesType struct {
-  strategiestype `xml:"StrategiesType" json:"StrategiesType"`
+  strategiestype 
 }
 
 type strategiestype struct {
@@ -2612,7 +2612,7 @@ type strategiestype struct {
       }
     
     type AssociatedObjectsType struct {
-  associatedobjectstype `xml:"AssociatedObjectsType" json:"AssociatedObjectsType"`
+  associatedobjectstype 
 }
 
 type associatedobjectstype struct {
@@ -2621,7 +2621,7 @@ type associatedobjectstype struct {
       }
     
     type EvaluationsType struct {
-  evaluationstype `xml:"EvaluationsType" json:"EvaluationsType"`
+  evaluationstype 
 }
 
 type evaluationstype struct {
@@ -2630,7 +2630,7 @@ type evaluationstype struct {
       }
     
     type EvaluationType struct {
-  evaluationtype `xml:"EvaluationType" json:"EvaluationType"`
+  evaluationtype 
 }
 
 type evaluationtype struct {
@@ -2642,7 +2642,7 @@ type evaluationtype struct {
       }
     
     type ApprovalsType struct {
-  approvalstype `xml:"ApprovalsType" json:"ApprovalsType"`
+  approvalstype 
 }
 
 type approvalstype struct {
@@ -2651,7 +2651,7 @@ type approvalstype struct {
       }
     
     type ApprovalType struct {
-  approvaltype `xml:"ApprovalType" json:"ApprovalType"`
+  approvaltype 
 }
 
 type approvaltype struct {
@@ -2661,7 +2661,7 @@ type approvaltype struct {
       }
     
     type MediaTypesType struct {
-  mediatypestype `xml:"MediaTypesType" json:"MediaTypesType"`
+  mediatypestype 
 }
 
 type mediatypestype struct {
@@ -2670,7 +2670,7 @@ type mediatypestype struct {
       }
     
     type LEAContactListType struct {
-  leacontactlisttype `xml:"LEAContactListType" json:"LEAContactListType"`
+  leacontactlisttype 
 }
 
 type leacontactlisttype struct {
@@ -2679,7 +2679,7 @@ type leacontactlisttype struct {
       }
     
     type LEAContactType struct {
-  leacontacttype `xml:"LEAContactType" json:"LEAContactType"`
+  leacontacttype 
 }
 
 type leacontacttype struct {
@@ -2689,7 +2689,7 @@ type leacontacttype struct {
       }
     
     type FinancialAccountRefIdListType struct {
-  financialaccountrefidlisttype `xml:"FinancialAccountRefIdListType" json:"FinancialAccountRefIdListType"`
+  financialaccountrefidlisttype 
 }
 
 type financialaccountrefidlisttype struct {
@@ -2698,7 +2698,7 @@ type financialaccountrefidlisttype struct {
       }
     
     type AccountCodeListType struct {
-  accountcodelisttype `xml:"AccountCodeListType" json:"AccountCodeListType"`
+  accountcodelisttype 
 }
 
 type accountcodelisttype struct {
@@ -2707,7 +2707,7 @@ type accountcodelisttype struct {
       }
     
     type JournalAdjustmentListType struct {
-  journaladjustmentlisttype `xml:"JournalAdjustmentListType" json:"JournalAdjustmentListType"`
+  journaladjustmentlisttype 
 }
 
 type journaladjustmentlisttype struct {
@@ -2716,7 +2716,7 @@ type journaladjustmentlisttype struct {
       }
     
     type JournalAdjustmentType struct {
-  journaladjustmenttype `xml:"JournalAdjustmentType" json:"JournalAdjustmentType"`
+  journaladjustmenttype 
 }
 
 type journaladjustmenttype struct {
@@ -2731,7 +2731,7 @@ type journaladjustmenttype struct {
       }
     
     type PaymentReceiptLineListType struct {
-  paymentreceiptlinelisttype `xml:"PaymentReceiptLineListType" json:"PaymentReceiptLineListType"`
+  paymentreceiptlinelisttype 
 }
 
 type paymentreceiptlinelisttype struct {
@@ -2740,7 +2740,7 @@ type paymentreceiptlinelisttype struct {
       }
     
     type PaymentReceiptLineType struct {
-  paymentreceiptlinetype `xml:"PaymentReceiptLineType" json:"PaymentReceiptLineType"`
+  paymentreceiptlinetype 
 }
 
 type paymentreceiptlinetype struct {
@@ -2757,7 +2757,7 @@ type paymentreceiptlinetype struct {
       }
     
     type PasswordListType struct {
-  passwordlisttype `xml:"PasswordListType" json:"PasswordListType"`
+  passwordlisttype 
 }
 
 type passwordlisttype struct {
@@ -2766,7 +2766,7 @@ type passwordlisttype struct {
       }
     
     type ExclusionRulesType struct {
-  exclusionrulestype `xml:"ExclusionRulesType" json:"ExclusionRulesType"`
+  exclusionrulestype 
 }
 
 type exclusionrulestype struct {
@@ -2775,7 +2775,7 @@ type exclusionrulestype struct {
       }
     
     type ExclusionRuleType struct {
-  exclusionruletype `xml:"ExclusionRuleType" json:"ExclusionRuleType"`
+  exclusionruletype 
 }
 
 type exclusionruletype struct {
@@ -2785,7 +2785,7 @@ type exclusionruletype struct {
       }
     
     type CharacteristicsType struct {
-  characteristicstype `xml:"CharacteristicsType" json:"CharacteristicsType"`
+  characteristicstype 
 }
 
 type characteristicstype struct {
@@ -2794,7 +2794,7 @@ type characteristicstype struct {
       }
     
     type ContactsType struct {
-  contactstype `xml:"ContactsType" json:"ContactsType"`
+  contactstype 
 }
 
 type contactstype struct {
@@ -2803,7 +2803,7 @@ type contactstype struct {
       }
     
     type ContactType struct {
-  contacttype `xml:"ContactType" json:"ContactType"`
+  contacttype 
 }
 
 type contacttype struct {
@@ -2815,7 +2815,7 @@ type contacttype struct {
       }
     
     type TeachingGroupPeriodListType struct {
-  teachinggroupperiodlisttype `xml:"TeachingGroupPeriodListType" json:"TeachingGroupPeriodListType"`
+  teachinggroupperiodlisttype 
 }
 
 type teachinggroupperiodlisttype struct {
@@ -2824,7 +2824,7 @@ type teachinggroupperiodlisttype struct {
       }
     
     type TeachingGroupPeriodType struct {
-  teachinggroupperiodtype `xml:"TeachingGroupPeriodType" json:"TeachingGroupPeriodType"`
+  teachinggroupperiodtype 
 }
 
 type teachinggroupperiodtype struct {
@@ -2839,7 +2839,7 @@ type teachinggroupperiodtype struct {
       }
     
     type TeacherListType struct {
-  teacherlisttype `xml:"TeacherListType" json:"TeacherListType"`
+  teacherlisttype 
 }
 
 type teacherlisttype struct {
@@ -2848,7 +2848,7 @@ type teacherlisttype struct {
       }
     
     type TeachingGroupTeacherType struct {
-  teachinggroupteachertype `xml:"TeachingGroupTeacherType" json:"TeachingGroupTeacherType"`
+  teachinggroupteachertype 
 }
 
 type teachinggroupteachertype struct {
@@ -2860,7 +2860,7 @@ type teachinggroupteachertype struct {
       }
     
     type StudentListType struct {
-  studentlisttype `xml:"StudentListType" json:"StudentListType"`
+  studentlisttype 
 }
 
 type studentlisttype struct {
@@ -2869,7 +2869,7 @@ type studentlisttype struct {
       }
     
     type TeachingGroupStudentType struct {
-  teachinggroupstudenttype `xml:"TeachingGroupStudentType" json:"TeachingGroupStudentType"`
+  teachinggroupstudenttype 
 }
 
 type teachinggroupstudenttype struct {
@@ -2880,7 +2880,7 @@ type teachinggroupstudenttype struct {
       }
     
     type TimeTableDayListType struct {
-  timetabledaylisttype `xml:"TimeTableDayListType" json:"TimeTableDayListType"`
+  timetabledaylisttype 
 }
 
 type timetabledaylisttype struct {
@@ -2889,7 +2889,7 @@ type timetabledaylisttype struct {
       }
     
     type TimeTableDayType struct {
-  timetabledaytype `xml:"TimeTableDayType" json:"TimeTableDayType"`
+  timetabledaytype 
 }
 
 type timetabledaytype struct {
@@ -2900,7 +2900,7 @@ type timetabledaytype struct {
       }
     
     type TimeTablePeriodListType struct {
-  timetableperiodlisttype `xml:"TimeTablePeriodListType" json:"TimeTablePeriodListType"`
+  timetableperiodlisttype 
 }
 
 type timetableperiodlisttype struct {
@@ -2909,7 +2909,7 @@ type timetableperiodlisttype struct {
       }
     
     type TimeTablePeriodType struct {
-  timetableperiodtype `xml:"TimeTablePeriodType" json:"TimeTablePeriodType"`
+  timetableperiodtype 
 }
 
 type timetableperiodtype struct {
@@ -2925,7 +2925,7 @@ type timetableperiodtype struct {
       }
     
     type NAPLANClassListType struct {
-  naplanclasslisttype `xml:"NAPLANClassListType" json:"NAPLANClassListType"`
+  naplanclasslisttype 
 }
 
 type naplanclasslisttype struct {
@@ -2934,7 +2934,7 @@ type naplanclasslisttype struct {
       }
     
     type SchoolGroupListType struct {
-  schoolgrouplisttype `xml:"SchoolGroupListType" json:"SchoolGroupListType"`
+  schoolgrouplisttype 
 }
 
 type schoolgrouplisttype struct {
@@ -2943,7 +2943,7 @@ type schoolgrouplisttype struct {
       }
     
     type YearLevelEnrollmentListType struct {
-  yearlevelenrollmentlisttype `xml:"YearLevelEnrollmentListType" json:"YearLevelEnrollmentListType"`
+  yearlevelenrollmentlisttype 
 }
 
 type yearlevelenrollmentlisttype struct {
@@ -2952,7 +2952,7 @@ type yearlevelenrollmentlisttype struct {
       }
     
     type YearLevelEnrollmentType struct {
-  yearlevelenrollmenttype `xml:"YearLevelEnrollmentType" json:"YearLevelEnrollmentType"`
+  yearlevelenrollmenttype 
 }
 
 type yearlevelenrollmenttype struct {
@@ -2962,7 +2962,7 @@ type yearlevelenrollmenttype struct {
       }
     
     type SchoolFocusListType struct {
-  schoolfocuslisttype `xml:"SchoolFocusListType" json:"SchoolFocusListType"`
+  schoolfocuslisttype 
 }
 
 type schoolfocuslisttype struct {
@@ -2971,7 +2971,7 @@ type schoolfocuslisttype struct {
       }
     
     type AlertMessagesType struct {
-  alertmessagestype `xml:"AlertMessagesType" json:"AlertMessagesType"`
+  alertmessagestype 
 }
 
 type alertmessagestype struct {
@@ -2980,7 +2980,7 @@ type alertmessagestype struct {
       }
     
     type AlertMessageType struct {
-  alertmessagetype `xml:"AlertMessageType" json:"AlertMessageType"`
+  alertmessagetype 
 }
 
 type alertmessagetype struct {
@@ -2990,7 +2990,7 @@ type alertmessagetype struct {
       }
     
     type MedicalAlertMessagesType struct {
-  medicalalertmessagestype `xml:"MedicalAlertMessagesType" json:"MedicalAlertMessagesType"`
+  medicalalertmessagestype 
 }
 
 type medicalalertmessagestype struct {
@@ -2999,7 +2999,7 @@ type medicalalertmessagestype struct {
       }
     
     type MedicalAlertMessageType struct {
-  medicalalertmessagetype `xml:"MedicalAlertMessageType" json:"MedicalAlertMessageType"`
+  medicalalertmessagetype 
 }
 
 type medicalalertmessagetype struct {
@@ -3009,7 +3009,7 @@ type medicalalertmessagetype struct {
       }
     
     type OtherIdListType struct {
-  otheridlisttype `xml:"OtherIdListType" json:"OtherIdListType"`
+  otheridlisttype 
 }
 
 type otheridlisttype struct {
@@ -3018,7 +3018,7 @@ type otheridlisttype struct {
       }
     
     type OtherIdType struct {
-  otheridtype `xml:"OtherIdType" json:"OtherIdType"`
+  otheridtype 
 }
 
 type otheridtype struct {
@@ -3028,7 +3028,7 @@ type otheridtype struct {
       }
     
     type BaseNameType struct {
-  basenametype `xml:"BaseNameType" json:"BaseNameType"`
+  basenametype 
 }
 
 type basenametype struct {
@@ -3046,7 +3046,7 @@ type basenametype struct {
       }
     
     type NameOfRecordType struct {
-  nameofrecordtype `xml:"NameOfRecordType" json:"NameOfRecordType"`
+  nameofrecordtype 
 }
 
 type nameofrecordtype struct {
@@ -3056,7 +3056,7 @@ type nameofrecordtype struct {
       }
     
     type OtherNameType struct {
-  othernametype `xml:"OtherNameType" json:"OtherNameType"`
+  othernametype 
 }
 
 type othernametype struct {
@@ -3068,7 +3068,7 @@ type othernametype struct {
     type PartialDateType string
     type LocalIdType string
     type LocationType struct {
-  locationtype `xml:"LocationType" json:"LocationType"`
+  locationtype 
 }
 
 type locationtype struct {
@@ -3080,7 +3080,7 @@ type locationtype struct {
     
     type StateProvinceIdType string
     type AttendanceCodeType struct {
-  attendancecodetype `xml:"AttendanceCodeType" json:"AttendanceCodeType"`
+  attendancecodetype 
 }
 
 type attendancecodetype struct {
@@ -3090,7 +3090,7 @@ type attendancecodetype struct {
       }
     
     type YearLevelType struct {
-  yearleveltype `xml:"YearLevelType" json:"YearLevelType"`
+  yearleveltype 
 }
 
 type yearleveltype struct {
@@ -3099,7 +3099,7 @@ type yearleveltype struct {
       }
     
     type PersonInfoType struct {
-  personinfotype `xml:"PersonInfoType" json:"PersonInfoType"`
+  personinfotype 
 }
 
 type personinfotype struct {
@@ -3114,7 +3114,7 @@ type personinfotype struct {
       }
     
     type YearLevelsType struct {
-  yearlevelstype `xml:"YearLevelsType" json:"YearLevelsType"`
+  yearlevelstype 
 }
 
 type yearlevelstype struct {
@@ -3124,7 +3124,7 @@ type yearlevelstype struct {
     
     type SchoolURLType string
     type PrincipalInfoType struct {
-  principalinfotype `xml:"PrincipalInfoType" json:"PrincipalInfoType"`
+  principalinfotype 
 }
 
 type principalinfotype struct {
@@ -3136,7 +3136,7 @@ type principalinfotype struct {
       }
     
     type SchoolContactType struct {
-  schoolcontacttype `xml:"SchoolContactType" json:"SchoolContactType"`
+  schoolcontacttype 
 }
 
 type schoolcontacttype struct {
@@ -3146,7 +3146,7 @@ type schoolcontacttype struct {
       }
     
     type SchoolContactListType struct {
-  schoolcontactlisttype `xml:"SchoolContactListType" json:"SchoolContactListType"`
+  schoolcontactlisttype 
 }
 
 type schoolcontactlisttype struct {
@@ -3156,7 +3156,7 @@ type schoolcontactlisttype struct {
     
     type PublishInDirectoryType AUCodeSetsYesOrNoCategoryType
     type ContactInfoType struct {
-  contactinfotype `xml:"ContactInfoType" json:"ContactInfoType"`
+  contactinfotype 
 }
 
 type contactinfotype struct {
@@ -3172,7 +3172,7 @@ type contactinfotype struct {
       }
     
     type AddressStreetType struct {
-  addressstreettype `xml:"AddressStreetType" json:"AddressStreetType"`
+  addressstreettype 
 }
 
 type addressstreettype struct {
@@ -3193,7 +3193,7 @@ type addressstreettype struct {
       }
     
     type AddressType struct {
-  addresstype `xml:"AddressType" json:"AddressType"`
+  addresstype 
 }
 
 type addresstype struct {
@@ -3217,7 +3217,7 @@ type addresstype struct {
       }
     
     type MapReferenceType struct {
-  mapreferencetype `xml:"MapReferenceType" json:"MapReferenceType"`
+  mapreferencetype 
 }
 
 type mapreferencetype struct {
@@ -3229,7 +3229,7 @@ type mapreferencetype struct {
       }
     
     type StatisticalAreasType struct {
-  statisticalareastype `xml:"StatisticalAreasType" json:"StatisticalAreasType"`
+  statisticalareastype 
 }
 
 type statisticalareastype struct {
@@ -3238,7 +3238,7 @@ type statisticalareastype struct {
       }
     
     type StatisticalAreaType struct {
-  statisticalareatype `xml:"StatisticalAreaType" json:"StatisticalAreaType"`
+  statisticalareatype 
 }
 
 type statisticalareatype struct {
@@ -3248,7 +3248,7 @@ type statisticalareatype struct {
       }
     
     type AddressListType struct {
-  addresslisttype `xml:"AddressListType" json:"AddressListType"`
+  addresslisttype 
 }
 
 type addresslisttype struct {
@@ -3257,7 +3257,7 @@ type addresslisttype struct {
       }
     
     type EmailListType struct {
-  emaillisttype `xml:"EmailListType" json:"EmailListType"`
+  emaillisttype 
 }
 
 type emaillisttype struct {
@@ -3266,7 +3266,7 @@ type emaillisttype struct {
       }
     
     type EmailType struct {
-  emailtype `xml:"EmailType" json:"EmailType"`
+  emailtype 
 }
 
 type emailtype struct {
@@ -3276,7 +3276,7 @@ type emailtype struct {
       }
     
     type PhoneNumberListType struct {
-  phonenumberlisttype `xml:"PhoneNumberListType" json:"PhoneNumberListType"`
+  phonenumberlisttype 
 }
 
 type phonenumberlisttype struct {
@@ -3285,7 +3285,7 @@ type phonenumberlisttype struct {
       }
     
     type PhoneNumberType struct {
-  phonenumbertype `xml:"PhoneNumberType" json:"PhoneNumberType"`
+  phonenumbertype 
 }
 
 type phonenumbertype struct {
@@ -3299,7 +3299,7 @@ type phonenumbertype struct {
     
     type CountryType AUCodeSetsStandardAustralianClassificationOfCountriesSACCType
     type GridLocationType struct {
-  gridlocationtype `xml:"GridLocationType" json:"GridLocationType"`
+  gridlocationtype 
 }
 
 type gridlocationtype struct {
@@ -3312,7 +3312,7 @@ type gridlocationtype struct {
     type StateProvinceType string
     type SchoolYearType string
     type ElectronicIdListType struct {
-  electronicidlisttype `xml:"ElectronicIdListType" json:"ElectronicIdListType"`
+  electronicidlisttype 
 }
 
 type electronicidlisttype struct {
@@ -3321,7 +3321,7 @@ type electronicidlisttype struct {
       }
     
     type ElectronicIdType struct {
-  electronicidtype `xml:"ElectronicIdType" json:"ElectronicIdType"`
+  electronicidtype 
 }
 
 type electronicidtype struct {
@@ -3331,7 +3331,7 @@ type electronicidtype struct {
       }
     
     type OtherNamesType struct {
-  othernamestype `xml:"OtherNamesType" json:"OtherNamesType"`
+  othernamestype 
 }
 
 type othernamestype struct {
@@ -3340,7 +3340,7 @@ type othernamestype struct {
       }
     
     type DemographicsType struct {
-  demographicstype `xml:"DemographicsType" json:"DemographicsType"`
+  demographicstype 
 }
 
 type demographicstype struct {
@@ -3378,7 +3378,7 @@ type demographicstype struct {
       }
     
     type EnglishProficiencyType struct {
-  englishproficiencytype `xml:"EnglishProficiencyType" json:"EnglishProficiencyType"`
+  englishproficiencytype 
 }
 
 type englishproficiencytype struct {
@@ -3388,7 +3388,7 @@ type englishproficiencytype struct {
       }
     
     type LanguageListType struct {
-  languagelisttype `xml:"LanguageListType" json:"LanguageListType"`
+  languagelisttype 
 }
 
 type languagelisttype struct {
@@ -3400,7 +3400,7 @@ type languagelisttype struct {
     type ProjectedGraduationYearType string
     type OnTimeGraduationYearType string
     type RelationshipType struct {
-  relationshiptype `xml:"RelationshipType" json:"RelationshipType"`
+  relationshiptype 
 }
 
 type relationshiptype struct {
@@ -3412,7 +3412,7 @@ type relationshiptype struct {
     type EducationalLevelType AUCodeSetsSchoolEducationLevelTypeType
     type GraduationDateType PartialDateType
     type NameType struct {
-  nametype `xml:"NameType" json:"NameType"`
+  nametype 
 }
 
 type nametype struct {
@@ -3423,7 +3423,7 @@ type nametype struct {
     
     type HomeroomNumberType string
     type TimeElementType struct {
-  timeelementtype `xml:"TimeElementType" json:"TimeElementType"`
+  timeelementtype 
 }
 
 type timeelementtype struct {
@@ -3439,7 +3439,7 @@ type timeelementtype struct {
       }
     
     type LifeCycleType struct {
-  lifecycletype `xml:"LifeCycleType" json:"LifeCycleType"`
+  lifecycletype 
 }
 
 type lifecycletype struct {
@@ -3450,7 +3450,7 @@ type lifecycletype struct {
       }
     
     type OtherCodeListType struct {
-  othercodelisttype `xml:"OtherCodeListType" json:"OtherCodeListType"`
+  othercodelisttype 
 }
 
 type othercodelisttype struct {
@@ -3459,7 +3459,7 @@ type othercodelisttype struct {
       }
     
     type ProgramStatusType struct {
-  programstatustype `xml:"ProgramStatusType" json:"ProgramStatusType"`
+  programstatustype 
 }
 
 type programstatustype struct {
@@ -3469,7 +3469,7 @@ type programstatustype struct {
       }
     
     type SubjectAreaListType struct {
-  subjectarealisttype `xml:"SubjectAreaListType" json:"SubjectAreaListType"`
+  subjectarealisttype 
 }
 
 type subjectarealisttype struct {
@@ -3478,7 +3478,7 @@ type subjectarealisttype struct {
       }
     
     type ACStrandAreaListType struct {
-  acstrandarealisttype `xml:"ACStrandAreaListType" json:"ACStrandAreaListType"`
+  acstrandarealisttype 
 }
 
 type acstrandarealisttype struct {
@@ -3487,7 +3487,7 @@ type acstrandarealisttype struct {
       }
     
     type SubjectAreaType struct {
-  subjectareatype `xml:"SubjectAreaType" json:"SubjectAreaType"`
+  subjectareatype 
 }
 
 type subjectareatype struct {
@@ -3497,7 +3497,7 @@ type subjectareatype struct {
       }
     
     type ACStrandSubjectAreaType struct {
-  acstrandsubjectareatype `xml:"ACStrandSubjectAreaType" json:"ACStrandSubjectAreaType"`
+  acstrandsubjectareatype 
 }
 
 type acstrandsubjectareatype struct {
@@ -3507,7 +3507,7 @@ type acstrandsubjectareatype struct {
       }
     
     type EducationFilterType struct {
-  educationfiltertype `xml:"EducationFilterType" json:"EducationFilterType"`
+  educationfiltertype 
 }
 
 type educationfiltertype struct {
@@ -3516,7 +3516,7 @@ type educationfiltertype struct {
       }
     
     type SIF_ExtendedElementsType struct {
-  sif_extendedelementstype `xml:"SIF_ExtendedElementsType" json:"SIF_ExtendedElementsType"`
+  sif_extendedelementstype 
 }
 
 type sif_extendedelementstype struct {
@@ -3525,7 +3525,7 @@ type sif_extendedelementstype struct {
       }
     
     type SIF_MetadataType struct {
-  sif_metadatatype `xml:"SIF_MetadataType" json:"SIF_MetadataType"`
+  sif_metadatatype 
 }
 
 type sif_metadatatype struct {
@@ -3535,7 +3535,7 @@ type sif_metadatatype struct {
       
       }
     type AbstractContentElementType_XMLData struct {
-  abstractcontentelementtype_xmldata `xml:"AbstractContentElementType_XMLData" json:"AbstractContentElementType_XMLData"`
+  abstractcontentelementtype_xmldata 
 }
 
 type abstractcontentelementtype_xmldata struct {
@@ -3543,7 +3543,7 @@ type abstractcontentelementtype_xmldata struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type AbstractContentElementType_TextData struct {
-  abstractcontentelementtype_textdata `xml:"AbstractContentElementType_TextData" json:"AbstractContentElementType_TextData"`
+  abstractcontentelementtype_textdata 
 }
 
 type abstractcontentelementtype_textdata struct {
@@ -3553,7 +3553,7 @@ type abstractcontentelementtype_textdata struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type AbstractContentElementType_BinaryData struct {
-  abstractcontentelementtype_binarydata `xml:"AbstractContentElementType_BinaryData" json:"AbstractContentElementType_BinaryData"`
+  abstractcontentelementtype_binarydata 
 }
 
 type abstractcontentelementtype_binarydata struct {
@@ -3563,7 +3563,7 @@ type abstractcontentelementtype_binarydata struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type AbstractContentElementType_Reference struct {
-  abstractcontentelementtype_reference `xml:"AbstractContentElementType_Reference" json:"AbstractContentElementType_Reference"`
+  abstractcontentelementtype_reference 
 }
 
 type abstractcontentelementtype_reference struct {
@@ -3572,7 +3572,7 @@ type abstractcontentelementtype_reference struct {
        URL *String `xml:"URL" json:"URL"`
 }
 type PersonInvolvementType_PersonRefId struct {
-  personinvolvementtype_personrefid `xml:"PersonInvolvementType_PersonRefId" json:"PersonInvolvementType_PersonRefId"`
+  personinvolvementtype_personrefid 
 }
 
 type personinvolvementtype_personrefid struct {
@@ -3580,7 +3580,7 @@ type personinvolvementtype_personrefid struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type ActivityTimeType_Duration struct {
-  activitytimetype_duration `xml:"ActivityTimeType_Duration" json:"ActivityTimeType_Duration"`
+  activitytimetype_duration 
 }
 
 type activitytimetype_duration struct {
@@ -3588,7 +3588,7 @@ type activitytimetype_duration struct {
       Value *Int `xml:",chardata" json:"value"`
 }
 type SourceObjectsType_SourceObject struct {
-  sourceobjectstype_sourceobject `xml:"SourceObjectsType_SourceObject" json:"SourceObjectsType_SourceObject"`
+  sourceobjectstype_sourceobject 
 }
 
 type sourceobjectstype_sourceobject struct {
@@ -3596,7 +3596,7 @@ type sourceobjectstype_sourceobject struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type IdentityAssertionsType_IdentityAssertion struct {
-  identityassertionstype_identityassertion `xml:"IdentityAssertionsType_IdentityAssertion" json:"IdentityAssertionsType_IdentityAssertion"`
+  identityassertionstype_identityassertion 
 }
 
 type identityassertionstype_identityassertion struct {
@@ -3604,7 +3604,7 @@ type identityassertionstype_identityassertion struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type AssociatedObjectsType_AssociatedObject struct {
-  associatedobjectstype_associatedobject `xml:"AssociatedObjectsType_AssociatedObject" json:"AssociatedObjectsType_AssociatedObject"`
+  associatedobjectstype_associatedobject 
 }
 
 type associatedobjectstype_associatedobject struct {
@@ -3612,7 +3612,7 @@ type associatedobjectstype_associatedobject struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type PasswordListType_Password struct {
-  passwordlisttype_password `xml:"PasswordListType_Password" json:"PasswordListType_Password"`
+  passwordlisttype_password 
 }
 
 type passwordlisttype_password struct {
@@ -3621,7 +3621,7 @@ type passwordlisttype_password struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type LocationType_LocationRefId struct {
-  locationtype_locationrefid `xml:"LocationType_LocationRefId" json:"LocationType_LocationRefId"`
+  locationtype_locationrefid 
 }
 
 type locationtype_locationrefid struct {
@@ -3629,14 +3629,14 @@ type locationtype_locationrefid struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type TimeElementType_SpanGaps struct {
-  timeelementtype_spangaps `xml:"TimeElementType_SpanGaps" json:"TimeElementType_SpanGaps"`
+  timeelementtype_spangaps 
 }
 
 type timeelementtype_spangaps struct {
       SpanGap []TimeElementType_SpanGap `xml:"SpanGap" json:"SpanGap"`
 }
 type LifeCycleType_Created struct {
-  lifecycletype_created `xml:"LifeCycleType_Created" json:"LifeCycleType_Created"`
+  lifecycletype_created 
 }
 
 type lifecycletype_created struct {
@@ -3644,21 +3644,21 @@ type lifecycletype_created struct {
       Creators *LifeCycleType_Creators
 }
 type LifeCycleType_ModificationHistory struct {
-  lifecycletype_modificationhistory `xml:"LifeCycleType_ModificationHistory" json:"LifeCycleType_ModificationHistory"`
+  lifecycletype_modificationhistory 
 }
 
 type lifecycletype_modificationhistory struct {
       Modified []LifeCycleType_Modified `xml:"Modified" json:"Modified"`
 }
 type LifeCycleType_TimeElements struct {
-  lifecycletype_timeelements `xml:"LifeCycleType_TimeElements" json:"LifeCycleType_TimeElements"`
+  lifecycletype_timeelements 
 }
 
 type lifecycletype_timeelements struct {
        TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
 }
 type OtherCodeListType_OtherCode struct {
-  othercodelisttype_othercode `xml:"OtherCodeListType_OtherCode" json:"OtherCodeListType_OtherCode"`
+  othercodelisttype_othercode 
 }
 
 type othercodelisttype_othercode struct {
@@ -3666,7 +3666,7 @@ type othercodelisttype_othercode struct {
       Value *String `xml:",chardata" json:"value"`
 }
 type SIF_ExtendedElementsType_SIF_ExtendedElement struct {
-  sif_extendedelementstype_sif_extendedelement `xml:"SIF_ExtendedElementsType_SIF_ExtendedElement" json:"SIF_ExtendedElementsType_SIF_ExtendedElement"`
+  sif_extendedelementstype_sif_extendedelement 
 }
 
 type sif_extendedelementstype_sif_extendedelement struct {
@@ -3676,14 +3676,14 @@ type sif_extendedelementstype_sif_extendedelement struct {
       Value *ExtendedContentType `xml:",chardata" json:"value"`
 }
 type SIF_MetadataType_TimeElements struct {
-  sif_metadatatype_timeelements `xml:"SIF_MetadataType_TimeElements" json:"SIF_MetadataType_TimeElements"`
+  sif_metadatatype_timeelements 
 }
 
 type sif_metadatatype_timeelements struct {
        TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
 }
 type TimeElementType_SpanGap struct {
-  timeelementtype_spangap `xml:"TimeElementType_SpanGap" json:"TimeElementType_SpanGap"`
+  timeelementtype_spangap 
 }
 
 type timeelementtype_spangap struct {
@@ -3695,14 +3695,14 @@ type timeelementtype_spangap struct {
        EndDateTime *String `xml:"EndDateTime,omitempty" json:"EndDateTime,omitempty"`
 }
 type LifeCycleType_Creators struct {
-  lifecycletype_creators `xml:"LifeCycleType_Creators" json:"LifeCycleType_Creators"`
+  lifecycletype_creators 
 }
 
 type lifecycletype_creators struct {
       Creator []LifeCycleType_Creator `xml:"Creator" json:"Creator"`
 }
 type LifeCycleType_Modified struct {
-  lifecycletype_modified `xml:"LifeCycleType_Modified" json:"LifeCycleType_Modified"`
+  lifecycletype_modified 
 }
 
 type lifecycletype_modified struct {
@@ -3711,7 +3711,7 @@ type lifecycletype_modified struct {
        Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
 }
 type LifeCycleType_Creator struct {
-  lifecycletype_creator `xml:"LifeCycleType_Creator" json:"LifeCycleType_Creator"`
+  lifecycletype_creator 
 }
 
 type lifecycletype_creator struct {
