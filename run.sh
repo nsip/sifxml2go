@@ -36,7 +36,7 @@ for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
+  if #[[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/PersonPrivacyObligation.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/ReportAuthorityInfo.xml" ]] ; then
     continue
@@ -72,8 +72,9 @@ echo '</root>' >> codesets.xml
 xsltproc scripts/sifobject.xslt codesets.xml | perl scripts/xslt_postprocess.pl | perl scripts/struct2go.pl > sifxml_tmp/Codesets.go
 
 for filename in ./sifxml_tmp/*.go; do
-  cat "$filename" |  perl struct2go2.pl > sifxml/$(basename "$filename")
+  cat "$filename" |  perl scripts/struct2go2.pl > sifxml/$(basename "$filename")
 done
+cat sifxml_tmp/DataModel.go |  perl -s scripts/struct2go2.pl -o > sifxml/DataModel.go
 
 cat sifxml_tmp/[A-Z]*.go | perl scripts/goHelpers.pl > sifxml/Helpers.go
 
@@ -86,7 +87,7 @@ for filename in ./specgen_input/06_DataModel/Custom/Common/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
+  if #[[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/PersonPrivacyObligation.xml" ]] ||
        [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/ReportAuthorityInfo.xml" ]] ; then
     continue
@@ -100,9 +101,9 @@ for filename in ./specgen_input/06_DataModel/Custom/AU/*.xml; do
     echo "Excluded:" $filename;
     continue;
   fi
-  if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]]; then
-    continue
-  fi
+  #if [[ "$filename" == "./specgen_input/06_DataModel/Custom/Common/StudentScoreSet.xml" ]]; then
+    #continue
+  #fi
   perl scripts/sifexamples.pl "$filename" >> sifxml/examples.go
 done
 
