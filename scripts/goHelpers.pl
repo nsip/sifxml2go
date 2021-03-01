@@ -94,9 +94,10 @@ func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
  	return ok
 }
 
-func (a Int) UnmarshalJSON(b []byte) error {
-  log.Printf("Unmarshal %s to Int\n", string(b))
-  err := json.Unmarshal(b, &a)
+func (a *Int) UnmarshalJSON(b []byte) error {
+  log.Printf("Unmarshal %s to Int\\n", string(b))
+  type temporary Int
+	err := json.Unmarshal(b, (*temporary)(a))
   if err != nil {
     log.Println("try #1")
     var str string
@@ -109,14 +110,15 @@ func (a Int) UnmarshalJSON(b []byte) error {
       if err != nil {
         return err
         }
-    log.Printf("try #3: %d\n", aI)
-        a = Int(aI)
+    log.Printf("try #3: %d\\n", aI)
+        *a = Int(aI)
     }
   return nil
 }
 
 func (a *Float) UnmarshalJSON(b []byte) error {
-  err := json.Unmarshal(b, a)
+  type temporary Float
+	err := json.Unmarshal(b, (*temporary)(a))
   if err != nil {
     var str string
     err = json.Unmarshal(b, &str)
@@ -133,7 +135,8 @@ func (a *Float) UnmarshalJSON(b []byte) error {
 }
 
 func (a *Bool) UnmarshalJSON(b []byte) error {
-  err := json.Unmarshal(b, a)
+  type temporary Bool
+	err := json.Unmarshal(b, (*temporary)(a))
   if err != nil {
     var str string
     err = json.Unmarshal(b, &str)
