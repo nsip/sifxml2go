@@ -5,6 +5,8 @@ import (
   "errors"
   "fmt"
   "log"
+  "strconv"
+  "encoding/json"
   "reflect"
 
   "github.com/qdm12/reprint"
@@ -36,7 +38,10 @@ func (a *Int) UnmarshalJSON(b []byte) error {
         return err
         }
         aI, err:=strconv.Atoi(str)
-        *a = aI
+      if err != nil {
+        return err
+        }
+        *a = Int(aI)
     }
   return nil
 }
