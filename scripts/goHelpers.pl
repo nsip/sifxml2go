@@ -94,9 +94,9 @@ func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
  	return ok
 }
 
-func (a *Int) UnmarshalJSON(b []byte) error {
+func (a Int) UnmarshalJSON(b []byte) error {
   log.Printf("Unmarshal %s to Int\n", string(b))
-  err := json.Unmarshal(b, a)
+  err := json.Unmarshal(b, &a)
   if err != nil {
     log.Println("try #1")
     var str string
@@ -110,7 +110,7 @@ func (a *Int) UnmarshalJSON(b []byte) error {
         return err
         }
     log.Printf("try #3: %d\n", aI)
-        *a = Int(aI)
+        a = Int(aI)
     }
   return nil
 }
