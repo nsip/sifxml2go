@@ -184,18 +184,18 @@ func Test_test_GradingAssignmentScore(t *testing.T) {
                 t.Fatalf("test_GradingAssignmentScore not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_GradingAssignmentScore))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0293(t *testing.T) {
+func Test_test_example0939(t *testing.T) {
         a := Identity{}
-        err := xml.Unmarshal([]byte(test_example0293), &a)
+        err := xml.Unmarshal([]byte(test_example0939), &a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0293)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0939)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0293 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0293))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0939 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0939))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_IdentitypublishedbyMicrosoftActiveDirectory(t *testing.T) {
@@ -632,18 +632,18 @@ func Test_test_StudentPeriodAttendanceExample(t *testing.T) {
                 t.Fatalf("test_StudentPeriodAttendanceExample not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_StudentPeriodAttendanceExample))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0520(t *testing.T) {
+func Test_test_example0798(t *testing.T) {
         a := StudentPersonal{}
-        err := xml.Unmarshal([]byte(test_example0520), &a)
+        err := xml.Unmarshal([]byte(test_example0798), &a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0520)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0798)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0520 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0520))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0798 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0798))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentSchoolEnrollment(t *testing.T) {
@@ -1164,18 +1164,18 @@ func Test_test_PaymentReceipt(t *testing.T) {
                 t.Fatalf("test_PaymentReceipt not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_PaymentReceipt))), string(stripEmptyTags(output)))
         }
 }
-func Test_test_example0703(t *testing.T) {
+func Test_test_example0560(t *testing.T) {
         a := PurchaseOrder{}
-        err := xml.Unmarshal([]byte(test_example0703), &a)
+        err := xml.Unmarshal([]byte(test_example0560), &a)
         errcheck(t, err)
         output, err := xml.Marshal(a)
         errcheck(t, err)
-        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0703)))
+        want, err := mxj.NewMapXml(stripEmptyTags([]byte(test_example0560)))
         errcheck(t, err)
         mv, err := mxj.NewMapXml(stripEmptyTags(output))
         errcheck(t, err)
         if !reflect.DeepEqual(mv, want) {
-                t.Fatalf("test_example0703 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0703))), string(stripEmptyTags(output)))
+                t.Fatalf("test_example0560 not DeepEqual:\nmv  : %+v\nwant: %+v\n%s\n%s\n", mv, want, string(stripEmptyTags([]byte(test_example0560))), string(stripEmptyTags(output)))
         }
 }
 func Test_test_StudentAttendanceCollectionExample2(t *testing.T) {

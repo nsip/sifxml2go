@@ -174,7 +174,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0293 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0939 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -1502,7 +1502,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0520 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0798 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -4042,7 +4042,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0703 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0560 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>

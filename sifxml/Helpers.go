@@ -30,14 +30,11 @@ func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
 }
 
 func (a *Int) UnmarshalJSON(b []byte) error {
-  log.Printf("Unmarshal %s to Int\n", string(b))
   type temporary Int
 	err := json.Unmarshal(b, (*temporary)(a))
   if err != nil {
-    log.Println("try #1")
     var str string
     err = json.Unmarshal(b, &str)
-    log.Println("try #2")
       if err != nil {
         return err
         }
@@ -45,7 +42,6 @@ func (a *Int) UnmarshalJSON(b []byte) error {
       if err != nil {
         return err
         }
-    log.Printf("try #3: %d\n", aI)
         *a = Int(aI)
     }
   return nil
