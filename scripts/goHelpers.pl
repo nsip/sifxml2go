@@ -94,7 +94,6 @@ func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
  	return ok
 }
 
-/*
 func (a *Int) UnmarshalJSON(b []byte) error {
   err := json.Unmarshal(b, a)
   if err != nil {
@@ -111,7 +110,6 @@ func (a *Int) UnmarshalJSON(b []byte) error {
     }
   return nil
 }
-*/
 
 END
 
