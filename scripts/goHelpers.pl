@@ -111,6 +111,37 @@ func (a *Int) UnmarshalJSON(b []byte) error {
   return nil
 }
 
+func (a *Float) UnmarshalJSON(b []byte) error {
+  err := json.Unmarshal(b, a)
+  if err != nil {
+    var str string
+    err = json.Unmarshal(b, &str)
+      if err != nil {
+        return err
+        }
+        aI, err:=strconv.ParseFloat(str, 64)
+      if err != nil {
+        return err
+        }
+        *a = Float(aI)
+    }
+  return nil
+}
+
+func (a *Bool) UnmarshalJSON(b []byte) error {
+  err := json.Unmarshal(b, a)
+  if err != nil {
+    var str string
+    err = json.Unmarshal(b, &str)
+      if err != nil {
+        return err
+        }
+        *a = Bool(str == "true")
+    }
+  return nil
+}
+
+
 END
 
 foreach $n (@object) {
