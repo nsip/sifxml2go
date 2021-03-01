@@ -5,8 +5,8 @@ import (
   "errors"
   "fmt"
   "log"
-  "strconv"
-  "encoding/json"
+  //"strconv"
+  //"encoding/json"
   "reflect"
 
   "github.com/qdm12/reprint"
@@ -29,6 +29,7 @@ func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
  	return ok
 }
 
+/*
 func (a *Int) UnmarshalJSON(b []byte) error {
   err := json.Unmarshal(b, a)
   if err != nil {
@@ -45,7 +46,7 @@ func (a *Int) UnmarshalJSON(b []byte) error {
     }
   return nil
 }
-
+*/
 
 // Create a slice of pointers to the object type
 func ActivitySlice() []*Activity {
