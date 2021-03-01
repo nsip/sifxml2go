@@ -12,14 +12,15 @@ type studentschoolenrollment struct {
       StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       MembershipType *AUCodeSetsSchoolEnrollmentTypeType `xml:"MembershipType" json:"MembershipType"`
+      LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       TimeFrame *AUCodeSetsEnrollmentTimeFrameType `xml:"TimeFrame" json:"TimeFrame"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       EntryDate *String `xml:"EntryDate" json:"EntryDate"`
       EntryType *StudentEntryContainerType `xml:"EntryType,omitempty" json:"EntryType,omitempty"`
       YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel,omitempty"`
-      Homeroom *StudentSchoolEnrollment_Homeroom
-      Advisor *StudentSchoolEnrollment_Advisor
-      Counselor *StudentSchoolEnrollment_Counselor
+      Homeroom *HomeroomType `xml:"Homeroom,omitempty" json:"Homeroom,omitempty"`
+      Advisor *StaffRefIdType `xml:"Advisor,omitempty" json:"Advisor,omitempty"`
+      Counselor *StaffRefIdType `xml:"Counselor,omitempty" json:"Counselor,omitempty"`
       Homegroup *String `xml:"Homegroup,omitempty" json:"Homegroup,omitempty"`
       ACARASchoolId *LocalIdType `xml:"ACARASchoolId,omitempty" json:"ACARASchoolId,omitempty"`
       ClassCode *String `xml:"ClassCode,omitempty" json:"ClassCode,omitempty"`
@@ -47,40 +48,17 @@ type studentschoolenrollment struct {
       PublishingPermissionList *PublishingPermissionListType `xml:"PublishingPermissionList,omitempty" json:"PublishingPermissionList,omitempty"`
       DisabilityLevelOfAdjustment *String `xml:"DisabilityLevelOfAdjustment,omitempty" json:"DisabilityLevelOfAdjustment,omitempty"`
       DisabilityCategory *String `xml:"DisabilityCategory,omitempty" json:"DisabilityCategory,omitempty"`
-      CensusAge *Float `xml:"CensusAge,omitempty" json:"CensusAge,omitempty"`
+      CensusAge *Int `xml:"CensusAge,omitempty" json:"CensusAge,omitempty"`
       DistanceEducationStudent *AUCodeSetsYesOrNoCategoryType `xml:"DistanceEducationStudent,omitempty" json:"DistanceEducationStudent,omitempty"`
       BoardingStatus *AUCodeSetsBoardingType `xml:"BoardingStatus,omitempty" json:"BoardingStatus,omitempty"`
       InternationalStudent *AUCodeSetsYesOrNoCategoryType `xml:"InternationalStudent,omitempty" json:"InternationalStudent,omitempty"`
+      TravelDetails *TravelDetailsContainerType `xml:"TravelDetails,omitempty" json:"TravelDetails,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type StudentSchoolEnrollment_Homeroom struct {
-  studentschoolenrollment_homeroom `xml:"StudentSchoolEnrollment_Homeroom" json:"StudentSchoolEnrollment_Homeroom"`
-}
-
-type studentschoolenrollment_homeroom struct {
-      SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type StudentSchoolEnrollment_Advisor struct {
-  studentschoolenrollment_advisor `xml:"StudentSchoolEnrollment_Advisor" json:"StudentSchoolEnrollment_Advisor"`
-}
-
-type studentschoolenrollment_advisor struct {
-      SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type StudentSchoolEnrollment_Counselor struct {
-  studentschoolenrollment_counselor `xml:"StudentSchoolEnrollment_Counselor" json:"StudentSchoolEnrollment_Counselor"`
-}
-
-type studentschoolenrollment_counselor struct {
-      SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type StudentSchoolEnrollment_Calendar struct {
+    type StudentSchoolEnrollment_Calendar struct {
   studentschoolenrollment_calendar `xml:"StudentSchoolEnrollment_Calendar" json:"StudentSchoolEnrollment_Calendar"`
 }
 

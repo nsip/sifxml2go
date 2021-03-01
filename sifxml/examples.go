@@ -174,7 +174,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0298 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0425 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -582,7 +582,7 @@ var test_ResourceUsage = `    <ResourceUsage RefId ="4286194F-43ED-43C1-8EE2-F0A
 		  <StartDate>2011-03-18</StartDate>
 		  <EndDate>2011-04-17</EndDate>
 		  <CurrentCost Currency="AUD">5.43</CurrentCost>
-		  <ReportRow>name.surename.1,null,Year 10 Test,47,2</ReportRow>
+		  <ReportRow>name.surname.1,null,Year 10 Test,47,2</ReportRow>
 		  
     </ResourceReportLine>
     <ResourceReportLine>
@@ -590,7 +590,7 @@ var test_ResourceUsage = `    <ResourceUsage RefId ="4286194F-43ED-43C1-8EE2-F0A
       <StartDate>2011-03-18</StartDate>
       <EndDate>2011-04-17</EndDate>
       <CurrentCost Currency="AUD">0.00</CurrentCost>
-      <ReportRow>name.surename.2,cost waived,Year 10 Test,93,4</ReportRow>
+      <ReportRow>name.surname.2,cost waived,Year 10 Test,93,4</ReportRow>
       </ResourceReportLine>
   </ResourceReportLineList>
 </ResourceUsage> 
@@ -1101,6 +1101,16 @@ var test_StudentAttendanceTimeListExample = `		<StudentAttendanceTimeList RefId=
 			<Date>2002-11-01</Date>
 			<SchoolYear>2003</SchoolYear>
 			<AttendanceTimes>
+
+				<AttendanceTime>
+					<AttendanceCode>
+						<Code>100</Code>
+					</AttendanceCode>
+					<AttendanceStatus>01</AttendanceStatus>
+					<StartTime>09:00:00</StartTime>
+					<EndTime>11:00:00</EndTime>
+					<AttendanceNote/>
+				</AttendanceTime>
 				<AttendanceTime>
 					<AttendanceCode>
 						<Code>200</Code>
@@ -1121,15 +1131,6 @@ var test_StudentAttendanceTimeListExample = `		<StudentAttendanceTimeList RefId=
 						<Code>100</Code>
 					</AttendanceCode>
 					<AttendanceStatus>01</AttendanceStatus>
-					<StartTime>09:00:00</StartTime>
-					<EndTime>11:00:00</EndTime>
-					<AttendanceNote/>
-				</AttendanceTime>
-				<AttendanceTime>
-					<AttendanceCode>
-						<Code>100</Code>
-					</AttendanceCode>
-					<AttendanceStatus>01</AttendanceStatus>
 					<StartTime>12:05:00</StartTime>
 					<EndTime>15:30:00</EndTime>
 					<AttendanceNote/>
@@ -1143,16 +1144,7 @@ var test_StudentAttendanceTimeListExample2 = `    <StudentAttendanceTimeList Ref
 	<Date>2002-11-01</Date>
 	<SchoolYear>2003</SchoolYear>
 	<AttendanceTimes>
-			<AttendanceTime>
-				<AttendanceType>RC</AttendanceType>	 
-				<AttendanceCode>
-					<Code>100</Code>
-				</AttendanceCode>
-				<AttendanceStatus>NA</AttendanceStatus>
-				<StartTime>09:00:00</StartTime>
-				<EndTime>15:00:00</EndTime>
-				<DurationValue>1.000</DurationValue>
-			</AttendanceTime>
+
 			<AttendanceTime>
 				<AttendanceType>LA</AttendanceType> 
 				<AttendanceCode>
@@ -1164,13 +1156,23 @@ var test_StudentAttendanceTimeListExample2 = `    <StudentAttendanceTimeList Ref
 				<AttendanceNote>No acceptable excuse given</AttendanceNote>
 			</AttendanceTime>
 			<AttendanceTime>
+				<AttendanceType>RC</AttendanceType>	 
+				<AttendanceCode>
+					<Code>100</Code>
+				</AttendanceCode>
+				<AttendanceStatus>NA</AttendanceStatus>
+				<StartTime>09:30:00</StartTime>
+				<EndTime>11:00:00</EndTime>
+				<DurationValue>1.000</DurationValue>
+			</AttendanceTime>
+			<AttendanceTime>
 				<AttendanceType>OC</AttendanceType> 
 				<AttendanceCode>
 					<Code>200</Code>
 				</AttendanceCode>
 				<AttendanceStatus>01</AttendanceStatus>
 				<StartTime>11:00:00</StartTime>
-				<EndTime>13:00:00</EndTime>
+				<EndTime>14:30:00</EndTime>
 				<AttendanceNote>Student had stomach ache</AttendanceNote>
 			</AttendanceTime>
 			<AttendanceTime>
@@ -1500,7 +1502,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0423 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0257 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -1691,6 +1693,7 @@ var test_StudentSchoolEnrollment = `    <StudentSchoolEnrollment RefId="A8C3D3E3
       </YearLevel>
       <Homeroom SIF_RefObject="RoomInfo">D7510D3E-34B3-591A-8C3D-00AA001A1651</Homeroom>
       <Advisor SIF_RefObject="StaffPersonal">B359D3E3-4D75-101A-8C3D-00AA001A1652</Advisor>
+      <Counselor SIF_RefObject="StaffPersonal">B459D3E3-4D75-101A-8C3D-00AA001A1653</Counselor>
       <ExitType>
         <Code>1909</Code>
         <OtherCodeList>
@@ -1709,8 +1712,20 @@ var test_StudentSchoolEnrollment = `    <StudentSchoolEnrollment RefId="A8C3D3E3
 			<PermissionValue>Y</PermissionValue>
 		  </PublishingPermission>
 	  </PublishingPermissionList>
-      
-      
+      <CensusAge>16</CensusAge>
+      <InternationalStudent>Y</InternationalStudent>
+      <TravelDetails>
+		  <ToSchool>
+			  <TravelMode>A</TravelMode> 
+			  <TravelDetails>Usually walks to school unless otherwise advised.</TravelDetails>
+			  <TravelAccompaniment>I</TravelAccompaniment>
+   		  </ToSchool>	  
+		  <FromSchool>
+			  <TravelMode>A</TravelMode>
+			  <TravelDetails>Usually walks from school unless otherwise advised.</TravelDetails>
+			  <TravelAccompaniment>I</TravelAccompaniment>
+		  </FromSchool>
+      </TravelDetails>
     </StudentSchoolEnrollment>
 `
 var test_StudentScoreJudgementAgainstStandardExample1ObjectsPublishedpreviously = `    <StudentScoreJudgementAgainstStandard RefId="5810E283-E928-459C-BBA7-6EFE1963F784">
@@ -2187,7 +2202,6 @@ var test_AddressCollection = `
     <AddressCollection RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
         <AddressCollectionYear>2019</AddressCollectionYear> 
         <RoundCode>SES1</RoundCode>
-        <ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
         <SoftwareVendorInfo>  
             <SoftwareProduct>Civica</SoftwareProduct>
             <SoftwareVersion>Websys 1.0</SoftwareVersion>
@@ -2275,7 +2289,6 @@ var test_CensusCollection = `
     <CensusCollection RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
 		<CensusYear>2018</CensusYear> 
 		<RoundCode>Census1</RoundCode>
-		<ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
 		<SoftwareVendorInfo>  
 			<SoftwareProduct>Civica</SoftwareProduct>
 			<SoftwareVersion>Websys 1.0</SoftwareVersion>
@@ -2509,19 +2522,13 @@ var test_FinancialAccount = `    <FinancialAccount RefId="EEC8FC12-8D2C-4EE3-94A
 var test_FinancialQuestionnaireCollection = `    <FinancialQuestionnaireCollection RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
 		<FQYear>2018</FQYear> 
 		<RoundCode>FQ1</RoundCode>
-		<ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
 		<SoftwareVendorInfo>  
 			<SoftwareProduct>MYOB</SoftwareProduct>
 			<SoftwareVersion>11.0</SoftwareVersion>
 		</SoftwareVendorInfo>
 		<FQReportingList> 
 			<FQReporting>
-				<EntityLevel>School</EntityLevel>
-				<SchoolInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1689</SchoolInfoRefId>  
-				<LocalId>01011234</LocalId>
-				<StateProvinceId>01011234</StateProvinceId>
 				<CommonwealthId>012345</CommonwealthId> 
-				<ACARAId>1234</ACARAId>
 				<EntityName>XXX Secondary College</EntityName>
 				<EntityContact>
 					<Name Type="LGL">
@@ -2574,12 +2581,7 @@ var test_FinancialQuestionnaireCollection = `    <FinancialQuestionnaireCollecti
 				</AGRuleList>
 		  </FQReporting>
 		  <FQReporting> 
-				<EntityLevel>School</EntityLevel>
-				<SchoolInfoRefId>C4D54B35-9D75-101A-8C3D-00AA001A1688</SchoolInfoRefId>
-				<LocalId>01011234</LocalId>
-				<StateProvinceId>45645567</StateProvinceId>
 				<CommonwealthId>12387</CommonwealthId>
-				<ACARAId>99007</ACARAId>
 				<EntityName>ABCXYZ Secondary College</EntityName>
 				<EntityContact>
 					<Name Type="LGL">
@@ -2631,9 +2633,6 @@ var test_FinancialQuestionnaireCollection = `    <FinancialQuestionnaireCollecti
 				</AGRuleList>
 			</FQReporting>
 		    <FQReporting> 
-				<EntityLevel>Diocese</EntityLevel>
-				<LocalId>01011235</LocalId>
-				<StateProvinceId>45645568</StateProvinceId>
 				<CommonwealthId>12388</CommonwealthId>
 				<EntityName>Ballarat Diocese</EntityName>
 				<EntityContact>
@@ -4043,7 +4042,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0917 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0754 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>
@@ -4068,7 +4067,6 @@ var test_StudentAttendanceCollectionExample2 = `<StudentAttendanceCollection Ref
   <StudentAttendanceCollectionYear>2020</StudentAttendanceCollectionYear>
   
   <RoundCode>Semester1</RoundCode>
-  <ReportingAuthorityCommonwealthId>012345</ReportingAuthorityCommonwealthId>
   <SoftwareVendorInfo>
     
     <SoftwareProduct>Software</SoftwareProduct>

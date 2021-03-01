@@ -90,7 +90,22 @@ func CodesetContains(codeset map[string]struct{}, value interface{}) bool {
  	}
  	_, ok = codeset[vstr]
  	return ok
- }
+}
+
+func (a *Int) UnmarshalJSON(b []byte) error {
+  err := json.Unmarshal(b, a)
+  if err != nil {
+    var str string
+    err = json.Unmarshal(b, &str)
+      if err != nil {
+        return err
+        }
+        aI, err:=strconv.Atoi(str)
+        *a = aI
+    }
+  return nil
+}
+
 
 END
 
@@ -103,7 +118,7 @@ func ${n}Slice() []*$n {
 END
 }
 
-foreach $n (keys %types) {
+foreach $n (sort keys %types) {
 print << "END";
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *$n) Clone() (*$n) {
@@ -131,7 +146,7 @@ END
 
 
 # Matt's Append is my AddNew
-foreach $n (keys %list) {
+foreach $n (sort keys %list) {
   $emptytype= emptytype($list{$n}{TYPE});
       $cv = codeset_validate($$list{$n}{TYPE});
   print <<"END";
@@ -202,7 +217,7 @@ END
   }
 }
 
-foreach $n (keys %alias_orig) {
+foreach $n (sort keys %alias_orig) {
   if ($alias{$n} eq 'string') {
   print <<"END";
 // Return string value
@@ -343,7 +358,7 @@ END
 }
 }
 
-foreach $n (keys %types) {
+foreach $n (sort keys %types) {
   next if $list{$n};
   print <<"END";
 
@@ -351,11 +366,11 @@ foreach $n (keys %types) {
 func (n *$n) Unset(key string) *$n {
         switch key {
 END
-  foreach $s (keys %{$types{$n}}) {
+  foreach $s (sort keys %{$types{$n}}) {
     unsetswitch($n, $s, $types{$n}{$s});
   }
   if ($inherit{$n}) {
-    foreach $s (keys %{$types{$inherit{$n}}}) {
+    foreach $s (sort keys %{$types{$inherit{$n}}}) {
       unsetswitch($n, $s, $types{$inherit{$n}}{$s});
     }
   }
@@ -382,11 +397,11 @@ func (n *$n) SetProperty(key string, value interface{}) *$n {
         }
         switch key {
 END
-  foreach $s (keys %{$types{$n}}) {
+  foreach $s (sort keys %{$types{$n}}) {
     setswitch($n, $s, $types{$n}{$s});
   }
   if ($inherit{$n}) {
-    foreach $s (keys %{$types{$inherit{$n}}}) {
+    foreach $s (sort keys %{$types{$inherit{$n}}}) {
       setswitch($n, $s, $types{$inherit{$n}}{$s});
     }
   }
@@ -399,12 +414,12 @@ END
 
 END
 
-  foreach $s (keys %{$types{$n}}) {
+  foreach $s (sort keys %{$types{$n}}) {
     readfunction($n, $s, $types{$n}{$s});
     isnil($n, $s, $types{$n}{$s});
   }
   if ($inherit{$n}) {
-    foreach $s (keys %{$types{$inherit{$n}}}) {
+    foreach $s (sort keys %{$types{$inherit{$n}}}) {
       readfunction($n, $s, $types{$inherit{$n}}{$s});
       isnil($n, $s, $types{$inherit{$n}}{$s});
     }

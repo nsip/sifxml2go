@@ -3,4 +3,4 @@ package sifxml
 
 type LearningResourcePackages []LearningResourcePackage
 
-    type LearningResourcePackage AbstractContentPackageType
+    type LearningResourcePackage AbstractContentElementType
