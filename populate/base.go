@@ -464,3 +464,22 @@ func Term_end_date(year string, semester int) string {
 		return fmt.Sprintf("%s-11-30", year)
 	}
 }
+
+// The permitted AG Collection types.
+func AGCollection_types() []string {
+	return []string{"COI", "FQ", "SES", "STATS"}
+}
+
+func agcollectiontype2name(abbr string) string {
+	switch abbr {
+	case "COI":
+		return "Non-Government Schools Census"
+	case "FQ":
+		return "Financial Questionnaire"
+	case "SES":
+		return "Address Collection"
+	case "STATS":
+		return "Student Attendance (STATS)"
+	}
+	return "Unknown"
+}

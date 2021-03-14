@@ -104,7 +104,7 @@ func main() {
 		err = populate.PrintXML(cell)
 		populate.Errcheck(err)
 	*/
-	ret := populate.MakeUsecaseObjects(populate.MakeUsecases{Enrolment: true, Provisioning: true, DailyAttendance: true, Financial: true, Gradebook: true, StudentAttendanceTimeList: true, TeacherJudgement: true, Timetable: true, Wellbeing: true}, populate.MakeUsecaseCounts{Students: 400, Staff: 40, Schools: 10, Vendors: 10})
+	ret := populate.MakeUsecaseObjects(populate.MakeUsecases{Enrolment: true, Provisioning: true, DailyAttendance: true, Financial: true, Gradebook: true, StudentAttendanceTimeList: true, TeacherJudgement: true, Timetable: true, Wellbeing: true, AGCollections: true}, populate.MakeUsecaseCounts{Students: 400, Staff: 40, Schools: 10, Vendors: 10})
 
 	err = populate.PrintXML(ret.Schools)
 	populate.Errcheck(err)
@@ -147,6 +147,10 @@ func main() {
 	err = populate.PrintXML(ret.SchoolCourses)
 	populate.Errcheck(err)
 	err = populate.PrintXML(ret.ScheduledActivities)
+	populate.Errcheck(err)
+	err = populate.PrintXML(ret.CollectionRounds)
+	populate.Errcheck(err)
+	err = populate.PrintXML(ret.CollectionStatuses)
 	populate.Errcheck(err)
 	//populate.PrintJSON(ret.TeachingGroups)
 

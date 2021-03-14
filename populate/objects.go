@@ -2266,3 +2266,147 @@ func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTabl
 
 	return ret
 }
+
+// Creates a CollectionRound object for a given AG Collection.
+// Presupposes that there are two rounds for each collection per year.
+//
+// * AGCollection is set to the standard abbreviation for the collection.
+//
+// * CollectionYear is set to the current year.
+//
+// * AGRoundList/AGRound/RoundCode is set to the collection abbreviation plus the round number.
+//
+// * AGRoundList/AGRound/RoundName is set to the expansion of the collection abbreviation plus the round number.
+//
+// * In Round 1, AGRoundList/AGRound/StartDate is set to a random date in the first 20 days of July.
+// In Round 2, it is set to a random date in the first 20 days of September.
+//
+// * In Round 1, AGRoundList/AGRound/DueDate is set to a random date in the first 20 days of August.
+// In Round 2, it is set to a random date in the first 20 days of October.
+//
+// * In Round 1, AGRoundList/AGRound/EndDate is set to a random date in the first 20 days of October
+// In Round 2, it is set to a random date in the first 20 days of December.
+//
+func Create_CollectionRound(collection_abbreviation string) *sifxml.CollectionRound {
+	ret := sifxml.CollectionRound{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("AGCollection", collection_abbreviation)
+	ret.SetProperty("CollectionYear", this_year())
+	for roundnumber := 1; roundnumber <= 2; roundnumber++ {
+		ret.AGRoundList().AddNew()
+		ret.AGRoundList().Last().SetProperty("RoundCode", fmt.Sprintf("%s %d", collection_abbreviation, roundnumber))
+		ret.AGRoundList().Last().SetProperty("RoundName", fmt.Sprintf("%s %d", agcollectiontype2name(collection_abbreviation), roundnumber))
+		ret.AGRoundList().Last().SetProperty("StartDate", fmt.Sprintf("%s-%02d-%02d", this_year(), roundnumber*2+5, rand.Intn(20)+1))
+		ret.AGRoundList().Last().SetProperty("DueDate", fmt.Sprintf("%s-%02d-%02d", this_year(), roundnumber*2+6, rand.Intn(20)+1))
+		ret.AGRoundList().Last().SetProperty("EndDate", fmt.Sprintf("%s-%02d-%02d", this_year(), roundnumber*2+8, rand.Intn(20)+1))
+	}
+
+	if out, ok := sifxml.CollectionRoundPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to CollectionRound: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+// Create CollectionRound objects for the currently supported AG Collections.
+//
+func Create_CollectionRounds() []*sifxml.CollectionRound {
+	ret := sifxml.CollectionRoundSlice()
+	for _, t := range AGCollection_types() {
+		round := Create_CollectionRound(t)
+		ret = append(ret, round)
+	}
+	return ret
+}
+
+// Create a CollectionStatus object, given the standard abbreviation for the collection, and the round number.
+// Presupposes that there are two rounds for each collection per year. The CollectionStatus is not linked
+// to any Collection objects submitted to HITS, as it is statically populated.
+//
+// * ReportingAuthority is set to "Middleton Primary School Reporting Authority".
+//
+// * ReportingAuthorityCommonwealthId is set to "1".
+//
+// * SubmittedBy is set to "John Smith".
+//
+// * SubmissionTimestamp is set to the first of either August or October, depending on the round number.
+//
+// * AGCollection is set to the collection_abbreviation value.
+//
+// * CollectionYear is set to the current year.
+//
+// * RoundCode is set to the collection abbreviation plus the round.
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/SubmittedRefId is set to an arbitrary GUID.
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/SIFRefId is set to a distinct arbitrary GUID.
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/HTTPStatusCode is set to "202".
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/ErrorText is set to "Accepted".
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/CommonwealthId is set to "101".
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/EntityName is set to "Middleton Primary School".
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/AGSubmissionStatusCode is set to "In Progress".
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList is given three rule entries.
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleCode is set to "WR-nnn", for nnn is 001 to 003.
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleComment is set to "Cannot be ignored because Components do not add up to Total - Fix"
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleResponse is set to "Rejected".
+//
+// * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleStatus is set to "Fail".
+//
+func Create_CollectionStatus(collection_abbreviation string, roundnumber int) *sifxml.CollectionStatus {
+	ret := sifxml.CollectionStatus{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("ReportingAuthority", "Middleton Primary School Reporting Authority")
+	ret.SetProperty("ReportingAuthorityCommonwealthId", "1")
+	ret.SetProperty("SubmittedBy", "John Smith")
+	ret.SetProperty("SubmissionTimestamp", fmt.Sprintf("%s-%02d-%02d", this_year(), roundnumber*2+6, 1))
+	ret.SetProperty("AGCollection", collection_abbreviation)
+	ret.SetProperty("CollectionYear", this_year())
+	ret.SetProperty("RoundCode", fmt.Sprintf("%s %d", collection_abbreviation, roundnumber))
+	ret.AGReportingObjectResponseList().AddNew()
+	ret.AGReportingObjectResponseList().Last().SetProperty("SubmittedRefId", create_GUID())
+	ret.AGReportingObjectResponseList().Last().SetProperty("SIFRefId", create_GUID())
+	ret.AGReportingObjectResponseList().Last().SetProperty("HTTPStatusCode", "202")
+	ret.AGReportingObjectResponseList().Last().SetProperty("ErrorText", "Accepted")
+	ret.AGReportingObjectResponseList().Last().SetProperty("CommonwealthId", "101")
+	ret.AGReportingObjectResponseList().Last().SetProperty("EntityName", "Middleton Primary School")
+	ret.AGReportingObjectResponseList().Last().SetProperty("AGSubmissionStatusCode", "In Progress")
+	for i := 1; i <= 3; i++ {
+		ret.AGReportingObjectResponseList().Last().AGRuleList().AddNew()
+		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleCode", fmt.Sprintf("WR-%03d", i))
+		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleComment", "Cannot be ignored because Components do not add up to Total - Fix")
+		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleResponse", "Rejected")
+		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleStatus", "Fail")
+	}
+
+	if out, ok := sifxml.CollectionStatusPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to CollectionStatus: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+// Create CollectionStatus objects for the currently supported AG Collections, and for each round
+// created in CollectionRounds.
+// Presupposes that there are two rounds for each collection per year.
+//
+func Create_CollectionStatuss() []*sifxml.CollectionStatus {
+	ret := sifxml.CollectionStatusSlice()
+	for _, t := range AGCollection_types() {
+		for roundnumber := 1; roundnumber <= 2; roundnumber++ {
+			status := Create_CollectionStatus(t, roundnumber)
+			ret = append(ret, status)
+		}
+	}
+	return ret
+}
