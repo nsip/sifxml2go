@@ -609,78 +609,6 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *AbstractContentElementType_BinaryData) Clone() (*AbstractContentElementType_BinaryData) {
-return reprint.This(t).(*AbstractContentElementType_BinaryData)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func AbstractContentElementType_BinaryDataPointer(value interface{}) (*AbstractContentElementType_BinaryData, bool) {
-switch t := value.(type) {
-        case *AbstractContentElementType_BinaryData:
-                return value.(*AbstractContentElementType_BinaryData), true
-        case AbstractContentElementType_BinaryData:
-                v, _ := value.(AbstractContentElementType_BinaryData)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to AbstractContentElementType_BinaryData\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *AbstractContentElementType_Reference) Clone() (*AbstractContentElementType_Reference) {
-return reprint.This(t).(*AbstractContentElementType_Reference)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func AbstractContentElementType_ReferencePointer(value interface{}) (*AbstractContentElementType_Reference, bool) {
-switch t := value.(type) {
-        case *AbstractContentElementType_Reference:
-                return value.(*AbstractContentElementType_Reference), true
-        case AbstractContentElementType_Reference:
-                v, _ := value.(AbstractContentElementType_Reference)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to AbstractContentElementType_Reference\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *AbstractContentElementType_TextData) Clone() (*AbstractContentElementType_TextData) {
-return reprint.This(t).(*AbstractContentElementType_TextData)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func AbstractContentElementType_TextDataPointer(value interface{}) (*AbstractContentElementType_TextData, bool) {
-switch t := value.(type) {
-        case *AbstractContentElementType_TextData:
-                return value.(*AbstractContentElementType_TextData), true
-        case AbstractContentElementType_TextData:
-                v, _ := value.(AbstractContentElementType_TextData)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to AbstractContentElementType_TextData\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *AbstractContentElementType_XMLData) Clone() (*AbstractContentElementType_XMLData) {
-return reprint.This(t).(*AbstractContentElementType_XMLData)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func AbstractContentElementType_XMLDataPointer(value interface{}) (*AbstractContentElementType_XMLData, bool) {
-switch t := value.(type) {
-        case *AbstractContentElementType_XMLData:
-                return value.(*AbstractContentElementType_XMLData), true
-        case AbstractContentElementType_XMLData:
-                v, _ := value.(AbstractContentElementType_XMLData)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to AbstractContentElementType_XMLData\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AccountCodeListType) Clone() (*AccountCodeListType) {
 return reprint.This(t).(*AccountCodeListType)
 }
@@ -1329,6 +1257,24 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *BinaryDataType) Clone() (*BinaryDataType) {
+return reprint.This(t).(*BinaryDataType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func BinaryDataTypePointer(value interface{}) (*BinaryDataType, bool) {
+switch t := value.(type) {
+        case *BinaryDataType:
+                return value.(*BinaryDataType), true
+        case BinaryDataType:
+                v, _ := value.(BinaryDataType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to BinaryDataType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CalendarDate) Clone() (*CalendarDate) {
 return reprint.This(t).(*CalendarDate)
 }
@@ -1869,6 +1815,24 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CreatedType) Clone() (*CreatedType) {
+return reprint.This(t).(*CreatedType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CreatedTypePointer(value interface{}) (*CreatedType, bool) {
+switch t := value.(type) {
+        case *CreatedType:
+                return value.(*CreatedType), true
+        case CreatedType:
+                v, _ := value.(CreatedType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CreatedType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CreationUserType) Clone() (*CreationUserType) {
 return reprint.This(t).(*CreationUserType)
 }
@@ -1883,6 +1847,24 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to CreationUserType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CreatorListType) Clone() (*CreatorListType) {
+return reprint.This(t).(*CreatorListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CreatorListTypePointer(value interface{}) (*CreatorListType, bool) {
+switch t := value.(type) {
+        case *CreatorListType:
+                return value.(*CreatorListType), true
+        case CreatorListType:
+                v, _ := value.(CreatorListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CreatorListType\n", t, value)
         }
         return nil, false
   }
@@ -3381,6 +3363,24 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *LifeCycleCreatorType) Clone() (*LifeCycleCreatorType) {
+return reprint.This(t).(*LifeCycleCreatorType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func LifeCycleCreatorTypePointer(value interface{}) (*LifeCycleCreatorType, bool) {
+switch t := value.(type) {
+        case *LifeCycleCreatorType:
+                return value.(*LifeCycleCreatorType), true
+        case LifeCycleCreatorType:
+                v, _ := value.(LifeCycleCreatorType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleCreatorType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LifeCycleType) Clone() (*LifeCycleType) {
 return reprint.This(t).(*LifeCycleType)
 }
@@ -3395,114 +3395,6 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *LifeCycleType_Created) Clone() (*LifeCycleType_Created) {
-return reprint.This(t).(*LifeCycleType_Created)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func LifeCycleType_CreatedPointer(value interface{}) (*LifeCycleType_Created, bool) {
-switch t := value.(type) {
-        case *LifeCycleType_Created:
-                return value.(*LifeCycleType_Created), true
-        case LifeCycleType_Created:
-                v, _ := value.(LifeCycleType_Created)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType_Created\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *LifeCycleType_Creator) Clone() (*LifeCycleType_Creator) {
-return reprint.This(t).(*LifeCycleType_Creator)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func LifeCycleType_CreatorPointer(value interface{}) (*LifeCycleType_Creator, bool) {
-switch t := value.(type) {
-        case *LifeCycleType_Creator:
-                return value.(*LifeCycleType_Creator), true
-        case LifeCycleType_Creator:
-                v, _ := value.(LifeCycleType_Creator)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType_Creator\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *LifeCycleType_Creators) Clone() (*LifeCycleType_Creators) {
-return reprint.This(t).(*LifeCycleType_Creators)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func LifeCycleType_CreatorsPointer(value interface{}) (*LifeCycleType_Creators, bool) {
-switch t := value.(type) {
-        case *LifeCycleType_Creators:
-                return value.(*LifeCycleType_Creators), true
-        case LifeCycleType_Creators:
-                v, _ := value.(LifeCycleType_Creators)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType_Creators\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *LifeCycleType_ModificationHistory) Clone() (*LifeCycleType_ModificationHistory) {
-return reprint.This(t).(*LifeCycleType_ModificationHistory)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func LifeCycleType_ModificationHistoryPointer(value interface{}) (*LifeCycleType_ModificationHistory, bool) {
-switch t := value.(type) {
-        case *LifeCycleType_ModificationHistory:
-                return value.(*LifeCycleType_ModificationHistory), true
-        case LifeCycleType_ModificationHistory:
-                v, _ := value.(LifeCycleType_ModificationHistory)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType_ModificationHistory\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *LifeCycleType_Modified) Clone() (*LifeCycleType_Modified) {
-return reprint.This(t).(*LifeCycleType_Modified)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func LifeCycleType_ModifiedPointer(value interface{}) (*LifeCycleType_Modified, bool) {
-switch t := value.(type) {
-        case *LifeCycleType_Modified:
-                return value.(*LifeCycleType_Modified), true
-        case LifeCycleType_Modified:
-                v, _ := value.(LifeCycleType_Modified)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType_Modified\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *LifeCycleType_TimeElements) Clone() (*LifeCycleType_TimeElements) {
-return reprint.This(t).(*LifeCycleType_TimeElements)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func LifeCycleType_TimeElementsPointer(value interface{}) (*LifeCycleType_TimeElements, bool) {
-switch t := value.(type) {
-        case *LifeCycleType_TimeElements:
-                return value.(*LifeCycleType_TimeElements), true
-        case LifeCycleType_TimeElements:
-                v, _ := value.(LifeCycleType_TimeElements)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType_TimeElements\n", t, value)
         }
         return nil, false
   }
@@ -3755,6 +3647,42 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to MediumOfInstructionType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ModifiedListType) Clone() (*ModifiedListType) {
+return reprint.This(t).(*ModifiedListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ModifiedListTypePointer(value interface{}) (*ModifiedListType, bool) {
+switch t := value.(type) {
+        case *ModifiedListType:
+                return value.(*ModifiedListType), true
+        case ModifiedListType:
+                v, _ := value.(ModifiedListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ModifiedListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ModifiedType) Clone() (*ModifiedType) {
+return reprint.This(t).(*ModifiedType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ModifiedTypePointer(value interface{}) (*ModifiedType, bool) {
+switch t := value.(type) {
+        case *ModifiedType:
+                return value.(*ModifiedType), true
+        case ModifiedType:
+                v, _ := value.(ModifiedType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ModifiedType\n", t, value)
         }
         return nil, false
   }
@@ -4983,6 +4911,24 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ReferenceDataType) Clone() (*ReferenceDataType) {
+return reprint.This(t).(*ReferenceDataType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ReferenceDataTypePointer(value interface{}) (*ReferenceDataType, bool) {
+switch t := value.(type) {
+        case *ReferenceDataType:
+                return value.(*ReferenceDataType), true
+        case ReferenceDataType:
+                v, _ := value.(ReferenceDataType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ReferenceDataType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReferralSourceType) Clone() (*ReferralSourceType) {
 return reprint.This(t).(*ReferralSourceType)
 }
@@ -5375,24 +5321,6 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to SIF_MetadataType\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *SIF_MetadataType_TimeElements) Clone() (*SIF_MetadataType_TimeElements) {
-return reprint.This(t).(*SIF_MetadataType_TimeElements)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func SIF_MetadataType_TimeElementsPointer(value interface{}) (*SIF_MetadataType_TimeElements, bool) {
-switch t := value.(type) {
-        case *SIF_MetadataType_TimeElements:
-                return value.(*SIF_MetadataType_TimeElements), true
-        case SIF_MetadataType_TimeElements:
-                v, _ := value.(SIF_MetadataType_TimeElements)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to SIF_MetadataType_TimeElements\n", t, value)
         }
         return nil, false
   }
@@ -5861,6 +5789,42 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to SourceObjectsType_SourceObject\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SpanGapListType) Clone() (*SpanGapListType) {
+return reprint.This(t).(*SpanGapListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SpanGapListTypePointer(value interface{}) (*SpanGapListType, bool) {
+switch t := value.(type) {
+        case *SpanGapListType:
+                return value.(*SpanGapListType), true
+        case SpanGapListType:
+                v, _ := value.(SpanGapListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SpanGapListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SpanGapType) Clone() (*SpanGapType) {
+return reprint.This(t).(*SpanGapType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SpanGapTypePointer(value interface{}) (*SpanGapType, bool) {
+switch t := value.(type) {
+        case *SpanGapType:
+                return value.(*SpanGapType), true
+        case SpanGapType:
+                v, _ := value.(SpanGapType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SpanGapType\n", t, value)
         }
         return nil, false
   }
@@ -7377,6 +7341,42 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TextDataType) Clone() (*TextDataType) {
+return reprint.This(t).(*TextDataType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TextDataTypePointer(value interface{}) (*TextDataType, bool) {
+switch t := value.(type) {
+        case *TextDataType:
+                return value.(*TextDataType), true
+        case TextDataType:
+                v, _ := value.(TextDataType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TextDataType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TimeElementListType) Clone() (*TimeElementListType) {
+return reprint.This(t).(*TimeElementListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TimeElementListTypePointer(value interface{}) (*TimeElementListType, bool) {
+switch t := value.(type) {
+        case *TimeElementListType:
+                return value.(*TimeElementListType), true
+        case TimeElementListType:
+                v, _ := value.(TimeElementListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TimeElementListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeElementType) Clone() (*TimeElementType) {
 return reprint.This(t).(*TimeElementType)
 }
@@ -7391,42 +7391,6 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeElementType\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *TimeElementType_SpanGap) Clone() (*TimeElementType_SpanGap) {
-return reprint.This(t).(*TimeElementType_SpanGap)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func TimeElementType_SpanGapPointer(value interface{}) (*TimeElementType_SpanGap, bool) {
-switch t := value.(type) {
-        case *TimeElementType_SpanGap:
-                return value.(*TimeElementType_SpanGap), true
-        case TimeElementType_SpanGap:
-                v, _ := value.(TimeElementType_SpanGap)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to TimeElementType_SpanGap\n", t, value)
-        }
-        return nil, false
-  }
-// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
-  func (t *TimeElementType_SpanGaps) Clone() (*TimeElementType_SpanGaps) {
-return reprint.This(t).(*TimeElementType_SpanGaps)
-}
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches X.
-  func TimeElementType_SpanGapsPointer(value interface{}) (*TimeElementType_SpanGaps, bool) {
-switch t := value.(type) {
-        case *TimeElementType_SpanGaps:
-                return value.(*TimeElementType_SpanGaps), true
-        case TimeElementType_SpanGaps:
-                v, _ := value.(TimeElementType_SpanGaps)
-                return &v, true
-        default:
-                fmt.Printf("Warning: cannot resolve %T (%v) to TimeElementType_SpanGaps\n", t, value)
         }
         return nil, false
   }
@@ -8039,6 +8003,24 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to WithdrawalType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *XMLDataType) Clone() (*XMLDataType) {
+return reprint.This(t).(*XMLDataType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func XMLDataTypePointer(value interface{}) (*XMLDataType, bool) {
+switch t := value.(type) {
+        case *XMLDataType:
+                return value.(*XMLDataType), true
+        case XMLDataType:
+                v, _ := value.(XMLDataType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to XMLDataType\n", t, value)
         }
         return nil, false
   }
@@ -9656,6 +9638,61 @@ func (t *CountryListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
+  func (t *CreatorListType) Append(value LifeCycleCreatorType) *CreatorListType {
+    
+        if t == nil {
+                t, _ = CreatorListTypePointer(CreatorListType{})
+        }
+        if t.Creator == nil {
+                t.Creator = make([]LifeCycleCreatorType, 0)
+        }
+        t.Creator = append(t.Creator, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CreatorListType) AddNew() *CreatorListType {
+        if t == nil {
+                t, _ = CreatorListTypePointer(CreatorListType{})
+        }
+        if t.Creator == nil {
+                t.Creator = make([]LifeCycleCreatorType, 0)
+        }
+        t.Creator = append(t.Creator, LifeCycleCreatorType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CreatorListType) Last() *LifeCycleCreatorType {
+  if t.Creator == nil {
+    t = t.AddNew()
+    }
+        return &(t.Creator[len(t.Creator)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *CreatorListType) Index(n int) (*LifeCycleCreatorType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.Creator == nil {
+    t = t.AddNew()
+    }
+        return &(t.Creator[n]), nil
+}
+
+// Length of the list.
+func (t *CreatorListType) Len() int {
+  if t.Creator == nil {
+    t = t.AddNew()
+    }
+        return len(t.Creator)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
   func (t *ElectronicIdListType) Append(value ElectronicIdType) *ElectronicIdListType {
     
         if t == nil {
@@ -11224,171 +11261,6 @@ func (t *LibraryTransactionListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LifeCycleType_Creators) Append(value LifeCycleType_Creator) *LifeCycleType_Creators {
-    
-        if t == nil {
-                t, _ = LifeCycleType_CreatorsPointer(LifeCycleType_Creators{})
-        }
-        if t.Creator == nil {
-                t.Creator = make([]LifeCycleType_Creator, 0)
-        }
-        t.Creator = append(t.Creator, value)
-        return t
-}
-
-// Appends an empty value to the list. This value can then be populated through accessors on Last().
-func (t *LifeCycleType_Creators) AddNew() *LifeCycleType_Creators {
-        if t == nil {
-                t, _ = LifeCycleType_CreatorsPointer(LifeCycleType_Creators{})
-        }
-        if t.Creator == nil {
-                t.Creator = make([]LifeCycleType_Creator, 0)
-        }
-        t.Creator = append(t.Creator, LifeCycleType_Creator{})
-        return t
-}
-
-// Retrieve the last value of the list. Calls AddNew() if the list is empty.
-func (t *LifeCycleType_Creators) Last() *LifeCycleType_Creator {
-  if t.Creator == nil {
-    t = t.AddNew()
-    }
-        return &(t.Creator[len(t.Creator)-1])
-}
-
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LifeCycleType_Creators) Index(n int) (*LifeCycleType_Creator, error) {
-  if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
-    }
-  if t.Creator == nil {
-    t = t.AddNew()
-    }
-        return &(t.Creator[n]), nil
-}
-
-// Length of the list.
-func (t *LifeCycleType_Creators) Len() int {
-  if t.Creator == nil {
-    t = t.AddNew()
-    }
-        return len(t.Creator)
-}
-
-
-
-// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-  func (t *LifeCycleType_ModificationHistory) Append(value LifeCycleType_Modified) *LifeCycleType_ModificationHistory {
-    
-        if t == nil {
-                t, _ = LifeCycleType_ModificationHistoryPointer(LifeCycleType_ModificationHistory{})
-        }
-        if t.Modified == nil {
-                t.Modified = make([]LifeCycleType_Modified, 0)
-        }
-        t.Modified = append(t.Modified, value)
-        return t
-}
-
-// Appends an empty value to the list. This value can then be populated through accessors on Last().
-func (t *LifeCycleType_ModificationHistory) AddNew() *LifeCycleType_ModificationHistory {
-        if t == nil {
-                t, _ = LifeCycleType_ModificationHistoryPointer(LifeCycleType_ModificationHistory{})
-        }
-        if t.Modified == nil {
-                t.Modified = make([]LifeCycleType_Modified, 0)
-        }
-        t.Modified = append(t.Modified, LifeCycleType_Modified{})
-        return t
-}
-
-// Retrieve the last value of the list. Calls AddNew() if the list is empty.
-func (t *LifeCycleType_ModificationHistory) Last() *LifeCycleType_Modified {
-  if t.Modified == nil {
-    t = t.AddNew()
-    }
-        return &(t.Modified[len(t.Modified)-1])
-}
-
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LifeCycleType_ModificationHistory) Index(n int) (*LifeCycleType_Modified, error) {
-  if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
-    }
-  if t.Modified == nil {
-    t = t.AddNew()
-    }
-        return &(t.Modified[n]), nil
-}
-
-// Length of the list.
-func (t *LifeCycleType_ModificationHistory) Len() int {
-  if t.Modified == nil {
-    t = t.AddNew()
-    }
-        return len(t.Modified)
-}
-
-
-
-// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-  func (t *LifeCycleType_TimeElements) Append(value TimeElementType) *LifeCycleType_TimeElements {
-    
-        if t == nil {
-                t, _ = LifeCycleType_TimeElementsPointer(LifeCycleType_TimeElements{})
-        }
-        if t.TimeElement == nil {
-                t.TimeElement = make([]TimeElementType, 0)
-        }
-        t.TimeElement = append(t.TimeElement, value)
-        return t
-}
-
-// Appends an empty value to the list. This value can then be populated through accessors on Last().
-func (t *LifeCycleType_TimeElements) AddNew() *LifeCycleType_TimeElements {
-        if t == nil {
-                t, _ = LifeCycleType_TimeElementsPointer(LifeCycleType_TimeElements{})
-        }
-        if t.TimeElement == nil {
-                t.TimeElement = make([]TimeElementType, 0)
-        }
-        t.TimeElement = append(t.TimeElement, TimeElementType{})
-        return t
-}
-
-// Retrieve the last value of the list. Calls AddNew() if the list is empty.
-func (t *LifeCycleType_TimeElements) Last() *TimeElementType {
-  if t.TimeElement == nil {
-    t = t.AddNew()
-    }
-        return &(t.TimeElement[len(t.TimeElement)-1])
-}
-
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LifeCycleType_TimeElements) Index(n int) (*TimeElementType, error) {
-  if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
-    }
-  if t.TimeElement == nil {
-    t = t.AddNew()
-    }
-        return &(t.TimeElement[n]), nil
-}
-
-// Length of the list.
-func (t *LifeCycleType_TimeElements) Len() int {
-  if t.TimeElement == nil {
-    t = t.AddNew()
-    }
-        return len(t.TimeElement)
-}
-
-
-
-// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
   func (t *LocalCodeListType) Append(value LocalCodeType) *LocalCodeListType {
     
         if t == nil {
@@ -11607,6 +11479,61 @@ func (t *MedicationListType) Len() int {
     t = t.AddNew()
     }
         return len(t.Medication)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *ModifiedListType) Append(value ModifiedType) *ModifiedListType {
+    
+        if t == nil {
+                t, _ = ModifiedListTypePointer(ModifiedListType{})
+        }
+        if t.Modified == nil {
+                t.Modified = make([]ModifiedType, 0)
+        }
+        t.Modified = append(t.Modified, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *ModifiedListType) AddNew() *ModifiedListType {
+        if t == nil {
+                t, _ = ModifiedListTypePointer(ModifiedListType{})
+        }
+        if t.Modified == nil {
+                t.Modified = make([]ModifiedType, 0)
+        }
+        t.Modified = append(t.Modified, ModifiedType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *ModifiedListType) Last() *ModifiedType {
+  if t.Modified == nil {
+    t = t.AddNew()
+    }
+        return &(t.Modified[len(t.Modified)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *ModifiedListType) Index(n int) (*ModifiedType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.Modified == nil {
+    t = t.AddNew()
+    }
+        return &(t.Modified[n]), nil
+}
+
+// Length of the list.
+func (t *ModifiedListType) Len() int {
+  if t.Modified == nil {
+    t = t.AddNew()
+    }
+        return len(t.Modified)
 }
 
 
@@ -13287,61 +13214,6 @@ func (t *SIF_ExtendedElementsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SIF_MetadataType_TimeElements) Append(value TimeElementType) *SIF_MetadataType_TimeElements {
-    
-        if t == nil {
-                t, _ = SIF_MetadataType_TimeElementsPointer(SIF_MetadataType_TimeElements{})
-        }
-        if t.TimeElement == nil {
-                t.TimeElement = make([]TimeElementType, 0)
-        }
-        t.TimeElement = append(t.TimeElement, value)
-        return t
-}
-
-// Appends an empty value to the list. This value can then be populated through accessors on Last().
-func (t *SIF_MetadataType_TimeElements) AddNew() *SIF_MetadataType_TimeElements {
-        if t == nil {
-                t, _ = SIF_MetadataType_TimeElementsPointer(SIF_MetadataType_TimeElements{})
-        }
-        if t.TimeElement == nil {
-                t.TimeElement = make([]TimeElementType, 0)
-        }
-        t.TimeElement = append(t.TimeElement, TimeElementType{})
-        return t
-}
-
-// Retrieve the last value of the list. Calls AddNew() if the list is empty.
-func (t *SIF_MetadataType_TimeElements) Last() *TimeElementType {
-  if t.TimeElement == nil {
-    t = t.AddNew()
-    }
-        return &(t.TimeElement[len(t.TimeElement)-1])
-}
-
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SIF_MetadataType_TimeElements) Index(n int) (*TimeElementType, error) {
-  if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
-    }
-  if t.TimeElement == nil {
-    t = t.AddNew()
-    }
-        return &(t.TimeElement[n]), nil
-}
-
-// Length of the list.
-func (t *SIF_MetadataType_TimeElements) Len() int {
-  if t.TimeElement == nil {
-    t = t.AddNew()
-    }
-        return len(t.TimeElement)
-}
-
-
-
-// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
   func (t *ScheduledTeacherListType) Append(value TeacherCoverType) *ScheduledTeacherListType {
     
         if t == nil {
@@ -13839,6 +13711,61 @@ func (t *SourceObjectsType) Len() int {
     t = t.AddNew()
     }
         return len(t.SourceObject)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *SpanGapListType) Append(value SpanGapType) *SpanGapListType {
+    
+        if t == nil {
+                t, _ = SpanGapListTypePointer(SpanGapListType{})
+        }
+        if t.SpanGap == nil {
+                t.SpanGap = make([]SpanGapType, 0)
+        }
+        t.SpanGap = append(t.SpanGap, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *SpanGapListType) AddNew() *SpanGapListType {
+        if t == nil {
+                t, _ = SpanGapListTypePointer(SpanGapListType{})
+        }
+        if t.SpanGap == nil {
+                t.SpanGap = make([]SpanGapType, 0)
+        }
+        t.SpanGap = append(t.SpanGap, SpanGapType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *SpanGapListType) Last() *SpanGapType {
+  if t.SpanGap == nil {
+    t = t.AddNew()
+    }
+        return &(t.SpanGap[len(t.SpanGap)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *SpanGapListType) Index(n int) (*SpanGapType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.SpanGap == nil {
+    t = t.AddNew()
+    }
+        return &(t.SpanGap[n]), nil
+}
+
+// Length of the list.
+func (t *SpanGapListType) Len() int {
+  if t.SpanGap == nil {
+    t = t.AddNew()
+    }
+        return len(t.SpanGap)
 }
 
 
@@ -15362,55 +15289,55 @@ func (t *TestDisruptionListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TimeElementType_SpanGaps) Append(value TimeElementType_SpanGap) *TimeElementType_SpanGaps {
+  func (t *TimeElementListType) Append(value TimeElementType) *TimeElementListType {
     
         if t == nil {
-                t, _ = TimeElementType_SpanGapsPointer(TimeElementType_SpanGaps{})
+                t, _ = TimeElementListTypePointer(TimeElementListType{})
         }
-        if t.SpanGap == nil {
-                t.SpanGap = make([]TimeElementType_SpanGap, 0)
+        if t.TimeElement == nil {
+                t.TimeElement = make([]TimeElementType, 0)
         }
-        t.SpanGap = append(t.SpanGap, value)
+        t.TimeElement = append(t.TimeElement, value)
         return t
 }
 
 // Appends an empty value to the list. This value can then be populated through accessors on Last().
-func (t *TimeElementType_SpanGaps) AddNew() *TimeElementType_SpanGaps {
+func (t *TimeElementListType) AddNew() *TimeElementListType {
         if t == nil {
-                t, _ = TimeElementType_SpanGapsPointer(TimeElementType_SpanGaps{})
+                t, _ = TimeElementListTypePointer(TimeElementListType{})
         }
-        if t.SpanGap == nil {
-                t.SpanGap = make([]TimeElementType_SpanGap, 0)
+        if t.TimeElement == nil {
+                t.TimeElement = make([]TimeElementType, 0)
         }
-        t.SpanGap = append(t.SpanGap, TimeElementType_SpanGap{})
+        t.TimeElement = append(t.TimeElement, TimeElementType{})
         return t
 }
 
 // Retrieve the last value of the list. Calls AddNew() if the list is empty.
-func (t *TimeElementType_SpanGaps) Last() *TimeElementType_SpanGap {
-  if t.SpanGap == nil {
+func (t *TimeElementListType) Last() *TimeElementType {
+  if t.TimeElement == nil {
     t = t.AddNew()
     }
-        return &(t.SpanGap[len(t.SpanGap)-1])
+        return &(t.TimeElement[len(t.TimeElement)-1])
 }
 
 // Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TimeElementType_SpanGaps) Index(n int) (*TimeElementType_SpanGap, error) {
+func (t *TimeElementListType) Index(n int) (*TimeElementType, error) {
   if (n >= t.Len() || n < 0) {
     return nil, errors.New("subscript out of range on list")
     }
-  if t.SpanGap == nil {
+  if t.TimeElement == nil {
     t = t.AddNew()
     }
-        return &(t.SpanGap[n]), nil
+        return &(t.TimeElement[n]), nil
 }
 
 // Length of the list.
-func (t *TimeElementType_SpanGaps) Len() int {
-  if t.SpanGap == nil {
+func (t *TimeElementListType) Len() int {
+  if t.TimeElement == nil {
     t = t.AddNew()
     }
-        return len(t.SpanGap)
+        return len(t.TimeElement)
 }
 
 
@@ -20915,7 +20842,7 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
         }
         switch key {
     case "BinaryData":
-    if v, ok:= AbstractContentElementType_BinaryDataPointer(value); ok {
+    if v, ok:= BinaryDataTypePointer(value); ok {
       n.abstractcontentelementtype.BinaryData = v
       }
     case "RefId":
@@ -20924,15 +20851,15 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
       n.abstractcontentelementtype.RefId = ((*RefIdType)(v))
       }
     case "Reference":
-    if v, ok:= AbstractContentElementType_ReferencePointer(value); ok {
+    if v, ok:= ReferenceDataTypePointer(value); ok {
       n.abstractcontentelementtype.Reference = v
       }
     case "TextData":
-    if v, ok:= AbstractContentElementType_TextDataPointer(value); ok {
+    if v, ok:= TextDataTypePointer(value); ok {
       n.abstractcontentelementtype.TextData = v
       }
     case "XMLData":
-    if v, ok:= AbstractContentElementType_XMLDataPointer(value); ok {
+    if v, ok:= XMLDataTypePointer(value); ok {
       n.abstractcontentelementtype.XMLData = v
       }
         default:
@@ -20942,9 +20869,9 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
 }
 
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType) BinaryData() *AbstractContentElementType_BinaryData {
+  func (s *AbstractContentElementType) BinaryData() *BinaryDataType {
     if s.abstractcontentelementtype.BinaryData == nil {
-     if v, ok:= AbstractContentElementType_BinaryDataPointer(AbstractContentElementType_BinaryData{}); ok {
+     if v, ok:= BinaryDataTypePointer(BinaryDataType{}); ok {
       s.abstractcontentelementtype.BinaryData = v
       }
       }
@@ -20968,9 +20895,9 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
     return s.abstractcontentelementtype.RefId == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType) Reference() *AbstractContentElementType_Reference {
+  func (s *AbstractContentElementType) Reference() *ReferenceDataType {
     if s.abstractcontentelementtype.Reference == nil {
-     if v, ok:= AbstractContentElementType_ReferencePointer(AbstractContentElementType_Reference{}); ok {
+     if v, ok:= ReferenceDataTypePointer(ReferenceDataType{}); ok {
       s.abstractcontentelementtype.Reference = v
       }
       }
@@ -20981,9 +20908,9 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
     return s.abstractcontentelementtype.Reference == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType) TextData() *AbstractContentElementType_TextData {
+  func (s *AbstractContentElementType) TextData() *TextDataType {
     if s.abstractcontentelementtype.TextData == nil {
-     if v, ok:= AbstractContentElementType_TextDataPointer(AbstractContentElementType_TextData{}); ok {
+     if v, ok:= TextDataTypePointer(TextDataType{}); ok {
       s.abstractcontentelementtype.TextData = v
       }
       }
@@ -20994,9 +20921,9 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
     return s.abstractcontentelementtype.TextData == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType) XMLData() *AbstractContentElementType_XMLData {
+  func (s *AbstractContentElementType) XMLData() *XMLDataType {
     if s.abstractcontentelementtype.XMLData == nil {
-     if v, ok:= AbstractContentElementType_XMLDataPointer(AbstractContentElementType_XMLData{}); ok {
+     if v, ok:= XMLDataTypePointer(XMLDataType{}); ok {
       s.abstractcontentelementtype.XMLData = v
       }
       }
@@ -21005,390 +20932,6 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
 // Returns whether the element value for XMLData is nil in the container AbstractContentElementType.
   func (s *AbstractContentElementType) XMLData_IsNil() bool {
     return s.abstractcontentelementtype.XMLData == nil
-    }
-
-// Set the value of a property to nil
-func (n *AbstractContentElementType_BinaryData) Unset(key string) *AbstractContentElementType_BinaryData {
-        switch key {
-  case "Description":
-   n.abstractcontentelementtype_binarydata.Description = nil
-  case "FileName":
-   n.abstractcontentelementtype_binarydata.FileName = nil
-  case "MIMEType":
-   n.abstractcontentelementtype_binarydata.MIMEType = nil
-  case "Value":
-   n.abstractcontentelementtype_binarydata.Value = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_BinaryData")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *AbstractContentElementType_BinaryData) SetProperties(props ...Prop) *AbstractContentElementType_BinaryData {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *AbstractContentElementType_BinaryData) SetProperty(key string, value interface{}) *AbstractContentElementType_BinaryData {
-        if n == nil {
-                n, _ = AbstractContentElementType_BinaryDataPointer(AbstractContentElementType_BinaryData{})
-        }
-        switch key {
-    case "Description":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_binarydata.Description = ((*String)(v))
-      }
-    case "FileName":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_binarydata.FileName = ((*String)(v))
-      }
-    case "MIMEType":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_binarydata.MIMEType = ((*String)(v))
-      }
-    case "Value":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_binarydata.Value = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_BinaryData")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_BinaryData) Description() *String {
-    if s.abstractcontentelementtype_binarydata.Description == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_binarydata.Description = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_binarydata.Description
-    }
-// Returns whether the element value for Description is nil in the container AbstractContentElementType_BinaryData.
-  func (s *AbstractContentElementType_BinaryData) Description_IsNil() bool {
-    return s.abstractcontentelementtype_binarydata.Description == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_BinaryData) FileName() *String {
-    if s.abstractcontentelementtype_binarydata.FileName == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_binarydata.FileName = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_binarydata.FileName
-    }
-// Returns whether the element value for FileName is nil in the container AbstractContentElementType_BinaryData.
-  func (s *AbstractContentElementType_BinaryData) FileName_IsNil() bool {
-    return s.abstractcontentelementtype_binarydata.FileName == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_BinaryData) MIMEType() *String {
-    if s.abstractcontentelementtype_binarydata.MIMEType == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_binarydata.MIMEType = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_binarydata.MIMEType
-    }
-// Returns whether the element value for MIMEType is nil in the container AbstractContentElementType_BinaryData.
-  func (s *AbstractContentElementType_BinaryData) MIMEType_IsNil() bool {
-    return s.abstractcontentelementtype_binarydata.MIMEType == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_BinaryData) Value() *String {
-    if s.abstractcontentelementtype_binarydata.Value == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_binarydata.Value = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_binarydata.Value
-    }
-// Returns whether the element value for Value is nil in the container AbstractContentElementType_BinaryData.
-  func (s *AbstractContentElementType_BinaryData) Value_IsNil() bool {
-    return s.abstractcontentelementtype_binarydata.Value == nil
-    }
-
-// Set the value of a property to nil
-func (n *AbstractContentElementType_Reference) Unset(key string) *AbstractContentElementType_Reference {
-        switch key {
-  case "Description":
-   n.abstractcontentelementtype_reference.Description = nil
-  case "MIMEType":
-   n.abstractcontentelementtype_reference.MIMEType = nil
-  case "URL":
-   n.abstractcontentelementtype_reference.URL = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_Reference")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *AbstractContentElementType_Reference) SetProperties(props ...Prop) *AbstractContentElementType_Reference {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *AbstractContentElementType_Reference) SetProperty(key string, value interface{}) *AbstractContentElementType_Reference {
-        if n == nil {
-                n, _ = AbstractContentElementType_ReferencePointer(AbstractContentElementType_Reference{})
-        }
-        switch key {
-    case "Description":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_reference.Description = ((*String)(v))
-      }
-    case "MIMEType":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_reference.MIMEType = ((*String)(v))
-      }
-    case "URL":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_reference.URL = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_Reference")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_Reference) Description() *String {
-    if s.abstractcontentelementtype_reference.Description == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_reference.Description = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_reference.Description
-    }
-// Returns whether the element value for Description is nil in the container AbstractContentElementType_Reference.
-  func (s *AbstractContentElementType_Reference) Description_IsNil() bool {
-    return s.abstractcontentelementtype_reference.Description == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_Reference) MIMEType() *String {
-    if s.abstractcontentelementtype_reference.MIMEType == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_reference.MIMEType = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_reference.MIMEType
-    }
-// Returns whether the element value for MIMEType is nil in the container AbstractContentElementType_Reference.
-  func (s *AbstractContentElementType_Reference) MIMEType_IsNil() bool {
-    return s.abstractcontentelementtype_reference.MIMEType == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_Reference) URL() *String {
-    if s.abstractcontentelementtype_reference.URL == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_reference.URL = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_reference.URL
-    }
-// Returns whether the element value for URL is nil in the container AbstractContentElementType_Reference.
-  func (s *AbstractContentElementType_Reference) URL_IsNil() bool {
-    return s.abstractcontentelementtype_reference.URL == nil
-    }
-
-// Set the value of a property to nil
-func (n *AbstractContentElementType_TextData) Unset(key string) *AbstractContentElementType_TextData {
-        switch key {
-  case "Description":
-   n.abstractcontentelementtype_textdata.Description = nil
-  case "FileName":
-   n.abstractcontentelementtype_textdata.FileName = nil
-  case "MIMEType":
-   n.abstractcontentelementtype_textdata.MIMEType = nil
-  case "Value":
-   n.abstractcontentelementtype_textdata.Value = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_TextData")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *AbstractContentElementType_TextData) SetProperties(props ...Prop) *AbstractContentElementType_TextData {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *AbstractContentElementType_TextData) SetProperty(key string, value interface{}) *AbstractContentElementType_TextData {
-        if n == nil {
-                n, _ = AbstractContentElementType_TextDataPointer(AbstractContentElementType_TextData{})
-        }
-        switch key {
-    case "Description":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_textdata.Description = ((*String)(v))
-      }
-    case "FileName":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_textdata.FileName = ((*String)(v))
-      }
-    case "MIMEType":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_textdata.MIMEType = ((*String)(v))
-      }
-    case "Value":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_textdata.Value = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_TextData")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_TextData) Description() *String {
-    if s.abstractcontentelementtype_textdata.Description == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_textdata.Description = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_textdata.Description
-    }
-// Returns whether the element value for Description is nil in the container AbstractContentElementType_TextData.
-  func (s *AbstractContentElementType_TextData) Description_IsNil() bool {
-    return s.abstractcontentelementtype_textdata.Description == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_TextData) FileName() *String {
-    if s.abstractcontentelementtype_textdata.FileName == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_textdata.FileName = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_textdata.FileName
-    }
-// Returns whether the element value for FileName is nil in the container AbstractContentElementType_TextData.
-  func (s *AbstractContentElementType_TextData) FileName_IsNil() bool {
-    return s.abstractcontentelementtype_textdata.FileName == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_TextData) MIMEType() *String {
-    if s.abstractcontentelementtype_textdata.MIMEType == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_textdata.MIMEType = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_textdata.MIMEType
-    }
-// Returns whether the element value for MIMEType is nil in the container AbstractContentElementType_TextData.
-  func (s *AbstractContentElementType_TextData) MIMEType_IsNil() bool {
-    return s.abstractcontentelementtype_textdata.MIMEType == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_TextData) Value() *String {
-    if s.abstractcontentelementtype_textdata.Value == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_textdata.Value = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_textdata.Value
-    }
-// Returns whether the element value for Value is nil in the container AbstractContentElementType_TextData.
-  func (s *AbstractContentElementType_TextData) Value_IsNil() bool {
-    return s.abstractcontentelementtype_textdata.Value == nil
-    }
-
-// Set the value of a property to nil
-func (n *AbstractContentElementType_XMLData) Unset(key string) *AbstractContentElementType_XMLData {
-        switch key {
-  case "Description":
-   n.abstractcontentelementtype_xmldata.Description = nil
-  case "Value":
-   n.abstractcontentelementtype_xmldata.Value = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_XMLData")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *AbstractContentElementType_XMLData) SetProperties(props ...Prop) *AbstractContentElementType_XMLData {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *AbstractContentElementType_XMLData) SetProperty(key string, value interface{}) *AbstractContentElementType_XMLData {
-        if n == nil {
-                n, _ = AbstractContentElementType_XMLDataPointer(AbstractContentElementType_XMLData{})
-        }
-        switch key {
-    case "Description":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_xmldata.Description = ((*String)(v))
-      }
-    case "Value":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.abstractcontentelementtype_xmldata.Value = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "AbstractContentElementType_XMLData")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_XMLData) Description() *String {
-    if s.abstractcontentelementtype_xmldata.Description == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_xmldata.Description = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_xmldata.Description
-    }
-// Returns whether the element value for Description is nil in the container AbstractContentElementType_XMLData.
-  func (s *AbstractContentElementType_XMLData) Description_IsNil() bool {
-    return s.abstractcontentelementtype_xmldata.Description == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *AbstractContentElementType_XMLData) Value() *String {
-    if s.abstractcontentelementtype_xmldata.Value == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.abstractcontentelementtype_xmldata.Value = ((*String)(v))
-      }
-      }
-      return s.abstractcontentelementtype_xmldata.Value
-    }
-// Returns whether the element value for Value is nil in the container AbstractContentElementType_XMLData.
-  func (s *AbstractContentElementType_XMLData) Value_IsNil() bool {
-    return s.abstractcontentelementtype_xmldata.Value == nil
     }
 
 // Set the value of a property to nil
@@ -25191,6 +24734,117 @@ func (n *BaseNameType) SetProperty(key string, value interface{}) *BaseNameType 
     }
 
 // Set the value of a property to nil
+func (n *BinaryDataType) Unset(key string) *BinaryDataType {
+        switch key {
+  case "Description":
+   n.binarydatatype.Description = nil
+  case "FileName":
+   n.binarydatatype.FileName = nil
+  case "MIMEType":
+   n.binarydatatype.MIMEType = nil
+  case "Value":
+   n.binarydatatype.Value = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "BinaryDataType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *BinaryDataType) SetProperties(props ...Prop) *BinaryDataType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *BinaryDataType) SetProperty(key string, value interface{}) *BinaryDataType {
+        if n == nil {
+                n, _ = BinaryDataTypePointer(BinaryDataType{})
+        }
+        switch key {
+    case "Description":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.binarydatatype.Description = ((*String)(v))
+      }
+    case "FileName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.binarydatatype.FileName = ((*String)(v))
+      }
+    case "MIMEType":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.binarydatatype.MIMEType = ((*String)(v))
+      }
+    case "Value":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.binarydatatype.Value = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "BinaryDataType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *BinaryDataType) Description() *String {
+    if s.binarydatatype.Description == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.binarydatatype.Description = ((*String)(v))
+      }
+      }
+      return s.binarydatatype.Description
+    }
+// Returns whether the element value for Description is nil in the container BinaryDataType.
+  func (s *BinaryDataType) Description_IsNil() bool {
+    return s.binarydatatype.Description == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *BinaryDataType) FileName() *String {
+    if s.binarydatatype.FileName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.binarydatatype.FileName = ((*String)(v))
+      }
+      }
+      return s.binarydatatype.FileName
+    }
+// Returns whether the element value for FileName is nil in the container BinaryDataType.
+  func (s *BinaryDataType) FileName_IsNil() bool {
+    return s.binarydatatype.FileName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *BinaryDataType) MIMEType() *String {
+    if s.binarydatatype.MIMEType == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.binarydatatype.MIMEType = ((*String)(v))
+      }
+      }
+      return s.binarydatatype.MIMEType
+    }
+// Returns whether the element value for MIMEType is nil in the container BinaryDataType.
+  func (s *BinaryDataType) MIMEType_IsNil() bool {
+    return s.binarydatatype.MIMEType == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *BinaryDataType) Value() *String {
+    if s.binarydatatype.Value == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.binarydatatype.Value = ((*String)(v))
+      }
+      }
+      return s.binarydatatype.Value
+    }
+// Returns whether the element value for Value is nil in the container BinaryDataType.
+  func (s *BinaryDataType) Value_IsNil() bool {
+    return s.binarydatatype.Value == nil
+    }
+
+// Set the value of a property to nil
 func (n *CalendarDate) Unset(key string) *CalendarDate {
         switch key {
   case "AdministratorAttendance":
@@ -28668,6 +28322,76 @@ func (n *CopyRightContainerType) SetProperty(key string, value interface{}) *Cop
 // Returns whether the element value for Holder is nil in the container CopyRightContainerType.
   func (s *CopyRightContainerType) Holder_IsNil() bool {
     return s.copyrightcontainertype.Holder == nil
+    }
+
+// Set the value of a property to nil
+func (n *CreatedType) Unset(key string) *CreatedType {
+        switch key {
+  case "Creators":
+   n.createdtype.Creators = nil
+  case "DateTime":
+   n.createdtype.DateTime = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "CreatedType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *CreatedType) SetProperties(props ...Prop) *CreatedType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *CreatedType) SetProperty(key string, value interface{}) *CreatedType {
+        if n == nil {
+                n, _ = CreatedTypePointer(CreatedType{})
+        }
+        switch key {
+    case "Creators":
+    if v, ok:= CreatorListTypePointer(value); ok {
+      n.createdtype.Creators = v
+      }
+    case "DateTime":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.createdtype.DateTime = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "CreatedType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *CreatedType) Creators() *CreatorListType {
+    if s.createdtype.Creators == nil {
+     if v, ok:= CreatorListTypePointer(CreatorListType{}); ok {
+      s.createdtype.Creators = v
+      }
+      }
+      return s.createdtype.Creators
+    }
+// Returns whether the element value for Creators is nil in the container CreatedType.
+  func (s *CreatedType) Creators_IsNil() bool {
+    return s.createdtype.Creators == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *CreatedType) DateTime() *String {
+    if s.createdtype.DateTime == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.createdtype.DateTime = ((*String)(v))
+      }
+      }
+      return s.createdtype.DateTime
+    }
+// Returns whether the element value for DateTime is nil in the container CreatedType.
+  func (s *CreatedType) DateTime_IsNil() bool {
+    return s.createdtype.DateTime == nil
     }
 
 // Set the value of a property to nil
@@ -38985,6 +38709,77 @@ func (n *LibraryTransactionType) SetProperty(key string, value interface{}) *Lib
     }
 
 // Set the value of a property to nil
+func (n *LifeCycleCreatorType) Unset(key string) *LifeCycleCreatorType {
+        switch key {
+  case "ID":
+   n.lifecyclecreatortype.ID = nil
+  case "Name":
+   n.lifecyclecreatortype.Name = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleCreatorType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *LifeCycleCreatorType) SetProperties(props ...Prop) *LifeCycleCreatorType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *LifeCycleCreatorType) SetProperty(key string, value interface{}) *LifeCycleCreatorType {
+        if n == nil {
+                n, _ = LifeCycleCreatorTypePointer(LifeCycleCreatorType{})
+        }
+        switch key {
+    case "ID":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.lifecyclecreatortype.ID = ((*String)(v))
+      }
+    case "Name":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.lifecyclecreatortype.Name = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleCreatorType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *LifeCycleCreatorType) ID() *String {
+    if s.lifecyclecreatortype.ID == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.lifecyclecreatortype.ID = ((*String)(v))
+      }
+      }
+      return s.lifecyclecreatortype.ID
+    }
+// Returns whether the element value for ID is nil in the container LifeCycleCreatorType.
+  func (s *LifeCycleCreatorType) ID_IsNil() bool {
+    return s.lifecyclecreatortype.ID == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *LifeCycleCreatorType) Name() *String {
+    if s.lifecyclecreatortype.Name == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.lifecyclecreatortype.Name = ((*String)(v))
+      }
+      }
+      return s.lifecyclecreatortype.Name
+    }
+// Returns whether the element value for Name is nil in the container LifeCycleCreatorType.
+  func (s *LifeCycleCreatorType) Name_IsNil() bool {
+    return s.lifecyclecreatortype.Name == nil
+    }
+
+// Set the value of a property to nil
 func (n *LifeCycleType) Unset(key string) *LifeCycleType {
         switch key {
   case "Created":
@@ -39015,15 +38810,15 @@ func (n *LifeCycleType) SetProperty(key string, value interface{}) *LifeCycleTyp
         }
         switch key {
     case "Created":
-    if v, ok:= LifeCycleType_CreatedPointer(value); ok {
+    if v, ok:= CreatedTypePointer(value); ok {
       n.lifecycletype.Created = v
       }
     case "ModificationHistory":
-    if v, ok:= LifeCycleType_ModificationHistoryPointer(value); ok {
+    if v, ok:= ModifiedListTypePointer(value); ok {
       n.lifecycletype.ModificationHistory = v
       }
     case "TimeElements":
-    if v, ok:= LifeCycleType_TimeElementsPointer(value); ok {
+    if v, ok:= TimeElementListTypePointer(value); ok {
       n.lifecycletype.TimeElements = v
       }
         default:
@@ -39033,9 +38828,9 @@ func (n *LifeCycleType) SetProperty(key string, value interface{}) *LifeCycleTyp
 }
 
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType) Created() *LifeCycleType_Created {
+  func (s *LifeCycleType) Created() *CreatedType {
     if s.lifecycletype.Created == nil {
-     if v, ok:= LifeCycleType_CreatedPointer(LifeCycleType_Created{}); ok {
+     if v, ok:= CreatedTypePointer(CreatedType{}); ok {
       s.lifecycletype.Created = v
       }
       }
@@ -39046,9 +38841,9 @@ func (n *LifeCycleType) SetProperty(key string, value interface{}) *LifeCycleTyp
     return s.lifecycletype.Created == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType) ModificationHistory() *LifeCycleType_ModificationHistory {
+  func (s *LifeCycleType) ModificationHistory() *ModifiedListType {
     if s.lifecycletype.ModificationHistory == nil {
-     if v, ok:= LifeCycleType_ModificationHistoryPointer(LifeCycleType_ModificationHistory{}); ok {
+     if v, ok:= ModifiedListTypePointer(ModifiedListType{}); ok {
       s.lifecycletype.ModificationHistory = v
       }
       }
@@ -39059,9 +38854,9 @@ func (n *LifeCycleType) SetProperty(key string, value interface{}) *LifeCycleTyp
     return s.lifecycletype.ModificationHistory == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType) TimeElements() *LifeCycleType_TimeElements {
+  func (s *LifeCycleType) TimeElements() *TimeElementListType {
     if s.lifecycletype.TimeElements == nil {
-     if v, ok:= LifeCycleType_TimeElementsPointer(LifeCycleType_TimeElements{}); ok {
+     if v, ok:= TimeElementListTypePointer(TimeElementListType{}); ok {
       s.lifecycletype.TimeElements = v
       }
       }
@@ -39070,238 +38865,6 @@ func (n *LifeCycleType) SetProperty(key string, value interface{}) *LifeCycleTyp
 // Returns whether the element value for TimeElements is nil in the container LifeCycleType.
   func (s *LifeCycleType) TimeElements_IsNil() bool {
     return s.lifecycletype.TimeElements == nil
-    }
-
-// Set the value of a property to nil
-func (n *LifeCycleType_Created) Unset(key string) *LifeCycleType_Created {
-        switch key {
-  case "Creators":
-   n.lifecycletype_created.Creators = nil
-  case "DateTime":
-   n.lifecycletype_created.DateTime = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleType_Created")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *LifeCycleType_Created) SetProperties(props ...Prop) *LifeCycleType_Created {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *LifeCycleType_Created) SetProperty(key string, value interface{}) *LifeCycleType_Created {
-        if n == nil {
-                n, _ = LifeCycleType_CreatedPointer(LifeCycleType_Created{})
-        }
-        switch key {
-    case "Creators":
-    if v, ok:= LifeCycleType_CreatorsPointer(value); ok {
-      n.lifecycletype_created.Creators = v
-      }
-    case "DateTime":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.lifecycletype_created.DateTime = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleType_Created")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType_Created) Creators() *LifeCycleType_Creators {
-    if s.lifecycletype_created.Creators == nil {
-     if v, ok:= LifeCycleType_CreatorsPointer(LifeCycleType_Creators{}); ok {
-      s.lifecycletype_created.Creators = v
-      }
-      }
-      return s.lifecycletype_created.Creators
-    }
-// Returns whether the element value for Creators is nil in the container LifeCycleType_Created.
-  func (s *LifeCycleType_Created) Creators_IsNil() bool {
-    return s.lifecycletype_created.Creators == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType_Created) DateTime() *String {
-    if s.lifecycletype_created.DateTime == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.lifecycletype_created.DateTime = ((*String)(v))
-      }
-      }
-      return s.lifecycletype_created.DateTime
-    }
-// Returns whether the element value for DateTime is nil in the container LifeCycleType_Created.
-  func (s *LifeCycleType_Created) DateTime_IsNil() bool {
-    return s.lifecycletype_created.DateTime == nil
-    }
-
-// Set the value of a property to nil
-func (n *LifeCycleType_Creator) Unset(key string) *LifeCycleType_Creator {
-        switch key {
-  case "ID":
-   n.lifecycletype_creator.ID = nil
-  case "Name":
-   n.lifecycletype_creator.Name = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleType_Creator")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *LifeCycleType_Creator) SetProperties(props ...Prop) *LifeCycleType_Creator {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *LifeCycleType_Creator) SetProperty(key string, value interface{}) *LifeCycleType_Creator {
-        if n == nil {
-                n, _ = LifeCycleType_CreatorPointer(LifeCycleType_Creator{})
-        }
-        switch key {
-    case "ID":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.lifecycletype_creator.ID = ((*String)(v))
-      }
-    case "Name":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.lifecycletype_creator.Name = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleType_Creator")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType_Creator) ID() *String {
-    if s.lifecycletype_creator.ID == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.lifecycletype_creator.ID = ((*String)(v))
-      }
-      }
-      return s.lifecycletype_creator.ID
-    }
-// Returns whether the element value for ID is nil in the container LifeCycleType_Creator.
-  func (s *LifeCycleType_Creator) ID_IsNil() bool {
-    return s.lifecycletype_creator.ID == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType_Creator) Name() *String {
-    if s.lifecycletype_creator.Name == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.lifecycletype_creator.Name = ((*String)(v))
-      }
-      }
-      return s.lifecycletype_creator.Name
-    }
-// Returns whether the element value for Name is nil in the container LifeCycleType_Creator.
-  func (s *LifeCycleType_Creator) Name_IsNil() bool {
-    return s.lifecycletype_creator.Name == nil
-    }
-
-// Set the value of a property to nil
-func (n *LifeCycleType_Modified) Unset(key string) *LifeCycleType_Modified {
-        switch key {
-  case "By":
-   n.lifecycletype_modified.By = nil
-  case "DateTime":
-   n.lifecycletype_modified.DateTime = nil
-  case "Description":
-   n.lifecycletype_modified.Description = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleType_Modified")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *LifeCycleType_Modified) SetProperties(props ...Prop) *LifeCycleType_Modified {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *LifeCycleType_Modified) SetProperty(key string, value interface{}) *LifeCycleType_Modified {
-        if n == nil {
-                n, _ = LifeCycleType_ModifiedPointer(LifeCycleType_Modified{})
-        }
-        switch key {
-    case "By":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.lifecycletype_modified.By = ((*String)(v))
-      }
-    case "DateTime":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.lifecycletype_modified.DateTime = ((*String)(v))
-      }
-    case "Description":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.lifecycletype_modified.Description = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "LifeCycleType_Modified")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType_Modified) By() *String {
-    if s.lifecycletype_modified.By == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.lifecycletype_modified.By = ((*String)(v))
-      }
-      }
-      return s.lifecycletype_modified.By
-    }
-// Returns whether the element value for By is nil in the container LifeCycleType_Modified.
-  func (s *LifeCycleType_Modified) By_IsNil() bool {
-    return s.lifecycletype_modified.By == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType_Modified) DateTime() *String {
-    if s.lifecycletype_modified.DateTime == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.lifecycletype_modified.DateTime = ((*String)(v))
-      }
-      }
-      return s.lifecycletype_modified.DateTime
-    }
-// Returns whether the element value for DateTime is nil in the container LifeCycleType_Modified.
-  func (s *LifeCycleType_Modified) DateTime_IsNil() bool {
-    return s.lifecycletype_modified.DateTime == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LifeCycleType_Modified) Description() *String {
-    if s.lifecycletype_modified.Description == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.lifecycletype_modified.Description = ((*String)(v))
-      }
-      }
-      return s.lifecycletype_modified.Description
-    }
-// Returns whether the element value for Description is nil in the container LifeCycleType_Modified.
-  func (s *LifeCycleType_Modified) Description_IsNil() bool {
-    return s.lifecycletype_modified.Description == nil
     }
 
 // Set the value of a property to nil
@@ -40490,6 +40053,97 @@ func (n *MediumOfInstructionType) SetProperty(key string, value interface{}) *Me
 // Returns whether the element value for OtherCodeList is nil in the container MediumOfInstructionType.
   func (s *MediumOfInstructionType) OtherCodeList_IsNil() bool {
     return s.mediumofinstructiontype.OtherCodeList == nil
+    }
+
+// Set the value of a property to nil
+func (n *ModifiedType) Unset(key string) *ModifiedType {
+        switch key {
+  case "By":
+   n.modifiedtype.By = nil
+  case "DateTime":
+   n.modifiedtype.DateTime = nil
+  case "Description":
+   n.modifiedtype.Description = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ModifiedType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *ModifiedType) SetProperties(props ...Prop) *ModifiedType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *ModifiedType) SetProperty(key string, value interface{}) *ModifiedType {
+        if n == nil {
+                n, _ = ModifiedTypePointer(ModifiedType{})
+        }
+        switch key {
+    case "By":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.modifiedtype.By = ((*String)(v))
+      }
+    case "DateTime":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.modifiedtype.DateTime = ((*String)(v))
+      }
+    case "Description":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.modifiedtype.Description = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ModifiedType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ModifiedType) By() *String {
+    if s.modifiedtype.By == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.modifiedtype.By = ((*String)(v))
+      }
+      }
+      return s.modifiedtype.By
+    }
+// Returns whether the element value for By is nil in the container ModifiedType.
+  func (s *ModifiedType) By_IsNil() bool {
+    return s.modifiedtype.By == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ModifiedType) DateTime() *String {
+    if s.modifiedtype.DateTime == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.modifiedtype.DateTime = ((*String)(v))
+      }
+      }
+      return s.modifiedtype.DateTime
+    }
+// Returns whether the element value for DateTime is nil in the container ModifiedType.
+  func (s *ModifiedType) DateTime_IsNil() bool {
+    return s.modifiedtype.DateTime == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ModifiedType) Description() *String {
+    if s.modifiedtype.Description == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.modifiedtype.Description = ((*String)(v))
+      }
+      }
+      return s.modifiedtype.Description
+    }
+// Returns whether the element value for Description is nil in the container ModifiedType.
+  func (s *ModifiedType) Description_IsNil() bool {
+    return s.modifiedtype.Description == nil
     }
 
 // Set the value of a property to nil
@@ -48349,6 +48003,97 @@ func (n *PurchasingItemType) SetProperty(key string, value interface{}) *Purchas
     }
 
 // Set the value of a property to nil
+func (n *ReferenceDataType) Unset(key string) *ReferenceDataType {
+        switch key {
+  case "Description":
+   n.referencedatatype.Description = nil
+  case "MIMEType":
+   n.referencedatatype.MIMEType = nil
+  case "URL":
+   n.referencedatatype.URL = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ReferenceDataType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *ReferenceDataType) SetProperties(props ...Prop) *ReferenceDataType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *ReferenceDataType) SetProperty(key string, value interface{}) *ReferenceDataType {
+        if n == nil {
+                n, _ = ReferenceDataTypePointer(ReferenceDataType{})
+        }
+        switch key {
+    case "Description":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.referencedatatype.Description = ((*String)(v))
+      }
+    case "MIMEType":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.referencedatatype.MIMEType = ((*String)(v))
+      }
+    case "URL":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.referencedatatype.URL = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ReferenceDataType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ReferenceDataType) Description() *String {
+    if s.referencedatatype.Description == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.referencedatatype.Description = ((*String)(v))
+      }
+      }
+      return s.referencedatatype.Description
+    }
+// Returns whether the element value for Description is nil in the container ReferenceDataType.
+  func (s *ReferenceDataType) Description_IsNil() bool {
+    return s.referencedatatype.Description == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ReferenceDataType) MIMEType() *String {
+    if s.referencedatatype.MIMEType == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.referencedatatype.MIMEType = ((*String)(v))
+      }
+      }
+      return s.referencedatatype.MIMEType
+    }
+// Returns whether the element value for MIMEType is nil in the container ReferenceDataType.
+  func (s *ReferenceDataType) MIMEType_IsNil() bool {
+    return s.referencedatatype.MIMEType == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ReferenceDataType) URL() *String {
+    if s.referencedatatype.URL == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.referencedatatype.URL = ((*String)(v))
+      }
+      }
+      return s.referencedatatype.URL
+    }
+// Returns whether the element value for URL is nil in the container ReferenceDataType.
+  func (s *ReferenceDataType) URL_IsNil() bool {
+    return s.referencedatatype.URL == nil
+    }
+
+// Set the value of a property to nil
 func (n *ReferralSourceType) Unset(key string) *ReferralSourceType {
         switch key {
   case "Code":
@@ -50207,7 +49952,7 @@ func (n *SIF_MetadataType) SetProperty(key string, value interface{}) *SIF_Metad
       n.sif_metadatatype.LifeCycle = v
       }
     case "TimeElements":
-    if v, ok:= SIF_MetadataType_TimeElementsPointer(value); ok {
+    if v, ok:= TimeElementListTypePointer(value); ok {
       n.sif_metadatatype.TimeElements = v
       }
         default:
@@ -50243,9 +49988,9 @@ func (n *SIF_MetadataType) SetProperty(key string, value interface{}) *SIF_Metad
     return s.sif_metadatatype.LifeCycle == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *SIF_MetadataType) TimeElements() *SIF_MetadataType_TimeElements {
+  func (s *SIF_MetadataType) TimeElements() *TimeElementListType {
     if s.sif_metadatatype.TimeElements == nil {
-     if v, ok:= SIF_MetadataType_TimeElementsPointer(SIF_MetadataType_TimeElements{}); ok {
+     if v, ok:= TimeElementListTypePointer(TimeElementListType{}); ok {
       s.sif_metadatatype.TimeElements = v
       }
       }
@@ -54096,6 +53841,157 @@ func (n *SourceObjectsType_SourceObject) SetProperty(key string, value interface
 // Returns whether the element value for Value is nil in the container SourceObjectsType_SourceObject.
   func (s *SourceObjectsType_SourceObject) Value_IsNil() bool {
     return s.sourceobjectstype_sourceobject.Value == nil
+    }
+
+// Set the value of a property to nil
+func (n *SpanGapType) Unset(key string) *SpanGapType {
+        switch key {
+  case "Code":
+   n.spangaptype.Code = nil
+  case "EndDateTime":
+   n.spangaptype.EndDateTime = nil
+  case "Name":
+   n.spangaptype.Name = nil
+  case "StartDateTime":
+   n.spangaptype.StartDateTime = nil
+  case "Type":
+   n.spangaptype.Type = nil
+  case "Value":
+   n.spangaptype.Value = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "SpanGapType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *SpanGapType) SetProperties(props ...Prop) *SpanGapType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *SpanGapType) SetProperty(key string, value interface{}) *SpanGapType {
+        if n == nil {
+                n, _ = SpanGapTypePointer(SpanGapType{})
+        }
+        switch key {
+    case "Code":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.spangaptype.Code = ((*String)(v))
+      }
+    case "EndDateTime":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.spangaptype.EndDateTime = ((*String)(v))
+      }
+    case "Name":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.spangaptype.Name = ((*String)(v))
+      }
+    case "StartDateTime":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.spangaptype.StartDateTime = ((*String)(v))
+      }
+    case "Type":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.spangaptype.Type = ((*String)(v))
+      }
+    case "Value":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.spangaptype.Value = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "SpanGapType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SpanGapType) Code() *String {
+    if s.spangaptype.Code == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.spangaptype.Code = ((*String)(v))
+      }
+      }
+      return s.spangaptype.Code
+    }
+// Returns whether the element value for Code is nil in the container SpanGapType.
+  func (s *SpanGapType) Code_IsNil() bool {
+    return s.spangaptype.Code == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SpanGapType) EndDateTime() *String {
+    if s.spangaptype.EndDateTime == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.spangaptype.EndDateTime = ((*String)(v))
+      }
+      }
+      return s.spangaptype.EndDateTime
+    }
+// Returns whether the element value for EndDateTime is nil in the container SpanGapType.
+  func (s *SpanGapType) EndDateTime_IsNil() bool {
+    return s.spangaptype.EndDateTime == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SpanGapType) Name() *String {
+    if s.spangaptype.Name == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.spangaptype.Name = ((*String)(v))
+      }
+      }
+      return s.spangaptype.Name
+    }
+// Returns whether the element value for Name is nil in the container SpanGapType.
+  func (s *SpanGapType) Name_IsNil() bool {
+    return s.spangaptype.Name == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SpanGapType) StartDateTime() *String {
+    if s.spangaptype.StartDateTime == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.spangaptype.StartDateTime = ((*String)(v))
+      }
+      }
+      return s.spangaptype.StartDateTime
+    }
+// Returns whether the element value for StartDateTime is nil in the container SpanGapType.
+  func (s *SpanGapType) StartDateTime_IsNil() bool {
+    return s.spangaptype.StartDateTime == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SpanGapType) Type() *String {
+    if s.spangaptype.Type == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.spangaptype.Type = ((*String)(v))
+      }
+      }
+      return s.spangaptype.Type
+    }
+// Returns whether the element value for Type is nil in the container SpanGapType.
+  func (s *SpanGapType) Type_IsNil() bool {
+    return s.spangaptype.Type == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SpanGapType) Value() *String {
+    if s.spangaptype.Value == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.spangaptype.Value = ((*String)(v))
+      }
+      }
+      return s.spangaptype.Value
+    }
+// Returns whether the element value for Value is nil in the container SpanGapType.
+  func (s *SpanGapType) Value_IsNil() bool {
+    return s.spangaptype.Value == nil
     }
 
 // Set the value of a property to nil
@@ -66353,6 +66249,117 @@ func (n *TestDisruptionType) SetProperty(key string, value interface{}) *TestDis
     }
 
 // Set the value of a property to nil
+func (n *TextDataType) Unset(key string) *TextDataType {
+        switch key {
+  case "Description":
+   n.textdatatype.Description = nil
+  case "FileName":
+   n.textdatatype.FileName = nil
+  case "MIMEType":
+   n.textdatatype.MIMEType = nil
+  case "Value":
+   n.textdatatype.Value = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "TextDataType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *TextDataType) SetProperties(props ...Prop) *TextDataType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *TextDataType) SetProperty(key string, value interface{}) *TextDataType {
+        if n == nil {
+                n, _ = TextDataTypePointer(TextDataType{})
+        }
+        switch key {
+    case "Description":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.textdatatype.Description = ((*String)(v))
+      }
+    case "FileName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.textdatatype.FileName = ((*String)(v))
+      }
+    case "MIMEType":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.textdatatype.MIMEType = ((*String)(v))
+      }
+    case "Value":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.textdatatype.Value = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "TextDataType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *TextDataType) Description() *String {
+    if s.textdatatype.Description == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.textdatatype.Description = ((*String)(v))
+      }
+      }
+      return s.textdatatype.Description
+    }
+// Returns whether the element value for Description is nil in the container TextDataType.
+  func (s *TextDataType) Description_IsNil() bool {
+    return s.textdatatype.Description == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *TextDataType) FileName() *String {
+    if s.textdatatype.FileName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.textdatatype.FileName = ((*String)(v))
+      }
+      }
+      return s.textdatatype.FileName
+    }
+// Returns whether the element value for FileName is nil in the container TextDataType.
+  func (s *TextDataType) FileName_IsNil() bool {
+    return s.textdatatype.FileName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *TextDataType) MIMEType() *String {
+    if s.textdatatype.MIMEType == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.textdatatype.MIMEType = ((*String)(v))
+      }
+      }
+      return s.textdatatype.MIMEType
+    }
+// Returns whether the element value for MIMEType is nil in the container TextDataType.
+  func (s *TextDataType) MIMEType_IsNil() bool {
+    return s.textdatatype.MIMEType == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *TextDataType) Value() *String {
+    if s.textdatatype.Value == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.textdatatype.Value = ((*String)(v))
+      }
+      }
+      return s.textdatatype.Value
+    }
+// Returns whether the element value for Value is nil in the container TextDataType.
+  func (s *TextDataType) Value_IsNil() bool {
+    return s.textdatatype.Value == nil
+    }
+
+// Set the value of a property to nil
 func (n *TimeElementType) Unset(key string) *TimeElementType {
         switch key {
   case "Code":
@@ -66413,7 +66420,7 @@ func (n *TimeElementType) SetProperty(key string, value interface{}) *TimeElemen
       n.timeelementtype.Name = ((*String)(v))
       }
     case "SpanGaps":
-    if v, ok:= TimeElementType_SpanGapsPointer(value); ok {
+    if v, ok:= SpanGapListTypePointer(value); ok {
       n.timeelementtype.SpanGaps = v
       }
     case "StartDateTime":
@@ -66490,9 +66497,9 @@ func (n *TimeElementType) SetProperty(key string, value interface{}) *TimeElemen
     return s.timeelementtype.Name == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *TimeElementType) SpanGaps() *TimeElementType_SpanGaps {
+  func (s *TimeElementType) SpanGaps() *SpanGapListType {
     if s.timeelementtype.SpanGaps == nil {
-     if v, ok:= TimeElementType_SpanGapsPointer(TimeElementType_SpanGaps{}); ok {
+     if v, ok:= SpanGapListTypePointer(SpanGapListType{}); ok {
       s.timeelementtype.SpanGaps = v
       }
       }
@@ -66540,157 +66547,6 @@ func (n *TimeElementType) SetProperty(key string, value interface{}) *TimeElemen
 // Returns whether the element value for Value is nil in the container TimeElementType.
   func (s *TimeElementType) Value_IsNil() bool {
     return s.timeelementtype.Value == nil
-    }
-
-// Set the value of a property to nil
-func (n *TimeElementType_SpanGap) Unset(key string) *TimeElementType_SpanGap {
-        switch key {
-  case "Code":
-   n.timeelementtype_spangap.Code = nil
-  case "EndDateTime":
-   n.timeelementtype_spangap.EndDateTime = nil
-  case "Name":
-   n.timeelementtype_spangap.Name = nil
-  case "StartDateTime":
-   n.timeelementtype_spangap.StartDateTime = nil
-  case "Type":
-   n.timeelementtype_spangap.Type = nil
-  case "Value":
-   n.timeelementtype_spangap.Value = nil
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "TimeElementType_SpanGap")
-        }
-        return n
-}
-
-// Set a sequence of properties
-func (n *TimeElementType_SpanGap) SetProperties(props ...Prop) *TimeElementType_SpanGap {
- 	for _, p := range props {
- 		n.SetProperty(p.Key, p.Value)
- 	}
- 	return n
- }
-
-// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
-// and the value does not match the codeset.
-func (n *TimeElementType_SpanGap) SetProperty(key string, value interface{}) *TimeElementType_SpanGap {
-        if n == nil {
-                n, _ = TimeElementType_SpanGapPointer(TimeElementType_SpanGap{})
-        }
-        switch key {
-    case "Code":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.timeelementtype_spangap.Code = ((*String)(v))
-      }
-    case "EndDateTime":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.timeelementtype_spangap.EndDateTime = ((*String)(v))
-      }
-    case "Name":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.timeelementtype_spangap.Name = ((*String)(v))
-      }
-    case "StartDateTime":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.timeelementtype_spangap.StartDateTime = ((*String)(v))
-      }
-    case "Type":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.timeelementtype_spangap.Type = ((*String)(v))
-      }
-    case "Value":
-    
-    if v, ok:= StringPointer(value); ok {
-      n.timeelementtype_spangap.Value = ((*String)(v))
-      }
-        default:
-          log.Fatalf("%s is not a valid element name in %s\n", key, "TimeElementType_SpanGap")
-        }
-        return n
-}
-
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *TimeElementType_SpanGap) Code() *String {
-    if s.timeelementtype_spangap.Code == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.timeelementtype_spangap.Code = ((*String)(v))
-      }
-      }
-      return s.timeelementtype_spangap.Code
-    }
-// Returns whether the element value for Code is nil in the container TimeElementType_SpanGap.
-  func (s *TimeElementType_SpanGap) Code_IsNil() bool {
-    return s.timeelementtype_spangap.Code == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *TimeElementType_SpanGap) EndDateTime() *String {
-    if s.timeelementtype_spangap.EndDateTime == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.timeelementtype_spangap.EndDateTime = ((*String)(v))
-      }
-      }
-      return s.timeelementtype_spangap.EndDateTime
-    }
-// Returns whether the element value for EndDateTime is nil in the container TimeElementType_SpanGap.
-  func (s *TimeElementType_SpanGap) EndDateTime_IsNil() bool {
-    return s.timeelementtype_spangap.EndDateTime == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *TimeElementType_SpanGap) Name() *String {
-    if s.timeelementtype_spangap.Name == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.timeelementtype_spangap.Name = ((*String)(v))
-      }
-      }
-      return s.timeelementtype_spangap.Name
-    }
-// Returns whether the element value for Name is nil in the container TimeElementType_SpanGap.
-  func (s *TimeElementType_SpanGap) Name_IsNil() bool {
-    return s.timeelementtype_spangap.Name == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *TimeElementType_SpanGap) StartDateTime() *String {
-    if s.timeelementtype_spangap.StartDateTime == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.timeelementtype_spangap.StartDateTime = ((*String)(v))
-      }
-      }
-      return s.timeelementtype_spangap.StartDateTime
-    }
-// Returns whether the element value for StartDateTime is nil in the container TimeElementType_SpanGap.
-  func (s *TimeElementType_SpanGap) StartDateTime_IsNil() bool {
-    return s.timeelementtype_spangap.StartDateTime == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *TimeElementType_SpanGap) Type() *String {
-    if s.timeelementtype_spangap.Type == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.timeelementtype_spangap.Type = ((*String)(v))
-      }
-      }
-      return s.timeelementtype_spangap.Type
-    }
-// Returns whether the element value for Type is nil in the container TimeElementType_SpanGap.
-  func (s *TimeElementType_SpanGap) Type_IsNil() bool {
-    return s.timeelementtype_spangap.Type == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *TimeElementType_SpanGap) Value() *String {
-    if s.timeelementtype_spangap.Value == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.timeelementtype_spangap.Value = ((*String)(v))
-      }
-      }
-      return s.timeelementtype_spangap.Value
-    }
-// Returns whether the element value for Value is nil in the container TimeElementType_SpanGap.
-  func (s *TimeElementType_SpanGap) Value_IsNil() bool {
-    return s.timeelementtype_spangap.Value == nil
     }
 
 // Set the value of a property to nil
@@ -72777,6 +72633,77 @@ func (n *WithdrawalType) SetProperty(key string, value interface{}) *WithdrawalT
 // Returns whether the element value for WithdrawalStartTime is nil in the container WithdrawalType.
   func (s *WithdrawalType) WithdrawalStartTime_IsNil() bool {
     return s.withdrawaltype.WithdrawalStartTime == nil
+    }
+
+// Set the value of a property to nil
+func (n *XMLDataType) Unset(key string) *XMLDataType {
+        switch key {
+  case "Description":
+   n.xmldatatype.Description = nil
+  case "Value":
+   n.xmldatatype.Value = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "XMLDataType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *XMLDataType) SetProperties(props ...Prop) *XMLDataType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *XMLDataType) SetProperty(key string, value interface{}) *XMLDataType {
+        if n == nil {
+                n, _ = XMLDataTypePointer(XMLDataType{})
+        }
+        switch key {
+    case "Description":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.xmldatatype.Description = ((*String)(v))
+      }
+    case "Value":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.xmldatatype.Value = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "XMLDataType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *XMLDataType) Description() *String {
+    if s.xmldatatype.Description == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.xmldatatype.Description = ((*String)(v))
+      }
+      }
+      return s.xmldatatype.Description
+    }
+// Returns whether the element value for Description is nil in the container XMLDataType.
+  func (s *XMLDataType) Description_IsNil() bool {
+    return s.xmldatatype.Description == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *XMLDataType) Value() *String {
+    if s.xmldatatype.Value == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.xmldatatype.Value = ((*String)(v))
+      }
+      }
+      return s.xmldatatype.Value
+    }
+// Returns whether the element value for Value is nil in the container XMLDataType.
+  func (s *XMLDataType) Value_IsNil() bool {
+    return s.xmldatatype.Value == nil
     }
 
 // Set the value of a property to nil

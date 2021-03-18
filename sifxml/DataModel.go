@@ -7,10 +7,55 @@ package sifxml
 
 type abstractcontentelementtype struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
-      XMLData *AbstractContentElementType_XMLData
-      TextData *AbstractContentElementType_TextData
-      BinaryData *AbstractContentElementType_BinaryData
-      Reference *AbstractContentElementType_Reference
+      XMLData *XMLDataType `xml:"XMLData,omitempty" json:"XMLData,omitempty"`
+      TextData *TextDataType `xml:"TextData,omitempty" json:"TextData,omitempty"`
+      BinaryData *BinaryDataType `xml:"BinaryData,omitempty" json:"BinaryData,omitempty"`
+      Reference *ReferenceDataType `xml:"Reference,omitempty" json:"Reference,omitempty"`
+      
+      }
+    
+    type XMLDataType struct {
+  xmldatatype 
+}
+
+type xmldatatype struct {
+          Description *String `xml:"Description,attr" json:"Description"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type TextDataType struct {
+  textdatatype 
+}
+
+type textdatatype struct {
+          MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
+      FileName *String `xml:"FileName,attr" json:"FileName"`
+      Description *String `xml:"Description,attr" json:"Description"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type BinaryDataType struct {
+  binarydatatype 
+}
+
+type binarydatatype struct {
+          MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
+      FileName *String `xml:"FileName,attr" json:"FileName"`
+      Description *String `xml:"Description,attr" json:"Description"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type ReferenceDataType struct {
+  referencedatatype 
+}
+
+type referencedatatype struct {
+        MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
+      Description *String `xml:"Description,attr" json:"Description"`
+      URL *String `xml:"URL" json:"URL"`
       
       }
     
@@ -3433,8 +3478,31 @@ type timeelementtype struct {
       Value *String `xml:"Value" json:"Value"`
       StartDateTime *String `xml:"StartDateTime,omitempty" json:"StartDateTime,omitempty"`
       EndDateTime *String `xml:"EndDateTime,omitempty" json:"EndDateTime,omitempty"`
-      SpanGaps *TimeElementType_SpanGaps
+      SpanGaps *SpanGapListType `xml:"SpanGaps,omitempty" json:"SpanGaps,omitempty"`
       IsCurrent *Bool `xml:"IsCurrent" json:"IsCurrent"`
+      
+      }
+    
+    type SpanGapListType struct {
+  spangaplisttype 
+}
+
+type spangaplisttype struct {
+        SpanGap []SpanGapType `xml:"SpanGap" json:"SpanGap"`
+      
+      }
+    
+    type SpanGapType struct {
+  spangaptype 
+}
+
+type spangaptype struct {
+        Type *String `xml:"Type" json:"Type"`
+      Code *String `xml:"Code" json:"Code"`
+      Name *String `xml:"Name" json:"Name"`
+      Value *String `xml:"Value" json:"Value"`
+      StartDateTime *String `xml:"StartDateTime,omitempty" json:"StartDateTime,omitempty"`
+      EndDateTime *String `xml:"EndDateTime,omitempty" json:"EndDateTime,omitempty"`
       
       }
     
@@ -3443,9 +3511,58 @@ type timeelementtype struct {
 }
 
 type lifecycletype struct {
-      Created *LifeCycleType_Created
-      ModificationHistory *LifeCycleType_ModificationHistory
-      TimeElements *LifeCycleType_TimeElements
+        Created *CreatedType `xml:"Created,omitempty" json:"Created,omitempty"`
+      ModificationHistory *ModifiedListType `xml:"ModificationHistory,omitempty" json:"ModificationHistory,omitempty"`
+      TimeElements *TimeElementListType `xml:"TimeElements,omitempty" json:"TimeElements,omitempty"`
+      
+      }
+    
+    type ModifiedListType struct {
+  modifiedlisttype 
+}
+
+type modifiedlisttype struct {
+        Modified []ModifiedType `xml:"Modified" json:"Modified"`
+      
+      }
+    
+    type ModifiedType struct {
+  modifiedtype 
+}
+
+type modifiedtype struct {
+        By *String `xml:"By" json:"By"`
+      DateTime *String `xml:"DateTime" json:"DateTime"`
+      Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
+      
+      }
+    
+    type CreatedType struct {
+  createdtype 
+}
+
+type createdtype struct {
+        DateTime *String `xml:"DateTime" json:"DateTime"`
+      Creators *CreatorListType `xml:"Creators,omitempty" json:"Creators,omitempty"`
+      
+      }
+    
+    type CreatorListType struct {
+  creatorlisttype 
+}
+
+type creatorlisttype struct {
+        Creator []LifeCycleCreatorType `xml:"Creator" json:"Creator"`
+      
+      }
+    
+    type LifeCycleCreatorType struct {
+  lifecyclecreatortype 
+}
+
+type lifecyclecreatortype struct {
+        Name *String `xml:"Name" json:"Name"`
+      ID *String `xml:"ID" json:"ID"`
       
       }
     
@@ -3529,49 +3646,21 @@ type sif_extendedelementstype struct {
 }
 
 type sif_metadatatype struct {
-      TimeElements *SIF_MetadataType_TimeElements
+        TimeElements *TimeElementListType `xml:"TimeElements,omitempty" json:"TimeElements,omitempty"`
       LifeCycle *LifeCycleType `xml:"LifeCycle,omitempty" json:"LifeCycle,omitempty"`
       EducationFilter *EducationFilterType `xml:"EducationFilter,omitempty" json:"EducationFilter,omitempty"`
       
       }
-    type AbstractContentElementType_XMLData struct {
-  abstractcontentelementtype_xmldata 
+    
+    type TimeElementListType struct {
+  timeelementlisttype 
 }
 
-type abstractcontentelementtype_xmldata struct {
-      Description *String `xml:"Description,attr" json:"Description"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type AbstractContentElementType_TextData struct {
-  abstractcontentelementtype_textdata 
-}
-
-type abstractcontentelementtype_textdata struct {
-      MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
-      FileName *String `xml:"FileName,attr" json:"FileName"`
-      Description *String `xml:"Description,attr" json:"Description"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type AbstractContentElementType_BinaryData struct {
-  abstractcontentelementtype_binarydata 
-}
-
-type abstractcontentelementtype_binarydata struct {
-      MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
-      FileName *String `xml:"FileName,attr" json:"FileName"`
-      Description *String `xml:"Description,attr" json:"Description"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type AbstractContentElementType_Reference struct {
-  abstractcontentelementtype_reference 
-}
-
-type abstractcontentelementtype_reference struct {
-      MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
-      Description *String `xml:"Description,attr" json:"Description"`
-       URL *String `xml:"URL" json:"URL"`
-}
-type PersonInvolvementType_PersonRefId struct {
+type timeelementlisttype struct {
+        TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
+      
+      }
+    type PersonInvolvementType_PersonRefId struct {
   personinvolvementtype_personrefid 
 }
 
@@ -3628,35 +3717,6 @@ type locationtype_locationrefid struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
-type TimeElementType_SpanGaps struct {
-  timeelementtype_spangaps 
-}
-
-type timeelementtype_spangaps struct {
-      SpanGap []TimeElementType_SpanGap `xml:"SpanGap" json:"SpanGap"`
-}
-type LifeCycleType_Created struct {
-  lifecycletype_created 
-}
-
-type lifecycletype_created struct {
-       DateTime *String `xml:"DateTime" json:"DateTime"`
-      Creators *LifeCycleType_Creators
-}
-type LifeCycleType_ModificationHistory struct {
-  lifecycletype_modificationhistory 
-}
-
-type lifecycletype_modificationhistory struct {
-      Modified []LifeCycleType_Modified `xml:"Modified" json:"Modified"`
-}
-type LifeCycleType_TimeElements struct {
-  lifecycletype_timeelements 
-}
-
-type lifecycletype_timeelements struct {
-       TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
-}
 type OtherCodeListType_OtherCode struct {
   othercodelisttype_othercode 
 }
@@ -3674,49 +3734,6 @@ type sif_extendedelementstype_sif_extendedelement struct {
       Type *String `xml:"Type,attr" json:"Type"`
       SIF_Action *String `xml:"SIF_Action,attr" json:"SIF_Action"`
       Value *ExtendedContentType `xml:",chardata" json:"value"`
-}
-type SIF_MetadataType_TimeElements struct {
-  sif_metadatatype_timeelements 
-}
-
-type sif_metadatatype_timeelements struct {
-       TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
-}
-type TimeElementType_SpanGap struct {
-  timeelementtype_spangap 
-}
-
-type timeelementtype_spangap struct {
-       Type *String `xml:"Type" json:"Type"`
-       Code *String `xml:"Code" json:"Code"`
-       Name *String `xml:"Name" json:"Name"`
-       Value *String `xml:"Value" json:"Value"`
-       StartDateTime *String `xml:"StartDateTime,omitempty" json:"StartDateTime,omitempty"`
-       EndDateTime *String `xml:"EndDateTime,omitempty" json:"EndDateTime,omitempty"`
-}
-type LifeCycleType_Creators struct {
-  lifecycletype_creators 
-}
-
-type lifecycletype_creators struct {
-      Creator []LifeCycleType_Creator `xml:"Creator" json:"Creator"`
-}
-type LifeCycleType_Modified struct {
-  lifecycletype_modified 
-}
-
-type lifecycletype_modified struct {
-       By *String `xml:"By" json:"By"`
-       DateTime *String `xml:"DateTime" json:"DateTime"`
-       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
-}
-type LifeCycleType_Creator struct {
-  lifecycletype_creator 
-}
-
-type lifecycletype_creator struct {
-       Name *String `xml:"Name" json:"Name"`
-       ID *String `xml:"ID" json:"ID"`
 }
 type String string
 type Int int

@@ -1618,10 +1618,39 @@ type PersonPicture_PictureSource {
     
     type AbstractContentElementType {
         RefId: RefIdType 
-      XMLData: AbstractContentElementType_XMLData OPT
-      TextData: AbstractContentElementType_TextData OPT
-      BinaryData: AbstractContentElementType_BinaryData OPT
-      Reference: AbstractContentElementType_Reference OPT
+      XMLData: XMLDataType OPT 
+      TextData: TextDataType OPT 
+      BinaryData: BinaryDataType OPT 
+      Reference: ReferenceDataType OPT 
+      
+      }
+    
+    type XMLDataType {
+          Description: String 
+      
+        Value: String 
+      }
+    
+    type TextDataType {
+          MIMEType: String 
+      FileName: String 
+      Description: String 
+      
+        Value: String 
+      }
+    
+    type BinaryDataType {
+          MIMEType: String 
+      FileName: String 
+      Description: String 
+      
+        Value: String 
+      }
+    
+    type ReferenceDataType {
+        MIMEType: String 
+      Description: String 
+      URL: String 
       
       }
     
@@ -3824,15 +3853,59 @@ type PersonPicture_PictureSource {
       Value: String 
       StartDateTime: String OPT 
       EndDateTime: String OPT 
-      SpanGaps: TimeElementType_SpanGaps OPT
+      SpanGaps: SpanGapListType OPT 
       IsCurrent: bool 
       
       }
     
+    type SpanGapListType {
+        SpanGap: [SpanGapType] 
+      
+      }
+    
+    type SpanGapType {
+        Type: String 
+      Code: String 
+      Name: String 
+      Value: String 
+      StartDateTime: String OPT 
+      EndDateTime: String OPT 
+      
+      }
+    
     type LifeCycleType {
-      Created: LifeCycleType_Created OPT
-      ModificationHistory: LifeCycleType_ModificationHistory OPT
-      TimeElements: LifeCycleType_TimeElements OPT
+        Created: CreatedType OPT 
+      ModificationHistory: ModifiedListType OPT 
+      TimeElements: TimeElementListType OPT 
+      
+      }
+    
+    type ModifiedListType {
+        Modified: [ModifiedType] 
+      
+      }
+    
+    type ModifiedType {
+        By: String 
+      DateTime: String 
+      Description: String OPT 
+      
+      }
+    
+    type CreatedType {
+        DateTime: String 
+      Creators: CreatorListType OPT 
+      
+      }
+    
+    type CreatorListType {
+        Creator: [LifeCycleCreatorType] 
+      
+      }
+    
+    type LifeCycleCreatorType {
+        Name: String 
+      ID: String 
       
       }
     
@@ -3880,33 +3953,17 @@ type PersonPicture_PictureSource {
       }
     
     type SIF_MetadataType {
-      TimeElements: SIF_MetadataType_TimeElements OPT
+        TimeElements: TimeElementListType OPT 
       LifeCycle: LifeCycleType OPT 
       EducationFilter: EducationFilterType OPT 
       
       }
-    type AbstractContentElementType_XMLData {
-      Description: String 
-      Value: String 
-}
-type AbstractContentElementType_TextData {
-      MIMEType: String 
-      FileName: String 
-      Description: String 
-      Value: String 
-}
-type AbstractContentElementType_BinaryData {
-      MIMEType: String 
-      FileName: String 
-      Description: String 
-      Value: String 
-}
-type AbstractContentElementType_Reference {
-      MIMEType: String 
-      Description: String 
-       URL: String 
-}
-type PersonInvolvementType_PersonRefId {
+    
+    type TimeElementListType {
+        TimeElement: [TimeElementType] 
+      
+      }
+    type PersonInvolvementType_PersonRefId {
       SIF_RefObject: String 
       Value: String 
 }
@@ -3935,19 +3992,6 @@ type LocationType_LocationRefId {
       SIF_RefObject: String 
       Value: String 
 }
-type TimeElementType_SpanGaps {
-      SpanGap: [TimeElementType_SpanGap] 
-}
-type LifeCycleType_Created {
-       DateTime: String 
-      Creators: LifeCycleType_Creators OPT
-}
-type LifeCycleType_ModificationHistory {
-      Modified: [LifeCycleType_Modified] 
-}
-type LifeCycleType_TimeElements {
-       TimeElement: [TimeElementType] 
-}
 type OtherCodeListType_OtherCode {
       Codeset: String 
       Value: String 
@@ -3957,27 +4001,4 @@ type SIF_ExtendedElementsType_SIF_ExtendedElement {
       Type: String 
       SIF_Action: String 
       Value: ExtendedContentType 
-}
-type SIF_MetadataType_TimeElements {
-       TimeElement: [TimeElementType] 
-}
-type TimeElementType_SpanGap {
-       Type: String 
-       Code: String 
-       Name: String 
-       Value: String 
-       StartDateTime: String OPT 
-       EndDateTime: String OPT 
-}
-type LifeCycleType_Creators {
-      Creator: [LifeCycleType_Creator] 
-}
-type LifeCycleType_Modified {
-       By: String 
-       DateTime: String 
-       Description: String OPT 
-}
-type LifeCycleType_Creator {
-       Name: String 
-       ID: String 
 }
