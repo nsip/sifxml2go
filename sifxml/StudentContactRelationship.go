@@ -18,6 +18,8 @@ type studentcontactrelationship struct {
       MainlySpeaksEnglishAtHome *AUCodeSetsYesOrNoCategoryType `xml:"MainlySpeaksEnglishAtHome,omitempty" json:"MainlySpeaksEnglishAtHome,omitempty"`
       ContactSequence *Int `xml:"ContactSequence,omitempty" json:"ContactSequence,omitempty"`
       ContactSequenceSource *AUCodeSetsSourceCodeTypeType `xml:"ContactSequenceSource,omitempty" json:"ContactSequenceSource,omitempty"`
+      ContactMethod *AUCodeSetsContactMethodType `xml:"ContactMethod,omitempty" json:"ContactMethod,omitempty"`
+      FeePercentage *StudentContactFeePercentageType `xml:"FeePercentage,omitempty" json:"FeePercentage,omitempty"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`

@@ -340,6 +340,25 @@ type PersonPicture_PictureSource {
       Value: URIOrBinaryType 
 }
 
+    type PersonPrivacyObligationDocument {
+        RefId: RefIdType 
+      ParentRefId: String 
+      ParentObjectTypeName: String 
+      SchoolYear: SchoolYearType 
+      StartDate: String OPT 
+      EndDate: String OPT 
+      SettingLocationList: SettingLocationListType OPT 
+      ContactForRequestsRefId: String 
+      ContactForRequestsObjectTypeName: String 
+      ConsentToSharingOfData: ConsentToSharingOfDataContainerType 
+      PermissionToParticipateList: PermissionToParticipateListType 
+      ApplicableLawList: ApplicableLawListType OPT 
+      LocalCodeList: LocalCodeListType OPT 
+      SIF_Metadata: SIF_MetadataType OPT 
+      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
+      
+      }
+    
     type PersonalisedPlan {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -470,6 +489,7 @@ type PersonPicture_PictureSource {
       LocalId: LocalIdType OPT 
       StateProvinceId: StateProvinceIdType OPT 
       CommonwealthId: String OPT 
+      ParentCommonwealthId: String OPT 
       ACARAId: String OPT 
       OtherIdList: OtherIdListType OPT 
       SchoolName: String 
@@ -690,6 +710,9 @@ type PersonPicture_PictureSource {
       EmploymentType: AUCodeSetsEmploymentTypeType OPT 
       SchoolEducationalLevel: EducationalLevelType OPT 
       NonSchoolEducation: AUCodeSetsNonSchoolEducationType OPT 
+      Employment: xs:normalizedString OPT 
+      Workplace: xs:normalizedString OPT 
+      WorkingWithChildrenCheck: WorkingWithChildrenCheckType OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -707,6 +730,8 @@ type PersonPicture_PictureSource {
       MainlySpeaksEnglishAtHome: AUCodeSetsYesOrNoCategoryType OPT 
       ContactSequence: int OPT 
       ContactSequenceSource: AUCodeSetsSourceCodeTypeType OPT 
+      ContactMethod: AUCodeSetsContactMethodType OPT 
+      FeePercentage: StudentContactFeePercentageType OPT 
       SchoolInfoRefId: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
@@ -750,6 +775,8 @@ type PersonPicture_PictureSource {
       GradingScoreList: GradingScoreListType OPT 
       Grade: GradeType OPT 
       TeacherJudgement: String OPT 
+      TermSpan: AUCodeSetsSessionTypeType OPT 
+      SchoolYear: SchoolYearType OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -821,6 +848,7 @@ type PersonPicture_PictureSource {
       MedicalAlertMessages: MedicalAlertMessagesType OPT 
       LocalId: LocalIdType 
       StateProvinceId: StateProvinceIdType OPT 
+      NationalUniqueStudentIdentifier: String OPT 
       ElectronicIdList: ElectronicIdListType OPT 
       OtherIdList: OtherIdListType OPT 
       PersonInfo: PersonInfoType 
@@ -838,6 +866,7 @@ type PersonPicture_PictureSource {
       IntegrationAide: AUCodeSetsYesOrNoCategoryType OPT 
       EducationSupport: AUCodeSetsYesOrNoCategoryType OPT 
       HomeSchooledStudent: AUCodeSetsYesOrNoCategoryType OPT 
+      IndependentStudent: AUCodeSetsYesOrNoCategoryType OPT 
       Sensitive: AUCodeSetsYesOrNoCategoryType OPT 
       OfflineDelivery: AUCodeSetsYesOrNoCategoryType OPT 
       ESLSupport: AUCodeSetsYesOrNoCategoryType OPT 
@@ -858,6 +887,7 @@ type PersonPicture_PictureSource {
       LocalId: LocalIdType OPT 
       TimeFrame: AUCodeSetsEnrollmentTimeFrameType 
       SchoolYear: SchoolYearType 
+      IntendedEntryDate: String OPT 
       EntryDate: String 
       EntryType: StudentEntryContainerType OPT 
       YearLevel: YearLevelType OPT 
@@ -1142,6 +1172,7 @@ type PersonPicture_PictureSource {
       SymptomList: SymptomListType OPT 
       DailyManagement: String OPT 
       EmergencyManagement: String OPT 
+      PreferredHospital: String OPT 
       EmergencyResponsePlan: String OPT 
       Trigger: String OPT 
       ConfidentialFlag: AUCodeSetsYesOrNoCategoryType OPT 
@@ -1245,6 +1276,7 @@ type PersonPicture_PictureSource {
       RoundCode: String 
       SoftwareVendorInfo: SoftwareVendorInfoContainerType OPT 
       CensusReportingList: CensusReportingListType OPT 
+      LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
@@ -1304,6 +1336,9 @@ type PersonPicture_PictureSource {
       BillingName: String OPT 
       BillingNote: String OPT 
       Discount: String OPT 
+      BSB: String OPT 
+      AccountNumber: String OPT 
+      AccountName: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -2205,6 +2240,128 @@ type PersonPicture_PictureSource {
       
       }
     
+    type SettingLocationListType {
+        SettingLocation: [SettingLocationType] 
+      
+      }
+    
+    type SettingLocationType {
+        SettingLocationName: String OPT 
+      SettingLocationType: String OPT 
+      SettingLocationRefId: String OPT 
+      SettingLocationObjectTypeName: String 
+      
+      }
+    
+    type ConsentToSharingOfDataContainerType {
+        DataDomainObligationList: DataDomainObligationListType OPT 
+      NeverShareWithList: NeverShareWithListType OPT 
+      
+      }
+    
+    type DataDomainObligationListType {
+        DataDomainObligation: [DataDomainObligationType] 
+      
+      }
+    
+    type DataDomainObligationType {
+        DataDomain: String 
+      DomainComments: String 
+      ShareWithList: ShareWithListType OPT 
+      DoNotShareWithList: DoNotShareWithListType OPT 
+      
+      }
+    
+    type ShareWithListType {
+        ShareWith: [ShareWithType] 
+      
+      }
+    
+    type ShareWithType {
+        ShareWithParty: String 
+      ShareWithRefId: String OPT 
+      ShareWithObjectTypeName: String OPT 
+      ShareWithLocalId: LocalIdType OPT 
+      ShareWithName: String OPT 
+      ShareWithRelationship: String OPT 
+      ShareWithPurpose: String 
+      ShareWithRole: String 
+      ShareWithComments: String OPT 
+      PermissionToOnShare: GenericYesNoType 
+      ShareWithURL: String OPT 
+      
+      }
+    
+    type DoNotShareWithListType {
+        DoNotShareWith: [DoNotShareWithType] 
+      
+      }
+    
+    type DoNotShareWithType {
+        DoNotShareWithParty: String 
+      DoNotShareWithRefId: String OPT 
+      DoNotShareWithObjectTypeName: String OPT 
+      DoNotShareWithLocalId: LocalIdType OPT 
+      DoNotShareWithName: String OPT 
+      DoNotShareWithRelationship: String OPT 
+      DoNotShareWithPurpose: String 
+      DoNotShareWithRole: String 
+      DoNotShareWithComments: String OPT 
+      DoNotShareWithURL: String OPT 
+      
+      }
+    
+    type ApplicableLawListType {
+        ApplicableLaw: [ApplicableLawType] 
+      
+      }
+    
+    type ApplicableLawType {
+        ApplicableCountry: String 
+      ApplicableLawName: String 
+      ApplicableLawURL: String OPT 
+      
+      }
+    
+    type PermissionToParticipateListType {
+        PermissionToParticipate: [PermissionToParticipateType] 
+      
+      }
+    
+    type PermissionToParticipateType {
+        PermissionCategory: String 
+      Permission: String 
+      PermissionValue: String OPT 
+      PermissionStartDate: String OPT 
+      PermissionEndDate: String OPT 
+      PermissionGranteeRefId: String OPT 
+      PermissionGranteeObjectTypeName: String OPT 
+      PermissionGranteeName: String OPT 
+      PermissionGranteeRelationship: String OPT 
+      PermissionComments: String OPT 
+      
+      }
+    
+    type NeverShareWithListType {
+        NeverShareWith: [NeverShareWithType] 
+      
+      }
+    
+    type NeverShareWithType {
+        NeverShareWithParty: String 
+      NeverShareWithRefId: String OPT 
+      NeverShareWithObjectTypeName: String OPT 
+      NeverShareWithLocalId: LocalIdType OPT 
+      NeverShareWithName: String OPT 
+      NeverShareWithRelationship: String OPT 
+      NeverShareWithPurpose: String 
+      NeverShareWithRole: String 
+      NeverShareWithComments: String OPT 
+      NeverShareWithURL: String OPT 
+      
+      }
+    
+    type GenericYesNoType String
     type EntityContactInfoType {
         Name: NameType 
       PositionTitle: String OPT 
@@ -2383,6 +2540,7 @@ type PersonPicture_PictureSource {
         WellbeingResponseRefId: String OPT 
       FollowUpDetails: String OPT 
       FollowUpActionCategory: String OPT 
+      Date: String OPT 
       
       }
     
@@ -3025,6 +3183,7 @@ type PersonPicture_PictureSource {
     
     type CampusContainerType {
         ParentSchoolId: String OPT 
+      ParentSchoolRefId: String OPT 
       SchoolCampusId: String 
       CampusType: AUCodeSetsSchoolLevelType OPT 
       AdminStatus: AUCodeSetsYesOrNoCategoryType 
@@ -3806,14 +3965,35 @@ type PersonPicture_PictureSource {
       PermanentResident: AUCodeSetsPermanentResidentStatusType OPT 
       VisaSubClass: VisaSubClassCodeType OPT 
       VisaStatisticalCode: String OPT 
+      VisaNumber: String OPT 
+      VisaGrantDate: String OPT 
       VisaExpiryDate: String OPT 
+      VisaConditions: String OPT 
+      VisaStudyEntitlement: AUCodeSetsVisaStudyEntitlementType OPT 
       VisaSubClassList: VisaSubClassListType OPT 
+      Passport: PassportType OPT 
       LBOTE: AUCodeSetsYesOrNoCategoryType OPT 
       InterpreterRequired: AUCodeSetsYesOrNoCategoryType OPT 
       ImmunisationCertificateStatus: AUCodeSetsImmunisationCertificateStatusType OPT 
       CulturalBackground: AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType OPT 
       MaritalStatus: AUCodeSetsMaritalStatusAIHWType OPT 
       MedicareNumber: String OPT 
+      MedicarePositionNumber: String OPT 
+      MedicareCardHolder: String OPT 
+      PrivateHealthInsurance: PrivateHealthInsuranceType OPT 
+      
+      }
+    
+    type PrivateHealthInsuranceType {
+        Company: String 
+      Number: String OPT 
+      
+      }
+    
+    type PassportType {
+        Number: String 
+      ExpiryDate: String OPT 
+      Country: CountryType 
       
       }
     
@@ -3961,6 +4141,25 @@ type PersonPicture_PictureSource {
     
     type TimeElementListType {
         TimeElement: [TimeElementType] 
+      
+      }
+    
+    type StudentContactFeePercentageType {
+        Curriculum: float64 OPT 
+      Other: float64 OPT 
+      
+      }
+    
+    type WorkingWithChildrenCheckType {
+        StateTerritory: StateProvinceType 
+      Number: String 
+      HolderName: String OPT 
+      Type: String OPT 
+      Reasons: String OPT 
+      Determination: String OPT 
+      CheckDate: String OPT 
+      DeterminationDate: String OPT 
+      ExpiryDate: String OPT 
       
       }
     type PersonInvolvementType_PersonRefId {

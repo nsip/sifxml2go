@@ -24,6 +24,7 @@ type wellbeingcharacteristic struct {
       SymptomList *SymptomListType `xml:"SymptomList,omitempty" json:"SymptomList,omitempty"`
       DailyManagement *String `xml:"DailyManagement,omitempty" json:"DailyManagement,omitempty"`
       EmergencyManagement *String `xml:"EmergencyManagement,omitempty" json:"EmergencyManagement,omitempty"`
+      PreferredHospital *String `xml:"PreferredHospital,omitempty" json:"PreferredHospital,omitempty"`
       EmergencyResponsePlan *String `xml:"EmergencyResponsePlan,omitempty" json:"EmergencyResponsePlan,omitempty"`
       Trigger *String `xml:"Trigger,omitempty" json:"Trigger,omitempty"`
       ConfidentialFlag *AUCodeSetsYesOrNoCategoryType `xml:"ConfidentialFlag,omitempty" json:"ConfidentialFlag,omitempty"`

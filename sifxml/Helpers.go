@@ -225,6 +225,10 @@ func PersonPictureSlice() []*PersonPicture {
   return make([]*PersonPicture, 0)
   }
 // Create a slice of pointers to the object type
+func PersonPrivacyObligationDocumentSlice() []*PersonPrivacyObligationDocument {
+  return make([]*PersonPrivacyObligationDocument, 0)
+  }
+// Create a slice of pointers to the object type
 func PersonalisedPlanSlice() []*PersonalisedPlan {
   return make([]*PersonalisedPlan, 0)
   }
@@ -1005,6 +1009,42 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ApplicableLawListType) Clone() (*ApplicableLawListType) {
+return reprint.This(t).(*ApplicableLawListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ApplicableLawListTypePointer(value interface{}) (*ApplicableLawListType, bool) {
+switch t := value.(type) {
+        case *ApplicableLawListType:
+                return value.(*ApplicableLawListType), true
+        case ApplicableLawListType:
+                v, _ := value.(ApplicableLawListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ApplicableLawListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ApplicableLawType) Clone() (*ApplicableLawType) {
+return reprint.This(t).(*ApplicableLawType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ApplicableLawTypePointer(value interface{}) (*ApplicableLawType, bool) {
+switch t := value.(type) {
+        case *ApplicableLawType:
+                return value.(*ApplicableLawType), true
+        case ApplicableLawType:
+                v, _ := value.(ApplicableLawType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ApplicableLawType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ApprovalType) Clone() (*ApprovalType) {
 return reprint.This(t).(*ApprovalType)
 }
@@ -1671,6 +1711,24 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ConsentToSharingOfDataContainerType) Clone() (*ConsentToSharingOfDataContainerType) {
+return reprint.This(t).(*ConsentToSharingOfDataContainerType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ConsentToSharingOfDataContainerTypePointer(value interface{}) (*ConsentToSharingOfDataContainerType, bool) {
+switch t := value.(type) {
+        case *ConsentToSharingOfDataContainerType:
+                return value.(*ConsentToSharingOfDataContainerType), true
+        case ConsentToSharingOfDataContainerType:
+                v, _ := value.(ConsentToSharingOfDataContainerType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ConsentToSharingOfDataContainerType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ContactFlagsType) Clone() (*ContactFlagsType) {
 return reprint.This(t).(*ContactFlagsType)
 }
@@ -1869,6 +1927,42 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *DataDomainObligationListType) Clone() (*DataDomainObligationListType) {
+return reprint.This(t).(*DataDomainObligationListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func DataDomainObligationListTypePointer(value interface{}) (*DataDomainObligationListType, bool) {
+switch t := value.(type) {
+        case *DataDomainObligationListType:
+                return value.(*DataDomainObligationListType), true
+        case DataDomainObligationListType:
+                v, _ := value.(DataDomainObligationListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to DataDomainObligationListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *DataDomainObligationType) Clone() (*DataDomainObligationType) {
+return reprint.This(t).(*DataDomainObligationType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func DataDomainObligationTypePointer(value interface{}) (*DataDomainObligationType, bool) {
+switch t := value.(type) {
+        case *DataDomainObligationType:
+                return value.(*DataDomainObligationType), true
+        case DataDomainObligationType:
+                v, _ := value.(DataDomainObligationType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to DataDomainObligationType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DebitOrCreditAmountType) Clone() (*DebitOrCreditAmountType) {
 return reprint.This(t).(*DebitOrCreditAmountType)
 }
@@ -1955,6 +2049,42 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to DetentionContainerType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *DoNotShareWithListType) Clone() (*DoNotShareWithListType) {
+return reprint.This(t).(*DoNotShareWithListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func DoNotShareWithListTypePointer(value interface{}) (*DoNotShareWithListType, bool) {
+switch t := value.(type) {
+        case *DoNotShareWithListType:
+                return value.(*DoNotShareWithListType), true
+        case DoNotShareWithListType:
+                v, _ := value.(DoNotShareWithListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to DoNotShareWithListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *DoNotShareWithType) Clone() (*DoNotShareWithType) {
+return reprint.This(t).(*DoNotShareWithType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func DoNotShareWithTypePointer(value interface{}) (*DoNotShareWithType, bool) {
+switch t := value.(type) {
+        case *DoNotShareWithType:
+                return value.(*DoNotShareWithType), true
+        case DoNotShareWithType:
+                v, _ := value.(DoNotShareWithType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to DoNotShareWithType\n", t, value)
         }
         return nil, false
   }
@@ -4155,6 +4285,42 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NeverShareWithListType) Clone() (*NeverShareWithListType) {
+return reprint.This(t).(*NeverShareWithListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NeverShareWithListTypePointer(value interface{}) (*NeverShareWithListType, bool) {
+switch t := value.(type) {
+        case *NeverShareWithListType:
+                return value.(*NeverShareWithListType), true
+        case NeverShareWithListType:
+                v, _ := value.(NeverShareWithListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NeverShareWithListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NeverShareWithType) Clone() (*NeverShareWithType) {
+return reprint.This(t).(*NeverShareWithType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NeverShareWithTypePointer(value interface{}) (*NeverShareWithType, bool) {
+switch t := value.(type) {
+        case *NeverShareWithType:
+                return value.(*NeverShareWithType), true
+        case NeverShareWithType:
+                v, _ := value.(NeverShareWithType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NeverShareWithType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OrganizationsType) Clone() (*OrganizationsType) {
 return reprint.This(t).(*OrganizationsType)
 }
@@ -4317,6 +4483,24 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PassportType) Clone() (*PassportType) {
+return reprint.This(t).(*PassportType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PassportTypePointer(value interface{}) (*PassportType, bool) {
+switch t := value.(type) {
+        case *PassportType:
+                return value.(*PassportType), true
+        case PassportType:
+                v, _ := value.(PassportType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PassportType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PasswordListType) Clone() (*PasswordListType) {
 return reprint.This(t).(*PasswordListType)
 }
@@ -4443,6 +4627,42 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PermissionToParticipateListType) Clone() (*PermissionToParticipateListType) {
+return reprint.This(t).(*PermissionToParticipateListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PermissionToParticipateListTypePointer(value interface{}) (*PermissionToParticipateListType, bool) {
+switch t := value.(type) {
+        case *PermissionToParticipateListType:
+                return value.(*PermissionToParticipateListType), true
+        case PermissionToParticipateListType:
+                v, _ := value.(PermissionToParticipateListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PermissionToParticipateListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PermissionToParticipateType) Clone() (*PermissionToParticipateType) {
+return reprint.This(t).(*PermissionToParticipateType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PermissionToParticipateTypePointer(value interface{}) (*PermissionToParticipateType, bool) {
+switch t := value.(type) {
+        case *PermissionToParticipateType:
+                return value.(*PermissionToParticipateType), true
+        case PermissionToParticipateType:
+                v, _ := value.(PermissionToParticipateType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PermissionToParticipateType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonInfoType) Clone() (*PersonInfoType) {
 return reprint.This(t).(*PersonInfoType)
 }
@@ -4565,6 +4785,24 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to PersonPicture_PictureSource\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PersonPrivacyObligationDocument) Clone() (*PersonPrivacyObligationDocument) {
+return reprint.This(t).(*PersonPrivacyObligationDocument)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PersonPrivacyObligationDocumentPointer(value interface{}) (*PersonPrivacyObligationDocument, bool) {
+switch t := value.(type) {
+        case *PersonPrivacyObligationDocument:
+                return value.(*PersonPrivacyObligationDocument), true
+        case PersonPrivacyObligationDocument:
+                v, _ := value.(PersonPrivacyObligationDocument)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PersonPrivacyObligationDocument\n", t, value)
         }
         return nil, false
   }
@@ -4709,6 +4947,24 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to PrincipalInfoType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PrivateHealthInsuranceType) Clone() (*PrivateHealthInsuranceType) {
+return reprint.This(t).(*PrivateHealthInsuranceType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PrivateHealthInsuranceTypePointer(value interface{}) (*PrivateHealthInsuranceType, bool) {
+switch t := value.(type) {
+        case *PrivateHealthInsuranceType:
+                return value.(*PrivateHealthInsuranceType), true
+        case PrivateHealthInsuranceType:
+                v, _ := value.(PrivateHealthInsuranceType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PrivateHealthInsuranceType\n", t, value)
         }
         return nil, false
   }
@@ -5703,6 +5959,78 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SettingLocationListType) Clone() (*SettingLocationListType) {
+return reprint.This(t).(*SettingLocationListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SettingLocationListTypePointer(value interface{}) (*SettingLocationListType, bool) {
+switch t := value.(type) {
+        case *SettingLocationListType:
+                return value.(*SettingLocationListType), true
+        case SettingLocationListType:
+                v, _ := value.(SettingLocationListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SettingLocationListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SettingLocationType) Clone() (*SettingLocationType) {
+return reprint.This(t).(*SettingLocationType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SettingLocationTypePointer(value interface{}) (*SettingLocationType, bool) {
+switch t := value.(type) {
+        case *SettingLocationType:
+                return value.(*SettingLocationType), true
+        case SettingLocationType:
+                v, _ := value.(SettingLocationType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SettingLocationType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ShareWithListType) Clone() (*ShareWithListType) {
+return reprint.This(t).(*ShareWithListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ShareWithListTypePointer(value interface{}) (*ShareWithListType, bool) {
+switch t := value.(type) {
+        case *ShareWithListType:
+                return value.(*ShareWithListType), true
+        case ShareWithListType:
+                v, _ := value.(ShareWithListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ShareWithListType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ShareWithType) Clone() (*ShareWithType) {
+return reprint.This(t).(*ShareWithType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ShareWithTypePointer(value interface{}) (*ShareWithType, bool) {
+switch t := value.(type) {
+        case *ShareWithType:
+                return value.(*ShareWithType), true
+        case ShareWithType:
+                v, _ := value.(ShareWithType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ShareWithType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SoftwareRequirementListType) Clone() (*SoftwareRequirementListType) {
 return reprint.This(t).(*SoftwareRequirementListType)
 }
@@ -6401,6 +6729,24 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentAttendanceTimeList\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentContactFeePercentageType) Clone() (*StudentContactFeePercentageType) {
+return reprint.This(t).(*StudentContactFeePercentageType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentContactFeePercentageTypePointer(value interface{}) (*StudentContactFeePercentageType, bool) {
+switch t := value.(type) {
+        case *StudentContactFeePercentageType:
+                return value.(*StudentContactFeePercentageType), true
+        case StudentContactFeePercentageType:
+                v, _ := value.(StudentContactFeePercentageType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentContactFeePercentageType\n", t, value)
         }
         return nil, false
   }
@@ -8007,6 +8353,24 @@ switch t := value.(type) {
         return nil, false
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *WorkingWithChildrenCheckType) Clone() (*WorkingWithChildrenCheckType) {
+return reprint.This(t).(*WorkingWithChildrenCheckType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func WorkingWithChildrenCheckTypePointer(value interface{}) (*WorkingWithChildrenCheckType, bool) {
+switch t := value.(type) {
+        case *WorkingWithChildrenCheckType:
+                return value.(*WorkingWithChildrenCheckType), true
+        case WorkingWithChildrenCheckType:
+                v, _ := value.(WorkingWithChildrenCheckType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to WorkingWithChildrenCheckType\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *XMLDataType) Clone() (*XMLDataType) {
 return reprint.This(t).(*XMLDataType)
 }
@@ -8727,6 +9091,61 @@ func (t *AlternateIdentificationCodeListType) Len() int {
       func (t *AlternateIdentificationCodeListType) AppendString(value string) *AlternateIdentificationCodeListType {
         return t.Append((string)(value))
         }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *ApplicableLawListType) Append(value ApplicableLawType) *ApplicableLawListType {
+    
+        if t == nil {
+                t, _ = ApplicableLawListTypePointer(ApplicableLawListType{})
+        }
+        if t.ApplicableLaw == nil {
+                t.ApplicableLaw = make([]ApplicableLawType, 0)
+        }
+        t.ApplicableLaw = append(t.ApplicableLaw, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *ApplicableLawListType) AddNew() *ApplicableLawListType {
+        if t == nil {
+                t, _ = ApplicableLawListTypePointer(ApplicableLawListType{})
+        }
+        if t.ApplicableLaw == nil {
+                t.ApplicableLaw = make([]ApplicableLawType, 0)
+        }
+        t.ApplicableLaw = append(t.ApplicableLaw, ApplicableLawType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *ApplicableLawListType) Last() *ApplicableLawType {
+  if t.ApplicableLaw == nil {
+    t = t.AddNew()
+    }
+        return &(t.ApplicableLaw[len(t.ApplicableLaw)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *ApplicableLawListType) Index(n int) (*ApplicableLawType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.ApplicableLaw == nil {
+    t = t.AddNew()
+    }
+        return &(t.ApplicableLaw[n]), nil
+}
+
+// Length of the list.
+func (t *ApplicableLawListType) Len() int {
+  if t.ApplicableLaw == nil {
+    t = t.AddNew()
+    }
+        return len(t.ApplicableLaw)
+}
+
+
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
@@ -9687,6 +10106,116 @@ func (t *CreatorListType) Len() int {
     t = t.AddNew()
     }
         return len(t.Creator)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *DataDomainObligationListType) Append(value DataDomainObligationType) *DataDomainObligationListType {
+    
+        if t == nil {
+                t, _ = DataDomainObligationListTypePointer(DataDomainObligationListType{})
+        }
+        if t.DataDomainObligation == nil {
+                t.DataDomainObligation = make([]DataDomainObligationType, 0)
+        }
+        t.DataDomainObligation = append(t.DataDomainObligation, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *DataDomainObligationListType) AddNew() *DataDomainObligationListType {
+        if t == nil {
+                t, _ = DataDomainObligationListTypePointer(DataDomainObligationListType{})
+        }
+        if t.DataDomainObligation == nil {
+                t.DataDomainObligation = make([]DataDomainObligationType, 0)
+        }
+        t.DataDomainObligation = append(t.DataDomainObligation, DataDomainObligationType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *DataDomainObligationListType) Last() *DataDomainObligationType {
+  if t.DataDomainObligation == nil {
+    t = t.AddNew()
+    }
+        return &(t.DataDomainObligation[len(t.DataDomainObligation)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *DataDomainObligationListType) Index(n int) (*DataDomainObligationType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.DataDomainObligation == nil {
+    t = t.AddNew()
+    }
+        return &(t.DataDomainObligation[n]), nil
+}
+
+// Length of the list.
+func (t *DataDomainObligationListType) Len() int {
+  if t.DataDomainObligation == nil {
+    t = t.AddNew()
+    }
+        return len(t.DataDomainObligation)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *DoNotShareWithListType) Append(value DoNotShareWithType) *DoNotShareWithListType {
+    
+        if t == nil {
+                t, _ = DoNotShareWithListTypePointer(DoNotShareWithListType{})
+        }
+        if t.DoNotShareWith == nil {
+                t.DoNotShareWith = make([]DoNotShareWithType, 0)
+        }
+        t.DoNotShareWith = append(t.DoNotShareWith, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *DoNotShareWithListType) AddNew() *DoNotShareWithListType {
+        if t == nil {
+                t, _ = DoNotShareWithListTypePointer(DoNotShareWithListType{})
+        }
+        if t.DoNotShareWith == nil {
+                t.DoNotShareWith = make([]DoNotShareWithType, 0)
+        }
+        t.DoNotShareWith = append(t.DoNotShareWith, DoNotShareWithType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *DoNotShareWithListType) Last() *DoNotShareWithType {
+  if t.DoNotShareWith == nil {
+    t = t.AddNew()
+    }
+        return &(t.DoNotShareWith[len(t.DoNotShareWith)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *DoNotShareWithListType) Index(n int) (*DoNotShareWithType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.DoNotShareWith == nil {
+    t = t.AddNew()
+    }
+        return &(t.DoNotShareWith[n]), nil
+}
+
+// Length of the list.
+func (t *DoNotShareWithListType) Len() int {
+  if t.DoNotShareWith == nil {
+    t = t.AddNew()
+    }
+        return len(t.DoNotShareWith)
 }
 
 
@@ -11929,6 +12458,61 @@ func (t *NAPWritingRubricListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
+  func (t *NeverShareWithListType) Append(value NeverShareWithType) *NeverShareWithListType {
+    
+        if t == nil {
+                t, _ = NeverShareWithListTypePointer(NeverShareWithListType{})
+        }
+        if t.NeverShareWith == nil {
+                t.NeverShareWith = make([]NeverShareWithType, 0)
+        }
+        t.NeverShareWith = append(t.NeverShareWith, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NeverShareWithListType) AddNew() *NeverShareWithListType {
+        if t == nil {
+                t, _ = NeverShareWithListTypePointer(NeverShareWithListType{})
+        }
+        if t.NeverShareWith == nil {
+                t.NeverShareWith = make([]NeverShareWithType, 0)
+        }
+        t.NeverShareWith = append(t.NeverShareWith, NeverShareWithType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NeverShareWithListType) Last() *NeverShareWithType {
+  if t.NeverShareWith == nil {
+    t = t.AddNew()
+    }
+        return &(t.NeverShareWith[len(t.NeverShareWith)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *NeverShareWithListType) Index(n int) (*NeverShareWithType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.NeverShareWith == nil {
+    t = t.AddNew()
+    }
+        return &(t.NeverShareWith[n]), nil
+}
+
+// Length of the list.
+func (t *NeverShareWithListType) Len() int {
+  if t.NeverShareWith == nil {
+    t = t.AddNew()
+    }
+        return len(t.NeverShareWith)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
   func (t *OrganizationsType) Append(value string) *OrganizationsType {
     
         if t == nil {
@@ -12371,6 +12955,61 @@ func (t *PeriodAttendancesType) Len() int {
     t = t.AddNew()
     }
         return len(t.PeriodAttendance)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *PermissionToParticipateListType) Append(value PermissionToParticipateType) *PermissionToParticipateListType {
+    
+        if t == nil {
+                t, _ = PermissionToParticipateListTypePointer(PermissionToParticipateListType{})
+        }
+        if t.PermissionToParticipate == nil {
+                t.PermissionToParticipate = make([]PermissionToParticipateType, 0)
+        }
+        t.PermissionToParticipate = append(t.PermissionToParticipate, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *PermissionToParticipateListType) AddNew() *PermissionToParticipateListType {
+        if t == nil {
+                t, _ = PermissionToParticipateListTypePointer(PermissionToParticipateListType{})
+        }
+        if t.PermissionToParticipate == nil {
+                t.PermissionToParticipate = make([]PermissionToParticipateType, 0)
+        }
+        t.PermissionToParticipate = append(t.PermissionToParticipate, PermissionToParticipateType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *PermissionToParticipateListType) Last() *PermissionToParticipateType {
+  if t.PermissionToParticipate == nil {
+    t = t.AddNew()
+    }
+        return &(t.PermissionToParticipate[len(t.PermissionToParticipate)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *PermissionToParticipateListType) Index(n int) (*PermissionToParticipateType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.PermissionToParticipate == nil {
+    t = t.AddNew()
+    }
+        return &(t.PermissionToParticipate[n]), nil
+}
+
+// Length of the list.
+func (t *PermissionToParticipateListType) Len() int {
+  if t.PermissionToParticipate == nil {
+    t = t.AddNew()
+    }
+        return len(t.PermissionToParticipate)
 }
 
 
@@ -13601,6 +14240,116 @@ func (t *ScoreListType) Len() int {
     t = t.AddNew()
     }
         return len(t.Score)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *SettingLocationListType) Append(value SettingLocationType) *SettingLocationListType {
+    
+        if t == nil {
+                t, _ = SettingLocationListTypePointer(SettingLocationListType{})
+        }
+        if t.SettingLocation == nil {
+                t.SettingLocation = make([]SettingLocationType, 0)
+        }
+        t.SettingLocation = append(t.SettingLocation, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *SettingLocationListType) AddNew() *SettingLocationListType {
+        if t == nil {
+                t, _ = SettingLocationListTypePointer(SettingLocationListType{})
+        }
+        if t.SettingLocation == nil {
+                t.SettingLocation = make([]SettingLocationType, 0)
+        }
+        t.SettingLocation = append(t.SettingLocation, SettingLocationType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *SettingLocationListType) Last() *SettingLocationType {
+  if t.SettingLocation == nil {
+    t = t.AddNew()
+    }
+        return &(t.SettingLocation[len(t.SettingLocation)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *SettingLocationListType) Index(n int) (*SettingLocationType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.SettingLocation == nil {
+    t = t.AddNew()
+    }
+        return &(t.SettingLocation[n]), nil
+}
+
+// Length of the list.
+func (t *SettingLocationListType) Len() int {
+  if t.SettingLocation == nil {
+    t = t.AddNew()
+    }
+        return len(t.SettingLocation)
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *ShareWithListType) Append(value ShareWithType) *ShareWithListType {
+    
+        if t == nil {
+                t, _ = ShareWithListTypePointer(ShareWithListType{})
+        }
+        if t.ShareWith == nil {
+                t.ShareWith = make([]ShareWithType, 0)
+        }
+        t.ShareWith = append(t.ShareWith, value)
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *ShareWithListType) AddNew() *ShareWithListType {
+        if t == nil {
+                t, _ = ShareWithListTypePointer(ShareWithListType{})
+        }
+        if t.ShareWith == nil {
+                t.ShareWith = make([]ShareWithType, 0)
+        }
+        t.ShareWith = append(t.ShareWith, ShareWithType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *ShareWithListType) Last() *ShareWithType {
+  if t.ShareWith == nil {
+    t = t.AddNew()
+    }
+        return &(t.ShareWith[len(t.ShareWith)-1])
+}
+
+// Retrieves the nth value in the list. Raises error if index is out of bounds.
+func (t *ShareWithListType) Index(n int) (*ShareWithType, error) {
+  if (n >= t.Len() || n < 0) {
+    return nil, errors.New("subscript out of range on list")
+    }
+  if t.ShareWith == nil {
+    t = t.AddNew()
+    }
+        return &(t.ShareWith[n]), nil
+}
+
+// Length of the list.
+func (t *ShareWithListType) Len() int {
+  if t.ShareWith == nil {
+    t = t.AddNew()
+    }
+        return len(t.ShareWith)
 }
 
 
@@ -16647,6 +17396,35 @@ switch t := value.(type) {
 
 
 // Return string value
+func (t *AUCodeSetsContactMethodType) String() string {
+  return fmt.Sprint(reflect.ValueOf(*t))
+  }
+
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches AUCodeSetsContactMethodType. In the case of aliased types, accepts primitive values and converts them to the required alias.
+func AUCodeSetsContactMethodTypePointer(value interface{}) (*AUCodeSetsContactMethodType, bool) {
+switch t := value.(type) {
+ 	case *AUCodeSetsContactMethodType:
+ 		return value.(*AUCodeSetsContactMethodType), true
+        case AUCodeSetsContactMethodType:
+ 		v, _ := value.(AUCodeSetsContactMethodType)
+ 		return &v, true
+ 	case *string:
+ 		vstr, _ := value.(*string)
+ 		v := AUCodeSetsContactMethodType(*vstr)
+ 		return &v, true
+ 	case string:
+ 		vstr, _ := value.(string)
+ 		v := AUCodeSetsContactMethodType(vstr)
+ 		return &v, true
+ 	default:
+ 		fmt.Printf("Warning: cannot resolve %T (%v) to AUCodeSetsContactMethodType\n", t, value)
+ 	}
+ 	return nil, false
+  }
+
+
+// Return string value
 func (t *AUCodeSetsDayValueCodeType) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
@@ -18735,6 +19513,35 @@ switch t := value.(type) {
 
 
 // Return string value
+func (t *AUCodeSetsVisaStudyEntitlementType) String() string {
+  return fmt.Sprint(reflect.ValueOf(*t))
+  }
+
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches AUCodeSetsVisaStudyEntitlementType. In the case of aliased types, accepts primitive values and converts them to the required alias.
+func AUCodeSetsVisaStudyEntitlementTypePointer(value interface{}) (*AUCodeSetsVisaStudyEntitlementType, bool) {
+switch t := value.(type) {
+ 	case *AUCodeSetsVisaStudyEntitlementType:
+ 		return value.(*AUCodeSetsVisaStudyEntitlementType), true
+        case AUCodeSetsVisaStudyEntitlementType:
+ 		v, _ := value.(AUCodeSetsVisaStudyEntitlementType)
+ 		return &v, true
+ 	case *string:
+ 		vstr, _ := value.(*string)
+ 		v := AUCodeSetsVisaStudyEntitlementType(*vstr)
+ 		return &v, true
+ 	case string:
+ 		vstr, _ := value.(string)
+ 		v := AUCodeSetsVisaStudyEntitlementType(vstr)
+ 		return &v, true
+ 	default:
+ 		fmt.Printf("Warning: cannot resolve %T (%v) to AUCodeSetsVisaStudyEntitlementType\n", t, value)
+ 	}
+ 	return nil, false
+  }
+
+
+// Return string value
 func (t *AUCodeSetsVisaSubClassType) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
@@ -19345,6 +20152,35 @@ switch t := value.(type) {
  		return &v, true
  	default:
  		fmt.Printf("Warning: cannot resolve %T (%v) to GUIDType\n", t, value)
+ 	}
+ 	return nil, false
+  }
+
+
+// Return string value
+func (t *GenericYesNoType) String() string {
+  return fmt.Sprint(reflect.ValueOf(*t))
+  }
+
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches GenericYesNoType. In the case of aliased types, accepts primitive values and converts them to the required alias.
+func GenericYesNoTypePointer(value interface{}) (*GenericYesNoType, bool) {
+switch t := value.(type) {
+ 	case *GenericYesNoType:
+ 		return value.(*GenericYesNoType), true
+        case GenericYesNoType:
+ 		v, _ := value.(GenericYesNoType)
+ 		return &v, true
+ 	case *string:
+ 		vstr, _ := value.(*string)
+ 		v := GenericYesNoType(*vstr)
+ 		return &v, true
+ 	case string:
+ 		vstr, _ := value.(string)
+ 		v := GenericYesNoType(vstr)
+ 		return &v, true
+ 	default:
+ 		fmt.Printf("Warning: cannot resolve %T (%v) to GenericYesNoType\n", t, value)
  	}
  	return nil, false
   }
@@ -23743,6 +24579,97 @@ func (n *AlertMessageType) SetProperty(key string, value interface{}) *AlertMess
     }
 
 // Set the value of a property to nil
+func (n *ApplicableLawType) Unset(key string) *ApplicableLawType {
+        switch key {
+  case "ApplicableCountry":
+   n.applicablelawtype.ApplicableCountry = nil
+  case "ApplicableLawName":
+   n.applicablelawtype.ApplicableLawName = nil
+  case "ApplicableLawURL":
+   n.applicablelawtype.ApplicableLawURL = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ApplicableLawType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *ApplicableLawType) SetProperties(props ...Prop) *ApplicableLawType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *ApplicableLawType) SetProperty(key string, value interface{}) *ApplicableLawType {
+        if n == nil {
+                n, _ = ApplicableLawTypePointer(ApplicableLawType{})
+        }
+        switch key {
+    case "ApplicableCountry":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.applicablelawtype.ApplicableCountry = ((*String)(v))
+      }
+    case "ApplicableLawName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.applicablelawtype.ApplicableLawName = ((*String)(v))
+      }
+    case "ApplicableLawURL":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.applicablelawtype.ApplicableLawURL = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ApplicableLawType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ApplicableLawType) ApplicableCountry() *String {
+    if s.applicablelawtype.ApplicableCountry == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.applicablelawtype.ApplicableCountry = ((*String)(v))
+      }
+      }
+      return s.applicablelawtype.ApplicableCountry
+    }
+// Returns whether the element value for ApplicableCountry is nil in the container ApplicableLawType.
+  func (s *ApplicableLawType) ApplicableCountry_IsNil() bool {
+    return s.applicablelawtype.ApplicableCountry == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ApplicableLawType) ApplicableLawName() *String {
+    if s.applicablelawtype.ApplicableLawName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.applicablelawtype.ApplicableLawName = ((*String)(v))
+      }
+      }
+      return s.applicablelawtype.ApplicableLawName
+    }
+// Returns whether the element value for ApplicableLawName is nil in the container ApplicableLawType.
+  func (s *ApplicableLawType) ApplicableLawName_IsNil() bool {
+    return s.applicablelawtype.ApplicableLawName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ApplicableLawType) ApplicableLawURL() *String {
+    if s.applicablelawtype.ApplicableLawURL == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.applicablelawtype.ApplicableLawURL = ((*String)(v))
+      }
+      }
+      return s.applicablelawtype.ApplicableLawURL
+    }
+// Returns whether the element value for ApplicableLawURL is nil in the container ApplicableLawType.
+  func (s *ApplicableLawType) ApplicableLawURL_IsNil() bool {
+    return s.applicablelawtype.ApplicableLawURL == nil
+    }
+
+// Set the value of a property to nil
 func (n *ApprovalType) Unset(key string) *ApprovalType {
         switch key {
   case "Date":
@@ -25577,6 +26504,8 @@ func (n *CampusContainerType) Unset(key string) *CampusContainerType {
    n.campuscontainertype.CampusType = nil
   case "ParentSchoolId":
    n.campuscontainertype.ParentSchoolId = nil
+  case "ParentSchoolRefId":
+   n.campuscontainertype.ParentSchoolRefId = nil
   case "SchoolCampusId":
    n.campuscontainertype.SchoolCampusId = nil
         default:
@@ -25620,6 +26549,11 @@ func (n *CampusContainerType) SetProperty(key string, value interface{}) *Campus
     
     if v, ok:= StringPointer(value); ok {
       n.campuscontainertype.ParentSchoolId = ((*String)(v))
+      }
+    case "ParentSchoolRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.campuscontainertype.ParentSchoolRefId = ((*String)(v))
       }
     case "SchoolCampusId":
     
@@ -25670,6 +26604,19 @@ func (n *CampusContainerType) SetProperty(key string, value interface{}) *Campus
 // Returns whether the element value for ParentSchoolId is nil in the container CampusContainerType.
   func (s *CampusContainerType) ParentSchoolId_IsNil() bool {
     return s.campuscontainertype.ParentSchoolId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *CampusContainerType) ParentSchoolRefId() *String {
+    if s.campuscontainertype.ParentSchoolRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.campuscontainertype.ParentSchoolRefId = ((*String)(v))
+      }
+      }
+      return s.campuscontainertype.ParentSchoolRefId
+    }
+// Returns whether the element value for ParentSchoolRefId is nil in the container CampusContainerType.
+  func (s *CampusContainerType) ParentSchoolRefId_IsNil() bool {
+    return s.campuscontainertype.ParentSchoolRefId == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *CampusContainerType) SchoolCampusId() *String {
@@ -25765,6 +26712,8 @@ func (n *CensusCollection) Unset(key string) *CensusCollection {
    n.censuscollection.CensusReportingList = nil
   case "CensusYear":
    n.censuscollection.CensusYear = nil
+  case "LocalCodeList":
+   n.censuscollection.LocalCodeList = nil
   case "RefId":
    n.censuscollection.RefId = nil
   case "RoundCode":
@@ -25804,6 +26753,10 @@ func (n *CensusCollection) SetProperty(key string, value interface{}) *CensusCol
     
     if v, ok:= StringPointer(value); ok {
       n.censuscollection.CensusYear = ((*SchoolYearType)(v))
+      }
+    case "LocalCodeList":
+    if v, ok:= LocalCodeListTypePointer(value); ok {
+      n.censuscollection.LocalCodeList = v
       }
     case "RefId":
     
@@ -25858,6 +26811,19 @@ func (n *CensusCollection) SetProperty(key string, value interface{}) *CensusCol
 // Returns whether the element value for CensusYear is nil in the container CensusCollection.
   func (s *CensusCollection) CensusYear_IsNil() bool {
     return s.censuscollection.CensusYear == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *CensusCollection) LocalCodeList() *LocalCodeListType {
+    if s.censuscollection.LocalCodeList == nil {
+     if v, ok:= LocalCodeListTypePointer(LocalCodeListType{}); ok {
+      s.censuscollection.LocalCodeList = v
+      }
+      }
+      return s.censuscollection.LocalCodeList
+    }
+// Returns whether the element value for LocalCodeList is nil in the container CensusCollection.
+  func (s *CensusCollection) LocalCodeList_IsNil() bool {
+    return s.censuscollection.LocalCodeList == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *CensusCollection) RefId() *RefIdType {
@@ -27607,6 +28573,75 @@ func (n *ComponentType) SetProperty(key string, value interface{}) *ComponentTyp
     }
 
 // Set the value of a property to nil
+func (n *ConsentToSharingOfDataContainerType) Unset(key string) *ConsentToSharingOfDataContainerType {
+        switch key {
+  case "DataDomainObligationList":
+   n.consenttosharingofdatacontainertype.DataDomainObligationList = nil
+  case "NeverShareWithList":
+   n.consenttosharingofdatacontainertype.NeverShareWithList = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ConsentToSharingOfDataContainerType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *ConsentToSharingOfDataContainerType) SetProperties(props ...Prop) *ConsentToSharingOfDataContainerType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *ConsentToSharingOfDataContainerType) SetProperty(key string, value interface{}) *ConsentToSharingOfDataContainerType {
+        if n == nil {
+                n, _ = ConsentToSharingOfDataContainerTypePointer(ConsentToSharingOfDataContainerType{})
+        }
+        switch key {
+    case "DataDomainObligationList":
+    if v, ok:= DataDomainObligationListTypePointer(value); ok {
+      n.consenttosharingofdatacontainertype.DataDomainObligationList = v
+      }
+    case "NeverShareWithList":
+    if v, ok:= NeverShareWithListTypePointer(value); ok {
+      n.consenttosharingofdatacontainertype.NeverShareWithList = v
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ConsentToSharingOfDataContainerType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ConsentToSharingOfDataContainerType) DataDomainObligationList() *DataDomainObligationListType {
+    if s.consenttosharingofdatacontainertype.DataDomainObligationList == nil {
+     if v, ok:= DataDomainObligationListTypePointer(DataDomainObligationListType{}); ok {
+      s.consenttosharingofdatacontainertype.DataDomainObligationList = v
+      }
+      }
+      return s.consenttosharingofdatacontainertype.DataDomainObligationList
+    }
+// Returns whether the element value for DataDomainObligationList is nil in the container ConsentToSharingOfDataContainerType.
+  func (s *ConsentToSharingOfDataContainerType) DataDomainObligationList_IsNil() bool {
+    return s.consenttosharingofdatacontainertype.DataDomainObligationList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ConsentToSharingOfDataContainerType) NeverShareWithList() *NeverShareWithListType {
+    if s.consenttosharingofdatacontainertype.NeverShareWithList == nil {
+     if v, ok:= NeverShareWithListTypePointer(NeverShareWithListType{}); ok {
+      s.consenttosharingofdatacontainertype.NeverShareWithList = v
+      }
+      }
+      return s.consenttosharingofdatacontainertype.NeverShareWithList
+    }
+// Returns whether the element value for NeverShareWithList is nil in the container ConsentToSharingOfDataContainerType.
+  func (s *ConsentToSharingOfDataContainerType) NeverShareWithList_IsNil() bool {
+    return s.consenttosharingofdatacontainertype.NeverShareWithList == nil
+    }
+
+// Set the value of a property to nil
 func (n *ContactFlagsType) Unset(key string) *ContactFlagsType {
         switch key {
   case "AccessToRecords":
@@ -28466,6 +29501,115 @@ func (n *CreationUserType) SetProperty(key string, value interface{}) *CreationU
     }
 
 // Set the value of a property to nil
+func (n *DataDomainObligationType) Unset(key string) *DataDomainObligationType {
+        switch key {
+  case "DataDomain":
+   n.datadomainobligationtype.DataDomain = nil
+  case "DoNotShareWithList":
+   n.datadomainobligationtype.DoNotShareWithList = nil
+  case "DomainComments":
+   n.datadomainobligationtype.DomainComments = nil
+  case "ShareWithList":
+   n.datadomainobligationtype.ShareWithList = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "DataDomainObligationType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *DataDomainObligationType) SetProperties(props ...Prop) *DataDomainObligationType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *DataDomainObligationType) SetProperty(key string, value interface{}) *DataDomainObligationType {
+        if n == nil {
+                n, _ = DataDomainObligationTypePointer(DataDomainObligationType{})
+        }
+        switch key {
+    case "DataDomain":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.datadomainobligationtype.DataDomain = ((*String)(v))
+      }
+    case "DoNotShareWithList":
+    if v, ok:= DoNotShareWithListTypePointer(value); ok {
+      n.datadomainobligationtype.DoNotShareWithList = v
+      }
+    case "DomainComments":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.datadomainobligationtype.DomainComments = ((*String)(v))
+      }
+    case "ShareWithList":
+    if v, ok:= ShareWithListTypePointer(value); ok {
+      n.datadomainobligationtype.ShareWithList = v
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "DataDomainObligationType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DataDomainObligationType) DataDomain() *String {
+    if s.datadomainobligationtype.DataDomain == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.datadomainobligationtype.DataDomain = ((*String)(v))
+      }
+      }
+      return s.datadomainobligationtype.DataDomain
+    }
+// Returns whether the element value for DataDomain is nil in the container DataDomainObligationType.
+  func (s *DataDomainObligationType) DataDomain_IsNil() bool {
+    return s.datadomainobligationtype.DataDomain == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DataDomainObligationType) DoNotShareWithList() *DoNotShareWithListType {
+    if s.datadomainobligationtype.DoNotShareWithList == nil {
+     if v, ok:= DoNotShareWithListTypePointer(DoNotShareWithListType{}); ok {
+      s.datadomainobligationtype.DoNotShareWithList = v
+      }
+      }
+      return s.datadomainobligationtype.DoNotShareWithList
+    }
+// Returns whether the element value for DoNotShareWithList is nil in the container DataDomainObligationType.
+  func (s *DataDomainObligationType) DoNotShareWithList_IsNil() bool {
+    return s.datadomainobligationtype.DoNotShareWithList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DataDomainObligationType) DomainComments() *String {
+    if s.datadomainobligationtype.DomainComments == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.datadomainobligationtype.DomainComments = ((*String)(v))
+      }
+      }
+      return s.datadomainobligationtype.DomainComments
+    }
+// Returns whether the element value for DomainComments is nil in the container DataDomainObligationType.
+  func (s *DataDomainObligationType) DomainComments_IsNil() bool {
+    return s.datadomainobligationtype.DomainComments == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DataDomainObligationType) ShareWithList() *ShareWithListType {
+    if s.datadomainobligationtype.ShareWithList == nil {
+     if v, ok:= ShareWithListTypePointer(ShareWithListType{}); ok {
+      s.datadomainobligationtype.ShareWithList = v
+      }
+      }
+      return s.datadomainobligationtype.ShareWithList
+    }
+// Returns whether the element value for ShareWithList is nil in the container DataDomainObligationType.
+  func (s *DataDomainObligationType) ShareWithList_IsNil() bool {
+    return s.datadomainobligationtype.ShareWithList == nil
+    }
+
+// Set the value of a property to nil
 func (n *DebitOrCreditAmountType) Unset(key string) *DebitOrCreditAmountType {
         switch key {
   case "Type":
@@ -28562,8 +29706,14 @@ func (n *DebitOrCreditAmountType) SetProperty(key string, value interface{}) *De
 // Set the value of a property to nil
 func (n *Debtor) Unset(key string) *Debtor {
         switch key {
+  case "AccountName":
+   n.debtor.AccountName = nil
+  case "AccountNumber":
+   n.debtor.AccountNumber = nil
   case "AddressList":
    n.debtor.AddressList = nil
+  case "BSB":
+   n.debtor.BSB = nil
   case "BilledEntity":
    n.debtor.BilledEntity = nil
   case "BillingName":
@@ -28603,9 +29753,24 @@ func (n *Debtor) SetProperty(key string, value interface{}) *Debtor {
                 n, _ = DebtorPointer(Debtor{})
         }
         switch key {
+    case "AccountName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.debtor.AccountName = ((*String)(v))
+      }
+    case "AccountNumber":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.debtor.AccountNumber = ((*String)(v))
+      }
     case "AddressList":
     if v, ok:= AddressListTypePointer(value); ok {
       n.debtor.AddressList = v
+      }
+    case "BSB":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.debtor.BSB = ((*String)(v))
       }
     case "BilledEntity":
     if v, ok:= Debtor_BilledEntityPointer(value); ok {
@@ -28655,6 +29820,32 @@ func (n *Debtor) SetProperty(key string, value interface{}) *Debtor {
 }
 
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *Debtor) AccountName() *String {
+    if s.debtor.AccountName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.debtor.AccountName = ((*String)(v))
+      }
+      }
+      return s.debtor.AccountName
+    }
+// Returns whether the element value for AccountName is nil in the container Debtor.
+  func (s *Debtor) AccountName_IsNil() bool {
+    return s.debtor.AccountName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *Debtor) AccountNumber() *String {
+    if s.debtor.AccountNumber == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.debtor.AccountNumber = ((*String)(v))
+      }
+      }
+      return s.debtor.AccountNumber
+    }
+// Returns whether the element value for AccountNumber is nil in the container Debtor.
+  func (s *Debtor) AccountNumber_IsNil() bool {
+    return s.debtor.AccountNumber == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *Debtor) AddressList() *AddressListType {
     if s.debtor.AddressList == nil {
      if v, ok:= AddressListTypePointer(AddressListType{}); ok {
@@ -28666,6 +29857,19 @@ func (n *Debtor) SetProperty(key string, value interface{}) *Debtor {
 // Returns whether the element value for AddressList is nil in the container Debtor.
   func (s *Debtor) AddressList_IsNil() bool {
     return s.debtor.AddressList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *Debtor) BSB() *String {
+    if s.debtor.BSB == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.debtor.BSB = ((*String)(v))
+      }
+      }
+      return s.debtor.BSB
+    }
+// Returns whether the element value for BSB is nil in the container Debtor.
+  func (s *Debtor) BSB_IsNil() bool {
+    return s.debtor.BSB == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *Debtor) BilledEntity() *Debtor_BilledEntity {
@@ -28895,12 +30099,20 @@ func (n *DemographicsType) Unset(key string) *DemographicsType {
    n.demographicstype.LanguageList = nil
   case "MaritalStatus":
    n.demographicstype.MaritalStatus = nil
+  case "MedicareCardHolder":
+   n.demographicstype.MedicareCardHolder = nil
   case "MedicareNumber":
    n.demographicstype.MedicareNumber = nil
+  case "MedicarePositionNumber":
+   n.demographicstype.MedicarePositionNumber = nil
+  case "Passport":
+   n.demographicstype.Passport = nil
   case "PermanentResident":
    n.demographicstype.PermanentResident = nil
   case "PlaceOfBirth":
    n.demographicstype.PlaceOfBirth = nil
+  case "PrivateHealthInsurance":
+   n.demographicstype.PrivateHealthInsurance = nil
   case "Religion":
    n.demographicstype.Religion = nil
   case "ReligiousEventList":
@@ -28911,10 +30123,18 @@ func (n *DemographicsType) Unset(key string) *DemographicsType {
    n.demographicstype.Sex = nil
   case "StateOfBirth":
    n.demographicstype.StateOfBirth = nil
+  case "VisaConditions":
+   n.demographicstype.VisaConditions = nil
   case "VisaExpiryDate":
    n.demographicstype.VisaExpiryDate = nil
+  case "VisaGrantDate":
+   n.demographicstype.VisaGrantDate = nil
+  case "VisaNumber":
+   n.demographicstype.VisaNumber = nil
   case "VisaStatisticalCode":
    n.demographicstype.VisaStatisticalCode = nil
+  case "VisaStudyEntitlement":
+   n.demographicstype.VisaStudyEntitlement = nil
   case "VisaSubClass":
    n.demographicstype.VisaSubClass = nil
   case "VisaSubClassList":
@@ -29055,10 +30275,24 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.MaritalStatus = ((*AUCodeSetsMaritalStatusAIHWType)(v))
       }
+    case "MedicareCardHolder":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.demographicstype.MedicareCardHolder = ((*String)(v))
+      }
     case "MedicareNumber":
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.MedicareNumber = ((*String)(v))
+      }
+    case "MedicarePositionNumber":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.demographicstype.MedicarePositionNumber = ((*String)(v))
+      }
+    case "Passport":
+    if v, ok:= PassportTypePointer(value); ok {
+      n.demographicstype.Passport = v
       }
     case "PermanentResident":
         if !CodesetContains(AUCodeSetsPermanentResidentStatusType_map, value) {
@@ -29072,6 +30306,10 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.PlaceOfBirth = ((*String)(v))
+      }
+    case "PrivateHealthInsurance":
+    if v, ok:= PrivateHealthInsuranceTypePointer(value); ok {
+      n.demographicstype.PrivateHealthInsurance = v
       }
     case "Religion":
     if v, ok:= ReligionTypePointer(value); ok {
@@ -29099,15 +30337,38 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.StateOfBirth = ((*StateProvinceType)(v))
       }
+    case "VisaConditions":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.demographicstype.VisaConditions = ((*String)(v))
+      }
     case "VisaExpiryDate":
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaExpiryDate = ((*String)(v))
       }
+    case "VisaGrantDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.demographicstype.VisaGrantDate = ((*String)(v))
+      }
+    case "VisaNumber":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.demographicstype.VisaNumber = ((*String)(v))
+      }
     case "VisaStatisticalCode":
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaStatisticalCode = ((*String)(v))
+      }
+    case "VisaStudyEntitlement":
+        if !CodesetContains(AUCodeSetsVisaStudyEntitlementType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsVisaStudyEntitlementType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.demographicstype.VisaStudyEntitlement = ((*AUCodeSetsVisaStudyEntitlementType)(v))
       }
     case "VisaSubClass":
     
@@ -29359,6 +30620,19 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
     return s.demographicstype.MaritalStatus == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) MedicareCardHolder() *String {
+    if s.demographicstype.MedicareCardHolder == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.demographicstype.MedicareCardHolder = ((*String)(v))
+      }
+      }
+      return s.demographicstype.MedicareCardHolder
+    }
+// Returns whether the element value for MedicareCardHolder is nil in the container DemographicsType.
+  func (s *DemographicsType) MedicareCardHolder_IsNil() bool {
+    return s.demographicstype.MedicareCardHolder == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *DemographicsType) MedicareNumber() *String {
     if s.demographicstype.MedicareNumber == nil {
     if v, ok:= StringPointer(""); ok {
@@ -29370,6 +30644,32 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
 // Returns whether the element value for MedicareNumber is nil in the container DemographicsType.
   func (s *DemographicsType) MedicareNumber_IsNil() bool {
     return s.demographicstype.MedicareNumber == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) MedicarePositionNumber() *String {
+    if s.demographicstype.MedicarePositionNumber == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.demographicstype.MedicarePositionNumber = ((*String)(v))
+      }
+      }
+      return s.demographicstype.MedicarePositionNumber
+    }
+// Returns whether the element value for MedicarePositionNumber is nil in the container DemographicsType.
+  func (s *DemographicsType) MedicarePositionNumber_IsNil() bool {
+    return s.demographicstype.MedicarePositionNumber == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) Passport() *PassportType {
+    if s.demographicstype.Passport == nil {
+     if v, ok:= PassportTypePointer(PassportType{}); ok {
+      s.demographicstype.Passport = v
+      }
+      }
+      return s.demographicstype.Passport
+    }
+// Returns whether the element value for Passport is nil in the container DemographicsType.
+  func (s *DemographicsType) Passport_IsNil() bool {
+    return s.demographicstype.Passport == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *DemographicsType) PermanentResident() *AUCodeSetsPermanentResidentStatusType {
@@ -29396,6 +30696,19 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
 // Returns whether the element value for PlaceOfBirth is nil in the container DemographicsType.
   func (s *DemographicsType) PlaceOfBirth_IsNil() bool {
     return s.demographicstype.PlaceOfBirth == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) PrivateHealthInsurance() *PrivateHealthInsuranceType {
+    if s.demographicstype.PrivateHealthInsurance == nil {
+     if v, ok:= PrivateHealthInsuranceTypePointer(PrivateHealthInsuranceType{}); ok {
+      s.demographicstype.PrivateHealthInsurance = v
+      }
+      }
+      return s.demographicstype.PrivateHealthInsurance
+    }
+// Returns whether the element value for PrivateHealthInsurance is nil in the container DemographicsType.
+  func (s *DemographicsType) PrivateHealthInsurance_IsNil() bool {
+    return s.demographicstype.PrivateHealthInsurance == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *DemographicsType) Religion() *ReligionType {
@@ -29463,6 +30776,19 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
     return s.demographicstype.StateOfBirth == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) VisaConditions() *String {
+    if s.demographicstype.VisaConditions == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.demographicstype.VisaConditions = ((*String)(v))
+      }
+      }
+      return s.demographicstype.VisaConditions
+    }
+// Returns whether the element value for VisaConditions is nil in the container DemographicsType.
+  func (s *DemographicsType) VisaConditions_IsNil() bool {
+    return s.demographicstype.VisaConditions == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *DemographicsType) VisaExpiryDate() *String {
     if s.demographicstype.VisaExpiryDate == nil {
     if v, ok:= StringPointer(""); ok {
@@ -29476,6 +30802,32 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
     return s.demographicstype.VisaExpiryDate == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) VisaGrantDate() *String {
+    if s.demographicstype.VisaGrantDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.demographicstype.VisaGrantDate = ((*String)(v))
+      }
+      }
+      return s.demographicstype.VisaGrantDate
+    }
+// Returns whether the element value for VisaGrantDate is nil in the container DemographicsType.
+  func (s *DemographicsType) VisaGrantDate_IsNil() bool {
+    return s.demographicstype.VisaGrantDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) VisaNumber() *String {
+    if s.demographicstype.VisaNumber == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.demographicstype.VisaNumber = ((*String)(v))
+      }
+      }
+      return s.demographicstype.VisaNumber
+    }
+// Returns whether the element value for VisaNumber is nil in the container DemographicsType.
+  func (s *DemographicsType) VisaNumber_IsNil() bool {
+    return s.demographicstype.VisaNumber == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *DemographicsType) VisaStatisticalCode() *String {
     if s.demographicstype.VisaStatisticalCode == nil {
     if v, ok:= StringPointer(""); ok {
@@ -29487,6 +30839,19 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
 // Returns whether the element value for VisaStatisticalCode is nil in the container DemographicsType.
   func (s *DemographicsType) VisaStatisticalCode_IsNil() bool {
     return s.demographicstype.VisaStatisticalCode == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DemographicsType) VisaStudyEntitlement() *AUCodeSetsVisaStudyEntitlementType {
+    if s.demographicstype.VisaStudyEntitlement == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.demographicstype.VisaStudyEntitlement = ((*AUCodeSetsVisaStudyEntitlementType)(v))
+      }
+      }
+      return s.demographicstype.VisaStudyEntitlement
+    }
+// Returns whether the element value for VisaStudyEntitlement is nil in the container DemographicsType.
+  func (s *DemographicsType) VisaStudyEntitlement_IsNil() bool {
+    return s.demographicstype.VisaStudyEntitlement == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *DemographicsType) VisaSubClass() *VisaSubClassCodeType {
@@ -29650,6 +31015,237 @@ func (n *DetentionContainerType) SetProperty(key string, value interface{}) *Det
 // Returns whether the element value for Status is nil in the container DetentionContainerType.
   func (s *DetentionContainerType) Status_IsNil() bool {
     return s.detentioncontainertype.Status == nil
+    }
+
+// Set the value of a property to nil
+func (n *DoNotShareWithType) Unset(key string) *DoNotShareWithType {
+        switch key {
+  case "DoNotShareWithComments":
+   n.donotsharewithtype.DoNotShareWithComments = nil
+  case "DoNotShareWithLocalId":
+   n.donotsharewithtype.DoNotShareWithLocalId = nil
+  case "DoNotShareWithName":
+   n.donotsharewithtype.DoNotShareWithName = nil
+  case "DoNotShareWithObjectTypeName":
+   n.donotsharewithtype.DoNotShareWithObjectTypeName = nil
+  case "DoNotShareWithParty":
+   n.donotsharewithtype.DoNotShareWithParty = nil
+  case "DoNotShareWithPurpose":
+   n.donotsharewithtype.DoNotShareWithPurpose = nil
+  case "DoNotShareWithRefId":
+   n.donotsharewithtype.DoNotShareWithRefId = nil
+  case "DoNotShareWithRelationship":
+   n.donotsharewithtype.DoNotShareWithRelationship = nil
+  case "DoNotShareWithRole":
+   n.donotsharewithtype.DoNotShareWithRole = nil
+  case "DoNotShareWithURL":
+   n.donotsharewithtype.DoNotShareWithURL = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "DoNotShareWithType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *DoNotShareWithType) SetProperties(props ...Prop) *DoNotShareWithType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *DoNotShareWithType) SetProperty(key string, value interface{}) *DoNotShareWithType {
+        if n == nil {
+                n, _ = DoNotShareWithTypePointer(DoNotShareWithType{})
+        }
+        switch key {
+    case "DoNotShareWithComments":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithComments = ((*String)(v))
+      }
+    case "DoNotShareWithLocalId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithLocalId = ((*LocalIdType)(v))
+      }
+    case "DoNotShareWithName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithName = ((*String)(v))
+      }
+    case "DoNotShareWithObjectTypeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithObjectTypeName = ((*String)(v))
+      }
+    case "DoNotShareWithParty":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithParty = ((*String)(v))
+      }
+    case "DoNotShareWithPurpose":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithPurpose = ((*String)(v))
+      }
+    case "DoNotShareWithRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithRefId = ((*String)(v))
+      }
+    case "DoNotShareWithRelationship":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithRelationship = ((*String)(v))
+      }
+    case "DoNotShareWithRole":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithRole = ((*String)(v))
+      }
+    case "DoNotShareWithURL":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.donotsharewithtype.DoNotShareWithURL = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "DoNotShareWithType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithComments() *String {
+    if s.donotsharewithtype.DoNotShareWithComments == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithComments = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithComments
+    }
+// Returns whether the element value for DoNotShareWithComments is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithComments_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithComments == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithLocalId() *LocalIdType {
+    if s.donotsharewithtype.DoNotShareWithLocalId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithLocalId = ((*LocalIdType)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithLocalId
+    }
+// Returns whether the element value for DoNotShareWithLocalId is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithLocalId_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithLocalId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithName() *String {
+    if s.donotsharewithtype.DoNotShareWithName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithName = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithName
+    }
+// Returns whether the element value for DoNotShareWithName is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithName_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithObjectTypeName() *String {
+    if s.donotsharewithtype.DoNotShareWithObjectTypeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithObjectTypeName = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithObjectTypeName
+    }
+// Returns whether the element value for DoNotShareWithObjectTypeName is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithObjectTypeName_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithObjectTypeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithParty() *String {
+    if s.donotsharewithtype.DoNotShareWithParty == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithParty = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithParty
+    }
+// Returns whether the element value for DoNotShareWithParty is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithParty_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithParty == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithPurpose() *String {
+    if s.donotsharewithtype.DoNotShareWithPurpose == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithPurpose = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithPurpose
+    }
+// Returns whether the element value for DoNotShareWithPurpose is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithPurpose_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithPurpose == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithRefId() *String {
+    if s.donotsharewithtype.DoNotShareWithRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithRefId = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithRefId
+    }
+// Returns whether the element value for DoNotShareWithRefId is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithRefId_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithRelationship() *String {
+    if s.donotsharewithtype.DoNotShareWithRelationship == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithRelationship = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithRelationship
+    }
+// Returns whether the element value for DoNotShareWithRelationship is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithRelationship_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithRelationship == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithRole() *String {
+    if s.donotsharewithtype.DoNotShareWithRole == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithRole = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithRole
+    }
+// Returns whether the element value for DoNotShareWithRole is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithRole_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithRole == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DoNotShareWithType) DoNotShareWithURL() *String {
+    if s.donotsharewithtype.DoNotShareWithURL == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.donotsharewithtype.DoNotShareWithURL = ((*String)(v))
+      }
+      }
+      return s.donotsharewithtype.DoNotShareWithURL
+    }
+// Returns whether the element value for DoNotShareWithURL is nil in the container DoNotShareWithType.
+  func (s *DoNotShareWithType) DoNotShareWithURL_IsNil() bool {
+    return s.donotsharewithtype.DoNotShareWithURL == nil
     }
 
 // Set the value of a property to nil
@@ -32620,6 +34216,8 @@ func (n *FineInfoType) SetProperty(key string, value interface{}) *FineInfoType 
 // Set the value of a property to nil
 func (n *FollowUpActionType) Unset(key string) *FollowUpActionType {
         switch key {
+  case "Date":
+   n.followupactiontype.Date = nil
   case "FollowUpActionCategory":
    n.followupactiontype.FollowUpActionCategory = nil
   case "FollowUpDetails":
@@ -32647,6 +34245,11 @@ func (n *FollowUpActionType) SetProperty(key string, value interface{}) *FollowU
                 n, _ = FollowUpActionTypePointer(FollowUpActionType{})
         }
         switch key {
+    case "Date":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.followupactiontype.Date = ((*String)(v))
+      }
     case "FollowUpActionCategory":
     
     if v, ok:= StringPointer(value); ok {
@@ -32668,6 +34271,19 @@ func (n *FollowUpActionType) SetProperty(key string, value interface{}) *FollowU
         return n
 }
 
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *FollowUpActionType) Date() *String {
+    if s.followupactiontype.Date == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.followupactiontype.Date = ((*String)(v))
+      }
+      }
+      return s.followupactiontype.Date
+    }
+// Returns whether the element value for Date is nil in the container FollowUpActionType.
+  func (s *FollowUpActionType) Date_IsNil() bool {
+    return s.followupactiontype.Date == nil
+    }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *FollowUpActionType) FollowUpActionCategory() *String {
     if s.followupactiontype.FollowUpActionCategory == nil {
@@ -44064,6 +45680,237 @@ func (n *NameType) SetProperty(key string, value interface{}) *NameType {
     }
 
 // Set the value of a property to nil
+func (n *NeverShareWithType) Unset(key string) *NeverShareWithType {
+        switch key {
+  case "NeverShareWithComments":
+   n.neversharewithtype.NeverShareWithComments = nil
+  case "NeverShareWithLocalId":
+   n.neversharewithtype.NeverShareWithLocalId = nil
+  case "NeverShareWithName":
+   n.neversharewithtype.NeverShareWithName = nil
+  case "NeverShareWithObjectTypeName":
+   n.neversharewithtype.NeverShareWithObjectTypeName = nil
+  case "NeverShareWithParty":
+   n.neversharewithtype.NeverShareWithParty = nil
+  case "NeverShareWithPurpose":
+   n.neversharewithtype.NeverShareWithPurpose = nil
+  case "NeverShareWithRefId":
+   n.neversharewithtype.NeverShareWithRefId = nil
+  case "NeverShareWithRelationship":
+   n.neversharewithtype.NeverShareWithRelationship = nil
+  case "NeverShareWithRole":
+   n.neversharewithtype.NeverShareWithRole = nil
+  case "NeverShareWithURL":
+   n.neversharewithtype.NeverShareWithURL = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "NeverShareWithType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *NeverShareWithType) SetProperties(props ...Prop) *NeverShareWithType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *NeverShareWithType) SetProperty(key string, value interface{}) *NeverShareWithType {
+        if n == nil {
+                n, _ = NeverShareWithTypePointer(NeverShareWithType{})
+        }
+        switch key {
+    case "NeverShareWithComments":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithComments = ((*String)(v))
+      }
+    case "NeverShareWithLocalId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithLocalId = ((*LocalIdType)(v))
+      }
+    case "NeverShareWithName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithName = ((*String)(v))
+      }
+    case "NeverShareWithObjectTypeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithObjectTypeName = ((*String)(v))
+      }
+    case "NeverShareWithParty":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithParty = ((*String)(v))
+      }
+    case "NeverShareWithPurpose":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithPurpose = ((*String)(v))
+      }
+    case "NeverShareWithRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithRefId = ((*String)(v))
+      }
+    case "NeverShareWithRelationship":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithRelationship = ((*String)(v))
+      }
+    case "NeverShareWithRole":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithRole = ((*String)(v))
+      }
+    case "NeverShareWithURL":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.neversharewithtype.NeverShareWithURL = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "NeverShareWithType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithComments() *String {
+    if s.neversharewithtype.NeverShareWithComments == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithComments = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithComments
+    }
+// Returns whether the element value for NeverShareWithComments is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithComments_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithComments == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithLocalId() *LocalIdType {
+    if s.neversharewithtype.NeverShareWithLocalId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithLocalId = ((*LocalIdType)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithLocalId
+    }
+// Returns whether the element value for NeverShareWithLocalId is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithLocalId_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithLocalId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithName() *String {
+    if s.neversharewithtype.NeverShareWithName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithName = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithName
+    }
+// Returns whether the element value for NeverShareWithName is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithName_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithObjectTypeName() *String {
+    if s.neversharewithtype.NeverShareWithObjectTypeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithObjectTypeName = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithObjectTypeName
+    }
+// Returns whether the element value for NeverShareWithObjectTypeName is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithObjectTypeName_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithObjectTypeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithParty() *String {
+    if s.neversharewithtype.NeverShareWithParty == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithParty = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithParty
+    }
+// Returns whether the element value for NeverShareWithParty is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithParty_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithParty == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithPurpose() *String {
+    if s.neversharewithtype.NeverShareWithPurpose == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithPurpose = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithPurpose
+    }
+// Returns whether the element value for NeverShareWithPurpose is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithPurpose_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithPurpose == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithRefId() *String {
+    if s.neversharewithtype.NeverShareWithRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithRefId = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithRefId
+    }
+// Returns whether the element value for NeverShareWithRefId is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithRefId_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithRelationship() *String {
+    if s.neversharewithtype.NeverShareWithRelationship == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithRelationship = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithRelationship
+    }
+// Returns whether the element value for NeverShareWithRelationship is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithRelationship_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithRelationship == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithRole() *String {
+    if s.neversharewithtype.NeverShareWithRole == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithRole = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithRole
+    }
+// Returns whether the element value for NeverShareWithRole is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithRole_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithRole == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *NeverShareWithType) NeverShareWithURL() *String {
+    if s.neversharewithtype.NeverShareWithURL == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.neversharewithtype.NeverShareWithURL = ((*String)(v))
+      }
+      }
+      return s.neversharewithtype.NeverShareWithURL
+    }
+// Returns whether the element value for NeverShareWithURL is nil in the container NeverShareWithType.
+  func (s *NeverShareWithType) NeverShareWithURL_IsNil() bool {
+    return s.neversharewithtype.NeverShareWithURL == nil
+    }
+
+// Set the value of a property to nil
 func (n *OtherCodeListType_OtherCode) Unset(key string) *OtherCodeListType_OtherCode {
         switch key {
   case "Codeset":
@@ -44597,6 +46444,100 @@ func (n *OtherWellbeingResponseContainerType) SetProperty(key string, value inte
 // Returns whether the element value for Status is nil in the container OtherWellbeingResponseContainerType.
   func (s *OtherWellbeingResponseContainerType) Status_IsNil() bool {
     return s.otherwellbeingresponsecontainertype.Status == nil
+    }
+
+// Set the value of a property to nil
+func (n *PassportType) Unset(key string) *PassportType {
+        switch key {
+  case "Country":
+   n.passporttype.Country = nil
+  case "ExpiryDate":
+   n.passporttype.ExpiryDate = nil
+  case "Number":
+   n.passporttype.Number = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PassportType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *PassportType) SetProperties(props ...Prop) *PassportType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *PassportType) SetProperty(key string, value interface{}) *PassportType {
+        if n == nil {
+                n, _ = PassportTypePointer(PassportType{})
+        }
+        switch key {
+    case "Country":
+        if !CodesetContains(AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.passporttype.Country = ((*CountryType)(v))
+      }
+    case "ExpiryDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.passporttype.ExpiryDate = ((*String)(v))
+      }
+    case "Number":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.passporttype.Number = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PassportType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PassportType) Country() *CountryType {
+    if s.passporttype.Country == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.passporttype.Country = ((*CountryType)(v))
+      }
+      }
+      return s.passporttype.Country
+    }
+// Returns whether the element value for Country is nil in the container PassportType.
+  func (s *PassportType) Country_IsNil() bool {
+    return s.passporttype.Country == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PassportType) ExpiryDate() *String {
+    if s.passporttype.ExpiryDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.passporttype.ExpiryDate = ((*String)(v))
+      }
+      }
+      return s.passporttype.ExpiryDate
+    }
+// Returns whether the element value for ExpiryDate is nil in the container PassportType.
+  func (s *PassportType) ExpiryDate_IsNil() bool {
+    return s.passporttype.ExpiryDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PassportType) Number() *String {
+    if s.passporttype.Number == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.passporttype.Number = ((*String)(v))
+      }
+      }
+      return s.passporttype.Number
+    }
+// Returns whether the element value for Number is nil in the container PassportType.
+  func (s *PassportType) Number_IsNil() bool {
+    return s.passporttype.Number == nil
     }
 
 // Set the value of a property to nil
@@ -45754,6 +47695,237 @@ func (n *PeriodAttendanceType) SetProperty(key string, value interface{}) *Perio
     }
 
 // Set the value of a property to nil
+func (n *PermissionToParticipateType) Unset(key string) *PermissionToParticipateType {
+        switch key {
+  case "Permission":
+   n.permissiontoparticipatetype.Permission = nil
+  case "PermissionCategory":
+   n.permissiontoparticipatetype.PermissionCategory = nil
+  case "PermissionComments":
+   n.permissiontoparticipatetype.PermissionComments = nil
+  case "PermissionEndDate":
+   n.permissiontoparticipatetype.PermissionEndDate = nil
+  case "PermissionGranteeName":
+   n.permissiontoparticipatetype.PermissionGranteeName = nil
+  case "PermissionGranteeObjectTypeName":
+   n.permissiontoparticipatetype.PermissionGranteeObjectTypeName = nil
+  case "PermissionGranteeRefId":
+   n.permissiontoparticipatetype.PermissionGranteeRefId = nil
+  case "PermissionGranteeRelationship":
+   n.permissiontoparticipatetype.PermissionGranteeRelationship = nil
+  case "PermissionStartDate":
+   n.permissiontoparticipatetype.PermissionStartDate = nil
+  case "PermissionValue":
+   n.permissiontoparticipatetype.PermissionValue = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PermissionToParticipateType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *PermissionToParticipateType) SetProperties(props ...Prop) *PermissionToParticipateType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *PermissionToParticipateType) SetProperty(key string, value interface{}) *PermissionToParticipateType {
+        if n == nil {
+                n, _ = PermissionToParticipateTypePointer(PermissionToParticipateType{})
+        }
+        switch key {
+    case "Permission":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.Permission = ((*String)(v))
+      }
+    case "PermissionCategory":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionCategory = ((*String)(v))
+      }
+    case "PermissionComments":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionComments = ((*String)(v))
+      }
+    case "PermissionEndDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionEndDate = ((*String)(v))
+      }
+    case "PermissionGranteeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionGranteeName = ((*String)(v))
+      }
+    case "PermissionGranteeObjectTypeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionGranteeObjectTypeName = ((*String)(v))
+      }
+    case "PermissionGranteeRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionGranteeRefId = ((*String)(v))
+      }
+    case "PermissionGranteeRelationship":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionGranteeRelationship = ((*String)(v))
+      }
+    case "PermissionStartDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionStartDate = ((*String)(v))
+      }
+    case "PermissionValue":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.permissiontoparticipatetype.PermissionValue = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PermissionToParticipateType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) Permission() *String {
+    if s.permissiontoparticipatetype.Permission == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.Permission = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.Permission
+    }
+// Returns whether the element value for Permission is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) Permission_IsNil() bool {
+    return s.permissiontoparticipatetype.Permission == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionCategory() *String {
+    if s.permissiontoparticipatetype.PermissionCategory == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionCategory = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionCategory
+    }
+// Returns whether the element value for PermissionCategory is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionCategory_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionCategory == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionComments() *String {
+    if s.permissiontoparticipatetype.PermissionComments == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionComments = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionComments
+    }
+// Returns whether the element value for PermissionComments is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionComments_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionComments == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionEndDate() *String {
+    if s.permissiontoparticipatetype.PermissionEndDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionEndDate = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionEndDate
+    }
+// Returns whether the element value for PermissionEndDate is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionEndDate_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionEndDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionGranteeName() *String {
+    if s.permissiontoparticipatetype.PermissionGranteeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionGranteeName = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionGranteeName
+    }
+// Returns whether the element value for PermissionGranteeName is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionGranteeName_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionGranteeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionGranteeObjectTypeName() *String {
+    if s.permissiontoparticipatetype.PermissionGranteeObjectTypeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionGranteeObjectTypeName = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionGranteeObjectTypeName
+    }
+// Returns whether the element value for PermissionGranteeObjectTypeName is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionGranteeObjectTypeName_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionGranteeObjectTypeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionGranteeRefId() *String {
+    if s.permissiontoparticipatetype.PermissionGranteeRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionGranteeRefId = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionGranteeRefId
+    }
+// Returns whether the element value for PermissionGranteeRefId is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionGranteeRefId_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionGranteeRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionGranteeRelationship() *String {
+    if s.permissiontoparticipatetype.PermissionGranteeRelationship == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionGranteeRelationship = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionGranteeRelationship
+    }
+// Returns whether the element value for PermissionGranteeRelationship is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionGranteeRelationship_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionGranteeRelationship == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionStartDate() *String {
+    if s.permissiontoparticipatetype.PermissionStartDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionStartDate = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionStartDate
+    }
+// Returns whether the element value for PermissionStartDate is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionStartDate_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionStartDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PermissionToParticipateType) PermissionValue() *String {
+    if s.permissiontoparticipatetype.PermissionValue == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.permissiontoparticipatetype.PermissionValue = ((*String)(v))
+      }
+      }
+      return s.permissiontoparticipatetype.PermissionValue
+    }
+// Returns whether the element value for PermissionValue is nil in the container PermissionToParticipateType.
+  func (s *PermissionToParticipateType) PermissionValue_IsNil() bool {
+    return s.permissiontoparticipatetype.PermissionValue == nil
+    }
+
+// Set the value of a property to nil
 func (n *PersonInfoType) Unset(key string) *PersonInfoType {
         switch key {
   case "AddressList":
@@ -46432,6 +48604,330 @@ func (n *PersonPicture_PictureSource) SetProperty(key string, value interface{})
     }
 
 // Set the value of a property to nil
+func (n *PersonPrivacyObligationDocument) Unset(key string) *PersonPrivacyObligationDocument {
+        switch key {
+  case "ApplicableLawList":
+   n.personprivacyobligationdocument.ApplicableLawList = nil
+  case "ConsentToSharingOfData":
+   n.personprivacyobligationdocument.ConsentToSharingOfData = nil
+  case "ContactForRequestsObjectTypeName":
+   n.personprivacyobligationdocument.ContactForRequestsObjectTypeName = nil
+  case "ContactForRequestsRefId":
+   n.personprivacyobligationdocument.ContactForRequestsRefId = nil
+  case "EndDate":
+   n.personprivacyobligationdocument.EndDate = nil
+  case "LocalCodeList":
+   n.personprivacyobligationdocument.LocalCodeList = nil
+  case "ParentObjectTypeName":
+   n.personprivacyobligationdocument.ParentObjectTypeName = nil
+  case "ParentRefId":
+   n.personprivacyobligationdocument.ParentRefId = nil
+  case "PermissionToParticipateList":
+   n.personprivacyobligationdocument.PermissionToParticipateList = nil
+  case "RefId":
+   n.personprivacyobligationdocument.RefId = nil
+  case "SIF_ExtendedElements":
+   n.personprivacyobligationdocument.SIF_ExtendedElements = nil
+  case "SIF_Metadata":
+   n.personprivacyobligationdocument.SIF_Metadata = nil
+  case "SchoolYear":
+   n.personprivacyobligationdocument.SchoolYear = nil
+  case "SettingLocationList":
+   n.personprivacyobligationdocument.SettingLocationList = nil
+  case "StartDate":
+   n.personprivacyobligationdocument.StartDate = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PersonPrivacyObligationDocument")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *PersonPrivacyObligationDocument) SetProperties(props ...Prop) *PersonPrivacyObligationDocument {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *PersonPrivacyObligationDocument) SetProperty(key string, value interface{}) *PersonPrivacyObligationDocument {
+        if n == nil {
+                n, _ = PersonPrivacyObligationDocumentPointer(PersonPrivacyObligationDocument{})
+        }
+        switch key {
+    case "ApplicableLawList":
+    if v, ok:= ApplicableLawListTypePointer(value); ok {
+      n.personprivacyobligationdocument.ApplicableLawList = v
+      }
+    case "ConsentToSharingOfData":
+    if v, ok:= ConsentToSharingOfDataContainerTypePointer(value); ok {
+      n.personprivacyobligationdocument.ConsentToSharingOfData = v
+      }
+    case "ContactForRequestsObjectTypeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.ContactForRequestsObjectTypeName = ((*String)(v))
+      }
+    case "ContactForRequestsRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.ContactForRequestsRefId = ((*String)(v))
+      }
+    case "EndDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.EndDate = ((*String)(v))
+      }
+    case "LocalCodeList":
+    if v, ok:= LocalCodeListTypePointer(value); ok {
+      n.personprivacyobligationdocument.LocalCodeList = v
+      }
+    case "ParentObjectTypeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.ParentObjectTypeName = ((*String)(v))
+      }
+    case "ParentRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.ParentRefId = ((*String)(v))
+      }
+    case "PermissionToParticipateList":
+    if v, ok:= PermissionToParticipateListTypePointer(value); ok {
+      n.personprivacyobligationdocument.PermissionToParticipateList = v
+      }
+    case "RefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.RefId = ((*RefIdType)(v))
+      }
+    case "SIF_ExtendedElements":
+    if v, ok:= SIF_ExtendedElementsTypePointer(value); ok {
+      n.personprivacyobligationdocument.SIF_ExtendedElements = v
+      }
+    case "SIF_Metadata":
+    if v, ok:= SIF_MetadataTypePointer(value); ok {
+      n.personprivacyobligationdocument.SIF_Metadata = v
+      }
+    case "SchoolYear":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.SchoolYear = ((*SchoolYearType)(v))
+      }
+    case "SettingLocationList":
+    if v, ok:= SettingLocationListTypePointer(value); ok {
+      n.personprivacyobligationdocument.SettingLocationList = v
+      }
+    case "StartDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.personprivacyobligationdocument.StartDate = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PersonPrivacyObligationDocument")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) ApplicableLawList() *ApplicableLawListType {
+    if s.personprivacyobligationdocument.ApplicableLawList == nil {
+     if v, ok:= ApplicableLawListTypePointer(ApplicableLawListType{}); ok {
+      s.personprivacyobligationdocument.ApplicableLawList = v
+      }
+      }
+      return s.personprivacyobligationdocument.ApplicableLawList
+    }
+// Returns whether the element value for ApplicableLawList is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) ApplicableLawList_IsNil() bool {
+    return s.personprivacyobligationdocument.ApplicableLawList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) ConsentToSharingOfData() *ConsentToSharingOfDataContainerType {
+    if s.personprivacyobligationdocument.ConsentToSharingOfData == nil {
+     if v, ok:= ConsentToSharingOfDataContainerTypePointer(ConsentToSharingOfDataContainerType{}); ok {
+      s.personprivacyobligationdocument.ConsentToSharingOfData = v
+      }
+      }
+      return s.personprivacyobligationdocument.ConsentToSharingOfData
+    }
+// Returns whether the element value for ConsentToSharingOfData is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) ConsentToSharingOfData_IsNil() bool {
+    return s.personprivacyobligationdocument.ConsentToSharingOfData == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) ContactForRequestsObjectTypeName() *String {
+    if s.personprivacyobligationdocument.ContactForRequestsObjectTypeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.ContactForRequestsObjectTypeName = ((*String)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.ContactForRequestsObjectTypeName
+    }
+// Returns whether the element value for ContactForRequestsObjectTypeName is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) ContactForRequestsObjectTypeName_IsNil() bool {
+    return s.personprivacyobligationdocument.ContactForRequestsObjectTypeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) ContactForRequestsRefId() *String {
+    if s.personprivacyobligationdocument.ContactForRequestsRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.ContactForRequestsRefId = ((*String)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.ContactForRequestsRefId
+    }
+// Returns whether the element value for ContactForRequestsRefId is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) ContactForRequestsRefId_IsNil() bool {
+    return s.personprivacyobligationdocument.ContactForRequestsRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) EndDate() *String {
+    if s.personprivacyobligationdocument.EndDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.EndDate = ((*String)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.EndDate
+    }
+// Returns whether the element value for EndDate is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) EndDate_IsNil() bool {
+    return s.personprivacyobligationdocument.EndDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) LocalCodeList() *LocalCodeListType {
+    if s.personprivacyobligationdocument.LocalCodeList == nil {
+     if v, ok:= LocalCodeListTypePointer(LocalCodeListType{}); ok {
+      s.personprivacyobligationdocument.LocalCodeList = v
+      }
+      }
+      return s.personprivacyobligationdocument.LocalCodeList
+    }
+// Returns whether the element value for LocalCodeList is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) LocalCodeList_IsNil() bool {
+    return s.personprivacyobligationdocument.LocalCodeList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) ParentObjectTypeName() *String {
+    if s.personprivacyobligationdocument.ParentObjectTypeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.ParentObjectTypeName = ((*String)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.ParentObjectTypeName
+    }
+// Returns whether the element value for ParentObjectTypeName is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) ParentObjectTypeName_IsNil() bool {
+    return s.personprivacyobligationdocument.ParentObjectTypeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) ParentRefId() *String {
+    if s.personprivacyobligationdocument.ParentRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.ParentRefId = ((*String)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.ParentRefId
+    }
+// Returns whether the element value for ParentRefId is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) ParentRefId_IsNil() bool {
+    return s.personprivacyobligationdocument.ParentRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) PermissionToParticipateList() *PermissionToParticipateListType {
+    if s.personprivacyobligationdocument.PermissionToParticipateList == nil {
+     if v, ok:= PermissionToParticipateListTypePointer(PermissionToParticipateListType{}); ok {
+      s.personprivacyobligationdocument.PermissionToParticipateList = v
+      }
+      }
+      return s.personprivacyobligationdocument.PermissionToParticipateList
+    }
+// Returns whether the element value for PermissionToParticipateList is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) PermissionToParticipateList_IsNil() bool {
+    return s.personprivacyobligationdocument.PermissionToParticipateList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) RefId() *RefIdType {
+    if s.personprivacyobligationdocument.RefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.RefId = ((*RefIdType)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.RefId
+    }
+// Returns whether the element value for RefId is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) RefId_IsNil() bool {
+    return s.personprivacyobligationdocument.RefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) SIF_ExtendedElements() *SIF_ExtendedElementsType {
+    if s.personprivacyobligationdocument.SIF_ExtendedElements == nil {
+     if v, ok:= SIF_ExtendedElementsTypePointer(SIF_ExtendedElementsType{}); ok {
+      s.personprivacyobligationdocument.SIF_ExtendedElements = v
+      }
+      }
+      return s.personprivacyobligationdocument.SIF_ExtendedElements
+    }
+// Returns whether the element value for SIF_ExtendedElements is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) SIF_ExtendedElements_IsNil() bool {
+    return s.personprivacyobligationdocument.SIF_ExtendedElements == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) SIF_Metadata() *SIF_MetadataType {
+    if s.personprivacyobligationdocument.SIF_Metadata == nil {
+     if v, ok:= SIF_MetadataTypePointer(SIF_MetadataType{}); ok {
+      s.personprivacyobligationdocument.SIF_Metadata = v
+      }
+      }
+      return s.personprivacyobligationdocument.SIF_Metadata
+    }
+// Returns whether the element value for SIF_Metadata is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) SIF_Metadata_IsNil() bool {
+    return s.personprivacyobligationdocument.SIF_Metadata == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) SchoolYear() *SchoolYearType {
+    if s.personprivacyobligationdocument.SchoolYear == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.SchoolYear = ((*SchoolYearType)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.SchoolYear
+    }
+// Returns whether the element value for SchoolYear is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) SchoolYear_IsNil() bool {
+    return s.personprivacyobligationdocument.SchoolYear == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) SettingLocationList() *SettingLocationListType {
+    if s.personprivacyobligationdocument.SettingLocationList == nil {
+     if v, ok:= SettingLocationListTypePointer(SettingLocationListType{}); ok {
+      s.personprivacyobligationdocument.SettingLocationList = v
+      }
+      }
+      return s.personprivacyobligationdocument.SettingLocationList
+    }
+// Returns whether the element value for SettingLocationList is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) SettingLocationList_IsNil() bool {
+    return s.personprivacyobligationdocument.SettingLocationList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PersonPrivacyObligationDocument) StartDate() *String {
+    if s.personprivacyobligationdocument.StartDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.personprivacyobligationdocument.StartDate = ((*String)(v))
+      }
+      }
+      return s.personprivacyobligationdocument.StartDate
+    }
+// Returns whether the element value for StartDate is nil in the container PersonPrivacyObligationDocument.
+  func (s *PersonPrivacyObligationDocument) StartDate_IsNil() bool {
+    return s.personprivacyobligationdocument.StartDate == nil
+    }
+
+// Set the value of a property to nil
 func (n *PersonalisedPlan) Unset(key string) *PersonalisedPlan {
         switch key {
   case "AssociatedAttachment":
@@ -47057,6 +49553,77 @@ func (n *PrincipalInfoType) SetProperty(key string, value interface{}) *Principa
 // Returns whether the element value for PhoneNumberList is nil in the container PrincipalInfoType.
   func (s *PrincipalInfoType) PhoneNumberList_IsNil() bool {
     return s.principalinfotype.PhoneNumberList == nil
+    }
+
+// Set the value of a property to nil
+func (n *PrivateHealthInsuranceType) Unset(key string) *PrivateHealthInsuranceType {
+        switch key {
+  case "Company":
+   n.privatehealthinsurancetype.Company = nil
+  case "Number":
+   n.privatehealthinsurancetype.Number = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PrivateHealthInsuranceType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *PrivateHealthInsuranceType) SetProperties(props ...Prop) *PrivateHealthInsuranceType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *PrivateHealthInsuranceType) SetProperty(key string, value interface{}) *PrivateHealthInsuranceType {
+        if n == nil {
+                n, _ = PrivateHealthInsuranceTypePointer(PrivateHealthInsuranceType{})
+        }
+        switch key {
+    case "Company":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.privatehealthinsurancetype.Company = ((*String)(v))
+      }
+    case "Number":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.privatehealthinsurancetype.Number = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "PrivateHealthInsuranceType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PrivateHealthInsuranceType) Company() *String {
+    if s.privatehealthinsurancetype.Company == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.privatehealthinsurancetype.Company = ((*String)(v))
+      }
+      }
+      return s.privatehealthinsurancetype.Company
+    }
+// Returns whether the element value for Company is nil in the container PrivateHealthInsuranceType.
+  func (s *PrivateHealthInsuranceType) Company_IsNil() bool {
+    return s.privatehealthinsurancetype.Company == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PrivateHealthInsuranceType) Number() *String {
+    if s.privatehealthinsurancetype.Number == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.privatehealthinsurancetype.Number = ((*String)(v))
+      }
+      }
+      return s.privatehealthinsurancetype.Number
+    }
+// Returns whether the element value for Number is nil in the container PrivateHealthInsuranceType.
+  func (s *PrivateHealthInsuranceType) Number_IsNil() bool {
+    return s.privatehealthinsurancetype.Number == nil
     }
 
 // Set the value of a property to nil
@@ -51333,6 +53900,8 @@ func (n *SchoolInfo) Unset(key string) *SchoolInfo {
    n.schoolinfo.OtherIdList = nil
   case "OtherLEA":
    n.schoolinfo.OtherLEA = nil
+  case "ParentCommonwealthId":
+   n.schoolinfo.ParentCommonwealthId = nil
   case "PhoneNumberList":
    n.schoolinfo.PhoneNumberList = nil
   case "PrincipalInfo":
@@ -51510,6 +54079,11 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
     case "OtherLEA":
     if v, ok:= SchoolInfo_OtherLEAPointer(value); ok {
       n.schoolinfo.OtherLEA = v
+      }
+    case "ParentCommonwealthId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.schoolinfo.ParentCommonwealthId = ((*String)(v))
       }
     case "PhoneNumberList":
     if v, ok:= PhoneNumberListTypePointer(value); ok {
@@ -51909,6 +54483,19 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
 // Returns whether the element value for OtherLEA is nil in the container SchoolInfo.
   func (s *SchoolInfo) OtherLEA_IsNil() bool {
     return s.schoolinfo.OtherLEA == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SchoolInfo) ParentCommonwealthId() *String {
+    if s.schoolinfo.ParentCommonwealthId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.schoolinfo.ParentCommonwealthId = ((*String)(v))
+      }
+      }
+      return s.schoolinfo.ParentCommonwealthId
+    }
+// Returns whether the element value for ParentCommonwealthId is nil in the container SchoolInfo.
+  func (s *SchoolInfo) ParentCommonwealthId_IsNil() bool {
+    return s.schoolinfo.ParentCommonwealthId == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *SchoolInfo) PhoneNumberList() *PhoneNumberListType {
@@ -53588,6 +56175,368 @@ func (n *SessionInfo) SetProperty(key string, value interface{}) *SessionInfo {
 // Returns whether the element value for TimeTableSubjectLocalId is nil in the container SessionInfo.
   func (s *SessionInfo) TimeTableSubjectLocalId_IsNil() bool {
     return s.sessioninfo.TimeTableSubjectLocalId == nil
+    }
+
+// Set the value of a property to nil
+func (n *SettingLocationType) Unset(key string) *SettingLocationType {
+        switch key {
+  case "SettingLocationName":
+   n.settinglocationtype.SettingLocationName = nil
+  case "SettingLocationObjectTypeName":
+   n.settinglocationtype.SettingLocationObjectTypeName = nil
+  case "SettingLocationRefId":
+   n.settinglocationtype.SettingLocationRefId = nil
+  case "SettingLocationType":
+   n.settinglocationtype.SettingLocationType = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "SettingLocationType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *SettingLocationType) SetProperties(props ...Prop) *SettingLocationType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *SettingLocationType) SetProperty(key string, value interface{}) *SettingLocationType {
+        if n == nil {
+                n, _ = SettingLocationTypePointer(SettingLocationType{})
+        }
+        switch key {
+    case "SettingLocationName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.settinglocationtype.SettingLocationName = ((*String)(v))
+      }
+    case "SettingLocationObjectTypeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.settinglocationtype.SettingLocationObjectTypeName = ((*String)(v))
+      }
+    case "SettingLocationRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.settinglocationtype.SettingLocationRefId = ((*String)(v))
+      }
+    case "SettingLocationType":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.settinglocationtype.SettingLocationType = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "SettingLocationType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SettingLocationType) SettingLocationName() *String {
+    if s.settinglocationtype.SettingLocationName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.settinglocationtype.SettingLocationName = ((*String)(v))
+      }
+      }
+      return s.settinglocationtype.SettingLocationName
+    }
+// Returns whether the element value for SettingLocationName is nil in the container SettingLocationType.
+  func (s *SettingLocationType) SettingLocationName_IsNil() bool {
+    return s.settinglocationtype.SettingLocationName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SettingLocationType) SettingLocationObjectTypeName() *String {
+    if s.settinglocationtype.SettingLocationObjectTypeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.settinglocationtype.SettingLocationObjectTypeName = ((*String)(v))
+      }
+      }
+      return s.settinglocationtype.SettingLocationObjectTypeName
+    }
+// Returns whether the element value for SettingLocationObjectTypeName is nil in the container SettingLocationType.
+  func (s *SettingLocationType) SettingLocationObjectTypeName_IsNil() bool {
+    return s.settinglocationtype.SettingLocationObjectTypeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SettingLocationType) SettingLocationRefId() *String {
+    if s.settinglocationtype.SettingLocationRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.settinglocationtype.SettingLocationRefId = ((*String)(v))
+      }
+      }
+      return s.settinglocationtype.SettingLocationRefId
+    }
+// Returns whether the element value for SettingLocationRefId is nil in the container SettingLocationType.
+  func (s *SettingLocationType) SettingLocationRefId_IsNil() bool {
+    return s.settinglocationtype.SettingLocationRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SettingLocationType) SettingLocationType() *String {
+    if s.settinglocationtype.SettingLocationType == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.settinglocationtype.SettingLocationType = ((*String)(v))
+      }
+      }
+      return s.settinglocationtype.SettingLocationType
+    }
+// Returns whether the element value for SettingLocationType is nil in the container SettingLocationType.
+  func (s *SettingLocationType) SettingLocationType_IsNil() bool {
+    return s.settinglocationtype.SettingLocationType == nil
+    }
+
+// Set the value of a property to nil
+func (n *ShareWithType) Unset(key string) *ShareWithType {
+        switch key {
+  case "PermissionToOnShare":
+   n.sharewithtype.PermissionToOnShare = nil
+  case "ShareWithComments":
+   n.sharewithtype.ShareWithComments = nil
+  case "ShareWithLocalId":
+   n.sharewithtype.ShareWithLocalId = nil
+  case "ShareWithName":
+   n.sharewithtype.ShareWithName = nil
+  case "ShareWithObjectTypeName":
+   n.sharewithtype.ShareWithObjectTypeName = nil
+  case "ShareWithParty":
+   n.sharewithtype.ShareWithParty = nil
+  case "ShareWithPurpose":
+   n.sharewithtype.ShareWithPurpose = nil
+  case "ShareWithRefId":
+   n.sharewithtype.ShareWithRefId = nil
+  case "ShareWithRelationship":
+   n.sharewithtype.ShareWithRelationship = nil
+  case "ShareWithRole":
+   n.sharewithtype.ShareWithRole = nil
+  case "ShareWithURL":
+   n.sharewithtype.ShareWithURL = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ShareWithType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *ShareWithType) SetProperties(props ...Prop) *ShareWithType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *ShareWithType) SetProperty(key string, value interface{}) *ShareWithType {
+        if n == nil {
+                n, _ = ShareWithTypePointer(ShareWithType{})
+        }
+        switch key {
+    case "PermissionToOnShare":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.PermissionToOnShare = ((*GenericYesNoType)(v))
+      }
+    case "ShareWithComments":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithComments = ((*String)(v))
+      }
+    case "ShareWithLocalId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithLocalId = ((*LocalIdType)(v))
+      }
+    case "ShareWithName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithName = ((*String)(v))
+      }
+    case "ShareWithObjectTypeName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithObjectTypeName = ((*String)(v))
+      }
+    case "ShareWithParty":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithParty = ((*String)(v))
+      }
+    case "ShareWithPurpose":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithPurpose = ((*String)(v))
+      }
+    case "ShareWithRefId":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithRefId = ((*String)(v))
+      }
+    case "ShareWithRelationship":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithRelationship = ((*String)(v))
+      }
+    case "ShareWithRole":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithRole = ((*String)(v))
+      }
+    case "ShareWithURL":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.sharewithtype.ShareWithURL = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "ShareWithType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) PermissionToOnShare() *GenericYesNoType {
+    if s.sharewithtype.PermissionToOnShare == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.PermissionToOnShare = ((*GenericYesNoType)(v))
+      }
+      }
+      return s.sharewithtype.PermissionToOnShare
+    }
+// Returns whether the element value for PermissionToOnShare is nil in the container ShareWithType.
+  func (s *ShareWithType) PermissionToOnShare_IsNil() bool {
+    return s.sharewithtype.PermissionToOnShare == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithComments() *String {
+    if s.sharewithtype.ShareWithComments == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithComments = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithComments
+    }
+// Returns whether the element value for ShareWithComments is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithComments_IsNil() bool {
+    return s.sharewithtype.ShareWithComments == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithLocalId() *LocalIdType {
+    if s.sharewithtype.ShareWithLocalId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithLocalId = ((*LocalIdType)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithLocalId
+    }
+// Returns whether the element value for ShareWithLocalId is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithLocalId_IsNil() bool {
+    return s.sharewithtype.ShareWithLocalId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithName() *String {
+    if s.sharewithtype.ShareWithName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithName = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithName
+    }
+// Returns whether the element value for ShareWithName is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithName_IsNil() bool {
+    return s.sharewithtype.ShareWithName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithObjectTypeName() *String {
+    if s.sharewithtype.ShareWithObjectTypeName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithObjectTypeName = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithObjectTypeName
+    }
+// Returns whether the element value for ShareWithObjectTypeName is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithObjectTypeName_IsNil() bool {
+    return s.sharewithtype.ShareWithObjectTypeName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithParty() *String {
+    if s.sharewithtype.ShareWithParty == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithParty = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithParty
+    }
+// Returns whether the element value for ShareWithParty is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithParty_IsNil() bool {
+    return s.sharewithtype.ShareWithParty == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithPurpose() *String {
+    if s.sharewithtype.ShareWithPurpose == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithPurpose = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithPurpose
+    }
+// Returns whether the element value for ShareWithPurpose is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithPurpose_IsNil() bool {
+    return s.sharewithtype.ShareWithPurpose == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithRefId() *String {
+    if s.sharewithtype.ShareWithRefId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithRefId = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithRefId
+    }
+// Returns whether the element value for ShareWithRefId is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithRefId_IsNil() bool {
+    return s.sharewithtype.ShareWithRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithRelationship() *String {
+    if s.sharewithtype.ShareWithRelationship == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithRelationship = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithRelationship
+    }
+// Returns whether the element value for ShareWithRelationship is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithRelationship_IsNil() bool {
+    return s.sharewithtype.ShareWithRelationship == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithRole() *String {
+    if s.sharewithtype.ShareWithRole == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithRole = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithRole
+    }
+// Returns whether the element value for ShareWithRole is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithRole_IsNil() bool {
+    return s.sharewithtype.ShareWithRole == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *ShareWithType) ShareWithURL() *String {
+    if s.sharewithtype.ShareWithURL == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.sharewithtype.ShareWithURL = ((*String)(v))
+      }
+      }
+      return s.sharewithtype.ShareWithURL
+    }
+// Returns whether the element value for ShareWithURL is nil in the container ShareWithType.
+  func (s *ShareWithType) ShareWithURL_IsNil() bool {
+    return s.sharewithtype.ShareWithURL == nil
     }
 
 // Set the value of a property to nil
@@ -57545,8 +60494,81 @@ func (n *StudentAttendanceTimeList) SetProperty(key string, value interface{}) *
     }
 
 // Set the value of a property to nil
+func (n *StudentContactFeePercentageType) Unset(key string) *StudentContactFeePercentageType {
+        switch key {
+  case "Curriculum":
+   n.studentcontactfeepercentagetype.Curriculum = nil
+  case "Other":
+   n.studentcontactfeepercentagetype.Other = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "StudentContactFeePercentageType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *StudentContactFeePercentageType) SetProperties(props ...Prop) *StudentContactFeePercentageType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *StudentContactFeePercentageType) SetProperty(key string, value interface{}) *StudentContactFeePercentageType {
+        if n == nil {
+                n, _ = StudentContactFeePercentageTypePointer(StudentContactFeePercentageType{})
+        }
+        switch key {
+    case "Curriculum":
+    
+    if v, ok:= FloatPointer(value); ok {
+      n.studentcontactfeepercentagetype.Curriculum = ((*Float)(v))
+      }
+    case "Other":
+    
+    if v, ok:= FloatPointer(value); ok {
+      n.studentcontactfeepercentagetype.Other = ((*Float)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "StudentContactFeePercentageType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentContactFeePercentageType) Curriculum() *Float {
+    if s.studentcontactfeepercentagetype.Curriculum == nil {
+    if v, ok:= FloatPointer(0); ok {
+      s.studentcontactfeepercentagetype.Curriculum = ((*Float)(v))
+      }
+      }
+      return s.studentcontactfeepercentagetype.Curriculum
+    }
+// Returns whether the element value for Curriculum is nil in the container StudentContactFeePercentageType.
+  func (s *StudentContactFeePercentageType) Curriculum_IsNil() bool {
+    return s.studentcontactfeepercentagetype.Curriculum == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentContactFeePercentageType) Other() *Float {
+    if s.studentcontactfeepercentagetype.Other == nil {
+    if v, ok:= FloatPointer(0); ok {
+      s.studentcontactfeepercentagetype.Other = ((*Float)(v))
+      }
+      }
+      return s.studentcontactfeepercentagetype.Other
+    }
+// Returns whether the element value for Other is nil in the container StudentContactFeePercentageType.
+  func (s *StudentContactFeePercentageType) Other_IsNil() bool {
+    return s.studentcontactfeepercentagetype.Other == nil
+    }
+
+// Set the value of a property to nil
 func (n *StudentContactPersonal) Unset(key string) *StudentContactPersonal {
         switch key {
+  case "Employment":
+   n.studentcontactpersonal.Employment = nil
   case "EmploymentType":
    n.studentcontactpersonal.EmploymentType = nil
   case "LocalCodeList":
@@ -57567,6 +60589,10 @@ func (n *StudentContactPersonal) Unset(key string) *StudentContactPersonal {
    n.studentcontactpersonal.SIF_Metadata = nil
   case "SchoolEducationalLevel":
    n.studentcontactpersonal.SchoolEducationalLevel = nil
+  case "WorkingWithChildrenCheck":
+   n.studentcontactpersonal.WorkingWithChildrenCheck = nil
+  case "Workplace":
+   n.studentcontactpersonal.Workplace = nil
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "StudentContactPersonal")
         }
@@ -57588,6 +60614,10 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
                 n, _ = StudentContactPersonalPointer(StudentContactPersonal{})
         }
         switch key {
+    case "Employment":
+    if v, ok:= xsnormalizedStringPointer(value); ok {
+      n.studentcontactpersonal.Employment = v
+      }
     case "EmploymentType":
         if !CodesetContains(AUCodeSetsEmploymentTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEmploymentTypeType_values")
@@ -57642,12 +60672,33 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
     if v, ok:= StringPointer(value); ok {
       n.studentcontactpersonal.SchoolEducationalLevel = ((*EducationalLevelType)(v))
       }
+    case "WorkingWithChildrenCheck":
+    if v, ok:= WorkingWithChildrenCheckTypePointer(value); ok {
+      n.studentcontactpersonal.WorkingWithChildrenCheck = v
+      }
+    case "Workplace":
+    if v, ok:= xsnormalizedStringPointer(value); ok {
+      n.studentcontactpersonal.Workplace = v
+      }
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "StudentContactPersonal")
         }
         return n
 }
 
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentContactPersonal) Employment() *xsnormalizedString {
+    if s.studentcontactpersonal.Employment == nil {
+     if v, ok:= xsnormalizedStringPointer(xsnormalizedString{}); ok {
+      s.studentcontactpersonal.Employment = v
+      }
+      }
+      return s.studentcontactpersonal.Employment
+    }
+// Returns whether the element value for Employment is nil in the container StudentContactPersonal.
+  func (s *StudentContactPersonal) Employment_IsNil() bool {
+    return s.studentcontactpersonal.Employment == nil
+    }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentContactPersonal) EmploymentType() *AUCodeSetsEmploymentTypeType {
     if s.studentcontactpersonal.EmploymentType == nil {
@@ -57778,16 +60829,46 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
   func (s *StudentContactPersonal) SchoolEducationalLevel_IsNil() bool {
     return s.studentcontactpersonal.SchoolEducationalLevel == nil
     }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentContactPersonal) WorkingWithChildrenCheck() *WorkingWithChildrenCheckType {
+    if s.studentcontactpersonal.WorkingWithChildrenCheck == nil {
+     if v, ok:= WorkingWithChildrenCheckTypePointer(WorkingWithChildrenCheckType{}); ok {
+      s.studentcontactpersonal.WorkingWithChildrenCheck = v
+      }
+      }
+      return s.studentcontactpersonal.WorkingWithChildrenCheck
+    }
+// Returns whether the element value for WorkingWithChildrenCheck is nil in the container StudentContactPersonal.
+  func (s *StudentContactPersonal) WorkingWithChildrenCheck_IsNil() bool {
+    return s.studentcontactpersonal.WorkingWithChildrenCheck == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentContactPersonal) Workplace() *xsnormalizedString {
+    if s.studentcontactpersonal.Workplace == nil {
+     if v, ok:= xsnormalizedStringPointer(xsnormalizedString{}); ok {
+      s.studentcontactpersonal.Workplace = v
+      }
+      }
+      return s.studentcontactpersonal.Workplace
+    }
+// Returns whether the element value for Workplace is nil in the container StudentContactPersonal.
+  func (s *StudentContactPersonal) Workplace_IsNil() bool {
+    return s.studentcontactpersonal.Workplace == nil
+    }
 
 // Set the value of a property to nil
 func (n *StudentContactRelationship) Unset(key string) *StudentContactRelationship {
         switch key {
   case "ContactFlags":
    n.studentcontactrelationship.ContactFlags = nil
+  case "ContactMethod":
+   n.studentcontactrelationship.ContactMethod = nil
   case "ContactSequence":
    n.studentcontactrelationship.ContactSequence = nil
   case "ContactSequenceSource":
    n.studentcontactrelationship.ContactSequenceSource = nil
+  case "FeePercentage":
+   n.studentcontactrelationship.FeePercentage = nil
   case "HouseholdList":
    n.studentcontactrelationship.HouseholdList = nil
   case "LocalCodeList":
@@ -57835,6 +60916,14 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
     if v, ok:= ContactFlagsTypePointer(value); ok {
       n.studentcontactrelationship.ContactFlags = v
       }
+    case "ContactMethod":
+        if !CodesetContains(AUCodeSetsContactMethodType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsContactMethodType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.studentcontactrelationship.ContactMethod = ((*AUCodeSetsContactMethodType)(v))
+      }
     case "ContactSequence":
     
     if v, ok:= IntPointer(value); ok {
@@ -57847,6 +60936,10 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
 
     if v, ok:= StringPointer(value); ok {
       n.studentcontactrelationship.ContactSequenceSource = ((*AUCodeSetsSourceCodeTypeType)(v))
+      }
+    case "FeePercentage":
+    if v, ok:= StudentContactFeePercentageTypePointer(value); ok {
+      n.studentcontactrelationship.FeePercentage = v
       }
     case "HouseholdList":
     if v, ok:= HouseholdListTypePointer(value); ok {
@@ -57921,6 +61014,19 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
     return s.studentcontactrelationship.ContactFlags == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentContactRelationship) ContactMethod() *AUCodeSetsContactMethodType {
+    if s.studentcontactrelationship.ContactMethod == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentcontactrelationship.ContactMethod = ((*AUCodeSetsContactMethodType)(v))
+      }
+      }
+      return s.studentcontactrelationship.ContactMethod
+    }
+// Returns whether the element value for ContactMethod is nil in the container StudentContactRelationship.
+  func (s *StudentContactRelationship) ContactMethod_IsNil() bool {
+    return s.studentcontactrelationship.ContactMethod == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentContactRelationship) ContactSequence() *Int {
     if s.studentcontactrelationship.ContactSequence == nil {
     if v, ok:= IntPointer(0); ok {
@@ -57945,6 +61051,19 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
 // Returns whether the element value for ContactSequenceSource is nil in the container StudentContactRelationship.
   func (s *StudentContactRelationship) ContactSequenceSource_IsNil() bool {
     return s.studentcontactrelationship.ContactSequenceSource == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentContactRelationship) FeePercentage() *StudentContactFeePercentageType {
+    if s.studentcontactrelationship.FeePercentage == nil {
+     if v, ok:= StudentContactFeePercentageTypePointer(StudentContactFeePercentageType{}); ok {
+      s.studentcontactrelationship.FeePercentage = v
+      }
+      }
+      return s.studentcontactrelationship.FeePercentage
+    }
+// Returns whether the element value for FeePercentage is nil in the container StudentContactRelationship.
+  func (s *StudentContactRelationship) FeePercentage_IsNil() bool {
+    return s.studentcontactrelationship.FeePercentage == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentContactRelationship) HouseholdList() *HouseholdListType {
@@ -58669,6 +61788,8 @@ func (n *StudentGrade) Unset(key string) *StudentGrade {
    n.studentgrade.SIF_Metadata = nil
   case "SchoolInfoRefId":
    n.studentgrade.SchoolInfoRefId = nil
+  case "SchoolYear":
+   n.studentgrade.SchoolYear = nil
   case "StaffPersonalRefId":
    n.studentgrade.StaffPersonalRefId = nil
   case "StudentPersonalRefId":
@@ -58681,6 +61802,8 @@ func (n *StudentGrade) Unset(key string) *StudentGrade {
    n.studentgrade.TeachingGroupShortName = nil
   case "TermInfoRefId":
    n.studentgrade.TermInfoRefId = nil
+  case "TermSpan":
+   n.studentgrade.TermSpan = nil
   case "YearLevel":
    n.studentgrade.YearLevel = nil
         default:
@@ -58756,6 +61879,11 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.SchoolInfoRefId = ((*String)(v))
       }
+    case "SchoolYear":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentgrade.SchoolYear = ((*SchoolYearType)(v))
+      }
     case "StaffPersonalRefId":
     
     if v, ok:= StringPointer(value); ok {
@@ -58785,6 +61913,14 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.TermInfoRefId = ((*String)(v))
+      }
+    case "TermSpan":
+        if !CodesetContains(AUCodeSetsSessionTypeType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSessionTypeType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.studentgrade.TermSpan = ((*AUCodeSetsSessionTypeType)(v))
       }
     case "YearLevel":
     if v, ok:= YearLevelTypePointer(value); ok {
@@ -58953,6 +62089,19 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
     return s.studentgrade.SchoolInfoRefId == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentGrade) SchoolYear() *SchoolYearType {
+    if s.studentgrade.SchoolYear == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentgrade.SchoolYear = ((*SchoolYearType)(v))
+      }
+      }
+      return s.studentgrade.SchoolYear
+    }
+// Returns whether the element value for SchoolYear is nil in the container StudentGrade.
+  func (s *StudentGrade) SchoolYear_IsNil() bool {
+    return s.studentgrade.SchoolYear == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentGrade) StaffPersonalRefId() *String {
     if s.studentgrade.StaffPersonalRefId == nil {
     if v, ok:= StringPointer(""); ok {
@@ -59029,6 +62178,19 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
 // Returns whether the element value for TermInfoRefId is nil in the container StudentGrade.
   func (s *StudentGrade) TermInfoRefId_IsNil() bool {
     return s.studentgrade.TermInfoRefId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentGrade) TermSpan() *AUCodeSetsSessionTypeType {
+    if s.studentgrade.TermSpan == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentgrade.TermSpan = ((*AUCodeSetsSessionTypeType)(v))
+      }
+      }
+      return s.studentgrade.TermSpan
+    }
+// Returns whether the element value for TermSpan is nil in the container StudentGrade.
+  func (s *StudentGrade) TermSpan_IsNil() bool {
+    return s.studentgrade.TermSpan == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentGrade) YearLevel() *YearLevelType {
@@ -60841,6 +64003,8 @@ func (n *StudentPersonal) Unset(key string) *StudentPersonal {
    n.studentpersonal.GraduationDate = nil
   case "HomeSchooledStudent":
    n.studentpersonal.HomeSchooledStudent = nil
+  case "IndependentStudent":
+   n.studentpersonal.IndependentStudent = nil
   case "IntegrationAide":
    n.studentpersonal.IntegrationAide = nil
   case "LocalCodeList":
@@ -60851,6 +64015,8 @@ func (n *StudentPersonal) Unset(key string) *StudentPersonal {
    n.studentpersonal.MedicalAlertMessages = nil
   case "MostRecent":
    n.studentpersonal.MostRecent = nil
+  case "NationalUniqueStudentIdentifier":
+   n.studentpersonal.NationalUniqueStudentIdentifier = nil
   case "OfflineDelivery":
    n.studentpersonal.OfflineDelivery = nil
   case "OnTimeGraduationYear":
@@ -60985,6 +64151,14 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.HomeSchooledStudent = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
+    case "IndependentStudent":
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.studentpersonal.IndependentStudent = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
     case "IntegrationAide":
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
@@ -61009,6 +64183,11 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
     case "MostRecent":
     if v, ok:= StudentMostRecentContainerTypePointer(value); ok {
       n.studentpersonal.MostRecent = v
+      }
+    case "NationalUniqueStudentIdentifier":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentpersonal.NationalUniqueStudentIdentifier = ((*String)(v))
       }
     case "OfflineDelivery":
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
@@ -61259,6 +64438,19 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
     return s.studentpersonal.HomeSchooledStudent == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentPersonal) IndependentStudent() *AUCodeSetsYesOrNoCategoryType {
+    if s.studentpersonal.IndependentStudent == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentpersonal.IndependentStudent = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.studentpersonal.IndependentStudent
+    }
+// Returns whether the element value for IndependentStudent is nil in the container StudentPersonal.
+  func (s *StudentPersonal) IndependentStudent_IsNil() bool {
+    return s.studentpersonal.IndependentStudent == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentPersonal) IntegrationAide() *AUCodeSetsYesOrNoCategoryType {
     if s.studentpersonal.IntegrationAide == nil {
     if v, ok:= StringPointer(""); ok {
@@ -61322,6 +64514,19 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
 // Returns whether the element value for MostRecent is nil in the container StudentPersonal.
   func (s *StudentPersonal) MostRecent_IsNil() bool {
     return s.studentpersonal.MostRecent == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentPersonal) NationalUniqueStudentIdentifier() *String {
+    if s.studentpersonal.NationalUniqueStudentIdentifier == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentpersonal.NationalUniqueStudentIdentifier = ((*String)(v))
+      }
+      }
+      return s.studentpersonal.NationalUniqueStudentIdentifier
+    }
+// Returns whether the element value for NationalUniqueStudentIdentifier is nil in the container StudentPersonal.
+  func (s *StudentPersonal) NationalUniqueStudentIdentifier_IsNil() bool {
+    return s.studentpersonal.NationalUniqueStudentIdentifier == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentPersonal) OfflineDelivery() *AUCodeSetsYesOrNoCategoryType {
@@ -61546,6 +64751,8 @@ func (n *StudentSchoolEnrollment) Unset(key string) *StudentSchoolEnrollment {
    n.studentschoolenrollment.House = nil
   case "IndividualLearningPlan":
    n.studentschoolenrollment.IndividualLearningPlan = nil
+  case "IntendedEntryDate":
+   n.studentschoolenrollment.IntendedEntryDate = nil
   case "InternationalStudent":
    n.studentschoolenrollment.InternationalStudent = nil
   case "LocalCodeList":
@@ -61744,6 +64951,11 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
 
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.IndividualLearningPlan = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+    case "IntendedEntryDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentschoolenrollment.IntendedEntryDate = ((*String)(v))
       }
     case "InternationalStudent":
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
@@ -62192,6 +65404,19 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
 // Returns whether the element value for IndividualLearningPlan is nil in the container StudentSchoolEnrollment.
   func (s *StudentSchoolEnrollment) IndividualLearningPlan_IsNil() bool {
     return s.studentschoolenrollment.IndividualLearningPlan == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentSchoolEnrollment) IntendedEntryDate() *String {
+    if s.studentschoolenrollment.IntendedEntryDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentschoolenrollment.IntendedEntryDate = ((*String)(v))
+      }
+      }
+      return s.studentschoolenrollment.IntendedEntryDate
+    }
+// Returns whether the element value for IntendedEntryDate is nil in the container StudentSchoolEnrollment.
+  func (s *StudentSchoolEnrollment) IntendedEntryDate_IsNil() bool {
+    return s.studentschoolenrollment.IntendedEntryDate == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentSchoolEnrollment) InternationalStudent() *AUCodeSetsYesOrNoCategoryType {
@@ -70293,6 +73518,8 @@ func (n *WellbeingCharacteristic) Unset(key string) *WellbeingCharacteristic {
    n.wellbeingcharacteristic.LocalId = nil
   case "MedicationList":
    n.wellbeingcharacteristic.MedicationList = nil
+  case "PreferredHospital":
+   n.wellbeingcharacteristic.PreferredHospital = nil
   case "RefId":
    n.wellbeingcharacteristic.RefId = nil
   case "SIF_ExtendedElements":
@@ -70399,6 +73626,11 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
     case "MedicationList":
     if v, ok:= MedicationListTypePointer(value); ok {
       n.wellbeingcharacteristic.MedicationList = v
+      }
+    case "PreferredHospital":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.wellbeingcharacteristic.PreferredHospital = ((*String)(v))
       }
     case "RefId":
     
@@ -70618,6 +73850,19 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
 // Returns whether the element value for MedicationList is nil in the container WellbeingCharacteristic.
   func (s *WellbeingCharacteristic) MedicationList_IsNil() bool {
     return s.wellbeingcharacteristic.MedicationList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WellbeingCharacteristic) PreferredHospital() *String {
+    if s.wellbeingcharacteristic.PreferredHospital == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.wellbeingcharacteristic.PreferredHospital = ((*String)(v))
+      }
+      }
+      return s.wellbeingcharacteristic.PreferredHospital
+    }
+// Returns whether the element value for PreferredHospital is nil in the container WellbeingCharacteristic.
+  func (s *WellbeingCharacteristic) PreferredHospital_IsNil() bool {
+    return s.wellbeingcharacteristic.PreferredHospital == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *WellbeingCharacteristic) RefId() *RefIdType {
@@ -72633,6 +75878,217 @@ func (n *WithdrawalType) SetProperty(key string, value interface{}) *WithdrawalT
 // Returns whether the element value for WithdrawalStartTime is nil in the container WithdrawalType.
   func (s *WithdrawalType) WithdrawalStartTime_IsNil() bool {
     return s.withdrawaltype.WithdrawalStartTime == nil
+    }
+
+// Set the value of a property to nil
+func (n *WorkingWithChildrenCheckType) Unset(key string) *WorkingWithChildrenCheckType {
+        switch key {
+  case "CheckDate":
+   n.workingwithchildrenchecktype.CheckDate = nil
+  case "Determination":
+   n.workingwithchildrenchecktype.Determination = nil
+  case "DeterminationDate":
+   n.workingwithchildrenchecktype.DeterminationDate = nil
+  case "ExpiryDate":
+   n.workingwithchildrenchecktype.ExpiryDate = nil
+  case "HolderName":
+   n.workingwithchildrenchecktype.HolderName = nil
+  case "Number":
+   n.workingwithchildrenchecktype.Number = nil
+  case "Reasons":
+   n.workingwithchildrenchecktype.Reasons = nil
+  case "StateTerritory":
+   n.workingwithchildrenchecktype.StateTerritory = nil
+  case "Type":
+   n.workingwithchildrenchecktype.Type = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "WorkingWithChildrenCheckType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *WorkingWithChildrenCheckType) SetProperties(props ...Prop) *WorkingWithChildrenCheckType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *WorkingWithChildrenCheckType) SetProperty(key string, value interface{}) *WorkingWithChildrenCheckType {
+        if n == nil {
+                n, _ = WorkingWithChildrenCheckTypePointer(WorkingWithChildrenCheckType{})
+        }
+        switch key {
+    case "CheckDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.CheckDate = ((*String)(v))
+      }
+    case "Determination":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.Determination = ((*String)(v))
+      }
+    case "DeterminationDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.DeterminationDate = ((*String)(v))
+      }
+    case "ExpiryDate":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.ExpiryDate = ((*String)(v))
+      }
+    case "HolderName":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.HolderName = ((*String)(v))
+      }
+    case "Number":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.Number = ((*String)(v))
+      }
+    case "Reasons":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.Reasons = ((*String)(v))
+      }
+    case "StateTerritory":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.StateTerritory = ((*StateProvinceType)(v))
+      }
+    case "Type":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.workingwithchildrenchecktype.Type = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "WorkingWithChildrenCheckType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) CheckDate() *String {
+    if s.workingwithchildrenchecktype.CheckDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.CheckDate = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.CheckDate
+    }
+// Returns whether the element value for CheckDate is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) CheckDate_IsNil() bool {
+    return s.workingwithchildrenchecktype.CheckDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) Determination() *String {
+    if s.workingwithchildrenchecktype.Determination == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.Determination = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.Determination
+    }
+// Returns whether the element value for Determination is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) Determination_IsNil() bool {
+    return s.workingwithchildrenchecktype.Determination == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) DeterminationDate() *String {
+    if s.workingwithchildrenchecktype.DeterminationDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.DeterminationDate = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.DeterminationDate
+    }
+// Returns whether the element value for DeterminationDate is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) DeterminationDate_IsNil() bool {
+    return s.workingwithchildrenchecktype.DeterminationDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) ExpiryDate() *String {
+    if s.workingwithchildrenchecktype.ExpiryDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.ExpiryDate = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.ExpiryDate
+    }
+// Returns whether the element value for ExpiryDate is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) ExpiryDate_IsNil() bool {
+    return s.workingwithchildrenchecktype.ExpiryDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) HolderName() *String {
+    if s.workingwithchildrenchecktype.HolderName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.HolderName = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.HolderName
+    }
+// Returns whether the element value for HolderName is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) HolderName_IsNil() bool {
+    return s.workingwithchildrenchecktype.HolderName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) Number() *String {
+    if s.workingwithchildrenchecktype.Number == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.Number = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.Number
+    }
+// Returns whether the element value for Number is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) Number_IsNil() bool {
+    return s.workingwithchildrenchecktype.Number == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) Reasons() *String {
+    if s.workingwithchildrenchecktype.Reasons == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.Reasons = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.Reasons
+    }
+// Returns whether the element value for Reasons is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) Reasons_IsNil() bool {
+    return s.workingwithchildrenchecktype.Reasons == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) StateTerritory() *StateProvinceType {
+    if s.workingwithchildrenchecktype.StateTerritory == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.StateTerritory = ((*StateProvinceType)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.StateTerritory
+    }
+// Returns whether the element value for StateTerritory is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) StateTerritory_IsNil() bool {
+    return s.workingwithchildrenchecktype.StateTerritory == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *WorkingWithChildrenCheckType) Type() *String {
+    if s.workingwithchildrenchecktype.Type == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.workingwithchildrenchecktype.Type = ((*String)(v))
+      }
+      }
+      return s.workingwithchildrenchecktype.Type
+    }
+// Returns whether the element value for Type is nil in the container WorkingWithChildrenCheckType.
+  func (s *WorkingWithChildrenCheckType) Type_IsNil() bool {
+    return s.workingwithchildrenchecktype.Type == nil
     }
 
 // Set the value of a property to nil

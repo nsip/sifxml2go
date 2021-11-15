@@ -902,6 +902,188 @@ type publishingpermissiontype struct {
       
       }
     
+    type SettingLocationListType struct {
+  settinglocationlisttype 
+}
+
+type settinglocationlisttype struct {
+        SettingLocation []SettingLocationType `xml:"SettingLocation" json:"SettingLocation"`
+      
+      }
+    
+    type SettingLocationType struct {
+  settinglocationtype 
+}
+
+type settinglocationtype struct {
+        SettingLocationName *String `xml:"SettingLocationName,omitempty" json:"SettingLocationName,omitempty"`
+      SettingLocationType *String `xml:"SettingLocationType,omitempty" json:"SettingLocationType,omitempty"`
+      SettingLocationRefId *String `xml:"SettingLocationRefId,omitempty" json:"SettingLocationRefId,omitempty"`
+      SettingLocationObjectTypeName *String `xml:"SettingLocationObjectTypeName" json:"SettingLocationObjectTypeName"`
+      
+      }
+    
+    type ConsentToSharingOfDataContainerType struct {
+  consenttosharingofdatacontainertype 
+}
+
+type consenttosharingofdatacontainertype struct {
+        DataDomainObligationList *DataDomainObligationListType `xml:"DataDomainObligationList,omitempty" json:"DataDomainObligationList,omitempty"`
+      NeverShareWithList *NeverShareWithListType `xml:"NeverShareWithList,omitempty" json:"NeverShareWithList,omitempty"`
+      
+      }
+    
+    type DataDomainObligationListType struct {
+  datadomainobligationlisttype 
+}
+
+type datadomainobligationlisttype struct {
+        DataDomainObligation []DataDomainObligationType `xml:"DataDomainObligation" json:"DataDomainObligation"`
+      
+      }
+    
+    type DataDomainObligationType struct {
+  datadomainobligationtype 
+}
+
+type datadomainobligationtype struct {
+        DataDomain *String `xml:"DataDomain" json:"DataDomain"`
+      DomainComments *String `xml:"DomainComments" json:"DomainComments"`
+      ShareWithList *ShareWithListType `xml:"ShareWithList,omitempty" json:"ShareWithList,omitempty"`
+      DoNotShareWithList *DoNotShareWithListType `xml:"DoNotShareWithList,omitempty" json:"DoNotShareWithList,omitempty"`
+      
+      }
+    
+    type ShareWithListType struct {
+  sharewithlisttype 
+}
+
+type sharewithlisttype struct {
+        ShareWith []ShareWithType `xml:"ShareWith" json:"ShareWith"`
+      
+      }
+    
+    type ShareWithType struct {
+  sharewithtype 
+}
+
+type sharewithtype struct {
+        ShareWithParty *String `xml:"ShareWithParty" json:"ShareWithParty"`
+      ShareWithRefId *String `xml:"ShareWithRefId,omitempty" json:"ShareWithRefId,omitempty"`
+      ShareWithObjectTypeName *String `xml:"ShareWithObjectTypeName,omitempty" json:"ShareWithObjectTypeName,omitempty"`
+      ShareWithLocalId *LocalIdType `xml:"ShareWithLocalId,omitempty" json:"ShareWithLocalId,omitempty"`
+      ShareWithName *String `xml:"ShareWithName,omitempty" json:"ShareWithName,omitempty"`
+      ShareWithRelationship *String `xml:"ShareWithRelationship,omitempty" json:"ShareWithRelationship,omitempty"`
+      ShareWithPurpose *String `xml:"ShareWithPurpose" json:"ShareWithPurpose"`
+      ShareWithRole *String `xml:"ShareWithRole" json:"ShareWithRole"`
+      ShareWithComments *String `xml:"ShareWithComments,omitempty" json:"ShareWithComments,omitempty"`
+      PermissionToOnShare *GenericYesNoType `xml:"PermissionToOnShare" json:"PermissionToOnShare"`
+      ShareWithURL *String `xml:"ShareWithURL,omitempty" json:"ShareWithURL,omitempty"`
+      
+      }
+    
+    type DoNotShareWithListType struct {
+  donotsharewithlisttype 
+}
+
+type donotsharewithlisttype struct {
+        DoNotShareWith []DoNotShareWithType `xml:"DoNotShareWith" json:"DoNotShareWith"`
+      
+      }
+    
+    type DoNotShareWithType struct {
+  donotsharewithtype 
+}
+
+type donotsharewithtype struct {
+        DoNotShareWithParty *String `xml:"DoNotShareWithParty" json:"DoNotShareWithParty"`
+      DoNotShareWithRefId *String `xml:"DoNotShareWithRefId,omitempty" json:"DoNotShareWithRefId,omitempty"`
+      DoNotShareWithObjectTypeName *String `xml:"DoNotShareWithObjectTypeName,omitempty" json:"DoNotShareWithObjectTypeName,omitempty"`
+      DoNotShareWithLocalId *LocalIdType `xml:"DoNotShareWithLocalId,omitempty" json:"DoNotShareWithLocalId,omitempty"`
+      DoNotShareWithName *String `xml:"DoNotShareWithName,omitempty" json:"DoNotShareWithName,omitempty"`
+      DoNotShareWithRelationship *String `xml:"DoNotShareWithRelationship,omitempty" json:"DoNotShareWithRelationship,omitempty"`
+      DoNotShareWithPurpose *String `xml:"DoNotShareWithPurpose" json:"DoNotShareWithPurpose"`
+      DoNotShareWithRole *String `xml:"DoNotShareWithRole" json:"DoNotShareWithRole"`
+      DoNotShareWithComments *String `xml:"DoNotShareWithComments,omitempty" json:"DoNotShareWithComments,omitempty"`
+      DoNotShareWithURL *String `xml:"DoNotShareWithURL,omitempty" json:"DoNotShareWithURL,omitempty"`
+      
+      }
+    
+    type ApplicableLawListType struct {
+  applicablelawlisttype 
+}
+
+type applicablelawlisttype struct {
+        ApplicableLaw []ApplicableLawType `xml:"ApplicableLaw" json:"ApplicableLaw"`
+      
+      }
+    
+    type ApplicableLawType struct {
+  applicablelawtype 
+}
+
+type applicablelawtype struct {
+        ApplicableCountry *String `xml:"ApplicableCountry" json:"ApplicableCountry"`
+      ApplicableLawName *String `xml:"ApplicableLawName" json:"ApplicableLawName"`
+      ApplicableLawURL *String `xml:"ApplicableLawURL,omitempty" json:"ApplicableLawURL,omitempty"`
+      
+      }
+    
+    type PermissionToParticipateListType struct {
+  permissiontoparticipatelisttype 
+}
+
+type permissiontoparticipatelisttype struct {
+        PermissionToParticipate []PermissionToParticipateType `xml:"PermissionToParticipate" json:"PermissionToParticipate"`
+      
+      }
+    
+    type PermissionToParticipateType struct {
+  permissiontoparticipatetype 
+}
+
+type permissiontoparticipatetype struct {
+        PermissionCategory *String `xml:"PermissionCategory" json:"PermissionCategory"`
+      Permission *String `xml:"Permission" json:"Permission"`
+      PermissionValue *String `xml:"PermissionValue,omitempty" json:"PermissionValue,omitempty"`
+      PermissionStartDate *String `xml:"PermissionStartDate,omitempty" json:"PermissionStartDate,omitempty"`
+      PermissionEndDate *String `xml:"PermissionEndDate,omitempty" json:"PermissionEndDate,omitempty"`
+      PermissionGranteeRefId *String `xml:"PermissionGranteeRefId,omitempty" json:"PermissionGranteeRefId,omitempty"`
+      PermissionGranteeObjectTypeName *String `xml:"PermissionGranteeObjectTypeName,omitempty" json:"PermissionGranteeObjectTypeName,omitempty"`
+      PermissionGranteeName *String `xml:"PermissionGranteeName,omitempty" json:"PermissionGranteeName,omitempty"`
+      PermissionGranteeRelationship *String `xml:"PermissionGranteeRelationship,omitempty" json:"PermissionGranteeRelationship,omitempty"`
+      PermissionComments *String `xml:"PermissionComments,omitempty" json:"PermissionComments,omitempty"`
+      
+      }
+    
+    type NeverShareWithListType struct {
+  neversharewithlisttype 
+}
+
+type neversharewithlisttype struct {
+        NeverShareWith []NeverShareWithType `xml:"NeverShareWith" json:"NeverShareWith"`
+      
+      }
+    
+    type NeverShareWithType struct {
+  neversharewithtype 
+}
+
+type neversharewithtype struct {
+        NeverShareWithParty *String `xml:"NeverShareWithParty" json:"NeverShareWithParty"`
+      NeverShareWithRefId *String `xml:"NeverShareWithRefId,omitempty" json:"NeverShareWithRefId,omitempty"`
+      NeverShareWithObjectTypeName *String `xml:"NeverShareWithObjectTypeName,omitempty" json:"NeverShareWithObjectTypeName,omitempty"`
+      NeverShareWithLocalId *LocalIdType `xml:"NeverShareWithLocalId,omitempty" json:"NeverShareWithLocalId,omitempty"`
+      NeverShareWithName *String `xml:"NeverShareWithName,omitempty" json:"NeverShareWithName,omitempty"`
+      NeverShareWithRelationship *String `xml:"NeverShareWithRelationship,omitempty" json:"NeverShareWithRelationship,omitempty"`
+      NeverShareWithPurpose *String `xml:"NeverShareWithPurpose" json:"NeverShareWithPurpose"`
+      NeverShareWithRole *String `xml:"NeverShareWithRole" json:"NeverShareWithRole"`
+      NeverShareWithComments *String `xml:"NeverShareWithComments,omitempty" json:"NeverShareWithComments,omitempty"`
+      NeverShareWithURL *String `xml:"NeverShareWithURL,omitempty" json:"NeverShareWithURL,omitempty"`
+      
+      }
+    
+    type GenericYesNoType string
     type EntityContactInfoType struct {
   entitycontactinfotype 
 }
@@ -1192,6 +1374,7 @@ type followupactiontype struct {
         WellbeingResponseRefId *String `xml:"WellbeingResponseRefId,omitempty" json:"WellbeingResponseRefId,omitempty"`
       FollowUpDetails *String `xml:"FollowUpDetails,omitempty" json:"FollowUpDetails,omitempty"`
       FollowUpActionCategory *String `xml:"FollowUpActionCategory,omitempty" json:"FollowUpActionCategory,omitempty"`
+      Date *String `xml:"Date,omitempty" json:"Date,omitempty"`
       
       }
     
@@ -2174,6 +2357,7 @@ type totalenrollmentstype struct {
 
 type campuscontainertype struct {
         ParentSchoolId *String `xml:"ParentSchoolId,omitempty" json:"ParentSchoolId,omitempty"`
+      ParentSchoolRefId *String `xml:"ParentSchoolRefId,omitempty" json:"ParentSchoolRefId,omitempty"`
       SchoolCampusId *String `xml:"SchoolCampusId" json:"SchoolCampusId"`
       CampusType *AUCodeSetsSchoolLevelType `xml:"CampusType,omitempty" json:"CampusType,omitempty"`
       AdminStatus *AUCodeSetsYesOrNoCategoryType `xml:"AdminStatus" json:"AdminStatus"`
@@ -3411,14 +3595,43 @@ type demographicstype struct {
       PermanentResident *AUCodeSetsPermanentResidentStatusType `xml:"PermanentResident,omitempty" json:"PermanentResident,omitempty"`
       VisaSubClass *VisaSubClassCodeType `xml:"VisaSubClass,omitempty" json:"VisaSubClass,omitempty"`
       VisaStatisticalCode *String `xml:"VisaStatisticalCode,omitempty" json:"VisaStatisticalCode,omitempty"`
+      VisaNumber *String `xml:"VisaNumber,omitempty" json:"VisaNumber,omitempty"`
+      VisaGrantDate *String `xml:"VisaGrantDate,omitempty" json:"VisaGrantDate,omitempty"`
       VisaExpiryDate *String `xml:"VisaExpiryDate,omitempty" json:"VisaExpiryDate,omitempty"`
+      VisaConditions *String `xml:"VisaConditions,omitempty" json:"VisaConditions,omitempty"`
+      VisaStudyEntitlement *AUCodeSetsVisaStudyEntitlementType `xml:"VisaStudyEntitlement,omitempty" json:"VisaStudyEntitlement,omitempty"`
       VisaSubClassList *VisaSubClassListType `xml:"VisaSubClassList,omitempty" json:"VisaSubClassList,omitempty"`
+      Passport *PassportType `xml:"Passport,omitempty" json:"Passport,omitempty"`
       LBOTE *AUCodeSetsYesOrNoCategoryType `xml:"LBOTE,omitempty" json:"LBOTE,omitempty"`
       InterpreterRequired *AUCodeSetsYesOrNoCategoryType `xml:"InterpreterRequired,omitempty" json:"InterpreterRequired,omitempty"`
       ImmunisationCertificateStatus *AUCodeSetsImmunisationCertificateStatusType `xml:"ImmunisationCertificateStatus,omitempty" json:"ImmunisationCertificateStatus,omitempty"`
       CulturalBackground *AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType `xml:"CulturalBackground,omitempty" json:"CulturalBackground,omitempty"`
       MaritalStatus *AUCodeSetsMaritalStatusAIHWType `xml:"MaritalStatus,omitempty" json:"MaritalStatus,omitempty"`
       MedicareNumber *String `xml:"MedicareNumber,omitempty" json:"MedicareNumber,omitempty"`
+      MedicarePositionNumber *String `xml:"MedicarePositionNumber,omitempty" json:"MedicarePositionNumber,omitempty"`
+      MedicareCardHolder *String `xml:"MedicareCardHolder,omitempty" json:"MedicareCardHolder,omitempty"`
+      PrivateHealthInsurance *PrivateHealthInsuranceType `xml:"PrivateHealthInsurance,omitempty" json:"PrivateHealthInsurance,omitempty"`
+      
+      }
+    
+    type PrivateHealthInsuranceType struct {
+  privatehealthinsurancetype 
+}
+
+type privatehealthinsurancetype struct {
+        Company *String `xml:"Company" json:"Company"`
+      Number *String `xml:"Number,omitempty" json:"Number,omitempty"`
+      
+      }
+    
+    type PassportType struct {
+  passporttype 
+}
+
+type passporttype struct {
+        Number *String `xml:"Number" json:"Number"`
+      ExpiryDate *String `xml:"ExpiryDate,omitempty" json:"ExpiryDate,omitempty"`
+      Country *CountryType `xml:"Country" json:"Country"`
       
       }
     
@@ -3658,6 +3871,33 @@ type sif_metadatatype struct {
 
 type timeelementlisttype struct {
         TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
+      
+      }
+    
+    type StudentContactFeePercentageType struct {
+  studentcontactfeepercentagetype 
+}
+
+type studentcontactfeepercentagetype struct {
+        Curriculum *Float `xml:"Curriculum,omitempty" json:"Curriculum,omitempty"`
+      Other *Float `xml:"Other,omitempty" json:"Other,omitempty"`
+      
+      }
+    
+    type WorkingWithChildrenCheckType struct {
+  workingwithchildrenchecktype 
+}
+
+type workingwithchildrenchecktype struct {
+        StateTerritory *StateProvinceType `xml:"StateTerritory" json:"StateTerritory"`
+      Number *String `xml:"Number" json:"Number"`
+      HolderName *String `xml:"HolderName,omitempty" json:"HolderName,omitempty"`
+      Type *String `xml:"Type,omitempty" json:"Type,omitempty"`
+      Reasons *String `xml:"Reasons,omitempty" json:"Reasons,omitempty"`
+      Determination *String `xml:"Determination,omitempty" json:"Determination,omitempty"`
+      CheckDate *String `xml:"CheckDate,omitempty" json:"CheckDate,omitempty"`
+      DeterminationDate *String `xml:"DeterminationDate,omitempty" json:"DeterminationDate,omitempty"`
+      ExpiryDate *String `xml:"ExpiryDate,omitempty" json:"ExpiryDate,omitempty"`
       
       }
     type PersonInvolvementType_PersonRefId struct {

@@ -70,6 +70,7 @@ var test_ActivityExample2 = `		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0
 `
 var test_AggregateCharacteristicInfo = `    <AggregateCharacteristicInfo RefId="06AF1D69-FB06-4AB3-8898-3505714F18FB">
       <Description>Sex</Description>
+      <Definition>Gender or Sex</Definition>
       <ElementName>StudentPersonal/PersonInfo/Demographics/Sex</ElementName>
     </AggregateCharacteristicInfo>
 `
@@ -174,7 +175,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0199 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0489 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -472,10 +473,10 @@ var test_LearningStandardItem = `    <LearningStandardItem RefId="A5D75F78-9175-
 </LearningStandardItem>
 
 `
-var test_MarkValueInfo = `	  <MarkValueInfo RefId="11737E21-4A7C-46BD-BA43-01CADCA75C87" >
-	  <SchoolInfoRefId>A137D78A-E00B-C744-EF90-F2871CEB90A2</SchoolInfoRefId>
-	  <Name>Letter Grades</Name>
-	  <ValidLetterMarkList>
+var test_MarkValueInfo = `		<MarkValueInfo RefId="11737E21-4A7C-46BD-BA43-01CADCA75C87" >
+		  <SchoolInfoRefId>A137D78A-E00B-C744-EF90-F2871CEB90A2</SchoolInfoRefId>
+		  <Name>Letter Grades</Name>
+		  <ValidLetterMarkList>
 			<ValidLetterMark>
 			  <Code>A</Code>
 			  <NumericEquivalent>100</NumericEquivalent>
@@ -496,9 +497,9 @@ var test_MarkValueInfo = `	  <MarkValueInfo RefId="11737E21-4A7C-46BD-BA43-01CAD
 			  <Code>F</Code>
 			  <NumericEquivalent>60</NumericEquivalent>
 			</ValidLetterMark>
-		</ValidLetterMarkList>
-
-		</MarkValueInfo>
+		 </ValidLetterMarkList>
+	     <Narrative>A Narrative about this Grade, letters and their numeric equivalent</Narrative>
+	  </MarkValueInfo>
 `
 var test_PersonPicture = `    <PersonPicture RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <ParentObjectRefId SIF_RefObject="StudentPersonal">AA648462-8886-24AA-5294-BC638017320B</ParentObjectRefId>
@@ -522,6 +523,247 @@ var test_PersonPicture = `    <PersonPicture RefId="D3E34B35-9D75-101A-8C3D-00AA
 
     </PersonPicture>
 
+`
+var test_PersonPrivacyObligationDocument = `    <PersonPrivacyObligationDocument RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      
+      <ParentRefId>AA648462-8886-24AA-5294-BC638017320B</ParentRefId>
+      <ParentObjectTypeName>StudentPersonal</ParentObjectTypeName>
+      <SchoolYear>2020</SchoolYear>
+      <StartDate>2020-02-01</StartDate>
+      <EndDate>2020-12-01</EndDate>
+      <SettingLocationList>
+        <SettingLocation>
+          <SettingLocationName>Taylors College</SettingLocationName>
+          <SettingLocationType>School</SettingLocationType>
+          <SettingLocationRefId>D3E34B35-9D75-101A-8C3D-00AA001A1654</SettingLocationRefId>
+          <SettingLocationObjectTypeName>SchoolInfo</SettingLocationObjectTypeName>
+        </SettingLocation>
+        <SettingLocation>
+          <SettingLocationName>Another School</SettingLocationName>
+          <SettingLocationType>School</SettingLocationType>
+          <SettingLocationRefId>E6E34B35-9D75-101A-8C3D-01AA001A1655</SettingLocationRefId>
+          <SettingLocationObjectTypeName>SchoolInfo</SettingLocationObjectTypeName>
+        </SettingLocation>
+      </SettingLocationList>
+      <ContactForRequestsRefId>C4E34B35-9D75-101A-8C3D-00AA001A1653</ContactForRequestsRefId>
+      <ContactForRequestsObjectTypeName>StudentContactPersonal</ContactForRequestsObjectTypeName>
+      <ConsentToSharingOfData>
+        
+        
+        
+        
+        <DataDomainObligationList>
+          
+          <DataDomainObligation>
+            <DataDomain>Assessment</DataDomain>
+            <DomainComments>Can also share NAPLAN results.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Assessment Vendors</ShareWithParty>
+                <ShareWithRefId>AA648462-8886-24AA-5294-BC638017320C</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>Assessment reporting</ShareWithPurpose>
+                <ShareWithRole>Vendor</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.assessmentworld.com</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Military</ShareWithParty>
+                <ShareWithRefId>AA648462-8886-24AA-5294-BC638017320C</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>entrance requirement</ShareWithPurpose>
+                <ShareWithRole>Military</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.military.com</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+          </DataDomainObligation>
+          <DataDomainObligation>
+            <DataDomain>Attendance</DataDomain>
+            <DomainComments>Share with other schools.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Assessment Vendors</ShareWithParty>
+                <ShareWithRefId>D3E34B35-9D75-101A-8C3D-00AA001A1651</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>Assessment reporting</ShareWithPurpose>
+                <ShareWithRole>Vendor</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.assessmentworld.com</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Military</ShareWithParty>
+                <ShareWithRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</ShareWithRefId>
+                <ShareWithObjectTypeName>StudentContactPersonal</ShareWithObjectTypeName>
+                <ShareWithLocalId/>
+                <ShareWithPurpose>entrance requirement</ShareWithPurpose>
+                <ShareWithRole>Military</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments> 
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.military.com</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>John Wilbur Loavel</DoNotShareWithParty>
+                <DoNotShareWithRefId>B3E34B35-9D75-101A-8C3D-00AA001A1655</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>StudentContactPersonal</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId/>
+                <DoNotShareWithPurpose>Father</DoNotShareWithPurpose>
+                <DoNotShareWithRole>Parent</DoNotShareWithRole>
+                <DoNotShareWithComments>Student assessment information is not to be shared with the father.</DoNotShareWithComments>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+          
+          <DataDomainObligation>
+            <DataDomain>Assessment</DataDomain>
+            <DomainComments>Can also share NAPLAN results.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>Assessment Vendors</ShareWithParty>
+                <ShareWithPurpose>Assessment reporting</ShareWithPurpose>
+                <ShareWithRole>Assessment</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.assessmentworld.com</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>Military</ShareWithParty>
+                <ShareWithPurpose>entrance requirement</ShareWithPurpose>
+                <ShareWithRole>Military</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>N</PermissionToOnShare>
+                <ShareWithURL>www.military.com</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>John Wilbur Loavel</DoNotShareWithParty>
+                <DoNotShareWithPurpose>Father</DoNotShareWithPurpose>
+                <DoNotShareWithRole>Parent</DoNotShareWithRole>
+                <DoNotShareWithComments>Student assessment information is not to be shared with the father.</DoNotShareWithComments>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+          <DataDomainObligation>
+            <DataDomain>Attendance</DataDomain>
+            <DomainComments>Share with other schools.</DomainComments>
+            <ShareWithList>
+              <ShareWith>
+                <ShareWithParty>School XYZ</ShareWithParty>
+                <ShareWithPurpose>Attendance reporting</ShareWithPurpose>
+                <ShareWithRole>A Role</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>Y</PermissionToOnShare>
+                <ShareWithURL>www.XYZ.edu.au</ShareWithURL>
+              </ShareWith>
+              <ShareWith>
+                <ShareWithParty>School ABC</ShareWithParty>
+                <ShareWithPurpose>Attendance reporting</ShareWithPurpose>
+                <ShareWithRole>A Role</ShareWithRole>
+                <ShareWithComments>A comment</ShareWithComments>
+                <PermissionToOnShare>Y</PermissionToOnShare>
+                <ShareWithURL>www.ABC.edu.au</ShareWithURL>
+              </ShareWith>
+            </ShareWithList>
+            <DoNotShareWithList>
+              <DoNotShareWith>
+                <DoNotShareWithParty>John Wilbur Loavel</DoNotShareWithParty>
+                <DoNotShareWithRefId>F3E34B35-9D75-101A-8C3D-00AA001A1655</DoNotShareWithRefId>
+                <DoNotShareWithObjectTypeName>StudentContactPersonal</DoNotShareWithObjectTypeName>
+                <DoNotShareWithLocalId/>
+                <DoNotShareWithPurpose>Father</DoNotShareWithPurpose>
+                <DoNotShareWithRole>Parent</DoNotShareWithRole>
+                <DoNotShareWithComments>Student attendance information is not to be shared with the father.</DoNotShareWithComments>
+                <DoNotShareWithURL/>
+              </DoNotShareWith>
+            </DoNotShareWithList>
+          </DataDomainObligation>
+        </DataDomainObligationList>
+        
+        <NeverShareWithList>
+          <NeverShareWith>
+            <NeverShareWithParty>Media</NeverShareWithParty>
+            <NeverShareWithRefId>D3E34B35-9D75-101A-8C3D-00AA001A1655</NeverShareWithRefId>
+            <NeverShareWithObjectTypeName>StudentContactPersonal</NeverShareWithObjectTypeName>
+            <NeverShareWithLocalId/>
+            <NeverShareWithPurpose>Never Share</NeverShareWithPurpose>
+            <NeverShareWithRole>Company</NeverShareWithRole>
+            <NeverShareWithComments>Student and/or family information is not to be shared with the Media.</NeverShareWithComments>
+            <NeverShareWithURL>www.Mediaworld.com</NeverShareWithURL>
+          </NeverShareWith>
+        </NeverShareWithList>
+      </ConsentToSharingOfData>
+      <PermissionToParticipateList>
+        <PermissionToParticipate>
+          
+          
+          
+          <PermissionCategory>Travel</PermissionCategory>
+          <Permission>WalkHome</Permission>
+          <PermissionValue>Y</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionGranteeName>Sarah Lain Loavel</PermissionGranteeName>
+          <PermissionGranteeRelationship>Mother</PermissionGranteeRelationship>
+          <PermissionComments>Only with a sibling.</PermissionComments>
+        </PermissionToParticipate>
+        <PermissionToParticipate>
+          
+          
+          
+          <PermissionCategory>Travel</PermissionCategory>
+          <Permission>RideBikeHome</Permission>
+          <PermissionValue>N</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionComments>Only with a sibling.</PermissionComments>
+        </PermissionToParticipate>
+        <PermissionToParticipate>
+          
+          
+          
+          <PermissionCategory>Excursions</PermissionCategory>
+          <Permission>Attend Excursions General</Permission>
+          <PermissionValue>Y</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionComments>Optional Comment</PermissionComments>
+        </PermissionToParticipate>
+        <PermissionToParticipate>
+          
+          
+          
+          <PermissionCategory>Excursions</PermissionCategory>
+          <Permission>Overnight Camps</Permission>
+          <PermissionValue>N</PermissionValue>
+          <PermissionStartDate>2020-01-01</PermissionStartDate>
+          <PermissionEndDate>2020-12-31</PermissionEndDate>
+          <PermissionComments>Optional Comment</PermissionComments>
+        </PermissionToParticipate>
+      </PermissionToParticipateList>
+      <ApplicableLawList>
+        <ApplicableLaw>
+          <ApplicableCountry>AU</ApplicableCountry>
+          
+          <ApplicableLawName>APP1</ApplicableLawName>
+          <ApplicableLawURL>http://www.vic.priv.contract.edu.au</ApplicableLawURL>
+        </ApplicableLaw>
+        <ApplicableLaw>
+          <ApplicableCountry>AU</ApplicableCountry>
+          
+          <ApplicableLawName>APP2</ApplicableLawName>
+          <ApplicableLawURL>http://www.vic.priv.contract.edu.au</ApplicableLawURL>
+        </ApplicableLaw>
+      </ApplicableLawList>
+    </PersonPrivacyObligationDocument>
 `
 var test_PersonalisedPlan = `    <PersonalisedPlan RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
       <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
@@ -680,11 +922,11 @@ var test_SchoolInfo = `    <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A16
       <LocalId>01011234</LocalId>
       <StateProvinceId>01011234</StateProvinceId>
       <CommonwealthId>012345</CommonwealthId>
+      <ParentCommonwealthId>012346</ParentCommonwealthId>
       <SchoolName>Lincoln Secondary College</SchoolName>
       <LEAInfoRefId>73648462-8886-24AA-5294-BC6380173276</LEAInfoRefId>
       <OtherLEA SIF_RefObject="LEAInfo">AA648462-8886-24AA-5294-BC638017320B</OtherLEA>
-      <SchoolDistrict> Southern Metropolitan Region</SchoolDistrict>
-
+      <SchoolDistrict>Southern Metropolitan Region</SchoolDistrict>
       <SchoolType>Pri/Sec</SchoolType>
       <SchoolFocusList>
         <SchoolFocus>01</SchoolFocus>
@@ -850,6 +1092,7 @@ var test_SessionInfoExample = `    <SessionInfo RefId="98157AA0-13BA-8C3D-00AA-0
       <SchoolYear>2008</SchoolYear>
       <LocalId>2</LocalId>
       <TimeTableSubjectLocalId>10MA1</TimeTableSubjectLocalId>
+      <TeachingGroupLocalId>10MA1-Smith</TeachingGroupLocalId>
       <SchoolLocalId>01991</SchoolLocalId>
       <StaffPersonalLocalId>SMI009</StaffPersonalLocalId>
       <RoomNumber>R08</RoomNumber>
@@ -860,7 +1103,6 @@ var test_SessionInfoExample = `    <SessionInfo RefId="98157AA0-13BA-8C3D-00AA-0
           <FinishTime>13:30:00</FinishTime>
           <RollMarked>Y</RollMarked>
         </SessionInfo>
-
 `
 var test_StaffAssignment = `    <StaffAssignment RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <SchoolInfoRefId>A8C3D3E3-4B35-9D75-101D-00AA001A1652</SchoolInfoRefId>
@@ -1192,7 +1434,8 @@ var test_StudentAttendanceTimeListExample2 = `    <StudentAttendanceTimeList Ref
 				<AttendanceCode>
 					<Code>102</Code>
 				</AttendanceCode>
-				<AttendanceStatus>02</AttendanceStatus>  
+				<AttendanceStatus>02</AttendanceStatus>
+				<Date>2002-11-01</Date> 
 				<TimetablePeriod>P1</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>09:00:00</StartTime>
@@ -1216,6 +1459,7 @@ var test_StudentAttendanceTimeListExample2 = `    <StudentAttendanceTimeList Ref
 					<Code>100</Code>
 				</AttendanceCode>
 				<AttendanceStatus>NA</AttendanceStatus>
+				<Date>2002-11-01</Date>
 				<TimetablePeriod>P2</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>10:00:00</StartTime>
@@ -1235,7 +1479,8 @@ var test_StudentAttendanceTimeListExample2 = `    <StudentAttendanceTimeList Ref
 				<AttendanceCode>
 					<Code>101</Code>
 				</AttendanceCode>
-				<AttendanceStatus>01</AttendanceStatus>				
+				<AttendanceStatus>01</AttendanceStatus>
+				<Date>2002-11-01</Date>				
 				<TimetablePeriod>P3</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>11:00:00</StartTime>
@@ -1259,6 +1504,7 @@ var test_StudentAttendanceTimeListExample2 = `    <StudentAttendanceTimeList Ref
 					<Code>100</Code>
 				</AttendanceCode>
 				<AttendanceStatus>NA</AttendanceStatus>
+				<Date>2002-11-01</Date>
 				<TimetablePeriod>P4</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>13:00:00</StartTime>
@@ -1279,6 +1525,7 @@ var test_StudentAttendanceTimeListExample2 = `    <StudentAttendanceTimeList Ref
 					<Code>100</Code>
 				</AttendanceCode>
 				<AttendanceStatus>NA</AttendanceStatus>
+				<Date>2002-11-01</Date>
 				<TimetablePeriod>P5</TimetablePeriod>
 				<DayId>1</DayId>
 				<StartTime>14:00:00</StartTime>
@@ -1410,7 +1657,9 @@ var test_StudentContactPersonalExample = `    <StudentContactPersonal RefId='7C8
       <EmploymentType>4</EmploymentType>
       <SchoolEducationalLevel>3</SchoolEducationalLevel>
         <NonSchoolEducation>6</NonSchoolEducation>
-      </StudentContactPersonal>
+		<Employment>Fletcher</Employment>
+ 		<Workplace>Bob's Arrows</Workplace>
+     </StudentContactPersonal>
 
 `
 var test_StudentContactRelationship = `    <StudentContactRelationship StudentContactRelationshipRefId = "7572B261-0947-583A-463D-BB345291B332">
@@ -1441,6 +1690,11 @@ var test_StudentContactRelationship = `    <StudentContactRelationship StudentCo
       <MainlySpeaksEnglishAtHome>U</MainlySpeaksEnglishAtHome>
         <ContactSequence>1</ContactSequence>
         <ContactSequenceSource>P</ContactSequenceSource>
+        <ContactMethod>AltMailing</ContactMethod>
+		<FeePercentage>
+		  <Curriculum>90.0</Curriculum>
+		  <Other>10.0</Other>
+		</FeePercentage>
       </StudentContactRelationship>
 
 `
@@ -1473,7 +1727,9 @@ var test_StudentGrade = `    <StudentGrade RefId="359D7510-1AD0-A9D7-A8C3-DAD0A8
         <Letter>C</Letter>
         <Narrative>Johnny is only achieving average performance.</Narrative>
       </Grade>
-    </StudentGrade>
+ 	  <TermSpan>0828</TermSpan>
+	  <SchoolYear>2021</SchoolYear>
+   </StudentGrade>
 `
 var test_StudentParticipation = `    <StudentParticipation RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <StudentPersonalRefId>A2E34F59-A742-C1A4-B3D1-1CC002B163A2</StudentPersonalRefId>
@@ -1502,7 +1758,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0421 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0935 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -1512,6 +1768,7 @@ var test_example0421 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E
 			</MedicalAlertMessages>
 			<LocalId>S1234567</LocalId>
 			<StateProvinceId>ABC1234</StateProvinceId>
+			<NationalUniqueStudentIdentifier>12345678</NationalUniqueStudentIdentifier>
 			<ElectronicIdList>
 				<ElectronicId Type="03">ZZZZZZ21</ElectronicId>
 				<ElectronicId Type="03">ZZZZZZ22</ElectronicId>
@@ -1594,7 +1851,11 @@ var test_example0421 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E
 							<VisaStatisticalCode>05</VisaStatisticalCode>
 						  </VisaSubClass>
 					</VisaSubClassList>
-
+					<Passport>
+						<Number>9</Number>
+						<ExpiryDate>2030-12-11</ExpiryDate>
+						<Country>4111</Country>
+					</Passport>
 				</Demographics>
 				<AddressList>
 					<Address Type="0123" Role="2382">
@@ -1662,6 +1923,7 @@ var test_example0421 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E
 			<IntegrationAide>N</IntegrationAide>
 			<EducationSupport>N</EducationSupport>
 			<HomeSchooledStudent>N</HomeSchooledStudent>
+			<IndependentStudent>N</IndependentStudent>
 			<Sensitive>N</Sensitive>
 			<LocalCodeList>
 				<LocalCode>
@@ -1684,6 +1946,7 @@ var test_StudentSchoolEnrollment = `    <StudentSchoolEnrollment RefId="A8C3D3E3
       <MembershipType>01</MembershipType>
       <TimeFrame>C</TimeFrame>
       <SchoolYear>2004</SchoolYear>
+      <IntendedEntryDate>2004-01-28</IntendedEntryDate>
       <EntryDate>2004-01-29</EntryDate>
       <EntryType>
         <Code>1838</Code>
@@ -2084,6 +2347,7 @@ var test_WellbeingCharacteristic = `    <WellbeingCharacteristic RefId="2FFB63B4
       <WellbeingCharacteristicEndDate>2017-11-10</WellbeingCharacteristicEndDate>
       <WellbeingCharacteristicNotes>This Student has a special need.</WellbeingCharacteristicNotes>
       <WellbeingCharacteristicCategory>S</WellbeingCharacteristicCategory>
+	  <PreferredHospital>St. Aloysius'</PreferredHospital>
     </WellbeingCharacteristic>
 
 `
@@ -2505,6 +2769,9 @@ var test_Debtor = `    <Debtor RefId="B5739375-800A-C4CC-6385-0BB2754114AA">
       <BillingName>Flintstone Family Trust</BillingName>
       <BillingNote>Do not invoice under parent's real name.</BillingNote>
       <Discount>10.0</Discount>
+	  <BSB>12121212</BSB>
+	  <AccountNumber>34343434</AccountNumber>
+	  <AccountName>Flintstone Inc.</AccountName>
     </Debtor>
     
 `
@@ -2753,6 +3020,7 @@ var test_LibraryPatronStatus = `
 
           <CheckoutInfo>
 
+			<CheckedOutOn>2018-12-04T23:59:59-05:00</CheckedOutOn> 	
             <ReturnBy>2019-01-04T23:59:59-05:00</ReturnBy>
 
           </CheckoutInfo>
@@ -2997,6 +3265,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>0</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-00</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3034,6 +3303,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>1</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-01</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3071,6 +3341,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>2</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-02</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>SP</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3107,6 +3378,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>3</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-03</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3144,6 +3416,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>4</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-04</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>IO</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3180,6 +3453,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>5</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-05</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3217,6 +3491,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>6</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-06</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3254,6 +3529,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>7</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-07</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>IGM</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3290,6 +3566,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>8</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-08</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3327,6 +3604,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>9</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-09</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>TE</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3363,6 +3641,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>10</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-10</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>PO</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3399,6 +3678,7 @@ var test_NAPCodeFrameexample1 = `<NAPCodeFrame RefId="09381381-641E-4034-A54B-9A
           <SequenceNumber>11</SequenceNumber>
 	  <TestItemContent>
             <NAPTestItemLocalId>NAPLAN-2017-0001-Reading-A-00-11</NAPTestItemLocalId>
+            <ItemName>Reading Unit A</ItemName>
             <ItemType>MC</ItemType>
     <Subdomain>Letters</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -3919,6 +4199,7 @@ var test_NAPTest = ` <NAPTest RefId="27BD7B5B-19F2-48A9-B645-FD6569E7654E">
 var test_NAPTestItem = `<NAPTestItem RefId="31CA1A02-4E53-4A29-AE1E-807489C30827">
   <TestItemContent>
     <NAPTestItemLocalId>NAPLAN-2017-0005-Language Conventions: Spelling-S2-01-01</NAPTestItemLocalId>
+    <ItemName>Spelling Unit S2</ItemName>
     <ItemType>MC</ItemType>
     <Subdomain>Spelling</Subdomain>
     <ItemDescriptor>Descriptor #1</ItemDescriptor>
@@ -4042,7 +4323,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0049 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0627 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>

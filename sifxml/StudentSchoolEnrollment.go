@@ -15,6 +15,7 @@ type studentschoolenrollment struct {
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       TimeFrame *AUCodeSetsEnrollmentTimeFrameType `xml:"TimeFrame" json:"TimeFrame"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
+      IntendedEntryDate *String `xml:"IntendedEntryDate,omitempty" json:"IntendedEntryDate,omitempty"`
       EntryDate *String `xml:"EntryDate" json:"EntryDate"`
       EntryType *StudentEntryContainerType `xml:"EntryType,omitempty" json:"EntryType,omitempty"`
       YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel,omitempty"`
