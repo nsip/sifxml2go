@@ -710,8 +710,8 @@ type PersonPicture_PictureSource {
       EmploymentType: AUCodeSetsEmploymentTypeType OPT 
       SchoolEducationalLevel: EducationalLevelType OPT 
       NonSchoolEducation: AUCodeSetsNonSchoolEducationType OPT 
-      Employment: xs:normalizedString OPT 
-      Workplace: xs:normalizedString OPT 
+      Employment: String OPT 
+      Workplace: String OPT 
       WorkingWithChildrenCheck: WorkingWithChildrenCheckType OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 

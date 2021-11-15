@@ -60615,8 +60615,9 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
         }
         switch key {
     case "Employment":
-    if v, ok:= xsnormalizedStringPointer(value); ok {
-      n.studentcontactpersonal.Employment = v
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentcontactpersonal.Employment = ((*String)(v))
       }
     case "EmploymentType":
         if !CodesetContains(AUCodeSetsEmploymentTypeType_map, value) {
@@ -60677,8 +60678,9 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
       n.studentcontactpersonal.WorkingWithChildrenCheck = v
       }
     case "Workplace":
-    if v, ok:= xsnormalizedStringPointer(value); ok {
-      n.studentcontactpersonal.Workplace = v
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentcontactpersonal.Workplace = ((*String)(v))
       }
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "StudentContactPersonal")
@@ -60687,10 +60689,10 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
 }
 
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *StudentContactPersonal) Employment() *xsnormalizedString {
+  func (s *StudentContactPersonal) Employment() *String {
     if s.studentcontactpersonal.Employment == nil {
-     if v, ok:= xsnormalizedStringPointer(xsnormalizedString{}); ok {
-      s.studentcontactpersonal.Employment = v
+    if v, ok:= StringPointer(""); ok {
+      s.studentcontactpersonal.Employment = ((*String)(v))
       }
       }
       return s.studentcontactpersonal.Employment
@@ -60843,10 +60845,10 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
     return s.studentcontactpersonal.WorkingWithChildrenCheck == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *StudentContactPersonal) Workplace() *xsnormalizedString {
+  func (s *StudentContactPersonal) Workplace() *String {
     if s.studentcontactpersonal.Workplace == nil {
-     if v, ok:= xsnormalizedStringPointer(xsnormalizedString{}); ok {
-      s.studentcontactpersonal.Workplace = v
+    if v, ok:= StringPointer(""); ok {
+      s.studentcontactpersonal.Workplace = ((*String)(v))
       }
       }
       return s.studentcontactpersonal.Workplace

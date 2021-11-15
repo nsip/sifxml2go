@@ -15,8 +15,8 @@ type studentcontactpersonal struct {
       EmploymentType *AUCodeSetsEmploymentTypeType `xml:"EmploymentType,omitempty" json:"EmploymentType,omitempty"`
       SchoolEducationalLevel *EducationalLevelType `xml:"SchoolEducationalLevel,omitempty" json:"SchoolEducationalLevel,omitempty"`
       NonSchoolEducation *AUCodeSetsNonSchoolEducationType `xml:"NonSchoolEducation,omitempty" json:"NonSchoolEducation,omitempty"`
-      Employment *xsnormalizedString `xml:"Employment,omitempty" json:"Employment,omitempty"`
-      Workplace *xsnormalizedString `xml:"Workplace,omitempty" json:"Workplace,omitempty"`
+      Employment *String `xml:"Employment,omitempty" json:"Employment,omitempty"`
+      Workplace *String `xml:"Workplace,omitempty" json:"Workplace,omitempty"`
       WorkingWithChildrenCheck *WorkingWithChildrenCheckType `xml:"WorkingWithChildrenCheck,omitempty" json:"WorkingWithChildrenCheck,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
