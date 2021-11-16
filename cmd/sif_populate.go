@@ -1,11 +1,31 @@
 package main
 
 import (
+	"flag"
+	"log"
+
 	"github.com/nsip/sifxml2go/populate"
 	//"./sifxml"
 )
 
+var enrolment = flag.Bool("enrolment", false, "Generate enrolment use case input data")
+var provisioning = flag.Bool("provisioning", false, "Generate provisioning use case input data")
+var dailyattendance = flag.Bool("dailyattendance", false, "Generate daily attendance use case input data")
+var financial = flag.Bool("financial", false, "Generate financial use case input data")
+var gradebook = flag.Bool("gradebook", false, "Generate gradebook use case input data")
+var studentattendancetimelist = flag.Bool("studentattendancetimelist", false, "Generate student attendance time list use case input data")
+var teacherjudgement = flag.Bool("teacherjudgement", false, "Generate teacher judgement use case input data")
+var timetable = flag.Bool("timetable", false, "Generate timetable use case input data")
+var wellbeing = flag.Bool("wellbeing", false, "Generate wellbeing use case input data")
+var agcollections = flag.Bool("agcollections", false, "Generate AG collections use case input data")
+var studentcount = flag.Int("studentcount", 400, "Number of StudentPersonal objects to generate")
+var staffcount = flag.Int("staffcount", 40, "Number of StaffPersonal objects to generate")
+var schoolcount = flag.Int("schoolcount", 10, "Number of SchoolInfo objects to generate")
+var vendorcount = flag.Int("vendorcount", 10, "Number of VendorInfo objects to generate")
+
 func main() {
+	flag.Parse()
+
 	var err error
 	/*
 		students := populate.Create_StudentPersonals(100000, populate.Schooltype2Yearlevels("Pri/Sec"))
@@ -104,8 +124,8 @@ func main() {
 		err = populate.PrintXML(cell)
 		populate.Errcheck(err)
 	*/
-	ret := populate.MakeUsecaseObjects(populate.MakeUsecases{Enrolment: true, Provisioning: true, DailyAttendance: true, Financial: true, Gradebook: true, StudentAttendanceTimeList: true, TeacherJudgement: true, Timetable: true, Wellbeing: true}, populate.MakeUsecaseCounts{Students: 400, Staff: 40, Schools: 10, Vendors: 10})
-
+	log.Printf("%+v", *enrolment)
+	ret := populate.MakeUsecaseObjects(populate.MakeUsecases{Enrolment: *enrolment, Provisioning: *provisioning, DailyAttendance: *dailyattendance, Financial: *financial, Gradebook: *gradebook, StudentAttendanceTimeList: *studentattendancetimelist, TeacherJudgement: *teacherjudgement, Timetable: *timetable, Wellbeing: *wellbeing, AGCollections: *agcollections}, populate.MakeUsecaseCounts{Students: *studentcount, Staff: *staffcount, Schools: *schoolcount, Vendors: *vendorcount})
 	err = populate.PrintXML(ret.Schools)
 	populate.Errcheck(err)
 	err = populate.PrintXML(ret.Students)
@@ -148,6 +168,8 @@ func main() {
 	populate.Errcheck(err)
 	err = populate.PrintXML(ret.ScheduledActivities)
 	populate.Errcheck(err)
-	//populate.PrintJSON(ret.TeachingGroups)
-
+	err = populate.PrintXML(ret.CollectionRounds)
+	populate.Errcheck(err)
+	err = populate.PrintXML(ret.CollectionStatuses)
+	populate.Errcheck(err)
 }

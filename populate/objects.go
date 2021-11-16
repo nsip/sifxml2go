@@ -2266,3 +2266,83 @@ func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTabl
 
 	return ret
 }
+
+func Create_CollectionRound(collection string) *sifxml.CollectionRound {
+
+	ret := sifxml.CollectionRound{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("AGCollection", collection)
+	ret.SetProperty("CollectionYear", this_year())
+	for i := 0; i < 2; i++ {
+		ret.AGRoundList().AddNew()
+		ret.AGRoundList().Last().SetProperty("RoundCode", CollectionRoundCode(collection, this_year(), i+1))
+		ret.AGRoundList().Last().SetProperty("RoundName", fmt.Sprintf("%s %s:%02d", CollectionCode2Name(collection), this_year(), i+1))
+		ret.AGRoundList().Last().SetProperty("StartDate", fmt.Sprintf("%s-%02d-01", this_year(), i*6+3))
+		ret.AGRoundList().Last().SetProperty("DueDate", fmt.Sprintf("%s-%02d-30", this_year(), i*6+3))
+		ret.AGRoundList().Last().SetProperty("EndDate", fmt.Sprintf("%s-%02d-30", this_year(), i*6+3))
+	}
+
+	if out, ok := sifxml.CollectionRoundPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to CollectionRound: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+func Create_CollectionRounds(count int) []*sifxml.CollectionRound {
+	ret := sifxml.CollectionRoundSlice()
+	col := All_AGCollections()
+	for i := 0; i < count; i++ {
+		ret = append(ret, Create_CollectionRound(col[i%len(col)]))
+	}
+	return ret
+}
+
+func Create_CollectionStatus(collection string, round int) *sifxml.CollectionStatus {
+
+	ret := sifxml.CollectionStatus{}
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("AGCollection", collection)
+	ret.SetProperty("CollectionYear", this_year())
+	ret.SetProperty("ReportingAuthority", "Reporting Authority A")
+	ret.SetProperty("ReportingAuthoritySystem", "Reporting Authority System B")
+	ret.SetProperty("ReportingAuthorityCommonwealthId", "1234")
+	ret.SetProperty("SubmittedBy", "Fred Flintstone")
+	ret.SetProperty("SubmissionTimestamp", fmt.Sprintf("%s-%02d-30T09:00:00", this_year(), (round-1)*6+3))
+	ret.SetProperty("RoundCode", CollectionRoundCode(collection, this_year(), round))
+	ret.AGReportingObjectResponseList().AddNew()
+	/* We do not point to submissions in our test data, the submissions are made by the user */
+	statuscode := threshold_rand_strings([]float64{0.25, 0.1, 0}, []string{"201", "422", "500"})
+	ret.AGReportingObjectResponseList().Last().SetProperty("HTTPStatusCode", statuscode)
+	ret.AGReportingObjectResponseList().Last().SetProperty("ErrorText", HTTPStatus2Text(statuscode))
+	ret.AGReportingObjectResponseList().Last().SetProperty("CommonwealthId", "Dummy Commonwealth ID")
+	ret.AGReportingObjectResponseList().Last().SetProperty("EntityName", "Dummy School Name")
+	ret.AGReportingObjectResponseList().Last().SetProperty("AGSubmissionStatusCode",
+		threshold_rand_strings([]float64{0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05, 0},
+			[]string{"Cancelled", "Declaration Pending", "Declared", "Exempt", "Finalised", "In Error", "In Progress", "In Review", "Not Started", "Processing", "Reopened"}))
+	ret.AGReportingObjectResponseList().Last().AGRuleList().AddNew()
+	ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleCode", "Rule Code")
+	ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleComment", "Rule Comment")
+	ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleResponse", "Rule Response")
+	ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleStatus", "Rule Status")
+
+	if out, ok := sifxml.CollectionStatusPointer(ret); !ok {
+		log.Fatalf("Could not create pointer to CollectionStatus: %+v", ret)
+		return nil
+	} else {
+		return out
+	}
+}
+
+func Create_CollectionStatuses(count int) []*sifxml.CollectionStatus {
+	ret := sifxml.CollectionStatusSlice()
+	col := All_AGCollections()
+	for i := 0; i < count; i++ {
+		for round := 1; round <= 2; round++ {
+			ret = append(ret, Create_CollectionStatus(col[i%len(col)], round))
+		}
+	}
+	return ret
+
+}

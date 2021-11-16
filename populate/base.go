@@ -464,3 +464,37 @@ func Term_end_date(year string, semester int) string {
 		return fmt.Sprintf("%s-11-30", year)
 	}
 }
+
+func All_AGCollections() []string {
+	return ([]string{"COI", "FQ", "SES", "STATS"})
+}
+
+func CollectionCode2Name(code string) string {
+	switch code {
+	case "COI":
+		return "Non-Government School Census"
+	case "FQ":
+		return "Financial Questionnaire"
+	case "SES":
+		return "Address Collection"
+	case "STATS":
+		return "Student Attendance"
+	}
+	return "XXX"
+}
+
+func CollectionRoundCode(collection string, year string, round int) string {
+	return fmt.Sprintf("%s %s-%02d", collection, year, round)
+}
+
+func HTTPStatus2Text(code string) string {
+	switch code {
+	case "201":
+		return "Created"
+	case "422":
+		return "Unprocessable Entity"
+	case "500":
+		return "Internal Server Error"
+	}
+	return "XXX"
+}
