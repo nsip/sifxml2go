@@ -12,6 +12,7 @@ type schoolinfo struct {
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`
       CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
+      ParentCommonwealthId *String `xml:"ParentCommonwealthId,omitempty" json:"ParentCommonwealthId,omitempty"`
       ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
       OtherIdList *OtherIdListType `xml:"OtherIdList,omitempty" json:"OtherIdList,omitempty"`
       SchoolName *String `xml:"SchoolName" json:"SchoolName"`

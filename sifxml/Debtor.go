@@ -15,6 +15,9 @@ type debtor struct {
       BillingName *String `xml:"BillingName,omitempty" json:"BillingName,omitempty"`
       BillingNote *String `xml:"BillingNote,omitempty" json:"BillingNote,omitempty"`
       Discount *String `xml:"Discount,omitempty" json:"Discount,omitempty"`
+      BSB *String `xml:"BSB,omitempty" json:"BSB,omitempty"`
+      AccountNumber *String `xml:"AccountNumber,omitempty" json:"AccountNumber,omitempty"`
+      AccountName *String `xml:"AccountName,omitempty" json:"AccountName,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`

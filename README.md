@@ -37,4 +37,21 @@ There is also currently code to generate GraphQL schemas (output to `/sifgraphql
 
 [![GoDoc](https://godoc.org/github.com/nsip/sifxml2go/populate?status.svg)](https://godoc.org/github.com/nsip/sifxml2go/populate)
 
-The code for populating objects is currently invoked as `MakeUsecaseObjects()` in usecases.go
+The code for populating objects is invoked by the command line executable cmd/sif_populate. The executable is invoked with flags, to specify which use cases should be included in the output.
+
+SchoolInfo objects are always created.
+
+* `--enrolment`: Enrollment -- 
+* `--provisioning`: Provisioning -- StudentPersonal, StudentSchoolEnrollment, StaffPersonal, StaffAssignment, TermInfo, TimeTableSubject, TeachingGroup
+* `--dailyattendance`: Daily Attendance -- StudentPersonal, StudentSchoolEnrollment, CalendarSummary, CalendarDate
+* `--financial`: Financial -- StudentPersonal, StudentSchoolEnrollment, StaffPersonal, StaffAssignment, StudentContactPersonal, StudentContactRelationship, VendorInfo, Debtor, ChargedLocationInfo, FinancialAccount
+* `--gradebook`: Gradebook -- StudentPersonal, StudentSchoolEnrollment, StaffPersonal, StaffAssignment, TermInfo, TimeTableSubject, TeachingGroup
+* `--studentattendancetimelist`: Student Attendance Time List -- StudentPersonal, StudentSchoolEnrollment, StaffPersonal, StaffAssignment, TermInfo, TimeTableSubject, TeachingGroup, RoomInfo, TimeTable, TimeTableCell, CalendarSummary, CalendarDate, ScheduledActivity, SessionInfo
+* `--teacherjudgement`: Teacher Judgement -- StudentPersonal, StudentSchoolEnrollment, StaffPersonal, StaffAssignment, TermInfo, TimeTableSubject, TeachingGroup
+* `--timetable`: Timetable -- StudentPersonal, StudentSchoolEnrollment, StaffPersonal, StaffAssignment, TermInfo, TimeTableSubject, RoomInfo, SchoolCourseInfo
+* `--wellbeing`: Wellbeing -- StudentPersonal, StudentSchoolEnrollment, StaffPersonal, StaffAssignment, StudentContactPersonal, StudentContactRelationship, TermInfo, TimeTableSubject, TeachingGroup, RoomInfo, TimeTable, TimeTableCell, ScheduledActivity
+* `--agcollections`: Australian Government Collections -- CollectionRound, CollectionStatus
+* `--studentcount n`: Count of StudentPersonal objects (default: 400 per school)
+* `--staffcount n`: Count of StaffPersonal objects (default: 40 per school)
+* `--vendorcount`: Count of VendorInfo objects (default: 10 per school)
+* `--schoolcount`: Count of SchoolInfo objects (default: 10)

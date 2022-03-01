@@ -13,6 +13,7 @@ type studentpersonal struct {
       MedicalAlertMessages *MedicalAlertMessagesType `xml:"MedicalAlertMessages,omitempty" json:"MedicalAlertMessages,omitempty"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`
+      NationalUniqueStudentIdentifier *String `xml:"NationalUniqueStudentIdentifier,omitempty" json:"NationalUniqueStudentIdentifier,omitempty"`
       ElectronicIdList *ElectronicIdListType `xml:"ElectronicIdList,omitempty" json:"ElectronicIdList,omitempty"`
       OtherIdList *OtherIdListType `xml:"OtherIdList,omitempty" json:"OtherIdList,omitempty"`
       PersonInfo *PersonInfoType `xml:"PersonInfo" json:"PersonInfo"`
@@ -30,6 +31,7 @@ type studentpersonal struct {
       IntegrationAide *AUCodeSetsYesOrNoCategoryType `xml:"IntegrationAide,omitempty" json:"IntegrationAide,omitempty"`
       EducationSupport *AUCodeSetsYesOrNoCategoryType `xml:"EducationSupport,omitempty" json:"EducationSupport,omitempty"`
       HomeSchooledStudent *AUCodeSetsYesOrNoCategoryType `xml:"HomeSchooledStudent,omitempty" json:"HomeSchooledStudent,omitempty"`
+      IndependentStudent *AUCodeSetsYesOrNoCategoryType `xml:"IndependentStudent,omitempty" json:"IndependentStudent,omitempty"`
       Sensitive *AUCodeSetsYesOrNoCategoryType `xml:"Sensitive,omitempty" json:"Sensitive,omitempty"`
       OfflineDelivery *AUCodeSetsYesOrNoCategoryType `xml:"OfflineDelivery,omitempty" json:"OfflineDelivery,omitempty"`
       ESLSupport *AUCodeSetsYesOrNoCategoryType `xml:"ESLSupport,omitempty" json:"ESLSupport,omitempty"`
