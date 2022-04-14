@@ -2312,11 +2312,11 @@ func Create_CollectionRound(collection string) *sifxml.CollectionRound {
 
 // Create CollectionRound objects for the currently supported AG Collections.
 //
-func Create_CollectionRounds(count int) []*sifxml.CollectionRound {
+func Create_CollectionRounds() []*sifxml.CollectionRound {
 	ret := sifxml.CollectionRoundSlice()
 	col := All_AGCollections()
-	for i := 0; i < count; i++ {
-		ret = append(ret, Create_CollectionRound(col[i%len(col)]))
+	for i := 0; i < len(col); i++ {
+		ret = append(ret, Create_CollectionRound(col[i]))
 	}
 	return ret
 }
@@ -2361,34 +2361,41 @@ func Create_CollectionRounds(count int) []*sifxml.CollectionRound {
 //
 // * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleStatus is set to "Fail".
 //
-func Create_CollectionStatus(collection string, round int) *sifxml.CollectionStatus {
+func Create_CollectionStatus(collection string, round int, school *sifxml.SchoolInfo) *sifxml.CollectionStatus {
 
 	ret := sifxml.CollectionStatus{}
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("AGCollection", collection)
 	ret.SetProperty("CollectionYear", this_year())
-	ret.SetProperty("ReportingAuthority", "Middleton Primary School Reporting Authority")
-	ret.SetProperty("ReportingAuthoritySystem", "Reporting Authority System B")
+	ret.SetProperty("ReportingAuthority", "Systemic School Reporting Authority")
+	ret.SetProperty("ReportingAuthoritySystem", "Systemic Reporting Authority System B")
 	ret.SetProperty("ReportingAuthorityCommonwealthId", "1234")
 	ret.SetProperty("SubmittedBy", "John Smith")
 	ret.SetProperty("SubmissionTimestamp", fmt.Sprintf("%s-%02d-30T09:00:00", this_year(), (round-1)*6+3))
 	ret.SetProperty("RoundCode", CollectionRoundCode(collection, this_year(), round))
 	ret.AGReportingObjectResponseList().AddNew()
 	/* We do not point to submissions in our test data, the submissions are made by the user */
-	statuscode := threshold_rand_strings([]float64{0.25, 0.1, 0}, []string{"201", "422", "500"})
+	ret.AGReportingObjectResponseList().Last().SetProperty("CommonwealthId", school.CommonwealthId().String())
+	ret.AGReportingObjectResponseList().Last().SetProperty("EntityName", school.SchoolName().String())
+
+	status := threshold_rand_strings([]float64{0.5, 0.45, 0.4, 0.35, 0.3, 0.25, 0.2, 0.15, 0.1, 0.05, 0},
+		[]string{"In Error", "Cancelled", "Declaration Pending", "Declared", "Exempt", "Finalised", "In Progress", "In Review", "Not Started", "Processing", "Reopened"})
+	statuscode := "201"
+	if status == "In Error" {
+		statuscode = threshold_rand_strings([]float64{0.5, 0}, []string{"422", "500"})
+	}
 	ret.AGReportingObjectResponseList().Last().SetProperty("HTTPStatusCode", statuscode)
 	ret.AGReportingObjectResponseList().Last().SetProperty("ErrorText", HTTPStatus2Text(statuscode))
-	ret.AGReportingObjectResponseList().Last().SetProperty("CommonwealthId", "101")
-	ret.AGReportingObjectResponseList().Last().SetProperty("EntityName", "Middleton Primary School")
-	ret.AGReportingObjectResponseList().Last().SetProperty("AGSubmissionStatusCode",
-		threshold_rand_strings([]float64{0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05, 0},
-			[]string{"Cancelled", "Declaration Pending", "Declared", "Exempt", "Finalised", "In Error", "In Progress", "In Review", "Not Started", "Processing", "Reopened"}))
-	for i := 1; i <= 3; i++ {
-		ret.AGReportingObjectResponseList().Last().AGRuleList().AddNew()
-		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleCode", fmt.Sprintf("WR-%03d", i))
-		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleComment", "Cannot be ignored because Components do not add up to Total - Fix")
-		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleResponse", "Rejected")
-		ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleStatus", "Fail")
+	ret.AGReportingObjectResponseList().Last().SetProperty("AGSubmissionStatusCode", status)
+
+	if status == "In Error" {
+		for i := 1; i <= 3; i++ {
+			ret.AGReportingObjectResponseList().Last().AGRuleList().AddNew()
+			ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleCode", fmt.Sprintf("WR-%03d", i))
+			ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleComment", "Cannot be ignored because Components do not add up to Total - Fix")
+			ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleResponse", "Rejected")
+			ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleStatus", "Fail")
+		}
 	}
 
 	if out, ok := sifxml.CollectionStatusPointer(ret); !ok {
@@ -2403,12 +2410,12 @@ func Create_CollectionStatus(collection string, round int) *sifxml.CollectionSta
 // created in CollectionRounds.
 // Presupposes that there are two rounds for each collection per year.
 //
-func Create_CollectionStatuses(count int) []*sifxml.CollectionStatus {
+func Create_CollectionStatuses(school *sifxml.SchoolInfo) []*sifxml.CollectionStatus {
 	ret := sifxml.CollectionStatusSlice()
 	col := All_AGCollections()
-	for i := 0; i < count; i++ {
+	for i := 0; i < len(col); i++ {
 		for round := 1; round <= 2; round++ {
-			ret = append(ret, Create_CollectionStatus(col[i%len(col)], round))
+			ret = append(ret, Create_CollectionStatus(col[i%len(col)], round, school))
 		}
 	}
 	return ret

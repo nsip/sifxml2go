@@ -231,10 +231,14 @@ func MakeUsecaseObjects(usecases MakeUsecases, counts MakeUsecaseCounts) UseCase
 			add.SchoolCourses = Create_SchoolCourseInfos(add.TimeTableSubjects, add.Terms)
 		}
 		if usecases.AGCollections {
-			add.CollectionRounds = Create_CollectionRounds(100)
-			add.CollectionStatuses = Create_CollectionStatuses(100)
+			add.CollectionStatuses = Create_CollectionStatuses(add.Schools[0])
 		}
-
+		ret = appendUseCaseObjects(ret, add)
+	}
+	if usecases.AGCollections {
+		// rounds apply across all schools
+		add := initUseCaseObjects()
+		add.CollectionRounds = Create_CollectionRounds()
 		ret = appendUseCaseObjects(ret, add)
 	}
 	return ret
