@@ -37,3 +37,4 @@ type wellbeingcharacteristic struct {
       
       }
     
+

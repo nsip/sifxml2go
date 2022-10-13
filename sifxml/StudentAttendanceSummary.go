@@ -16,7 +16,7 @@ type studentattendancesummary struct {
       EndDate *String `xml:"EndDate" json:"EndDate"`
       StartDay *Int `xml:"StartDay,omitempty" json:"StartDay,omitempty"`
       EndDay *Int `xml:"EndDay,omitempty" json:"EndDay,omitempty"`
-      FTE *Float `xml:"FTE,omitempty" json:"FTE,omitempty"`
+      FTE *FTEType `xml:"FTE,omitempty" json:"FTE,omitempty"`
       DaysAttended *Float `xml:"DaysAttended" json:"DaysAttended"`
       ExcusedAbsences *Float `xml:"ExcusedAbsences" json:"ExcusedAbsences"`
       UnexcusedAbsences *Float `xml:"UnexcusedAbsences" json:"UnexcusedAbsences"`
@@ -28,3 +28,4 @@ type studentattendancesummary struct {
       
       }
     
+

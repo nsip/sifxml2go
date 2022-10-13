@@ -30,7 +30,8 @@ type learningresource struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type LearningResource_Location struct {
+    
+type LearningResource_Location struct {
   learningresource_location `xml:"LearningResource_Location" json:"LearningResource_Location"`
 }
 
@@ -38,3 +39,4 @@ type learningresource_location struct {
       ReferenceType *String `xml:"ReferenceType,attr" json:"ReferenceType"`
       Value *String `xml:",chardata" json:"value"`
 }
+

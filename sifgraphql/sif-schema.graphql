@@ -25,7 +25,8 @@
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type Activity_Evaluation {
+    
+type Activity_Evaluation {
       EvaluationType: String 
        Description: String OPT 
 }
@@ -41,6 +42,7 @@
       
       }
     
+
     type AggregateStatisticFact {
         RefId: RefIdType 
       AggregateStatisticInfoRefId: String 
@@ -53,6 +55,7 @@
       
       }
     
+
     type AggregateStatisticInfo {
         RefId: RefIdType 
       StatisticName: String 
@@ -70,7 +73,8 @@
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type AggregateStatisticInfo_CalculationRule {
+    
+type AggregateStatisticInfo_CalculationRule {
       Type: String 
       Value: String 
 }
@@ -92,6 +96,7 @@
       
       }
     
+
     type CalendarSummary {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -113,6 +118,7 @@
       
       }
     
+
     type EquipmentInfo {
         RefId: RefIdType 
       Name: String 
@@ -128,7 +134,8 @@
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type EquipmentInfo_SIF_RefId {
+    
+type EquipmentInfo_SIF_RefId {
       SIF_RefObject: String 
       Value: String 
 }
@@ -160,6 +167,7 @@
       
       }
     
+
     type GradingAssignmentScore {
         RefId: RefIdType 
       StudentPersonalRefId: String OPT 
@@ -184,6 +192,7 @@
       
       }
     
+
     type Identity {
         RefId: RefIdType 
       SIF_RefId: Identity_SIF_RefId 
@@ -196,7 +205,8 @@
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type Identity_SIF_RefId {
+    
+type Identity_SIF_RefId {
       SIF_RefObject: String 
       Value: String 
 }
@@ -221,6 +231,7 @@
       
       }
     
+
     type LearningResource {
         RefId: RefIdType 
       Name: String 
@@ -244,12 +255,14 @@
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type LearningResource_Location {
+    
+type LearningResource_Location {
       ReferenceType: String 
       Value: String 
 }
 
     type LearningResourcePackage AbstractContentElementType
+
     type LearningStandardDocument {
         RefId: RefIdType 
       Title: String 
@@ -276,6 +289,7 @@
       
       }
     
+
     type LearningStandardItem {
         RefId: RefIdType 
       Resources: LResourcesType OPT 
@@ -297,6 +311,7 @@
       
       }
     
+
     type MarkValueInfo {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -319,6 +334,7 @@
       
       }
     
+
     type PersonPicture {
         RefId: RefIdType 
       ParentObjectRefId: PersonPicture_ParentObjectRefId 
@@ -331,7 +347,8 @@
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type PersonPicture_ParentObjectRefId {
+    
+type PersonPicture_ParentObjectRefId {
       SIF_RefObject: String 
       Value: String 
 }
@@ -359,6 +376,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type PersonalisedPlan {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -377,6 +395,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type ResourceBooking {
         RefId: RefIdType 
       ResourceRefId: ResourceBooking_ResourceRefId OPT
@@ -394,23 +413,12 @@ type PersonPicture_PictureSource {
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type ResourceBooking_ResourceRefId {
+    
+type ResourceBooking_ResourceRefId {
       SIF_RefObject: String 
       Value: String 
 }
 
-    type ResourceUsage {
-        RefId: RefIdType 
-      SchoolInfoRefId: String 
-      ResourceUsageContentType: ResourceUsageContentTypeType 
-      ResourceReportColumnList: ResourceReportColumnListType 
-      ResourceReportLineList: ResourceReportLineListType 
-      LocalCodeList: LocalCodeListType OPT 
-      SIF_Metadata: SIF_MetadataType OPT 
-      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
-      
-      }
-    
     type RoomInfo {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -431,6 +439,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type ScheduledActivity {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -439,6 +448,7 @@ type PersonPicture_PictureSource {
       PeriodId: LocalIdType OPT 
       TimeTableRefId: String OPT 
       ActivityDate: String 
+      ActivityEndDate: String OPT 
       StartTime: String 
       FinishTime: String 
       CellType: String OPT 
@@ -460,6 +470,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type SchoolCourseInfo {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -484,6 +495,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type SchoolInfo {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -533,7 +545,8 @@ type PersonPicture_PictureSource {
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type SchoolInfo_OtherLEA {
+    
+type SchoolInfo_OtherLEA {
       SIF_RefObject: String 
       Value: RefIdType 
 }
@@ -549,6 +562,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type SectionInfo {
         RefId: RefIdType 
       SchoolCourseInfoRefId: String 
@@ -570,6 +584,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type SessionInfo {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -593,6 +608,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StaffAssignment {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -602,7 +618,7 @@ type PersonPicture_PictureSource {
       PrimaryAssignment: AUCodeSetsYesOrNoCategoryType 
       JobStartDate: String OPT 
       JobEndDate: String OPT 
-      JobFTE: float64 OPT 
+      JobFTE: FTEType OPT 
       JobFunction: String OPT 
       EmploymentStatus: AUCodeSetsStaffStatusType OPT 
       StaffSubjectList: StaffSubjectListType OPT 
@@ -620,6 +636,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StaffPersonal {
         RefId: RefIdType 
       LocalId: LocalIdType 
@@ -636,6 +653,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentActivityInfo {
         RefId: RefIdType 
       Title: String 
@@ -651,6 +669,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentActivityParticipation {
         RefId: RefIdType 
       StudentPersonalRefId: String 
@@ -667,6 +686,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentAttendanceSummary {
         StudentAttendanceSummaryRefId: String 
       StudentPersonalRefId: String 
@@ -676,7 +696,7 @@ type PersonPicture_PictureSource {
       EndDate: String 
       StartDay: int OPT 
       EndDay: int OPT 
-      FTE: float64 OPT 
+      FTE: FTEType OPT 
       DaysAttended: float64 
       ExcusedAbsences: float64 
       UnexcusedAbsences: float64 
@@ -688,6 +708,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentAttendanceTimeList {
         RefId: RefIdType 
       StudentPersonalRefId: String 
@@ -702,6 +723,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentContactPersonal {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -719,6 +741,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentContactRelationship {
         StudentContactRelationshipRefId: String 
       StudentPersonalRefId: RefIdType 
@@ -739,6 +762,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentDailyAttendance {
         RefId: RefIdType 
       StudentPersonalRefId: String 
@@ -758,6 +782,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentGrade {
         RefId: RefIdType 
       StudentPersonalRefId: String 
@@ -783,6 +808,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentParticipation {
         RefId: RefIdType 
       StudentPersonalRefId: String 
@@ -809,14 +835,15 @@ type PersonPicture_PictureSource {
       ExtendedDay: bool OPT 
       ProgramAvailability: ProgramAvailabilityType OPT 
       EntryPerson: String OPT 
-      StudentSpecialEducationFTE: float64 OPT 
+      StudentSpecialEducationFTE: FTEType OPT 
       ParticipationContact: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type StudentParticipation_ManagingSchool {
+    
+type StudentParticipation_ManagingSchool {
       SIF_RefObject: String 
       Value: String 
 }
@@ -842,6 +869,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentPersonal {
         RefId: RefIdType 
       AlertMessages: AlertMessagesType OPT 
@@ -863,6 +891,7 @@ type PersonPicture_PictureSource {
       ESLDateAssessed: String OPT 
       YoungCarersRole: AUCodeSetsYesOrNoCategoryType OPT 
       Disability: AUCodeSetsYesOrNoCategoryType OPT 
+      CategoryOfDisability: AUCodeSetsNCCDDisabilityType OPT 
       IntegrationAide: AUCodeSetsYesOrNoCategoryType OPT 
       EducationSupport: AUCodeSetsYesOrNoCategoryType OPT 
       HomeSchooledStudent: AUCodeSetsYesOrNoCategoryType OPT 
@@ -879,6 +908,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentSchoolEnrollment {
         RefId: RefIdType 
       StudentPersonalRefId: String 
@@ -905,7 +935,7 @@ type PersonPicture_PictureSource {
       ExitDate: String OPT 
       ExitStatus: StudentExitStatusContainerType OPT 
       ExitType: StudentExitContainerType OPT 
-      FTE: float64 OPT 
+      FTE: FTEType OPT 
       FTPTStatus: AUCodeSetsFTPTStatusCodeType OPT 
       FFPOS: AUCodeSetsFFPOSStatusCodeType OPT 
       CatchmentStatus: CatchmentStatusContainerType OPT 
@@ -919,8 +949,8 @@ type PersonPicture_PictureSource {
       StartedAtSchoolDate: String OPT 
       StudentGroupList: StudentGroupListType OPT 
       PublishingPermissionList: PublishingPermissionListType OPT 
-      DisabilityLevelOfAdjustment: String OPT 
-      DisabilityCategory: String OPT 
+      DisabilityLevelOfAdjustment: AUCodeSetsNCCDAdjustmentType OPT 
+      DisabilityCategory: AUCodeSetsNCCDDisabilityType OPT 
       CensusAge: int OPT 
       DistanceEducationStudent: AUCodeSetsYesOrNoCategoryType OPT 
       BoardingStatus: AUCodeSetsBoardingType OPT 
@@ -931,7 +961,8 @@ type PersonPicture_PictureSource {
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type StudentSchoolEnrollment_Calendar {
+    
+type StudentSchoolEnrollment_Calendar {
       SIF_RefObject: String 
       Value: String 
 }
@@ -964,6 +995,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentSectionEnrollment {
         RefId: RefIdType 
       StudentPersonalRefId: String 
@@ -977,16 +1009,7 @@ type PersonPicture_PictureSource {
       
       }
     
-    type SystemRole {
-        RefId: RefIdType 
-      SIF_RefId: SystemRoleObjectRefIdType 
-      SystemContextList: SystemContextListType 
-      LocalCodeList: LocalCodeListType OPT 
-      SIF_Metadata: SIF_MetadataType OPT 
-      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
-      
-      }
-    
+
     type TeachingGroup {
         RefId: RefIdType 
       SchoolYear: SchoolYearType 
@@ -1016,6 +1039,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type TermInfo {
         RefId: RefIdType 
       SchoolInfoRefId: String 
@@ -1023,7 +1047,7 @@ type PersonPicture_PictureSource {
       StartDate: String 
       EndDate: String 
       Description: String OPT 
-      RelativeDuration: float64 OPT 
+      RelativeDuration: String OPT 
       TermCode: String OPT 
       Track: String OPT 
       TermSpan: AUCodeSetsSessionTypeType OPT 
@@ -1036,6 +1060,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type TimeTable {
         RefId: RefIdType 
       SchoolInfoRefId: String OPT 
@@ -1057,6 +1082,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type TimeTableCell {
         RefId: RefIdType 
       TimeTableRefId: String 
@@ -1082,6 +1108,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type TimeTableContainer {
         RefId: RefIdType 
       TimeTableSchedule: TimeTableScheduleType OPT 
@@ -1093,6 +1120,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type TimeTableSubject {
         RefId: RefIdType 
       SubjectLocalId: LocalIdType 
@@ -1117,6 +1145,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type WellbeingAlert {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1137,6 +1166,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type WellbeingAppeal {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1155,6 +1185,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type WellbeingCharacteristic {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1185,6 +1216,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type WellbeingEvent {
         RefId: RefIdType 
       StudentPersonalRefId: String OPT 
@@ -1212,6 +1244,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type WellbeingPersonLink {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1230,7 +1263,8 @@ type PersonPicture_PictureSource {
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type WellbeingPersonLink_PersonRefId {
+    
+type WellbeingPersonLink_PersonRefId {
       SIF_RefObject: String 
       Value: String 
 }
@@ -1258,6 +1292,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type AddressCollection {
         RefId: RefIdType 
       AddressCollectionYear: SchoolYearType 
@@ -1270,6 +1305,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type CensusCollection {
         RefId: RefIdType 
       CensusYear: SchoolYearType 
@@ -1282,6 +1318,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type ChargedLocationInfo {
         RefId: RefIdType 
       LocationType: String 
@@ -1300,6 +1337,44 @@ type PersonPicture_PictureSource {
       
       }
     
+
+    type CollectionAcquittal {
+        RefId: RefIdType 
+      ReportingAuthorityList: ReportingAuthorityListType 
+      SubmittingAuthority: ReportingAuthorityType OPT 
+      SubmittedBy: SignatoryType OPT 
+      AuditedBy: SignatoryType OPT 
+      AuditorASICNumber: String OPT 
+      Recipient: String OPT 
+      Collection: String OPT 
+      CollectionYear: SchoolYearType 
+      RoundCode: String OPT 
+      Declaration: String 
+      AuditorStatement: String 
+      LocalCodeList: LocalCodeListType OPT 
+      SIF_Metadata: SIF_MetadataType OPT 
+      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
+      
+      }
+    
+
+    type CollectionDeclaration {
+        RefId: RefIdType 
+      ReportingAuthorityList: ReportingAuthorityListType 
+      SubmittingAuthority: ReportingAuthorityType OPT 
+      SubmittedBy: SignatoryType OPT 
+      Recipient: String OPT 
+      Collection: String OPT 
+      CollectionYear: SchoolYearType 
+      RoundCode: String OPT 
+      Declaration: String 
+      LocalCodeList: LocalCodeListType OPT 
+      SIF_Metadata: SIF_MetadataType OPT 
+      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
+      
+      }
+    
+
     type CollectionRound {
         RefId: RefIdType 
       AGCollection: AUCodeSetsAGCollectionType OPT 
@@ -1311,6 +1386,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type CollectionStatus {
         RefId: RefIdType 
       ReportingAuthority: String 
@@ -1328,6 +1404,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type Debtor {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1344,7 +1421,8 @@ type PersonPicture_PictureSource {
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type Debtor_BilledEntity {
+    
+type Debtor_BilledEntity {
       SIF_RefObject: String 
       Value: String 
 }
@@ -1367,6 +1445,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type FinancialQuestionnaireCollection {
         RefId: RefIdType 
       FQYear: SchoolYearType 
@@ -1379,6 +1458,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type Invoice {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1408,7 +1488,8 @@ type PersonPicture_PictureSource {
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type Invoice_InvoicedEntity {
+    
+type Invoice_InvoicedEntity {
       SIF_RefObject: String 
       Value: String 
 }
@@ -1435,7 +1516,8 @@ type PersonPicture_PictureSource {
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
       
       }
-    type Journal_OriginatingTransactionRefId {
+    
+type Journal_OriginatingTransactionRefId {
       SIF_RefObject: String 
       Value: String 
 }
@@ -1463,6 +1545,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type NAPCodeFrame {
         RefId: RefIdType 
       NAPTestRefId: String 
@@ -1474,6 +1557,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type NAPEventStudentLink {
         RefId: RefIdType 
       StudentPersonalRefId: String OPT 
@@ -1506,6 +1590,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type NAPStudentResponseSet {
         RefId: RefIdType 
       ReportExclusionFlag: bool 
@@ -1525,6 +1610,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type NAPTest {
         RefId: RefIdType 
       TestContent: NAPTestContentType 
@@ -1534,6 +1620,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type NAPTestItem {
         RefId: RefIdType 
       TestItemContent: NAPTestItemContentType 
@@ -1543,6 +1630,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type NAPTestScoreSummary {
         RefId: RefIdType 
       SchoolInfoRefId: String OPT 
@@ -1560,6 +1648,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type NAPTestlet {
         RefId: RefIdType 
       NAPTestRefId: String OPT 
@@ -1572,6 +1661,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type PaymentReceipt {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1599,6 +1689,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type PurchaseOrder {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1620,6 +1711,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type StudentAttendanceCollection {
         RefId: RefIdType 
       StudentAttendanceCollectionYear: SchoolYearType 
@@ -1632,6 +1724,39 @@ type PersonPicture_PictureSource {
       
       }
     
+
+    type StudentDataTransferNote {
+        RefId: RefIdType 
+      Name: NameOfRecordType 
+      Gender: AUCodeSetsSexCodeType OPT 
+      BirthDate: BirthDateType 
+      PlaceOfBirth: String OPT 
+      StateOfBirth: StateProvinceType OPT 
+      CountryOfBirth: CountryType 
+      CountriesOfCitizenship: CountryListType OPT 
+      ArrivalSchool: ArrivalSchoolType OPT 
+      DepartureSchool: DepartureSchoolType OPT 
+      PreviousSchoolList: PreviousSchoolListType OPT 
+      NAPLANScoreList: NAPLANScoreWithYearsListType OPT 
+      NCCDList: NCCDListType OPT 
+      FollowupRequest: bool OPT 
+      ChildSubjectToOrders: bool OPT 
+      Attendance: bool OPT 
+      NationalUniqueStudentIdentifier: String OPT 
+      YearLevel: YearLevelType 
+      IndigenousStatus: AUCodeSetsIndigenousStatusType OPT 
+      LBOTE: AUCodeSetsYesOrNoCategoryType OPT 
+      VisaStatus: VisaSubClassType OPT 
+      OtherNames: OtherNamesType OPT 
+      EducationalAssessmentList: EducationalAssessmentListType OPT 
+      StudentGradeList: STDNGradeListType OPT 
+      LocalCodeList: LocalCodeListType OPT 
+      SIF_Metadata: SIF_MetadataType OPT 
+      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
+      
+      }
+    
+
     type VendorInfo {
         RefId: RefIdType 
       LocalId: LocalIdType OPT 
@@ -1651,6 +1776,7 @@ type PersonPicture_PictureSource {
       
       }
     
+
     type AbstractContentElementType {
         RefId: RefIdType 
       XMLData: XMLDataType OPT 
@@ -1709,44 +1835,6 @@ type PersonPicture_PictureSource {
     type DefinedProtocolsType String
     type ExtendedContentType String
     type SelectedContentType String
-    type ResourceUsageContentTypeType {
-        Code: AUCodeSetsResourceUsageContentTypeType 
-      LocalDescription: String OPT 
-      
-      }
-    
-    type ResourceReportColumnListType {
-        ResourceReportColumn: [ResourceReportColumnType] 
-      
-      }
-    
-    type ResourceReportColumnType {
-        ColumnName: String 
-      ColumnDescription: String OPT 
-      ColumnDelimiter: String OPT 
-      
-      }
-    
-    type ResourceReportLineListType {
-        ResourceReportLine: [ResourceReportLineType] 
-      
-      }
-    
-    type ReportUserRefIdType {
-          SIF_RefObject: String 
-      
-        Value: String 
-      }
-    
-    type ResourceReportLineType {
-        SIF_RefId: ReportUserRefIdType OPT 
-      StartDate: String 
-      EndDate: String OPT 
-      CurrentCost: MonetaryAmountType 
-      ReportRow: String 
-      
-      }
-    
     type HomeroomType {
           SIF_RefObject: String 
       
@@ -1757,51 +1845,6 @@ type PersonPicture_PictureSource {
           SIF_RefObject: String 
       
         Value: String 
-      }
-    
-    type SystemRoleObjectRefIdType {
-          SIF_RefObject: String 
-      
-        Value: String 
-      }
-    
-    type SystemContextListType {
-        SystemContext: [SystemContextType] 
-      
-      }
-    
-    type SystemContextType {
-        SystemId: String 
-      RoleList: SystemRoleListType OPT 
-      
-      }
-    
-    type SystemRoleListType {
-        Role: [SystemRoleElementType] 
-      
-      }
-    
-    type SystemRoleElementType {
-        RoleId: String 
-      RoleScopeList: SystemRoleScopeListType OPT 
-      
-      }
-    
-    type SystemRoleScopeListType {
-        RoleScope: [SystemRoleScopeType] 
-      
-      }
-    
-    type SystemRoleScopeRefIdType {
-          SIF_RefObject: String 
-      
-        Value: String 
-      }
-    
-    type SystemRoleScopeType {
-        RoleScopeName: String OPT 
-      RoleScopeRefId: SystemRoleScopeRefIdType OPT 
-      
       }
     
     type TravelDetailsContainerType {
@@ -1926,7 +1969,7 @@ type PersonPicture_PictureSource {
       CohortGender: String 
       DaysInReferencePeriod: int 
       PossibleSchoolDays: int 
-      AttendanceDays: float64 
+      AttendanceDays: String 
       AttendanceLess90Percent: int 
       AttendanceGTE90Percent: int 
       PossibleSchoolDaysGT90PercentAttendance: int 
@@ -2020,16 +2063,16 @@ type PersonPicture_PictureSource {
       StaffActivity: StaffActivityExtensionType 
       CohortGender: String 
       CohortIndigenousType: String 
-      PrimaryFTE: float64 OPT 
-      SecondaryFTE: float64 OPT 
-      JobFTE: float64 OPT 
+      PrimaryFTE: String OPT 
+      SecondaryFTE: String OPT 
+      JobFTE: String OPT 
       Headcount: int 
       
       }
     
     type StaffAssignmentMostRecentContainerType {
-        PrimaryFTE: float64 OPT 
-      SecondaryFTE: float64 OPT 
+        PrimaryFTE: FTEType OPT 
+      SecondaryFTE: FTEType OPT 
       
       }
     
@@ -2047,9 +2090,9 @@ type PersonPicture_PictureSource {
       EducationMode: String 
       StudentOnVisa: String 
       OverseasStudent: String 
-      DisabilityLevelOfAdjustment: String 
-      DisabilityCategory: String 
-      FTE: float64 
+      DisabilityLevelOfAdjustment: AUCodeSetsNCCDAdjustmentType 
+      DisabilityCategory: AUCodeSetsNCCDDisabilityType 
+      FTE: FTEType 
       Headcount: int 
       
       }
@@ -3077,7 +3120,7 @@ type PersonPicture_PictureSource {
     
     type AttendanceInfoType {
         CountsTowardAttendance: String 
-      AttendanceValue: float64 
+      AttendanceValue: String 
       
       }
     
@@ -3132,7 +3175,7 @@ type PersonPicture_PictureSource {
         SchoolLocalId: LocalIdType OPT 
       HomeroomLocalId: LocalIdType OPT 
       YearLevel: YearLevelType OPT 
-      FTE: float64 OPT 
+      FTE: FTEType OPT 
       Parent1Language: AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType OPT 
       Parent2Language: AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType OPT 
       Parent1EmploymentType: AUCodeSetsEmploymentTypeType OPT 
@@ -4027,11 +4070,7 @@ type PersonPicture_PictureSource {
     
     type HomeroomNumberType String
     type TimeElementType {
-        Type: String 
-      Code: String 
-      Name: String 
-      Value: String 
-      StartDateTime: String OPT 
+        StartDateTime: String OPT 
       EndDateTime: String OPT 
       SpanGaps: SpanGapListType OPT 
       IsCurrent: bool 
@@ -4044,11 +4083,7 @@ type PersonPicture_PictureSource {
       }
     
     type SpanGapType {
-        Type: String 
-      Code: String 
-      Name: String 
-      Value: String 
-      StartDateTime: String OPT 
+        StartDateTime: String OPT 
       EndDateTime: String OPT 
       
       }
@@ -4122,11 +4157,6 @@ type PersonPicture_PictureSource {
       
       }
     
-    type EducationFilterType {
-        LearningStandardItems: LearningStandardsType OPT 
-      
-      }
-    
     type SIF_ExtendedElementsType {
       SIF_ExtendedElement: [SIF_ExtendedElementsType_SIF_ExtendedElement] 
       
@@ -4135,7 +4165,7 @@ type PersonPicture_PictureSource {
     type SIF_MetadataType {
         TimeElements: TimeElementListType OPT 
       LifeCycle: LifeCycleType OPT 
-      EducationFilter: EducationFilterType OPT 
+      ETag: String OPT 
       
       }
     
@@ -4162,7 +4192,128 @@ type PersonPicture_PictureSource {
       ExpiryDate: String OPT 
       
       }
-    type PersonInvolvementType_PersonRefId {
+    
+    type ReportingAuthorityListType {
+        ReportingAuthority: [ReportingAuthorityType] 
+      
+      }
+    
+    type ReportingAuthorityType {
+        Name: String 
+      System: String OPT 
+      AuthorityId: String OPT 
+      
+      }
+    
+    type SignatoryType {
+        Name: String 
+      Role: String OPT 
+      Organisation: String OPT 
+      Signature: URIOrBinaryType 
+      SignatureImageType: AUCodeSetsPictureSourceType 
+      Date: String 
+      
+      }
+    
+    type ArrivalSchoolType {
+        ACARAId: String OPT 
+      CommonwealthId: String OPT 
+      Name: String OPT 
+      City: String OPT 
+      
+      }
+    
+    type DepartureSchoolType {
+        ACARAId: String OPT 
+      CommonwealthId: String OPT 
+      Name: String 
+      City: String 
+      SchoolContactList: SchoolContactListType 
+      
+      }
+    
+    type PreviousSchoolListType {
+        PreviousSchool: [PreviousSchoolType] 
+      
+      }
+    
+    type PreviousSchoolType {
+        ACARAId: String OPT 
+      CommonwealthId: String OPT 
+      Name: String 
+      City: String 
+      
+      }
+    
+    type NAPLANScoreListType {
+        NAPLANScore: [NAPLANScoreType] 
+      
+      }
+    
+    type NAPLANScoreType {
+        Domain: AUCodeSetsNAPTestDomainType 
+      ParticipationCode: AUCodeSetsNAPParticipationCodeType OPT 
+      DomainScore: DomainScoreType OPT 
+      
+      }
+    
+    type NAPLANScoreWithYearsListType {
+        NAPLANScore: [NAPLANScoreWithYearsType] 
+      
+      }
+    
+    type NAPLANScoreWithYearsType {
+        Domain: AUCodeSetsNAPTestDomainType 
+      ParticipationCode: AUCodeSetsNAPParticipationCodeType OPT 
+      DomainScore: DomainScoreType OPT 
+      TestLevel: YearLevelType OPT 
+      TestYear: SchoolYearType OPT 
+      
+      }
+    
+    type NCCDListType {
+        NCCD: [NCCDType] 
+      
+      }
+    
+    type NCCDType {
+        LevelOfAdjustment: AUCodeSetsNCCDAdjustmentType 
+      CategoryOfDisability: AUCodeSetsNCCDDisabilityType OPT 
+      DisabilityCategoryConsideredList: DisabilityCategoryListType OPT 
+      DateOfAssessment: String OPT 
+      
+      }
+    
+    type DisabilityCategoryListType {
+        DisabilityCategoryConsidered: [AUCodeSetsNCCDDisabilityType] 
+      
+      }
+    
+    type EducationalAssessmentListType {
+        EducationalAssessment: [EducationalAssessmentType] 
+      
+      }
+    
+    type EducationalAssessmentType {
+        Name: String 
+      Content: String OPT 
+      
+      }
+    
+    type STDNGradeListType {
+        StudentGrade: [STDNGradeType] 
+      
+      }
+    
+    type STDNGradeType {
+        Subject: String OPT 
+      LearningArea: ACStrandSubjectAreaType 
+      Grade: GradeType 
+      
+      }
+    
+    type FTEType String
+type PersonInvolvementType_PersonRefId {
       SIF_RefObject: String 
       Value: String 
 }

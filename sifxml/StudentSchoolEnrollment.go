@@ -33,7 +33,7 @@ type studentschoolenrollment struct {
       ExitDate *String `xml:"ExitDate,omitempty" json:"ExitDate,omitempty"`
       ExitStatus *StudentExitStatusContainerType `xml:"ExitStatus,omitempty" json:"ExitStatus,omitempty"`
       ExitType *StudentExitContainerType `xml:"ExitType,omitempty" json:"ExitType,omitempty"`
-      FTE *Float `xml:"FTE,omitempty" json:"FTE,omitempty"`
+      FTE *FTEType `xml:"FTE,omitempty" json:"FTE,omitempty"`
       FTPTStatus *AUCodeSetsFTPTStatusCodeType `xml:"FTPTStatus,omitempty" json:"FTPTStatus,omitempty"`
       FFPOS *AUCodeSetsFFPOSStatusCodeType `xml:"FFPOS,omitempty" json:"FFPOS,omitempty"`
       CatchmentStatus *CatchmentStatusContainerType `xml:"CatchmentStatus,omitempty" json:"CatchmentStatus,omitempty"`
@@ -47,8 +47,8 @@ type studentschoolenrollment struct {
       StartedAtSchoolDate *String `xml:"StartedAtSchoolDate,omitempty" json:"StartedAtSchoolDate,omitempty"`
       StudentGroupList *StudentGroupListType `xml:"StudentGroupList,omitempty" json:"StudentGroupList,omitempty"`
       PublishingPermissionList *PublishingPermissionListType `xml:"PublishingPermissionList,omitempty" json:"PublishingPermissionList,omitempty"`
-      DisabilityLevelOfAdjustment *String `xml:"DisabilityLevelOfAdjustment,omitempty" json:"DisabilityLevelOfAdjustment,omitempty"`
-      DisabilityCategory *String `xml:"DisabilityCategory,omitempty" json:"DisabilityCategory,omitempty"`
+      DisabilityLevelOfAdjustment *AUCodeSetsNCCDAdjustmentType `xml:"DisabilityLevelOfAdjustment,omitempty" json:"DisabilityLevelOfAdjustment,omitempty"`
+      DisabilityCategory *AUCodeSetsNCCDDisabilityType `xml:"DisabilityCategory,omitempty" json:"DisabilityCategory,omitempty"`
       CensusAge *Int `xml:"CensusAge,omitempty" json:"CensusAge,omitempty"`
       DistanceEducationStudent *AUCodeSetsYesOrNoCategoryType `xml:"DistanceEducationStudent,omitempty" json:"DistanceEducationStudent,omitempty"`
       BoardingStatus *AUCodeSetsBoardingType `xml:"BoardingStatus,omitempty" json:"BoardingStatus,omitempty"`
@@ -59,7 +59,8 @@ type studentschoolenrollment struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type StudentSchoolEnrollment_Calendar struct {
+    
+type StudentSchoolEnrollment_Calendar struct {
   studentschoolenrollment_calendar `xml:"StudentSchoolEnrollment_Calendar" json:"StudentSchoolEnrollment_Calendar"`
 }
 
@@ -67,3 +68,4 @@ type studentschoolenrollment_calendar struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+

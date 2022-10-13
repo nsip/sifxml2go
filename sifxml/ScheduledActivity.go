@@ -15,6 +15,7 @@ type scheduledactivity struct {
       PeriodId *LocalIdType `xml:"PeriodId,omitempty" json:"PeriodId,omitempty"`
       TimeTableRefId *String `xml:"TimeTableRefId,omitempty" json:"TimeTableRefId,omitempty"`
       ActivityDate *String `xml:"ActivityDate" json:"ActivityDate"`
+      ActivityEndDate *String `xml:"ActivityEndDate,omitempty" json:"ActivityEndDate,omitempty"`
       StartTime *String `xml:"StartTime" json:"StartTime"`
       FinishTime *String `xml:"FinishTime" json:"FinishTime"`
       CellType *String `xml:"CellType,omitempty" json:"CellType,omitempty"`
@@ -36,3 +37,4 @@ type scheduledactivity struct {
       
       }
     
+

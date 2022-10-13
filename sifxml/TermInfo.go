@@ -14,7 +14,7 @@ type terminfo struct {
       StartDate *String `xml:"StartDate" json:"StartDate"`
       EndDate *String `xml:"EndDate" json:"EndDate"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
-      RelativeDuration *Float `xml:"RelativeDuration,omitempty" json:"RelativeDuration,omitempty"`
+      RelativeDuration *String `xml:"RelativeDuration,omitempty" json:"RelativeDuration,omitempty"`
       TermCode *String `xml:"TermCode,omitempty" json:"TermCode,omitempty"`
       Track *String `xml:"Track,omitempty" json:"Track,omitempty"`
       TermSpan *AUCodeSetsSessionTypeType `xml:"TermSpan,omitempty" json:"TermSpan,omitempty"`
@@ -27,3 +27,4 @@ type terminfo struct {
       
       }
     
+

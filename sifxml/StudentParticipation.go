@@ -33,14 +33,15 @@ type studentparticipation struct {
       ExtendedDay *Bool `xml:"ExtendedDay,omitempty" json:"ExtendedDay,omitempty"`
       ProgramAvailability *ProgramAvailabilityType `xml:"ProgramAvailability,omitempty" json:"ProgramAvailability,omitempty"`
       EntryPerson *String `xml:"EntryPerson,omitempty" json:"EntryPerson,omitempty"`
-      StudentSpecialEducationFTE *Float `xml:"StudentSpecialEducationFTE,omitempty" json:"StudentSpecialEducationFTE,omitempty"`
+      StudentSpecialEducationFTE *FTEType `xml:"StudentSpecialEducationFTE,omitempty" json:"StudentSpecialEducationFTE,omitempty"`
       ParticipationContact *String `xml:"ParticipationContact,omitempty" json:"ParticipationContact,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type StudentParticipation_ManagingSchool struct {
+    
+type StudentParticipation_ManagingSchool struct {
   studentparticipation_managingschool `xml:"StudentParticipation_ManagingSchool" json:"StudentParticipation_ManagingSchool"`
 }
 
@@ -48,3 +49,4 @@ type studentparticipation_managingschool struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+

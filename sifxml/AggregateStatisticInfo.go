@@ -24,7 +24,8 @@ type aggregatestatisticinfo struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type AggregateStatisticInfo_CalculationRule struct {
+    
+type AggregateStatisticInfo_CalculationRule struct {
   aggregatestatisticinfo_calculationrule `xml:"AggregateStatisticInfo_CalculationRule" json:"AggregateStatisticInfo_CalculationRule"`
 }
 
@@ -32,3 +33,4 @@ type aggregatestatisticinfo_calculationrule struct {
       Type *String `xml:"Type,attr" json:"Type"`
       Value *String `xml:",chardata" json:"value"`
 }
+

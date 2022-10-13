@@ -36,7 +36,8 @@ type invoice struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type Invoice_InvoicedEntity struct {
+    
+type Invoice_InvoicedEntity struct {
   invoice_invoicedentity `xml:"Invoice_InvoicedEntity" json:"Invoice_InvoicedEntity"`
 }
 
@@ -44,3 +45,4 @@ type invoice_invoicedentity struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+

@@ -19,7 +19,8 @@ type identity struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type Identity_SIF_RefId struct {
+    
+type Identity_SIF_RefId struct {
   identity_sif_refid `xml:"Identity_SIF_RefId" json:"Identity_SIF_RefId"`
 }
 
@@ -27,3 +28,4 @@ type identity_sif_refid struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+

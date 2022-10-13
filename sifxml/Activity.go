@@ -32,7 +32,8 @@ type activity struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type Activity_Evaluation struct {
+    
+type Activity_Evaluation struct {
   activity_evaluation `xml:"Activity_Evaluation" json:"Activity_Evaluation"`
 }
 
@@ -40,3 +41,4 @@ type activity_evaluation struct {
       EvaluationType *String `xml:"EvaluationType,attr" json:"EvaluationType"`
        Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
 }
+

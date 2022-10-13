@@ -16,7 +16,7 @@ type staffassignment struct {
       PrimaryAssignment *AUCodeSetsYesOrNoCategoryType `xml:"PrimaryAssignment" json:"PrimaryAssignment"`
       JobStartDate *String `xml:"JobStartDate,omitempty" json:"JobStartDate,omitempty"`
       JobEndDate *String `xml:"JobEndDate,omitempty" json:"JobEndDate,omitempty"`
-      JobFTE *Float `xml:"JobFTE,omitempty" json:"JobFTE,omitempty"`
+      JobFTE *FTEType `xml:"JobFTE,omitempty" json:"JobFTE,omitempty"`
       JobFunction *String `xml:"JobFunction,omitempty" json:"JobFunction,omitempty"`
       EmploymentStatus *AUCodeSetsStaffStatusType `xml:"EmploymentStatus,omitempty" json:"EmploymentStatus,omitempty"`
       StaffSubjectList *StaffSubjectListType `xml:"StaffSubjectList,omitempty" json:"StaffSubjectList,omitempty"`
@@ -34,3 +34,4 @@ type staffassignment struct {
       
       }
     
+

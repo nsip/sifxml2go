@@ -19,7 +19,8 @@ type personpicture struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type PersonPicture_ParentObjectRefId struct {
+    
+type PersonPicture_ParentObjectRefId struct {
   personpicture_parentobjectrefid `xml:"PersonPicture_ParentObjectRefId" json:"PersonPicture_ParentObjectRefId"`
 }
 
@@ -35,3 +36,4 @@ type personpicture_picturesource struct {
       Type *AUCodeSetsPictureSourceType `xml:"Type,attr" json:"Type"`
       Value *URIOrBinaryType `xml:",chardata" json:"value"`
 }
+

@@ -28,6 +28,7 @@ type studentpersonal struct {
       ESLDateAssessed *String `xml:"ESLDateAssessed,omitempty" json:"ESLDateAssessed,omitempty"`
       YoungCarersRole *AUCodeSetsYesOrNoCategoryType `xml:"YoungCarersRole,omitempty" json:"YoungCarersRole,omitempty"`
       Disability *AUCodeSetsYesOrNoCategoryType `xml:"Disability,omitempty" json:"Disability,omitempty"`
+      CategoryOfDisability *AUCodeSetsNCCDDisabilityType `xml:"CategoryOfDisability,omitempty" json:"CategoryOfDisability,omitempty"`
       IntegrationAide *AUCodeSetsYesOrNoCategoryType `xml:"IntegrationAide,omitempty" json:"IntegrationAide,omitempty"`
       EducationSupport *AUCodeSetsYesOrNoCategoryType `xml:"EducationSupport,omitempty" json:"EducationSupport,omitempty"`
       HomeSchooledStudent *AUCodeSetsYesOrNoCategoryType `xml:"HomeSchooledStudent,omitempty" json:"HomeSchooledStudent,omitempty"`
@@ -44,3 +45,4 @@ type studentpersonal struct {
       
       }
     
+

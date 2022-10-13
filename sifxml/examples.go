@@ -175,7 +175,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0361 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0355 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -789,55 +789,6 @@ var test_ResourceBookingExample = `    <ResourceBooking RefId="B5739375-800A-C4C
       <KeepOld>false</KeepOld>
     </ResourceBooking>
     
-
-`
-var test_ResourceUsage = `    <ResourceUsage RefId ="4286194F-43ED-43C1-8EE2-F0A27C4BEF87">
-	<SchoolInfoRefId>23B08571-E4D6-45C3-B82A-3E52E5349925</SchoolInfoRefId>
-	<ResourceUsageContentType>
-		<Code>01</Code>
-		<LocalDescription>Other Description</LocalDescription>
-	</ResourceUsageContentType>
-    <ResourceReportColumnList>
-		<ResourceReportColumn>
-		  <ColumnName>userName</ColumnName>
-		  <ColumnDelimiter>,</ColumnDelimiter>
-		</ResourceReportColumn>
-		<ResourceReportColumn>
-		  <ColumnName>comment</ColumnName>
-		</ResourceReportColumn>
-		<ResourceReportColumn>
-		  <ColumnName>planName</ColumnName>
-		</ResourceReportColumn>
-		<ResourceReportColumn>
-		  <ColumnName>totalBytesIn</ColumnName>
-		  <ColumnDescription>total Bytes downloaded (MB)</ColumnDescription>
-		</ResourceReportColumn>
-		<ResourceReportColumn>
-		  <ColumnName>totalBytesOut</ColumnName>
-		  <ColumnDescription>total Bytes uploaded (MB)</ColumnDescription>
-		</ResourceReportColumn>
-	  </ResourceReportColumnList>
-	  <ResourceReportLineList>
-		<ResourceReportLine>
-		  <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
-      
-		  <StartDate>2011-03-18</StartDate>
-		  <EndDate>2011-04-17</EndDate>
-		  <CurrentCost Currency="AUD">5.43</CurrentCost>
-		  <ReportRow>name.surname.1,null,Year 10 Test,47,2</ReportRow>
-		  
-    </ResourceReportLine>
-    <ResourceReportLine>
-      <SIF_RefId SIF_RefObject="StaffPersonal">23B08571-E4D3-45C3-B82A-3E52E5349925</SIF_RefId>
-      <StartDate>2011-03-18</StartDate>
-      <EndDate>2011-04-17</EndDate>
-      <CurrentCost Currency="AUD">0.00</CurrentCost>
-      <ReportRow>name.surname.2,cost waived,Year 10 Test,93,4</ReportRow>
-      </ResourceReportLine>
-  </ResourceReportLineList>
-</ResourceUsage> 
-
-
 
 `
 var test_RoomInfoExample = `    <RoomInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652" >
@@ -1758,7 +1709,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0752 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0008 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -2034,75 +1985,6 @@ var test_StudentSectionEnrollment = `    <StudentSectionEnrollment RefId="983AC1
       <ExitDate>2013-11-15</ExitDate>
       
     </StudentSectionEnrollment>
-`
-var test_SystemRole = `      <SystemRole RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
-
-  <SIF_RefId SIF_RefObject="Identity">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
-  <SystemContextList>
-
-    <SystemContext SystemId = 'LearningPlatformSystem1'>
-      
-      <RoleList>    
-
-      <Role RoleId= 'Admin'>
-
-        <RoleScopeList>
-
-          <RoleScope>
-
-            <RoleScopeName>SchoolGroupName1</RoleScopeName>
-
-            <RoleScopeRefId SIF_RefObject= 'SchoolInfo'>23B08571-E4D6-45C3-B82A-3E52E5349912</RoleScopeRefId>
-
-          </RoleScope>
-
-          <RoleScope>
-
-            <RoleScopeName>ClassName1</RoleScopeName>
-
-            <RoleScopeRefId SIF_RefObject = 'TeachingGroup'>23B08571-E4D6-45C3-B82A-3E52E5349945</RoleScopeRefId>
-
-
-          </RoleScope>
-
-        </RoleScopeList>
-
-      </Role>
-
-     </RoleList>
-
-    </SystemContext>
-
-    <SystemContext SystemId = 'ContentManagement'>
-	  
-       <RoleList>
-
-       <Role RoleId= 'User'>
-
-        <RoleScopeList>
-
-          <RoleScope>
-
-            <RoleScopeName>SchoolName1</RoleScopeName>
-
-            <RoleScopeRefId SIF_RefObject= 'StudentActivityParticipation'>23B08571-E4D6-45C3-B82A-3E52E5349923</RoleScopeRefId>
-
-          </RoleScope>
-
-        </RoleScopeList>
-
-      </Role>
-
-     </RoleList>
-
-    </SystemContext>
-
-  </SystemContextList>
-
-</SystemRole>
-
-
-
 `
 var test_TeachingGroup = `    <TeachingGroup RefId="64A309DA-063A-2E35-B359-D75101A8C3D1">
       <SchoolYear>2008</SchoolYear>
@@ -2686,6 +2568,111 @@ var test_ChargedLocation = `    <ChargedLocationInfo RefId="D3E34B35-9D75-101A-8
     
     
 
+`
+var test_CollectionAcquittal = `<CollectionAcquittal RefId="D3E34B35-9D75-101A-8C3D-00AA001A1653">
+  <ReportingAuthorityList>
+	<ReportingAuthority>
+		<Name>St Joseph's Primary School, Leonville</Name>
+		<System>Catholic</System>
+		<AuthorityId>42732</AuthorityId>
+	</ReportingAuthority>
+	<ReportingAuthority>
+		<Name>St Mary's Primary School, Leonville</Name>
+		<System>Catholic</System>
+		<AuthorityId>42733</AuthorityId>
+	</ReportingAuthority>
+  </ReportingAuthorityList>  
+ <SubmittingAuthority>
+		<Name>Paramatta Diocese</Name>
+		<System>Catholic</System>
+		<AuthorityId>423</AuthorityId>
+  </SubmittingAuthority>
+  <SubmittedBy>
+    <Name>Fred Nurk</Name>
+	<Role>General Manager</Role>
+	<Organisation>Catholic Schools NSW</Organisation>
+	<Signature>https://www.example.com/nurk.jpg</Signature>
+	<SignatureImageType>01</SignatureImageType>
+	<Date>2022-03-01</Date>
+  </SubmittedBy>
+    <AuditedBy>
+    <Name>Jane Doe</Name>
+	<Role>School Authority Auditor</Role>
+	<Organisation>Doe &amp; Associates Accountants</Organisation>
+	<Signature>https://www.example.com/doe.jpg</Signature>
+	<SignatureImageType>01</SignatureImageType>
+	<Date>2022-03-03</Date>
+  </AuditedBy>
+  <AuditorASICNumber>J83948349</AuditorASICNumber>
+  <Recipient>NSW Education Department</Recipient>
+  <Collection>STATS</Collection>
+  <CollectionYear>2022</CollectionYear>
+  <RoundCode>1</RoundCode>
+  <Declaration>
+  &lt;h1&gt;FINANCIAL ACCOUNTABILITY CERTIFICATION – 2022&lt;/h1&gt;
+  
+  &lt;p&gt;In receiving the NSW SRS Entitlement in respect of the NSW Government in 2022, on behalf of St Joseph's Primary School, Leonville and St Mary's Primary School, Leonville,
+  Catholic Schools NSW agrees to spend, or commit to spend, these funds on any of the identified Educational Purposes listed in the letter.&lt;/p&gt;
+  
+  &lt;ol&gt;&lt;li&gt;I certify that the school/school authority does not and will not operate for profit within the meaning of Section 83C of the &lt;i&gt;Education Act 1990&lt;/i&gt;.&lt;/li&gt;
+  &lt;li&gt;I certify that the school/school authority agrees to abide by any applicable guidelines or directions that may be issued from time to time pursuant to the 
+  &lt;i&gt;Education Act 1990&lt;/i&gt; and &lt;i&gt;Education Regulation 2017&lt;/i&gt;.&lt;/li&gt;&lt;/ol&gt;
+  </Declaration>
+  <AuditorStatement>
+  &lt;h1&gt;AUDITOR'S CERTIFICATION OF EXPENDITURE OF 2022 FUNDS AND 2022 ENROLMENTS&lt;/h1&gt;
+  
+  &lt;p&gt;Note:  Auditor must be registered with Australian Securities and Investments Commission (ASIC)&lt;/p&gt;
+
+  &lt;ol&gt;&lt;li&gt;I certify to the best of my knowledge and have reasonable assurance that the NSW SRS Entitlement provided by the NSW Government in 2022
+  was used in accordance with the Educational Purposes.&lt;/li&gt;
+  &lt;li&gt;I certify to the best of my knowledge and have reasonable assurance that the enrolment figures provided under the 2022 National Schools Statistics Collection 
+  are true and correct at the date of this certification.&lt;/li&gt;&lt;/ol&gt;
+  </AuditorStatement>
+
+</CollectionAcquittal>
+`
+var test_CollectionDeclaration = `<CollectionDeclaration RefId="D3E34B35-9D75-101A-8C3D-00AA001A1663">
+  <ReportingAuthorityList>
+	<ReportingAuthority>
+		<Name>St Joseph's Primary School, Leonville</Name>
+		<System>Catholic</System>
+		<AuthorityId>42732</AuthorityId>
+	</ReportingAuthority>
+	<ReportingAuthority>
+		<Name>St Mary's Primary School, Leonville</Name>
+		<System>Catholic</System>
+		<AuthorityId>42733</AuthorityId>
+	</ReportingAuthority>
+  </ReportingAuthorityList>  
+ <SubmittingAuthority>
+		<Name>Paramatta Diocese</Name>
+		<System>Catholic</System>
+		<AuthorityId>423</AuthorityId>
+  </SubmittingAuthority>
+  <SubmittedBy>
+    <Name>Fred Nurk</Name>
+	<Role>General Manager</Role>
+	<Organisation>Catholic Schools NSW</Organisation>
+	<Signature>https://www.example.com/nurk.jpg</Signature>
+	<SignatureImageType>01</SignatureImageType>
+	<Date>2022-03-01</Date>
+  </SubmittedBy>
+  <Recipient>NSW Education Department</Recipient>
+  <Collection>STATS</Collection>
+  <CollectionYear>2022</CollectionYear>
+  <RoundCode>1</RoundCode>
+  <Declaration>
+  &lt;h1&gt;FINANCIAL ACCOUNTABILITY CERTIFICATION – 2022&lt;/h1&gt;
+  
+  &lt;p&gt;In receiving the NSW SRS Entitlement in respect of the NSW Government in 2022, on behalf of St Joseph's Primary School, Leonville and St Mary's Primary School, Leonville,
+  Catholic Schools NSW agrees to spend, or commit to spend, these funds on any of the identified Educational Purposes listed in the letter.&lt;/p&gt;
+  
+  &lt;ol&gt;&lt;li&gt;I certify that the school/school authority does not and will not operate for profit within the meaning of Section 83C of the &lt;i&gt;Education Act 1990&lt;/i&gt;.&lt;/li&gt;
+  &lt;li&gt;I certify that the school/school authority agrees to abide by any applicable guidelines or directions that may be issued from time to time pursuant to the 
+  &lt;i&gt;Education Act 1990&lt;/i&gt; and &lt;i&gt;Education Regulation 2017&lt;/i&gt;.&lt;/li&gt;&lt;/ol&gt;
+  </Declaration>
+
+</CollectionDeclaration>
 `
 var test_CollectionRound = `<CollectionRound RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
   <AGCollection>STATS</AGCollection>
@@ -4323,7 +4310,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0412 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0035 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>
@@ -4525,6 +4512,193 @@ var test_StudentAttendanceCollectionExample2 = `<StudentAttendanceCollection Ref
     </StudentAttendanceCollectionReporting>
   </StudentAttendanceCollectionReportingList>
 </StudentAttendanceCollection>
+`
+var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34B35-9D75-101A-8C3D-00AA001A1654">
+  <Name Type="LGL">
+    <FamilyName>Smith</FamilyName>
+    <GivenName>Fred</GivenName>
+    <MiddleName>Ebenezer</MiddleName>
+	<PreferredFamilyName>Smith</PreferredFamilyName>
+	<PreferredGivenName>Freddy</PreferredGivenName>
+  </Name>
+  <Gender>1</Gender>
+  <BirthDate>2010-03-01</BirthDate>
+  <PlaceOfBirth>Clayton</PlaceOfBirth>
+  <StateOfBirth>VIC</StateOfBirth>
+  <CountryOfBirth>1101</CountryOfBirth>
+ <CountriesOfCitizenship>
+    <CountryOfCitizenship>8104</CountryOfCitizenship>
+    <CountryOfCitizenship>1101</CountryOfCitizenship>
+  </CountriesOfCitizenship>
+  <ArrivalSchool>
+    <CommonwealthId>12345</CommonwealthId>
+	<Name>Buchanan Secondary College</Name>
+  </ArrivalSchool>
+  <DepartureSchool>
+    <ACARAId>30000</ACARAId>
+	<Name>Lincoln Secondary College</Name>
+  <SchoolContactList>
+    <SchoolContact>
+      <PublishInDirectory>Y</PublishInDirectory>
+      <ContactInfo>
+        <Name Type="LGL">
+          <Title>Mr</Title>
+          <FamilyName>Miller</FamilyName>
+          <GivenName>James</GivenName>
+          <MiddleName>Mark</MiddleName>
+          <Suffix>Jr.</Suffix>
+          <FullName>Mr James Mark Miller Jr.</FullName>
+        </Name>
+        <PositionTitle>Business Manager</PositionTitle>
+        <Role>School Information Contact Point</Role>
+        <Address Type="0123" Role="012B">
+          <Street>
+            <Line1>23 Nicholson Street</Line1>
+          </Street>
+          <City>Carnegie</City>
+          <StateProvince>VIC</StateProvince>
+          <Country>1101</Country>
+          <PostalCode>3004</PostalCode>
+          <GridLocation>
+            <Latitude>23.9876</Latitude>
+            <Longitude>-98.8765</Longitude>
+          </GridLocation>
+        </Address>
+        <EmailList>
+          <Email Type="01">jmiller@lsc.vic.edu.au</Email>
+          <Email Type="02">jmiller@yahoo.com.au</Email>
+        </EmailList>
+        <PhoneNumberList>
+          <PhoneNumber Type="0096">
+            <Number>03 9637-2000</Number>
+            <Extension>72345</Extension>
+            <ListedStatus>Y</ListedStatus>
+          </PhoneNumber>
+        </PhoneNumberList>
+      </ContactInfo>
+    </SchoolContact>
+  </SchoolContactList> 
+  </DepartureSchool>
+  <PreviousSchoolList>
+  <PreviousSchool>
+    <ACARAId>30001</ACARAId>
+	<Name>Lincoln Primary School</Name>
+  </PreviousSchool> 
+  <PreviousSchool>
+    <ACARAId>30002</ACARAId>
+	<Name>Buchanan Primary School</Name>
+  </PreviousSchool> 
+  </PreviousSchoolList>
+  <NAPLANScoreList>
+    <NAPLANScore>
+	  <Domain>Grammar and Punctuation</Domain>
+	  <ParticipationCode>P</ParticipationCode>
+ <DomainScore>
+    <ScaledScoreValue>440.00</ScaledScoreValue>
+    <StudentDomainBand>6</StudentDomainBand>
+    <StudentProficiency>Proficient</StudentProficiency>
+  </DomainScore>
+    <TestLevel><Code>3</Code></TestLevel>
+	<TestYear>2017</TestYear>
+	</NAPLANScore>
+     <NAPLANScore>
+	  <Domain>Numeracy</Domain>
+	  <ParticipationCode>E</ParticipationCode>
+	</NAPLANScore>
+    <NAPLANScore>
+	  <Domain>Reading</Domain>
+	  <ParticipationCode>P</ParticipationCode>
+<DomainScore>
+    <ScaledScoreValue>440.00</ScaledScoreValue>
+    <StudentDomainBand>6</StudentDomainBand>
+    <StudentProficiency>Proficient</StudentProficiency>
+  </DomainScore>
+	</NAPLANScore>
+    <NAPLANScore>
+	  <Domain>Spelling</Domain>
+	  <ParticipationCode>P</ParticipationCode>
+<DomainScore>
+    <ScaledScoreValue>440.00</ScaledScoreValue>
+    <StudentDomainBand>6</StudentDomainBand>
+    <StudentProficiency>Proficient</StudentProficiency>
+  </DomainScore>
+	</NAPLANScore>
+    <NAPLANScore>
+	  <Domain>Writing</Domain>
+	  <ParticipationCode>X</ParticipationCode>
+	</NAPLANScore>
+ </NAPLANScoreList>
+ <NCCDList>
+   <NCCD>
+     <LevelOfAdjustment>QDTP</LevelOfAdjustment>
+	 <CategoryOfDisability>Physical</CategoryOfDisability>
+	 <DisabilityCategoryConsideredList>
+		<DisabilityCategoryConsidered>Physical</DisabilityCategoryConsidered>
+		<DisabilityCategoryConsidered>Social-Emotional</DisabilityCategoryConsidered>
+	 </DisabilityCategoryConsideredList>
+	 <DateOfAssessment>2020-03-02</DateOfAssessment>
+   </NCCD>
+  </NCCDList>
+ <FollowupRequest>true</FollowupRequest>
+ <ChildSubjectToOrders>true</ChildSubjectToOrders>
+ <Attendance>false</Attendance>
+ <NationalUniqueStudentIdentifier>0001001</NationalUniqueStudentIdentifier>
+ <YearLevel>
+    <Code>10</Code>
+  </YearLevel>
+  <IndigenousStatus>1</IndigenousStatus>
+  <LBOTE>Y</LBOTE>
+<VisaStatus>
+    <Code>101</Code>
+	<VisaExpiryDate>2025-12-31</VisaExpiryDate>
+ </VisaStatus>
+   <OtherNames>
+    <Name Type="AKA">
+      <FamilyName>Anderson</FamilyName>
+      <GivenName>Samuel</GivenName>
+      <FullName>Samuel Anderson</FullName>
+    </Name>
+    <Name Type="PRF">
+      <FamilyName>Rowinski</FamilyName>
+      <GivenName>Sam</GivenName>
+      <FullName>Sam Rowinski</FullName>
+    </Name>
+  </OtherNames>
+  <EducationalAssessmentList>
+    <EducationalAssessment>
+	  <Name>PAT</Name>
+	  <Content>PAT scores for student...</Content>
+    </EducationalAssessment>
+     <EducationalAssessment>
+	  <Name>SAT</Name>
+	  <Content>SAT scores for student...</Content>
+    </EducationalAssessment>
+  </EducationalAssessmentList>
+  <StudentGradeList>
+    <StudentGrade>
+	  <Subject>Australian History: Gold and Iron</Subject>
+	  <LearningArea>
+	    <ACStrand>H</ACStrand>
+	  <SubjectArea><Code>Australian History</Code></SubjectArea>
+	  </LearningArea>
+	  <Grade>
+	    <Letter>B</Letter>
+		<Narrative>Could do better</Narrative>
+	  </Grade>
+	</StudentGrade>
+    <StudentGrade>
+	  <Subject>World History: Revolutions</Subject>
+	  <LearningArea>
+	    <ACStrand>H</ACStrand>
+	  <SubjectArea><Code>World History</Code></SubjectArea>
+	  </LearningArea>
+	  <Grade>
+	    <Letter>A</Letter>
+		<Narrative>Could not do better</Narrative>
+	  </Grade>
+	</StudentGrade>
+  </StudentGradeList>
+ </StudentDataTransferNote>
 `
 var test_VendorInfo = `    <VendorInfo RefId="AB3647C5-6865-4CF4-5678-DD34EF564E22">
       <Name>ABC School Supply</Name>

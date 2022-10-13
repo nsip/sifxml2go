@@ -56,7 +56,8 @@ type schoolinfo struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type SchoolInfo_OtherLEA struct {
+    
+type SchoolInfo_OtherLEA struct {
   schoolinfo_otherlea `xml:"SchoolInfo_OtherLEA" json:"SchoolInfo_OtherLEA"`
 }
 
@@ -64,3 +65,4 @@ type schoolinfo_otherlea struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *RefIdType `xml:",chardata" json:"value"`
 }
+

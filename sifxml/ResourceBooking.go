@@ -24,7 +24,8 @@ type resourcebooking struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type ResourceBooking_ResourceRefId struct {
+    
+type ResourceBooking_ResourceRefId struct {
   resourcebooking_resourcerefid `xml:"ResourceBooking_ResourceRefId" json:"ResourceBooking_ResourceRefId"`
 }
 
@@ -32,3 +33,4 @@ type resourcebooking_resourcerefid struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+

@@ -28,6 +28,8 @@ while(<>) {
   push @lines, $_;
 }
 
+$lines[-1] .= "\n";
+
 @lines = indent_attrs(xsi_types(inherited_types(codesets(@lines))));
 while(grep(/#/, @lines)) {
   @lines = resolve_embedded(@lines);

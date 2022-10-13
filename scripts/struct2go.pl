@@ -33,3 +33,4 @@ while(<>) {
   s/ \*bool / *Bool /;
   print;
 }
+print "\n";

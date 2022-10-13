@@ -23,7 +23,8 @@ type debtor struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type Debtor_BilledEntity struct {
+    
+type Debtor_BilledEntity struct {
   debtor_billedentity `xml:"Debtor_BilledEntity" json:"Debtor_BilledEntity"`
 }
 
@@ -31,3 +32,4 @@ type debtor_billedentity struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+

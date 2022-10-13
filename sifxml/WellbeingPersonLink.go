@@ -25,7 +25,8 @@ type wellbeingpersonlink struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type WellbeingPersonLink_PersonRefId struct {
+    
+type WellbeingPersonLink_PersonRefId struct {
   wellbeingpersonlink_personrefid `xml:"WellbeingPersonLink_PersonRefId" json:"WellbeingPersonLink_PersonRefId"`
 }
 
@@ -33,3 +34,4 @@ type wellbeingpersonlink_personrefid struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+

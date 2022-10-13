@@ -22,7 +22,8 @@ type equipmentinfo struct {
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
       
       }
-    type EquipmentInfo_SIF_RefId struct {
+    
+type EquipmentInfo_SIF_RefId struct {
   equipmentinfo_sif_refid `xml:"EquipmentInfo_SIF_RefId" json:"EquipmentInfo_SIF_RefId"`
 }
 
@@ -30,3 +31,4 @@ type equipmentinfo_sif_refid struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
+
