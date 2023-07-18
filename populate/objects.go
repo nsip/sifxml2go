@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/brianvoe/gofakeit/v5"
-	"github.com/nsip/sifxml2go/v3/sifxml"
+	"github.com/nsip/sifxml2go/sifxml"
 	"github.com/rickar/cal/v2"
 	"github.com/rickar/cal/v2/au"
 )
@@ -115,7 +115,6 @@ func copyTeachingGroupPeriodFromCell(group *sifxml.TeachingGroup, cell *sifxml.T
 // * Parent1Language and Parent2Language are fixed at "1201" (English).
 //
 // * Parent1EmploymentType, Parent1SchoolEducationLevel, Parent1NonSchoolEducation, Parent2EmploymentType, Parent2SchoolEducationLevel, Parent2NonSchoolEducation are set randomly to a valid value.
-//
 func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	if yearlevel == "" {
 		yearlevel = strconv.Itoa(rand.Intn(12) + 1)
@@ -208,7 +207,6 @@ func Create_StudentPersonals(count int, yearlevels []string) []*sifxml.StudentPe
 // * Entity_Open is set to "1990-01-01".
 //
 // * AddressList is populated by a single entry from Create_Address().
-//
 func Create_SchoolInfo(schooltype string) *sifxml.SchoolInfo {
 	gofakeit.Seed(0)
 	local_id := strconv.Itoa(seq_gen("localId"))
@@ -266,7 +264,6 @@ func Create_SchoolInfos(count int) []*sifxml.SchoolInfo {
 // * EntryDate is set to 25 January of the current year.
 //
 // * If the student year level is set, YearLevel is set to the same value; otherwise it is set to a random value between 1 and 12.
-//
 func Create_StudentSchoolEnrollment(student *sifxml.StudentPersonal,
 	school *sifxml.SchoolInfo) *sifxml.StudentSchoolEnrollment {
 	ret := sifxml.StudentSchoolEnrollment{}
@@ -340,7 +337,6 @@ func Create_StudentSchoolEnrollments(students []*sifxml.StudentPersonal,
 // * BirthDate is a random date betweem 25 and 65 years before the current year.
 //
 // * CountryOfBirth is fixed at "1101" (Australia).
-//
 func Create_StaffPersonal() *sifxml.StaffPersonal {
 	gofakeit.Seed(0)
 	person := gofakeit.Person()
@@ -403,7 +399,6 @@ func Create_StaffPersonals(count int) []*sifxml.StaffPersonal {
 // * StaffActivity is set to a random valid value.
 //
 // * If the student year level is set, YearLevel is set to the same value; otherwise it is set to a random value between 1 and 12.
-//
 func Create_StaffAssignment(staff *sifxml.StaffPersonal, school *sifxml.SchoolInfo) *sifxml.StaffAssignment {
 	ret := sifxml.StaffAssignment{}
 	ret.SetProperty("RefId", create_GUID())
@@ -476,7 +471,6 @@ func Create_StaffAssignments(staff []*sifxml.StaffPersonal, school *sifxml.Schoo
 //
 // With probability 0.2, a second language is added to LanguageList, of Type "2" (Main Language Other Than English Spoken at Home),
 // set to a random selection of "0002", "7101", "2401", "2201", "5203", "4202" (Not Stated, Cantonese, Italian, Greek, Hindi, Arabic).
-//
 func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int) *sifxml.StudentContactPersonal {
 	if student != nil && student.MostRecent().Parent1Language_IsNil() && ordinal == 1 {
 		return nil
@@ -697,7 +691,6 @@ func Create_RoomInfos(count int, school *sifxml.SchoolInfo) []*sifxml.RoomInfo {
 // * ShortName is set to timetablesubject SubjectShortName if present; otherwise it is a random choice of subject out of the defaults on offer (All_teachingSubjects())
 //
 // * LongName and KeyLearningArea are the full name and key learning area associated with ShortName (TeachingGroupKLA()).
-//
 func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentPersonal,
 	staff []*sifxml.StaffPersonal, timetablesubject *sifxml.TimeTableSubject) *sifxml.TeachingGroup {
 	ret := sifxml.TeachingGroup{}
@@ -762,7 +755,6 @@ func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentP
 // * ClassType is randomly set to one of "Asset", "Liability", "Revenue", "Expense", "Other".
 //
 // * Name is set to a random name. If location is not nil, it is instead set to the same Name as Location.Name.
-//
 func Create_FinancialAccount(parent *sifxml.FinancialAccount, location *sifxml.ChargedLocationInfo) *sifxml.FinancialAccount {
 	gofakeit.Seed(0)
 	ret := sifxml.FinancialAccount{}
@@ -823,7 +815,6 @@ func create_FinancialAccountsBase(count int, parent []*sifxml.FinancialAccount, 
 // Half the accounts to be generated are children of other accounts generated in the same function, chosen randomly.
 // A third of all parent accounts are randomly associated with a charged location;
 // all children of that account are associated with the same charged location.
-//
 func Create_FinancialAccounts(count int, locations []*sifxml.ChargedLocationInfo) []*sifxml.FinancialAccount {
 	parent_account_count := count/2 + 1
 	parent_charge_locations := sifxml.ChargedLocationInfoSlice()
@@ -878,7 +869,6 @@ func Create_FinancialAccounts(count int, locations []*sifxml.ChargedLocationInfo
 //
 // * PhoneNumberList is a single entry of Type "0096" (Main Telephone Number), and is a phone number
 // with a landline corresponding to the address state.
-//
 func Create_ChargedLocationInfo(parent *sifxml.ChargedLocationInfo,
 	school *sifxml.SchoolInfo) *sifxml.ChargedLocationInfo {
 	state := create_state()
@@ -925,7 +915,6 @@ func Create_ChargedLocationInfo(parent *sifxml.ChargedLocationInfo,
 // in the generated ChargedLocationInfo objects, one per school. If count is larger than the length of schools,
 // the remaining objects are non-school charged locations. Half of the remaining objects generated are parents
 // of the other half, assigned randomly.
-//
 func Create_ChargedLocationInfos(count int, schools []*sifxml.SchoolInfo) []*sifxml.ChargedLocationInfo {
 	ret := sifxml.ChargedLocationInfoSlice()
 	for i := 0; i < count && i < len(schools); i++ {
@@ -969,7 +958,6 @@ func Create_ChargedLocationInfos(count int, schools []*sifxml.SchoolInfo) []*sif
 //
 // * PhoneNumberList is a single entry of Type "0096" (Main Telephone Number), and is a phone number
 // with a landline corresponding to the address state.
-//
 func Create_VendorInfo() *sifxml.VendorInfo {
 	gofakeit.Seed(0)
 	person := gofakeit.Person()
@@ -1044,7 +1032,6 @@ func Create_VendorInfos(count int) []*sifxml.VendorInfo {
 // * ActivityName is set to "Zoo Excursion".
 //
 // * TeacherList is set through AddToScheduledTeacherList().
-//
 func Create_ScheduledActivity(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable,
 	timetablecell *sifxml.TimeTableCell, timetablesubject *sifxml.TimeTableSubject,
 	students []*sifxml.StudentPersonal, staff []*sifxml.StaffPersonal, teachinggroups []*sifxml.TeachingGroup,
@@ -1113,7 +1100,6 @@ func Create_ScheduledActivity(school *sifxml.SchoolInfo, timetable *sifxml.TimeT
 // * StartDate is set to January 28 of the current year. No attempt is made to set it to a weekday.
 //
 // * EndDate is set to December 19 of the current year. No attempt is made to set it to a weekday.
-//
 func Create_CalendarSummary(school *sifxml.SchoolInfo) *sifxml.CalendarSummary {
 	ret := sifxml.CalendarSummary{}
 	ret.SetProperty("RefId", create_GUID())
@@ -1152,7 +1138,6 @@ func Create_CalendarSummary(school *sifxml.SchoolInfo) *sifxml.CalendarSummary {
 // * MaxAttemptsAllowed is set to 5.
 //
 // * DetailedDescriptionURL is set to "http://www.example.com/" followed by Description.
-//
 func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup,
 	students []*sifxml.StudentPersonal) *sifxml.GradingAssignment {
 	gofakeit.Seed(0)
@@ -1193,7 +1178,6 @@ func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.T
 
 // Create count GradingAssignment objects, each linked to SchoolInfo object school, TeachingGroup object teachinggroup,
 // and slice of StudentPersonal objects students.
-//
 func Create_GradingAssignments(count int, school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup,
 	students []*sifxml.StudentPersonal) []*sifxml.GradingAssignment {
 	ret := sifxml.GradingAssignmentSlice()
@@ -1211,7 +1195,6 @@ func Create_GradingAssignments(count int, school *sifxml.SchoolInfo, teachinggro
 // * ScoreDescription is set to a randomised sentence of 10 words.
 //
 // * DateGraded is set to a date between 0 and 6 days inclusive after GradingAssignment.DueDate.
-//
 func Create_GradingAssignmentScore(assignment *sifxml.GradingAssignment, school *sifxml.SchoolInfo,
 	teachinggroup *sifxml.TeachingGroup, student *sifxml.StudentPersonal,
 	staff *sifxml.StaffPersonal) *sifxml.GradingAssignmentScore {
@@ -1256,7 +1239,6 @@ func Create_GradingAssignmentScore(assignment *sifxml.GradingAssignment, school 
 // Create a GradingAssignmentScore object for each student in the slice of StudentPersonal objects students,
 // each of them linked to GradingAssignment object assignment, SchoolInfo object school,
 // TeachingGroup object teachinggroup, and StaffPersonalObject staff.
-//
 func Create_GradingAssignmentScores(assignment *sifxml.GradingAssignment, school *sifxml.SchoolInfo,
 	teachinggroup *sifxml.TeachingGroup, students []*sifxml.StudentPersonal,
 	staff *sifxml.StaffPersonal) []*sifxml.GradingAssignmentScore {
@@ -1272,7 +1254,6 @@ func Create_GradingAssignmentScores(assignment *sifxml.GradingAssignment, school
 // and all other arguments are expected to be nil.
 //
 // * LocalId is a sequence number shared between all objects.
-//
 func Create_Debtor(student *sifxml.StudentPersonal, staff *sifxml.StaffPersonal,
 	contact *sifxml.StudentContactPersonal, vendor *sifxml.VendorInfo) *sifxml.Debtor {
 	ret := sifxml.Debtor{}
@@ -1341,7 +1322,6 @@ func Create_Debtors(student []*sifxml.StudentPersonal, staff []*sifxml.StaffPers
 //
 // * All of StudentAttendance.AttendanceValue, TeacherAttendance.AttendanceValue, AdministratorAttendance.AttendanceValue
 // are set to either 1.0 or 0.0, depending on whether they count towards that attendance.
-//
 func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.SchoolInfo, date time.Time,
 	studentholiday bool, publicholiday bool, calendar_date_number int) *sifxml.CalendarDate {
 	ret := sifxml.CalendarDate{}
@@ -1401,7 +1381,6 @@ func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.School
 // A calendar date is generated for each weekday between calendar.StartDate and calendar.EndDate. It is deemed
 // a public holiday if it is a public holiday in Victoria. It is deemed a student hoiliday if it is a public
 // holiday, or else if it is between days 45 and 55, 105 and 115, and 155 and 165 exclusive of the calendar.
-//
 func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.SchoolInfo) []*sifxml.CalendarDate {
 	ret := sifxml.CalendarDateSlice()
 	local_c := cal.NewBusinessCalendar()
@@ -1445,7 +1424,6 @@ func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.Schoo
 // * TimeTableDayList/TimeTableDay/TimeTablePeriodList/TimeTablePeriod/PeriodStart is set through PeriodStart().
 //
 // * TimeTableDayList/TimeTableDay/TimeTablePeriodList/TimeTablePeriod/PeriodEnd is set through PeriodEnd().
-//
 func Create_TimeTable(school *sifxml.SchoolInfo) *sifxml.TimeTable {
 	ret := sifxml.TimeTable{}
 	ret.SetProperty("RefId", create_GUID())
@@ -1519,7 +1497,6 @@ func Create_TimeTable(school *sifxml.SchoolInfo) *sifxml.TimeTable {
 // * AcademicYear is set to acyear if acyear_end is empty.
 //
 // * AcademicYearRange.Start and AcademicYearRange.End are set to acyear and acyear_end, if acyear_end is not empty.
-//
 func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCourseInfo, subject string,
 	acyear string, acyear_end string, semester int) *sifxml.TimeTableSubject {
 	code := strconv.Itoa(random_seq_gen("timetablesubjects", 900) + 100)
@@ -1577,7 +1554,6 @@ func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCou
 // Presupposes that terms are in consecutive chronological order, and are semesters.
 //
 // There is no implementation of differentiating timetable subject offerings by year level.
-//
 func Create_TimeTableSubjects(school *sifxml.SchoolInfo, subjects []string,
 	terms []*sifxml.TermInfo) []*sifxml.TimeTableSubject {
 	random_seq_gen_reset("timetablesubjects")
@@ -1609,7 +1585,6 @@ func Create_TimeTableSubjects(school *sifxml.SchoolInfo, subjects []string,
 // * TermSpan is set to "0828" (Semester).
 //
 // * MarkingTerm, SchedulingTerm, and AttendanceTerm are all set to "Y".
-//
 func Create_TermInfo(school *sifxml.SchoolInfo, semester int) *sifxml.TermInfo {
 	ret := sifxml.TermInfo{}
 	ret.SetProperty("RefId", create_GUID())
@@ -1646,7 +1621,6 @@ func Create_TermInfos(school *sifxml.SchoolInfo) []*sifxml.TermInfo {
 // and the slice of StaffPersonal objects teachers. The created object has DayId day, PeriodId period, and Celltype celltype.
 //
 // * TeacherList is set through AddToScheduledTeacherList(), with period starts and ends set through PeriodStart() and PeriodEnd().
-//
 func Create_TimeTableCell(day string, period string, celltype string, school *sifxml.SchoolInfo,
 	timetable *sifxml.TimeTable, subject *sifxml.TimeTableSubject, teachinggroup *sifxml.TeachingGroup,
 	room *sifxml.RoomInfo, rooms []*sifxml.RoomInfo, staff *sifxml.StaffPersonal,
@@ -1712,7 +1686,6 @@ func Create_TimeTableCell(day string, period string, celltype string, school *si
 // * EndTime is set through PeriodEnd().
 //
 // * RollMarked is set to "Y".
-//
 func Create_SessionInfo(c *sifxml.TimeTableCell, date string) *sifxml.SessionInfo {
 	periodid, _ := strconv.Atoi(c.PeriodId().String())
 
@@ -1791,7 +1764,6 @@ func Create_SessionInfos(cells []*sifxml.TimeTableCell, dates []*sifxml.Calendar
 // * ActivityType is set to "Excursion".
 //
 // * ActivityName is set to "Zoo Excursion".
-//
 func Create_ScheduledActivityBasic(date string, c *sifxml.TimeTableCell,
 	tg *sifxml.TeachingGroup) *sifxml.ScheduledActivity {
 	ret := sifxml.ScheduledActivity{}
@@ -1839,8 +1811,6 @@ func Create_ScheduledActivityBasic(date string, c *sifxml.TimeTableCell,
 // in the calendar with StudentAttendance.CountsTowardAttendance as "Yes", before the last 10 days of dates.
 //
 // Presupposes that the calendar dates are in the current year. Presupposes that all calendar dates are on weekdays.
-//
-//
 func Create_ScheduledActivities(cells []*sifxml.TimeTableCell, dates []*sifxml.CalendarDate,
 	tg []*sifxml.TeachingGroup) []*sifxml.ScheduledActivity {
 	calendar := make(map[string]*sifxml.CalendarDate)
@@ -1884,7 +1854,6 @@ func Create_ScheduledActivities(cells []*sifxml.TimeTableCell, dates []*sifxml.C
 // * CourseTitle is copied across from subject.SubjectLocalId.
 //
 // * TermInfoRefId is identified as the RefId of the nth element of terms, where n is subject.Semester.
-//
 func Create_SchoolCourseInfo(subject *sifxml.TimeTableSubject, terms []*sifxml.TermInfo) *sifxml.SchoolCourseInfo {
 	ret := sifxml.SchoolCourseInfo{}
 	ret.SetProperty("RefId", create_GUID())
@@ -1907,7 +1876,6 @@ func Create_SchoolCourseInfo(subject *sifxml.TimeTableSubject, terms []*sifxml.T
 
 // Creates a SchoolCourseInfo object for each subject in TimeTableSubject, linking to the slice of TermInfo object terms.
 // Presupposes that terms are in consecutive chronological order, and are semesters.
-//
 func Create_SchoolCourseInfos(subjects []*sifxml.TimeTableSubject, terms []*sifxml.TermInfo) []*sifxml.SchoolCourseInfo {
 	ret := sifxml.SchoolCourseInfoSlice()
 	for _, s := range subjects {
@@ -2197,7 +2165,6 @@ func Create_TeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPerso
 //
 // No attempt whatsoever to avoid room clashes. The year level of each teaching group is determined from its
 // CurriculumLevel. Currently all subjects in the program are available at all year levels.
-//
 func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, tg []*sifxml.TeachingGroup,
 	staff []*sifxml.StaffPersonal, rooms []*sifxml.RoomInfo, tts []*sifxml.TimeTableSubject) []*sifxml.TimeTableCell {
 	staff_map := make(map[string]*sifxml.StaffPersonal)
@@ -2286,7 +2253,6 @@ func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTabl
 //
 // * In Round 1, AGRoundList/AGRound/EndDate is set to March 30.
 // In Round 2, it is set to September 30.
-//
 func Create_CollectionRound(collection string) *sifxml.CollectionRound {
 
 	ret := sifxml.CollectionRound{}
@@ -2311,7 +2277,6 @@ func Create_CollectionRound(collection string) *sifxml.CollectionRound {
 }
 
 // Create CollectionRound objects for the currently supported AG Collections.
-//
 func Create_CollectionRounds() []*sifxml.CollectionRound {
 	ret := sifxml.CollectionRoundSlice()
 	col := All_AGCollections()
@@ -2360,7 +2325,6 @@ func Create_CollectionRounds() []*sifxml.CollectionRound {
 // * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleResponse is set to "Rejected".
 //
 // * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleStatus is set to "Fail".
-//
 func Create_CollectionStatus(collection string, round int, school *sifxml.SchoolInfo) *sifxml.CollectionStatus {
 
 	ret := sifxml.CollectionStatus{}
@@ -2409,7 +2373,6 @@ func Create_CollectionStatus(collection string, round int, school *sifxml.School
 // Create CollectionStatus objects for the currently supported AG Collections, and for each round
 // created in CollectionRounds.
 // Presupposes that there are two rounds for each collection per year.
-//
 func Create_CollectionStatuses(school *sifxml.SchoolInfo) []*sifxml.CollectionStatus {
 	ret := sifxml.CollectionStatusSlice()
 	col := All_AGCollections()

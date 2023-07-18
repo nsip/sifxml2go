@@ -14,7 +14,7 @@ import (
 
 	"github.com/brianvoe/gofakeit/v5"
 	"github.com/google/uuid"
-	"github.com/nsip/sifxml2go/v3/sifxml"
+	"github.com/nsip/sifxml2go/sifxml"
 )
 
 // Abort on error.

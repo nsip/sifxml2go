@@ -1,4 +1,4 @@
-module github.com/nsip/sifxml2go/v3
+module github.com/nsip/sifxml2go
 
 go 1.19
 

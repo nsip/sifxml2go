@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	api "github.com/nsip/sifxml2go/v3/funcapi"
+	api "github.com/nsip/sifxml2go/funcapi"
 )
 
 func main() {
