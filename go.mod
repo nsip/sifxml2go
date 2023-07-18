@@ -1,6 +1,6 @@
-module github.com/nsip/sifxml2go
+module github.com/nsip/sifxml2go/v3
 
-go 1.14
+go 1.19
 
 require (
 	github.com/brianvoe/gofakeit/v5 v5.11.1

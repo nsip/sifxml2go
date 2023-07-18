@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/brianvoe/gofakeit/v5"
-	"github.com/nsip/sifxml2go/sifxml"
+	"github.com/nsip/sifxml2go/v3/sifxml"
 	"github.com/rickar/cal/v2"
 	"github.com/rickar/cal/v2/au"
 )

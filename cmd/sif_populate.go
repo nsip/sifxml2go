@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/nsip/sifxml2go/populate"
+	"github.com/nsip/sifxml2go/v3/populate"
 	//"./sifxml"
 )
 
