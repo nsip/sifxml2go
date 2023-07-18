@@ -1,6 +1,6 @@
 package sifxml
 
-var test_ActivityExample1 = `		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A" >
+var test_ActivityExample1 = `		<Activity RefId="C27E1FCF-C163-485F-BEF0-F36F18A0493A">
 			<Title>Shakespeare Essay - Much Ado About Nothing</Title>
 			<Preamble>This is a very funny comedy - students should have passing familiarity with Shakespeare</Preamble>
 			<LearningStandards>
@@ -175,7 +175,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0355 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0019 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -847,8 +847,18 @@ var test_ScheduledActivityExample = `      <ScheduledActivity RefId="BD3E34B3-59
      <TeachingGroupRefId>EB79C3D1-FF19-11D7-8513-8B604A511DAD</TeachingGroupRefId>
      <TeachingGroupRefId>B2345163-8474-6B38-7459-000F84723A00</TeachingGroupRefId>
    </TeachingGroupList>
+   <Override DateOfOverride="2020-02-02">Y</Override>
+   <TimeTableChangeReasonList>
+     <TimeTableChangeReason>
+	   <TimeTableChangeType>TeacherAbsence</TimeTableChangeType>
+	   <TimeTableChangeNotes>SL</TimeTableChangeNotes>
+     </TimeTableChangeReason>
+     <TimeTableChangeReason>
+	   <TimeTableChangeType>RoomRemoval</TimeTableChangeType>
+	   <TimeTableChangeNotes>GL</TimeTableChangeNotes>
+     </TimeTableChangeReason>
+   </TimeTableChangeReasonList>
  </ScheduledActivity> 
-
 `
 var test_SchoolCourseInfoExample = `    <SchoolCourseInfo RefId="9D75101A-8C3D-00AA-001A-0000A2E35B35">
       <SchoolInfoRefId>101A8C3D-00AA-001A-0000-A2E35B359D75</SchoolInfoRefId>
@@ -936,6 +946,21 @@ var test_SchoolInfo = `    <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A16
           </ContactInfo>
         </SchoolContact>
       </SchoolContactList>
+	  <AddressList>
+	             <Address Type="0123" Role="012B">
+              <Street>
+                <Line1>23 Nicholson Street</Line1>
+                </Street>
+                  <City>Carnegie</City>
+                  <StateProvince>VIC</StateProvince>
+                  <Country>1101</Country>
+                  <PostalCode>3004</PostalCode>
+                  <GridLocation>
+                    <Latitude>23.9876</Latitude>
+                    <Longitude>-98.8765</Longitude>
+                  </GridLocation>
+                </Address>
+	  </AddressList>
       <PhoneNumberList>
         <PhoneNumber Type="0096">
           <Number>03 9637-2000</Number>
@@ -1709,7 +1734,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0008 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0652 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -2667,9 +2692,9 @@ var test_CollectionDeclaration = `<CollectionDeclaration RefId="D3E34B35-9D75-10
   &lt;p&gt;In receiving the NSW SRS Entitlement in respect of the NSW Government in 2022, on behalf of St Joseph's Primary School, Leonville and St Mary's Primary School, Leonville,
   Catholic Schools NSW agrees to spend, or commit to spend, these funds on any of the identified Educational Purposes listed in the letter.&lt;/p&gt;
   
-  &lt;ol&gt;&lt;li&gt;I certify that the school/school authority does not and will not operate for profit within the meaning of Section 83C of the &lt;i&gt;Education Act 1990&lt;/i&gt;.&lt;/li&gt;
-  &lt;li&gt;I certify that the school/school authority agrees to abide by any applicable guidelines or directions that may be issued from time to time pursuant to the 
-  &lt;i&gt;Education Act 1990&lt;/i&gt; and &lt;i&gt;Education Regulation 2017&lt;/i&gt;.&lt;/li&gt;&lt;/ol&gt;
+   &lt;ol&gt;&lt;li&gt;I certify that the school/school authority does not and will not operate for profit within the meaning of Section 83C of the &lt;i&gt;Education Act 1990&lt;/i&gt;.&lt;/li&gt;
+   &lt;li&gt;I certify that the school/school authority agrees to abide by any applicable guidelines or directions that may be issued from time to time pursuant to the 
+   &lt;i&gt;Education Act 1990&lt;/i&gt; and &lt;i&gt;Education Regulation 2017&lt;/i&gt;.&lt;/li&gt;&lt;/ol&gt;
   </Declaration>
 
 </CollectionDeclaration>
@@ -4310,7 +4335,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0035 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0617 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>
@@ -4537,6 +4562,7 @@ var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34
   <DepartureSchool>
     <ACARAId>30000</ACARAId>
 	<Name>Lincoln Secondary College</Name>
+	<City>Lincoln</City>
   <SchoolContactList>
     <SchoolContact>
       <PublishInDirectory>Y</PublishInDirectory>
@@ -4583,10 +4609,12 @@ var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34
   <PreviousSchool>
     <ACARAId>30001</ACARAId>
 	<Name>Lincoln Primary School</Name>
+	<City>Lincolnville</City>
   </PreviousSchool> 
   <PreviousSchool>
     <ACARAId>30002</ACARAId>
 	<Name>Buchanan Primary School</Name>
+	<City>Lincolnville</City>
   </PreviousSchool> 
   </PreviousSchoolList>
   <NAPLANScoreList>

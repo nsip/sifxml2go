@@ -12,7 +12,7 @@ type learningresource struct {
       Name *String `xml:"Name" json:"Name"`
       Author *String `xml:"Author,omitempty" json:"Author,omitempty"`
       Contacts *ContactsType `xml:"Contacts,omitempty" json:"Contacts,omitempty"`
-      Location *LearningResource_Location
+      Location *LearningResourceLocationType `xml:"Location,omitempty" json:"Location,omitempty"`
       Status *String `xml:"Status,omitempty" json:"Status,omitempty"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
       YearLevels *YearLevelsType `xml:"YearLevels,omitempty" json:"YearLevels,omitempty"`
@@ -31,12 +31,4 @@ type learningresource struct {
       
       }
     
-type LearningResource_Location struct {
-  learningresource_location `xml:"LearningResource_Location" json:"LearningResource_Location"`
-}
-
-type learningresource_location struct {
-      ReferenceType *String `xml:"ReferenceType,attr" json:"ReferenceType"`
-      Value *String `xml:",chardata" json:"value"`
-}
 

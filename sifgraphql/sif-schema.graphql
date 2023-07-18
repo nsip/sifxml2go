@@ -18,7 +18,7 @@
       AssessmentRefId: String OPT 
       MaxAttemptsAllowed: int OPT 
       ActivityWeight: float64 OPT 
-      Evaluation: Activity_Evaluation OPT
+      Evaluation: ActivityEvaluationType OPT 
       LearningResources: LearningResourcesType OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
@@ -26,10 +26,6 @@
       
       }
     
-type Activity_Evaluation {
-      EvaluationType: String 
-       Description: String OPT 
-}
 
     type AggregateCharacteristicInfo {
         RefId: RefIdType 
@@ -59,7 +55,7 @@ type Activity_Evaluation {
     type AggregateStatisticInfo {
         RefId: RefIdType 
       StatisticName: String 
-      CalculationRule: AggregateStatisticInfo_CalculationRule OPT
+      CalculationRule: CalculationRuleType OPT 
       ApprovalDate: String OPT 
       ExpirationDate: String OPT 
       ExclusionRules: ExclusionRulesType OPT 
@@ -74,10 +70,6 @@ type Activity_Evaluation {
       
       }
     
-type AggregateStatisticInfo_CalculationRule {
-      Type: String 
-      Value: String 
-}
 
     type CalendarDate {
         CalendarDateRefId: String 
@@ -237,7 +229,7 @@ type Identity_SIF_RefId {
       Name: String 
       Author: String OPT 
       Contacts: ContactsType OPT 
-      Location: LearningResource_Location OPT
+      Location: LearningResourceLocationType OPT 
       Status: String OPT 
       Description: String OPT 
       YearLevels: YearLevelsType OPT 
@@ -256,10 +248,6 @@ type Identity_SIF_RefId {
       
       }
     
-type LearningResource_Location {
-      ReferenceType: String 
-      Value: String 
-}
 
     type LearningResourcePackage AbstractContentElementType
 
@@ -339,7 +327,7 @@ type LearningResource_Location {
         RefId: RefIdType 
       ParentObjectRefId: PersonPicture_ParentObjectRefId 
       SchoolYear: SchoolYearType 
-      PictureSource: PersonPicture_PictureSource 
+      PictureSource: PictureSourceType 
       OKToPublish: AUCodeSetsYesOrNoCategoryType OPT 
       PublishingPermissionList: PublishingPermissionListType OPT 
       LocalCodeList: LocalCodeListType OPT 
@@ -351,10 +339,6 @@ type LearningResource_Location {
 type PersonPicture_ParentObjectRefId {
       SIF_RefObject: String 
       Value: String 
-}
-type PersonPicture_PictureSource {
-      Type: AUCodeSetsPictureSourceType 
-      Value: URIOrBinaryType 
 }
 
     type PersonPrivacyObligationDocument {
@@ -464,6 +448,8 @@ type ResourceBooking_ResourceRefId {
       TeachingGroupList: TeachingGroupListType OPT 
       YearLevels: YearLevelsType OPT 
       Override: ScheduledActivityOverrideType OPT 
+      OverridePatch: bool OPT 
+      TimeTableChangeReasonList: TimeTableChangeReasonListType OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -1827,9 +1813,14 @@ type Journal_OriginatingTransactionRefId {
     type ReportDataObjectType String
     type URIOrBinaryType String
     type GUIDType String
-    type MsgIdType GUIDType
     type RefIdType GUIDType
     type IdRefType RefIdType
+    type TypedIdRefType {
+          SIF_RefObject: String 
+      
+        Value: RefIdType 
+      }
+    
     type VersionType String
     type VersionWithWildcardsType String
     type DefinedProtocolsType String
@@ -2883,6 +2874,18 @@ type Journal_OriginatingTransactionRefId {
       
       }
     
+    type DomainScoreSDTNType {
+        RawScore: float64 OPT 
+      ScaledScoreValue: float64 OPT 
+      ScaledScoreLogitValue: float64 OPT 
+      ScaledScoreStandardError: float64 OPT 
+      ScaledScoreLogitStandardError: float64 OPT 
+      StudentDomainBand: int OPT 
+      StudentProficiency: String OPT 
+      PlausibleScaledValueList: PlausibleScaledValueListType OPT 
+      
+      }
+    
     type NAPWritingRubricListType {
         NAPWritingRubric: [NAPWritingRubricType] 
       
@@ -3033,7 +3036,7 @@ type Journal_OriginatingTransactionRefId {
     
     type ActivityTimeType {
         CreationDate: String 
-      Duration: ActivityTimeType_Duration OPT
+      Duration: DurationType OPT 
       StartDate: String OPT 
       FinishDate: String OPT 
       DueDate: String OPT 
@@ -3487,8 +3490,14 @@ type Journal_OriginatingTransactionRefId {
       }
     
     type IdentityAssertionsType {
-      IdentityAssertion: [IdentityAssertionsType_IdentityAssertion] 
+        IdentityAssertion: [IdentityAssertionType] 
       
+      }
+    
+    type IdentityAssertionType {
+          SchemaName: String 
+      
+        Value: String 
       }
     
     type LearningStandardsType {
@@ -3987,6 +3996,7 @@ type Journal_OriginatingTransactionRefId {
     
     type DemographicsType {
         IndigenousStatus: AUCodeSetsIndigenousStatusType OPT 
+      Gender: AUCodeSetsSexCodeType OPT 
       Sex: AUCodeSetsSexCodeType OPT 
       BirthDate: BirthDateType OPT 
       DateOfDeath: String OPT 
@@ -4265,7 +4275,7 @@ type Journal_OriginatingTransactionRefId {
     type NAPLANScoreWithYearsType {
         Domain: AUCodeSetsNAPTestDomainType 
       ParticipationCode: AUCodeSetsNAPParticipationCodeType OPT 
-      DomainScore: DomainScoreType OPT 
+      DomainScore: DomainScoreSDTNType OPT 
       TestLevel: YearLevelType OPT 
       TestYear: SchoolYearType OPT 
       
@@ -4313,20 +4323,53 @@ type Journal_OriginatingTransactionRefId {
       }
     
     type FTEType String
+    type TimeTableChangeReasonListType {
+        TimeTableChangeReason: [TimeTableChangeReasonType] 
+      
+      }
+    
+    type TimeTableChangeReasonType {
+        TimeTableChangeType: AUCodeSetsTimeTableChangeTypeType 
+      TimeTableChangeNotes: String OPT 
+      
+      }
+    
+    type PictureSourceType {
+          Type: AUCodeSetsPictureSourceType 
+      
+        Value: String 
+      }
+    
+    type ActivityEvaluationType {
+        EvaluationType: String 
+      Description: String OPT 
+      
+      }
+    
+    type LearningResourceLocationType {
+          ReferenceType: String 
+      
+        Value: String 
+      }
+    
+    type DurationType {
+          Units: String 
+      
+        Value: int 
+      }
+    
+    type CalculationRuleType {
+          Type: String 
+      
+        Value: String 
+      }
+    
 type PersonInvolvementType_PersonRefId {
       SIF_RefObject: String 
       Value: String 
 }
-type ActivityTimeType_Duration {
-      Units: String 
-      Value: int 
-}
 type SourceObjectsType_SourceObject {
       SIF_RefObject: String 
-      Value: String 
-}
-type IdentityAssertionsType_IdentityAssertion {
-      SchemaName: String 
       Value: String 
 }
 type AssociatedObjectsType_AssociatedObject {

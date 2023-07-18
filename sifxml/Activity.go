@@ -25,7 +25,7 @@ type activity struct {
       AssessmentRefId *String `xml:"AssessmentRefId,omitempty" json:"AssessmentRefId,omitempty"`
       MaxAttemptsAllowed *Int `xml:"MaxAttemptsAllowed,omitempty" json:"MaxAttemptsAllowed,omitempty"`
       ActivityWeight *Float `xml:"ActivityWeight,omitempty" json:"ActivityWeight,omitempty"`
-      Evaluation *Activity_Evaluation
+      Evaluation *ActivityEvaluationType `xml:"Evaluation,omitempty" json:"Evaluation,omitempty"`
       LearningResources *LearningResourcesType `xml:"LearningResources,omitempty" json:"LearningResources,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
@@ -33,12 +33,4 @@ type activity struct {
       
       }
     
-type Activity_Evaluation struct {
-  activity_evaluation `xml:"Activity_Evaluation" json:"Activity_Evaluation"`
-}
-
-type activity_evaluation struct {
-      EvaluationType *String `xml:"EvaluationType,attr" json:"EvaluationType"`
-       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
-}
 

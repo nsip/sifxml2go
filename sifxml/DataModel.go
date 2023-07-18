@@ -75,9 +75,18 @@ type monetaryamounttype struct {
     type ReportDataObjectType string
     type URIOrBinaryType string
     type GUIDType string
-    type MsgIdType GUIDType
     type RefIdType GUIDType
     type IdRefType RefIdType
+    type TypedIdRefType struct {
+  typedidreftype 
+}
+
+type typedidreftype struct {
+          SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
+      
+        Value *RefIdType `xml:",chardata" json:"value"`
+      }
+    
     type VersionType string
     type VersionWithWildcardsType string
     type DefinedProtocolsType string
@@ -1675,6 +1684,22 @@ type domainscoretype struct {
       
       }
     
+    type DomainScoreSDTNType struct {
+  domainscoresdtntype 
+}
+
+type domainscoresdtntype struct {
+        RawScore *Float `xml:"RawScore,omitempty" json:"RawScore,omitempty"`
+      ScaledScoreValue *Float `xml:"ScaledScoreValue,omitempty" json:"ScaledScoreValue,omitempty"`
+      ScaledScoreLogitValue *Float `xml:"ScaledScoreLogitValue,omitempty" json:"ScaledScoreLogitValue,omitempty"`
+      ScaledScoreStandardError *Float `xml:"ScaledScoreStandardError,omitempty" json:"ScaledScoreStandardError,omitempty"`
+      ScaledScoreLogitStandardError *Float `xml:"ScaledScoreLogitStandardError,omitempty" json:"ScaledScoreLogitStandardError,omitempty"`
+      StudentDomainBand *Int `xml:"StudentDomainBand,omitempty" json:"StudentDomainBand,omitempty"`
+      StudentProficiency *String `xml:"StudentProficiency,omitempty" json:"StudentProficiency,omitempty"`
+      PlausibleScaledValueList *PlausibleScaledValueListType `xml:"PlausibleScaledValueList,omitempty" json:"PlausibleScaledValueList,omitempty"`
+      
+      }
+    
     type NAPWritingRubricListType struct {
   napwritingrubriclisttype 
 }
@@ -1929,7 +1954,7 @@ type scheduledactivityoverridetype struct {
 
 type activitytimetype struct {
         CreationDate *String `xml:"CreationDate" json:"CreationDate"`
-      Duration *ActivityTimeType_Duration
+      Duration *DurationType `xml:"Duration,omitempty" json:"Duration,omitempty"`
       StartDate *String `xml:"StartDate,omitempty" json:"StartDate,omitempty"`
       FinishDate *String `xml:"FinishDate,omitempty" json:"FinishDate,omitempty"`
       DueDate *String `xml:"DueDate,omitempty" json:"DueDate,omitempty"`
@@ -2639,8 +2664,18 @@ type studentsubjectchoicetype struct {
 }
 
 type identityassertionstype struct {
-      IdentityAssertion []IdentityAssertionsType_IdentityAssertion `xml:"IdentityAssertion" json:"IdentityAssertion"`
+        IdentityAssertion []IdentityAssertionType `xml:"IdentityAssertion" json:"IdentityAssertion"`
       
+      }
+    
+    type IdentityAssertionType struct {
+  identityassertiontype 
+}
+
+type identityassertiontype struct {
+          SchemaName *String `xml:"SchemaName,attr" json:"SchemaName"`
+      
+        Value *String `xml:",chardata" json:"value"`
       }
     
     type LearningStandardsType struct {
@@ -3435,6 +3470,7 @@ type othernamestype struct {
 
 type demographicstype struct {
         IndigenousStatus *AUCodeSetsIndigenousStatusType `xml:"IndigenousStatus,omitempty" json:"IndigenousStatus,omitempty"`
+      Gender *AUCodeSetsSexCodeType `xml:"Gender,omitempty" json:"Gender,omitempty"`
       Sex *AUCodeSetsSexCodeType `xml:"Sex,omitempty" json:"Sex,omitempty"`
       BirthDate *BirthDateType `xml:"BirthDate,omitempty" json:"BirthDate,omitempty"`
       DateOfDeath *String `xml:"DateOfDeath,omitempty" json:"DateOfDeath,omitempty"`
@@ -3861,7 +3897,7 @@ type naplanscorewithyearslisttype struct {
 type naplanscorewithyearstype struct {
         Domain *AUCodeSetsNAPTestDomainType `xml:"Domain" json:"Domain"`
       ParticipationCode *AUCodeSetsNAPParticipationCodeType `xml:"ParticipationCode,omitempty" json:"ParticipationCode,omitempty"`
-      DomainScore *DomainScoreType `xml:"DomainScore,omitempty" json:"DomainScore,omitempty"`
+      DomainScore *DomainScoreSDTNType `xml:"DomainScore,omitempty" json:"DomainScore,omitempty"`
       TestLevel *YearLevelType `xml:"TestLevel,omitempty" json:"TestLevel,omitempty"`
       TestYear *SchoolYearType `xml:"TestYear,omitempty" json:"TestYear,omitempty"`
       
@@ -3937,6 +3973,75 @@ type stdngradetype struct {
       }
     
     type FTEType string
+    type TimeTableChangeReasonListType struct {
+  timetablechangereasonlisttype 
+}
+
+type timetablechangereasonlisttype struct {
+        TimeTableChangeReason []TimeTableChangeReasonType `xml:"TimeTableChangeReason" json:"TimeTableChangeReason"`
+      
+      }
+    
+    type TimeTableChangeReasonType struct {
+  timetablechangereasontype 
+}
+
+type timetablechangereasontype struct {
+        TimeTableChangeType *AUCodeSetsTimeTableChangeTypeType `xml:"TimeTableChangeType" json:"TimeTableChangeType"`
+      TimeTableChangeNotes *String `xml:"TimeTableChangeNotes,omitempty" json:"TimeTableChangeNotes,omitempty"`
+      
+      }
+    
+    type PictureSourceType struct {
+  picturesourcetype 
+}
+
+type picturesourcetype struct {
+          Type *AUCodeSetsPictureSourceType `xml:"Type,attr" json:"Type"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type ActivityEvaluationType struct {
+  activityevaluationtype 
+}
+
+type activityevaluationtype struct {
+        EvaluationType *String `xml:"EvaluationType,attr" json:"EvaluationType"`
+      Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
+      
+      }
+    
+    type LearningResourceLocationType struct {
+  learningresourcelocationtype 
+}
+
+type learningresourcelocationtype struct {
+          ReferenceType *String `xml:"ReferenceType,attr" json:"ReferenceType"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type DurationType struct {
+  durationtype 
+}
+
+type durationtype struct {
+          Units *String `xml:"Units,attr" json:"Units"`
+      
+        Value *Int `xml:",chardata" json:"value"`
+      }
+    
+    type CalculationRuleType struct {
+  calculationruletype 
+}
+
+type calculationruletype struct {
+          Type *String `xml:"Type,attr" json:"Type"`
+      
+        Value *String `xml:",chardata" json:"value"`
+      }
+    
 type PersonInvolvementType_PersonRefId struct {
   personinvolvementtype_personrefid 
 }
@@ -3945,28 +4050,12 @@ type personinvolvementtype_personrefid struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
-type ActivityTimeType_Duration struct {
-  activitytimetype_duration 
-}
-
-type activitytimetype_duration struct {
-      Units *String `xml:"Units,attr" json:"Units"`
-      Value *Int `xml:",chardata" json:"value"`
-}
 type SourceObjectsType_SourceObject struct {
   sourceobjectstype_sourceobject 
 }
 
 type sourceobjectstype_sourceobject struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
-      Value *String `xml:",chardata" json:"value"`
-}
-type IdentityAssertionsType_IdentityAssertion struct {
-  identityassertionstype_identityassertion 
-}
-
-type identityassertionstype_identityassertion struct {
-      SchemaName *String `xml:"SchemaName,attr" json:"SchemaName"`
       Value *String `xml:",chardata" json:"value"`
 }
 type AssociatedObjectsType_AssociatedObject struct {

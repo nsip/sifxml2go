@@ -11,7 +11,7 @@ type personpicture struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ParentObjectRefId *PersonPicture_ParentObjectRefId `xml:"ParentObjectRefId" json:"ParentObjectRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
-      PictureSource *PersonPicture_PictureSource `xml:"PictureSource" json:"PictureSource"`
+      PictureSource *PictureSourceType `xml:"PictureSource" json:"PictureSource"`
       OKToPublish *AUCodeSetsYesOrNoCategoryType `xml:"OKToPublish,omitempty" json:"OKToPublish,omitempty"`
       PublishingPermissionList *PublishingPermissionListType `xml:"PublishingPermissionList,omitempty" json:"PublishingPermissionList,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
@@ -27,13 +27,5 @@ type PersonPicture_ParentObjectRefId struct {
 type personpicture_parentobjectrefid struct {
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
-}
-type PersonPicture_PictureSource struct {
-  personpicture_picturesource `xml:"PersonPicture_PictureSource" json:"PersonPicture_PictureSource"`
-}
-
-type personpicture_picturesource struct {
-      Type *AUCodeSetsPictureSourceType `xml:"Type,attr" json:"Type"`
-      Value *URIOrBinaryType `xml:",chardata" json:"value"`
 }
 

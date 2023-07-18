@@ -66,11 +66,14 @@ sub inherited_types(@) {
   my @lines = @_;
   my @lines1 = ();
   foreach (@lines) {
-    if (/%Inherits: (int|float64|bool) ;/) {
+    if(/%Inherits/) {
+      $_ = $_;
+    }
+    if (/%Inherits: (int|float64|bool|RefIdType) ;/) {
       $type = $1;
       s/%Inherits: \S+ ;/%Value: $type `xml:",chardata"`/;
       $hold = $_;
-    } elsif (/%Inherits: (string|xs:\S+|AUCodeSet\S+) ;/) {
+    } elsif (/%Inherits: (string|xs:\S+|AUCodeSet\S+|URIOrBinaryType) ;/) {
       s/%Inherits: \S+ ;/%Value: string `xml:",chardata"`/;
       $hold = $_;
     } elsif (/%Inherits/) {

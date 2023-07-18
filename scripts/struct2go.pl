@@ -31,6 +31,7 @@ while(<>) {
   s/ \*int / *Int /;
   s/ \*float64 / *Float /;
   s/ \*bool / *Bool /;
+  s/ refidtype/ RefIdType/;
   print;
 }
 print "\n";
