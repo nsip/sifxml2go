@@ -4,7 +4,7 @@ package sifxml
 type SectionInfos []SectionInfo
 
     type SectionInfo struct {
-  sectioninfo `xml:"SectionInfo" json:"SectionInfo"`
+  sectioninfo `xml:"SectionInfo"`
 }
 
 type sectioninfo struct {

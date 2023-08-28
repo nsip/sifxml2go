@@ -4,7 +4,7 @@ package sifxml
 type CollectionStatuss []CollectionStatus
 
     type CollectionStatus struct {
-  collectionstatus `xml:"CollectionStatus" json:"CollectionStatus"`
+  collectionstatus `xml:"CollectionStatus"`
 }
 
 type collectionstatus struct {

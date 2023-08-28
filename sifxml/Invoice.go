@@ -4,7 +4,7 @@ package sifxml
 type Invoices []Invoice
 
     type Invoice struct {
-  invoice `xml:"Invoice" json:"Invoice"`
+  invoice `xml:"Invoice"`
 }
 
 type invoice struct {
@@ -38,7 +38,7 @@ type invoice struct {
       }
     
 type Invoice_InvoicedEntity struct {
-  invoice_invoicedentity `xml:"Invoice_InvoicedEntity" json:"Invoice_InvoicedEntity"`
+  invoice_invoicedentity `xml:"Invoice_InvoicedEntity"`
 }
 
 type invoice_invoicedentity struct {

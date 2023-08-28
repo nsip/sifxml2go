@@ -4,7 +4,7 @@ package sifxml
 type StudentAttendanceTimeLists []StudentAttendanceTimeList
 
     type StudentAttendanceTimeList struct {
-  studentattendancetimelist `xml:"StudentAttendanceTimeList" json:"StudentAttendanceTimeList"`
+  studentattendancetimelist `xml:"StudentAttendanceTimeList"`
 }
 
 type studentattendancetimelist struct {

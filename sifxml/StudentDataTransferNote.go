@@ -4,7 +4,7 @@ package sifxml
 type StudentDataTransferNotes []StudentDataTransferNote
 
     type StudentDataTransferNote struct {
-  studentdatatransfernote `xml:"StudentDataTransferNote" json:"StudentDataTransferNote"`
+  studentdatatransfernote `xml:"StudentDataTransferNote"`
 }
 
 type studentdatatransfernote struct {

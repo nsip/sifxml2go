@@ -4,7 +4,7 @@ package sifxml
 type PurchaseOrders []PurchaseOrder
 
     type PurchaseOrder struct {
-  purchaseorder `xml:"PurchaseOrder" json:"PurchaseOrder"`
+  purchaseorder `xml:"PurchaseOrder"`
 }
 
 type purchaseorder struct {

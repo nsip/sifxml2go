@@ -4,7 +4,7 @@ package sifxml
 type WellbeingResponses []WellbeingResponse
 
     type WellbeingResponse struct {
-  wellbeingresponse `xml:"WellbeingResponse" json:"WellbeingResponse"`
+  wellbeingresponse `xml:"WellbeingResponse"`
 }
 
 type wellbeingresponse struct {

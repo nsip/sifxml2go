@@ -4,7 +4,7 @@ package sifxml
 type PersonalisedPlans []PersonalisedPlan
 
     type PersonalisedPlan struct {
-  personalisedplan `xml:"PersonalisedPlan" json:"PersonalisedPlan"`
+  personalisedplan `xml:"PersonalisedPlan"`
 }
 
 type personalisedplan struct {

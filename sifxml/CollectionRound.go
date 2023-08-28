@@ -4,7 +4,7 @@ package sifxml
 type CollectionRounds []CollectionRound
 
     type CollectionRound struct {
-  collectionround `xml:"CollectionRound" json:"CollectionRound"`
+  collectionround `xml:"CollectionRound"`
 }
 
 type collectionround struct {

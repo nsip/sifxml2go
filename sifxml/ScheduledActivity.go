@@ -4,7 +4,7 @@ package sifxml
 type ScheduledActivitys []ScheduledActivity
 
     type ScheduledActivity struct {
-  scheduledactivity `xml:"ScheduledActivity" json:"ScheduledActivity"`
+  scheduledactivity `xml:"ScheduledActivity"`
 }
 
 type scheduledactivity struct {

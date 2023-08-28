@@ -4,7 +4,7 @@ package sifxml
 type SchoolInfos []SchoolInfo
 
     type SchoolInfo struct {
-  schoolinfo `xml:"SchoolInfo" json:"SchoolInfo"`
+  schoolinfo `xml:"SchoolInfo"`
 }
 
 type schoolinfo struct {
@@ -58,7 +58,7 @@ type schoolinfo struct {
       }
     
 type SchoolInfo_OtherLEA struct {
-  schoolinfo_otherlea `xml:"SchoolInfo_OtherLEA" json:"SchoolInfo_OtherLEA"`
+  schoolinfo_otherlea `xml:"SchoolInfo_OtherLEA"`
 }
 
 type schoolinfo_otherlea struct {

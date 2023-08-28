@@ -4,7 +4,7 @@ package sifxml
 type FinancialAccounts []FinancialAccount
 
     type FinancialAccount struct {
-  financialaccount `xml:"FinancialAccount" json:"FinancialAccount"`
+  financialaccount `xml:"FinancialAccount"`
 }
 
 type financialaccount struct {

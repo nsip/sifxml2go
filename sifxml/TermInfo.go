@@ -4,7 +4,7 @@ package sifxml
 type TermInfos []TermInfo
 
     type TermInfo struct {
-  terminfo `xml:"TermInfo" json:"TermInfo"`
+  terminfo `xml:"TermInfo"`
 }
 
 type terminfo struct {

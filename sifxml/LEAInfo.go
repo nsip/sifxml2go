@@ -4,7 +4,7 @@ package sifxml
 type LEAInfos []LEAInfo
 
     type LEAInfo struct {
-  leainfo `xml:"LEAInfo" json:"LEAInfo"`
+  leainfo `xml:"LEAInfo"`
 }
 
 type leainfo struct {

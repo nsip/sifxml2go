@@ -4,7 +4,7 @@ package sifxml
 type PaymentReceipts []PaymentReceipt
 
     type PaymentReceipt struct {
-  paymentreceipt `xml:"PaymentReceipt" json:"PaymentReceipt"`
+  paymentreceipt `xml:"PaymentReceipt"`
 }
 
 type paymentreceipt struct {

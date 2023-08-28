@@ -4,7 +4,7 @@ package sifxml
 type VendorInfos []VendorInfo
 
     type VendorInfo struct {
-  vendorinfo `xml:"VendorInfo" json:"VendorInfo"`
+  vendorinfo `xml:"VendorInfo"`
 }
 
 type vendorinfo struct {

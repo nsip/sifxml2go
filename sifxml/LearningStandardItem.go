@@ -4,7 +4,7 @@ package sifxml
 type LearningStandardItems []LearningStandardItem
 
     type LearningStandardItem struct {
-  learningstandarditem `xml:"LearningStandardItem" json:"LearningStandardItem"`
+  learningstandarditem `xml:"LearningStandardItem"`
 }
 
 type learningstandarditem struct {

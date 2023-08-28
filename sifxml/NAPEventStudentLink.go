@@ -4,7 +4,7 @@ package sifxml
 type NAPEventStudentLinks []NAPEventStudentLink
 
     type NAPEventStudentLink struct {
-  napeventstudentlink `xml:"NAPEventStudentLink" json:"NAPEventStudentLink"`
+  napeventstudentlink `xml:"NAPEventStudentLink"`
 }
 
 type napeventstudentlink struct {

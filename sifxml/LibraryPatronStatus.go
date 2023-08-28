@@ -4,7 +4,7 @@ package sifxml
 type LibraryPatronStatuss []LibraryPatronStatus
 
     type LibraryPatronStatus struct {
-  librarypatronstatus `xml:"LibraryPatronStatus" json:"LibraryPatronStatus"`
+  librarypatronstatus `xml:"LibraryPatronStatus"`
 }
 
 type librarypatronstatus struct {

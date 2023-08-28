@@ -4,7 +4,7 @@ package sifxml
 type ChargedLocationInfos []ChargedLocationInfo
 
     type ChargedLocationInfo struct {
-  chargedlocationinfo `xml:"ChargedLocationInfo" json:"ChargedLocationInfo"`
+  chargedlocationinfo `xml:"ChargedLocationInfo"`
 }
 
 type chargedlocationinfo struct {

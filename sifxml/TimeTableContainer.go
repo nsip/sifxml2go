@@ -4,7 +4,7 @@ package sifxml
 type TimeTableContainers []TimeTableContainer
 
     type TimeTableContainer struct {
-  timetablecontainer `xml:"TimeTableContainer" json:"TimeTableContainer"`
+  timetablecontainer `xml:"TimeTableContainer"`
 }
 
 type timetablecontainer struct {

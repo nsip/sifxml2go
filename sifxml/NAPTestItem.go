@@ -4,7 +4,7 @@ package sifxml
 type NAPTestItems []NAPTestItem
 
     type NAPTestItem struct {
-  naptestitem `xml:"NAPTestItem" json:"NAPTestItem"`
+  naptestitem `xml:"NAPTestItem"`
 }
 
 type naptestitem struct {

@@ -4,7 +4,7 @@ package sifxml
 type PersonPictures []PersonPicture
 
     type PersonPicture struct {
-  personpicture `xml:"PersonPicture" json:"PersonPicture"`
+  personpicture `xml:"PersonPicture"`
 }
 
 type personpicture struct {
@@ -21,7 +21,7 @@ type personpicture struct {
       }
     
 type PersonPicture_ParentObjectRefId struct {
-  personpicture_parentobjectrefid `xml:"PersonPicture_ParentObjectRefId" json:"PersonPicture_ParentObjectRefId"`
+  personpicture_parentobjectrefid `xml:"PersonPicture_ParentObjectRefId"`
 }
 
 type personpicture_parentobjectrefid struct {

@@ -4,7 +4,7 @@ package sifxml
 type CalendarSummarys []CalendarSummary
 
     type CalendarSummary struct {
-  calendarsummary `xml:"CalendarSummary" json:"CalendarSummary"`
+  calendarsummary `xml:"CalendarSummary"`
 }
 
 type calendarsummary struct {

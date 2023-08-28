@@ -4,7 +4,7 @@ package sifxml
 type CollectionDeclarations []CollectionDeclaration
 
     type CollectionDeclaration struct {
-  collectiondeclaration `xml:"CollectionDeclaration" json:"CollectionDeclaration"`
+  collectiondeclaration `xml:"CollectionDeclaration"`
 }
 
 type collectiondeclaration struct {

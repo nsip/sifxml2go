@@ -4,7 +4,7 @@ package sifxml
 type NAPStudentResponseSets []NAPStudentResponseSet
 
     type NAPStudentResponseSet struct {
-  napstudentresponseset `xml:"NAPStudentResponseSet" json:"NAPStudentResponseSet"`
+  napstudentresponseset `xml:"NAPStudentResponseSet"`
 }
 
 type napstudentresponseset struct {

@@ -4,7 +4,7 @@ package sifxml
 type StudentAttendanceSummarys []StudentAttendanceSummary
 
     type StudentAttendanceSummary struct {
-  studentattendancesummary `xml:"StudentAttendanceSummary" json:"StudentAttendanceSummary"`
+  studentattendancesummary `xml:"StudentAttendanceSummary"`
 }
 
 type studentattendancesummary struct {

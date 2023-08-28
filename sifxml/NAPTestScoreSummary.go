@@ -4,7 +4,7 @@ package sifxml
 type NAPTestScoreSummarys []NAPTestScoreSummary
 
     type NAPTestScoreSummary struct {
-  naptestscoresummary `xml:"NAPTestScoreSummary" json:"NAPTestScoreSummary"`
+  naptestscoresummary `xml:"NAPTestScoreSummary"`
 }
 
 type naptestscoresummary struct {

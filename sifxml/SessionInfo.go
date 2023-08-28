@@ -4,7 +4,7 @@ package sifxml
 type SessionInfos []SessionInfo
 
     type SessionInfo struct {
-  sessioninfo `xml:"SessionInfo" json:"SessionInfo"`
+  sessioninfo `xml:"SessionInfo"`
 }
 
 type sessioninfo struct {

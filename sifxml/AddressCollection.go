@@ -4,7 +4,7 @@ package sifxml
 type AddressCollections []AddressCollection
 
     type AddressCollection struct {
-  addresscollection `xml:"AddressCollection" json:"AddressCollection"`
+  addresscollection `xml:"AddressCollection"`
 }
 
 type addresscollection struct {

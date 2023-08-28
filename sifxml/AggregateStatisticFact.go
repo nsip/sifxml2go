@@ -4,7 +4,7 @@ package sifxml
 type AggregateStatisticFacts []AggregateStatisticFact
 
     type AggregateStatisticFact struct {
-  aggregatestatisticfact `xml:"AggregateStatisticFact" json:"AggregateStatisticFact"`
+  aggregatestatisticfact `xml:"AggregateStatisticFact"`
 }
 
 type aggregatestatisticfact struct {

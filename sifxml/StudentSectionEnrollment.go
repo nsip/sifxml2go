@@ -4,7 +4,7 @@ package sifxml
 type StudentSectionEnrollments []StudentSectionEnrollment
 
     type StudentSectionEnrollment struct {
-  studentsectionenrollment `xml:"StudentSectionEnrollment" json:"StudentSectionEnrollment"`
+  studentsectionenrollment `xml:"StudentSectionEnrollment"`
 }
 
 type studentsectionenrollment struct {

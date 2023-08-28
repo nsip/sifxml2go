@@ -4,7 +4,7 @@ package sifxml
 type Debtors []Debtor
 
     type Debtor struct {
-  debtor `xml:"Debtor" json:"Debtor"`
+  debtor `xml:"Debtor"`
 }
 
 type debtor struct {
@@ -25,7 +25,7 @@ type debtor struct {
       }
     
 type Debtor_BilledEntity struct {
-  debtor_billedentity `xml:"Debtor_BilledEntity" json:"Debtor_BilledEntity"`
+  debtor_billedentity `xml:"Debtor_BilledEntity"`
 }
 
 type debtor_billedentity struct {

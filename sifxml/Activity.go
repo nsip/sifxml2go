@@ -4,7 +4,7 @@ package sifxml
 type Activitys []Activity
 
     type Activity struct {
-  activity `xml:"Activity" json:"Activity"`
+  activity `xml:"Activity"`
 }
 
 type activity struct {

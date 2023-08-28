@@ -4,7 +4,7 @@ package sifxml
 type NAPCodeFrames []NAPCodeFrame
 
     type NAPCodeFrame struct {
-  napcodeframe `xml:"NAPCodeFrame" json:"NAPCodeFrame"`
+  napcodeframe `xml:"NAPCodeFrame"`
 }
 
 type napcodeframe struct {

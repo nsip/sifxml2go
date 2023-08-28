@@ -4,7 +4,7 @@ package sifxml
 type FinancialQuestionnaireCollections []FinancialQuestionnaireCollection
 
     type FinancialQuestionnaireCollection struct {
-  financialquestionnairecollection `xml:"FinancialQuestionnaireCollection" json:"FinancialQuestionnaireCollection"`
+  financialquestionnairecollection `xml:"FinancialQuestionnaireCollection"`
 }
 
 type financialquestionnairecollection struct {

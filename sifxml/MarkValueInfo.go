@@ -4,7 +4,7 @@ package sifxml
 type MarkValueInfos []MarkValueInfo
 
     type MarkValueInfo struct {
-  markvalueinfo `xml:"MarkValueInfo" json:"MarkValueInfo"`
+  markvalueinfo `xml:"MarkValueInfo"`
 }
 
 type markvalueinfo struct {

@@ -4,7 +4,7 @@ package sifxml
 type StudentScoreJudgementAgainstStandards []StudentScoreJudgementAgainstStandard
 
     type StudentScoreJudgementAgainstStandard struct {
-  studentscorejudgementagainststandard `xml:"StudentScoreJudgementAgainstStandard" json:"StudentScoreJudgementAgainstStandard"`
+  studentscorejudgementagainststandard `xml:"StudentScoreJudgementAgainstStandard"`
 }
 
 type studentscorejudgementagainststandard struct {

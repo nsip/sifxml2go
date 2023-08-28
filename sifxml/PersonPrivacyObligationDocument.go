@@ -4,7 +4,7 @@ package sifxml
 type PersonPrivacyObligationDocuments []PersonPrivacyObligationDocument
 
     type PersonPrivacyObligationDocument struct {
-  personprivacyobligationdocument `xml:"PersonPrivacyObligationDocument" json:"PersonPrivacyObligationDocument"`
+  personprivacyobligationdocument `xml:"PersonPrivacyObligationDocument"`
 }
 
 type personprivacyobligationdocument struct {

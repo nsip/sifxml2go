@@ -4,7 +4,7 @@ package sifxml
 type CalendarDates []CalendarDate
 
     type CalendarDate struct {
-  calendardate `xml:"CalendarDate" json:"CalendarDate"`
+  calendardate `xml:"CalendarDate"`
 }
 
 type calendardate struct {

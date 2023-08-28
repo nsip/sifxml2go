@@ -4,7 +4,7 @@ package sifxml
 type LearningStandardDocuments []LearningStandardDocument
 
     type LearningStandardDocument struct {
-  learningstandarddocument `xml:"LearningStandardDocument" json:"LearningStandardDocument"`
+  learningstandarddocument `xml:"LearningStandardDocument"`
 }
 
 type learningstandarddocument struct {

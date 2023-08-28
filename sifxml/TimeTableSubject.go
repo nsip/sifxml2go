@@ -4,7 +4,7 @@ package sifxml
 type TimeTableSubjects []TimeTableSubject
 
     type TimeTableSubject struct {
-  timetablesubject `xml:"TimeTableSubject" json:"TimeTableSubject"`
+  timetablesubject `xml:"TimeTableSubject"`
 }
 
 type timetablesubject struct {

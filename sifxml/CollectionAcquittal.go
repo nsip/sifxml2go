@@ -4,7 +4,7 @@ package sifxml
 type CollectionAcquittals []CollectionAcquittal
 
     type CollectionAcquittal struct {
-  collectionacquittal `xml:"CollectionAcquittal" json:"CollectionAcquittal"`
+  collectionacquittal `xml:"CollectionAcquittal"`
 }
 
 type collectionacquittal struct {

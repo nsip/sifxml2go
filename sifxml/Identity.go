@@ -4,7 +4,7 @@ package sifxml
 type Identitys []Identity
 
     type Identity struct {
-  identity `xml:"Identity" json:"Identity"`
+  identity `xml:"Identity"`
 }
 
 type identity struct {
@@ -21,7 +21,7 @@ type identity struct {
       }
     
 type Identity_SIF_RefId struct {
-  identity_sif_refid `xml:"Identity_SIF_RefId" json:"Identity_SIF_RefId"`
+  identity_sif_refid `xml:"Identity_SIF_RefId"`
 }
 
 type identity_sif_refid struct {

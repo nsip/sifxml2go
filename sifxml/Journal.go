@@ -4,7 +4,7 @@ package sifxml
 type Journals []Journal
 
     type Journal struct {
-  journal `xml:"Journal" json:"Journal"`
+  journal `xml:"Journal"`
 }
 
 type journal struct {
@@ -31,7 +31,7 @@ type journal struct {
       }
     
 type Journal_OriginatingTransactionRefId struct {
-  journal_originatingtransactionrefid `xml:"Journal_OriginatingTransactionRefId" json:"Journal_OriginatingTransactionRefId"`
+  journal_originatingtransactionrefid `xml:"Journal_OriginatingTransactionRefId"`
 }
 
 type journal_originatingtransactionrefid struct {

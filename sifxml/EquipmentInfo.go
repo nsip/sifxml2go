@@ -4,7 +4,7 @@ package sifxml
 type EquipmentInfos []EquipmentInfo
 
     type EquipmentInfo struct {
-  equipmentinfo `xml:"EquipmentInfo" json:"EquipmentInfo"`
+  equipmentinfo `xml:"EquipmentInfo"`
 }
 
 type equipmentinfo struct {
@@ -24,7 +24,7 @@ type equipmentinfo struct {
       }
     
 type EquipmentInfo_SIF_RefId struct {
-  equipmentinfo_sif_refid `xml:"EquipmentInfo_SIF_RefId" json:"EquipmentInfo_SIF_RefId"`
+  equipmentinfo_sif_refid `xml:"EquipmentInfo_SIF_RefId"`
 }
 
 type equipmentinfo_sif_refid struct {

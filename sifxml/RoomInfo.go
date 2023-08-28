@@ -4,7 +4,7 @@ package sifxml
 type RoomInfos []RoomInfo
 
     type RoomInfo struct {
-  roominfo `xml:"RoomInfo" json:"RoomInfo"`
+  roominfo `xml:"RoomInfo"`
 }
 
 type roominfo struct {

@@ -4,7 +4,7 @@ package sifxml
 type StudentContactRelationships []StudentContactRelationship
 
     type StudentContactRelationship struct {
-  studentcontactrelationship `xml:"StudentContactRelationship" json:"StudentContactRelationship"`
+  studentcontactrelationship `xml:"StudentContactRelationship"`
 }
 
 type studentcontactrelationship struct {

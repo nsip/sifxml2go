@@ -4,7 +4,7 @@ package sifxml
 type GradingAssignments []GradingAssignment
 
     type GradingAssignment struct {
-  gradingassignment `xml:"GradingAssignment" json:"GradingAssignment"`
+  gradingassignment `xml:"GradingAssignment"`
 }
 
 type gradingassignment struct {

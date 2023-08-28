@@ -4,7 +4,7 @@ package sifxml
 type WellbeingPersonLinks []WellbeingPersonLink
 
     type WellbeingPersonLink struct {
-  wellbeingpersonlink `xml:"WellbeingPersonLink" json:"WellbeingPersonLink"`
+  wellbeingpersonlink `xml:"WellbeingPersonLink"`
 }
 
 type wellbeingpersonlink struct {
@@ -27,7 +27,7 @@ type wellbeingpersonlink struct {
       }
     
 type WellbeingPersonLink_PersonRefId struct {
-  wellbeingpersonlink_personrefid `xml:"WellbeingPersonLink_PersonRefId" json:"WellbeingPersonLink_PersonRefId"`
+  wellbeingpersonlink_personrefid `xml:"WellbeingPersonLink_PersonRefId"`
 }
 
 type wellbeingpersonlink_personrefid struct {

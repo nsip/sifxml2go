@@ -4,7 +4,7 @@ package sifxml
 type CensusCollections []CensusCollection
 
     type CensusCollection struct {
-  censuscollection `xml:"CensusCollection" json:"CensusCollection"`
+  censuscollection `xml:"CensusCollection"`
 }
 
 type censuscollection struct {

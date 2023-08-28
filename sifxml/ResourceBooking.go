@@ -4,7 +4,7 @@ package sifxml
 type ResourceBookings []ResourceBooking
 
     type ResourceBooking struct {
-  resourcebooking `xml:"ResourceBooking" json:"ResourceBooking"`
+  resourcebooking `xml:"ResourceBooking"`
 }
 
 type resourcebooking struct {
@@ -26,7 +26,7 @@ type resourcebooking struct {
       }
     
 type ResourceBooking_ResourceRefId struct {
-  resourcebooking_resourcerefid `xml:"ResourceBooking_ResourceRefId" json:"ResourceBooking_ResourceRefId"`
+  resourcebooking_resourcerefid `xml:"ResourceBooking_ResourceRefId"`
 }
 
 type resourcebooking_resourcerefid struct {

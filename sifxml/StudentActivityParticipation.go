@@ -4,7 +4,7 @@ package sifxml
 type StudentActivityParticipations []StudentActivityParticipation
 
     type StudentActivityParticipation struct {
-  studentactivityparticipation `xml:"StudentActivityParticipation" json:"StudentActivityParticipation"`
+  studentactivityparticipation `xml:"StudentActivityParticipation"`
 }
 
 type studentactivityparticipation struct {

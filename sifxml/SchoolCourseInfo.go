@@ -4,7 +4,7 @@ package sifxml
 type SchoolCourseInfos []SchoolCourseInfo
 
     type SchoolCourseInfo struct {
-  schoolcourseinfo `xml:"SchoolCourseInfo" json:"SchoolCourseInfo"`
+  schoolcourseinfo `xml:"SchoolCourseInfo"`
 }
 
 type schoolcourseinfo struct {

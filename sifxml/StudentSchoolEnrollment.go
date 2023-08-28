@@ -4,7 +4,7 @@ package sifxml
 type StudentSchoolEnrollments []StudentSchoolEnrollment
 
     type StudentSchoolEnrollment struct {
-  studentschoolenrollment `xml:"StudentSchoolEnrollment" json:"StudentSchoolEnrollment"`
+  studentschoolenrollment `xml:"StudentSchoolEnrollment"`
 }
 
 type studentschoolenrollment struct {
@@ -61,7 +61,7 @@ type studentschoolenrollment struct {
       }
     
 type StudentSchoolEnrollment_Calendar struct {
-  studentschoolenrollment_calendar `xml:"StudentSchoolEnrollment_Calendar" json:"StudentSchoolEnrollment_Calendar"`
+  studentschoolenrollment_calendar `xml:"StudentSchoolEnrollment_Calendar"`
 }
 
 type studentschoolenrollment_calendar struct {

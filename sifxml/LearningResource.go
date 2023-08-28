@@ -4,7 +4,7 @@ package sifxml
 type LearningResources []LearningResource
 
     type LearningResource struct {
-  learningresource `xml:"LearningResource" json:"LearningResource"`
+  learningresource `xml:"LearningResource"`
 }
 
 type learningresource struct {
