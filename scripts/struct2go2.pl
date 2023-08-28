@@ -14,7 +14,7 @@ while(<>) {
     $in_struct = 1;
     $t = $1;
     $lct = lc $t;
-    $annotation = $o ? "" : qq{`xml:"$t" json:"$t"`};
+    $annotation = $o ? "" : qq{`xml:"$t"`};
     print << "END";
   $lct $annotation
 }
