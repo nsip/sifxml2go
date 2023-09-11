@@ -1,13 +1,20 @@
 package sifxml
 
 
-type SessionInfos []SessionInfo
+
+    type SessionInfos struct {
+      sessioninfos `json:"SessionInfos"`
+    }
+
+    type sessioninfos struct {
+      SessionInfo []sessioninfo `json:"SessionInfo"`
+    }
 
     type SessionInfo struct {
-  sessioninfo `xml:"SessionInfo" json:"SessionInfo"`
-}
+      sessioninfo `xml:"SessionInfo" json:"SessionInfo"`
+     }
 
-type sessioninfo struct {
+     type sessioninfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       TimeTableCellRefId *String `xml:"TimeTableCellRefId" json:"TimeTableCellRefId"`

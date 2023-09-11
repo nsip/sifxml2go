@@ -1,13 +1,20 @@
 package sifxml
 
 
-type WellbeingPersonLinks []WellbeingPersonLink
+
+    type WellbeingPersonLinks struct {
+      wellbeingpersonlinks `json:"WellbeingPersonLinks"`
+    }
+
+    type wellbeingpersonlinks struct {
+      WellbeingPersonLink []wellbeingpersonlink `json:"WellbeingPersonLink"`
+    }
 
     type WellbeingPersonLink struct {
-  wellbeingpersonlink `xml:"WellbeingPersonLink" json:"WellbeingPersonLink"`
-}
+      wellbeingpersonlink `xml:"WellbeingPersonLink" json:"WellbeingPersonLink"`
+     }
 
-type wellbeingpersonlink struct {
+     type wellbeingpersonlink struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       WellbeingEventRefId *String `xml:"WellbeingEventRefId" json:"WellbeingEventRefId"`
@@ -31,6 +38,7 @@ type WellbeingPersonLink_PersonRefId struct {
 }
 
 type wellbeingpersonlink_personrefid struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

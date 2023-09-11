@@ -1,13 +1,20 @@
 package sifxml
 
 
-type Journals []Journal
+
+    type Journals struct {
+      journals `json:"Journals"`
+    }
+
+    type journals struct {
+      Journal []journal `json:"Journal"`
+    }
 
     type Journal struct {
-  journal `xml:"Journal" json:"Journal"`
-}
+      journal `xml:"Journal" json:"Journal"`
+     }
 
-type journal struct {
+     type journal struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       DebitFinancialAccountRefId *String `xml:"DebitFinancialAccountRefId,omitempty" json:"DebitFinancialAccountRefId,omitempty"`
@@ -35,6 +42,7 @@ type Journal_OriginatingTransactionRefId struct {
 }
 
 type journal_originatingtransactionrefid struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

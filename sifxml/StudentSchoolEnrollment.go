@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentSchoolEnrollments []StudentSchoolEnrollment
+
+    type StudentSchoolEnrollments struct {
+      studentschoolenrollments `json:"StudentSchoolEnrollments"`
+    }
+
+    type studentschoolenrollments struct {
+      StudentSchoolEnrollment []studentschoolenrollment `json:"StudentSchoolEnrollment"`
+    }
 
     type StudentSchoolEnrollment struct {
-  studentschoolenrollment `xml:"StudentSchoolEnrollment" json:"StudentSchoolEnrollment"`
-}
+      studentschoolenrollment `xml:"StudentSchoolEnrollment" json:"StudentSchoolEnrollment"`
+     }
 
-type studentschoolenrollment struct {
+     type studentschoolenrollment struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
@@ -65,6 +72,7 @@ type StudentSchoolEnrollment_Calendar struct {
 }
 
 type studentschoolenrollment_calendar struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

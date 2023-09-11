@@ -1,13 +1,20 @@
 package sifxml
 
 
-type AddressCollections []AddressCollection
+
+    type AddressCollections struct {
+      addresscollections `json:"AddressCollections"`
+    }
+
+    type addresscollections struct {
+      AddressCollection []addresscollection `json:"AddressCollection"`
+    }
 
     type AddressCollection struct {
-  addresscollection `xml:"AddressCollection" json:"AddressCollection"`
-}
+      addresscollection `xml:"AddressCollection" json:"AddressCollection"`
+     }
 
-type addresscollection struct {
+     type addresscollection struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       AddressCollectionYear *SchoolYearType `xml:"AddressCollectionYear" json:"AddressCollectionYear"`
       RoundCode *String `xml:"RoundCode" json:"RoundCode"`

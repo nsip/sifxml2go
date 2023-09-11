@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentAttendanceCollections []StudentAttendanceCollection
+
+    type StudentAttendanceCollections struct {
+      studentattendancecollections `json:"StudentAttendanceCollections"`
+    }
+
+    type studentattendancecollections struct {
+      StudentAttendanceCollection []studentattendancecollection `json:"StudentAttendanceCollection"`
+    }
 
     type StudentAttendanceCollection struct {
-  studentattendancecollection `xml:"StudentAttendanceCollection" json:"StudentAttendanceCollection"`
-}
+      studentattendancecollection `xml:"StudentAttendanceCollection" json:"StudentAttendanceCollection"`
+     }
 
-type studentattendancecollection struct {
+     type studentattendancecollection struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StudentAttendanceCollectionYear *SchoolYearType `xml:"StudentAttendanceCollectionYear" json:"StudentAttendanceCollectionYear"`
       RoundCode *String `xml:"RoundCode" json:"RoundCode"`

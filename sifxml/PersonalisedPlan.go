@@ -1,13 +1,20 @@
 package sifxml
 
 
-type PersonalisedPlans []PersonalisedPlan
+
+    type PersonalisedPlans struct {
+      personalisedplans `json:"PersonalisedPlans"`
+    }
+
+    type personalisedplans struct {
+      PersonalisedPlan []personalisedplan `json:"PersonalisedPlan"`
+    }
 
     type PersonalisedPlan struct {
-  personalisedplan `xml:"PersonalisedPlan" json:"PersonalisedPlan"`
-}
+      personalisedplan `xml:"PersonalisedPlan" json:"PersonalisedPlan"`
+     }
 
-type personalisedplan struct {
+     type personalisedplan struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`

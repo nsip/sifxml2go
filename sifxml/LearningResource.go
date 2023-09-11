@@ -1,13 +1,20 @@
 package sifxml
 
 
-type LearningResources []LearningResource
+
+    type LearningResources struct {
+      learningresources `json:"LearningResources"`
+    }
+
+    type learningresources struct {
+      LearningResource []learningresource `json:"LearningResource"`
+    }
 
     type LearningResource struct {
-  learningresource `xml:"LearningResource" json:"LearningResource"`
-}
+      learningresource `xml:"LearningResource" json:"LearningResource"`
+     }
 
-type learningresource struct {
+     type learningresource struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       Name *String `xml:"Name" json:"Name"`
       Author *String `xml:"Author,omitempty" json:"Author,omitempty"`

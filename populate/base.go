@@ -35,14 +35,16 @@ func PrintXML(record interface{}) error {
 }
 
 // Marshal to JSON, and print to output.
-func PrintJSON(record interface{}) {
+func PrintJSON(record interface{}) error {
 	b, err := json.Marshal(record)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	var out bytes.Buffer
-	json.Indent(&out, b, "=", "\t")
+	json.Indent(&out, b, " ", "\t")
 	out.WriteTo(os.Stdout)
+
+	return nil
 }
 
 func create_GUID() string {

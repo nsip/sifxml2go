@@ -1,13 +1,20 @@
 package sifxml
 
 
-type FinancialQuestionnaireCollections []FinancialQuestionnaireCollection
+
+    type FinancialQuestionnaireCollections struct {
+      financialquestionnairecollections `json:"FinancialQuestionnaireCollections"`
+    }
+
+    type financialquestionnairecollections struct {
+      FinancialQuestionnaireCollection []financialquestionnairecollection `json:"FinancialQuestionnaireCollection"`
+    }
 
     type FinancialQuestionnaireCollection struct {
-  financialquestionnairecollection `xml:"FinancialQuestionnaireCollection" json:"FinancialQuestionnaireCollection"`
-}
+      financialquestionnairecollection `xml:"FinancialQuestionnaireCollection" json:"FinancialQuestionnaireCollection"`
+     }
 
-type financialquestionnairecollection struct {
+     type financialquestionnairecollection struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       FQYear *SchoolYearType `xml:"FQYear" json:"FQYear"`
       RoundCode *String `xml:"RoundCode" json:"RoundCode"`

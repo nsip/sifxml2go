@@ -6,6 +6,7 @@ package sifxml
 }
 
 type abstractcontentelementtype struct {
+
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       XMLData *XMLDataType `xml:"XMLData,omitempty" json:"XMLData,omitempty"`
       TextData *TextDataType `xml:"TextData,omitempty" json:"TextData,omitempty"`
@@ -19,6 +20,7 @@ type abstractcontentelementtype struct {
 }
 
 type xmldatatype struct {
+
           Description *String `xml:"Description,attr" json:"Description"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -29,6 +31,7 @@ type xmldatatype struct {
 }
 
 type textdatatype struct {
+
           MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
       FileName *String `xml:"FileName,attr" json:"FileName"`
       Description *String `xml:"Description,attr" json:"Description"`
@@ -41,6 +44,7 @@ type textdatatype struct {
 }
 
 type binarydatatype struct {
+
           MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
       FileName *String `xml:"FileName,attr" json:"FileName"`
       Description *String `xml:"Description,attr" json:"Description"`
@@ -53,6 +57,7 @@ type binarydatatype struct {
 }
 
 type referencedatatype struct {
+
         MIMEType *String `xml:"MIMEType,attr" json:"MIMEType"`
       Description *String `xml:"Description,attr" json:"Description"`
       URL *String `xml:"URL" json:"URL"`
@@ -64,6 +69,7 @@ type referencedatatype struct {
 }
 
 type monetaryamounttype struct {
+
           Currency *ISO4217CurrencyNamesAndCodeElementsType `xml:"Currency,attr" json:"Currency"`
       
         Value *Float `xml:",chardata" json:"value"`
@@ -82,6 +88,7 @@ type monetaryamounttype struct {
 }
 
 type typedidreftype struct {
+
           SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       
         Value *RefIdType `xml:",chardata" json:"value"`
@@ -97,6 +104,7 @@ type typedidreftype struct {
 }
 
 type homeroomtype struct {
+
           SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -107,6 +115,7 @@ type homeroomtype struct {
 }
 
 type staffrefidtype struct {
+
           SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -117,6 +126,7 @@ type staffrefidtype struct {
 }
 
 type traveldetailscontainertype struct {
+
         ToSchool *SchoolTravelType `xml:"ToSchool,omitempty" json:"ToSchool,omitempty"`
       FromSchool *SchoolTravelType `xml:"FromSchool,omitempty" json:"FromSchool,omitempty"`
       
@@ -127,6 +137,7 @@ type traveldetailscontainertype struct {
 }
 
 type schooltraveltype struct {
+
         TravelMode *AUCodeSetsTravelModeType `xml:"TravelMode,omitempty" json:"TravelMode,omitempty"`
       TravelDetails *String `xml:"TravelDetails,omitempty" json:"TravelDetails,omitempty"`
       TravelAccompaniment *AUCodeSetsAccompanimentType `xml:"TravelAccompaniment,omitempty" json:"TravelAccompaniment,omitempty"`
@@ -138,6 +149,7 @@ type schooltraveltype struct {
 }
 
 type librarytransactionlisttype struct {
+
         Transaction []LibraryTransactionType `xml:"Transaction" json:"Transaction"`
       
       }
@@ -147,6 +159,7 @@ type librarytransactionlisttype struct {
 }
 
 type librarytransactiontype struct {
+
         ItemInfo *LibraryItemInfoType `xml:"ItemInfo,omitempty" json:"ItemInfo,omitempty"`
       CheckoutInfo *CheckoutInfoType `xml:"CheckoutInfo,omitempty" json:"CheckoutInfo,omitempty"`
       FineInfoList *FineInfoListType `xml:"FineInfoList,omitempty" json:"FineInfoList,omitempty"`
@@ -159,6 +172,7 @@ type librarytransactiontype struct {
 }
 
 type libraryiteminfotype struct {
+
         Type *String `xml:"Type,attr" json:"Type"`
       Title *String `xml:"Title" json:"Title"`
       Author *String `xml:"Author,omitempty" json:"Author,omitempty"`
@@ -175,6 +189,7 @@ type libraryiteminfotype struct {
 }
 
 type checkoutinfotype struct {
+
         CheckedOutOn *String `xml:"CheckedOutOn" json:"CheckedOutOn"`
       ReturnBy *String `xml:"ReturnBy" json:"ReturnBy"`
       RenewalCount *Int `xml:"RenewalCount,omitempty" json:"RenewalCount,omitempty"`
@@ -186,6 +201,7 @@ type checkoutinfotype struct {
 }
 
 type fineinfolisttype struct {
+
         FineInfo []FineInfoType `xml:"FineInfo" json:"FineInfo"`
       
       }
@@ -195,6 +211,7 @@ type fineinfolisttype struct {
 }
 
 type fineinfotype struct {
+
         Type *String `xml:"Type,attr" json:"Type"`
       Assessed *String `xml:"Assessed" json:"Assessed"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
@@ -208,6 +225,7 @@ type fineinfotype struct {
 }
 
 type holdinfolisttype struct {
+
         HoldInfo []HoldInfoType `xml:"HoldInfo" json:"HoldInfo"`
       
       }
@@ -217,6 +235,7 @@ type holdinfolisttype struct {
 }
 
 type holdinfotype struct {
+
         Type *String `xml:"Type,attr" json:"Type"`
       DatePlaced *String `xml:"DatePlaced" json:"DatePlaced"`
       DateNeeded *String `xml:"DateNeeded,omitempty" json:"DateNeeded,omitempty"`
@@ -231,6 +250,7 @@ type holdinfotype struct {
 }
 
 type librarymessagelisttype struct {
+
         Message []LibraryMessageType `xml:"Message" json:"Message"`
       
       }
@@ -240,6 +260,7 @@ type librarymessagelisttype struct {
 }
 
 type librarymessagetype struct {
+
         Priority *String `xml:"Priority,attr" json:"Priority"`
       PriorityCodeset *String `xml:"PriorityCodeset,attr" json:"PriorityCodeset"`
       Sent *String `xml:"Sent,omitempty" json:"Sent,omitempty"`
@@ -252,6 +273,7 @@ type librarymessagetype struct {
 }
 
 type studentattendancecollectionreportinglisttype struct {
+
         StudentAttendanceCollectionReporting []StudentAttendanceCollectionReportingType `xml:"StudentAttendanceCollectionReporting" json:"StudentAttendanceCollectionReporting"`
       
       }
@@ -261,6 +283,7 @@ type studentattendancecollectionreportinglisttype struct {
 }
 
 type studentattendancecollectionreportingtype struct {
+
         CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *String `xml:"EntityName,omitempty" json:"EntityName,omitempty"`
       EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
@@ -273,6 +296,7 @@ type studentattendancecollectionreportingtype struct {
 }
 
 type statscohortyearlevellisttype struct {
+
         StatsCohortYearLevel []StatsCohortYearLevelType `xml:"StatsCohortYearLevel" json:"StatsCohortYearLevel"`
       
       }
@@ -282,6 +306,7 @@ type statscohortyearlevellisttype struct {
 }
 
 type statscohortyearleveltype struct {
+
         CohortYearLevel *YearLevelType `xml:"CohortYearLevel" json:"CohortYearLevel"`
       StatsCohortList *StatsCohortListType `xml:"StatsCohortList" json:"StatsCohortList"`
       
@@ -292,6 +317,7 @@ type statscohortyearleveltype struct {
 }
 
 type statscohortlisttype struct {
+
         StatsCohort []StatsCohortType `xml:"StatsCohort" json:"StatsCohort"`
       
       }
@@ -301,6 +327,7 @@ type statscohortlisttype struct {
 }
 
 type statscohorttype struct {
+
         StatsCohortId *LocalIdType `xml:"StatsCohortId" json:"StatsCohortId"`
       StatsIndigenousStudentType *String `xml:"StatsIndigenousStudentType" json:"StatsIndigenousStudentType"`
       CohortGender *String `xml:"CohortGender" json:"CohortGender"`
@@ -318,6 +345,7 @@ type statscohorttype struct {
 }
 
 type addresscollectionreportinglisttype struct {
+
         AddressCollectionReporting []AddressCollectionReportingType `xml:"AddressCollectionReporting" json:"AddressCollectionReporting"`
       
       }
@@ -327,6 +355,7 @@ type addresscollectionreportinglisttype struct {
 }
 
 type addresscollectionreportingtype struct {
+
         CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *String `xml:"EntityName,omitempty" json:"EntityName,omitempty"`
       EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
@@ -340,6 +369,7 @@ type addresscollectionreportingtype struct {
 }
 
 type addresscollectionstudentlisttype struct {
+
         AddressCollectionStudent []AddressCollectionStudentType `xml:"AddressCollectionStudent" json:"AddressCollectionStudent"`
       
       }
@@ -349,6 +379,7 @@ type addresscollectionstudentlisttype struct {
 }
 
 type addresscollectionstudenttype struct {
+
         LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
       EducationLevel *AUCodeSetsEducationLevelType `xml:"EducationLevel" json:"EducationLevel"`
       BoardingStatus *AUCodeSetsBoardingType `xml:"BoardingStatus,omitempty" json:"BoardingStatus,omitempty"`
@@ -364,6 +395,7 @@ type addresscollectionstudenttype struct {
 }
 
 type agparenttype struct {
+
         ParentName *NameOfRecordType `xml:"ParentName" json:"ParentName"`
       AddressSameAsStudent *AUCodeSetsYesOrNoCategoryType `xml:"AddressSameAsStudent" json:"AddressSameAsStudent"`
       ParentAddress *AddressType `xml:"ParentAddress" json:"ParentAddress"`
@@ -375,6 +407,7 @@ type agparenttype struct {
 }
 
 type agroundlisttype struct {
+
         AGRound []AGRoundType `xml:"AGRound" json:"AGRound"`
       
       }
@@ -384,6 +417,7 @@ type agroundlisttype struct {
 }
 
 type agroundtype struct {
+
         RoundCode *String `xml:"RoundCode" json:"RoundCode"`
       RoundName *String `xml:"RoundName" json:"RoundName"`
       StartDate *String `xml:"StartDate" json:"StartDate"`
@@ -397,6 +431,7 @@ type agroundtype struct {
 }
 
 type agcontextualquestionlisttype struct {
+
         AGContextualQuestion []AGContextualQuestionType `xml:"AGContextualQuestion" json:"AGContextualQuestion"`
       
       }
@@ -406,6 +441,7 @@ type agcontextualquestionlisttype struct {
 }
 
 type agcontextualquestiontype struct {
+
         AGContextCode *AUCodeSetsAGContextQuestionType `xml:"AGContextCode" json:"AGContextCode"`
       AGAnswer *String `xml:"AGAnswer" json:"AGAnswer"`
       
@@ -416,6 +452,7 @@ type agcontextualquestiontype struct {
 }
 
 type censusreportinglisttype struct {
+
         CensusReporting []CensusReportingType `xml:"CensusReporting" json:"CensusReporting"`
       
       }
@@ -425,6 +462,7 @@ type censusreportinglisttype struct {
 }
 
 type censusreportingtype struct {
+
         EntityLevel *String `xml:"EntityLevel,omitempty" json:"EntityLevel,omitempty"`
       CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *String `xml:"EntityName,omitempty" json:"EntityName,omitempty"`
@@ -439,6 +477,7 @@ type censusreportingtype struct {
 }
 
 type censusstafflisttype struct {
+
         CensusStaff []CensusStaffType `xml:"CensusStaff" json:"CensusStaff"`
       
       }
@@ -448,6 +487,7 @@ type censusstafflisttype struct {
 }
 
 type censusstafftype struct {
+
         StaffCohortId *LocalIdType `xml:"StaffCohortId" json:"StaffCohortId"`
       StaffActivity *StaffActivityExtensionType `xml:"StaffActivity" json:"StaffActivity"`
       CohortGender *String `xml:"CohortGender" json:"CohortGender"`
@@ -464,6 +504,7 @@ type censusstafftype struct {
 }
 
 type staffassignmentmostrecentcontainertype struct {
+
         PrimaryFTE *FTEType `xml:"PrimaryFTE,omitempty" json:"PrimaryFTE,omitempty"`
       SecondaryFTE *FTEType `xml:"SecondaryFTE,omitempty" json:"SecondaryFTE,omitempty"`
       
@@ -474,6 +515,7 @@ type staffassignmentmostrecentcontainertype struct {
 }
 
 type censusstudentlisttype struct {
+
         CensusStudent []CensusStudentType `xml:"CensusStudent" json:"CensusStudent"`
       
       }
@@ -483,6 +525,7 @@ type censusstudentlisttype struct {
 }
 
 type censusstudenttype struct {
+
         StudentCohortId *LocalIdType `xml:"StudentCohortId" json:"StudentCohortId"`
       YearLevel *YearLevelType `xml:"YearLevel" json:"YearLevel"`
       CensusAge *Int `xml:"CensusAge" json:"CensusAge"`
@@ -503,6 +546,7 @@ type censusstudenttype struct {
 }
 
 type agreportingobjectresponselisttype struct {
+
         AGReportingObjectResponse []AGReportingObjectResponseType `xml:"AGReportingObjectResponse" json:"AGReportingObjectResponse"`
       
       }
@@ -512,6 +556,7 @@ type agreportingobjectresponselisttype struct {
 }
 
 type agreportingobjectresponsetype struct {
+
         SubmittedRefId *String `xml:"SubmittedRefId,omitempty" json:"SubmittedRefId,omitempty"`
       SIFRefId *String `xml:"SIFRefId,omitempty" json:"SIFRefId,omitempty"`
       HTTPStatusCode *String `xml:"HTTPStatusCode,omitempty" json:"HTTPStatusCode,omitempty"`
@@ -528,6 +573,7 @@ type agreportingobjectresponsetype struct {
 }
 
 type fqreportinglisttype struct {
+
         FQReporting []FQReportingType `xml:"FQReporting" json:"FQReporting"`
       
       }
@@ -537,6 +583,7 @@ type fqreportinglisttype struct {
 }
 
 type fqreportingtype struct {
+
         CommonwealthId *String `xml:"CommonwealthId" json:"CommonwealthId"`
       EntityName *String `xml:"EntityName,omitempty" json:"EntityName,omitempty"`
       EntityContact *EntityContactInfoType `xml:"EntityContact" json:"EntityContact"`
@@ -551,6 +598,7 @@ type fqreportingtype struct {
 }
 
 type fqcontextualquestionlisttype struct {
+
         FQContextualQuestion []FQContextualQuestionType `xml:"FQContextualQuestion" json:"FQContextualQuestion"`
       
       }
@@ -560,6 +608,7 @@ type fqcontextualquestionlisttype struct {
 }
 
 type fqcontextualquestiontype struct {
+
         FQContext *String `xml:"FQContext" json:"FQContext"`
       FQAnswer *String `xml:"FQAnswer" json:"FQAnswer"`
       
@@ -570,6 +619,7 @@ type fqcontextualquestiontype struct {
 }
 
 type fqitemlisttype struct {
+
         FQItem []FQItemType `xml:"FQItem" json:"FQItem"`
       
       }
@@ -579,6 +629,7 @@ type fqitemlisttype struct {
 }
 
 type fqitemtype struct {
+
         FQItemCode *String `xml:"FQItemCode" json:"FQItemCode"`
       TuitionAmount *Float `xml:"TuitionAmount,omitempty" json:"TuitionAmount,omitempty"`
       BoardingAmount *Float `xml:"BoardingAmount,omitempty" json:"BoardingAmount,omitempty"`
@@ -593,6 +644,7 @@ type fqitemtype struct {
 }
 
 type agrulelisttype struct {
+
         AGRule []AGRuleType `xml:"AGRule" json:"AGRule"`
       
       }
@@ -602,6 +654,7 @@ type agrulelisttype struct {
 }
 
 type agruletype struct {
+
         AGRuleCode *String `xml:"AGRuleCode,omitempty" json:"AGRuleCode,omitempty"`
       AGRuleComment *String `xml:"AGRuleComment,omitempty" json:"AGRuleComment,omitempty"`
       AGRuleResponse *String `xml:"AGRuleResponse,omitempty" json:"AGRuleResponse,omitempty"`
@@ -614,6 +667,7 @@ type agruletype struct {
 }
 
 type softwarevendorinfocontainertype struct {
+
         SoftwareProduct *String `xml:"SoftwareProduct" json:"SoftwareProduct"`
       SoftwareVersion *String `xml:"SoftwareVersion" json:"SoftwareVersion"`
       
@@ -624,6 +678,7 @@ type softwarevendorinfocontainertype struct {
 }
 
 type timetablescheduletype struct {
+
         SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId,omitempty"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
@@ -645,6 +700,7 @@ type timetablescheduletype struct {
 }
 
 type timetableschedulecelllisttype struct {
+
         TimeTableScheduleCell []TimeTableScheduleCellType `xml:"TimeTableScheduleCell" json:"TimeTableScheduleCell"`
       
       }
@@ -654,6 +710,7 @@ type timetableschedulecelllisttype struct {
 }
 
 type timetableschedulecelltype struct {
+
         TimeTableScheduleCellLocalId *LocalIdType `xml:"TimeTableScheduleCellLocalId" json:"TimeTableScheduleCellLocalId"`
       TimeTableSubjectRefId *String `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId,omitempty"`
       TeachingGroupGUID *String `xml:"TeachingGroupGUID" json:"TeachingGroupGUID"`
@@ -679,6 +736,7 @@ type timetableschedulecelltype struct {
 }
 
 type teachinggroupschedulelisttype struct {
+
         TeachingGroupSchedule []TeachingGroupScheduleType `xml:"TeachingGroupSchedule" json:"TeachingGroupSchedule"`
       
       }
@@ -688,6 +746,7 @@ type teachinggroupschedulelisttype struct {
 }
 
 type teachinggroupscheduletype struct {
+
         EditorGUID *RefIdType `xml:"EditorGUID" json:"EditorGUID"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
@@ -717,6 +776,7 @@ type teachinggroupscheduletype struct {
 }
 
 type localcodelisttype struct {
+
         LocalCode []LocalCodeType `xml:"LocalCode" json:"LocalCode"`
       
       }
@@ -726,6 +786,7 @@ type localcodelisttype struct {
 }
 
 type localcodetype struct {
+
         LocalisedCode *String `xml:"LocalisedCode" json:"LocalisedCode"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
       Element *String `xml:"Element,omitempty" json:"Element,omitempty"`
@@ -738,6 +799,7 @@ type localcodetype struct {
 }
 
 type studentgrouplisttype struct {
+
         StudentGroup []StudentGroupType `xml:"StudentGroup" json:"StudentGroup"`
       
       }
@@ -747,6 +809,7 @@ type studentgrouplisttype struct {
 }
 
 type studentgrouptype struct {
+
         GroupCategory *AUCodeSetsGroupCategoryCodeType `xml:"GroupCategory" json:"GroupCategory"`
       GroupLocalId *LocalIdType `xml:"GroupLocalId" json:"GroupLocalId"`
       GroupDescription *String `xml:"GroupDescription,omitempty" json:"GroupDescription,omitempty"`
@@ -758,6 +821,7 @@ type studentgrouptype struct {
 }
 
 type publishingpermissionlisttype struct {
+
         PublishingPermission []PublishingPermissionType `xml:"PublishingPermission" json:"PublishingPermission"`
       
       }
@@ -767,6 +831,7 @@ type publishingpermissionlisttype struct {
 }
 
 type publishingpermissiontype struct {
+
         PermissionCategory *AUCodeSetsPermissionCategoryCodeType `xml:"PermissionCategory" json:"PermissionCategory"`
       PermissionValue *AUCodeSetsYesOrNoCategoryType `xml:"PermissionValue" json:"PermissionValue"`
       
@@ -777,6 +842,7 @@ type publishingpermissiontype struct {
 }
 
 type settinglocationlisttype struct {
+
         SettingLocation []SettingLocationType `xml:"SettingLocation" json:"SettingLocation"`
       
       }
@@ -786,6 +852,7 @@ type settinglocationlisttype struct {
 }
 
 type settinglocationtype struct {
+
         SettingLocationName *String `xml:"SettingLocationName,omitempty" json:"SettingLocationName,omitempty"`
       SettingLocationType *String `xml:"SettingLocationType,omitempty" json:"SettingLocationType,omitempty"`
       SettingLocationRefId *String `xml:"SettingLocationRefId,omitempty" json:"SettingLocationRefId,omitempty"`
@@ -798,6 +865,7 @@ type settinglocationtype struct {
 }
 
 type consenttosharingofdatacontainertype struct {
+
         DataDomainObligationList *DataDomainObligationListType `xml:"DataDomainObligationList,omitempty" json:"DataDomainObligationList,omitempty"`
       NeverShareWithList *NeverShareWithListType `xml:"NeverShareWithList,omitempty" json:"NeverShareWithList,omitempty"`
       
@@ -808,6 +876,7 @@ type consenttosharingofdatacontainertype struct {
 }
 
 type datadomainobligationlisttype struct {
+
         DataDomainObligation []DataDomainObligationType `xml:"DataDomainObligation" json:"DataDomainObligation"`
       
       }
@@ -817,6 +886,7 @@ type datadomainobligationlisttype struct {
 }
 
 type datadomainobligationtype struct {
+
         DataDomain *String `xml:"DataDomain" json:"DataDomain"`
       DomainComments *String `xml:"DomainComments" json:"DomainComments"`
       ShareWithList *ShareWithListType `xml:"ShareWithList,omitempty" json:"ShareWithList,omitempty"`
@@ -829,6 +899,7 @@ type datadomainobligationtype struct {
 }
 
 type sharewithlisttype struct {
+
         ShareWith []ShareWithType `xml:"ShareWith" json:"ShareWith"`
       
       }
@@ -838,6 +909,7 @@ type sharewithlisttype struct {
 }
 
 type sharewithtype struct {
+
         ShareWithParty *String `xml:"ShareWithParty" json:"ShareWithParty"`
       ShareWithRefId *String `xml:"ShareWithRefId,omitempty" json:"ShareWithRefId,omitempty"`
       ShareWithObjectTypeName *String `xml:"ShareWithObjectTypeName,omitempty" json:"ShareWithObjectTypeName,omitempty"`
@@ -857,6 +929,7 @@ type sharewithtype struct {
 }
 
 type donotsharewithlisttype struct {
+
         DoNotShareWith []DoNotShareWithType `xml:"DoNotShareWith" json:"DoNotShareWith"`
       
       }
@@ -866,6 +939,7 @@ type donotsharewithlisttype struct {
 }
 
 type donotsharewithtype struct {
+
         DoNotShareWithParty *String `xml:"DoNotShareWithParty" json:"DoNotShareWithParty"`
       DoNotShareWithRefId *String `xml:"DoNotShareWithRefId,omitempty" json:"DoNotShareWithRefId,omitempty"`
       DoNotShareWithObjectTypeName *String `xml:"DoNotShareWithObjectTypeName,omitempty" json:"DoNotShareWithObjectTypeName,omitempty"`
@@ -884,6 +958,7 @@ type donotsharewithtype struct {
 }
 
 type applicablelawlisttype struct {
+
         ApplicableLaw []ApplicableLawType `xml:"ApplicableLaw" json:"ApplicableLaw"`
       
       }
@@ -893,6 +968,7 @@ type applicablelawlisttype struct {
 }
 
 type applicablelawtype struct {
+
         ApplicableCountry *String `xml:"ApplicableCountry" json:"ApplicableCountry"`
       ApplicableLawName *String `xml:"ApplicableLawName" json:"ApplicableLawName"`
       ApplicableLawURL *String `xml:"ApplicableLawURL,omitempty" json:"ApplicableLawURL,omitempty"`
@@ -904,6 +980,7 @@ type applicablelawtype struct {
 }
 
 type permissiontoparticipatelisttype struct {
+
         PermissionToParticipate []PermissionToParticipateType `xml:"PermissionToParticipate" json:"PermissionToParticipate"`
       
       }
@@ -913,6 +990,7 @@ type permissiontoparticipatelisttype struct {
 }
 
 type permissiontoparticipatetype struct {
+
         PermissionCategory *String `xml:"PermissionCategory" json:"PermissionCategory"`
       Permission *String `xml:"Permission" json:"Permission"`
       PermissionValue *String `xml:"PermissionValue,omitempty" json:"PermissionValue,omitempty"`
@@ -931,6 +1009,7 @@ type permissiontoparticipatetype struct {
 }
 
 type neversharewithlisttype struct {
+
         NeverShareWith []NeverShareWithType `xml:"NeverShareWith" json:"NeverShareWith"`
       
       }
@@ -940,6 +1019,7 @@ type neversharewithlisttype struct {
 }
 
 type neversharewithtype struct {
+
         NeverShareWithParty *String `xml:"NeverShareWithParty" json:"NeverShareWithParty"`
       NeverShareWithRefId *String `xml:"NeverShareWithRefId,omitempty" json:"NeverShareWithRefId,omitempty"`
       NeverShareWithObjectTypeName *String `xml:"NeverShareWithObjectTypeName,omitempty" json:"NeverShareWithObjectTypeName,omitempty"`
@@ -959,6 +1039,7 @@ type neversharewithtype struct {
 }
 
 type entitycontactinfotype struct {
+
         Name *NameType `xml:"Name" json:"Name"`
       PositionTitle *String `xml:"PositionTitle,omitempty" json:"PositionTitle,omitempty"`
       Role *String `xml:"Role,omitempty" json:"Role,omitempty"`
@@ -975,6 +1056,7 @@ type entitycontactinfotype struct {
 }
 
 type copyrightcontainertype struct {
+
         Date *String `xml:"Date,omitempty" json:"Date,omitempty"`
       Holder *String `xml:"Holder,omitempty" json:"Holder,omitempty"`
       
@@ -985,6 +1067,7 @@ type copyrightcontainertype struct {
 }
 
 type standardssettingbodytype struct {
+
         Country *CountryType `xml:"Country,omitempty" json:"Country,omitempty"`
       StateProvince *StateProvinceType `xml:"StateProvince,omitempty" json:"StateProvince,omitempty"`
       SettingBodyName *String `xml:"SettingBodyName,omitempty" json:"SettingBodyName,omitempty"`
@@ -996,6 +1079,7 @@ type standardssettingbodytype struct {
 }
 
 type standardhierarchyleveltype struct {
+
         Number *Int `xml:"Number" json:"Number"`
       Description *String `xml:"Description" json:"Description"`
       
@@ -1006,6 +1090,7 @@ type standardhierarchyleveltype struct {
 }
 
 type standardidentifiertype struct {
+
         YearCreated *String `xml:"YearCreated" json:"YearCreated"`
       ACStrandSubjectArea *ACStrandSubjectAreaType `xml:"ACStrandSubjectArea" json:"ACStrandSubjectArea"`
       StandardNumber *String `xml:"StandardNumber" json:"StandardNumber"`
@@ -1023,6 +1108,7 @@ type standardidentifiertype struct {
 }
 
 type alternateidentificationcodelisttype struct {
+
         AlternateIdentificationCode []string `xml:"AlternateIdentificationCode" json:"AlternateIdentificationCode"`
       
       }
@@ -1032,6 +1118,7 @@ type alternateidentificationcodelisttype struct {
 }
 
 type relatedlearningstandarditemrefidlisttype struct {
+
         LearningStandardItemRefId []RelatedLearningStandardItemRefIdType `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
       
       }
@@ -1041,6 +1128,7 @@ type relatedlearningstandarditemrefidlisttype struct {
 }
 
 type relatedlearningstandarditemrefidtype struct {
+
           RelationshipType *String `xml:"RelationshipType,attr" json:"RelationshipType"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -1051,6 +1139,7 @@ type relatedlearningstandarditemrefidtype struct {
 }
 
 type validlettermarklisttype struct {
+
         ValidLetterMark []ValidLetterMarkType `xml:"ValidLetterMark" json:"ValidLetterMark"`
       
       }
@@ -1060,6 +1149,7 @@ type validlettermarklisttype struct {
 }
 
 type validlettermarktype struct {
+
         Code *String `xml:"Code" json:"Code"`
       NumericEquivalent *Float `xml:"NumericEquivalent,omitempty" json:"NumericEquivalent,omitempty"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
@@ -1071,6 +1161,7 @@ type validlettermarktype struct {
 }
 
 type studentgrademarkerslisttype struct {
+
         Marker []MarkerType `xml:"Marker" json:"Marker"`
       
       }
@@ -1080,6 +1171,7 @@ type studentgrademarkerslisttype struct {
 }
 
 type markertype struct {
+
         StaffPersonalRefId *String `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId,omitempty"`
       Role *String `xml:"Role,omitempty" json:"Role,omitempty"`
       
@@ -1090,6 +1182,7 @@ type markertype struct {
 }
 
 type gradingscorelisttype struct {
+
         GradingAssignmentScore []AssignmentScoreType `xml:"GradingAssignmentScore" json:"GradingAssignmentScore"`
       
       }
@@ -1099,6 +1192,7 @@ type gradingscorelisttype struct {
 }
 
 type assignmentscoretype struct {
+
         GradingAssignmentScoreRefId *String `xml:"GradingAssignmentScoreRefId,omitempty" json:"GradingAssignmentScoreRefId,omitempty"`
       Weight *Float `xml:"Weight,omitempty" json:"Weight,omitempty"`
       
@@ -1109,6 +1203,7 @@ type assignmentscoretype struct {
 }
 
 type gradetype struct {
+
         Percentage *Float `xml:"Percentage,omitempty" json:"Percentage,omitempty"`
       Numeric *Float `xml:"Numeric,omitempty" json:"Numeric,omitempty"`
       Letter *String `xml:"Letter,omitempty" json:"Letter,omitempty"`
@@ -1122,6 +1217,7 @@ type gradetype struct {
 }
 
 type learningstandardlisttype struct {
+
         LearningStandard []LearningStandardType `xml:"LearningStandard" json:"LearningStandard"`
       
       }
@@ -1131,6 +1227,7 @@ type learningstandardlisttype struct {
 }
 
 type learningstandardtype struct {
+
         LearningStandardItemRefId *String `xml:"LearningStandardItemRefId,omitempty" json:"LearningStandardItemRefId,omitempty"`
       LearningStandardURL *String `xml:"LearningStandardURL,omitempty" json:"LearningStandardURL,omitempty"`
       LearningStandardLocalId *LocalIdType `xml:"LearningStandardLocalId,omitempty" json:"LearningStandardLocalId,omitempty"`
@@ -1142,6 +1239,7 @@ type learningstandardtype struct {
 }
 
 type assignmentlisttype struct {
+
         GradingAssignmentRefId []string `xml:"GradingAssignmentRefId" json:"GradingAssignmentRefId"`
       
       }
@@ -1151,6 +1249,7 @@ type assignmentlisttype struct {
 }
 
 type genericrubrictype struct {
+
         RubricType *String `xml:"RubricType" json:"RubricType"`
       ScoreList *ScoreListType `xml:"ScoreList" json:"ScoreList"`
       Descriptor *String `xml:"Descriptor,omitempty" json:"Descriptor,omitempty"`
@@ -1162,6 +1261,7 @@ type genericrubrictype struct {
 }
 
 type symptomlisttype struct {
+
         Symptom []string `xml:"Symptom" json:"Symptom"`
       
       }
@@ -1171,6 +1271,7 @@ type symptomlisttype struct {
 }
 
 type medicationlisttype struct {
+
         Medication []MedicationType `xml:"Medication" json:"Medication"`
       
       }
@@ -1180,6 +1281,7 @@ type medicationlisttype struct {
 }
 
 type medicationtype struct {
+
         MedicationName *String `xml:"MedicationName,omitempty" json:"MedicationName,omitempty"`
       Dosage *String `xml:"Dosage,omitempty" json:"Dosage,omitempty"`
       Frequency *String `xml:"Frequency,omitempty" json:"Frequency,omitempty"`
@@ -1193,6 +1295,7 @@ type medicationtype struct {
 }
 
 type wellbeingeventcategorylisttype struct {
+
         WellbeingEventCategory []WellbeingEventCategoryType `xml:"WellbeingEventCategory" json:"WellbeingEventCategory"`
       
       }
@@ -1202,6 +1305,7 @@ type wellbeingeventcategorylisttype struct {
 }
 
 type wellbeingeventcategorytype struct {
+
         EventCategory *String `xml:"EventCategory" json:"EventCategory"`
       WellbeingEventSubCategoryList *WellbeingEventSubCategoryListType `xml:"WellbeingEventSubCategoryList,omitempty" json:"WellbeingEventSubCategoryList,omitempty"`
       
@@ -1212,6 +1316,7 @@ type wellbeingeventcategorytype struct {
 }
 
 type wellbeingeventsubcategorylisttype struct {
+
         WellbeingEventSubCategory []string `xml:"WellbeingEventSubCategory" json:"WellbeingEventSubCategory"`
       
       }
@@ -1221,6 +1326,7 @@ type wellbeingeventsubcategorylisttype struct {
 }
 
 type wellbeingeventlocationdetailstype struct {
+
         EventLocation *AUCodeSetsWellbeingEventLocationType `xml:"EventLocation" json:"EventLocation"`
       Class *String `xml:"Class,omitempty" json:"Class,omitempty"`
       FurtherLocationNotes *String `xml:"FurtherLocationNotes,omitempty" json:"FurtherLocationNotes,omitempty"`
@@ -1232,6 +1338,7 @@ type wellbeingeventlocationdetailstype struct {
 }
 
 type followupactionlisttype struct {
+
         FollowUpAction []FollowUpActionType `xml:"FollowUpAction" json:"FollowUpAction"`
       
       }
@@ -1241,6 +1348,7 @@ type followupactionlisttype struct {
 }
 
 type followupactiontype struct {
+
         WellbeingResponseRefId *String `xml:"WellbeingResponseRefId,omitempty" json:"WellbeingResponseRefId,omitempty"`
       FollowUpDetails *String `xml:"FollowUpDetails,omitempty" json:"FollowUpDetails,omitempty"`
       FollowUpActionCategory *String `xml:"FollowUpActionCategory,omitempty" json:"FollowUpActionCategory,omitempty"`
@@ -1253,6 +1361,7 @@ type followupactiontype struct {
 }
 
 type personinvolvementlisttype struct {
+
         PersonInvolvement []PersonInvolvementType `xml:"PersonInvolvement" json:"PersonInvolvement"`
       
       }
@@ -1262,6 +1371,7 @@ type personinvolvementlisttype struct {
 }
 
 type personinvolvementtype struct {
+
       PersonRefId *PersonInvolvementType_PersonRefId
       ShortName *String `xml:"ShortName,omitempty" json:"ShortName,omitempty"`
       HowInvolved *String `xml:"HowInvolved,omitempty" json:"HowInvolved,omitempty"`
@@ -1273,6 +1383,7 @@ type personinvolvementtype struct {
 }
 
 type withdrawaltimelisttype struct {
+
         Withdrawal []WithdrawalType `xml:"Withdrawal" json:"Withdrawal"`
       
       }
@@ -1282,6 +1393,7 @@ type withdrawaltimelisttype struct {
 }
 
 type withdrawaltype struct {
+
         WithdrawalDate *String `xml:"WithdrawalDate" json:"WithdrawalDate"`
       WithdrawalStartTime *String `xml:"WithdrawalStartTime,omitempty" json:"WithdrawalStartTime,omitempty"`
       WithdrawalEndTime *String `xml:"WithdrawalEndTime,omitempty" json:"WithdrawalEndTime,omitempty"`
@@ -1296,6 +1408,7 @@ type withdrawaltype struct {
 }
 
 type suspensioncontainertype struct {
+
         SuspensionCategory *AUCodeSetsSuspensionCategoryType `xml:"SuspensionCategory" json:"SuspensionCategory"`
       SuspensionNotes *String `xml:"SuspensionNotes,omitempty" json:"SuspensionNotes,omitempty"`
       WithdrawalTimeList *WithdrawalTimeListType `xml:"WithdrawalTimeList,omitempty" json:"WithdrawalTimeList,omitempty"`
@@ -1313,6 +1426,7 @@ type suspensioncontainertype struct {
 }
 
 type detentioncontainertype struct {
+
         DetentionCategory *AUCodeSetsDetentionCategoryType `xml:"DetentionCategory" json:"DetentionCategory"`
       DetentionDate *String `xml:"DetentionDate,omitempty" json:"DetentionDate,omitempty"`
       DetentionLocation *String `xml:"DetentionLocation,omitempty" json:"DetentionLocation,omitempty"`
@@ -1326,6 +1440,7 @@ type detentioncontainertype struct {
 }
 
 type planrequiredcontainertype struct {
+
         PlanRequiredList *PlanRequiredListType `xml:"PlanRequiredList,omitempty" json:"PlanRequiredList,omitempty"`
       Status *AUCodeSetsWellbeingStatusType `xml:"Status,omitempty" json:"Status,omitempty"`
       
@@ -1336,6 +1451,7 @@ type planrequiredcontainertype struct {
 }
 
 type planrequiredlisttype struct {
+
         Plan []WellbeingPlanType `xml:"Plan" json:"Plan"`
       
       }
@@ -1345,6 +1461,7 @@ type planrequiredlisttype struct {
 }
 
 type wellbeingplantype struct {
+
         PersonalisedPlanRefId *String `xml:"PersonalisedPlanRefId,omitempty" json:"PersonalisedPlanRefId,omitempty"`
       PlanNotes *String `xml:"PlanNotes,omitempty" json:"PlanNotes,omitempty"`
       
@@ -1355,6 +1472,7 @@ type wellbeingplantype struct {
 }
 
 type awardcontainertype struct {
+
         AwardDate *String `xml:"AwardDate,omitempty" json:"AwardDate,omitempty"`
       AwardType *String `xml:"AwardType,omitempty" json:"AwardType,omitempty"`
       AwardDescription *String `xml:"AwardDescription,omitempty" json:"AwardDescription,omitempty"`
@@ -1368,6 +1486,7 @@ type awardcontainertype struct {
 }
 
 type otherwellbeingresponsecontainertype struct {
+
         OtherResponseDate *String `xml:"OtherResponseDate,omitempty" json:"OtherResponseDate,omitempty"`
       OtherResponseType *String `xml:"OtherResponseType,omitempty" json:"OtherResponseType,omitempty"`
       OtherResponseDescription *String `xml:"OtherResponseDescription,omitempty" json:"OtherResponseDescription,omitempty"`
@@ -1381,6 +1500,7 @@ type otherwellbeingresponsecontainertype struct {
 }
 
 type wellbeingdocumentlisttype struct {
+
         Document []WellbeingDocumentType `xml:"Document" json:"Document"`
       
       }
@@ -1390,6 +1510,7 @@ type wellbeingdocumentlisttype struct {
 }
 
 type wellbeingdocumenttype struct {
+
         Location *String `xml:"Location" json:"Location"`
       Sensitivity *String `xml:"Sensitivity,omitempty" json:"Sensitivity,omitempty"`
       URL *String `xml:"URL,omitempty" json:"URL,omitempty"`
@@ -1404,6 +1525,7 @@ type wellbeingdocumenttype struct {
 }
 
 type naptestitemcontenttype struct {
+
         NAPTestItemLocalId *LocalIdType `xml:"NAPTestItemLocalId" json:"NAPTestItemLocalId"`
       ItemName *String `xml:"ItemName" json:"ItemName"`
       ItemType *AUCodeSetsNAPTestItemTypeType `xml:"ItemType" json:"ItemType"`
@@ -1435,6 +1557,7 @@ type naptestitemcontenttype struct {
 }
 
 type naptestletcontenttype struct {
+
         NAPTestletLocalId *LocalIdType `xml:"NAPTestletLocalId" json:"NAPTestletLocalId"`
       TestletName *String `xml:"TestletName,omitempty" json:"TestletName,omitempty"`
       Node *String `xml:"Node,omitempty" json:"Node,omitempty"`
@@ -1448,6 +1571,7 @@ type naptestletcontenttype struct {
 }
 
 type naptestcontenttype struct {
+
         NAPTestLocalId *LocalIdType `xml:"NAPTestLocalId" json:"NAPTestLocalId"`
       TestName *String `xml:"TestName" json:"TestName"`
       TestLevel *YearLevelType `xml:"TestLevel" json:"TestLevel"`
@@ -1465,6 +1589,7 @@ type naptestcontenttype struct {
 }
 
 type plausiblescaledvaluelisttype struct {
+
         PlausibleScaledValue []float64 `xml:"PlausibleScaledValue" json:"PlausibleScaledValue"`
       
       }
@@ -1474,6 +1599,7 @@ type plausiblescaledvaluelisttype struct {
 }
 
 type substituteitemlisttype struct {
+
         SubstituteItem []SubstituteItemType `xml:"SubstituteItem" json:"SubstituteItem"`
       
       }
@@ -1483,6 +1609,7 @@ type substituteitemlisttype struct {
 }
 
 type substituteitemtype struct {
+
         SubstituteItemRefId *String `xml:"SubstituteItemRefId" json:"SubstituteItemRefId"`
       SubstituteItemLocalId *LocalIdType `xml:"SubstituteItemLocalId,omitempty" json:"SubstituteItemLocalId,omitempty"`
       PNPCodeList *PNPCodeListType `xml:"PNPCodeList" json:"PNPCodeList"`
@@ -1494,6 +1621,7 @@ type substituteitemtype struct {
 }
 
 type codeframetestitemlisttype struct {
+
         TestItem []CodeFrameTestItemType `xml:"TestItem" json:"TestItem"`
       
       }
@@ -1503,6 +1631,7 @@ type codeframetestitemlisttype struct {
 }
 
 type codeframetestitemtype struct {
+
         TestItemRefId *String `xml:"TestItemRefId" json:"TestItemRefId"`
       SequenceNumber *Int `xml:"SequenceNumber" json:"SequenceNumber"`
       TestItemContent *NAPTestItemContentType `xml:"TestItemContent" json:"TestItemContent"`
@@ -1514,6 +1643,7 @@ type codeframetestitemtype struct {
 }
 
 type stimuluslocalidlisttype struct {
+
         StimulusLocalId []LocalIdType `xml:"StimulusLocalId" json:"StimulusLocalId"`
       
       }
@@ -1523,6 +1653,7 @@ type stimuluslocalidlisttype struct {
 }
 
 type domainbandscontainertype struct {
+
         Band1Lower *Float `xml:"Band1Lower" json:"Band1Lower"`
       Band1Upper *Float `xml:"Band1Upper" json:"Band1Upper"`
       Band2Lower *Float `xml:"Band2Lower" json:"Band2Lower"`
@@ -1551,6 +1682,7 @@ type domainbandscontainertype struct {
 }
 
 type domainproficiencycontainertype struct {
+
         Level1Lower *Float `xml:"Level1Lower" json:"Level1Lower"`
       Level1Upper *Float `xml:"Level1Upper" json:"Level1Upper"`
       Level2Lower *Float `xml:"Level2Lower" json:"Level2Lower"`
@@ -1567,6 +1699,7 @@ type domainproficiencycontainertype struct {
 }
 
 type naptestitemlisttype struct {
+
         TestItem []NAPTestItem2Type `xml:"TestItem" json:"TestItem"`
       
       }
@@ -1576,6 +1709,7 @@ type naptestitemlisttype struct {
 }
 
 type naptestitem2type struct {
+
         TestItemRefId *String `xml:"TestItemRefId" json:"TestItemRefId"`
       TestItemLocalId *LocalIdType `xml:"TestItemLocalId" json:"TestItemLocalId"`
       SequenceNumber *Int `xml:"SequenceNumber" json:"SequenceNumber"`
@@ -1587,6 +1721,7 @@ type naptestitem2type struct {
 }
 
 type napcodeframetestletlisttype struct {
+
         Testlet []NAPTestletCodeFrameType `xml:"Testlet" json:"Testlet"`
       
       }
@@ -1596,6 +1731,7 @@ type napcodeframetestletlisttype struct {
 }
 
 type naptestletcodeframetype struct {
+
         NAPTestletRefId *String `xml:"NAPTestletRefId,omitempty" json:"NAPTestletRefId,omitempty"`
       TestletContent *NAPTestletContentType `xml:"TestletContent" json:"TestletContent"`
       TestItemList *CodeFrameTestItemListType `xml:"TestItemList" json:"TestItemList"`
@@ -1607,6 +1743,7 @@ type naptestletcodeframetype struct {
 }
 
 type napstudentresponsetestletlisttype struct {
+
         Testlet []NAPTestletResponseType `xml:"Testlet" json:"Testlet"`
       
       }
@@ -1616,6 +1753,7 @@ type napstudentresponsetestletlisttype struct {
 }
 
 type naptestletresponsetype struct {
+
         NAPTestletRefId *String `xml:"NAPTestletRefId,omitempty" json:"NAPTestletRefId,omitempty"`
       NAPTestletLocalId *LocalIdType `xml:"NAPTestletLocalId" json:"NAPTestletLocalId"`
       TestletSubScore *Float `xml:"TestletSubScore,omitempty" json:"TestletSubScore,omitempty"`
@@ -1628,6 +1766,7 @@ type naptestletresponsetype struct {
 }
 
 type naptestletitemresponselisttype struct {
+
         ItemResponse []NAPTestletResponseItemType `xml:"ItemResponse" json:"ItemResponse"`
       
       }
@@ -1637,6 +1776,7 @@ type naptestletitemresponselisttype struct {
 }
 
 type naptestletresponseitemtype struct {
+
         NAPTestItemRefId *String `xml:"NAPTestItemRefId,omitempty" json:"NAPTestItemRefId,omitempty"`
       NAPTestItemLocalId *LocalIdType `xml:"NAPTestItemLocalId" json:"NAPTestItemLocalId"`
       Response *String `xml:"Response,omitempty" json:"Response,omitempty"`
@@ -1654,6 +1794,7 @@ type naptestletresponseitemtype struct {
 }
 
 type napsubscorelisttype struct {
+
         Subscore []NAPSubscoreType `xml:"Subscore" json:"Subscore"`
       
       }
@@ -1663,6 +1804,7 @@ type napsubscorelisttype struct {
 }
 
 type napsubscoretype struct {
+
         SubscoreType *String `xml:"SubscoreType" json:"SubscoreType"`
       SubscoreValue *Float `xml:"SubscoreValue" json:"SubscoreValue"`
       
@@ -1673,6 +1815,7 @@ type napsubscoretype struct {
 }
 
 type domainscoretype struct {
+
         RawScore *Float `xml:"RawScore" json:"RawScore"`
       ScaledScoreValue *Float `xml:"ScaledScoreValue" json:"ScaledScoreValue"`
       ScaledScoreLogitValue *Float `xml:"ScaledScoreLogitValue" json:"ScaledScoreLogitValue"`
@@ -1689,6 +1832,7 @@ type domainscoretype struct {
 }
 
 type domainscoresdtntype struct {
+
         RawScore *Float `xml:"RawScore,omitempty" json:"RawScore,omitempty"`
       ScaledScoreValue *Float `xml:"ScaledScoreValue,omitempty" json:"ScaledScoreValue,omitempty"`
       ScaledScoreLogitValue *Float `xml:"ScaledScoreLogitValue,omitempty" json:"ScaledScoreLogitValue,omitempty"`
@@ -1705,6 +1849,7 @@ type domainscoresdtntype struct {
 }
 
 type napwritingrubriclisttype struct {
+
         NAPWritingRubric []NAPWritingRubricType `xml:"NAPWritingRubric" json:"NAPWritingRubric"`
       
       }
@@ -1714,6 +1859,7 @@ type napwritingrubriclisttype struct {
 }
 
 type napwritingrubrictype struct {
+
         RubricType *String `xml:"RubricType" json:"RubricType"`
       ScoreList *ScoreListType `xml:"ScoreList" json:"ScoreList"`
       Descriptor *String `xml:"Descriptor,omitempty" json:"Descriptor,omitempty"`
@@ -1725,6 +1871,7 @@ type napwritingrubrictype struct {
 }
 
 type scorelisttype struct {
+
         Score []ScoreType `xml:"Score" json:"Score"`
       
       }
@@ -1734,6 +1881,7 @@ type scorelisttype struct {
 }
 
 type scoretype struct {
+
         MaxScoreValue *Float `xml:"MaxScoreValue" json:"MaxScoreValue"`
       ScoreDescriptionList *ScoreDescriptionListType `xml:"ScoreDescriptionList" json:"ScoreDescriptionList"`
       
@@ -1744,6 +1892,7 @@ type scoretype struct {
 }
 
 type scoredescriptionlisttype struct {
+
         ScoreDescription []ScoreDescriptionType `xml:"ScoreDescription" json:"ScoreDescription"`
       
       }
@@ -1753,6 +1902,7 @@ type scoredescriptionlisttype struct {
 }
 
 type scoredescriptiontype struct {
+
         ScoreValue *Float `xml:"ScoreValue" json:"ScoreValue"`
       Descriptor *String `xml:"Descriptor,omitempty" json:"Descriptor,omitempty"`
       
@@ -1763,6 +1913,7 @@ type scoredescriptiontype struct {
 }
 
 type stimuluslisttype struct {
+
         Stimulus []StimulusType `xml:"Stimulus" json:"Stimulus"`
       
       }
@@ -1772,6 +1923,7 @@ type stimuluslisttype struct {
 }
 
 type stimulustype struct {
+
         StimulusLocalId *LocalIdType `xml:"StimulusLocalId" json:"StimulusLocalId"`
       TextGenre *String `xml:"TextGenre,omitempty" json:"TextGenre,omitempty"`
       TextType *String `xml:"TextType,omitempty" json:"TextType,omitempty"`
@@ -1786,6 +1938,7 @@ type stimulustype struct {
 }
 
 type contentdescriptionlisttype struct {
+
         ContentDescription []string `xml:"ContentDescription" json:"ContentDescription"`
       
       }
@@ -1795,6 +1948,7 @@ type contentdescriptionlisttype struct {
 }
 
 type pnpcodelisttype struct {
+
         PNPCode []AUCodeSetsPNPCodeType `xml:"PNPCode" json:"PNPCode"`
       
       }
@@ -1804,6 +1958,7 @@ type pnpcodelisttype struct {
 }
 
 type adjustmentcontainertype struct {
+
         PNPCodeList *PNPCodeListType `xml:"PNPCodeList" json:"PNPCodeList"`
       BookletType *String `xml:"BookletType,omitempty" json:"BookletType,omitempty"`
       
@@ -1814,6 +1969,7 @@ type adjustmentcontainertype struct {
 }
 
 type testdisruptionlisttype struct {
+
         TestDisruption []TestDisruptionType `xml:"TestDisruption" json:"TestDisruption"`
       
       }
@@ -1823,6 +1979,7 @@ type testdisruptionlisttype struct {
 }
 
 type testdisruptiontype struct {
+
         Event *String `xml:"Event" json:"Event"`
       
       }
@@ -1832,6 +1989,7 @@ type testdisruptiontype struct {
 }
 
 type calendarsummarylisttype struct {
+
         CalendarSummaryRefId []string `xml:"CalendarSummaryRefId" json:"CalendarSummaryRefId"`
       
       }
@@ -1841,6 +1999,7 @@ type calendarsummarylisttype struct {
 }
 
 type visasubclasstype struct {
+
         Code *VisaSubClassCodeType `xml:"Code" json:"Code"`
       VisaExpiryDate *String `xml:"VisaExpiryDate,omitempty" json:"VisaExpiryDate,omitempty"`
       ATEExpiryDate *String `xml:"ATEExpiryDate,omitempty" json:"ATEExpiryDate,omitempty"`
@@ -1854,6 +2013,7 @@ type visasubclasstype struct {
 }
 
 type visasubclasslisttype struct {
+
         VisaSubClass []VisaSubClassType `xml:"VisaSubClass" json:"VisaSubClass"`
       
       }
@@ -1864,6 +2024,7 @@ type visasubclasslisttype struct {
 }
 
 type languagebasetype struct {
+
         Code *AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       LanguageType *AUCodeSetsLanguageTypeType `xml:"LanguageType,omitempty" json:"LanguageType,omitempty"`
@@ -1876,6 +2037,7 @@ type languagebasetype struct {
 }
 
 type religiouseventlisttype struct {
+
         ReligiousEvent []ReligiousEventType `xml:"ReligiousEvent" json:"ReligiousEvent"`
       
       }
@@ -1885,6 +2047,7 @@ type religiouseventlisttype struct {
 }
 
 type religiouseventtype struct {
+
         Type *String `xml:"Type" json:"Type"`
       Date *String `xml:"Date" json:"Date"`
       
@@ -1895,6 +2058,7 @@ type religiouseventtype struct {
 }
 
 type religiontype struct {
+
         Code *AUCodeSetsAustralianStandardClassificationOfReligiousGroupsASCRGType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -1905,6 +2069,7 @@ type religiontype struct {
 }
 
 type dwellingarrangementtype struct {
+
         Code *AUCodeSetsDwellingArrangementType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -1915,6 +2080,7 @@ type dwellingarrangementtype struct {
 }
 
 type countrylisttype struct {
+
         CountryOfCitizenship []CountryType `xml:"CountryOfCitizenship" json:"CountryOfCitizenship"`
       
       }
@@ -1924,6 +2090,7 @@ type countrylisttype struct {
 }
 
 type countrylist2type struct {
+
         CountryOfResidency []CountryType `xml:"CountryOfResidency" json:"CountryOfResidency"`
       
       }
@@ -1933,6 +2100,7 @@ type countrylist2type struct {
 }
 
 type debitorcreditamounttype struct {
+
         monetaryamounttype
           Type *String `xml:"Type,attr" json:"Type"`
       
@@ -1943,6 +2111,7 @@ type debitorcreditamounttype struct {
 }
 
 type scheduledactivityoverridetype struct {
+
           DateOfOverride *String `xml:"DateOfOverride,attr" json:"DateOfOverride"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -1953,6 +2122,7 @@ type scheduledactivityoverridetype struct {
 }
 
 type activitytimetype struct {
+
         CreationDate *String `xml:"CreationDate" json:"CreationDate"`
       Duration *DurationType `xml:"Duration,omitempty" json:"Duration,omitempty"`
       StartDate *String `xml:"StartDate,omitempty" json:"StartDate,omitempty"`
@@ -1966,6 +2136,7 @@ type activitytimetype struct {
 }
 
 type schoolcourseinfooverridetype struct {
+
         Override *String `xml:"Override,attr" json:"Override"`
       CourseCode *String `xml:"CourseCode,omitempty" json:"CourseCode,omitempty"`
       StateCourseCode *String `xml:"StateCourseCode,omitempty" json:"StateCourseCode,omitempty"`
@@ -1982,6 +2153,7 @@ type schoolcourseinfooverridetype struct {
 }
 
 type locationofinstructiontype struct {
+
         Code *AUCodeSetsReceivingLocationOfInstructionType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -1992,6 +2164,7 @@ type locationofinstructiontype struct {
 }
 
 type languageofinstructiontype struct {
+
         Code *AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2002,6 +2175,7 @@ type languageofinstructiontype struct {
 }
 
 type mediumofinstructiontype struct {
+
         Code *AUCodeSetsMediumOfInstructionType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2012,6 +2186,7 @@ type mediumofinstructiontype struct {
 }
 
 type studentactivitytype struct {
+
         Code *AUCodeSetsActivityInvolvementCodeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2022,6 +2197,7 @@ type studentactivitytype struct {
 }
 
 type contactflagstype struct {
+
         ParentLegalGuardian *AUCodeSetsYesOrNoCategoryType `xml:"ParentLegalGuardian,omitempty" json:"ParentLegalGuardian,omitempty"`
       PickupRights *AUCodeSetsYesOrNoCategoryType `xml:"PickupRights,omitempty" json:"PickupRights,omitempty"`
       LivesWith *AUCodeSetsYesOrNoCategoryType `xml:"LivesWith,omitempty" json:"LivesWith,omitempty"`
@@ -2044,6 +2220,7 @@ type contactflagstype struct {
 }
 
 type agencytype struct {
+
         Code *AUCodeSetsEducationAgencyTypeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2054,6 +2231,7 @@ type agencytype struct {
 }
 
 type yearrangetype struct {
+
         Start *YearLevelType `xml:"Start" json:"Start"`
       End *YearLevelType `xml:"End" json:"End"`
       
@@ -2064,6 +2242,7 @@ type yearrangetype struct {
 }
 
 type creationusertype struct {
+
         Type *String `xml:"Type,attr" json:"Type"`
       UserId *String `xml:"UserId" json:"UserId"`
       
@@ -2074,6 +2253,7 @@ type creationusertype struct {
 }
 
 type auditinfotype struct {
+
         CreationUser *CreationUserType `xml:"CreationUser" json:"CreationUser"`
       CreationDateTime *String `xml:"CreationDateTime" json:"CreationDateTime"`
       
@@ -2084,6 +2264,7 @@ type auditinfotype struct {
 }
 
 type attendanceinfotype struct {
+
         CountsTowardAttendance *String `xml:"CountsTowardAttendance" json:"CountsTowardAttendance"`
       AttendanceValue *String `xml:"AttendanceValue" json:"AttendanceValue"`
       
@@ -2094,6 +2275,7 @@ type attendanceinfotype struct {
 }
 
 type calendardateinfotype struct {
+
         Code *AUCodeSetsCalendarEventType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2104,6 +2286,7 @@ type calendardateinfotype struct {
 }
 
 type programavailabilitytype struct {
+
         Code *AUCodeSets0211ProgramAvailabilityType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2114,6 +2297,7 @@ type programavailabilitytype struct {
 }
 
 type referralsourcetype struct {
+
         Code *AUCodeSets0792IdentificationProcedureType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2124,6 +2308,7 @@ type referralsourcetype struct {
 }
 
 type promotioninfotype struct {
+
         PromotionStatus *String `xml:"PromotionStatus,omitempty" json:"PromotionStatus,omitempty"`
       
       }
@@ -2133,6 +2318,7 @@ type promotioninfotype struct {
 }
 
 type catchmentstatuscontainertype struct {
+
         Code *AUCodeSetsPublicSchoolCatchmentStatusType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2143,6 +2329,7 @@ type catchmentstatuscontainertype struct {
 }
 
 type studentexitstatuscontainertype struct {
+
         Code *AUCodeSetsExitWithdrawalStatusType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2153,6 +2340,7 @@ type studentexitstatuscontainertype struct {
 }
 
 type studentexitcontainertype struct {
+
         Code *AUCodeSetsExitWithdrawalTypeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2163,6 +2351,7 @@ type studentexitcontainertype struct {
 }
 
 type studententrycontainertype struct {
+
         Code *AUCodeSetsEntryTypeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2173,6 +2362,7 @@ type studententrycontainertype struct {
 }
 
 type studentmostrecentcontainertype struct {
+
         SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId,omitempty"`
       HomeroomLocalId *LocalIdType `xml:"HomeroomLocalId,omitempty" json:"HomeroomLocalId,omitempty"`
       YearLevel *YearLevelType `xml:"YearLevel,omitempty" json:"YearLevel,omitempty"`
@@ -2208,6 +2398,7 @@ type studentmostrecentcontainertype struct {
 }
 
 type staffmostrecentcontainertype struct {
+
         SchoolLocalId *LocalIdType `xml:"SchoolLocalId,omitempty" json:"SchoolLocalId,omitempty"`
       SchoolACARAId *LocalIdType `xml:"SchoolACARAId,omitempty" json:"SchoolACARAId,omitempty"`
       LocalCampusId *LocalIdType `xml:"LocalCampusId,omitempty" json:"LocalCampusId,omitempty"`
@@ -2221,6 +2412,7 @@ type staffmostrecentcontainertype struct {
 }
 
 type staffactivityextensiontype struct {
+
         Code *AUCodeSetsStaffActivityType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2231,6 +2423,7 @@ type staffactivityextensiontype struct {
 }
 
 type totalenrollmentstype struct {
+
         Girls *String `xml:"Girls,omitempty" json:"Girls,omitempty"`
       Boys *String `xml:"Boys,omitempty" json:"Boys,omitempty"`
       TotalStudents *String `xml:"TotalStudents,omitempty" json:"TotalStudents,omitempty"`
@@ -2242,6 +2435,7 @@ type totalenrollmentstype struct {
 }
 
 type campuscontainertype struct {
+
         ParentSchoolId *String `xml:"ParentSchoolId,omitempty" json:"ParentSchoolId,omitempty"`
       ParentSchoolRefId *String `xml:"ParentSchoolRefId,omitempty" json:"ParentSchoolRefId,omitempty"`
       SchoolCampusId *String `xml:"SchoolCampusId" json:"SchoolCampusId"`
@@ -2255,6 +2449,7 @@ type campuscontainertype struct {
 }
 
 type householdcontactinfolisttype struct {
+
         HouseholdContactInfo []HouseholdContactInfoType `xml:"HouseholdContactInfo" json:"HouseholdContactInfo"`
       
       }
@@ -2264,6 +2459,7 @@ type householdcontactinfolisttype struct {
 }
 
 type householdcontactinfotype struct {
+
         PreferenceNumber *Int `xml:"PreferenceNumber,omitempty" json:"PreferenceNumber,omitempty"`
       HouseholdContactId *LocalIdType `xml:"HouseholdContactId,omitempty" json:"HouseholdContactId,omitempty"`
       HouseholdSalutation *String `xml:"HouseholdSalutation,omitempty" json:"HouseholdSalutation,omitempty"`
@@ -2278,6 +2474,7 @@ type householdcontactinfotype struct {
 }
 
 type statementcodestype struct {
+
         StatementCode []string `xml:"StatementCode" json:"StatementCode"`
       
       }
@@ -2287,6 +2484,7 @@ type statementcodestype struct {
 }
 
 type statementstype struct {
+
         Statement []string `xml:"Statement" json:"Statement"`
       
       }
@@ -2296,6 +2494,7 @@ type statementstype struct {
 }
 
 type programfundingsourcestype struct {
+
         ProgramFundingSource []ProgramFundingSourceType `xml:"ProgramFundingSource" json:"ProgramFundingSource"`
       
       }
@@ -2305,6 +2504,7 @@ type programfundingsourcestype struct {
 }
 
 type programfundingsourcetype struct {
+
         Code *AUCodeSetsProgramFundingSourceCodeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -2315,6 +2515,7 @@ type programfundingsourcetype struct {
 }
 
 type attendancetimestype struct {
+
         AttendanceTime []AttendanceTimeType `xml:"AttendanceTime" json:"AttendanceTime"`
       
       }
@@ -2324,6 +2525,7 @@ type attendancetimestype struct {
 }
 
 type attendancetimetype struct {
+
         AttendanceType *String `xml:"AttendanceType,omitempty" json:"AttendanceType,omitempty"`
       AttendanceCode *AttendanceCodeType `xml:"AttendanceCode" json:"AttendanceCode"`
       AttendanceStatus *AUCodeSetsAttendanceStatusType `xml:"AttendanceStatus" json:"AttendanceStatus"`
@@ -2340,6 +2542,7 @@ type attendancetimetype struct {
 }
 
 type periodattendancestype struct {
+
         PeriodAttendance []PeriodAttendanceType `xml:"PeriodAttendance" json:"PeriodAttendance"`
       
       }
@@ -2349,6 +2552,7 @@ type periodattendancestype struct {
 }
 
 type periodattendancetype struct {
+
         AttendanceType *String `xml:"AttendanceType,omitempty" json:"AttendanceType,omitempty"`
       AttendanceCode *AttendanceCodeType `xml:"AttendanceCode" json:"AttendanceCode"`
       AttendanceStatus *AUCodeSetsAttendanceStatusType `xml:"AttendanceStatus" json:"AttendanceStatus"`
@@ -2374,6 +2578,7 @@ type periodattendancetype struct {
 }
 
 type staffsubjectlisttype struct {
+
         StaffSubject []StaffSubjectType `xml:"StaffSubject" json:"StaffSubject"`
       
       }
@@ -2383,6 +2588,7 @@ type staffsubjectlisttype struct {
 }
 
 type staffsubjecttype struct {
+
         PreferenceNumber *Int `xml:"PreferenceNumber" json:"PreferenceNumber"`
       SubjectLocalId *LocalIdType `xml:"SubjectLocalId,omitempty" json:"SubjectLocalId,omitempty"`
       TimeTableSubjectRefId *RefIdType `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId,omitempty"`
@@ -2394,6 +2600,7 @@ type staffsubjecttype struct {
 }
 
 type teachinggrouplisttype struct {
+
         TeachingGroupRefId []string `xml:"TeachingGroupRefId" json:"TeachingGroupRefId"`
       
       }
@@ -2403,6 +2610,7 @@ type teachinggrouplisttype struct {
 }
 
 type scheduledteacherlisttype struct {
+
         TeacherCover []TeacherCoverType `xml:"TeacherCover" json:"TeacherCover"`
       
       }
@@ -2412,6 +2620,7 @@ type scheduledteacherlisttype struct {
 }
 
 type teachercovertype struct {
+
         StaffPersonalRefId *String `xml:"StaffPersonalRefId" json:"StaffPersonalRefId"`
       StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId,omitempty"`
       StartTime *String `xml:"StartTime,omitempty" json:"StartTime,omitempty"`
@@ -2427,6 +2636,7 @@ type teachercovertype struct {
 }
 
 type roomlisttype struct {
+
         RoomInfoRefId []string `xml:"RoomInfoRefId" json:"RoomInfoRefId"`
       
       }
@@ -2436,6 +2646,7 @@ type roomlisttype struct {
 }
 
 type stafflisttype struct {
+
         StaffPersonalRefId []string `xml:"StaffPersonalRefId" json:"StaffPersonalRefId"`
       
       }
@@ -2445,6 +2656,7 @@ type stafflisttype struct {
 }
 
 type authorstype struct {
+
         Author []string `xml:"Author" json:"Author"`
       
       }
@@ -2454,6 +2666,7 @@ type authorstype struct {
 }
 
 type organizationstype struct {
+
         Organization []string `xml:"Organization" json:"Organization"`
       
       }
@@ -2463,6 +2676,7 @@ type organizationstype struct {
 }
 
 type purchasingitemstype struct {
+
         PurchasingItem []PurchasingItemType `xml:"PurchasingItem" json:"PurchasingItem"`
       
       }
@@ -2472,6 +2686,7 @@ type purchasingitemstype struct {
 }
 
 type purchasingitemtype struct {
+
         ItemNumber *String `xml:"ItemNumber,omitempty" json:"ItemNumber,omitempty"`
       ItemDescription *String `xml:"ItemDescription" json:"ItemDescription"`
       LocalItemId *LocalIdType `xml:"LocalItemId,omitempty" json:"LocalItemId,omitempty"`
@@ -2490,6 +2705,7 @@ type purchasingitemtype struct {
 }
 
 type expenseaccountstype struct {
+
         ExpenseAccount []ExpenseAccountType `xml:"ExpenseAccount" json:"ExpenseAccount"`
       
       }
@@ -2499,6 +2715,7 @@ type expenseaccountstype struct {
 }
 
 type expenseaccounttype struct {
+
         AccountCode *String `xml:"AccountCode" json:"AccountCode"`
       Amount *MonetaryAmountType `xml:"Amount" json:"Amount"`
       FinancialAccountRefId *String `xml:"FinancialAccountRefId,omitempty" json:"FinancialAccountRefId,omitempty"`
@@ -2511,6 +2728,7 @@ type expenseaccounttype struct {
 }
 
 type schoolprogramlisttype struct {
+
         Program []SchoolProgramType `xml:"Program" json:"Program"`
       
       }
@@ -2520,6 +2738,7 @@ type schoolprogramlisttype struct {
 }
 
 type schoolprogramtype struct {
+
         Category *String `xml:"Category,omitempty" json:"Category,omitempty"`
       Type *String `xml:"Type" json:"Type"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
@@ -2531,6 +2750,7 @@ type schoolprogramtype struct {
 }
 
 type learningobjectivestype struct {
+
         LearningObjective []string `xml:"LearningObjective" json:"LearningObjective"`
       
       }
@@ -2540,6 +2760,7 @@ type learningobjectivestype struct {
 }
 
 type recognitionlisttype struct {
+
         Recognition []string `xml:"Recognition" json:"Recognition"`
       
       }
@@ -2549,6 +2770,7 @@ type recognitionlisttype struct {
 }
 
 type lresourcestype struct {
+
         LearningResourceRefId []ResourcesType `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
       
       }
@@ -2558,6 +2780,7 @@ type lresourcestype struct {
 }
 
 type resourcestype struct {
+
           ResourceType *String `xml:"ResourceType,attr" json:"ResourceType"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -2568,6 +2791,7 @@ type resourcestype struct {
 }
 
 type sourceobjectstype struct {
+
       SourceObject []SourceObjectsType_SourceObject `xml:"SourceObject" json:"SourceObject"`
       
       }
@@ -2577,6 +2801,7 @@ type sourceobjectstype struct {
 }
 
 type studentstype struct {
+
         StudentPersonalRefId []string `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       
       }
@@ -2586,6 +2811,7 @@ type studentstype struct {
 }
 
 type prerequisitestype struct {
+
         Prerequisite []string `xml:"Prerequisite" json:"Prerequisite"`
       
       }
@@ -2595,6 +2821,7 @@ type prerequisitestype struct {
 }
 
 type essentialmaterialstype struct {
+
         EssentialMaterial []string `xml:"EssentialMaterial" json:"EssentialMaterial"`
       
       }
@@ -2604,6 +2831,7 @@ type essentialmaterialstype struct {
 }
 
 type technicalrequirementstype struct {
+
         TechnicalRequirement *String `xml:"TechnicalRequirement,omitempty" json:"TechnicalRequirement,omitempty"`
       
       }
@@ -2613,6 +2841,7 @@ type technicalrequirementstype struct {
 }
 
 type softwarerequirementlisttype struct {
+
         SoftwareRequirement []SoftwareRequirementType `xml:"SoftwareRequirement" json:"SoftwareRequirement"`
       
       }
@@ -2622,6 +2851,7 @@ type softwarerequirementlisttype struct {
 }
 
 type softwarerequirementtype struct {
+
         SoftwareTitle *String `xml:"SoftwareTitle" json:"SoftwareTitle"`
       Version *String `xml:"Version,omitempty" json:"Version,omitempty"`
       Vendor *String `xml:"Vendor,omitempty" json:"Vendor,omitempty"`
@@ -2634,6 +2864,7 @@ type softwarerequirementtype struct {
 }
 
 type householdlisttype struct {
+
         Household []LocalIdType `xml:"Household" json:"Household"`
       
       }
@@ -2643,6 +2874,7 @@ type householdlisttype struct {
 }
 
 type studentsubjectchoicelisttype struct {
+
         StudentSubjectChoice []StudentSubjectChoiceType `xml:"StudentSubjectChoice" json:"StudentSubjectChoice"`
       
       }
@@ -2652,6 +2884,7 @@ type studentsubjectchoicelisttype struct {
 }
 
 type studentsubjectchoicetype struct {
+
         PreferenceNumber *Int `xml:"PreferenceNumber,omitempty" json:"PreferenceNumber,omitempty"`
       SubjectLocalId *LocalIdType `xml:"SubjectLocalId" json:"SubjectLocalId"`
       StudyDescription *SubjectAreaType `xml:"StudyDescription,omitempty" json:"StudyDescription,omitempty"`
@@ -2664,6 +2897,7 @@ type studentsubjectchoicetype struct {
 }
 
 type identityassertionstype struct {
+
         IdentityAssertion []IdentityAssertionType `xml:"IdentityAssertion" json:"IdentityAssertion"`
       
       }
@@ -2673,6 +2907,7 @@ type identityassertionstype struct {
 }
 
 type identityassertiontype struct {
+
           SchemaName *String `xml:"SchemaName,attr" json:"SchemaName"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -2683,6 +2918,7 @@ type identityassertiontype struct {
 }
 
 type learningstandardstype struct {
+
         LearningStandardItemRefId []string `xml:"LearningStandardItemRefId" json:"LearningStandardItemRefId"`
       
       }
@@ -2692,6 +2928,7 @@ type learningstandardstype struct {
 }
 
 type learningresourcestype struct {
+
         LearningResourceRefId []string `xml:"LearningResourceRefId" json:"LearningResourceRefId"`
       
       }
@@ -2701,6 +2938,7 @@ type learningresourcestype struct {
 }
 
 type learningstandardsdocumenttype struct {
+
         LearningStandardDocumentRefId []string `xml:"LearningStandardDocumentRefId" json:"LearningStandardDocumentRefId"`
       
       }
@@ -2710,6 +2948,7 @@ type learningstandardsdocumenttype struct {
 }
 
 type componentstype struct {
+
         Component []ComponentType `xml:"Component" json:"Component"`
       
       }
@@ -2719,6 +2958,7 @@ type componentstype struct {
 }
 
 type componenttype struct {
+
         Name *String `xml:"Name" json:"Name"`
       Reference *String `xml:"Reference" json:"Reference"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
@@ -2732,6 +2972,7 @@ type componenttype struct {
 }
 
 type strategiestype struct {
+
         Strategy []string `xml:"Strategy" json:"Strategy"`
       
       }
@@ -2741,6 +2982,7 @@ type strategiestype struct {
 }
 
 type associatedobjectstype struct {
+
       AssociatedObject []AssociatedObjectsType_AssociatedObject `xml:"AssociatedObject" json:"AssociatedObject"`
       
       }
@@ -2750,6 +2992,7 @@ type associatedobjectstype struct {
 }
 
 type evaluationstype struct {
+
         Evaluation []EvaluationType `xml:"Evaluation" json:"Evaluation"`
       
       }
@@ -2759,6 +3002,7 @@ type evaluationstype struct {
 }
 
 type evaluationtype struct {
+
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
       Date *String `xml:"Date,omitempty" json:"Date,omitempty"`
@@ -2771,6 +3015,7 @@ type evaluationtype struct {
 }
 
 type approvalstype struct {
+
         Approval []ApprovalType `xml:"Approval" json:"Approval"`
       
       }
@@ -2780,6 +3025,7 @@ type approvalstype struct {
 }
 
 type approvaltype struct {
+
         Organization *String `xml:"Organization" json:"Organization"`
       Date *String `xml:"Date" json:"Date"`
       
@@ -2790,6 +3036,7 @@ type approvaltype struct {
 }
 
 type mediatypestype struct {
+
         MediaType []string `xml:"MediaType" json:"MediaType"`
       
       }
@@ -2799,6 +3046,7 @@ type mediatypestype struct {
 }
 
 type leacontactlisttype struct {
+
         LEAContact []LEAContactType `xml:"LEAContact" json:"LEAContact"`
       
       }
@@ -2808,6 +3056,7 @@ type leacontactlisttype struct {
 }
 
 type leacontacttype struct {
+
         PublishInDirectory *PublishInDirectoryType `xml:"PublishInDirectory,omitempty" json:"PublishInDirectory,omitempty"`
       ContactInfo *ContactInfoType `xml:"ContactInfo" json:"ContactInfo"`
       
@@ -2818,6 +3067,7 @@ type leacontacttype struct {
 }
 
 type financialaccountrefidlisttype struct {
+
         FinancialAccountRefId []string `xml:"FinancialAccountRefId" json:"FinancialAccountRefId"`
       
       }
@@ -2827,6 +3077,7 @@ type financialaccountrefidlisttype struct {
 }
 
 type accountcodelisttype struct {
+
         AccountCode []string `xml:"AccountCode" json:"AccountCode"`
       
       }
@@ -2836,6 +3087,7 @@ type accountcodelisttype struct {
 }
 
 type journaladjustmentlisttype struct {
+
         JournalAdjustment []JournalAdjustmentType `xml:"JournalAdjustment" json:"JournalAdjustment"`
       
       }
@@ -2845,6 +3097,7 @@ type journaladjustmentlisttype struct {
 }
 
 type journaladjustmenttype struct {
+
         DebitFinancialAccountRefId *String `xml:"DebitFinancialAccountRefId,omitempty" json:"DebitFinancialAccountRefId,omitempty"`
       CreditFinancialAccountRefId *String `xml:"CreditFinancialAccountRefId,omitempty" json:"CreditFinancialAccountRefId,omitempty"`
       DebitAccountCode *String `xml:"DebitAccountCode,omitempty" json:"DebitAccountCode,omitempty"`
@@ -2860,6 +3113,7 @@ type journaladjustmenttype struct {
 }
 
 type paymentreceiptlinelisttype struct {
+
         PaymentReceiptLine []PaymentReceiptLineType `xml:"PaymentReceiptLine" json:"PaymentReceiptLine"`
       
       }
@@ -2869,6 +3123,7 @@ type paymentreceiptlinelisttype struct {
 }
 
 type paymentreceiptlinetype struct {
+
         InvoiceRefId *String `xml:"InvoiceRefId,omitempty" json:"InvoiceRefId,omitempty"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       LocalPaymentReceiptLineId *LocalIdType `xml:"LocalPaymentReceiptLineId,omitempty" json:"LocalPaymentReceiptLineId,omitempty"`
@@ -2886,6 +3141,7 @@ type paymentreceiptlinetype struct {
 }
 
 type passwordlisttype struct {
+
       Password []PasswordListType_Password `xml:"Password" json:"Password"`
       
       }
@@ -2895,6 +3151,7 @@ type passwordlisttype struct {
 }
 
 type exclusionrulestype struct {
+
         ExclusionRule []ExclusionRuleType `xml:"ExclusionRule" json:"ExclusionRule"`
       
       }
@@ -2904,6 +3161,7 @@ type exclusionrulestype struct {
 }
 
 type exclusionruletype struct {
+
           Type *String `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -2914,6 +3172,7 @@ type exclusionruletype struct {
 }
 
 type characteristicstype struct {
+
         AggregateCharacteristicInfoRefId []string `xml:"AggregateCharacteristicInfoRefId" json:"AggregateCharacteristicInfoRefId"`
       
       }
@@ -2923,6 +3182,7 @@ type characteristicstype struct {
 }
 
 type contactstype struct {
+
         Contact []ContactType `xml:"Contact" json:"Contact"`
       
       }
@@ -2932,6 +3192,7 @@ type contactstype struct {
 }
 
 type contacttype struct {
+
         Name *NameType `xml:"Name,omitempty" json:"Name,omitempty"`
       Address *AddressType `xml:"Address,omitempty" json:"Address,omitempty"`
       PhoneNumber *PhoneNumberType `xml:"PhoneNumber,omitempty" json:"PhoneNumber,omitempty"`
@@ -2944,6 +3205,7 @@ type contacttype struct {
 }
 
 type teachinggroupperiodlisttype struct {
+
         TeachingGroupPeriod []TeachingGroupPeriodType `xml:"TeachingGroupPeriod" json:"TeachingGroupPeriod"`
       
       }
@@ -2953,6 +3215,7 @@ type teachinggroupperiodlisttype struct {
 }
 
 type teachinggroupperiodtype struct {
+
         TimeTableCellRefId *String `xml:"TimeTableCellRefId,omitempty" json:"TimeTableCellRefId,omitempty"`
       RoomNumber *HomeroomNumberType `xml:"RoomNumber,omitempty" json:"RoomNumber,omitempty"`
       StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId,omitempty"`
@@ -2968,6 +3231,7 @@ type teachinggroupperiodtype struct {
 }
 
 type teacherlisttype struct {
+
         TeachingGroupTeacher []TeachingGroupTeacherType `xml:"TeachingGroupTeacher" json:"TeachingGroupTeacher"`
       
       }
@@ -2977,6 +3241,7 @@ type teacherlisttype struct {
 }
 
 type teachinggroupteachertype struct {
+
         StaffPersonalRefId *String `xml:"StaffPersonalRefId,omitempty" json:"StaffPersonalRefId,omitempty"`
       StaffLocalId *LocalIdType `xml:"StaffLocalId,omitempty" json:"StaffLocalId,omitempty"`
       Name *NameOfRecordType `xml:"Name,omitempty" json:"Name,omitempty"`
@@ -2989,6 +3254,7 @@ type teachinggroupteachertype struct {
 }
 
 type studentlisttype struct {
+
         TeachingGroupStudent []TeachingGroupStudentType `xml:"TeachingGroupStudent" json:"TeachingGroupStudent"`
       
       }
@@ -2998,6 +3264,7 @@ type studentlisttype struct {
 }
 
 type teachinggroupstudenttype struct {
+
         StudentPersonalRefId *String `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId,omitempty"`
       StudentLocalId *LocalIdType `xml:"StudentLocalId,omitempty" json:"StudentLocalId,omitempty"`
       Name *NameOfRecordType `xml:"Name,omitempty" json:"Name,omitempty"`
@@ -3009,6 +3276,7 @@ type teachinggroupstudenttype struct {
 }
 
 type timetabledaylisttype struct {
+
         TimeTableDay []TimeTableDayType `xml:"TimeTableDay" json:"TimeTableDay"`
       
       }
@@ -3018,6 +3286,7 @@ type timetabledaylisttype struct {
 }
 
 type timetabledaytype struct {
+
         DayId *LocalIdType `xml:"DayId" json:"DayId"`
       DayTitle *String `xml:"DayTitle" json:"DayTitle"`
       TimeTablePeriodList *TimeTablePeriodListType `xml:"TimeTablePeriodList" json:"TimeTablePeriodList"`
@@ -3029,6 +3298,7 @@ type timetabledaytype struct {
 }
 
 type timetableperiodlisttype struct {
+
         TimeTablePeriod []TimeTablePeriodType `xml:"TimeTablePeriod" json:"TimeTablePeriod"`
       
       }
@@ -3038,6 +3308,7 @@ type timetableperiodlisttype struct {
 }
 
 type timetableperiodtype struct {
+
         PeriodId *LocalIdType `xml:"PeriodId" json:"PeriodId"`
       PeriodTitle *String `xml:"PeriodTitle" json:"PeriodTitle"`
       BellPeriod *String `xml:"BellPeriod,omitempty" json:"BellPeriod,omitempty"`
@@ -3054,6 +3325,7 @@ type timetableperiodtype struct {
 }
 
 type naplanclasslisttype struct {
+
         ClassCode []string `xml:"ClassCode" json:"ClassCode"`
       
       }
@@ -3063,6 +3335,7 @@ type naplanclasslisttype struct {
 }
 
 type schoolgrouplisttype struct {
+
         SchoolGroup []LocalIdType `xml:"SchoolGroup" json:"SchoolGroup"`
       
       }
@@ -3072,6 +3345,7 @@ type schoolgrouplisttype struct {
 }
 
 type yearlevelenrollmentlisttype struct {
+
         YearLevelEnrollment []YearLevelEnrollmentType `xml:"YearLevelEnrollment" json:"YearLevelEnrollment"`
       
       }
@@ -3081,6 +3355,7 @@ type yearlevelenrollmentlisttype struct {
 }
 
 type yearlevelenrollmenttype struct {
+
         Year *AUCodeSetsYearLevelCodeType `xml:"Year" json:"Year"`
       Enrollment *String `xml:"Enrollment" json:"Enrollment"`
       
@@ -3091,6 +3366,7 @@ type yearlevelenrollmenttype struct {
 }
 
 type schoolfocuslisttype struct {
+
         SchoolFocus []AUCodeSetsSchoolFocusCodeType `xml:"SchoolFocus" json:"SchoolFocus"`
       
       }
@@ -3100,6 +3376,7 @@ type schoolfocuslisttype struct {
 }
 
 type alertmessagestype struct {
+
         AlertMessage []AlertMessageType `xml:"AlertMessage" json:"AlertMessage"`
       
       }
@@ -3109,6 +3386,7 @@ type alertmessagestype struct {
 }
 
 type alertmessagetype struct {
+
           Type *String `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -3119,6 +3397,7 @@ type alertmessagetype struct {
 }
 
 type medicalalertmessagestype struct {
+
         MedicalAlertMessage []MedicalAlertMessageType `xml:"MedicalAlertMessage" json:"MedicalAlertMessage"`
       
       }
@@ -3128,6 +3407,7 @@ type medicalalertmessagestype struct {
 }
 
 type medicalalertmessagetype struct {
+
           Severity *String `xml:"Severity,attr" json:"Severity"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -3138,6 +3418,7 @@ type medicalalertmessagetype struct {
 }
 
 type otheridlisttype struct {
+
         OtherId []OtherIdType `xml:"OtherId" json:"OtherId"`
       
       }
@@ -3147,6 +3428,7 @@ type otheridlisttype struct {
 }
 
 type otheridtype struct {
+
           Type *String `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -3157,6 +3439,7 @@ type otheridtype struct {
 }
 
 type basenametype struct {
+
         Title *String `xml:"Title,omitempty" json:"Title,omitempty"`
       FamilyName *String `xml:"FamilyName,omitempty" json:"FamilyName,omitempty"`
       GivenName *String `xml:"GivenName,omitempty" json:"GivenName,omitempty"`
@@ -3175,6 +3458,7 @@ type basenametype struct {
 }
 
 type nameofrecordtype struct {
+
         basenametype
           Type *String `xml:"Type,attr" json:"Type"`
       
@@ -3185,6 +3469,7 @@ type nameofrecordtype struct {
 }
 
 type othernametype struct {
+
         basenametype
           Type *AUCodeSetsNameUsageTypeType `xml:"Type,attr" json:"Type"`
       
@@ -3197,6 +3482,7 @@ type othernametype struct {
 }
 
 type locationtype struct {
+
         Type *String `xml:"Type,attr" json:"Type"`
       LocationName *String `xml:"LocationName,omitempty" json:"LocationName,omitempty"`
       LocationRefId *LocationType_LocationRefId
@@ -3209,6 +3495,7 @@ type locationtype struct {
 }
 
 type attendancecodetype struct {
+
         Code *AUCodeSetsAttendanceCodeType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -3219,6 +3506,7 @@ type attendancecodetype struct {
 }
 
 type yearleveltype struct {
+
         Code *AUCodeSetsYearLevelCodeType `xml:"Code" json:"Code"`
       
       }
@@ -3228,6 +3516,7 @@ type yearleveltype struct {
 }
 
 type personinfotype struct {
+
         Name *NameOfRecordType `xml:"Name" json:"Name"`
       OtherNames *OtherNamesType `xml:"OtherNames,omitempty" json:"OtherNames,omitempty"`
       Demographics *DemographicsType `xml:"Demographics,omitempty" json:"Demographics,omitempty"`
@@ -3243,6 +3532,7 @@ type personinfotype struct {
 }
 
 type yearlevelstype struct {
+
         YearLevel []YearLevelType `xml:"YearLevel" json:"YearLevel"`
       
       }
@@ -3253,6 +3543,7 @@ type yearlevelstype struct {
 }
 
 type principalinfotype struct {
+
         ContactName *NameOfRecordType `xml:"ContactName" json:"ContactName"`
       ContactTitle *String `xml:"ContactTitle,omitempty" json:"ContactTitle,omitempty"`
       PhoneNumberList *PhoneNumberListType `xml:"PhoneNumberList,omitempty" json:"PhoneNumberList,omitempty"`
@@ -3265,6 +3556,7 @@ type principalinfotype struct {
 }
 
 type schoolcontacttype struct {
+
         PublishInDirectory *PublishInDirectoryType `xml:"PublishInDirectory,omitempty" json:"PublishInDirectory,omitempty"`
       ContactInfo *ContactInfoType `xml:"ContactInfo" json:"ContactInfo"`
       
@@ -3275,6 +3567,7 @@ type schoolcontacttype struct {
 }
 
 type schoolcontactlisttype struct {
+
         SchoolContact []SchoolContactType `xml:"SchoolContact" json:"SchoolContact"`
       
       }
@@ -3285,6 +3578,7 @@ type schoolcontactlisttype struct {
 }
 
 type contactinfotype struct {
+
         Name *NameType `xml:"Name" json:"Name"`
       PositionTitle *String `xml:"PositionTitle,omitempty" json:"PositionTitle,omitempty"`
       Role *String `xml:"Role,omitempty" json:"Role,omitempty"`
@@ -3301,6 +3595,7 @@ type contactinfotype struct {
 }
 
 type addressstreettype struct {
+
         Line1 *String `xml:"Line1,omitempty" json:"Line1,omitempty"`
       Line2 *String `xml:"Line2,omitempty" json:"Line2,omitempty"`
       Line3 *String `xml:"Line3,omitempty" json:"Line3,omitempty"`
@@ -3322,6 +3617,7 @@ type addressstreettype struct {
 }
 
 type addresstype struct {
+
         Type *AUCodeSetsAddressTypeType `xml:"Type,attr" json:"Type"`
       Role *AUCodeSetsAddressRoleType `xml:"Role,attr" json:"Role"`
       EffectiveFromDate *String `xml:"EffectiveFromDate,omitempty" json:"EffectiveFromDate,omitempty"`
@@ -3346,6 +3642,7 @@ type addresstype struct {
 }
 
 type mapreferencetype struct {
+
         Type *String `xml:"Type,attr" json:"Type"`
       XCoordinate *String `xml:"XCoordinate" json:"XCoordinate"`
       YCoordinate *String `xml:"YCoordinate" json:"YCoordinate"`
@@ -3358,6 +3655,7 @@ type mapreferencetype struct {
 }
 
 type statisticalareastype struct {
+
         StatisticalArea []StatisticalAreaType `xml:"StatisticalArea" json:"StatisticalArea"`
       
       }
@@ -3367,6 +3665,7 @@ type statisticalareastype struct {
 }
 
 type statisticalareatype struct {
+
           SpatialUnitType *String `xml:"SpatialUnitType,attr" json:"SpatialUnitType"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -3377,6 +3676,7 @@ type statisticalareatype struct {
 }
 
 type addresslisttype struct {
+
         Address []AddressType `xml:"Address" json:"Address"`
       
       }
@@ -3386,6 +3686,7 @@ type addresslisttype struct {
 }
 
 type emaillisttype struct {
+
         Email []EmailType `xml:"Email" json:"Email"`
       
       }
@@ -3395,6 +3696,7 @@ type emaillisttype struct {
 }
 
 type emailtype struct {
+
           Type *AUCodeSetsEmailTypeType `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -3405,6 +3707,7 @@ type emailtype struct {
 }
 
 type phonenumberlisttype struct {
+
         PhoneNumber []PhoneNumberType `xml:"PhoneNumber" json:"PhoneNumber"`
       
       }
@@ -3414,6 +3717,7 @@ type phonenumberlisttype struct {
 }
 
 type phonenumbertype struct {
+
         Type *AUCodeSetsTelephoneNumberTypeType `xml:"Type,attr" json:"Type"`
       Number *String `xml:"Number" json:"Number"`
       Extension *String `xml:"Extension,omitempty" json:"Extension,omitempty"`
@@ -3428,6 +3732,7 @@ type phonenumbertype struct {
 }
 
 type gridlocationtype struct {
+
         Latitude *Float `xml:"Latitude" json:"Latitude"`
       Longitude *Float `xml:"Longitude" json:"Longitude"`
       
@@ -3441,6 +3746,7 @@ type gridlocationtype struct {
 }
 
 type electronicidlisttype struct {
+
         ElectronicId []ElectronicIdType `xml:"ElectronicId" json:"ElectronicId"`
       
       }
@@ -3450,6 +3756,7 @@ type electronicidlisttype struct {
 }
 
 type electronicidtype struct {
+
           Type *AUCodeSetsElectronicIdTypeType `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -3460,6 +3767,7 @@ type electronicidtype struct {
 }
 
 type othernamestype struct {
+
         Name []OtherNameType `xml:"Name" json:"Name"`
       
       }
@@ -3469,6 +3777,7 @@ type othernamestype struct {
 }
 
 type demographicstype struct {
+
         IndigenousStatus *AUCodeSetsIndigenousStatusType `xml:"IndigenousStatus,omitempty" json:"IndigenousStatus,omitempty"`
       Gender *AUCodeSetsSexCodeType `xml:"Gender,omitempty" json:"Gender,omitempty"`
       Sex *AUCodeSetsSexCodeType `xml:"Sex,omitempty" json:"Sex,omitempty"`
@@ -3516,6 +3825,7 @@ type demographicstype struct {
 }
 
 type privatehealthinsurancetype struct {
+
         Company *String `xml:"Company" json:"Company"`
       Number *String `xml:"Number,omitempty" json:"Number,omitempty"`
       
@@ -3526,6 +3836,7 @@ type privatehealthinsurancetype struct {
 }
 
 type passporttype struct {
+
         Number *String `xml:"Number" json:"Number"`
       ExpiryDate *String `xml:"ExpiryDate,omitempty" json:"ExpiryDate,omitempty"`
       Country *CountryType `xml:"Country" json:"Country"`
@@ -3537,6 +3848,7 @@ type passporttype struct {
 }
 
 type englishproficiencytype struct {
+
         Code *AUCodeSetsEnglishProficiencyType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -3547,6 +3859,7 @@ type englishproficiencytype struct {
 }
 
 type languagelisttype struct {
+
         Language []LanguageBaseType `xml:"Language" json:"Language"`
       
       }
@@ -3559,6 +3872,7 @@ type languagelisttype struct {
 }
 
 type relationshiptype struct {
+
         Code *AUCodeSetsRelationshipToStudentType `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -3571,6 +3885,7 @@ type relationshiptype struct {
 }
 
 type nametype struct {
+
         basenametype
           Type *AUCodeSetsNameUsageTypeType `xml:"Type,attr" json:"Type"`
       
@@ -3582,6 +3897,7 @@ type nametype struct {
 }
 
 type timeelementtype struct {
+
         StartDateTime *String `xml:"StartDateTime,omitempty" json:"StartDateTime,omitempty"`
       EndDateTime *String `xml:"EndDateTime,omitempty" json:"EndDateTime,omitempty"`
       SpanGaps *SpanGapListType `xml:"SpanGaps,omitempty" json:"SpanGaps,omitempty"`
@@ -3594,6 +3910,7 @@ type timeelementtype struct {
 }
 
 type spangaplisttype struct {
+
         SpanGap []SpanGapType `xml:"SpanGap" json:"SpanGap"`
       
       }
@@ -3603,6 +3920,7 @@ type spangaplisttype struct {
 }
 
 type spangaptype struct {
+
         StartDateTime *String `xml:"StartDateTime,omitempty" json:"StartDateTime,omitempty"`
       EndDateTime *String `xml:"EndDateTime,omitempty" json:"EndDateTime,omitempty"`
       
@@ -3613,6 +3931,7 @@ type spangaptype struct {
 }
 
 type lifecycletype struct {
+
         Created *CreatedType `xml:"Created,omitempty" json:"Created,omitempty"`
       ModificationHistory *ModifiedListType `xml:"ModificationHistory,omitempty" json:"ModificationHistory,omitempty"`
       TimeElements *TimeElementListType `xml:"TimeElements,omitempty" json:"TimeElements,omitempty"`
@@ -3624,6 +3943,7 @@ type lifecycletype struct {
 }
 
 type modifiedlisttype struct {
+
         Modified []ModifiedType `xml:"Modified" json:"Modified"`
       
       }
@@ -3633,6 +3953,7 @@ type modifiedlisttype struct {
 }
 
 type modifiedtype struct {
+
         By *String `xml:"By" json:"By"`
       DateTime *String `xml:"DateTime" json:"DateTime"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
@@ -3644,6 +3965,7 @@ type modifiedtype struct {
 }
 
 type createdtype struct {
+
         DateTime *String `xml:"DateTime" json:"DateTime"`
       Creators *CreatorListType `xml:"Creators,omitempty" json:"Creators,omitempty"`
       
@@ -3654,6 +3976,7 @@ type createdtype struct {
 }
 
 type creatorlisttype struct {
+
         Creator []LifeCycleCreatorType `xml:"Creator" json:"Creator"`
       
       }
@@ -3663,6 +3986,7 @@ type creatorlisttype struct {
 }
 
 type lifecyclecreatortype struct {
+
         Name *String `xml:"Name" json:"Name"`
       ID *String `xml:"ID" json:"ID"`
       
@@ -3673,6 +3997,7 @@ type lifecyclecreatortype struct {
 }
 
 type othercodelisttype struct {
+
       OtherCode []OtherCodeListType_OtherCode `xml:"OtherCode" json:"OtherCode"`
       
       }
@@ -3682,6 +4007,7 @@ type othercodelisttype struct {
 }
 
 type programstatustype struct {
+
         Code *String `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -3692,6 +4018,7 @@ type programstatustype struct {
 }
 
 type subjectarealisttype struct {
+
         SubjectArea []SubjectAreaType `xml:"SubjectArea" json:"SubjectArea"`
       
       }
@@ -3701,6 +4028,7 @@ type subjectarealisttype struct {
 }
 
 type acstrandarealisttype struct {
+
         ACStrandSubjectArea []ACStrandSubjectAreaType `xml:"ACStrandSubjectArea" json:"ACStrandSubjectArea"`
       
       }
@@ -3710,6 +4038,7 @@ type acstrandarealisttype struct {
 }
 
 type subjectareatype struct {
+
         Code *String `xml:"Code" json:"Code"`
       OtherCodeList *OtherCodeListType `xml:"OtherCodeList,omitempty" json:"OtherCodeList,omitempty"`
       
@@ -3720,6 +4049,7 @@ type subjectareatype struct {
 }
 
 type acstrandsubjectareatype struct {
+
         ACStrand *AUCodeSetsACStrandType `xml:"ACStrand" json:"ACStrand"`
       SubjectArea *SubjectAreaType `xml:"SubjectArea,omitempty" json:"SubjectArea,omitempty"`
       
@@ -3730,6 +4060,7 @@ type acstrandsubjectareatype struct {
 }
 
 type sif_extendedelementstype struct {
+
       SIF_ExtendedElement []SIF_ExtendedElementsType_SIF_ExtendedElement `xml:"SIF_ExtendedElement" json:"SIF_ExtendedElement"`
       
       }
@@ -3739,6 +4070,7 @@ type sif_extendedelementstype struct {
 }
 
 type sif_metadatatype struct {
+
         TimeElements *TimeElementListType `xml:"TimeElements,omitempty" json:"TimeElements,omitempty"`
       LifeCycle *LifeCycleType `xml:"LifeCycle,omitempty" json:"LifeCycle,omitempty"`
       ETag *String `xml:"ETag,omitempty" json:"ETag,omitempty"`
@@ -3750,6 +4082,7 @@ type sif_metadatatype struct {
 }
 
 type timeelementlisttype struct {
+
         TimeElement []TimeElementType `xml:"TimeElement" json:"TimeElement"`
       
       }
@@ -3759,6 +4092,7 @@ type timeelementlisttype struct {
 }
 
 type studentcontactfeepercentagetype struct {
+
         Curriculum *Float `xml:"Curriculum,omitempty" json:"Curriculum,omitempty"`
       Other *Float `xml:"Other,omitempty" json:"Other,omitempty"`
       
@@ -3769,6 +4103,7 @@ type studentcontactfeepercentagetype struct {
 }
 
 type workingwithchildrenchecktype struct {
+
         StateTerritory *StateProvinceType `xml:"StateTerritory" json:"StateTerritory"`
       Number *String `xml:"Number" json:"Number"`
       HolderName *String `xml:"HolderName,omitempty" json:"HolderName,omitempty"`
@@ -3786,6 +4121,7 @@ type workingwithchildrenchecktype struct {
 }
 
 type reportingauthoritylisttype struct {
+
         ReportingAuthority []ReportingAuthorityType `xml:"ReportingAuthority" json:"ReportingAuthority"`
       
       }
@@ -3795,6 +4131,7 @@ type reportingauthoritylisttype struct {
 }
 
 type reportingauthoritytype struct {
+
         Name *String `xml:"Name" json:"Name"`
       System *String `xml:"System,omitempty" json:"System,omitempty"`
       AuthorityId *String `xml:"AuthorityId,omitempty" json:"AuthorityId,omitempty"`
@@ -3806,6 +4143,7 @@ type reportingauthoritytype struct {
 }
 
 type signatorytype struct {
+
         Name *String `xml:"Name" json:"Name"`
       Role *String `xml:"Role,omitempty" json:"Role,omitempty"`
       Organisation *String `xml:"Organisation,omitempty" json:"Organisation,omitempty"`
@@ -3820,6 +4158,7 @@ type signatorytype struct {
 }
 
 type arrivalschooltype struct {
+
         ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
       CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
       Name *String `xml:"Name,omitempty" json:"Name,omitempty"`
@@ -3832,6 +4171,7 @@ type arrivalschooltype struct {
 }
 
 type departureschooltype struct {
+
         ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
       CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
       Name *String `xml:"Name" json:"Name"`
@@ -3845,6 +4185,7 @@ type departureschooltype struct {
 }
 
 type previousschoollisttype struct {
+
         PreviousSchool []PreviousSchoolType `xml:"PreviousSchool" json:"PreviousSchool"`
       
       }
@@ -3854,6 +4195,7 @@ type previousschoollisttype struct {
 }
 
 type previousschooltype struct {
+
         ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
       CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
       Name *String `xml:"Name" json:"Name"`
@@ -3866,6 +4208,7 @@ type previousschooltype struct {
 }
 
 type naplanscorelisttype struct {
+
         NAPLANScore []NAPLANScoreType `xml:"NAPLANScore" json:"NAPLANScore"`
       
       }
@@ -3875,6 +4218,7 @@ type naplanscorelisttype struct {
 }
 
 type naplanscoretype struct {
+
         Domain *AUCodeSetsNAPTestDomainType `xml:"Domain" json:"Domain"`
       ParticipationCode *AUCodeSetsNAPParticipationCodeType `xml:"ParticipationCode,omitempty" json:"ParticipationCode,omitempty"`
       DomainScore *DomainScoreType `xml:"DomainScore,omitempty" json:"DomainScore,omitempty"`
@@ -3886,6 +4230,7 @@ type naplanscoretype struct {
 }
 
 type naplanscorewithyearslisttype struct {
+
         NAPLANScore []NAPLANScoreWithYearsType `xml:"NAPLANScore" json:"NAPLANScore"`
       
       }
@@ -3895,6 +4240,7 @@ type naplanscorewithyearslisttype struct {
 }
 
 type naplanscorewithyearstype struct {
+
         Domain *AUCodeSetsNAPTestDomainType `xml:"Domain" json:"Domain"`
       ParticipationCode *AUCodeSetsNAPParticipationCodeType `xml:"ParticipationCode,omitempty" json:"ParticipationCode,omitempty"`
       DomainScore *DomainScoreSDTNType `xml:"DomainScore,omitempty" json:"DomainScore,omitempty"`
@@ -3908,6 +4254,7 @@ type naplanscorewithyearstype struct {
 }
 
 type nccdlisttype struct {
+
         NCCD []NCCDType `xml:"NCCD" json:"NCCD"`
       
       }
@@ -3917,6 +4264,7 @@ type nccdlisttype struct {
 }
 
 type nccdtype struct {
+
         LevelOfAdjustment *AUCodeSetsNCCDAdjustmentType `xml:"LevelOfAdjustment" json:"LevelOfAdjustment"`
       CategoryOfDisability *AUCodeSetsNCCDDisabilityType `xml:"CategoryOfDisability,omitempty" json:"CategoryOfDisability,omitempty"`
       DisabilityCategoryConsideredList *DisabilityCategoryListType `xml:"DisabilityCategoryConsideredList,omitempty" json:"DisabilityCategoryConsideredList,omitempty"`
@@ -3929,6 +4277,7 @@ type nccdtype struct {
 }
 
 type disabilitycategorylisttype struct {
+
         DisabilityCategoryConsidered []AUCodeSetsNCCDDisabilityType `xml:"DisabilityCategoryConsidered" json:"DisabilityCategoryConsidered"`
       
       }
@@ -3938,6 +4287,7 @@ type disabilitycategorylisttype struct {
 }
 
 type educationalassessmentlisttype struct {
+
         EducationalAssessment []EducationalAssessmentType `xml:"EducationalAssessment" json:"EducationalAssessment"`
       
       }
@@ -3947,6 +4297,7 @@ type educationalassessmentlisttype struct {
 }
 
 type educationalassessmenttype struct {
+
         Name *String `xml:"Name" json:"Name"`
       Content *String `xml:"Content,omitempty" json:"Content,omitempty"`
       
@@ -3957,6 +4308,7 @@ type educationalassessmenttype struct {
 }
 
 type stdngradelisttype struct {
+
         StudentGrade []STDNGradeType `xml:"StudentGrade" json:"StudentGrade"`
       
       }
@@ -3966,6 +4318,7 @@ type stdngradelisttype struct {
 }
 
 type stdngradetype struct {
+
         Subject *String `xml:"Subject,omitempty" json:"Subject,omitempty"`
       LearningArea *ACStrandSubjectAreaType `xml:"LearningArea" json:"LearningArea"`
       Grade *GradeType `xml:"Grade" json:"Grade"`
@@ -3978,6 +4331,7 @@ type stdngradetype struct {
 }
 
 type timetablechangereasonlisttype struct {
+
         TimeTableChangeReason []TimeTableChangeReasonType `xml:"TimeTableChangeReason" json:"TimeTableChangeReason"`
       
       }
@@ -3987,6 +4341,7 @@ type timetablechangereasonlisttype struct {
 }
 
 type timetablechangereasontype struct {
+
         TimeTableChangeType *AUCodeSetsTimeTableChangeTypeType `xml:"TimeTableChangeType" json:"TimeTableChangeType"`
       TimeTableChangeNotes *String `xml:"TimeTableChangeNotes,omitempty" json:"TimeTableChangeNotes,omitempty"`
       
@@ -3997,6 +4352,7 @@ type timetablechangereasontype struct {
 }
 
 type picturesourcetype struct {
+
           Type *AUCodeSetsPictureSourceType `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -4007,6 +4363,7 @@ type picturesourcetype struct {
 }
 
 type activityevaluationtype struct {
+
         EvaluationType *String `xml:"EvaluationType,attr" json:"EvaluationType"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
       
@@ -4017,6 +4374,7 @@ type activityevaluationtype struct {
 }
 
 type learningresourcelocationtype struct {
+
           ReferenceType *String `xml:"ReferenceType,attr" json:"ReferenceType"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -4027,6 +4385,7 @@ type learningresourcelocationtype struct {
 }
 
 type durationtype struct {
+
           Units *String `xml:"Units,attr" json:"Units"`
       
         Value *Int `xml:",chardata" json:"value"`
@@ -4037,6 +4396,7 @@ type durationtype struct {
 }
 
 type calculationruletype struct {
+
           Type *String `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
@@ -4047,6 +4407,7 @@ type PersonInvolvementType_PersonRefId struct {
 }
 
 type personinvolvementtype_personrefid struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
@@ -4055,6 +4416,7 @@ type SourceObjectsType_SourceObject struct {
 }
 
 type sourceobjectstype_sourceobject struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
@@ -4063,6 +4425,7 @@ type AssociatedObjectsType_AssociatedObject struct {
 }
 
 type associatedobjectstype_associatedobject struct {
+
       SIF_RefObject *ObjectNameType `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
@@ -4071,6 +4434,7 @@ type PasswordListType_Password struct {
 }
 
 type passwordlisttype_password struct {
+
       Algorithm *String `xml:"Algorithm,attr" json:"Algorithm"`
       KeyName *String `xml:"KeyName,attr" json:"KeyName"`
       Value *String `xml:",chardata" json:"value"`
@@ -4080,6 +4444,7 @@ type LocationType_LocationRefId struct {
 }
 
 type locationtype_locationrefid struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }
@@ -4088,6 +4453,7 @@ type OtherCodeListType_OtherCode struct {
 }
 
 type othercodelisttype_othercode struct {
+
       Codeset *String `xml:"Codeset,attr" json:"Codeset"`
       Value *String `xml:",chardata" json:"value"`
 }
@@ -4096,6 +4462,7 @@ type SIF_ExtendedElementsType_SIF_ExtendedElement struct {
 }
 
 type sif_extendedelementstype_sif_extendedelement struct {
+
       Name *String `xml:"Name,attr" json:"Name"`
       Type *String `xml:"Type,attr" json:"Type"`
       SIF_Action *String `xml:"SIF_Action,attr" json:"SIF_Action"`

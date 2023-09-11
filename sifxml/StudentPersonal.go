@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentPersonals []StudentPersonal
+
+    type StudentPersonals struct {
+      studentpersonals `json:"StudentPersonals"`
+    }
+
+    type studentpersonals struct {
+      StudentPersonal []studentpersonal `json:"StudentPersonal"`
+    }
 
     type StudentPersonal struct {
-  studentpersonal `xml:"StudentPersonal" json:"StudentPersonal"`
-}
+      studentpersonal `xml:"StudentPersonal" json:"StudentPersonal"`
+     }
 
-type studentpersonal struct {
+     type studentpersonal struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       AlertMessages *AlertMessagesType `xml:"AlertMessages,omitempty" json:"AlertMessages,omitempty"`
       MedicalAlertMessages *MedicalAlertMessagesType `xml:"MedicalAlertMessages,omitempty" json:"MedicalAlertMessages,omitempty"`

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type AggregateStatisticInfos []AggregateStatisticInfo
+
+    type AggregateStatisticInfos struct {
+      aggregatestatisticinfos `json:"AggregateStatisticInfos"`
+    }
+
+    type aggregatestatisticinfos struct {
+      AggregateStatisticInfo []aggregatestatisticinfo `json:"AggregateStatisticInfo"`
+    }
 
     type AggregateStatisticInfo struct {
-  aggregatestatisticinfo `xml:"AggregateStatisticInfo" json:"AggregateStatisticInfo"`
-}
+      aggregatestatisticinfo `xml:"AggregateStatisticInfo" json:"AggregateStatisticInfo"`
+     }
 
-type aggregatestatisticinfo struct {
+     type aggregatestatisticinfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StatisticName *String `xml:"StatisticName" json:"StatisticName"`
       CalculationRule *CalculationRuleType `xml:"CalculationRule,omitempty" json:"CalculationRule,omitempty"`

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type NAPTestlets []NAPTestlet
+
+    type NAPTestlets struct {
+      naptestlets `json:"NAPTestlets"`
+    }
+
+    type naptestlets struct {
+      NAPTestlet []naptestlet `json:"NAPTestlet"`
+    }
 
     type NAPTestlet struct {
-  naptestlet `xml:"NAPTestlet" json:"NAPTestlet"`
-}
+      naptestlet `xml:"NAPTestlet" json:"NAPTestlet"`
+     }
 
-type naptestlet struct {
+     type naptestlet struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       NAPTestRefId *String `xml:"NAPTestRefId,omitempty" json:"NAPTestRefId,omitempty"`
       NAPTestLocalId *LocalIdType `xml:"NAPTestLocalId" json:"NAPTestLocalId"`

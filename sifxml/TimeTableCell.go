@@ -1,13 +1,20 @@
 package sifxml
 
 
-type TimeTableCells []TimeTableCell
+
+    type TimeTableCells struct {
+      timetablecells `json:"TimeTableCells"`
+    }
+
+    type timetablecells struct {
+      TimeTableCell []timetablecell `json:"TimeTableCell"`
+    }
 
     type TimeTableCell struct {
-  timetablecell `xml:"TimeTableCell" json:"TimeTableCell"`
-}
+      timetablecell `xml:"TimeTableCell" json:"TimeTableCell"`
+     }
 
-type timetablecell struct {
+     type timetablecell struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       TimeTableRefId *String `xml:"TimeTableRefId" json:"TimeTableRefId"`
       TimeTableSubjectRefId *String `xml:"TimeTableSubjectRefId,omitempty" json:"TimeTableSubjectRefId,omitempty"`

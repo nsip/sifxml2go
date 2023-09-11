@@ -1,13 +1,20 @@
 package sifxml
 
 
-type CollectionDeclarations []CollectionDeclaration
+
+    type CollectionDeclarations struct {
+      collectiondeclarations `json:"CollectionDeclarations"`
+    }
+
+    type collectiondeclarations struct {
+      CollectionDeclaration []collectiondeclaration `json:"CollectionDeclaration"`
+    }
 
     type CollectionDeclaration struct {
-  collectiondeclaration `xml:"CollectionDeclaration" json:"CollectionDeclaration"`
-}
+      collectiondeclaration `xml:"CollectionDeclaration" json:"CollectionDeclaration"`
+     }
 
-type collectiondeclaration struct {
+     type collectiondeclaration struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ReportingAuthorityList *ReportingAuthorityListType `xml:"ReportingAuthorityList" json:"ReportingAuthorityList"`
       SubmittingAuthority *ReportingAuthorityType `xml:"SubmittingAuthority,omitempty" json:"SubmittingAuthority,omitempty"`

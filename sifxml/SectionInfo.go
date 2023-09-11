@@ -1,13 +1,20 @@
 package sifxml
 
 
-type SectionInfos []SectionInfo
+
+    type SectionInfos struct {
+      sectioninfos `json:"SectionInfos"`
+    }
+
+    type sectioninfos struct {
+      SectionInfo []sectioninfo `json:"SectionInfo"`
+    }
 
     type SectionInfo struct {
-  sectioninfo `xml:"SectionInfo" json:"SectionInfo"`
-}
+      sectioninfo `xml:"SectionInfo" json:"SectionInfo"`
+     }
 
-type sectioninfo struct {
+     type sectioninfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolCourseInfoRefId *String `xml:"SchoolCourseInfoRefId" json:"SchoolCourseInfoRefId"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`

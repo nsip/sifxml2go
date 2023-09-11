@@ -1,13 +1,20 @@
 package sifxml
 
 
-type NAPCodeFrames []NAPCodeFrame
+
+    type NAPCodeFrames struct {
+      napcodeframes `json:"NAPCodeFrames"`
+    }
+
+    type napcodeframes struct {
+      NAPCodeFrame []napcodeframe `json:"NAPCodeFrame"`
+    }
 
     type NAPCodeFrame struct {
-  napcodeframe `xml:"NAPCodeFrame" json:"NAPCodeFrame"`
-}
+      napcodeframe `xml:"NAPCodeFrame" json:"NAPCodeFrame"`
+     }
 
-type napcodeframe struct {
+     type napcodeframe struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       NAPTestRefId *String `xml:"NAPTestRefId" json:"NAPTestRefId"`
       TestContent *NAPTestContentType `xml:"TestContent" json:"TestContent"`

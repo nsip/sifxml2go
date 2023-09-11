@@ -1,13 +1,20 @@
 package sifxml
 
 
-type CollectionRounds []CollectionRound
+
+    type CollectionRounds struct {
+      collectionrounds `json:"CollectionRounds"`
+    }
+
+    type collectionrounds struct {
+      CollectionRound []collectionround `json:"CollectionRound"`
+    }
 
     type CollectionRound struct {
-  collectionround `xml:"CollectionRound" json:"CollectionRound"`
-}
+      collectionround `xml:"CollectionRound" json:"CollectionRound"`
+     }
 
-type collectionround struct {
+     type collectionround struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       AGCollection *AUCodeSetsAGCollectionType `xml:"AGCollection,omitempty" json:"AGCollection,omitempty"`
       CollectionYear *SchoolYearType `xml:"CollectionYear" json:"CollectionYear"`

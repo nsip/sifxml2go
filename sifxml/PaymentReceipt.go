@@ -1,13 +1,20 @@
 package sifxml
 
 
-type PaymentReceipts []PaymentReceipt
+
+    type PaymentReceipts struct {
+      paymentreceipts `json:"PaymentReceipts"`
+    }
+
+    type paymentreceipts struct {
+      PaymentReceipt []paymentreceipt `json:"PaymentReceipt"`
+    }
 
     type PaymentReceipt struct {
-  paymentreceipt `xml:"PaymentReceipt" json:"PaymentReceipt"`
-}
+      paymentreceipt `xml:"PaymentReceipt" json:"PaymentReceipt"`
+     }
 
-type paymentreceipt struct {
+     type paymentreceipt struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       TransactionType *String `xml:"TransactionType" json:"TransactionType"`

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type GradingAssignments []GradingAssignment
+
+    type GradingAssignments struct {
+      gradingassignments `json:"GradingAssignments"`
+    }
+
+    type gradingassignments struct {
+      GradingAssignment []gradingassignment `json:"GradingAssignment"`
+    }
 
     type GradingAssignment struct {
-  gradingassignment `xml:"GradingAssignment" json:"GradingAssignment"`
-}
+      gradingassignment `xml:"GradingAssignment" json:"GradingAssignment"`
+     }
 
-type gradingassignment struct {
+     type gradingassignment struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       TeachingGroupRefId *String `xml:"TeachingGroupRefId,omitempty" json:"TeachingGroupRefId,omitempty"`
       StudentPersonalRefIdList *StudentsType `xml:"StudentPersonalRefIdList,omitempty" json:"StudentPersonalRefIdList,omitempty"`

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type MarkValueInfos []MarkValueInfo
+
+    type MarkValueInfos struct {
+      markvalueinfos `json:"MarkValueInfos"`
+    }
+
+    type markvalueinfos struct {
+      MarkValueInfo []markvalueinfo `json:"MarkValueInfo"`
+    }
 
     type MarkValueInfo struct {
-  markvalueinfo `xml:"MarkValueInfo" json:"MarkValueInfo"`
-}
+      markvalueinfo `xml:"MarkValueInfo" json:"MarkValueInfo"`
+     }
 
-type markvalueinfo struct {
+     type markvalueinfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       YearLevels *YearLevelsType `xml:"YearLevels,omitempty" json:"YearLevels,omitempty"`

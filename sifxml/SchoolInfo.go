@@ -1,13 +1,20 @@
 package sifxml
 
 
-type SchoolInfos []SchoolInfo
+
+    type SchoolInfos struct {
+      schoolinfos `json:"SchoolInfos"`
+    }
+
+    type schoolinfos struct {
+      SchoolInfo []schoolinfo `json:"SchoolInfo"`
+    }
 
     type SchoolInfo struct {
-  schoolinfo `xml:"SchoolInfo" json:"SchoolInfo"`
-}
+      schoolinfo `xml:"SchoolInfo" json:"SchoolInfo"`
+     }
 
-type schoolinfo struct {
+     type schoolinfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`
@@ -62,6 +69,7 @@ type SchoolInfo_OtherLEA struct {
 }
 
 type schoolinfo_otherlea struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *RefIdType `xml:",chardata" json:"value"`
 }

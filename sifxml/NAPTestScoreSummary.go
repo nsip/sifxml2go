@@ -1,13 +1,20 @@
 package sifxml
 
 
-type NAPTestScoreSummarys []NAPTestScoreSummary
+
+    type NAPTestScoreSummarys struct {
+      naptestscoresummarys `json:"NAPTestScoreSummarys"`
+    }
+
+    type naptestscoresummarys struct {
+      NAPTestScoreSummary []naptestscoresummary `json:"NAPTestScoreSummary"`
+    }
 
     type NAPTestScoreSummary struct {
-  naptestscoresummary `xml:"NAPTestScoreSummary" json:"NAPTestScoreSummary"`
-}
+      naptestscoresummary `xml:"NAPTestScoreSummary" json:"NAPTestScoreSummary"`
+     }
 
-type naptestscoresummary struct {
+     type naptestscoresummary struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId,omitempty"`
       SchoolACARAId *LocalIdType `xml:"SchoolACARAId" json:"SchoolACARAId"`

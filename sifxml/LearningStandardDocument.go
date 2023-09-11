@@ -1,13 +1,20 @@
 package sifxml
 
 
-type LearningStandardDocuments []LearningStandardDocument
+
+    type LearningStandardDocuments struct {
+      learningstandarddocuments `json:"LearningStandardDocuments"`
+    }
+
+    type learningstandarddocuments struct {
+      LearningStandardDocument []learningstandarddocument `json:"LearningStandardDocument"`
+    }
 
     type LearningStandardDocument struct {
-  learningstandarddocument `xml:"LearningStandardDocument" json:"LearningStandardDocument"`
-}
+      learningstandarddocument `xml:"LearningStandardDocument" json:"LearningStandardDocument"`
+     }
 
-type learningstandarddocument struct {
+     type learningstandarddocument struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       Title *String `xml:"Title" json:"Title"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`

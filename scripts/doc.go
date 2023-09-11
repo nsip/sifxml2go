@@ -1,6 +1,6 @@
 // sifxml contains types to represent the SIF-AU data model, and accessor methods to manipulate them as objects.
 //
-// Purpose
+// # Purpose
 //
 // Objects in the SIF data model are highly interdependent, and synthesising SIF objects is a complex activity
 // involving iterating through the various dependencies involved. The SIF objects generated have to comply with
@@ -13,7 +13,7 @@
 // to consume, in order to confirm their compliance with the various test cases it supports. However it can be used
 // by anyone wishing to generate SIF objects.
 //
-// Provenance
+// # Provenance
 //
 // The contents of the sifxml package are automatically generated from the specgen files specifying the data model
 // for the current release of the SIF-AU data model, and are updated as the specification itself is updated.
@@ -23,7 +23,7 @@
 // Because it relies on specgen input, the code generating this package can also be run in other locales using
 // the same input format.
 //
-// Approach
+// # Approach
 //
 // Like most XML and JSON schemas, SIF contains a large number of highly nested structures, and most of its elements
 // are optional. In order for XML and JSON to be generated reliably, without spurious empty tags, Go relies on the
@@ -32,12 +32,12 @@
 // In order to ensure the consistent use of types, without forcing developers to remember to use pointers,
 // the package is highly object oriented, and elements are only accessed via accessor methods.
 //
-// There is a huge number of types (because of the lack of Go generics),
+// There is a huge number of types (because of the lack of Go generics when the code was authored -- and lack of time to update it),
 // and their contents can only be inspected in the source code
 // (in order to enforce the use of accessors, struct members are contained in private mirror structs).
 // In order to keep documentation manageable, we summarise the structure of the code here.
 //
-// Types
+// # Types
 //
 // sifxml primitive values are of four types: String, Int, Float, and Bool. These are local aliases of the go primitive types
 // string, int, float64, and bool. However, string routinely appears
@@ -55,129 +55,132 @@
 //
 // For example, the following is the definition of the AgggregateCharacteristicInfo object:
 //
-//  type AggregateCharacteristicInfo struct {
-//          aggregatecharacteristicinfo `xml:"AggregateCharacteristicInfo" json:"AggregateCharacteristicInfo"`
-//  }
+//	type AggregateCharacteristicInfo struct {
+//	        aggregatecharacteristicinfo `xml:"AggregateCharacteristicInfo" json:"AggregateCharacteristicInfo"`
+//	}
 //
-//  type aggregatecharacteristicinfo struct {
-//          RefId                *RefIdType                `xml:"RefId,attr" json:"RefId"`
-//          Description          *String                   `xml:"Description,omitempty" json:"Description,omitempty"`
-//          Definition           *String                   `xml:"Definition" json:"Definition"`
-//          ElementName          *String                   `xml:"ElementName,omitempty" json:"ElementName,omitempty"`
-//          LocalCodeList        *LocalCodeListType        `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
-//          SIF_Metadata         *SIF_MetadataType         `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
-//          SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
-//  }
+//	type aggregatecharacteristicinfo struct {
+//	        RefId                *RefIdType                `xml:"RefId,attr" json:"RefId"`
+//	        Description          *String                   `xml:"Description,omitempty" json:"Description,omitempty"`
+//	        Definition           *String                   `xml:"Definition" json:"Definition"`
+//	        ElementName          *String                   `xml:"ElementName,omitempty" json:"ElementName,omitempty"`
+//	        LocalCodeList        *LocalCodeListType        `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
+//	        SIF_Metadata         *SIF_MetadataType         `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
+//	        SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
+//	}
 //
 // RefIdType and String are both aliases of string. RefId, Description, Definition, and ElementName are all primitives.
 //
 // LocalCodeListType is a list:
 //
-//  type LocalCodeListType struct {
-//          localcodelisttype `xml:"LocalCodeListType" json:"LocalCodeListType"`
-//  }
+//	type LocalCodeListType struct {
+//	        localcodelisttype `xml:"LocalCodeListType" json:"LocalCodeListType"`
+//	}
 //
-//  type localcodelisttype struct {
-//          LocalCode []LocalCodeType `xml:"LocalCode" json:"LocalCode"`
-//  }
+//	type localcodelisttype struct {
+//	        LocalCode []LocalCodeType `xml:"LocalCode" json:"LocalCode"`
+//	}
 //
 // LocalCode, as well as SIF_Metadata and SIF_ExtendedElements, are containers:
 //
-//  type LocalCodeType struct {
-//  	localcodetype `xml:"LocalCodeType" json:"LocalCodeType"`
-//  }
+//	type LocalCodeType struct {
+//		localcodetype `xml:"LocalCodeType" json:"LocalCodeType"`
+//	}
 //
-//  type localcodetype struct {
-//  	LocalisedCode *String `xml:"LocalisedCode" json:"LocalisedCode"`
-//  	Description   *String `xml:"Description,omitempty" json:"Description,omitempty"`
-//  	Element       *String `xml:"Element,omitempty" json:"Element,omitempty"`
-//  	ListIndex     *Int    `xml:"ListIndex,omitempty" json:"ListIndex,omitempty"`
-//  }
+//	type localcodetype struct {
+//		LocalisedCode *String `xml:"LocalisedCode" json:"LocalisedCode"`
+//		Description   *String `xml:"Description,omitempty" json:"Description,omitempty"`
+//		Element       *String `xml:"Element,omitempty" json:"Element,omitempty"`
+//		ListIndex     *Int    `xml:"ListIndex,omitempty" json:"ListIndex,omitempty"`
+//	}
+//
+// For the top level object lists (e.g. StudentPersonals), use the predefined objects rather than creating slices, in order to guarantee
+// correct unmarshalling, particularly in JSON.
 //
 // In the following definitions, X stands in for an applicable type name.
 //
-// Objects
+// # Objects
 //
-// sifxml.XSlice: creates a slice of pointers to the object type.
+// sifxml.XSlice: creates a slice of pointers to the object type, and populates the list object with them
 //
-//  func ActivitySlice() []*Activity
+//	func ActivitySlice() *Activitys
 //
-// String
+// # String
 //
 // X.String: Returns string value
 //
-//   func (t *CountryType) String() string
+//	func (t *CountryType) String() string
 //
-// Codeset
+// # Codeset
 //
 // Each codeset type X has two associated variables: X_values, a slice of all allowed values of the codeset,
 // and X_map, a map of each allowed codeset value to struct{}{} (used to determine efficiently whether a value is allowed).
 // For example:
 //
-//  type AUCodeSetsWellbeingCharacteristicClassificationType string
+//	type AUCodeSetsWellbeingCharacteristicClassificationType string
 //
-//  var AUCodeSetsWellbeingCharacteristicClassificationType_values = []string{
-//      "M", "D", "S", "O", "DP",
-//  }
+//	var AUCodeSetsWellbeingCharacteristicClassificationType_values = []string{
+//	    "M", "D", "S", "O", "DP",
+//	}
 //
-//  var AUCodeSetsWellbeingCharacteristicClassificationType_map = map[string]struct{}{
-//      "M":  struct{}{},
-//      "D":  struct{}{},
-//      "S":  struct{}{},
-//      "O":  struct{}{},
-//      "DP": struct{}{},
-//  }
+//	var AUCodeSetsWellbeingCharacteristicClassificationType_map = map[string]struct{}{
+//	    "M":  struct{}{},
+//	    "D":  struct{}{},
+//	    "S":  struct{}{},
+//	    "O":  struct{}{},
+//	    "DP": struct{}{},
+//	}
 //
 // sifxml.CodesetContains: Uses the codeset map to determine whether a string is allowed for a codeset.
 //
-//   func CodesetContains(codeset map[string]struct{}, value interface{}) bool
+//	func CodesetContains(codeset map[string]struct{}, value interface{}) bool
 //
-// Int
+// # Int
 //
 // X.Int: Returns int value
 //
-//   func (t *Int) Int()
+//	func (t *Int) Int()
 //
-// Float
+// # Float
 //
 // X.Float: Returns float64 value
 //
-//   func (t *Float) Float() float64
+//	func (t *Float) Float() float64
 //
-// Bool
+// # Bool
 //
 // X.Bool: Returns bool value
 //
-//   func (t *Bool) Bool() bool
+//	func (t *Bool) Bool() bool
 //
-// List
+// # List
 //
 // X.Append: Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
 //
-//   func (t *SIF_MetadataType_TimeElements) Append(value TimeElementType) *SIF_MetadataType_TimeElements
+//	func (t *SIF_MetadataType_TimeElements) Append(value TimeElementType) *SIF_MetadataType_TimeElements
 //
 // X.AddNew: Appends an empty value to the list. This value can then be populated through accessors on Last().
 //
-//  func (t *SIF_MetadataType_TimeElements) AddNew() *SIF_MetadataType_TimeElements
+//	func (t *SIF_MetadataType_TimeElements) AddNew() *SIF_MetadataType_TimeElements
 //
 // X.Last: Retrieve the last value of the list. Calls AddNew() if the list is empty.
 //
-//  func (t *SIF_MetadataType_TimeElements) Last()
+//	func (t *SIF_MetadataType_TimeElements) Last()
 //
 // X.Index: Retrieves the nth value in the list. Raises error if index is out of bounds.
 //
-//   func (t *SIF_MetadataType_TimeElements) Index(n int) (*TimeElementType, error)
+//	func (t *SIF_MetadataType_TimeElements) Index(n int) (*TimeElementType, error)
 //
 // X.Len: Length of the list.
 //
-//   func (t *SIF_MetadataType_TimeElements) Len() int
+//	func (t *SIF_MetadataType_TimeElements) Len() int
 //
 // X.AppendString: Append a single string to the list. Only defined for lists of strings or of types aliased to string.
 //
-//   func (t *LearningStandardsType) AppendString(value string) *LearningStandardsType
+//	func (t *LearningStandardsType) AppendString(value string) *LearningStandardsType
 //
-// Container
+// # Container
 //
 // In the following, Y is the name of an element of the container.
 //
@@ -185,37 +188,34 @@
 //
 // NOTE: This function creates an empty element value if it is called on a nil element, so that it can be used to populate that element. You should use X.Y_IsNil() to confirm the element is not nil, before calling any functions which should leave it alone if it is nil --- for example, X.Y().Clone()
 //
-//   func (s *NAPWritingRubricType) ScoreList() *ScoreListType
+//	func (s *NAPWritingRubricType) ScoreList() *ScoreListType
 //
 // X.Y_IsNil(): Returns whether the element value is nil in that container.
 //
-//   func (s *NAPWritingRubricType) ScoreList_IsNil() bool
+//	func (s *NAPWritingRubricType) ScoreList_IsNil() bool
 //
 // X.Unset: Set the value of a property to nil
 //
-//   func (n *NAPWritingRubricType) Unset(key string) *NAPWritingRubricType
+//	func (n *NAPWritingRubricType) Unset(key string) *NAPWritingRubricType
 //
 // X.SetProperty: Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
 //
-//   func (n *NAPWritingRubricType) SetProperty(key string, value interface{}) *NAPWritingRubricType
+//	func (n *NAPWritingRubricType) SetProperty(key string, value interface{}) *NAPWritingRubricType
 //
 // X.SetProperties: Set a sequence of properties
 //
-//   func (n *NAPWritingRubricType) SetProperties(props ...Prop) *NAPWritingRubricType
+//	func (n *NAPWritingRubricType) SetProperties(props ...Prop) *NAPWritingRubricType
 //
-// All Types
+// # All Types
 //
 // X.Clone(): Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
 //
-//   func (t *MediumOfInstructionType) Clone() (*MediumOfInstructionType)
+//	func (t *MediumOfInstructionType) Clone() (*MediumOfInstructionType)
 //
 // sifxml.XPointer: Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
 // the value mismatches X. In the case of aliased types, accepts primitive values and converts them to the required alias.
 // Also deals with both Float32 and Float64 values.
 //
-//   func MediumOfInstructionTypePointer(value interface{}) (*MediumOfInstructionType, bool)
-//
-//
-//
+//	func MediumOfInstructionTypePointer(value interface{}) (*MediumOfInstructionType, bool)
 package sifxml

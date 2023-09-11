@@ -1,6 +1,17 @@
 package sifxml
 
 
+
+    type AUCodeSetsTravelModeTypes struct {
+      aucodesetstravelmodetypes `json:"AUCodeSetsTravelModeTypes"`
+    }
+
+    type aucodesetstravelmodetypes struct {
+      AUCodeSetsTravelModeType []aucodesetstravelmodetype `json:"AUCodeSetsTravelModeType"`
+    }
+
+    type aucodesetstravelmodetype AUCodeSetsTravelModeType
+
 type AUCodeSetsTravelModeType string
 var AUCodeSetsTravelModeType_values = []string{"A", "B", "C", "D", "E", "F", "G", "H", "I"}
 var AUCodeSetsTravelModeType_map = map[string]struct{}{"A": struct{}{}, "B": struct{}{}, "C": struct{}{}, "D": struct{}{}, "E": struct{}{}, "F": struct{}{}, "G": struct{}{}, "H": struct{}{}, "I": struct{}{}}  

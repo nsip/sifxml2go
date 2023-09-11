@@ -1,13 +1,20 @@
 package sifxml
 
 
-type LEAInfos []LEAInfo
+
+    type LEAInfos struct {
+      leainfos `json:"LEAInfos"`
+    }
+
+    type leainfos struct {
+      LEAInfo []leainfo `json:"LEAInfo"`
+    }
 
     type LEAInfo struct {
-  leainfo `xml:"LEAInfo" json:"LEAInfo"`
-}
+      leainfo `xml:"LEAInfo" json:"LEAInfo"`
+     }
 
-type leainfo struct {
+     type leainfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`

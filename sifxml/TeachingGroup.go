@@ -1,13 +1,20 @@
 package sifxml
 
 
-type TeachingGroups []TeachingGroup
+
+    type TeachingGroups struct {
+      teachinggroups `json:"TeachingGroups"`
+    }
+
+    type teachinggroups struct {
+      TeachingGroup []teachinggroup `json:"TeachingGroup"`
+    }
 
     type TeachingGroup struct {
-  teachinggroup `xml:"TeachingGroup" json:"TeachingGroup"`
-}
+      teachinggroup `xml:"TeachingGroup" json:"TeachingGroup"`
+     }
 
-type teachinggroup struct {
+     type teachinggroup struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type TermInfos []TermInfo
+
+    type TermInfos struct {
+      terminfos `json:"TermInfos"`
+    }
+
+    type terminfos struct {
+      TermInfo []terminfo `json:"TermInfo"`
+    }
 
     type TermInfo struct {
-  terminfo `xml:"TermInfo" json:"TermInfo"`
-}
+      terminfo `xml:"TermInfo" json:"TermInfo"`
+     }
 
-type terminfo struct {
+     type terminfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`

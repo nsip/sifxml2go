@@ -1,13 +1,20 @@
 package sifxml
 
 
-type CalendarDates []CalendarDate
+
+    type CalendarDates struct {
+      calendardates `json:"CalendarDates"`
+    }
+
+    type calendardates struct {
+      CalendarDate []calendardate `json:"CalendarDate"`
+    }
 
     type CalendarDate struct {
-  calendardate `xml:"CalendarDate" json:"CalendarDate"`
-}
+      calendardate `xml:"CalendarDate" json:"CalendarDate"`
+     }
 
-type calendardate struct {
+     type calendardate struct {
         CalendarDateRefId *String `xml:"CalendarDateRefId,attr" json:"CalendarDateRefId"`
       Date *String `xml:"Date" json:"Date"`
       CalendarSummaryRefId *String `xml:"CalendarSummaryRefId,omitempty" json:"CalendarSummaryRefId,omitempty"`

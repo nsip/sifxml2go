@@ -1,13 +1,20 @@
 package sifxml
 
 
-type ChargedLocationInfos []ChargedLocationInfo
+
+    type ChargedLocationInfos struct {
+      chargedlocationinfos `json:"ChargedLocationInfos"`
+    }
+
+    type chargedlocationinfos struct {
+      ChargedLocationInfo []chargedlocationinfo `json:"ChargedLocationInfo"`
+    }
 
     type ChargedLocationInfo struct {
-  chargedlocationinfo `xml:"ChargedLocationInfo" json:"ChargedLocationInfo"`
-}
+      chargedlocationinfo `xml:"ChargedLocationInfo" json:"ChargedLocationInfo"`
+     }
 
-type chargedlocationinfo struct {
+     type chargedlocationinfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocationType *String `xml:"LocationType" json:"LocationType"`
       SiteCategory *String `xml:"SiteCategory" json:"SiteCategory"`

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type CalendarSummarys []CalendarSummary
+
+    type CalendarSummarys struct {
+      calendarsummarys `json:"CalendarSummarys"`
+    }
+
+    type calendarsummarys struct {
+      CalendarSummary []calendarsummary `json:"CalendarSummary"`
+    }
 
     type CalendarSummary struct {
-  calendarsummary `xml:"CalendarSummary" json:"CalendarSummary"`
-}
+      calendarsummary `xml:"CalendarSummary" json:"CalendarSummary"`
+     }
 
-type calendarsummary struct {
+     type calendarsummary struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`

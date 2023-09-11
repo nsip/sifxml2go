@@ -1,13 +1,20 @@
 package sifxml
 
 
-type LibraryPatronStatuss []LibraryPatronStatus
+
+    type LibraryPatronStatuss struct {
+      librarypatronstatuss `json:"LibraryPatronStatuss"`
+    }
+
+    type librarypatronstatuss struct {
+      LibraryPatronStatus []librarypatronstatus `json:"LibraryPatronStatus"`
+    }
 
     type LibraryPatronStatus struct {
-  librarypatronstatus `xml:"LibraryPatronStatus" json:"LibraryPatronStatus"`
-}
+      librarypatronstatus `xml:"LibraryPatronStatus" json:"LibraryPatronStatus"`
+     }
 
-type librarypatronstatus struct {
+     type librarypatronstatus struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LibraryType *String `xml:"LibraryType" json:"LibraryType"`
       PatronRefId *String `xml:"PatronRefId,omitempty" json:"PatronRefId,omitempty"`

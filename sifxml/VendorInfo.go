@@ -1,13 +1,20 @@
 package sifxml
 
 
-type VendorInfos []VendorInfo
+
+    type VendorInfos struct {
+      vendorinfos `json:"VendorInfos"`
+    }
+
+    type vendorinfos struct {
+      VendorInfo []vendorinfo `json:"VendorInfo"`
+    }
 
     type VendorInfo struct {
-  vendorinfo `xml:"VendorInfo" json:"VendorInfo"`
-}
+      vendorinfo `xml:"VendorInfo" json:"VendorInfo"`
+     }
 
-type vendorinfo struct {
+     type vendorinfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       Name *String `xml:"Name" json:"Name"`

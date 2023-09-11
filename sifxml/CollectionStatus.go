@@ -1,13 +1,20 @@
 package sifxml
 
 
-type CollectionStatuss []CollectionStatus
+
+    type CollectionStatuss struct {
+      collectionstatuss `json:"CollectionStatuss"`
+    }
+
+    type collectionstatuss struct {
+      CollectionStatus []collectionstatus `json:"CollectionStatus"`
+    }
 
     type CollectionStatus struct {
-  collectionstatus `xml:"CollectionStatus" json:"CollectionStatus"`
-}
+      collectionstatus `xml:"CollectionStatus" json:"CollectionStatus"`
+     }
 
-type collectionstatus struct {
+     type collectionstatus struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ReportingAuthority *String `xml:"ReportingAuthority" json:"ReportingAuthority"`
       ReportingAuthoritySystem *String `xml:"ReportingAuthoritySystem,omitempty" json:"ReportingAuthoritySystem,omitempty"`

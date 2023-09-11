@@ -129,7 +129,7 @@ func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	}
 	birthyr, birthyr_err := birth_year(yearlevel)
 
-	ret := sifxml.StudentPersonal{}
+	ret := sifxml.NewStudentPersonal()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
@@ -167,19 +167,14 @@ func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 			randomStringFromSlice(sifxml.AUCodeSetsNonSchoolEducationType_values))
 	}
 	ret.MostRecent().YearLevel().SetProperty("Code", yearlevel)
-	if out, ok := sifxml.StudentPersonalPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to StudentPersonal: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create count StudentPersonal records; each student is assigned a random member of yearlevels as their year level.
-func Create_StudentPersonals(count int, yearlevels []string) []*sifxml.StudentPersonal {
-	ret := sifxml.StudentPersonalSlice()
+func Create_StudentPersonals(count int, yearlevels []string) *sifxml.StudentPersonals {
+	ret := sifxml.NewStudentPersonals()
 	for i := 0; i < count; i++ {
-		ret = append(ret, Create_StudentPersonal(randomStringFromSlice(yearlevels)))
+		ret.Append(Create_StudentPersonal(randomStringFromSlice(yearlevels)))
 	}
 	return ret
 }
@@ -215,7 +210,7 @@ func Create_SchoolInfo(schooltype string) *sifxml.SchoolInfo {
 		schooltype = randomStringFromSlice(sifxml.AUCodeSetsSchoolLevelType_values)
 	}
 
-	ret := sifxml.SchoolInfo{}
+	ret := sifxml.NewSchoolInfo()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", local_id)
 	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 9999)+1))
@@ -232,19 +227,14 @@ func Create_SchoolInfo(schooltype string) *sifxml.SchoolInfo {
 	ret.SetProperty("ARIA", 1.0)
 	ret.SetProperty("Entity_Open", "1990-01-01")
 	ret.AddressList().Append(Create_Address(state))
-	if out, ok := sifxml.SchoolInfoPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to SchoolInfo: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Creates count SchoolInfo objects, with random school types.
-func Create_SchoolInfos(count int) []*sifxml.SchoolInfo {
-	ret := sifxml.SchoolInfoSlice()
+func Create_SchoolInfos(count int) *sifxml.SchoolInfos {
+	ret := sifxml.NewSchoolInfos()
 	for i := 0; i < count; i++ {
-		ret = append(ret, Create_SchoolInfo(""))
+		ret.Append(Create_SchoolInfo(""))
 	}
 	return ret
 }
@@ -266,12 +256,12 @@ func Create_SchoolInfos(count int) []*sifxml.SchoolInfo {
 // * If the student year level is set, YearLevel is set to the same value; otherwise it is set to a random value between 1 and 12.
 func Create_StudentSchoolEnrollment(student *sifxml.StudentPersonal,
 	school *sifxml.SchoolInfo) *sifxml.StudentSchoolEnrollment {
-	ret := sifxml.StudentSchoolEnrollment{}
+	ret := sifxml.NewStudentSchoolEnrollment()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("MembershipType", "01")
 	ret.SetProperty("SchoolYear", this_year())
 	ret.SetProperty("TimeFrame", "C")
-	ret.SetProperty("FTE", 1.0)
+	ret.SetProperty("FTE", "1.0")
 	ret.SetProperty("EntryDate", this_year()+"-01-25")
 
 	if school != nil {
@@ -293,20 +283,15 @@ func Create_StudentSchoolEnrollment(student *sifxml.StudentPersonal,
 				student.PersonInfo().Name().FamilyName().String(), create_school_email_domain(school)))
 	}
 
-	if out, ok := sifxml.StudentSchoolEnrollmentPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to StudentSchoolEnrollment: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Creates one StudentSchoolEnrollment for each student in students, linking it to school.
-func Create_StudentSchoolEnrollments(students []*sifxml.StudentPersonal,
-	school *sifxml.SchoolInfo) []*sifxml.StudentSchoolEnrollment {
-	ret := sifxml.StudentSchoolEnrollmentSlice()
-	for _, s := range students {
-		ret = append(ret, Create_StudentSchoolEnrollment(s, school))
+func Create_StudentSchoolEnrollments(students *sifxml.StudentPersonals,
+	school *sifxml.SchoolInfo) *sifxml.StudentSchoolEnrollments {
+	ret := sifxml.NewStudentSchoolEnrollments()
+	for _, s := range students.ToSlice() {
+		ret.Append(Create_StudentSchoolEnrollment(s, school))
 	}
 	return ret
 }
@@ -342,7 +327,7 @@ func Create_StaffPersonal() *sifxml.StaffPersonal {
 	person := gofakeit.Person()
 	middlename := gofakeit.FirstName()
 
-	ret := sifxml.StaffPersonal{}
+	ret := sifxml.NewStaffPersonal()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
@@ -367,19 +352,14 @@ func Create_StaffPersonal() *sifxml.StaffPersonal {
 	ret.PersonInfo().EmailList().Last().SetProperty("Type", "01")
 	ret.PersonInfo().EmailList().Last().SetProperty("Value",
 		create_email(person.FirstName, middlename, person.LastName, "example.edu.au"))
-	if out, ok := sifxml.StaffPersonalPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to StaffPersonal: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create count StaffPersonal objects.
-func Create_StaffPersonals(count int) []*sifxml.StaffPersonal {
-	ret := sifxml.StaffPersonalSlice()
+func Create_StaffPersonals(count int) *sifxml.StaffPersonals {
+	ret := sifxml.NewStaffPersonals()
 	for i := 0; i < count; i++ {
-		ret = append(ret, Create_StaffPersonal())
+		ret.Append(Create_StaffPersonal())
 	}
 	return ret
 }
@@ -400,7 +380,7 @@ func Create_StaffPersonals(count int) []*sifxml.StaffPersonal {
 //
 // * If the student year level is set, YearLevel is set to the same value; otherwise it is set to a random value between 1 and 12.
 func Create_StaffAssignment(staff *sifxml.StaffPersonal, school *sifxml.SchoolInfo) *sifxml.StaffAssignment {
-	ret := sifxml.StaffAssignment{}
+	ret := sifxml.NewStaffAssignment()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("PrimaryAssignment", "Y")
 	ret.SetProperty("SchoolYear", this_year())
@@ -420,19 +400,14 @@ func Create_StaffAssignment(staff *sifxml.StaffPersonal, school *sifxml.SchoolIn
 				staff.PersonInfo().Name().MiddleName().String(),
 				staff.PersonInfo().Name().FamilyName().String(), create_school_email_domain(school)))
 	}
-	if out, ok := sifxml.StaffAssignmentPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to StaffAssignment: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Creates one StaffAssignment for each staff member in staff, linking it to school.
-func Create_StaffAssignments(staff []*sifxml.StaffPersonal, school *sifxml.SchoolInfo) []*sifxml.StaffAssignment {
-	ret := sifxml.StaffAssignmentSlice()
-	for _, s := range staff {
-		ret = append(ret, Create_StaffAssignment(s, school))
+func Create_StaffAssignments(staff *sifxml.StaffPersonals, school *sifxml.SchoolInfo) *sifxml.StaffAssignments {
+	ret := sifxml.NewStaffAssignments()
+	for _, s := range staff.ToSlice() {
+		ret.Append(Create_StaffAssignment(s, school))
 	}
 	return ret
 }
@@ -487,7 +462,7 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 	person := gofakeit.Person()
 	middlename := gofakeit.FirstName()
 
-	ret := sifxml.StudentContactPersonal{}
+	ret := sifxml.NewStudentContactPersonal()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.PersonInfo().Name().SetProperty("Type", "LGL")
@@ -537,12 +512,7 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 		ret.PersonInfo().Name().SetProperty("PreferredFamilyName",
 			student.PersonInfo().Name().FamilyName().String())
 	}
-	if out, ok := sifxml.StudentContactPersonalPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to StudentContactPersonal: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a StudentContactRelationship record joining StudentPersonal object student to StudentContactPersonal object contact.
@@ -551,7 +521,7 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 //
 // * Each flag in ContactFlags is set to "Y" with probability 0.9, else "N". Exceptions: "ParentLegalGuardian" is set to "Y" with probability 0.8; "InterventionOrder" is set to "N" with probability 0.9.
 func Create_StudentContactRelationship(student *sifxml.StudentPersonal, contact *sifxml.StudentContactPersonal) *sifxml.StudentContactRelationship {
-	ret := sifxml.StudentContactRelationship{}
+	ret := sifxml.NewStudentContactRelationship()
 	ret.SetProperty("StudentContactRelationshipRefId", create_GUID())
 	ret.Relationship().SetProperty("Code", threshold_rand_strings(
 		[]float64{0.26, 0.24, 0.22, 0.2, 0.18, 0.16, 0.14, 0.12, 0.10, 0.08, 0.04, 0.02, 0},
@@ -591,30 +561,25 @@ func Create_StudentContactRelationship(student *sifxml.StudentPersonal, contact 
 	if contact != nil {
 		ret.SetProperty("StudentContactPersonalRefId", contact.RefId().String())
 	}
-	if out, ok := sifxml.StudentContactRelationshipPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to StudentContactRelationship: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create one or two StudentContactPersonal objects and StudentContactRelationship objects for each student in students. Whether one or two contacts and relationships
 // are created depends on the encoding of Parent1 and Parent2 attributes in the student object. Each student has distinct parents: there is no modelling of siblings.
-func Create_StudentContactPersonalAndRelationship(students []*sifxml.StudentPersonal) ([]*sifxml.StudentContactPersonal,
-	[]*sifxml.StudentContactRelationship) {
-	contacts := sifxml.StudentContactPersonalSlice()
-	relationships := sifxml.StudentContactRelationshipSlice()
-	for _, s := range students {
+func Create_StudentContactPersonalAndRelationship(students *sifxml.StudentPersonals) (*sifxml.StudentContactPersonals,
+	*sifxml.StudentContactRelationships) {
+	contacts := sifxml.NewStudentContactPersonals()
+	relationships := sifxml.NewStudentContactRelationships()
+	for _, s := range students.ToSlice() {
 		p1 := Create_StudentContactPersonal(s, 1)
 		if p1 != nil {
-			contacts = append(contacts, p1)
-			relationships = append(relationships, Create_StudentContactRelationship(s, p1))
+			contacts.Append(p1)
+			relationships.Append(Create_StudentContactRelationship(s, p1))
 		}
 		p2 := Create_StudentContactPersonal(s, 2)
 		if p2 != nil {
-			contacts = append(contacts, p2)
-			relationships = append(relationships, Create_StudentContactRelationship(s, p2))
+			contacts.Append(p2)
+			relationships.Append(Create_StudentContactRelationship(s, p2))
 		}
 	}
 	return contacts, relationships
@@ -641,7 +606,7 @@ func Create_RoomInfo(school *sifxml.SchoolInfo) *sifxml.RoomInfo {
 func Create_RoomInfoWithStaff(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal) *sifxml.RoomInfo {
 	room_number := random_seq_gen("roomNumber", 998) + 1
 
-	ret := sifxml.RoomInfo{}
+	ret := sifxml.NewRoomInfo()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.SetProperty("RoomNumber", strconv.Itoa(room_number))
@@ -658,20 +623,15 @@ func Create_RoomInfoWithStaff(school *sifxml.SchoolInfo, staff []*sifxml.StaffPe
 			ret.StaffList().AppendString(s1.RefId().String())
 		}
 	}
-	if out, ok := sifxml.RoomInfoPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to RoomInfo: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create count RoomInfo objects, linked to SchoolInfo object school.
-func Create_RoomInfos(count int, school *sifxml.SchoolInfo) []*sifxml.RoomInfo {
-	ret := sifxml.RoomInfoSlice()
+func Create_RoomInfos(count int, school *sifxml.SchoolInfo) *sifxml.RoomInfos {
+	ret := sifxml.NewRoomInfos()
 	for i := 0; i < count; i++ {
 		random_seq_gen_reset("roomNumber")
-		ret = append(ret, Create_RoomInfo(school))
+		ret.Append(Create_RoomInfo(school))
 	}
 	return ret
 }
@@ -691,9 +651,9 @@ func Create_RoomInfos(count int, school *sifxml.SchoolInfo) []*sifxml.RoomInfo {
 // * ShortName is set to timetablesubject SubjectShortName if present; otherwise it is a random choice of subject out of the defaults on offer (All_teachingSubjects())
 //
 // * LongName and KeyLearningArea are the full name and key learning area associated with ShortName (TeachingGroupKLA()).
-func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentPersonal,
-	staff []*sifxml.StaffPersonal, timetablesubject *sifxml.TimeTableSubject) *sifxml.TeachingGroup {
-	ret := sifxml.TeachingGroup{}
+func Create_TeachingGroup(school *sifxml.SchoolInfo, students *sifxml.StudentPersonals,
+	staff *sifxml.StaffPersonals, timetablesubject *sifxml.TimeTableSubject) *sifxml.TeachingGroup {
+	ret := sifxml.NewTeachingGroup()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.SetProperty("SchoolYear", this_year())
@@ -717,28 +677,23 @@ func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentP
 	ret.SetProperty("LongName", teachingSubjectLongName(shortname))
 	ret.SetProperty("KeyLearningArea", TeachingGroupKLA(shortname))
 
-	if len(students) > 0 {
-		for _, s := range students {
+	if students.Len() > 0 {
+		for _, s := range students.ToSlice() {
 			ret.StudentList().AddNew()
 			ret.StudentList().Last().SetProperty("StudentPersonalRefId", s.RefId().String())
 			ret.StudentList().Last().SetProperty("StudentLocalId", s.LocalId().String())
 			ret.StudentList().Last().SetProperty("Name", s.PersonInfo().Name().Clone())
 		}
 	}
-	if len(staff) > 0 {
-		for _, s := range staff {
+	if staff.Len() > 0 {
+		for _, s := range staff.ToSlice() {
 			ret.TeacherList().AddNew()
 			ret.TeacherList().Last().SetProperty("StaffPersonalRefId", s.RefId().String())
 			ret.TeacherList().Last().SetProperty("StaffLocalId", s.LocalId().String())
 			ret.TeacherList().Last().SetProperty("Name", s.PersonInfo().Name().Clone())
 		}
 	}
-	if out, ok := sifxml.TeachingGroupPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to TeachingGroup: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a FinancialAccount object, linked to parent FinancialAccount object parent (if it is not nil),
@@ -757,7 +712,7 @@ func Create_TeachingGroup(school *sifxml.SchoolInfo, students []*sifxml.StudentP
 // * Name is set to a random name. If location is not nil, it is instead set to the same Name as Location.Name.
 func Create_FinancialAccount(parent *sifxml.FinancialAccount, location *sifxml.ChargedLocationInfo) *sifxml.FinancialAccount {
 	gofakeit.Seed(0)
-	ret := sifxml.FinancialAccount{}
+	ret := sifxml.NewFinancialAccount()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.SetProperty("CreationDate", random_date("2012-01-01", "2015-12-31"))
@@ -775,12 +730,7 @@ func Create_FinancialAccount(parent *sifxml.FinancialAccount, location *sifxml.C
 		ret.SetProperty("ChargedLocationInfoRefId", location.RefId().String())
 		ret.SetProperty("Name", location.Name().String())
 	}
-	if out, ok := sifxml.FinancialAccountPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to FinacialAccount: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 func create_FinancialAccountsBase(count int, parent []*sifxml.FinancialAccount, location []*sifxml.ChargedLocationInfo) []*sifxml.FinancialAccount {
@@ -815,9 +765,10 @@ func create_FinancialAccountsBase(count int, parent []*sifxml.FinancialAccount, 
 // Half the accounts to be generated are children of other accounts generated in the same function, chosen randomly.
 // A third of all parent accounts are randomly associated with a charged location;
 // all children of that account are associated with the same charged location.
-func Create_FinancialAccounts(count int, locations []*sifxml.ChargedLocationInfo) []*sifxml.FinancialAccount {
+func Create_FinancialAccounts(count int, loc *sifxml.ChargedLocationInfos) *sifxml.FinancialAccounts {
 	parent_account_count := count/2 + 1
 	parent_charge_locations := sifxml.ChargedLocationInfoSlice()
+	locations := loc.ToSlice()
 	for i := 0; i < parent_account_count; i++ {
 		if rand.Float32() > 0.333 {
 			parent_charge_locations = append(parent_charge_locations, locations[rand.Intn(len(locations))])
@@ -838,7 +789,10 @@ func Create_FinancialAccounts(count int, locations []*sifxml.ChargedLocationInfo
 	}
 	child_accounts := create_FinancialAccountsBase(child_account_count, child_parent_accounts,
 		child_charge_locations)
-	return append(parent_accounts, child_accounts...)
+	ret := sifxml.NewFinancialAccounts()
+	ret.Append(parent_accounts...)
+	ret.Append(child_accounts...)
+	return ret
 }
 
 // Create a ChargedLocationInfo object, linked to parent ChargedLocationInfo object parent (if it is not nil),
@@ -873,7 +827,7 @@ func Create_ChargedLocationInfo(parent *sifxml.ChargedLocationInfo,
 	school *sifxml.SchoolInfo) *sifxml.ChargedLocationInfo {
 	state := create_state()
 
-	ret := sifxml.ChargedLocationInfo{}
+	ret := sifxml.NewChargedLocationInfo()
 	ret.SetProperty("RefId", create_GUID())
 	if parent != nil {
 		ret.SetProperty("ParentChargedLocationInfoRefId", parent.RefId().String())
@@ -903,30 +857,26 @@ func Create_ChargedLocationInfo(parent *sifxml.ChargedLocationInfo,
 			ret.SetProperty("PhoneNumberList", school.PhoneNumberList().Clone())
 		}
 	}
-	if out, ok := sifxml.ChargedLocationInfoPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to ChargedLocationInfo: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create count ChargedLocationInfo objects. The slice schools gives SchoolInfo objects that are to be represented
 // in the generated ChargedLocationInfo objects, one per school. If count is larger than the length of schools,
 // the remaining objects are non-school charged locations. Half of the remaining objects generated are parents
 // of the other half, assigned randomly.
-func Create_ChargedLocationInfos(count int, schools []*sifxml.SchoolInfo) []*sifxml.ChargedLocationInfo {
-	ret := sifxml.ChargedLocationInfoSlice()
-	for i := 0; i < count && i < len(schools); i++ {
-		ret = append(ret, Create_ChargedLocationInfo(nil, schools[i]))
+func Create_ChargedLocationInfos(count int, schools *sifxml.SchoolInfos) *sifxml.ChargedLocationInfos {
+	ret := sifxml.NewChargedLocationInfos()
+	schoolsnum := schools.Len()
+	for i := 0; i < count && i < schoolsnum; i++ {
+		ret.Append(Create_ChargedLocationInfo(nil, schools.Index(i)))
 	}
-	nonschoolcount := count - len(schools)
+	nonschoolcount := count - schoolsnum
 	if nonschoolcount > 0 {
 		for i := 0; i < nonschoolcount/2; i++ {
-			ret = append(ret, Create_ChargedLocationInfo(nil, nil))
+			ret.Append(Create_ChargedLocationInfo(nil, nil))
 		}
 		for i := nonschoolcount / 2; i < nonschoolcount; i++ {
-			ret = append(ret, Create_ChargedLocationInfo(ret[len(schools)+rand.Intn(nonschoolcount/2)], nil))
+			ret.Append(Create_ChargedLocationInfo(ret.Index(schoolsnum+rand.Intn(nonschoolcount/2)), nil))
 		}
 	}
 	return ret
@@ -967,7 +917,7 @@ func Create_VendorInfo() *sifxml.VendorInfo {
 	emaildomain := strings.ToLower(companyname) + "." +
 		randomStringFromSlice([]string{"com.au", "com", "com.au", "org.au"})
 
-	ret := sifxml.VendorInfo{}
+	ret := sifxml.NewVendorInfo()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.SetProperty("Name", companyname+" "+companytype)
@@ -993,20 +943,14 @@ func Create_VendorInfo() *sifxml.VendorInfo {
 	ret.ContactInfo().PhoneNumberList().AddNew()
 	ret.ContactInfo().PhoneNumberList().Last().SetProperty("Type", "0096")
 	ret.ContactInfo().PhoneNumberList().Last().SetProperty("Number", create_phone_number(nil))
-
-	if out, ok := sifxml.VendorInfoPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to VendorInfo: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create count VendorInfo objects.
-func Create_VendorInfos(count int) []*sifxml.VendorInfo {
-	ret := sifxml.VendorInfoSlice()
+func Create_VendorInfos(count int) *sifxml.VendorInfos {
+	ret := sifxml.NewVendorInfos()
 	for i := 0; i < count; i++ {
-		ret = append(ret, Create_VendorInfo())
+		ret.Append(Create_VendorInfo())
 	}
 	return ret
 }
@@ -1034,13 +978,13 @@ func Create_VendorInfos(count int) []*sifxml.VendorInfo {
 // * TeacherList is set through AddToScheduledTeacherList().
 func Create_ScheduledActivity(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable,
 	timetablecell *sifxml.TimeTableCell, timetablesubject *sifxml.TimeTableSubject,
-	students []*sifxml.StudentPersonal, staff []*sifxml.StaffPersonal, teachinggroups []*sifxml.TeachingGroup,
-	rooms []*sifxml.RoomInfo) *sifxml.ScheduledActivity {
+	students *sifxml.StudentPersonals, staff *sifxml.StaffPersonals, teachinggroups *sifxml.TeachingGroups,
+	rooms *sifxml.RoomInfos) *sifxml.ScheduledActivity {
 	gofakeit.Seed(0)
 	starttime := gofakeit.Date()
 	finishtime := starttime.Add(time.Hour * time.Duration(rand.Intn(3)))
 
-	ret := sifxml.ScheduledActivity{}
+	ret := sifxml.NewScheduledActivity()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("ActivityDate", random_date(this_year()+"-01-01", this_year()+"-12-31"))
 	ret.SetProperty("StartTime", starttime.Format("15:04:05"))
@@ -1063,30 +1007,25 @@ func Create_ScheduledActivity(school *sifxml.SchoolInfo, timetable *sifxml.TimeT
 	if timetablesubject != nil {
 		ret.SetProperty("TimeTableSubjectRefId", timetablesubject.RefId().String())
 	}
-	if len(students) > 0 {
-		for _, s := range rooms {
+	if students.Len() > 0 {
+		for _, s := range students.ToSlice() {
 			ret.StudentList().AppendString(s.RefId().String())
 		}
 	}
-	if len(rooms) > 0 {
-		for _, s := range rooms {
+	if rooms.Len() > 0 {
+		for _, s := range rooms.ToSlice() {
 			ret.RoomList().AppendString(s.RefId().String())
 		}
 	}
-	if len(teachinggroups) > 0 {
-		for _, s := range teachinggroups {
+	if teachinggroups.Len() > 0 {
+		for _, s := range teachinggroups.ToSlice() {
 			ret.TeachingGroupList().AppendString(s.RefId().String())
 		}
 	}
-	if len(staff) > 0 {
-		AddToScheduledTeacherList(ret.TeacherList(), staff, starttime, finishtime)
+	if staff.Len() > 0 {
+		AddToScheduledTeacherList(ret.TeacherList(), staff.ToSlice(), starttime, finishtime)
 	}
-	if out, ok := sifxml.ScheduledActivityPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to ScheduledActivity: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a CalendarSummary object, linked to SchoolInfo object school.
@@ -1101,7 +1040,7 @@ func Create_ScheduledActivity(school *sifxml.SchoolInfo, timetable *sifxml.TimeT
 //
 // * EndDate is set to December 19 of the current year. No attempt is made to set it to a weekday.
 func Create_CalendarSummary(school *sifxml.SchoolInfo) *sifxml.CalendarSummary {
-	ret := sifxml.CalendarSummary{}
+	ret := sifxml.NewCalendarSummary()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("SchoolYear", this_year())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
@@ -1112,12 +1051,7 @@ func Create_CalendarSummary(school *sifxml.SchoolInfo) *sifxml.CalendarSummary {
 	if school != nil {
 		ret.SetProperty("SchoolInfoRefId", school.RefId().String())
 	}
-	if out, ok := sifxml.CalendarSummaryPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to CalendarSummary: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a GradingAssignment object, linked to SchoolInfo object school, TeachingGroup object teachinggroup,
@@ -1139,7 +1073,7 @@ func Create_CalendarSummary(school *sifxml.SchoolInfo) *sifxml.CalendarSummary {
 //
 // * DetailedDescriptionURL is set to "http://www.example.com/" followed by Description.
 func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup,
-	students []*sifxml.StudentPersonal) *sifxml.GradingAssignment {
+	students *sifxml.StudentPersonals) *sifxml.GradingAssignment {
 	gofakeit.Seed(0)
 	createdate := random_date(this_year()+"-02-01", this_year()+"-11-01")
 	duedate_time, _ := time.Parse("2006-01-02", createdate)
@@ -1163,8 +1097,9 @@ func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.T
 	if teachinggroup != nil {
 		ret.SetProperty("TeachingGroupRefId", teachinggroup.RefId().String())
 	}
-	if len(students) > 0 {
-		for _, s := range students {
+	/*if len(students) > 0 {*/
+	if students.Len() > 0 {
+		for _, s := range students.ToSlice() {
 			ret.StudentPersonalRefIdList().AppendString(s.RefId().String())
 		}
 	}
@@ -1179,7 +1114,7 @@ func Create_GradingAssignment(school *sifxml.SchoolInfo, teachinggroup *sifxml.T
 // Create count GradingAssignment objects, each linked to SchoolInfo object school, TeachingGroup object teachinggroup,
 // and slice of StudentPersonal objects students.
 func Create_GradingAssignments(count int, school *sifxml.SchoolInfo, teachinggroup *sifxml.TeachingGroup,
-	students []*sifxml.StudentPersonal) []*sifxml.GradingAssignment {
+	students *sifxml.StudentPersonals) []*sifxml.GradingAssignment {
 	ret := sifxml.GradingAssignmentSlice()
 	for i := 0; i < count; i++ {
 		ret = append(ret, Create_GradingAssignment(school, teachinggroup, students))
@@ -1240,10 +1175,10 @@ func Create_GradingAssignmentScore(assignment *sifxml.GradingAssignment, school 
 // each of them linked to GradingAssignment object assignment, SchoolInfo object school,
 // TeachingGroup object teachinggroup, and StaffPersonalObject staff.
 func Create_GradingAssignmentScores(assignment *sifxml.GradingAssignment, school *sifxml.SchoolInfo,
-	teachinggroup *sifxml.TeachingGroup, students []*sifxml.StudentPersonal,
+	teachinggroup *sifxml.TeachingGroup, students *sifxml.StudentPersonals,
 	staff *sifxml.StaffPersonal) []*sifxml.GradingAssignmentScore {
 	ret := sifxml.GradingAssignmentScoreSlice()
-	for _, s := range students {
+	for _, s := range students.ToSlice() {
 		ret = append(ret, Create_GradingAssignmentScore(assignment, school, teachinggroup, s, staff))
 	}
 	return ret
@@ -1284,20 +1219,20 @@ func Create_Debtor(student *sifxml.StudentPersonal, staff *sifxml.StaffPersonal,
 }
 
 // Create a Debtor object corresponding to each object in each of the slices of objects passed to the function.
-func Create_Debtors(student []*sifxml.StudentPersonal, staff []*sifxml.StaffPersonal,
-	contact []*sifxml.StudentContactPersonal, vendor []*sifxml.VendorInfo) []*sifxml.Debtor {
-	ret := sifxml.DebtorSlice()
-	for _, s := range student {
-		ret = append(ret, Create_Debtor(s, nil, nil, nil))
+func Create_Debtors(student *sifxml.StudentPersonals, staff *sifxml.StaffPersonals,
+	contact *sifxml.StudentContactPersonals, vendor *sifxml.VendorInfos) *sifxml.Debtors {
+	ret := sifxml.NewDebtors()
+	for _, s := range student.ToSlice() {
+		ret.Append(Create_Debtor(s, nil, nil, nil))
 	}
-	for _, s := range staff {
-		ret = append(ret, Create_Debtor(nil, s, nil, nil))
+	for _, s := range staff.ToSlice() {
+		ret.Append(Create_Debtor(nil, s, nil, nil))
 	}
-	for _, s := range contact {
-		ret = append(ret, Create_Debtor(nil, nil, s, nil))
+	for _, s := range contact.ToSlice() {
+		ret.Append(Create_Debtor(nil, nil, s, nil))
 	}
-	for _, s := range vendor {
-		ret = append(ret, Create_Debtor(nil, nil, nil, s))
+	for _, s := range vendor.ToSlice() {
+		ret.Append(Create_Debtor(nil, nil, nil, s))
 	}
 	return ret
 }
@@ -1324,7 +1259,7 @@ func Create_Debtors(student []*sifxml.StudentPersonal, staff []*sifxml.StaffPers
 // are set to either 1.0 or 0.0, depending on whether they count towards that attendance.
 func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.SchoolInfo, date time.Time,
 	studentholiday bool, publicholiday bool, calendar_date_number int) *sifxml.CalendarDate {
-	ret := sifxml.CalendarDate{}
+	ret := sifxml.NewCalendarDate()
 	ret.SetProperty("CalendarDateRefId", create_GUID())
 	ret.SetProperty("Date", date.Format("2006-01-02"))
 
@@ -1338,24 +1273,24 @@ func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.School
 
 	if studentholiday {
 		ret.StudentAttendance().SetProperty("CountsTowardAttendance", "No")
-		ret.StudentAttendance().SetProperty("AttendanceValue", 0.0)
+		ret.StudentAttendance().SetProperty("AttendanceValue", "0.0")
 	} else {
 		ret.StudentAttendance().SetProperty("CountsTowardAttendance", "Yes")
-		ret.StudentAttendance().SetProperty("AttendanceValue", 1.0)
+		ret.StudentAttendance().SetProperty("AttendanceValue", "1.0")
 	}
 	if publicholiday {
 		ret.TeacherAttendance().SetProperty("CountsTowardAttendance", "No")
-		ret.TeacherAttendance().SetProperty("AttendanceValue", 0.0)
+		ret.TeacherAttendance().SetProperty("AttendanceValue", "0.0")
 	} else {
 		ret.TeacherAttendance().SetProperty("CountsTowardAttendance", "Yes")
-		ret.TeacherAttendance().SetProperty("AttendanceValue", 1.0)
+		ret.TeacherAttendance().SetProperty("AttendanceValue", "1.0")
 	}
 	if publicholiday {
 		ret.AdministratorAttendance().SetProperty("CountsTowardAttendance", "No")
-		ret.AdministratorAttendance().SetProperty("AttendanceValue", 0.0)
+		ret.AdministratorAttendance().SetProperty("AttendanceValue", "0.0")
 	} else {
 		ret.AdministratorAttendance().SetProperty("CountsTowardAttendance", "Yes")
-		ret.AdministratorAttendance().SetProperty("AttendanceValue", 1.0)
+		ret.AdministratorAttendance().SetProperty("AttendanceValue", "1.0")
 	}
 
 	if calendar_date_number != -1 {
@@ -1368,12 +1303,7 @@ func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.School
 	if school != nil {
 		ret.SetProperty("SchoolInfoRefId", school.RefId().String())
 	}
-	if out, ok := sifxml.CalendarDatePointer(ret); !ok {
-		log.Fatalf("Could not create pointer to CalendarDate: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a range of CalendarDate objects linked to CalendarSummary object calendar and SchoolInfo object school.
@@ -1381,8 +1311,8 @@ func Create_CalendarDate(calendar *sifxml.CalendarSummary, school *sifxml.School
 // A calendar date is generated for each weekday between calendar.StartDate and calendar.EndDate. It is deemed
 // a public holiday if it is a public holiday in Victoria. It is deemed a student hoiliday if it is a public
 // holiday, or else if it is between days 45 and 55, 105 and 115, and 155 and 165 exclusive of the calendar.
-func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.SchoolInfo) []*sifxml.CalendarDate {
-	ret := sifxml.CalendarDateSlice()
+func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.SchoolInfo) *sifxml.CalendarDates {
+	ret := sifxml.NewCalendarDates()
 	local_c := cal.NewBusinessCalendar()
 	blank_c := cal.NewBusinessCalendar()
 	local_c.AddHoliday(au.HolidaysVIC...)
@@ -1396,7 +1326,7 @@ func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.Schoo
 			calendar_date_number > 155 && calendar_date_number < 165 {
 			student_holiday = true
 		}
-		ret = append(ret, Create_CalendarDate(calendar, school, date, student_holiday,
+		ret.Append(Create_CalendarDate(calendar, school, date, student_holiday,
 			!local_c.IsWorkday(date), calendar_date_number))
 		calendar_date_number++
 	}
@@ -1425,7 +1355,7 @@ func Create_CalendarDates(calendar *sifxml.CalendarSummary, school *sifxml.Schoo
 //
 // * TimeTableDayList/TimeTableDay/TimeTablePeriodList/TimeTablePeriod/PeriodEnd is set through PeriodEnd().
 func Create_TimeTable(school *sifxml.SchoolInfo) *sifxml.TimeTable {
-	ret := sifxml.TimeTable{}
+	ret := sifxml.NewTimeTable()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("SchoolYear", this_year())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
@@ -1458,12 +1388,7 @@ func Create_TimeTable(school *sifxml.SchoolInfo) *sifxml.TimeTable {
 		ret.SetProperty("SchoolLocalId", school.LocalId().String())
 		ret.SetProperty("SchoolName", school.SchoolName().String())
 	}
-	if out, ok := sifxml.TimeTablePointer(ret); !ok {
-		log.Fatalf("Could not create pointer to TimeTable: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a TimeTableSubject object linking to SchoolInfo object school, SchoolCourseInfo object course,
@@ -1501,7 +1426,7 @@ func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCou
 	acyear string, acyear_end string, semester int) *sifxml.TimeTableSubject {
 	code := strconv.Itoa(random_seq_gen("timetablesubjects", 900) + 100)
 
-	ret := sifxml.TimeTableSubject{}
+	ret := sifxml.NewTimeTableSubject()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("SchoolYear", this_year())
 
@@ -1539,13 +1464,7 @@ func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCou
 		ret.AcademicYearRange().Start().SetProperty("Code", acyear)
 		ret.AcademicYearRange().End().SetProperty("Code", acyear_end)
 	}
-
-	if out, ok := sifxml.TimeTableSubjectPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to TimeTableSubject: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create TimeTableSubject objects linked to SchoolInfo object school. One object is created for
@@ -1555,17 +1474,17 @@ func Create_TimeTableSubject(school *sifxml.SchoolInfo, course *sifxml.SchoolCou
 //
 // There is no implementation of differentiating timetable subject offerings by year level.
 func Create_TimeTableSubjects(school *sifxml.SchoolInfo, subjects []string,
-	terms []*sifxml.TermInfo) []*sifxml.TimeTableSubject {
+	terms *sifxml.TermInfos) *sifxml.TimeTableSubjects {
 	random_seq_gen_reset("timetablesubjects")
 	random_seq_gen_reset("other_timetablesubjects")
 	if len(subjects) == 0 {
 		subjects = All_teachingSubjects()
 	}
-	ret := sifxml.TimeTableSubjectSlice()
-	for term_no, _ := range terms {
+	ret := sifxml.NewTimeTableSubjects()
+	for term_no, _ := range terms.ToSlice() {
 		for _, s := range subjects {
 			for _, y := range Schooltype2Yearlevels(school.SchoolType().String()) {
-				ret = append(ret, Create_TimeTableSubject(school, nil, s, y, "", term_no+1))
+				ret.Append(Create_TimeTableSubject(school, nil, s, y, "", term_no+1))
 			}
 		}
 	}
@@ -1586,7 +1505,7 @@ func Create_TimeTableSubjects(school *sifxml.SchoolInfo, subjects []string,
 //
 // * MarkingTerm, SchedulingTerm, and AttendanceTerm are all set to "Y".
 func Create_TermInfo(school *sifxml.SchoolInfo, semester int) *sifxml.TermInfo {
-	ret := sifxml.TermInfo{}
+	ret := sifxml.NewTermInfo()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("SchoolInfoRefId", school.RefId().String())
 	ret.SetProperty("SchoolYear", this_year())
@@ -1597,20 +1516,14 @@ func Create_TermInfo(school *sifxml.SchoolInfo, semester int) *sifxml.TermInfo {
 	ret.SetProperty("MarkingTerm", "Y")
 	ret.SetProperty("SchedulingTerm", "Y")
 	ret.SetProperty("AttendanceTerm", "Y")
-
-	if out, ok := sifxml.TermInfoPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to TermInfo: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create TermInfo objects linked to SchoolInfo object school. Two objects are created for the year, each representing a semester.
-func Create_TermInfos(school *sifxml.SchoolInfo) []*sifxml.TermInfo {
-	ret := sifxml.TermInfoSlice()
+func Create_TermInfos(school *sifxml.SchoolInfo) *sifxml.TermInfos {
+	ret := sifxml.NewTermInfos()
 	for semester := 1; semester <= 2; semester++ {
-		ret = append(ret, Create_TermInfo(school, semester))
+		ret.Append(Create_TermInfo(school, semester))
 	}
 	return ret
 }
@@ -1625,7 +1538,7 @@ func Create_TimeTableCell(day string, period string, celltype string, school *si
 	timetable *sifxml.TimeTable, subject *sifxml.TimeTableSubject, teachinggroup *sifxml.TeachingGroup,
 	room *sifxml.RoomInfo, rooms []*sifxml.RoomInfo, staff *sifxml.StaffPersonal,
 	teachers []*sifxml.StaffPersonal) *sifxml.TimeTableCell {
-	ret := sifxml.TimeTableCell{}
+	ret := sifxml.NewTimeTableCell()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("DayId", day)
 	ret.SetProperty("PeriodId", period)
@@ -1664,13 +1577,7 @@ func Create_TimeTableCell(day string, period string, celltype string, school *si
 		period_int, _ := strconv.Atoi(period)
 		AddToScheduledTeacherList(ret.TeacherList(), teachers, PeriodStart(period_int), PeriodEnd(period_int))
 	}
-
-	if out, ok := sifxml.TimeTableCellPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to TimeTableCell: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a SessionInfo object for TimeTableCell c, and the given date.
@@ -1689,7 +1596,7 @@ func Create_TimeTableCell(day string, period string, celltype string, school *si
 func Create_SessionInfo(c *sifxml.TimeTableCell, date string) *sifxml.SessionInfo {
 	periodid, _ := strconv.Atoi(c.PeriodId().String())
 
-	ret := sifxml.SessionInfo{}
+	ret := sifxml.NewSessionInfo()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("SchoolInfoRefId", c.SchoolInfoRefId().String())
 	ret.SetProperty("TimeTableCellRefId", c.RefId().String())
@@ -1706,26 +1613,20 @@ func Create_SessionInfo(c *sifxml.TimeTableCell, date string) *sifxml.SessionInf
 	ret.SetProperty("StartTime", PeriodStart(periodid).Format("15:04:05"))
 	ret.SetProperty("FinishTime", PeriodEnd(periodid).Format("15:04:05"))
 	ret.SetProperty("RollMarked", "Y")
-
-	if out, ok := sifxml.SessionInfoPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to SessionInfo: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create a sequence of SessionInfo objects, one for each TimeTableCell object in cells, and for each
 // CalendarDate object in dates which has a StudentAttendance.CountsTowardAttendance value of "Y".
 //
 // Presupposes that the calendar dates are in the current year. Presupposes that all calendar dates are on weekdays.
-func Create_SessionInfos(cells []*sifxml.TimeTableCell, dates []*sifxml.CalendarDate) []*sifxml.SessionInfo {
+func Create_SessionInfos(cells *sifxml.TimeTableCells, dates *sifxml.CalendarDates) *sifxml.SessionInfos {
 	calendar := make(map[string]*sifxml.CalendarDate)
-	for _, d := range dates {
+	for _, d := range dates.ToSlice() {
 		calendar[d.Date().String()] = d
 	}
-	ret := sifxml.SessionInfoSlice()
-	for _, c := range cells {
+	ret := sifxml.NewSessionInfos()
+	for _, c := range cells.ToSlice() {
 		yr, _ := strconv.Atoi(this_year())
 		t := time.Date(yr, time.Month(1), 0, 0, 0, 0, 0, time.UTC)
 		dayid, _ := strconv.Atoi(c.DayId().String())
@@ -1735,7 +1636,7 @@ func Create_SessionInfos(cells []*sifxml.TimeTableCell, dates []*sifxml.Calendar
 			date := t.Format("2006-01-02")
 			if _, ok := calendar[date]; ok {
 				if calendar[date].StudentAttendance().CountsTowardAttendance().String() == "Yes" {
-					ret = append(ret, Create_SessionInfo(c, date))
+					ret.Append(Create_SessionInfo(c, date))
 				}
 			}
 		}
@@ -1766,7 +1667,7 @@ func Create_SessionInfos(cells []*sifxml.TimeTableCell, dates []*sifxml.Calendar
 // * ActivityName is set to "Zoo Excursion".
 func Create_ScheduledActivityBasic(date string, c *sifxml.TimeTableCell,
 	tg *sifxml.TeachingGroup) *sifxml.ScheduledActivity {
-	ret := sifxml.ScheduledActivity{}
+	ret := sifxml.NewScheduledActivity()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("ActivityDate", date)
 	if c != nil {
@@ -1794,13 +1695,7 @@ func Create_ScheduledActivityBasic(date string, c *sifxml.TimeTableCell,
 		ret.SetProperty("ActivityName", "Zoo Excursion")
 		ret.TeachingGroupList().AppendString(tg.RefId().String())
 	}
-
-	if out, ok := sifxml.ScheduledActivityPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to ScheduledActivity: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create ScheduledActivity objects corresponding to the slice of TimeTableCell objects cells,
@@ -1811,14 +1706,14 @@ func Create_ScheduledActivityBasic(date string, c *sifxml.TimeTableCell,
 // in the calendar with StudentAttendance.CountsTowardAttendance as "Yes", before the last 10 days of dates.
 //
 // Presupposes that the calendar dates are in the current year. Presupposes that all calendar dates are on weekdays.
-func Create_ScheduledActivities(cells []*sifxml.TimeTableCell, dates []*sifxml.CalendarDate,
-	tg []*sifxml.TeachingGroup) []*sifxml.ScheduledActivity {
+func Create_ScheduledActivities(cells *sifxml.TimeTableCells, dates *sifxml.CalendarDates,
+	tg *sifxml.TeachingGroups) *sifxml.ScheduledActivitys {
 	calendar := make(map[string]*sifxml.CalendarDate)
-	for _, d := range dates {
+	for _, d := range dates.ToSlice() {
 		calendar[d.Date().String()] = d
 	}
-	ret := sifxml.ScheduledActivitySlice()
-	for _, c := range cells {
+	ret := sifxml.NewScheduledActivitys()
+	for _, c := range cells.ToSlice() {
 		yr, _ := strconv.Atoi(this_year())
 		t := time.Date(yr, time.Month(1), 0, 0, 0, 0, 0, time.UTC)
 		dayid, _ := strconv.Atoi(c.DayId().String())
@@ -1828,15 +1723,15 @@ func Create_ScheduledActivities(cells []*sifxml.TimeTableCell, dates []*sifxml.C
 			date := t.Format("2006-01-02")
 			if _, ok := calendar[date]; ok {
 				if calendar[date].StudentAttendance().CountsTowardAttendance().String() == "Yes" {
-					ret = append(ret, Create_ScheduledActivityBasic(date, c, nil))
+					ret.Append(Create_ScheduledActivityBasic(date, c, nil))
 				}
 			}
 		}
 	}
-	for _, g := range tg {
-		for c := dates[rand.Intn(len(dates)-10)]; c.StudentAttendance().CountsTowardAttendance().String() == "No"; c = dates[rand.Intn(len(dates))] {
+	for _, g := range tg.ToSlice() {
+		for c := dates.Index(rand.Intn(dates.Len() - 10)); c.StudentAttendance().CountsTowardAttendance().String() == "No"; c = dates.Index(rand.Intn(dates.Len())) {
 			date := c.Date().String()
-			ret = append(ret, Create_ScheduledActivityBasic(date, nil, g))
+			ret.Append(Create_ScheduledActivityBasic(date, nil, g))
 		}
 	}
 	return ret
@@ -1854,32 +1749,26 @@ func Create_ScheduledActivities(cells []*sifxml.TimeTableCell, dates []*sifxml.C
 // * CourseTitle is copied across from subject.SubjectLocalId.
 //
 // * TermInfoRefId is identified as the RefId of the nth element of terms, where n is subject.Semester.
-func Create_SchoolCourseInfo(subject *sifxml.TimeTableSubject, terms []*sifxml.TermInfo) *sifxml.SchoolCourseInfo {
-	ret := sifxml.SchoolCourseInfo{}
+func Create_SchoolCourseInfo(subject *sifxml.TimeTableSubject, terms *sifxml.TermInfos) *sifxml.SchoolCourseInfo {
+	ret := sifxml.NewSchoolCourseInfo()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("SchoolInfoRefId", subject.SchoolInfoRefId().String())
 	ret.SetProperty("SchoolLocalId", subject.SchoolLocalId().String())
 	ret.SetProperty("SchoolYear", subject.SchoolYear().String())
 	ret.SetProperty("CourseCode", fmt.Sprintf("%05d", random_seq_gen("course_code", 99999)+1))
 	ret.SetProperty("CourseTitle", subject.SubjectLocalId().String())
-	ret.SetProperty("TermInfoRefId", terms[subject.Semester().Int()-1].RefId().String())
+	ret.SetProperty("TermInfoRefId", terms.ToSlice()[subject.Semester().Int()-1].RefId().String())
 
 	subject.SetProperty("SchoolCourseInfoRefId", ret.RefId().String())
-
-	if out, ok := sifxml.SchoolCourseInfoPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to SessionInfo: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Creates a SchoolCourseInfo object for each subject in TimeTableSubject, linking to the slice of TermInfo object terms.
 // Presupposes that terms are in consecutive chronological order, and are semesters.
-func Create_SchoolCourseInfos(subjects []*sifxml.TimeTableSubject, terms []*sifxml.TermInfo) []*sifxml.SchoolCourseInfo {
-	ret := sifxml.SchoolCourseInfoSlice()
-	for _, s := range subjects {
-		ret = append(ret, Create_SchoolCourseInfo(s, terms))
+func Create_SchoolCourseInfos(subjects *sifxml.TimeTableSubjects, terms *sifxml.TermInfos) *sifxml.SchoolCourseInfos {
+	ret := sifxml.NewSchoolCourseInfos()
+	for _, s := range subjects.ToSlice() {
+		ret.Append(Create_SchoolCourseInfo(s, terms))
 	}
 	return ret
 }
@@ -1954,11 +1843,11 @@ func primaryOrSecondaryStaff(school *sifxml.SchoolInfo, staff []*sifxml.StaffPer
 }
 
 /* split up time table subjects by year level and subject matter */
-func timeTableSubjects2yr2subj(tts []*sifxml.TimeTableSubject) (map[string]map[string]*sifxml.TimeTableSubject,
+func timeTableSubjects2yr2subj(tts *sifxml.TimeTableSubjects) (map[string]map[string]*sifxml.TimeTableSubject,
 	[]string) {
 	tts2subj := make(map[string]map[string]*sifxml.TimeTableSubject)
 	subjects_map := make(map[string]bool)
-	for _, x := range tts {
+	for _, x := range tts.ToSlice() {
 		if !x.SubjectShortName_IsNil() {
 			s := x.SubjectShortName().String()
 			subjects_map[s] = true
@@ -2003,12 +1892,12 @@ func makePrimaryTeachingGroups(school *sifxml.SchoolInfo, studentsperyr map[stri
 	ret := sifxml.TeachingGroupSlice()
 	for _, y := range []string{"1", "2", "3", "4", "5", "6"} {
 		for studentidx := 0; studentidx*classsize(y) < len(studentsperyr[y]); studentidx++ {
-			class_students := sifxml.StudentPersonalSlice()
+			class_students := sifxml.NewStudentPersonals()
 			for i := studentidx * classsize(y); i < len(studentsperyr[y]) && i < studentidx*classsize(y)+classsize(y); i++ {
-				class_students = append(class_students, studentsperyr[y][i])
+				class_students.Append(studentsperyr[y][i])
 			}
-			class_teachers := sifxml.StaffPersonalSlice()
-			class_teachers = append(class_teachers, primarystaff[rand.Intn(len(primarystaff))])
+			class_teachers := sifxml.NewStaffPersonals()
+			class_teachers.Append(primarystaff[rand.Intn(len(primarystaff))])
 			tg := Create_TeachingGroup(school, class_students, class_teachers, nil)
 			tg.SetProperty("ShortName", y+string(65+studentidx))
 			tg.SetProperty("LongName", y+string(65+studentidx))
@@ -2026,12 +1915,12 @@ func makeSecondaryTeachingGroups(school *sifxml.SchoolInfo, studentsperyr map[st
 	ret := sifxml.TeachingGroupSlice()
 	for _, y := range []string{"7", "8", "9"} {
 		for studentidx := 0; studentidx*classsize(y) < len(studentsperyr[y]); studentidx++ {
-			class_students := sifxml.StudentPersonalSlice()
+			class_students := sifxml.NewStudentPersonals()
 			for i := studentidx * classsize(y); i < len(studentsperyr[y]) && i < studentidx*classsize(y)+classsize(y); i++ {
-				class_students = append(class_students, studentsperyr[y][i])
+				class_students.Append(studentsperyr[y][i])
 			}
-			class_teachers := sifxml.StaffPersonalSlice()
-			class_teachers = append(class_teachers, secondarystaff[rand.Intn(len(secondarystaff))])
+			class_teachers := sifxml.NewStaffPersonals()
+			class_teachers.Append(secondarystaff[rand.Intn(len(secondarystaff))])
 			tg := Create_TeachingGroup(school, class_students, class_teachers, nil)
 			tg.SetProperty("ShortName", y+string(65+studentidx))
 			tg.SetProperty("LongName", y+string(65+studentidx))
@@ -2070,12 +1959,12 @@ func makeSnrSecondaryTeachingGroups(school *sifxml.SchoolInfo, studentsperyr map
 
 		for _, s := range subjects {
 			for studentidx := 0; studentidx*classsize(y) < len(subject2students[s]); studentidx++ {
-				class_students := sifxml.StudentPersonalSlice()
+				class_students := sifxml.NewStudentPersonals()
 				for i := studentidx * classsize(y); i < len(subject2students[s]) && i < studentidx*classsize(y)+classsize(y); i++ {
-					class_students = append(class_students, subject2students[s][i])
+					class_students.Append(subject2students[s][i])
 				}
-				class_teachers := sifxml.StaffPersonalSlice()
-				class_teachers = append(class_teachers, subjectstaff[s][rand.Intn(len(subjectstaff[s]))])
+				class_teachers := sifxml.NewStaffPersonals()
+				class_teachers.Append(subjectstaff[s][rand.Intn(len(subjectstaff[s]))])
 				tg := Create_TeachingGroup(school, class_students, class_teachers, tts2subj[y][s])
 				tg.SetProperty("ShortName", s+" "+y+string(65+studentidx))
 				tg.SetProperty("LongName", teachingSubjectLongName(s)+" "+y+string(65+studentidx))
@@ -2118,33 +2007,33 @@ func makeSnrSecondaryTeachingGroups(school *sifxml.SchoolInfo, studentsperyr map
 // teaching groups are created to accommodate the assgined students. A random single secondary teacher assigned to that subject
 // is assigned to each group. The KeyLearningArea corresponding to the subject is assigned to the group (TeachingGroupKLA()).
 // The ShortName and LongName are of format "MAT 12C" and "Mathematics 12C" respectively.
-func Create_TeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPersonal,
-	students []*sifxml.StudentPersonal, subjects []*sifxml.TimeTableSubject) []*sifxml.TeachingGroup {
+func Create_TeachingGroups(school *sifxml.SchoolInfo, staff *sifxml.StaffPersonals,
+	students *sifxml.StudentPersonals, subjects *sifxml.TimeTableSubjects) *sifxml.TeachingGroups {
 	yrs := []string{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"}
-	ret := sifxml.TeachingGroupSlice()
+	ret := sifxml.NewTeachingGroups()
 
 	/* split up students */
 	studentsperyr := make(map[string][]*sifxml.StudentPersonal)
 	for _, y := range yrs {
 		studentsperyr[y] = sifxml.StudentPersonalSlice()
 	}
-	for _, s := range students {
+	for _, s := range students.ToSlice() {
 		studentsperyr[s.MostRecent().YearLevel().Code().String()] =
 			append(studentsperyr[s.MostRecent().YearLevel().Code().String()], s)
 	}
 	tts2subj, subjectnames := timeTableSubjects2yr2subj(subjects)
 	primary, secondary, snr_secondary := primaryOrSecondary(studentsperyr)
-	primarystaff, secondarystaff, subjectstaff := primaryOrSecondaryStaff(school, staff, primary, secondary,
+	primarystaff, secondarystaff, subjectstaff := primaryOrSecondaryStaff(school, staff.ToSlice(), primary, secondary,
 		snr_secondary, subjectnames)
 
 	if primary {
-		ret = append(ret, makePrimaryTeachingGroups(school, studentsperyr, primarystaff)...)
+		ret.Append(makePrimaryTeachingGroups(school, studentsperyr, primarystaff)...)
 	}
 	if secondary {
-		ret = append(ret, makeSecondaryTeachingGroups(school, studentsperyr, secondarystaff)...)
+		ret.Append(makeSecondaryTeachingGroups(school, studentsperyr, secondarystaff)...)
 	}
 	if snr_secondary {
-		ret = append(ret, makeSnrSecondaryTeachingGroups(school, studentsperyr, subjectstaff, subjectnames,
+		ret.Append(makeSnrSecondaryTeachingGroups(school, studentsperyr, subjectstaff, subjectnames,
 			tts2subj)...)
 	}
 
@@ -2165,14 +2054,14 @@ func Create_TeachingGroups(school *sifxml.SchoolInfo, staff []*sifxml.StaffPerso
 //
 // No attempt whatsoever to avoid room clashes. The year level of each teaching group is determined from its
 // CurriculumLevel. Currently all subjects in the program are available at all year levels.
-func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, tg []*sifxml.TeachingGroup,
-	staff []*sifxml.StaffPersonal, rooms []*sifxml.RoomInfo, tts []*sifxml.TimeTableSubject) []*sifxml.TimeTableCell {
+func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTable, tg *sifxml.TeachingGroups,
+	staff *sifxml.StaffPersonals, rooms *sifxml.RoomInfos, tts *sifxml.TimeTableSubjects) *sifxml.TimeTableCells {
 	staff_map := make(map[string]*sifxml.StaffPersonal)
-	for _, s := range staff {
+	for _, s := range staff.ToSlice() {
 		staff_map[s.RefId().String()] = s
 	}
 	tts_map := make(map[string]*sifxml.TimeTableSubject)
-	for _, s := range tts {
+	for _, s := range tts.ToSlice() {
 		tts_map[s.RefId().String()] = s
 	}
 
@@ -2183,33 +2072,34 @@ func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTabl
 
 	start_times := make(map[string]map[string]string)
 	for i := 0; i < timetable.TimeTableDayList().Len(); i++ {
-		e, _ := timetable.TimeTableDayList().Index(i)
+		e := timetable.TimeTableDayList().Index(i)
 		dayid := e.DayId().String()
 		start_times[dayid] = make(map[string]string)
 		for j := 0; j < e.TimeTablePeriodList().Len(); j++ {
-			e1, _ := e.TimeTablePeriodList().Index(j)
+			e1 := e.TimeTablePeriodList().Index(j)
 			periodid := e1.PeriodId().String()
 			start_times[dayid][periodid] = e1.StartTime().String()
 		}
 	}
 
-	ret := sifxml.TimeTableCellSlice()
-	for _, g := range tg {
+	ret := sifxml.NewTimeTableCells()
+	roomSlice := rooms.ToSlice()
+	for _, g := range tg.ToSlice() {
 		yrlvl := g.CurriculumLevel().String()
 		if g.TimeTableSubjectRefId_IsNil() {
 			/* assign 2 cells a week of each subject available for that year level, in the same room */
-			room := rooms[rand.Intn(len(rooms))]
+			room := roomSlice[rand.Intn(len(roomSlice))]
 			for _, subj := range tts2subj[yrlvl] {
 				for i := 0; i < classesPerWeek(yrlvl, subj.SubjectShortName().String()); i++ {
 					dayid := randomStringFromSlice(dayids)
 					periodid := randomStringFromSlice(periodids)
 					for ; seen[dayid][periodid]; periodid = randomStringFromSlice(periodids) {
 					}
-					t0, _ := g.TeacherList().Index(0)
+					t0 := g.TeacherList().Index(0)
 					cell := Create_TimeTableCell(dayid, periodid, "Teaching", school, timetable,
 						subj, g, room, sifxml.RoomInfoSlice(),
 						staff_map[t0.StaffPersonalRefId().String()], sifxml.StaffPersonalSlice())
-					ret = append(ret, cell)
+					ret.Append(cell)
 					g = copyTeachingGroupPeriodFromCell(g, cell, start_times)
 				}
 			}
@@ -2220,12 +2110,12 @@ func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTabl
 				periodid := randomStringFromSlice(periodids)
 				for ; seen[dayid][periodid]; periodid = randomStringFromSlice(periodids) {
 				}
-				room := rooms[rand.Intn(len(rooms))]
-				t0, _ := g.TeacherList().Index(0)
+				room := roomSlice[rand.Intn(len(roomSlice))]
+				t0 := g.TeacherList().Index(0)
 				cell := Create_TimeTableCell(dayid, periodid, "Teaching", school, timetable,
 					tts_map[g.TimeTableSubjectRefId().String()], g, room, sifxml.RoomInfoSlice(),
 					staff_map[t0.StaffPersonalRefId().String()], sifxml.StaffPersonalSlice())
-				ret = append(ret, cell)
+				ret.Append(cell)
 				g = copyTeachingGroupPeriodFromCell(g, cell, start_times)
 			}
 		}
@@ -2255,7 +2145,7 @@ func Create_TimeTableCells(school *sifxml.SchoolInfo, timetable *sifxml.TimeTabl
 // In Round 2, it is set to September 30.
 func Create_CollectionRound(collection string) *sifxml.CollectionRound {
 
-	ret := sifxml.CollectionRound{}
+	ret := sifxml.NewCollectionRound()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("AGCollection", collection)
 	ret.SetProperty("CollectionYear", this_year())
@@ -2267,21 +2157,15 @@ func Create_CollectionRound(collection string) *sifxml.CollectionRound {
 		ret.AGRoundList().Last().SetProperty("DueDate", fmt.Sprintf("%s-%02d-30", this_year(), i*6+3))
 		ret.AGRoundList().Last().SetProperty("EndDate", fmt.Sprintf("%s-%02d-30", this_year(), i*6+3))
 	}
-
-	if out, ok := sifxml.CollectionRoundPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to CollectionRound: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create CollectionRound objects for the currently supported AG Collections.
-func Create_CollectionRounds() []*sifxml.CollectionRound {
-	ret := sifxml.CollectionRoundSlice()
+func Create_CollectionRounds() *sifxml.CollectionRounds {
+	ret := sifxml.NewCollectionRounds()
 	col := All_AGCollections()
 	for i := 0; i < len(col); i++ {
-		ret = append(ret, Create_CollectionRound(col[i]))
+		ret.Append(Create_CollectionRound(col[i]))
 	}
 	return ret
 }
@@ -2327,7 +2211,7 @@ func Create_CollectionRounds() []*sifxml.CollectionRound {
 // * ReportingObjectResponseList/ReportingObjectResponse/AGRuleList/AGRule/AGRuleStatus is set to "Fail".
 func Create_CollectionStatus(collection string, round int, school *sifxml.SchoolInfo) *sifxml.CollectionStatus {
 
-	ret := sifxml.CollectionStatus{}
+	ret := sifxml.NewCollectionStatus()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("AGCollection", collection)
 	ret.SetProperty("CollectionYear", this_year())
@@ -2361,24 +2245,18 @@ func Create_CollectionStatus(collection string, round int, school *sifxml.School
 			ret.AGReportingObjectResponseList().Last().AGRuleList().Last().SetProperty("AGRuleStatus", "Fail")
 		}
 	}
-
-	if out, ok := sifxml.CollectionStatusPointer(ret); !ok {
-		log.Fatalf("Could not create pointer to CollectionStatus: %+v", ret)
-		return nil
-	} else {
-		return out
-	}
+	return ret
 }
 
 // Create CollectionStatus objects for the currently supported AG Collections, and for each round
 // created in CollectionRounds.
 // Presupposes that there are two rounds for each collection per year.
-func Create_CollectionStatuses(school *sifxml.SchoolInfo) []*sifxml.CollectionStatus {
-	ret := sifxml.CollectionStatusSlice()
+func Create_CollectionStatuses(school *sifxml.SchoolInfo) *sifxml.CollectionStatuss {
+	ret := sifxml.NewCollectionStatuss()
 	col := All_AGCollections()
 	for i := 0; i < len(col); i++ {
 		for round := 1; round <= 2; round++ {
-			ret = append(ret, Create_CollectionStatus(col[i%len(col)], round, school))
+			ret.Append(Create_CollectionStatus(col[i%len(col)], round, school))
 		}
 	}
 	return ret

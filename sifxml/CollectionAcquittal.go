@@ -1,13 +1,20 @@
 package sifxml
 
 
-type CollectionAcquittals []CollectionAcquittal
+
+    type CollectionAcquittals struct {
+      collectionacquittals `json:"CollectionAcquittals"`
+    }
+
+    type collectionacquittals struct {
+      CollectionAcquittal []collectionacquittal `json:"CollectionAcquittal"`
+    }
 
     type CollectionAcquittal struct {
-  collectionacquittal `xml:"CollectionAcquittal" json:"CollectionAcquittal"`
-}
+      collectionacquittal `xml:"CollectionAcquittal" json:"CollectionAcquittal"`
+     }
 
-type collectionacquittal struct {
+     type collectionacquittal struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ReportingAuthorityList *ReportingAuthorityListType `xml:"ReportingAuthorityList" json:"ReportingAuthorityList"`
       SubmittingAuthority *ReportingAuthorityType `xml:"SubmittingAuthority,omitempty" json:"SubmittingAuthority,omitempty"`

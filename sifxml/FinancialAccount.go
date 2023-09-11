@@ -1,13 +1,20 @@
 package sifxml
 
 
-type FinancialAccounts []FinancialAccount
+
+    type FinancialAccounts struct {
+      financialaccounts `json:"FinancialAccounts"`
+    }
+
+    type financialaccounts struct {
+      FinancialAccount []financialaccount `json:"FinancialAccount"`
+    }
 
     type FinancialAccount struct {
-  financialaccount `xml:"FinancialAccount" json:"FinancialAccount"`
-}
+      financialaccount `xml:"FinancialAccount" json:"FinancialAccount"`
+     }
 
-type financialaccount struct {
+     type financialaccount struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       ParentAccountRefId *String `xml:"ParentAccountRefId,omitempty" json:"ParentAccountRefId,omitempty"`

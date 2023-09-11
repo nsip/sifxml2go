@@ -1,13 +1,20 @@
 package sifxml
 
 
-type NAPEventStudentLinks []NAPEventStudentLink
+
+    type NAPEventStudentLinks struct {
+      napeventstudentlinks `json:"NAPEventStudentLinks"`
+    }
+
+    type napeventstudentlinks struct {
+      NAPEventStudentLink []napeventstudentlink `json:"NAPEventStudentLink"`
+    }
 
     type NAPEventStudentLink struct {
-  napeventstudentlink `xml:"NAPEventStudentLink" json:"NAPEventStudentLink"`
-}
+      napeventstudentlink `xml:"NAPEventStudentLink" json:"NAPEventStudentLink"`
+     }
 
-type napeventstudentlink struct {
+     type napeventstudentlink struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId,omitempty"`
       PlatformStudentIdentifier *LocalIdType `xml:"PlatformStudentIdentifier" json:"PlatformStudentIdentifier"`

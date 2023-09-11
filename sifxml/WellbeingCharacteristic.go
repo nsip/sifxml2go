@@ -1,13 +1,20 @@
 package sifxml
 
 
-type WellbeingCharacteristics []WellbeingCharacteristic
+
+    type WellbeingCharacteristics struct {
+      wellbeingcharacteristics `json:"WellbeingCharacteristics"`
+    }
+
+    type wellbeingcharacteristics struct {
+      WellbeingCharacteristic []wellbeingcharacteristic `json:"WellbeingCharacteristic"`
+    }
 
     type WellbeingCharacteristic struct {
-  wellbeingcharacteristic `xml:"WellbeingCharacteristic" json:"WellbeingCharacteristic"`
-}
+      wellbeingcharacteristic `xml:"WellbeingCharacteristic" json:"WellbeingCharacteristic"`
+     }
 
-type wellbeingcharacteristic struct {
+     type wellbeingcharacteristic struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`

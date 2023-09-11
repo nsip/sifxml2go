@@ -1,13 +1,20 @@
 package sifxml
 
 
-type Debtors []Debtor
+
+    type Debtors struct {
+      debtors `json:"Debtors"`
+    }
+
+    type debtors struct {
+      Debtor []debtor `json:"Debtor"`
+    }
 
     type Debtor struct {
-  debtor `xml:"Debtor" json:"Debtor"`
-}
+      debtor `xml:"Debtor" json:"Debtor"`
+     }
 
-type debtor struct {
+     type debtor struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       BilledEntity *Debtor_BilledEntity `xml:"BilledEntity" json:"BilledEntity"`
@@ -29,6 +36,7 @@ type Debtor_BilledEntity struct {
 }
 
 type debtor_billedentity struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type WellbeingEvents []WellbeingEvent
+
+    type WellbeingEvents struct {
+      wellbeingevents `json:"WellbeingEvents"`
+    }
+
+    type wellbeingevents struct {
+      WellbeingEvent []wellbeingevent `json:"WellbeingEvent"`
+    }
 
     type WellbeingEvent struct {
-  wellbeingevent `xml:"WellbeingEvent" json:"WellbeingEvent"`
-}
+      wellbeingevent `xml:"WellbeingEvent" json:"WellbeingEvent"`
+     }
 
-type wellbeingevent struct {
+     type wellbeingevent struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId,omitempty" json:"StudentPersonalRefId,omitempty"`
       GroupIndicator *Bool `xml:"GroupIndicator,omitempty" json:"GroupIndicator,omitempty"`

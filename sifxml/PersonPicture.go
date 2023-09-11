@@ -1,13 +1,20 @@
 package sifxml
 
 
-type PersonPictures []PersonPicture
+
+    type PersonPictures struct {
+      personpictures `json:"PersonPictures"`
+    }
+
+    type personpictures struct {
+      PersonPicture []personpicture `json:"PersonPicture"`
+    }
 
     type PersonPicture struct {
-  personpicture `xml:"PersonPicture" json:"PersonPicture"`
-}
+      personpicture `xml:"PersonPicture" json:"PersonPicture"`
+     }
 
-type personpicture struct {
+     type personpicture struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ParentObjectRefId *PersonPicture_ParentObjectRefId `xml:"ParentObjectRefId" json:"ParentObjectRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
@@ -25,6 +32,7 @@ type PersonPicture_ParentObjectRefId struct {
 }
 
 type personpicture_parentobjectrefid struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

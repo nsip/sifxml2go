@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentScoreJudgementAgainstStandards []StudentScoreJudgementAgainstStandard
+
+    type StudentScoreJudgementAgainstStandards struct {
+      studentscorejudgementagainststandards `json:"StudentScoreJudgementAgainstStandards"`
+    }
+
+    type studentscorejudgementagainststandards struct {
+      StudentScoreJudgementAgainstStandard []studentscorejudgementagainststandard `json:"StudentScoreJudgementAgainstStandard"`
+    }
 
     type StudentScoreJudgementAgainstStandard struct {
-  studentscorejudgementagainststandard `xml:"StudentScoreJudgementAgainstStandard" json:"StudentScoreJudgementAgainstStandard"`
-}
+      studentscorejudgementagainststandard `xml:"StudentScoreJudgementAgainstStandard" json:"StudentScoreJudgementAgainstStandard"`
+     }
 
-type studentscorejudgementagainststandard struct {
+     type studentscorejudgementagainststandard struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear" json:"SchoolYear"`
       TermInfoRefId *String `xml:"TermInfoRefId,omitempty" json:"TermInfoRefId,omitempty"`

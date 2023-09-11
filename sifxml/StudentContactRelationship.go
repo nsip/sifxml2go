@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentContactRelationships []StudentContactRelationship
+
+    type StudentContactRelationships struct {
+      studentcontactrelationships `json:"StudentContactRelationships"`
+    }
+
+    type studentcontactrelationships struct {
+      StudentContactRelationship []studentcontactrelationship `json:"StudentContactRelationship"`
+    }
 
     type StudentContactRelationship struct {
-  studentcontactrelationship `xml:"StudentContactRelationship" json:"StudentContactRelationship"`
-}
+      studentcontactrelationship `xml:"StudentContactRelationship" json:"StudentContactRelationship"`
+     }
 
-type studentcontactrelationship struct {
+     type studentcontactrelationship struct {
         StudentContactRelationshipRefId *String `xml:"StudentContactRelationshipRefId,attr" json:"StudentContactRelationshipRefId"`
       StudentPersonalRefId *RefIdType `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       StudentContactPersonalRefId *RefIdType `xml:"StudentContactPersonalRefId" json:"StudentContactPersonalRefId"`

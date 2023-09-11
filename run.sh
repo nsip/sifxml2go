@@ -76,7 +76,7 @@ for filename in ./sifxml_tmp/*.go; do
 done
 cat sifxml_tmp/DataModel.go |  perl -s scripts/struct2go2.pl -o > sifxml/DataModel.go
 
-cat sifxml_tmp/[A-Z]*.go | perl scripts/goHelpers.pl > sifxml/Helpers.go
+cat sifxml_tmp/[A-Z]*.go | perl -d scripts/goHelpers.pl > sifxml/Helpers.go
 
 # 4. Examples
 

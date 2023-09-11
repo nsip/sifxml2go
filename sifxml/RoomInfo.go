@@ -1,13 +1,20 @@
 package sifxml
 
 
-type RoomInfos []RoomInfo
+
+    type RoomInfos struct {
+      roominfos `json:"RoomInfos"`
+    }
+
+    type roominfos struct {
+      RoomInfo []roominfo `json:"RoomInfo"`
+    }
 
     type RoomInfo struct {
-  roominfo `xml:"RoomInfo" json:"RoomInfo"`
-}
+      roominfo `xml:"RoomInfo" json:"RoomInfo"`
+     }
 
-type roominfo struct {
+     type roominfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`

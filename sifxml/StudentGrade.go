@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentGrades []StudentGrade
+
+    type StudentGrades struct {
+      studentgrades `json:"StudentGrades"`
+    }
+
+    type studentgrades struct {
+      StudentGrade []studentgrade `json:"StudentGrade"`
+    }
 
     type StudentGrade struct {
-  studentgrade `xml:"StudentGrade" json:"StudentGrade"`
-}
+      studentgrade `xml:"StudentGrade" json:"StudentGrade"`
+     }
 
-type studentgrade struct {
+     type studentgrade struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       Homegroup *String `xml:"Homegroup,omitempty" json:"Homegroup,omitempty"`

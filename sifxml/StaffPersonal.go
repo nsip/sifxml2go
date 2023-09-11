@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StaffPersonals []StaffPersonal
+
+    type StaffPersonals struct {
+      staffpersonals `json:"StaffPersonals"`
+    }
+
+    type staffpersonals struct {
+      StaffPersonal []staffpersonal `json:"StaffPersonal"`
+    }
 
     type StaffPersonal struct {
-  staffpersonal `xml:"StaffPersonal" json:"StaffPersonal"`
-}
+      staffpersonal `xml:"StaffPersonal" json:"StaffPersonal"`
+     }
 
-type staffpersonal struct {
+     type staffpersonal struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId" json:"LocalId"`
       StateProvinceId *StateProvinceIdType `xml:"StateProvinceId,omitempty" json:"StateProvinceId,omitempty"`

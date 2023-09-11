@@ -1,13 +1,20 @@
 package sifxml
 
 
-type NAPStudentResponseSets []NAPStudentResponseSet
+
+    type NAPStudentResponseSets struct {
+      napstudentresponsesets `json:"NAPStudentResponseSets"`
+    }
+
+    type napstudentresponsesets struct {
+      NAPStudentResponseSet []napstudentresponseset `json:"NAPStudentResponseSet"`
+    }
 
     type NAPStudentResponseSet struct {
-  napstudentresponseset `xml:"NAPStudentResponseSet" json:"NAPStudentResponseSet"`
-}
+      napstudentresponseset `xml:"NAPStudentResponseSet" json:"NAPStudentResponseSet"`
+     }
 
-type napstudentresponseset struct {
+     type napstudentresponseset struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ReportExclusionFlag *Bool `xml:"ReportExclusionFlag" json:"ReportExclusionFlag"`
       CalibrationSampleFlag *String `xml:"CalibrationSampleFlag,omitempty" json:"CalibrationSampleFlag,omitempty"`

@@ -4,15 +4,20 @@
 %list = ();
 %inherit = ();
 %codeset = ();
-@object = ();
+%object = ();
+%objectlist = ();
+
+
+open(F, "<", "objs.txt");
+while(<F>) {
+  m/\/([^\/.]+)\.xml/ or next;
+  $object{$1} = 1;
+}
+close F;
 
 while(<>) {
   print STDERR $_;
   chomp;
-  if (m/^type (\S+?)s \[\]\1$/) {
-    ($name) = (m/^type (\S+?)s \[\]\1/);
-    push @object, $name;
-  }
   if (m/^\s*var\s+\S+\s+=\s+\[\]/) {
     ($name) = m/^\s*var\s+(\S+)\s+=\s+\[\]/;
     $name =~ s/_values//;
@@ -48,6 +53,13 @@ while(<>) {
   }
 }
 
+foreach $k (keys %object) {
+  $objectlist{$k . "s"} = 1;
+  $list{$k . "s"} = {KEY => $k, TYPE => $k};
+  $types{$k . "s"} = {};
+  $types{$k . "s"}{$k} = $k;
+}
+
 foreach $k (keys %alias) {
   $alias_orig{$k} = $alias{$k};
 }
@@ -67,7 +79,6 @@ print <<"END";
 package sifxml
 
 import (
-  "errors"
   "fmt"
   "log"
   "strconv"
@@ -147,7 +158,8 @@ func (a *Bool) UnmarshalJSON(b []byte) error {
 
 END
 
-foreach $n (@object) {
+foreach $n (sort keys %object) {
+  next if $n eq "";
   print <<"END";
 // Create a slice of pointers to the object type
 func ${n}Slice() []*$n {
@@ -163,7 +175,7 @@ print << "END";
 return reprint.This(t).(*$n)
 }
 END
-  next if %alias_orig{$n};
+  next if $alias_orig{$n};
   print <<"END";
 // Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
 // the value mismatches X.
@@ -180,18 +192,32 @@ switch t := value.(type) {
         return nil, false
   }
 END
+  next if $objectlist{$n};
+  print <<"END";
+
+// Generates a new object as a pointer to a struct
+func New${n}() *$n {
+  if out, ok := ${n}Pointer($n\{\}); !ok {
+                log.Fatalf("Could not create pointer to $n\\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+END
 }
 
 
 # Matt's Append is my AddNew
 foreach $n (sort keys %list) {
+  next if $objectlist{$n};
   $emptytype= emptytype($list{$n}{TYPE});
       $cv = codeset_validate($$list{$n}{TYPE});
   print <<"END";
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *$n) Append(value $list{$n}{TYPE}) *$n {
+  func (t *$n) Append(values ...$list{$n}{TYPE}) *$n {
     $cv
         if t == nil {
                 t, _ = ${n}Pointer(${n}\{\})
@@ -199,7 +225,9 @@ foreach $n (sort keys %list) {
         if t.$list{$n}{KEY} == nil {
                 t.$list{$n}{KEY} = make([]$list{$n}{TYPE}, 0)
         }
+        for _, value := range values {
         t.$list{$n}{KEY} = append(t.$list{$n}{KEY}, value)
+        }
         return t
 }
 
@@ -223,15 +251,15 @@ func (t *$n) Last() *$list{$n}{TYPE} {
         return &(t.$list{$n}{KEY}\[len(t.$list{$n}{KEY})-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *$n) Index(n int) (*$list{$n}{TYPE}, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *$n) Index(n int) (*$list{$n}{TYPE}) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("$n.Index(): subscript %d out of range on list\\n", n)
     }
   if t.$list{$n}{KEY} == nil {
     t = t.AddNew()
     }
-        return &(t.$list{$n}{KEY}\[n]), nil
+        return &(t.$list{$n}{KEY}\[n])
 }
 
 // Length of the list.
@@ -240,6 +268,15 @@ func (t *$n) Len() int {
     t = t.AddNew()
     }
         return len(t.$list{$n}{KEY})
+}
+
+// Convert list object to slice
+func (t *$n) ToSlice() []*$list{$n}{TYPE} {
+  ret := make([]*$list{$n}{TYPE}, 0)
+  for _, x:= range t.$list{$n}{KEY} {
+    ret = append(ret, &x)
+  }
+  return ret
 }
 
 
@@ -253,6 +290,122 @@ END
         }
 END
   }
+}
+
+#special processing of object lists
+foreach $n (sort keys %objectlist) {
+  $emptytype= lc emptytype($list{$n}{TYPE});
+  $type = lc $list{$n}{TYPE};
+  $base = lc $n;
+  $key = $base . "." . $list{$n}{KEY};
+  $value = "value." . $type;
+  if ($n eq "LearningResourcePackages")  {
+    $value = "value";
+    next; #intractable!!! TODO
+  }
+  print <<"END";
+
+  // Generates a new object as a pointer to a struct
+func New${n}() *$n {
+  if out, ok := ${n}Pointer($n\{\}); !ok {
+                log.Fatalf("Could not create pointer to $n\\n")
+                return nil
+        } else {
+          out.$key = make([]$type, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *$n) Append(values ...*$list{$n}{TYPE}) *$n {
+        if t == nil {
+                t, _ = ${n}Pointer(${n}\{\})
+        }
+        /*
+        if t.$base == nil {
+          t.$base = $base\{$list{$n}{KEY}: make([]$type, 0)\}
+        }
+        */
+        if t.$key == nil {
+                t.$key = make([]$type, 0)
+        }
+        for _, value := range values {
+        t.$key = append(t.$key, $value)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *$n) AddNew() *$n {
+        if t == nil {
+                t, _ = ${n}Pointer(${n}\{\})
+        }
+        /*
+        if t.$base == nil {
+          t.$base = $base\{$list{$n}{KEY}: make([]$type, 0)\}
+        }
+        */
+        if t.$key == nil {
+                t.$key = make([]$type, 0)
+        }
+        t.$key = append(t.$key, $emptytype)
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *$n) Last() *$type {
+  /*
+  if t.$base == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.$key == nil {
+    t = t.AddNew()
+    }
+        return &(t.$key\[len(t.$key)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *$n) Index(n int) *$list{$n}{TYPE} {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("$n.Index(): subscript %d out of range on list\\n", n)
+    }
+    /*
+  if t.$base == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.$key == nil {
+    t = t.AddNew()
+    }
+        return &$list{$n}{TYPE}\{(t.$key\[n])}
+}
+
+// Length of the list.
+func (t *$n) Len() int {
+  /*
+  if t.$base == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.$key == nil {
+    t = t.AddNew()
+    }
+        return len(t.$key)
+}
+
+// Convert list object to slice
+func (t *$n) ToSlice() []*$list{$n}{TYPE} {
+    ret := make([]*$list{$n}{TYPE}, 0)
+  for _, x:= range t.$key {
+    ret = append(ret, &$list{$n}{TYPE}\{$type: x\})
+  }
+  return ret
+
+}
+
+END
 }
 
 foreach $n (sort keys %alias_orig) {
@@ -398,6 +551,10 @@ END
 
 foreach $n (sort keys %types) {
   next if $list{$n};
+  if ($n eq "Activity") {
+    $n = $n;
+  }
+  next if $objectlist{$n};
   print <<"END";
 
 // Set the value of a property to nil

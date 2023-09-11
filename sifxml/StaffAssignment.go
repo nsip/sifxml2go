@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StaffAssignments []StaffAssignment
+
+    type StaffAssignments struct {
+      staffassignments `json:"StaffAssignments"`
+    }
+
+    type staffassignments struct {
+      StaffAssignment []staffassignment `json:"StaffAssignment"`
+    }
 
     type StaffAssignment struct {
-  staffassignment `xml:"StaffAssignment" json:"StaffAssignment"`
-}
+      staffassignment `xml:"StaffAssignment" json:"StaffAssignment"`
+     }
 
-type staffassignment struct {
+     type staffassignment struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       SchoolYear *SchoolYearType `xml:"SchoolYear,omitempty" json:"SchoolYear,omitempty"`

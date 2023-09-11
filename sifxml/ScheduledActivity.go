@@ -1,13 +1,20 @@
 package sifxml
 
 
-type ScheduledActivitys []ScheduledActivity
+
+    type ScheduledActivitys struct {
+      scheduledactivitys `json:"ScheduledActivitys"`
+    }
+
+    type scheduledactivitys struct {
+      ScheduledActivity []scheduledactivity `json:"ScheduledActivity"`
+    }
 
     type ScheduledActivity struct {
-  scheduledactivity `xml:"ScheduledActivity" json:"ScheduledActivity"`
-}
+      scheduledactivity `xml:"ScheduledActivity" json:"ScheduledActivity"`
+     }
 
-type scheduledactivity struct {
+     type scheduledactivity struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`
       TimeTableCellRefId *String `xml:"TimeTableCellRefId,omitempty" json:"TimeTableCellRefId,omitempty"`

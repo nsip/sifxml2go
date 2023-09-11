@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentDataTransferNotes []StudentDataTransferNote
+
+    type StudentDataTransferNotes struct {
+      studentdatatransfernotes `json:"StudentDataTransferNotes"`
+    }
+
+    type studentdatatransfernotes struct {
+      StudentDataTransferNote []studentdatatransfernote `json:"StudentDataTransferNote"`
+    }
 
     type StudentDataTransferNote struct {
-  studentdatatransfernote `xml:"StudentDataTransferNote" json:"StudentDataTransferNote"`
-}
+      studentdatatransfernote `xml:"StudentDataTransferNote" json:"StudentDataTransferNote"`
+     }
 
-type studentdatatransfernote struct {
+     type studentdatatransfernote struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       Name *NameOfRecordType `xml:"Name" json:"Name"`
       Gender *AUCodeSetsSexCodeType `xml:"Gender,omitempty" json:"Gender,omitempty"`

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type ResourceBookings []ResourceBooking
+
+    type ResourceBookings struct {
+      resourcebookings `json:"ResourceBookings"`
+    }
+
+    type resourcebookings struct {
+      ResourceBooking []resourcebooking `json:"ResourceBooking"`
+    }
 
     type ResourceBooking struct {
-  resourcebooking `xml:"ResourceBooking" json:"ResourceBooking"`
-}
+      resourcebooking `xml:"ResourceBooking" json:"ResourceBooking"`
+     }
 
-type resourcebooking struct {
+     type resourcebooking struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ResourceRefId *ResourceBooking_ResourceRefId
       ResourceLocalId *LocalIdType `xml:"ResourceLocalId" json:"ResourceLocalId"`
@@ -30,6 +37,7 @@ type ResourceBooking_ResourceRefId struct {
 }
 
 type resourcebooking_resourcerefid struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

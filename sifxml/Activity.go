@@ -1,13 +1,20 @@
 package sifxml
 
 
-type Activitys []Activity
+
+    type Activitys struct {
+      activitys `json:"Activitys"`
+    }
+
+    type activitys struct {
+      Activity []activity `json:"Activity"`
+    }
 
     type Activity struct {
-  activity `xml:"Activity" json:"Activity"`
-}
+      activity `xml:"Activity" json:"Activity"`
+     }
 
-type activity struct {
+     type activity struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       Title *String `xml:"Title,omitempty" json:"Title,omitempty"`
       Preamble *String `xml:"Preamble,omitempty" json:"Preamble,omitempty"`

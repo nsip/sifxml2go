@@ -1,13 +1,20 @@
 package sifxml
 
 
-type TimeTableSubjects []TimeTableSubject
+
+    type TimeTableSubjects struct {
+      timetablesubjects `json:"TimeTableSubjects"`
+    }
+
+    type timetablesubjects struct {
+      TimeTableSubject []timetablesubject `json:"TimeTableSubject"`
+    }
 
     type TimeTableSubject struct {
-  timetablesubject `xml:"TimeTableSubject" json:"TimeTableSubject"`
-}
+      timetablesubject `xml:"TimeTableSubject" json:"TimeTableSubject"`
+     }
 
-type timetablesubject struct {
+     type timetablesubject struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       SubjectLocalId *LocalIdType `xml:"SubjectLocalId" json:"SubjectLocalId"`
       AcademicYear *YearLevelType `xml:"AcademicYear,omitempty" json:"AcademicYear,omitempty"`

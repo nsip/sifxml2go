@@ -1,13 +1,20 @@
 package sifxml
 
 
-type Invoices []Invoice
+
+    type Invoices struct {
+      invoices `json:"Invoices"`
+    }
+
+    type invoices struct {
+      Invoice []invoice `json:"Invoice"`
+    }
 
     type Invoice struct {
-  invoice `xml:"Invoice" json:"Invoice"`
-}
+      invoice `xml:"Invoice" json:"Invoice"`
+     }
 
-type invoice struct {
+     type invoice struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       InvoicedEntity *Invoice_InvoicedEntity `xml:"InvoicedEntity" json:"InvoicedEntity"`
@@ -42,6 +49,7 @@ type Invoice_InvoicedEntity struct {
 }
 
 type invoice_invoicedentity struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

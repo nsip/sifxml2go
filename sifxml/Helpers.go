@@ -2,7 +2,6 @@
 package sifxml
 
 import (
-  "errors"
   "fmt"
   "log"
   "strconv"
@@ -418,6 +417,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewACStrandAreaListType() *ACStrandAreaListType {
+  if out, ok := ACStrandAreaListTypePointer(ACStrandAreaListType{}); !ok {
+                log.Fatalf("Could not create pointer to ACStrandAreaListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ACStrandSubjectAreaType) Clone() (*ACStrandSubjectAreaType) {
 return reprint.This(t).(*ACStrandSubjectAreaType)
@@ -435,6 +444,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ACStrandSubjectAreaType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewACStrandSubjectAreaType() *ACStrandSubjectAreaType {
+  if out, ok := ACStrandSubjectAreaTypePointer(ACStrandSubjectAreaType{}); !ok {
+                log.Fatalf("Could not create pointer to ACStrandSubjectAreaType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGContextualQuestionListType) Clone() (*AGContextualQuestionListType) {
@@ -454,6 +473,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAGContextualQuestionListType() *AGContextualQuestionListType {
+  if out, ok := AGContextualQuestionListTypePointer(AGContextualQuestionListType{}); !ok {
+                log.Fatalf("Could not create pointer to AGContextualQuestionListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGContextualQuestionType) Clone() (*AGContextualQuestionType) {
 return reprint.This(t).(*AGContextualQuestionType)
@@ -471,6 +500,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AGContextualQuestionType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAGContextualQuestionType() *AGContextualQuestionType {
+  if out, ok := AGContextualQuestionTypePointer(AGContextualQuestionType{}); !ok {
+                log.Fatalf("Could not create pointer to AGContextualQuestionType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGParentType) Clone() (*AGParentType) {
@@ -490,6 +529,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAGParentType() *AGParentType {
+  if out, ok := AGParentTypePointer(AGParentType{}); !ok {
+                log.Fatalf("Could not create pointer to AGParentType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGReportingObjectResponseListType) Clone() (*AGReportingObjectResponseListType) {
 return reprint.This(t).(*AGReportingObjectResponseListType)
@@ -507,6 +556,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AGReportingObjectResponseListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAGReportingObjectResponseListType() *AGReportingObjectResponseListType {
+  if out, ok := AGReportingObjectResponseListTypePointer(AGReportingObjectResponseListType{}); !ok {
+                log.Fatalf("Could not create pointer to AGReportingObjectResponseListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGReportingObjectResponseType) Clone() (*AGReportingObjectResponseType) {
@@ -526,6 +585,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAGReportingObjectResponseType() *AGReportingObjectResponseType {
+  if out, ok := AGReportingObjectResponseTypePointer(AGReportingObjectResponseType{}); !ok {
+                log.Fatalf("Could not create pointer to AGReportingObjectResponseType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGRoundListType) Clone() (*AGRoundListType) {
 return reprint.This(t).(*AGRoundListType)
@@ -543,6 +612,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AGRoundListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAGRoundListType() *AGRoundListType {
+  if out, ok := AGRoundListTypePointer(AGRoundListType{}); !ok {
+                log.Fatalf("Could not create pointer to AGRoundListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGRoundType) Clone() (*AGRoundType) {
@@ -562,6 +641,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAGRoundType() *AGRoundType {
+  if out, ok := AGRoundTypePointer(AGRoundType{}); !ok {
+                log.Fatalf("Could not create pointer to AGRoundType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGRuleListType) Clone() (*AGRuleListType) {
 return reprint.This(t).(*AGRuleListType)
@@ -579,6 +668,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AGRuleListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAGRuleListType() *AGRuleListType {
+  if out, ok := AGRuleListTypePointer(AGRuleListType{}); !ok {
+                log.Fatalf("Could not create pointer to AGRuleListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AGRuleType) Clone() (*AGRuleType) {
@@ -598,6 +697,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAGRuleType() *AGRuleType {
+  if out, ok := AGRuleTypePointer(AGRuleType{}); !ok {
+                log.Fatalf("Could not create pointer to AGRuleType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AbstractContentElementType) Clone() (*AbstractContentElementType) {
 return reprint.This(t).(*AbstractContentElementType)
@@ -615,6 +724,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AbstractContentElementType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAbstractContentElementType() *AbstractContentElementType {
+  if out, ok := AbstractContentElementTypePointer(AbstractContentElementType{}); !ok {
+                log.Fatalf("Could not create pointer to AbstractContentElementType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AccountCodeListType) Clone() (*AccountCodeListType) {
@@ -634,6 +753,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAccountCodeListType() *AccountCodeListType {
+  if out, ok := AccountCodeListTypePointer(AccountCodeListType{}); !ok {
+                log.Fatalf("Could not create pointer to AccountCodeListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *Activity) Clone() (*Activity) {
 return reprint.This(t).(*Activity)
@@ -651,6 +780,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to Activity\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewActivity() *Activity {
+  if out, ok := ActivityPointer(Activity{}); !ok {
+                log.Fatalf("Could not create pointer to Activity\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ActivityEvaluationType) Clone() (*ActivityEvaluationType) {
@@ -670,6 +809,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewActivityEvaluationType() *ActivityEvaluationType {
+  if out, ok := ActivityEvaluationTypePointer(ActivityEvaluationType{}); !ok {
+                log.Fatalf("Could not create pointer to ActivityEvaluationType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ActivityTimeType) Clone() (*ActivityTimeType) {
 return reprint.This(t).(*ActivityTimeType)
@@ -685,6 +834,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to ActivityTimeType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewActivityTimeType() *ActivityTimeType {
+  if out, ok := ActivityTimeTypePointer(ActivityTimeType{}); !ok {
+                log.Fatalf("Could not create pointer to ActivityTimeType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *Activitys) Clone() (*Activitys) {
+return reprint.This(t).(*Activitys)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ActivitysPointer(value interface{}) (*Activitys, bool) {
+switch t := value.(type) {
+        case *Activitys:
+                return value.(*Activitys), true
+        case Activitys:
+                v, _ := value.(Activitys)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to Activitys\n", t, value)
         }
         return nil, false
   }
@@ -706,6 +883,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAddressCollection() *AddressCollection {
+  if out, ok := AddressCollectionPointer(AddressCollection{}); !ok {
+                log.Fatalf("Could not create pointer to AddressCollection\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AddressCollectionReportingListType) Clone() (*AddressCollectionReportingListType) {
 return reprint.This(t).(*AddressCollectionReportingListType)
@@ -723,6 +910,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AddressCollectionReportingListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAddressCollectionReportingListType() *AddressCollectionReportingListType {
+  if out, ok := AddressCollectionReportingListTypePointer(AddressCollectionReportingListType{}); !ok {
+                log.Fatalf("Could not create pointer to AddressCollectionReportingListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AddressCollectionReportingType) Clone() (*AddressCollectionReportingType) {
@@ -742,6 +939,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAddressCollectionReportingType() *AddressCollectionReportingType {
+  if out, ok := AddressCollectionReportingTypePointer(AddressCollectionReportingType{}); !ok {
+                log.Fatalf("Could not create pointer to AddressCollectionReportingType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AddressCollectionStudentListType) Clone() (*AddressCollectionStudentListType) {
 return reprint.This(t).(*AddressCollectionStudentListType)
@@ -760,6 +967,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAddressCollectionStudentListType() *AddressCollectionStudentListType {
+  if out, ok := AddressCollectionStudentListTypePointer(AddressCollectionStudentListType{}); !ok {
+                log.Fatalf("Could not create pointer to AddressCollectionStudentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AddressCollectionStudentType) Clone() (*AddressCollectionStudentType) {
 return reprint.This(t).(*AddressCollectionStudentType)
@@ -775,6 +992,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to AddressCollectionStudentType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAddressCollectionStudentType() *AddressCollectionStudentType {
+  if out, ok := AddressCollectionStudentTypePointer(AddressCollectionStudentType{}); !ok {
+                log.Fatalf("Could not create pointer to AddressCollectionStudentType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *AddressCollections) Clone() (*AddressCollections) {
+return reprint.This(t).(*AddressCollections)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func AddressCollectionsPointer(value interface{}) (*AddressCollections, bool) {
+switch t := value.(type) {
+        case *AddressCollections:
+                return value.(*AddressCollections), true
+        case AddressCollections:
+                v, _ := value.(AddressCollections)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to AddressCollections\n", t, value)
         }
         return nil, false
   }
@@ -796,6 +1041,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAddressListType() *AddressListType {
+  if out, ok := AddressListTypePointer(AddressListType{}); !ok {
+                log.Fatalf("Could not create pointer to AddressListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AddressStreetType) Clone() (*AddressStreetType) {
 return reprint.This(t).(*AddressStreetType)
@@ -813,6 +1068,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AddressStreetType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAddressStreetType() *AddressStreetType {
+  if out, ok := AddressStreetTypePointer(AddressStreetType{}); !ok {
+                log.Fatalf("Could not create pointer to AddressStreetType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AddressType) Clone() (*AddressType) {
@@ -832,6 +1097,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAddressType() *AddressType {
+  if out, ok := AddressTypePointer(AddressType{}); !ok {
+                log.Fatalf("Could not create pointer to AddressType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AdjustmentContainerType) Clone() (*AdjustmentContainerType) {
 return reprint.This(t).(*AdjustmentContainerType)
@@ -849,6 +1124,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AdjustmentContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAdjustmentContainerType() *AdjustmentContainerType {
+  if out, ok := AdjustmentContainerTypePointer(AdjustmentContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to AdjustmentContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AgencyType) Clone() (*AgencyType) {
@@ -868,6 +1153,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAgencyType() *AgencyType {
+  if out, ok := AgencyTypePointer(AgencyType{}); !ok {
+                log.Fatalf("Could not create pointer to AgencyType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AggregateCharacteristicInfo) Clone() (*AggregateCharacteristicInfo) {
 return reprint.This(t).(*AggregateCharacteristicInfo)
@@ -883,6 +1178,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to AggregateCharacteristicInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAggregateCharacteristicInfo() *AggregateCharacteristicInfo {
+  if out, ok := AggregateCharacteristicInfoPointer(AggregateCharacteristicInfo{}); !ok {
+                log.Fatalf("Could not create pointer to AggregateCharacteristicInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *AggregateCharacteristicInfos) Clone() (*AggregateCharacteristicInfos) {
+return reprint.This(t).(*AggregateCharacteristicInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func AggregateCharacteristicInfosPointer(value interface{}) (*AggregateCharacteristicInfos, bool) {
+switch t := value.(type) {
+        case *AggregateCharacteristicInfos:
+                return value.(*AggregateCharacteristicInfos), true
+        case AggregateCharacteristicInfos:
+                v, _ := value.(AggregateCharacteristicInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to AggregateCharacteristicInfos\n", t, value)
         }
         return nil, false
   }
@@ -904,6 +1227,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAggregateStatisticFact() *AggregateStatisticFact {
+  if out, ok := AggregateStatisticFactPointer(AggregateStatisticFact{}); !ok {
+                log.Fatalf("Could not create pointer to AggregateStatisticFact\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *AggregateStatisticFacts) Clone() (*AggregateStatisticFacts) {
+return reprint.This(t).(*AggregateStatisticFacts)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func AggregateStatisticFactsPointer(value interface{}) (*AggregateStatisticFacts, bool) {
+switch t := value.(type) {
+        case *AggregateStatisticFacts:
+                return value.(*AggregateStatisticFacts), true
+        case AggregateStatisticFacts:
+                v, _ := value.(AggregateStatisticFacts)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to AggregateStatisticFacts\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AggregateStatisticInfo) Clone() (*AggregateStatisticInfo) {
 return reprint.This(t).(*AggregateStatisticInfo)
@@ -919,6 +1270,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to AggregateStatisticInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAggregateStatisticInfo() *AggregateStatisticInfo {
+  if out, ok := AggregateStatisticInfoPointer(AggregateStatisticInfo{}); !ok {
+                log.Fatalf("Could not create pointer to AggregateStatisticInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *AggregateStatisticInfos) Clone() (*AggregateStatisticInfos) {
+return reprint.This(t).(*AggregateStatisticInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func AggregateStatisticInfosPointer(value interface{}) (*AggregateStatisticInfos, bool) {
+switch t := value.(type) {
+        case *AggregateStatisticInfos:
+                return value.(*AggregateStatisticInfos), true
+        case AggregateStatisticInfos:
+                v, _ := value.(AggregateStatisticInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to AggregateStatisticInfos\n", t, value)
         }
         return nil, false
   }
@@ -940,6 +1319,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAlertMessageType() *AlertMessageType {
+  if out, ok := AlertMessageTypePointer(AlertMessageType{}); !ok {
+                log.Fatalf("Could not create pointer to AlertMessageType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AlertMessagesType) Clone() (*AlertMessagesType) {
 return reprint.This(t).(*AlertMessagesType)
@@ -957,6 +1346,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AlertMessagesType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAlertMessagesType() *AlertMessagesType {
+  if out, ok := AlertMessagesTypePointer(AlertMessagesType{}); !ok {
+                log.Fatalf("Could not create pointer to AlertMessagesType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AlternateIdentificationCodeListType) Clone() (*AlternateIdentificationCodeListType) {
@@ -976,6 +1375,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAlternateIdentificationCodeListType() *AlternateIdentificationCodeListType {
+  if out, ok := AlternateIdentificationCodeListTypePointer(AlternateIdentificationCodeListType{}); !ok {
+                log.Fatalf("Could not create pointer to AlternateIdentificationCodeListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ApplicableLawListType) Clone() (*ApplicableLawListType) {
 return reprint.This(t).(*ApplicableLawListType)
@@ -993,6 +1402,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ApplicableLawListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewApplicableLawListType() *ApplicableLawListType {
+  if out, ok := ApplicableLawListTypePointer(ApplicableLawListType{}); !ok {
+                log.Fatalf("Could not create pointer to ApplicableLawListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ApplicableLawType) Clone() (*ApplicableLawType) {
@@ -1012,6 +1431,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewApplicableLawType() *ApplicableLawType {
+  if out, ok := ApplicableLawTypePointer(ApplicableLawType{}); !ok {
+                log.Fatalf("Could not create pointer to ApplicableLawType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ApprovalType) Clone() (*ApprovalType) {
 return reprint.This(t).(*ApprovalType)
@@ -1029,6 +1458,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ApprovalType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewApprovalType() *ApprovalType {
+  if out, ok := ApprovalTypePointer(ApprovalType{}); !ok {
+                log.Fatalf("Could not create pointer to ApprovalType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ApprovalsType) Clone() (*ApprovalsType) {
@@ -1048,6 +1487,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewApprovalsType() *ApprovalsType {
+  if out, ok := ApprovalsTypePointer(ApprovalsType{}); !ok {
+                log.Fatalf("Could not create pointer to ApprovalsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ArrivalSchoolType) Clone() (*ArrivalSchoolType) {
 return reprint.This(t).(*ArrivalSchoolType)
@@ -1065,6 +1514,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ArrivalSchoolType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewArrivalSchoolType() *ArrivalSchoolType {
+  if out, ok := ArrivalSchoolTypePointer(ArrivalSchoolType{}); !ok {
+                log.Fatalf("Could not create pointer to ArrivalSchoolType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AssignmentListType) Clone() (*AssignmentListType) {
@@ -1084,6 +1543,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAssignmentListType() *AssignmentListType {
+  if out, ok := AssignmentListTypePointer(AssignmentListType{}); !ok {
+                log.Fatalf("Could not create pointer to AssignmentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AssignmentScoreType) Clone() (*AssignmentScoreType) {
 return reprint.This(t).(*AssignmentScoreType)
@@ -1101,6 +1570,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AssignmentScoreType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAssignmentScoreType() *AssignmentScoreType {
+  if out, ok := AssignmentScoreTypePointer(AssignmentScoreType{}); !ok {
+                log.Fatalf("Could not create pointer to AssignmentScoreType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AssociatedObjectsType) Clone() (*AssociatedObjectsType) {
@@ -1120,6 +1599,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAssociatedObjectsType() *AssociatedObjectsType {
+  if out, ok := AssociatedObjectsTypePointer(AssociatedObjectsType{}); !ok {
+                log.Fatalf("Could not create pointer to AssociatedObjectsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AssociatedObjectsType_AssociatedObject) Clone() (*AssociatedObjectsType_AssociatedObject) {
 return reprint.This(t).(*AssociatedObjectsType_AssociatedObject)
@@ -1137,6 +1626,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AssociatedObjectsType_AssociatedObject\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAssociatedObjectsType_AssociatedObject() *AssociatedObjectsType_AssociatedObject {
+  if out, ok := AssociatedObjectsType_AssociatedObjectPointer(AssociatedObjectsType_AssociatedObject{}); !ok {
+                log.Fatalf("Could not create pointer to AssociatedObjectsType_AssociatedObject\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AttendanceCodeType) Clone() (*AttendanceCodeType) {
@@ -1156,6 +1655,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAttendanceCodeType() *AttendanceCodeType {
+  if out, ok := AttendanceCodeTypePointer(AttendanceCodeType{}); !ok {
+                log.Fatalf("Could not create pointer to AttendanceCodeType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AttendanceInfoType) Clone() (*AttendanceInfoType) {
 return reprint.This(t).(*AttendanceInfoType)
@@ -1173,6 +1682,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AttendanceInfoType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAttendanceInfoType() *AttendanceInfoType {
+  if out, ok := AttendanceInfoTypePointer(AttendanceInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to AttendanceInfoType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AttendanceTimeType) Clone() (*AttendanceTimeType) {
@@ -1192,6 +1711,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAttendanceTimeType() *AttendanceTimeType {
+  if out, ok := AttendanceTimeTypePointer(AttendanceTimeType{}); !ok {
+                log.Fatalf("Could not create pointer to AttendanceTimeType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AttendanceTimesType) Clone() (*AttendanceTimesType) {
 return reprint.This(t).(*AttendanceTimesType)
@@ -1209,6 +1738,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AttendanceTimesType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAttendanceTimesType() *AttendanceTimesType {
+  if out, ok := AttendanceTimesTypePointer(AttendanceTimesType{}); !ok {
+                log.Fatalf("Could not create pointer to AttendanceTimesType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AuditInfoType) Clone() (*AuditInfoType) {
@@ -1228,6 +1767,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAuditInfoType() *AuditInfoType {
+  if out, ok := AuditInfoTypePointer(AuditInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to AuditInfoType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AuthorsType) Clone() (*AuthorsType) {
 return reprint.This(t).(*AuthorsType)
@@ -1245,6 +1794,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to AuthorsType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewAuthorsType() *AuthorsType {
+  if out, ok := AuthorsTypePointer(AuthorsType{}); !ok {
+                log.Fatalf("Could not create pointer to AuthorsType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *AwardContainerType) Clone() (*AwardContainerType) {
@@ -1264,6 +1823,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewAwardContainerType() *AwardContainerType {
+  if out, ok := AwardContainerTypePointer(AwardContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to AwardContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *BaseNameType) Clone() (*BaseNameType) {
 return reprint.This(t).(*BaseNameType)
@@ -1281,6 +1850,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to BaseNameType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewBaseNameType() *BaseNameType {
+  if out, ok := BaseNameTypePointer(BaseNameType{}); !ok {
+                log.Fatalf("Could not create pointer to BaseNameType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *BinaryDataType) Clone() (*BinaryDataType) {
@@ -1300,6 +1879,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewBinaryDataType() *BinaryDataType {
+  if out, ok := BinaryDataTypePointer(BinaryDataType{}); !ok {
+                log.Fatalf("Could not create pointer to BinaryDataType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CalculationRuleType) Clone() (*CalculationRuleType) {
 return reprint.This(t).(*CalculationRuleType)
@@ -1317,6 +1906,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CalculationRuleType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCalculationRuleType() *CalculationRuleType {
+  if out, ok := CalculationRuleTypePointer(CalculationRuleType{}); !ok {
+                log.Fatalf("Could not create pointer to CalculationRuleType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CalendarDate) Clone() (*CalendarDate) {
@@ -1336,6 +1935,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCalendarDate() *CalendarDate {
+  if out, ok := CalendarDatePointer(CalendarDate{}); !ok {
+                log.Fatalf("Could not create pointer to CalendarDate\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CalendarDateInfoType) Clone() (*CalendarDateInfoType) {
 return reprint.This(t).(*CalendarDateInfoType)
@@ -1351,6 +1960,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to CalendarDateInfoType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCalendarDateInfoType() *CalendarDateInfoType {
+  if out, ok := CalendarDateInfoTypePointer(CalendarDateInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to CalendarDateInfoType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CalendarDates) Clone() (*CalendarDates) {
+return reprint.This(t).(*CalendarDates)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CalendarDatesPointer(value interface{}) (*CalendarDates, bool) {
+switch t := value.(type) {
+        case *CalendarDates:
+                return value.(*CalendarDates), true
+        case CalendarDates:
+                v, _ := value.(CalendarDates)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CalendarDates\n", t, value)
         }
         return nil, false
   }
@@ -1372,6 +2009,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCalendarSummary() *CalendarSummary {
+  if out, ok := CalendarSummaryPointer(CalendarSummary{}); !ok {
+                log.Fatalf("Could not create pointer to CalendarSummary\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CalendarSummaryListType) Clone() (*CalendarSummaryListType) {
 return reprint.This(t).(*CalendarSummaryListType)
@@ -1387,6 +2034,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to CalendarSummaryListType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCalendarSummaryListType() *CalendarSummaryListType {
+  if out, ok := CalendarSummaryListTypePointer(CalendarSummaryListType{}); !ok {
+                log.Fatalf("Could not create pointer to CalendarSummaryListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CalendarSummarys) Clone() (*CalendarSummarys) {
+return reprint.This(t).(*CalendarSummarys)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CalendarSummarysPointer(value interface{}) (*CalendarSummarys, bool) {
+switch t := value.(type) {
+        case *CalendarSummarys:
+                return value.(*CalendarSummarys), true
+        case CalendarSummarys:
+                v, _ := value.(CalendarSummarys)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CalendarSummarys\n", t, value)
         }
         return nil, false
   }
@@ -1408,6 +2083,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCampusContainerType() *CampusContainerType {
+  if out, ok := CampusContainerTypePointer(CampusContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to CampusContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CatchmentStatusContainerType) Clone() (*CatchmentStatusContainerType) {
 return reprint.This(t).(*CatchmentStatusContainerType)
@@ -1426,6 +2111,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCatchmentStatusContainerType() *CatchmentStatusContainerType {
+  if out, ok := CatchmentStatusContainerTypePointer(CatchmentStatusContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to CatchmentStatusContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CensusCollection) Clone() (*CensusCollection) {
 return reprint.This(t).(*CensusCollection)
@@ -1441,6 +2136,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to CensusCollection\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCensusCollection() *CensusCollection {
+  if out, ok := CensusCollectionPointer(CensusCollection{}); !ok {
+                log.Fatalf("Could not create pointer to CensusCollection\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CensusCollections) Clone() (*CensusCollections) {
+return reprint.This(t).(*CensusCollections)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CensusCollectionsPointer(value interface{}) (*CensusCollections, bool) {
+switch t := value.(type) {
+        case *CensusCollections:
+                return value.(*CensusCollections), true
+        case CensusCollections:
+                v, _ := value.(CensusCollections)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CensusCollections\n", t, value)
         }
         return nil, false
   }
@@ -1462,6 +2185,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCensusReportingListType() *CensusReportingListType {
+  if out, ok := CensusReportingListTypePointer(CensusReportingListType{}); !ok {
+                log.Fatalf("Could not create pointer to CensusReportingListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CensusReportingType) Clone() (*CensusReportingType) {
 return reprint.This(t).(*CensusReportingType)
@@ -1479,6 +2212,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CensusReportingType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCensusReportingType() *CensusReportingType {
+  if out, ok := CensusReportingTypePointer(CensusReportingType{}); !ok {
+                log.Fatalf("Could not create pointer to CensusReportingType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CensusStaffListType) Clone() (*CensusStaffListType) {
@@ -1498,6 +2241,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCensusStaffListType() *CensusStaffListType {
+  if out, ok := CensusStaffListTypePointer(CensusStaffListType{}); !ok {
+                log.Fatalf("Could not create pointer to CensusStaffListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CensusStaffType) Clone() (*CensusStaffType) {
 return reprint.This(t).(*CensusStaffType)
@@ -1515,6 +2268,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CensusStaffType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCensusStaffType() *CensusStaffType {
+  if out, ok := CensusStaffTypePointer(CensusStaffType{}); !ok {
+                log.Fatalf("Could not create pointer to CensusStaffType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CensusStudentListType) Clone() (*CensusStudentListType) {
@@ -1534,6 +2297,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCensusStudentListType() *CensusStudentListType {
+  if out, ok := CensusStudentListTypePointer(CensusStudentListType{}); !ok {
+                log.Fatalf("Could not create pointer to CensusStudentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CensusStudentType) Clone() (*CensusStudentType) {
 return reprint.This(t).(*CensusStudentType)
@@ -1551,6 +2324,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CensusStudentType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCensusStudentType() *CensusStudentType {
+  if out, ok := CensusStudentTypePointer(CensusStudentType{}); !ok {
+                log.Fatalf("Could not create pointer to CensusStudentType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CharacteristicsType) Clone() (*CharacteristicsType) {
@@ -1570,6 +2353,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCharacteristicsType() *CharacteristicsType {
+  if out, ok := CharacteristicsTypePointer(CharacteristicsType{}); !ok {
+                log.Fatalf("Could not create pointer to CharacteristicsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ChargedLocationInfo) Clone() (*ChargedLocationInfo) {
 return reprint.This(t).(*ChargedLocationInfo)
@@ -1585,6 +2378,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to ChargedLocationInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewChargedLocationInfo() *ChargedLocationInfo {
+  if out, ok := ChargedLocationInfoPointer(ChargedLocationInfo{}); !ok {
+                log.Fatalf("Could not create pointer to ChargedLocationInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ChargedLocationInfos) Clone() (*ChargedLocationInfos) {
+return reprint.This(t).(*ChargedLocationInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ChargedLocationInfosPointer(value interface{}) (*ChargedLocationInfos, bool) {
+switch t := value.(type) {
+        case *ChargedLocationInfos:
+                return value.(*ChargedLocationInfos), true
+        case ChargedLocationInfos:
+                v, _ := value.(ChargedLocationInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ChargedLocationInfos\n", t, value)
         }
         return nil, false
   }
@@ -1606,6 +2427,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCheckoutInfoType() *CheckoutInfoType {
+  if out, ok := CheckoutInfoTypePointer(CheckoutInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to CheckoutInfoType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CodeFrameTestItemListType) Clone() (*CodeFrameTestItemListType) {
 return reprint.This(t).(*CodeFrameTestItemListType)
@@ -1623,6 +2454,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CodeFrameTestItemListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCodeFrameTestItemListType() *CodeFrameTestItemListType {
+  if out, ok := CodeFrameTestItemListTypePointer(CodeFrameTestItemListType{}); !ok {
+                log.Fatalf("Could not create pointer to CodeFrameTestItemListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CodeFrameTestItemType) Clone() (*CodeFrameTestItemType) {
@@ -1642,6 +2483,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCodeFrameTestItemType() *CodeFrameTestItemType {
+  if out, ok := CodeFrameTestItemTypePointer(CodeFrameTestItemType{}); !ok {
+                log.Fatalf("Could not create pointer to CodeFrameTestItemType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CollectionAcquittal) Clone() (*CollectionAcquittal) {
 return reprint.This(t).(*CollectionAcquittal)
@@ -1657,6 +2508,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to CollectionAcquittal\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCollectionAcquittal() *CollectionAcquittal {
+  if out, ok := CollectionAcquittalPointer(CollectionAcquittal{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionAcquittal\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CollectionAcquittals) Clone() (*CollectionAcquittals) {
+return reprint.This(t).(*CollectionAcquittals)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CollectionAcquittalsPointer(value interface{}) (*CollectionAcquittals, bool) {
+switch t := value.(type) {
+        case *CollectionAcquittals:
+                return value.(*CollectionAcquittals), true
+        case CollectionAcquittals:
+                v, _ := value.(CollectionAcquittals)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CollectionAcquittals\n", t, value)
         }
         return nil, false
   }
@@ -1678,6 +2557,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCollectionDeclaration() *CollectionDeclaration {
+  if out, ok := CollectionDeclarationPointer(CollectionDeclaration{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionDeclaration\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CollectionDeclarations) Clone() (*CollectionDeclarations) {
+return reprint.This(t).(*CollectionDeclarations)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CollectionDeclarationsPointer(value interface{}) (*CollectionDeclarations, bool) {
+switch t := value.(type) {
+        case *CollectionDeclarations:
+                return value.(*CollectionDeclarations), true
+        case CollectionDeclarations:
+                v, _ := value.(CollectionDeclarations)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CollectionDeclarations\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CollectionRound) Clone() (*CollectionRound) {
 return reprint.This(t).(*CollectionRound)
@@ -1693,6 +2600,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to CollectionRound\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCollectionRound() *CollectionRound {
+  if out, ok := CollectionRoundPointer(CollectionRound{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionRound\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CollectionRounds) Clone() (*CollectionRounds) {
+return reprint.This(t).(*CollectionRounds)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CollectionRoundsPointer(value interface{}) (*CollectionRounds, bool) {
+switch t := value.(type) {
+        case *CollectionRounds:
+                return value.(*CollectionRounds), true
+        case CollectionRounds:
+                v, _ := value.(CollectionRounds)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CollectionRounds\n", t, value)
         }
         return nil, false
   }
@@ -1714,6 +2649,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCollectionStatus() *CollectionStatus {
+  if out, ok := CollectionStatusPointer(CollectionStatus{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionStatus\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *CollectionStatuss) Clone() (*CollectionStatuss) {
+return reprint.This(t).(*CollectionStatuss)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func CollectionStatussPointer(value interface{}) (*CollectionStatuss, bool) {
+switch t := value.(type) {
+        case *CollectionStatuss:
+                return value.(*CollectionStatuss), true
+        case CollectionStatuss:
+                v, _ := value.(CollectionStatuss)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to CollectionStatuss\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ComponentType) Clone() (*ComponentType) {
 return reprint.This(t).(*ComponentType)
@@ -1731,6 +2694,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ComponentType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewComponentType() *ComponentType {
+  if out, ok := ComponentTypePointer(ComponentType{}); !ok {
+                log.Fatalf("Could not create pointer to ComponentType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ComponentsType) Clone() (*ComponentsType) {
@@ -1750,6 +2723,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewComponentsType() *ComponentsType {
+  if out, ok := ComponentsTypePointer(ComponentsType{}); !ok {
+                log.Fatalf("Could not create pointer to ComponentsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ConsentToSharingOfDataContainerType) Clone() (*ConsentToSharingOfDataContainerType) {
 return reprint.This(t).(*ConsentToSharingOfDataContainerType)
@@ -1767,6 +2750,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ConsentToSharingOfDataContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewConsentToSharingOfDataContainerType() *ConsentToSharingOfDataContainerType {
+  if out, ok := ConsentToSharingOfDataContainerTypePointer(ConsentToSharingOfDataContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to ConsentToSharingOfDataContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ContactFlagsType) Clone() (*ContactFlagsType) {
@@ -1786,6 +2779,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewContactFlagsType() *ContactFlagsType {
+  if out, ok := ContactFlagsTypePointer(ContactFlagsType{}); !ok {
+                log.Fatalf("Could not create pointer to ContactFlagsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ContactInfoType) Clone() (*ContactInfoType) {
 return reprint.This(t).(*ContactInfoType)
@@ -1803,6 +2806,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ContactInfoType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewContactInfoType() *ContactInfoType {
+  if out, ok := ContactInfoTypePointer(ContactInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to ContactInfoType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ContactType) Clone() (*ContactType) {
@@ -1822,6 +2835,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewContactType() *ContactType {
+  if out, ok := ContactTypePointer(ContactType{}); !ok {
+                log.Fatalf("Could not create pointer to ContactType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ContactsType) Clone() (*ContactsType) {
 return reprint.This(t).(*ContactsType)
@@ -1839,6 +2862,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ContactsType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewContactsType() *ContactsType {
+  if out, ok := ContactsTypePointer(ContactsType{}); !ok {
+                log.Fatalf("Could not create pointer to ContactsType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ContentDescriptionListType) Clone() (*ContentDescriptionListType) {
@@ -1858,6 +2891,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewContentDescriptionListType() *ContentDescriptionListType {
+  if out, ok := ContentDescriptionListTypePointer(ContentDescriptionListType{}); !ok {
+                log.Fatalf("Could not create pointer to ContentDescriptionListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CopyRightContainerType) Clone() (*CopyRightContainerType) {
 return reprint.This(t).(*CopyRightContainerType)
@@ -1875,6 +2918,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CopyRightContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCopyRightContainerType() *CopyRightContainerType {
+  if out, ok := CopyRightContainerTypePointer(CopyRightContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to CopyRightContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CountryList2Type) Clone() (*CountryList2Type) {
@@ -1894,6 +2947,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCountryList2Type() *CountryList2Type {
+  if out, ok := CountryList2TypePointer(CountryList2Type{}); !ok {
+                log.Fatalf("Could not create pointer to CountryList2Type\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CountryListType) Clone() (*CountryListType) {
 return reprint.This(t).(*CountryListType)
@@ -1911,6 +2974,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CountryListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCountryListType() *CountryListType {
+  if out, ok := CountryListTypePointer(CountryListType{}); !ok {
+                log.Fatalf("Could not create pointer to CountryListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CreatedType) Clone() (*CreatedType) {
@@ -1930,6 +3003,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCreatedType() *CreatedType {
+  if out, ok := CreatedTypePointer(CreatedType{}); !ok {
+                log.Fatalf("Could not create pointer to CreatedType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CreationUserType) Clone() (*CreationUserType) {
 return reprint.This(t).(*CreationUserType)
@@ -1947,6 +3030,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to CreationUserType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewCreationUserType() *CreationUserType {
+  if out, ok := CreationUserTypePointer(CreationUserType{}); !ok {
+                log.Fatalf("Could not create pointer to CreationUserType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *CreatorListType) Clone() (*CreatorListType) {
@@ -1966,6 +3059,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewCreatorListType() *CreatorListType {
+  if out, ok := CreatorListTypePointer(CreatorListType{}); !ok {
+                log.Fatalf("Could not create pointer to CreatorListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DataDomainObligationListType) Clone() (*DataDomainObligationListType) {
 return reprint.This(t).(*DataDomainObligationListType)
@@ -1983,6 +3086,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DataDomainObligationListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDataDomainObligationListType() *DataDomainObligationListType {
+  if out, ok := DataDomainObligationListTypePointer(DataDomainObligationListType{}); !ok {
+                log.Fatalf("Could not create pointer to DataDomainObligationListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DataDomainObligationType) Clone() (*DataDomainObligationType) {
@@ -2002,6 +3115,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDataDomainObligationType() *DataDomainObligationType {
+  if out, ok := DataDomainObligationTypePointer(DataDomainObligationType{}); !ok {
+                log.Fatalf("Could not create pointer to DataDomainObligationType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DebitOrCreditAmountType) Clone() (*DebitOrCreditAmountType) {
 return reprint.This(t).(*DebitOrCreditAmountType)
@@ -2019,6 +3142,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DebitOrCreditAmountType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDebitOrCreditAmountType() *DebitOrCreditAmountType {
+  if out, ok := DebitOrCreditAmountTypePointer(DebitOrCreditAmountType{}); !ok {
+                log.Fatalf("Could not create pointer to DebitOrCreditAmountType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *Debtor) Clone() (*Debtor) {
@@ -2038,6 +3171,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDebtor() *Debtor {
+  if out, ok := DebtorPointer(Debtor{}); !ok {
+                log.Fatalf("Could not create pointer to Debtor\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *Debtor_BilledEntity) Clone() (*Debtor_BilledEntity) {
 return reprint.This(t).(*Debtor_BilledEntity)
@@ -2053,6 +3196,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to Debtor_BilledEntity\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDebtor_BilledEntity() *Debtor_BilledEntity {
+  if out, ok := Debtor_BilledEntityPointer(Debtor_BilledEntity{}); !ok {
+                log.Fatalf("Could not create pointer to Debtor_BilledEntity\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *Debtors) Clone() (*Debtors) {
+return reprint.This(t).(*Debtors)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func DebtorsPointer(value interface{}) (*Debtors, bool) {
+switch t := value.(type) {
+        case *Debtors:
+                return value.(*Debtors), true
+        case Debtors:
+                v, _ := value.(Debtors)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to Debtors\n", t, value)
         }
         return nil, false
   }
@@ -2074,6 +3245,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDemographicsType() *DemographicsType {
+  if out, ok := DemographicsTypePointer(DemographicsType{}); !ok {
+                log.Fatalf("Could not create pointer to DemographicsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DepartureSchoolType) Clone() (*DepartureSchoolType) {
 return reprint.This(t).(*DepartureSchoolType)
@@ -2091,6 +3272,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DepartureSchoolType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDepartureSchoolType() *DepartureSchoolType {
+  if out, ok := DepartureSchoolTypePointer(DepartureSchoolType{}); !ok {
+                log.Fatalf("Could not create pointer to DepartureSchoolType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DetentionContainerType) Clone() (*DetentionContainerType) {
@@ -2110,6 +3301,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDetentionContainerType() *DetentionContainerType {
+  if out, ok := DetentionContainerTypePointer(DetentionContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to DetentionContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DisabilityCategoryListType) Clone() (*DisabilityCategoryListType) {
 return reprint.This(t).(*DisabilityCategoryListType)
@@ -2127,6 +3328,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DisabilityCategoryListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDisabilityCategoryListType() *DisabilityCategoryListType {
+  if out, ok := DisabilityCategoryListTypePointer(DisabilityCategoryListType{}); !ok {
+                log.Fatalf("Could not create pointer to DisabilityCategoryListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DoNotShareWithListType) Clone() (*DoNotShareWithListType) {
@@ -2146,6 +3357,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDoNotShareWithListType() *DoNotShareWithListType {
+  if out, ok := DoNotShareWithListTypePointer(DoNotShareWithListType{}); !ok {
+                log.Fatalf("Could not create pointer to DoNotShareWithListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DoNotShareWithType) Clone() (*DoNotShareWithType) {
 return reprint.This(t).(*DoNotShareWithType)
@@ -2163,6 +3384,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DoNotShareWithType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDoNotShareWithType() *DoNotShareWithType {
+  if out, ok := DoNotShareWithTypePointer(DoNotShareWithType{}); !ok {
+                log.Fatalf("Could not create pointer to DoNotShareWithType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DomainBandsContainerType) Clone() (*DomainBandsContainerType) {
@@ -2182,6 +3413,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDomainBandsContainerType() *DomainBandsContainerType {
+  if out, ok := DomainBandsContainerTypePointer(DomainBandsContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to DomainBandsContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DomainProficiencyContainerType) Clone() (*DomainProficiencyContainerType) {
 return reprint.This(t).(*DomainProficiencyContainerType)
@@ -2199,6 +3440,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DomainProficiencyContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDomainProficiencyContainerType() *DomainProficiencyContainerType {
+  if out, ok := DomainProficiencyContainerTypePointer(DomainProficiencyContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to DomainProficiencyContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DomainScoreSDTNType) Clone() (*DomainScoreSDTNType) {
@@ -2218,6 +3469,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDomainScoreSDTNType() *DomainScoreSDTNType {
+  if out, ok := DomainScoreSDTNTypePointer(DomainScoreSDTNType{}); !ok {
+                log.Fatalf("Could not create pointer to DomainScoreSDTNType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DomainScoreType) Clone() (*DomainScoreType) {
 return reprint.This(t).(*DomainScoreType)
@@ -2235,6 +3496,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DomainScoreType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDomainScoreType() *DomainScoreType {
+  if out, ok := DomainScoreTypePointer(DomainScoreType{}); !ok {
+                log.Fatalf("Could not create pointer to DomainScoreType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DurationType) Clone() (*DurationType) {
@@ -2254,6 +3525,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewDurationType() *DurationType {
+  if out, ok := DurationTypePointer(DurationType{}); !ok {
+                log.Fatalf("Could not create pointer to DurationType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *DwellingArrangementType) Clone() (*DwellingArrangementType) {
 return reprint.This(t).(*DwellingArrangementType)
@@ -2271,6 +3552,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to DwellingArrangementType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewDwellingArrangementType() *DwellingArrangementType {
+  if out, ok := DwellingArrangementTypePointer(DwellingArrangementType{}); !ok {
+                log.Fatalf("Could not create pointer to DwellingArrangementType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EducationalAssessmentListType) Clone() (*EducationalAssessmentListType) {
@@ -2290,6 +3581,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewEducationalAssessmentListType() *EducationalAssessmentListType {
+  if out, ok := EducationalAssessmentListTypePointer(EducationalAssessmentListType{}); !ok {
+                log.Fatalf("Could not create pointer to EducationalAssessmentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EducationalAssessmentType) Clone() (*EducationalAssessmentType) {
 return reprint.This(t).(*EducationalAssessmentType)
@@ -2307,6 +3608,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to EducationalAssessmentType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewEducationalAssessmentType() *EducationalAssessmentType {
+  if out, ok := EducationalAssessmentTypePointer(EducationalAssessmentType{}); !ok {
+                log.Fatalf("Could not create pointer to EducationalAssessmentType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ElectronicIdListType) Clone() (*ElectronicIdListType) {
@@ -2326,6 +3637,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewElectronicIdListType() *ElectronicIdListType {
+  if out, ok := ElectronicIdListTypePointer(ElectronicIdListType{}); !ok {
+                log.Fatalf("Could not create pointer to ElectronicIdListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ElectronicIdType) Clone() (*ElectronicIdType) {
 return reprint.This(t).(*ElectronicIdType)
@@ -2343,6 +3664,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ElectronicIdType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewElectronicIdType() *ElectronicIdType {
+  if out, ok := ElectronicIdTypePointer(ElectronicIdType{}); !ok {
+                log.Fatalf("Could not create pointer to ElectronicIdType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EmailListType) Clone() (*EmailListType) {
@@ -2362,6 +3693,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewEmailListType() *EmailListType {
+  if out, ok := EmailListTypePointer(EmailListType{}); !ok {
+                log.Fatalf("Could not create pointer to EmailListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EmailType) Clone() (*EmailType) {
 return reprint.This(t).(*EmailType)
@@ -2379,6 +3720,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to EmailType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewEmailType() *EmailType {
+  if out, ok := EmailTypePointer(EmailType{}); !ok {
+                log.Fatalf("Could not create pointer to EmailType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EnglishProficiencyType) Clone() (*EnglishProficiencyType) {
@@ -2398,6 +3749,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewEnglishProficiencyType() *EnglishProficiencyType {
+  if out, ok := EnglishProficiencyTypePointer(EnglishProficiencyType{}); !ok {
+                log.Fatalf("Could not create pointer to EnglishProficiencyType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EntityContactInfoType) Clone() (*EntityContactInfoType) {
 return reprint.This(t).(*EntityContactInfoType)
@@ -2415,6 +3776,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to EntityContactInfoType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewEntityContactInfoType() *EntityContactInfoType {
+  if out, ok := EntityContactInfoTypePointer(EntityContactInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to EntityContactInfoType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EquipmentInfo) Clone() (*EquipmentInfo) {
@@ -2434,6 +3805,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewEquipmentInfo() *EquipmentInfo {
+  if out, ok := EquipmentInfoPointer(EquipmentInfo{}); !ok {
+                log.Fatalf("Could not create pointer to EquipmentInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EquipmentInfo_SIF_RefId) Clone() (*EquipmentInfo_SIF_RefId) {
 return reprint.This(t).(*EquipmentInfo_SIF_RefId)
@@ -2449,6 +3830,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to EquipmentInfo_SIF_RefId\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewEquipmentInfo_SIF_RefId() *EquipmentInfo_SIF_RefId {
+  if out, ok := EquipmentInfo_SIF_RefIdPointer(EquipmentInfo_SIF_RefId{}); !ok {
+                log.Fatalf("Could not create pointer to EquipmentInfo_SIF_RefId\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *EquipmentInfos) Clone() (*EquipmentInfos) {
+return reprint.This(t).(*EquipmentInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func EquipmentInfosPointer(value interface{}) (*EquipmentInfos, bool) {
+switch t := value.(type) {
+        case *EquipmentInfos:
+                return value.(*EquipmentInfos), true
+        case EquipmentInfos:
+                v, _ := value.(EquipmentInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to EquipmentInfos\n", t, value)
         }
         return nil, false
   }
@@ -2470,6 +3879,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewEssentialMaterialsType() *EssentialMaterialsType {
+  if out, ok := EssentialMaterialsTypePointer(EssentialMaterialsType{}); !ok {
+                log.Fatalf("Could not create pointer to EssentialMaterialsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EvaluationType) Clone() (*EvaluationType) {
 return reprint.This(t).(*EvaluationType)
@@ -2487,6 +3906,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to EvaluationType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewEvaluationType() *EvaluationType {
+  if out, ok := EvaluationTypePointer(EvaluationType{}); !ok {
+                log.Fatalf("Could not create pointer to EvaluationType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *EvaluationsType) Clone() (*EvaluationsType) {
@@ -2506,6 +3935,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewEvaluationsType() *EvaluationsType {
+  if out, ok := EvaluationsTypePointer(EvaluationsType{}); !ok {
+                log.Fatalf("Could not create pointer to EvaluationsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ExclusionRuleType) Clone() (*ExclusionRuleType) {
 return reprint.This(t).(*ExclusionRuleType)
@@ -2523,6 +3962,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ExclusionRuleType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewExclusionRuleType() *ExclusionRuleType {
+  if out, ok := ExclusionRuleTypePointer(ExclusionRuleType{}); !ok {
+                log.Fatalf("Could not create pointer to ExclusionRuleType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ExclusionRulesType) Clone() (*ExclusionRulesType) {
@@ -2542,6 +3991,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewExclusionRulesType() *ExclusionRulesType {
+  if out, ok := ExclusionRulesTypePointer(ExclusionRulesType{}); !ok {
+                log.Fatalf("Could not create pointer to ExclusionRulesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ExpenseAccountType) Clone() (*ExpenseAccountType) {
 return reprint.This(t).(*ExpenseAccountType)
@@ -2559,6 +4018,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ExpenseAccountType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewExpenseAccountType() *ExpenseAccountType {
+  if out, ok := ExpenseAccountTypePointer(ExpenseAccountType{}); !ok {
+                log.Fatalf("Could not create pointer to ExpenseAccountType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ExpenseAccountsType) Clone() (*ExpenseAccountsType) {
@@ -2578,6 +4047,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewExpenseAccountsType() *ExpenseAccountsType {
+  if out, ok := ExpenseAccountsTypePointer(ExpenseAccountsType{}); !ok {
+                log.Fatalf("Could not create pointer to ExpenseAccountsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FQContextualQuestionListType) Clone() (*FQContextualQuestionListType) {
 return reprint.This(t).(*FQContextualQuestionListType)
@@ -2595,6 +4074,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to FQContextualQuestionListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewFQContextualQuestionListType() *FQContextualQuestionListType {
+  if out, ok := FQContextualQuestionListTypePointer(FQContextualQuestionListType{}); !ok {
+                log.Fatalf("Could not create pointer to FQContextualQuestionListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FQContextualQuestionType) Clone() (*FQContextualQuestionType) {
@@ -2614,6 +4103,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewFQContextualQuestionType() *FQContextualQuestionType {
+  if out, ok := FQContextualQuestionTypePointer(FQContextualQuestionType{}); !ok {
+                log.Fatalf("Could not create pointer to FQContextualQuestionType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FQItemListType) Clone() (*FQItemListType) {
 return reprint.This(t).(*FQItemListType)
@@ -2631,6 +4130,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to FQItemListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewFQItemListType() *FQItemListType {
+  if out, ok := FQItemListTypePointer(FQItemListType{}); !ok {
+                log.Fatalf("Could not create pointer to FQItemListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FQItemType) Clone() (*FQItemType) {
@@ -2650,6 +4159,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewFQItemType() *FQItemType {
+  if out, ok := FQItemTypePointer(FQItemType{}); !ok {
+                log.Fatalf("Could not create pointer to FQItemType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FQReportingListType) Clone() (*FQReportingListType) {
 return reprint.This(t).(*FQReportingListType)
@@ -2667,6 +4186,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to FQReportingListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewFQReportingListType() *FQReportingListType {
+  if out, ok := FQReportingListTypePointer(FQReportingListType{}); !ok {
+                log.Fatalf("Could not create pointer to FQReportingListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FQReportingType) Clone() (*FQReportingType) {
@@ -2686,6 +4215,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewFQReportingType() *FQReportingType {
+  if out, ok := FQReportingTypePointer(FQReportingType{}); !ok {
+                log.Fatalf("Could not create pointer to FQReportingType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FinancialAccount) Clone() (*FinancialAccount) {
 return reprint.This(t).(*FinancialAccount)
@@ -2704,6 +4243,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewFinancialAccount() *FinancialAccount {
+  if out, ok := FinancialAccountPointer(FinancialAccount{}); !ok {
+                log.Fatalf("Could not create pointer to FinancialAccount\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FinancialAccountRefIdListType) Clone() (*FinancialAccountRefIdListType) {
 return reprint.This(t).(*FinancialAccountRefIdListType)
@@ -2719,6 +4268,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to FinancialAccountRefIdListType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewFinancialAccountRefIdListType() *FinancialAccountRefIdListType {
+  if out, ok := FinancialAccountRefIdListTypePointer(FinancialAccountRefIdListType{}); !ok {
+                log.Fatalf("Could not create pointer to FinancialAccountRefIdListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *FinancialAccounts) Clone() (*FinancialAccounts) {
+return reprint.This(t).(*FinancialAccounts)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func FinancialAccountsPointer(value interface{}) (*FinancialAccounts, bool) {
+switch t := value.(type) {
+        case *FinancialAccounts:
+                return value.(*FinancialAccounts), true
+        case FinancialAccounts:
+                v, _ := value.(FinancialAccounts)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to FinancialAccounts\n", t, value)
         }
         return nil, false
   }
@@ -2740,6 +4317,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewFinancialQuestionnaireCollection() *FinancialQuestionnaireCollection {
+  if out, ok := FinancialQuestionnaireCollectionPointer(FinancialQuestionnaireCollection{}); !ok {
+                log.Fatalf("Could not create pointer to FinancialQuestionnaireCollection\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *FinancialQuestionnaireCollections) Clone() (*FinancialQuestionnaireCollections) {
+return reprint.This(t).(*FinancialQuestionnaireCollections)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func FinancialQuestionnaireCollectionsPointer(value interface{}) (*FinancialQuestionnaireCollections, bool) {
+switch t := value.(type) {
+        case *FinancialQuestionnaireCollections:
+                return value.(*FinancialQuestionnaireCollections), true
+        case FinancialQuestionnaireCollections:
+                v, _ := value.(FinancialQuestionnaireCollections)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to FinancialQuestionnaireCollections\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FineInfoListType) Clone() (*FineInfoListType) {
 return reprint.This(t).(*FineInfoListType)
@@ -2757,6 +4362,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to FineInfoListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewFineInfoListType() *FineInfoListType {
+  if out, ok := FineInfoListTypePointer(FineInfoListType{}); !ok {
+                log.Fatalf("Could not create pointer to FineInfoListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FineInfoType) Clone() (*FineInfoType) {
@@ -2776,6 +4391,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewFineInfoType() *FineInfoType {
+  if out, ok := FineInfoTypePointer(FineInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to FineInfoType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FollowUpActionListType) Clone() (*FollowUpActionListType) {
 return reprint.This(t).(*FollowUpActionListType)
@@ -2793,6 +4418,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to FollowUpActionListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewFollowUpActionListType() *FollowUpActionListType {
+  if out, ok := FollowUpActionListTypePointer(FollowUpActionListType{}); !ok {
+                log.Fatalf("Could not create pointer to FollowUpActionListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *FollowUpActionType) Clone() (*FollowUpActionType) {
@@ -2812,6 +4447,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewFollowUpActionType() *FollowUpActionType {
+  if out, ok := FollowUpActionTypePointer(FollowUpActionType{}); !ok {
+                log.Fatalf("Could not create pointer to FollowUpActionType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *GenericRubricType) Clone() (*GenericRubricType) {
 return reprint.This(t).(*GenericRubricType)
@@ -2829,6 +4474,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to GenericRubricType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewGenericRubricType() *GenericRubricType {
+  if out, ok := GenericRubricTypePointer(GenericRubricType{}); !ok {
+                log.Fatalf("Could not create pointer to GenericRubricType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *GradeType) Clone() (*GradeType) {
@@ -2848,6 +4503,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewGradeType() *GradeType {
+  if out, ok := GradeTypePointer(GradeType{}); !ok {
+                log.Fatalf("Could not create pointer to GradeType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *GradingAssignment) Clone() (*GradingAssignment) {
 return reprint.This(t).(*GradingAssignment)
@@ -2866,6 +4531,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewGradingAssignment() *GradingAssignment {
+  if out, ok := GradingAssignmentPointer(GradingAssignment{}); !ok {
+                log.Fatalf("Could not create pointer to GradingAssignment\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *GradingAssignmentScore) Clone() (*GradingAssignmentScore) {
 return reprint.This(t).(*GradingAssignmentScore)
@@ -2881,6 +4556,52 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to GradingAssignmentScore\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewGradingAssignmentScore() *GradingAssignmentScore {
+  if out, ok := GradingAssignmentScorePointer(GradingAssignmentScore{}); !ok {
+                log.Fatalf("Could not create pointer to GradingAssignmentScore\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *GradingAssignmentScores) Clone() (*GradingAssignmentScores) {
+return reprint.This(t).(*GradingAssignmentScores)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func GradingAssignmentScoresPointer(value interface{}) (*GradingAssignmentScores, bool) {
+switch t := value.(type) {
+        case *GradingAssignmentScores:
+                return value.(*GradingAssignmentScores), true
+        case GradingAssignmentScores:
+                v, _ := value.(GradingAssignmentScores)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to GradingAssignmentScores\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *GradingAssignments) Clone() (*GradingAssignments) {
+return reprint.This(t).(*GradingAssignments)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func GradingAssignmentsPointer(value interface{}) (*GradingAssignments, bool) {
+switch t := value.(type) {
+        case *GradingAssignments:
+                return value.(*GradingAssignments), true
+        case GradingAssignments:
+                v, _ := value.(GradingAssignments)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to GradingAssignments\n", t, value)
         }
         return nil, false
   }
@@ -2902,6 +4623,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewGradingScoreListType() *GradingScoreListType {
+  if out, ok := GradingScoreListTypePointer(GradingScoreListType{}); !ok {
+                log.Fatalf("Could not create pointer to GradingScoreListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *GridLocationType) Clone() (*GridLocationType) {
 return reprint.This(t).(*GridLocationType)
@@ -2919,6 +4650,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to GridLocationType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewGridLocationType() *GridLocationType {
+  if out, ok := GridLocationTypePointer(GridLocationType{}); !ok {
+                log.Fatalf("Could not create pointer to GridLocationType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *HoldInfoListType) Clone() (*HoldInfoListType) {
@@ -2938,6 +4679,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewHoldInfoListType() *HoldInfoListType {
+  if out, ok := HoldInfoListTypePointer(HoldInfoListType{}); !ok {
+                log.Fatalf("Could not create pointer to HoldInfoListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *HoldInfoType) Clone() (*HoldInfoType) {
 return reprint.This(t).(*HoldInfoType)
@@ -2955,6 +4706,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to HoldInfoType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewHoldInfoType() *HoldInfoType {
+  if out, ok := HoldInfoTypePointer(HoldInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to HoldInfoType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *HomeroomType) Clone() (*HomeroomType) {
@@ -2974,6 +4735,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewHomeroomType() *HomeroomType {
+  if out, ok := HomeroomTypePointer(HomeroomType{}); !ok {
+                log.Fatalf("Could not create pointer to HomeroomType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *HouseholdContactInfoListType) Clone() (*HouseholdContactInfoListType) {
 return reprint.This(t).(*HouseholdContactInfoListType)
@@ -2991,6 +4762,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to HouseholdContactInfoListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewHouseholdContactInfoListType() *HouseholdContactInfoListType {
+  if out, ok := HouseholdContactInfoListTypePointer(HouseholdContactInfoListType{}); !ok {
+                log.Fatalf("Could not create pointer to HouseholdContactInfoListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *HouseholdContactInfoType) Clone() (*HouseholdContactInfoType) {
@@ -3010,6 +4791,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewHouseholdContactInfoType() *HouseholdContactInfoType {
+  if out, ok := HouseholdContactInfoTypePointer(HouseholdContactInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to HouseholdContactInfoType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *HouseholdListType) Clone() (*HouseholdListType) {
 return reprint.This(t).(*HouseholdListType)
@@ -3027,6 +4818,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to HouseholdListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewHouseholdListType() *HouseholdListType {
+  if out, ok := HouseholdListTypePointer(HouseholdListType{}); !ok {
+                log.Fatalf("Could not create pointer to HouseholdListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *Identity) Clone() (*Identity) {
@@ -3046,6 +4847,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewIdentity() *Identity {
+  if out, ok := IdentityPointer(Identity{}); !ok {
+                log.Fatalf("Could not create pointer to Identity\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *IdentityAssertionType) Clone() (*IdentityAssertionType) {
 return reprint.This(t).(*IdentityAssertionType)
@@ -3063,6 +4874,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to IdentityAssertionType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewIdentityAssertionType() *IdentityAssertionType {
+  if out, ok := IdentityAssertionTypePointer(IdentityAssertionType{}); !ok {
+                log.Fatalf("Could not create pointer to IdentityAssertionType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *IdentityAssertionsType) Clone() (*IdentityAssertionsType) {
@@ -3082,6 +4903,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewIdentityAssertionsType() *IdentityAssertionsType {
+  if out, ok := IdentityAssertionsTypePointer(IdentityAssertionsType{}); !ok {
+                log.Fatalf("Could not create pointer to IdentityAssertionsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *Identity_SIF_RefId) Clone() (*Identity_SIF_RefId) {
 return reprint.This(t).(*Identity_SIF_RefId)
@@ -3097,6 +4928,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to Identity_SIF_RefId\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewIdentity_SIF_RefId() *Identity_SIF_RefId {
+  if out, ok := Identity_SIF_RefIdPointer(Identity_SIF_RefId{}); !ok {
+                log.Fatalf("Could not create pointer to Identity_SIF_RefId\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *Identitys) Clone() (*Identitys) {
+return reprint.This(t).(*Identitys)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func IdentitysPointer(value interface{}) (*Identitys, bool) {
+switch t := value.(type) {
+        case *Identitys:
+                return value.(*Identitys), true
+        case Identitys:
+                v, _ := value.(Identitys)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to Identitys\n", t, value)
         }
         return nil, false
   }
@@ -3118,6 +4977,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewInvoice() *Invoice {
+  if out, ok := InvoicePointer(Invoice{}); !ok {
+                log.Fatalf("Could not create pointer to Invoice\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *Invoice_InvoicedEntity) Clone() (*Invoice_InvoicedEntity) {
 return reprint.This(t).(*Invoice_InvoicedEntity)
@@ -3133,6 +5002,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to Invoice_InvoicedEntity\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewInvoice_InvoicedEntity() *Invoice_InvoicedEntity {
+  if out, ok := Invoice_InvoicedEntityPointer(Invoice_InvoicedEntity{}); !ok {
+                log.Fatalf("Could not create pointer to Invoice_InvoicedEntity\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *Invoices) Clone() (*Invoices) {
+return reprint.This(t).(*Invoices)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func InvoicesPointer(value interface{}) (*Invoices, bool) {
+switch t := value.(type) {
+        case *Invoices:
+                return value.(*Invoices), true
+        case Invoices:
+                v, _ := value.(Invoices)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to Invoices\n", t, value)
         }
         return nil, false
   }
@@ -3154,6 +5051,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewJournal() *Journal {
+  if out, ok := JournalPointer(Journal{}); !ok {
+                log.Fatalf("Could not create pointer to Journal\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *JournalAdjustmentListType) Clone() (*JournalAdjustmentListType) {
 return reprint.This(t).(*JournalAdjustmentListType)
@@ -3171,6 +5078,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to JournalAdjustmentListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewJournalAdjustmentListType() *JournalAdjustmentListType {
+  if out, ok := JournalAdjustmentListTypePointer(JournalAdjustmentListType{}); !ok {
+                log.Fatalf("Could not create pointer to JournalAdjustmentListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *JournalAdjustmentType) Clone() (*JournalAdjustmentType) {
@@ -3190,6 +5107,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewJournalAdjustmentType() *JournalAdjustmentType {
+  if out, ok := JournalAdjustmentTypePointer(JournalAdjustmentType{}); !ok {
+                log.Fatalf("Could not create pointer to JournalAdjustmentType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *Journal_OriginatingTransactionRefId) Clone() (*Journal_OriginatingTransactionRefId) {
 return reprint.This(t).(*Journal_OriginatingTransactionRefId)
@@ -3205,6 +5132,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to Journal_OriginatingTransactionRefId\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewJournal_OriginatingTransactionRefId() *Journal_OriginatingTransactionRefId {
+  if out, ok := Journal_OriginatingTransactionRefIdPointer(Journal_OriginatingTransactionRefId{}); !ok {
+                log.Fatalf("Could not create pointer to Journal_OriginatingTransactionRefId\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *Journals) Clone() (*Journals) {
+return reprint.This(t).(*Journals)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func JournalsPointer(value interface{}) (*Journals, bool) {
+switch t := value.(type) {
+        case *Journals:
+                return value.(*Journals), true
+        case Journals:
+                v, _ := value.(Journals)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to Journals\n", t, value)
         }
         return nil, false
   }
@@ -3226,6 +5181,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLEAContactListType() *LEAContactListType {
+  if out, ok := LEAContactListTypePointer(LEAContactListType{}); !ok {
+                log.Fatalf("Could not create pointer to LEAContactListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LEAContactType) Clone() (*LEAContactType) {
 return reprint.This(t).(*LEAContactType)
@@ -3244,6 +5209,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLEAContactType() *LEAContactType {
+  if out, ok := LEAContactTypePointer(LEAContactType{}); !ok {
+                log.Fatalf("Could not create pointer to LEAContactType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LEAInfo) Clone() (*LEAInfo) {
 return reprint.This(t).(*LEAInfo)
@@ -3259,6 +5234,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to LEAInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLEAInfo() *LEAInfo {
+  if out, ok := LEAInfoPointer(LEAInfo{}); !ok {
+                log.Fatalf("Could not create pointer to LEAInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *LEAInfos) Clone() (*LEAInfos) {
+return reprint.This(t).(*LEAInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func LEAInfosPointer(value interface{}) (*LEAInfos, bool) {
+switch t := value.(type) {
+        case *LEAInfos:
+                return value.(*LEAInfos), true
+        case LEAInfos:
+                v, _ := value.(LEAInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to LEAInfos\n", t, value)
         }
         return nil, false
   }
@@ -3280,6 +5283,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLResourcesType() *LResourcesType {
+  if out, ok := LResourcesTypePointer(LResourcesType{}); !ok {
+                log.Fatalf("Could not create pointer to LResourcesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LanguageBaseType) Clone() (*LanguageBaseType) {
 return reprint.This(t).(*LanguageBaseType)
@@ -3297,6 +5310,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LanguageBaseType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLanguageBaseType() *LanguageBaseType {
+  if out, ok := LanguageBaseTypePointer(LanguageBaseType{}); !ok {
+                log.Fatalf("Could not create pointer to LanguageBaseType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LanguageListType) Clone() (*LanguageListType) {
@@ -3316,6 +5339,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLanguageListType() *LanguageListType {
+  if out, ok := LanguageListTypePointer(LanguageListType{}); !ok {
+                log.Fatalf("Could not create pointer to LanguageListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LanguageOfInstructionType) Clone() (*LanguageOfInstructionType) {
 return reprint.This(t).(*LanguageOfInstructionType)
@@ -3333,6 +5366,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LanguageOfInstructionType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLanguageOfInstructionType() *LanguageOfInstructionType {
+  if out, ok := LanguageOfInstructionTypePointer(LanguageOfInstructionType{}); !ok {
+                log.Fatalf("Could not create pointer to LanguageOfInstructionType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningObjectivesType) Clone() (*LearningObjectivesType) {
@@ -3352,6 +5395,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLearningObjectivesType() *LearningObjectivesType {
+  if out, ok := LearningObjectivesTypePointer(LearningObjectivesType{}); !ok {
+                log.Fatalf("Could not create pointer to LearningObjectivesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningResource) Clone() (*LearningResource) {
 return reprint.This(t).(*LearningResource)
@@ -3370,6 +5423,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLearningResource() *LearningResource {
+  if out, ok := LearningResourcePointer(LearningResource{}); !ok {
+                log.Fatalf("Could not create pointer to LearningResource\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningResourceLocationType) Clone() (*LearningResourceLocationType) {
 return reprint.This(t).(*LearningResourceLocationType)
@@ -3385,6 +5448,52 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to LearningResourceLocationType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLearningResourceLocationType() *LearningResourceLocationType {
+  if out, ok := LearningResourceLocationTypePointer(LearningResourceLocationType{}); !ok {
+                log.Fatalf("Could not create pointer to LearningResourceLocationType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *LearningResourcePackages) Clone() (*LearningResourcePackages) {
+return reprint.This(t).(*LearningResourcePackages)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func LearningResourcePackagesPointer(value interface{}) (*LearningResourcePackages, bool) {
+switch t := value.(type) {
+        case *LearningResourcePackages:
+                return value.(*LearningResourcePackages), true
+        case LearningResourcePackages:
+                v, _ := value.(LearningResourcePackages)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to LearningResourcePackages\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *LearningResources) Clone() (*LearningResources) {
+return reprint.This(t).(*LearningResources)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func LearningResourcesPointer(value interface{}) (*LearningResources, bool) {
+switch t := value.(type) {
+        case *LearningResources:
+                return value.(*LearningResources), true
+        case LearningResources:
+                v, _ := value.(LearningResources)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to LearningResources\n", t, value)
         }
         return nil, false
   }
@@ -3406,6 +5515,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLearningResourcesType() *LearningResourcesType {
+  if out, ok := LearningResourcesTypePointer(LearningResourcesType{}); !ok {
+                log.Fatalf("Could not create pointer to LearningResourcesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningStandardDocument) Clone() (*LearningStandardDocument) {
 return reprint.This(t).(*LearningStandardDocument)
@@ -3421,6 +5540,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to LearningStandardDocument\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLearningStandardDocument() *LearningStandardDocument {
+  if out, ok := LearningStandardDocumentPointer(LearningStandardDocument{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardDocument\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *LearningStandardDocuments) Clone() (*LearningStandardDocuments) {
+return reprint.This(t).(*LearningStandardDocuments)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func LearningStandardDocumentsPointer(value interface{}) (*LearningStandardDocuments, bool) {
+switch t := value.(type) {
+        case *LearningStandardDocuments:
+                return value.(*LearningStandardDocuments), true
+        case LearningStandardDocuments:
+                v, _ := value.(LearningStandardDocuments)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to LearningStandardDocuments\n", t, value)
         }
         return nil, false
   }
@@ -3442,6 +5589,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLearningStandardItem() *LearningStandardItem {
+  if out, ok := LearningStandardItemPointer(LearningStandardItem{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardItem\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *LearningStandardItems) Clone() (*LearningStandardItems) {
+return reprint.This(t).(*LearningStandardItems)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func LearningStandardItemsPointer(value interface{}) (*LearningStandardItems, bool) {
+switch t := value.(type) {
+        case *LearningStandardItems:
+                return value.(*LearningStandardItems), true
+        case LearningStandardItems:
+                v, _ := value.(LearningStandardItems)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to LearningStandardItems\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningStandardListType) Clone() (*LearningStandardListType) {
 return reprint.This(t).(*LearningStandardListType)
@@ -3459,6 +5634,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LearningStandardListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLearningStandardListType() *LearningStandardListType {
+  if out, ok := LearningStandardListTypePointer(LearningStandardListType{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningStandardType) Clone() (*LearningStandardType) {
@@ -3478,6 +5663,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLearningStandardType() *LearningStandardType {
+  if out, ok := LearningStandardTypePointer(LearningStandardType{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningStandardsDocumentType) Clone() (*LearningStandardsDocumentType) {
 return reprint.This(t).(*LearningStandardsDocumentType)
@@ -3495,6 +5690,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LearningStandardsDocumentType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLearningStandardsDocumentType() *LearningStandardsDocumentType {
+  if out, ok := LearningStandardsDocumentTypePointer(LearningStandardsDocumentType{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardsDocumentType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LearningStandardsType) Clone() (*LearningStandardsType) {
@@ -3514,6 +5719,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLearningStandardsType() *LearningStandardsType {
+  if out, ok := LearningStandardsTypePointer(LearningStandardsType{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LibraryItemInfoType) Clone() (*LibraryItemInfoType) {
 return reprint.This(t).(*LibraryItemInfoType)
@@ -3531,6 +5746,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LibraryItemInfoType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLibraryItemInfoType() *LibraryItemInfoType {
+  if out, ok := LibraryItemInfoTypePointer(LibraryItemInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to LibraryItemInfoType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LibraryMessageListType) Clone() (*LibraryMessageListType) {
@@ -3550,6 +5775,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLibraryMessageListType() *LibraryMessageListType {
+  if out, ok := LibraryMessageListTypePointer(LibraryMessageListType{}); !ok {
+                log.Fatalf("Could not create pointer to LibraryMessageListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LibraryMessageType) Clone() (*LibraryMessageType) {
 return reprint.This(t).(*LibraryMessageType)
@@ -3568,6 +5803,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLibraryMessageType() *LibraryMessageType {
+  if out, ok := LibraryMessageTypePointer(LibraryMessageType{}); !ok {
+                log.Fatalf("Could not create pointer to LibraryMessageType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LibraryPatronStatus) Clone() (*LibraryPatronStatus) {
 return reprint.This(t).(*LibraryPatronStatus)
@@ -3583,6 +5828,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to LibraryPatronStatus\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLibraryPatronStatus() *LibraryPatronStatus {
+  if out, ok := LibraryPatronStatusPointer(LibraryPatronStatus{}); !ok {
+                log.Fatalf("Could not create pointer to LibraryPatronStatus\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *LibraryPatronStatuss) Clone() (*LibraryPatronStatuss) {
+return reprint.This(t).(*LibraryPatronStatuss)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func LibraryPatronStatussPointer(value interface{}) (*LibraryPatronStatuss, bool) {
+switch t := value.(type) {
+        case *LibraryPatronStatuss:
+                return value.(*LibraryPatronStatuss), true
+        case LibraryPatronStatuss:
+                v, _ := value.(LibraryPatronStatuss)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to LibraryPatronStatuss\n", t, value)
         }
         return nil, false
   }
@@ -3604,6 +5877,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLibraryTransactionListType() *LibraryTransactionListType {
+  if out, ok := LibraryTransactionListTypePointer(LibraryTransactionListType{}); !ok {
+                log.Fatalf("Could not create pointer to LibraryTransactionListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LibraryTransactionType) Clone() (*LibraryTransactionType) {
 return reprint.This(t).(*LibraryTransactionType)
@@ -3621,6 +5904,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LibraryTransactionType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLibraryTransactionType() *LibraryTransactionType {
+  if out, ok := LibraryTransactionTypePointer(LibraryTransactionType{}); !ok {
+                log.Fatalf("Could not create pointer to LibraryTransactionType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LifeCycleCreatorType) Clone() (*LifeCycleCreatorType) {
@@ -3640,6 +5933,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLifeCycleCreatorType() *LifeCycleCreatorType {
+  if out, ok := LifeCycleCreatorTypePointer(LifeCycleCreatorType{}); !ok {
+                log.Fatalf("Could not create pointer to LifeCycleCreatorType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LifeCycleType) Clone() (*LifeCycleType) {
 return reprint.This(t).(*LifeCycleType)
@@ -3657,6 +5960,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LifeCycleType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLifeCycleType() *LifeCycleType {
+  if out, ok := LifeCycleTypePointer(LifeCycleType{}); !ok {
+                log.Fatalf("Could not create pointer to LifeCycleType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LocalCodeListType) Clone() (*LocalCodeListType) {
@@ -3676,6 +5989,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLocalCodeListType() *LocalCodeListType {
+  if out, ok := LocalCodeListTypePointer(LocalCodeListType{}); !ok {
+                log.Fatalf("Could not create pointer to LocalCodeListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LocalCodeType) Clone() (*LocalCodeType) {
 return reprint.This(t).(*LocalCodeType)
@@ -3693,6 +6016,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LocalCodeType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLocalCodeType() *LocalCodeType {
+  if out, ok := LocalCodeTypePointer(LocalCodeType{}); !ok {
+                log.Fatalf("Could not create pointer to LocalCodeType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LocationOfInstructionType) Clone() (*LocationOfInstructionType) {
@@ -3712,6 +6045,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLocationOfInstructionType() *LocationOfInstructionType {
+  if out, ok := LocationOfInstructionTypePointer(LocationOfInstructionType{}); !ok {
+                log.Fatalf("Could not create pointer to LocationOfInstructionType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LocationType) Clone() (*LocationType) {
 return reprint.This(t).(*LocationType)
@@ -3729,6 +6072,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to LocationType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewLocationType() *LocationType {
+  if out, ok := LocationTypePointer(LocationType{}); !ok {
+                log.Fatalf("Could not create pointer to LocationType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *LocationType_LocationRefId) Clone() (*LocationType_LocationRefId) {
@@ -3748,6 +6101,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewLocationType_LocationRefId() *LocationType_LocationRefId {
+  if out, ok := LocationType_LocationRefIdPointer(LocationType_LocationRefId{}); !ok {
+                log.Fatalf("Could not create pointer to LocationType_LocationRefId\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MapReferenceType) Clone() (*MapReferenceType) {
 return reprint.This(t).(*MapReferenceType)
@@ -3766,6 +6129,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewMapReferenceType() *MapReferenceType {
+  if out, ok := MapReferenceTypePointer(MapReferenceType{}); !ok {
+                log.Fatalf("Could not create pointer to MapReferenceType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MarkValueInfo) Clone() (*MarkValueInfo) {
 return reprint.This(t).(*MarkValueInfo)
@@ -3781,6 +6154,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to MarkValueInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewMarkValueInfo() *MarkValueInfo {
+  if out, ok := MarkValueInfoPointer(MarkValueInfo{}); !ok {
+                log.Fatalf("Could not create pointer to MarkValueInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *MarkValueInfos) Clone() (*MarkValueInfos) {
+return reprint.This(t).(*MarkValueInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func MarkValueInfosPointer(value interface{}) (*MarkValueInfos, bool) {
+switch t := value.(type) {
+        case *MarkValueInfos:
+                return value.(*MarkValueInfos), true
+        case MarkValueInfos:
+                v, _ := value.(MarkValueInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to MarkValueInfos\n", t, value)
         }
         return nil, false
   }
@@ -3802,6 +6203,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewMarkerType() *MarkerType {
+  if out, ok := MarkerTypePointer(MarkerType{}); !ok {
+                log.Fatalf("Could not create pointer to MarkerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MediaTypesType) Clone() (*MediaTypesType) {
 return reprint.This(t).(*MediaTypesType)
@@ -3819,6 +6230,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to MediaTypesType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewMediaTypesType() *MediaTypesType {
+  if out, ok := MediaTypesTypePointer(MediaTypesType{}); !ok {
+                log.Fatalf("Could not create pointer to MediaTypesType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MedicalAlertMessageType) Clone() (*MedicalAlertMessageType) {
@@ -3838,6 +6259,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewMedicalAlertMessageType() *MedicalAlertMessageType {
+  if out, ok := MedicalAlertMessageTypePointer(MedicalAlertMessageType{}); !ok {
+                log.Fatalf("Could not create pointer to MedicalAlertMessageType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MedicalAlertMessagesType) Clone() (*MedicalAlertMessagesType) {
 return reprint.This(t).(*MedicalAlertMessagesType)
@@ -3855,6 +6286,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to MedicalAlertMessagesType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewMedicalAlertMessagesType() *MedicalAlertMessagesType {
+  if out, ok := MedicalAlertMessagesTypePointer(MedicalAlertMessagesType{}); !ok {
+                log.Fatalf("Could not create pointer to MedicalAlertMessagesType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MedicationListType) Clone() (*MedicationListType) {
@@ -3874,6 +6315,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewMedicationListType() *MedicationListType {
+  if out, ok := MedicationListTypePointer(MedicationListType{}); !ok {
+                log.Fatalf("Could not create pointer to MedicationListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MedicationType) Clone() (*MedicationType) {
 return reprint.This(t).(*MedicationType)
@@ -3891,6 +6342,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to MedicationType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewMedicationType() *MedicationType {
+  if out, ok := MedicationTypePointer(MedicationType{}); !ok {
+                log.Fatalf("Could not create pointer to MedicationType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MediumOfInstructionType) Clone() (*MediumOfInstructionType) {
@@ -3910,6 +6371,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewMediumOfInstructionType() *MediumOfInstructionType {
+  if out, ok := MediumOfInstructionTypePointer(MediumOfInstructionType{}); !ok {
+                log.Fatalf("Could not create pointer to MediumOfInstructionType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ModifiedListType) Clone() (*ModifiedListType) {
 return reprint.This(t).(*ModifiedListType)
@@ -3927,6 +6398,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ModifiedListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewModifiedListType() *ModifiedListType {
+  if out, ok := ModifiedListTypePointer(ModifiedListType{}); !ok {
+                log.Fatalf("Could not create pointer to ModifiedListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ModifiedType) Clone() (*ModifiedType) {
@@ -3946,6 +6427,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewModifiedType() *ModifiedType {
+  if out, ok := ModifiedTypePointer(ModifiedType{}); !ok {
+                log.Fatalf("Could not create pointer to ModifiedType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *MonetaryAmountType) Clone() (*MonetaryAmountType) {
 return reprint.This(t).(*MonetaryAmountType)
@@ -3963,6 +6454,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to MonetaryAmountType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewMonetaryAmountType() *MonetaryAmountType {
+  if out, ok := MonetaryAmountTypePointer(MonetaryAmountType{}); !ok {
+                log.Fatalf("Could not create pointer to MonetaryAmountType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPCodeFrame) Clone() (*NAPCodeFrame) {
@@ -3982,6 +6483,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPCodeFrame() *NAPCodeFrame {
+  if out, ok := NAPCodeFramePointer(NAPCodeFrame{}); !ok {
+                log.Fatalf("Could not create pointer to NAPCodeFrame\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPCodeFrameTestletListType) Clone() (*NAPCodeFrameTestletListType) {
 return reprint.This(t).(*NAPCodeFrameTestletListType)
@@ -3997,6 +6508,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPCodeFrameTestletListType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPCodeFrameTestletListType() *NAPCodeFrameTestletListType {
+  if out, ok := NAPCodeFrameTestletListTypePointer(NAPCodeFrameTestletListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPCodeFrameTestletListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NAPCodeFrames) Clone() (*NAPCodeFrames) {
+return reprint.This(t).(*NAPCodeFrames)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NAPCodeFramesPointer(value interface{}) (*NAPCodeFrames, bool) {
+switch t := value.(type) {
+        case *NAPCodeFrames:
+                return value.(*NAPCodeFrames), true
+        case NAPCodeFrames:
+                v, _ := value.(NAPCodeFrames)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NAPCodeFrames\n", t, value)
         }
         return nil, false
   }
@@ -4018,6 +6557,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPEventStudentLink() *NAPEventStudentLink {
+  if out, ok := NAPEventStudentLinkPointer(NAPEventStudentLink{}); !ok {
+                log.Fatalf("Could not create pointer to NAPEventStudentLink\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NAPEventStudentLinks) Clone() (*NAPEventStudentLinks) {
+return reprint.This(t).(*NAPEventStudentLinks)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NAPEventStudentLinksPointer(value interface{}) (*NAPEventStudentLinks, bool) {
+switch t := value.(type) {
+        case *NAPEventStudentLinks:
+                return value.(*NAPEventStudentLinks), true
+        case NAPEventStudentLinks:
+                v, _ := value.(NAPEventStudentLinks)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NAPEventStudentLinks\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPLANClassListType) Clone() (*NAPLANClassListType) {
 return reprint.This(t).(*NAPLANClassListType)
@@ -4035,6 +6602,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPLANClassListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPLANClassListType() *NAPLANClassListType {
+  if out, ok := NAPLANClassListTypePointer(NAPLANClassListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPLANClassListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPLANScoreListType) Clone() (*NAPLANScoreListType) {
@@ -4054,6 +6631,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPLANScoreListType() *NAPLANScoreListType {
+  if out, ok := NAPLANScoreListTypePointer(NAPLANScoreListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPLANScoreListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPLANScoreType) Clone() (*NAPLANScoreType) {
 return reprint.This(t).(*NAPLANScoreType)
@@ -4071,6 +6658,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPLANScoreType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPLANScoreType() *NAPLANScoreType {
+  if out, ok := NAPLANScoreTypePointer(NAPLANScoreType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPLANScoreType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPLANScoreWithYearsListType) Clone() (*NAPLANScoreWithYearsListType) {
@@ -4090,6 +6687,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPLANScoreWithYearsListType() *NAPLANScoreWithYearsListType {
+  if out, ok := NAPLANScoreWithYearsListTypePointer(NAPLANScoreWithYearsListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPLANScoreWithYearsListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPLANScoreWithYearsType) Clone() (*NAPLANScoreWithYearsType) {
 return reprint.This(t).(*NAPLANScoreWithYearsType)
@@ -4108,6 +6715,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPLANScoreWithYearsType() *NAPLANScoreWithYearsType {
+  if out, ok := NAPLANScoreWithYearsTypePointer(NAPLANScoreWithYearsType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPLANScoreWithYearsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPStudentResponseSet) Clone() (*NAPStudentResponseSet) {
 return reprint.This(t).(*NAPStudentResponseSet)
@@ -4123,6 +6740,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPStudentResponseSet\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPStudentResponseSet() *NAPStudentResponseSet {
+  if out, ok := NAPStudentResponseSetPointer(NAPStudentResponseSet{}); !ok {
+                log.Fatalf("Could not create pointer to NAPStudentResponseSet\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NAPStudentResponseSets) Clone() (*NAPStudentResponseSets) {
+return reprint.This(t).(*NAPStudentResponseSets)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NAPStudentResponseSetsPointer(value interface{}) (*NAPStudentResponseSets, bool) {
+switch t := value.(type) {
+        case *NAPStudentResponseSets:
+                return value.(*NAPStudentResponseSets), true
+        case NAPStudentResponseSets:
+                v, _ := value.(NAPStudentResponseSets)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NAPStudentResponseSets\n", t, value)
         }
         return nil, false
   }
@@ -4144,6 +6789,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPStudentResponseTestletListType() *NAPStudentResponseTestletListType {
+  if out, ok := NAPStudentResponseTestletListTypePointer(NAPStudentResponseTestletListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPStudentResponseTestletListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPSubscoreListType) Clone() (*NAPSubscoreListType) {
 return reprint.This(t).(*NAPSubscoreListType)
@@ -4161,6 +6816,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPSubscoreListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPSubscoreListType() *NAPSubscoreListType {
+  if out, ok := NAPSubscoreListTypePointer(NAPSubscoreListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPSubscoreListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPSubscoreType) Clone() (*NAPSubscoreType) {
@@ -4180,6 +6845,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPSubscoreType() *NAPSubscoreType {
+  if out, ok := NAPSubscoreTypePointer(NAPSubscoreType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPSubscoreType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTest) Clone() (*NAPTest) {
 return reprint.This(t).(*NAPTest)
@@ -4197,6 +6872,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPTest\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTest() *NAPTest {
+  if out, ok := NAPTestPointer(NAPTest{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTest\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestContentType) Clone() (*NAPTestContentType) {
@@ -4216,6 +6901,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestContentType() *NAPTestContentType {
+  if out, ok := NAPTestContentTypePointer(NAPTestContentType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestContentType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestItem) Clone() (*NAPTestItem) {
 return reprint.This(t).(*NAPTestItem)
@@ -4233,6 +6928,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestItem\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestItem() *NAPTestItem {
+  if out, ok := NAPTestItemPointer(NAPTestItem{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestItem\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestItem2Type) Clone() (*NAPTestItem2Type) {
@@ -4252,6 +6957,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestItem2Type() *NAPTestItem2Type {
+  if out, ok := NAPTestItem2TypePointer(NAPTestItem2Type{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestItem2Type\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestItemContentType) Clone() (*NAPTestItemContentType) {
 return reprint.This(t).(*NAPTestItemContentType)
@@ -4270,6 +6985,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestItemContentType() *NAPTestItemContentType {
+  if out, ok := NAPTestItemContentTypePointer(NAPTestItemContentType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestItemContentType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestItemListType) Clone() (*NAPTestItemListType) {
 return reprint.This(t).(*NAPTestItemListType)
@@ -4285,6 +7010,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestItemListType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestItemListType() *NAPTestItemListType {
+  if out, ok := NAPTestItemListTypePointer(NAPTestItemListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestItemListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NAPTestItems) Clone() (*NAPTestItems) {
+return reprint.This(t).(*NAPTestItems)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NAPTestItemsPointer(value interface{}) (*NAPTestItems, bool) {
+switch t := value.(type) {
+        case *NAPTestItems:
+                return value.(*NAPTestItems), true
+        case NAPTestItems:
+                v, _ := value.(NAPTestItems)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestItems\n", t, value)
         }
         return nil, false
   }
@@ -4306,6 +7059,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestScoreSummary() *NAPTestScoreSummary {
+  if out, ok := NAPTestScoreSummaryPointer(NAPTestScoreSummary{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestScoreSummary\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NAPTestScoreSummarys) Clone() (*NAPTestScoreSummarys) {
+return reprint.This(t).(*NAPTestScoreSummarys)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NAPTestScoreSummarysPointer(value interface{}) (*NAPTestScoreSummarys, bool) {
+switch t := value.(type) {
+        case *NAPTestScoreSummarys:
+                return value.(*NAPTestScoreSummarys), true
+        case NAPTestScoreSummarys:
+                v, _ := value.(NAPTestScoreSummarys)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestScoreSummarys\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestlet) Clone() (*NAPTestlet) {
 return reprint.This(t).(*NAPTestlet)
@@ -4323,6 +7104,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestlet\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestlet() *NAPTestlet {
+  if out, ok := NAPTestletPointer(NAPTestlet{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestlet\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestletCodeFrameType) Clone() (*NAPTestletCodeFrameType) {
@@ -4342,6 +7133,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestletCodeFrameType() *NAPTestletCodeFrameType {
+  if out, ok := NAPTestletCodeFrameTypePointer(NAPTestletCodeFrameType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestletCodeFrameType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestletContentType) Clone() (*NAPTestletContentType) {
 return reprint.This(t).(*NAPTestletContentType)
@@ -4359,6 +7160,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestletContentType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestletContentType() *NAPTestletContentType {
+  if out, ok := NAPTestletContentTypePointer(NAPTestletContentType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestletContentType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestletItemResponseListType) Clone() (*NAPTestletItemResponseListType) {
@@ -4378,6 +7189,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestletItemResponseListType() *NAPTestletItemResponseListType {
+  if out, ok := NAPTestletItemResponseListTypePointer(NAPTestletItemResponseListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestletItemResponseListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestletResponseItemType) Clone() (*NAPTestletResponseItemType) {
 return reprint.This(t).(*NAPTestletResponseItemType)
@@ -4396,6 +7217,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestletResponseItemType() *NAPTestletResponseItemType {
+  if out, ok := NAPTestletResponseItemTypePointer(NAPTestletResponseItemType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestletResponseItemType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPTestletResponseType) Clone() (*NAPTestletResponseType) {
 return reprint.This(t).(*NAPTestletResponseType)
@@ -4411,6 +7242,52 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestletResponseType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPTestletResponseType() *NAPTestletResponseType {
+  if out, ok := NAPTestletResponseTypePointer(NAPTestletResponseType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestletResponseType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NAPTestlets) Clone() (*NAPTestlets) {
+return reprint.This(t).(*NAPTestlets)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NAPTestletsPointer(value interface{}) (*NAPTestlets, bool) {
+switch t := value.(type) {
+        case *NAPTestlets:
+                return value.(*NAPTestlets), true
+        case NAPTestlets:
+                v, _ := value.(NAPTestlets)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NAPTestlets\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *NAPTests) Clone() (*NAPTests) {
+return reprint.This(t).(*NAPTests)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func NAPTestsPointer(value interface{}) (*NAPTests, bool) {
+switch t := value.(type) {
+        case *NAPTests:
+                return value.(*NAPTests), true
+        case NAPTests:
+                v, _ := value.(NAPTests)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to NAPTests\n", t, value)
         }
         return nil, false
   }
@@ -4432,6 +7309,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNAPWritingRubricListType() *NAPWritingRubricListType {
+  if out, ok := NAPWritingRubricListTypePointer(NAPWritingRubricListType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPWritingRubricListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NAPWritingRubricType) Clone() (*NAPWritingRubricType) {
 return reprint.This(t).(*NAPWritingRubricType)
@@ -4449,6 +7336,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NAPWritingRubricType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNAPWritingRubricType() *NAPWritingRubricType {
+  if out, ok := NAPWritingRubricTypePointer(NAPWritingRubricType{}); !ok {
+                log.Fatalf("Could not create pointer to NAPWritingRubricType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NCCDListType) Clone() (*NCCDListType) {
@@ -4468,6 +7365,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNCCDListType() *NCCDListType {
+  if out, ok := NCCDListTypePointer(NCCDListType{}); !ok {
+                log.Fatalf("Could not create pointer to NCCDListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NCCDType) Clone() (*NCCDType) {
 return reprint.This(t).(*NCCDType)
@@ -4485,6 +7392,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NCCDType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNCCDType() *NCCDType {
+  if out, ok := NCCDTypePointer(NCCDType{}); !ok {
+                log.Fatalf("Could not create pointer to NCCDType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NameOfRecordType) Clone() (*NameOfRecordType) {
@@ -4504,6 +7421,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNameOfRecordType() *NameOfRecordType {
+  if out, ok := NameOfRecordTypePointer(NameOfRecordType{}); !ok {
+                log.Fatalf("Could not create pointer to NameOfRecordType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NameType) Clone() (*NameType) {
 return reprint.This(t).(*NameType)
@@ -4521,6 +7448,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NameType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNameType() *NameType {
+  if out, ok := NameTypePointer(NameType{}); !ok {
+                log.Fatalf("Could not create pointer to NameType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NeverShareWithListType) Clone() (*NeverShareWithListType) {
@@ -4540,6 +7477,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewNeverShareWithListType() *NeverShareWithListType {
+  if out, ok := NeverShareWithListTypePointer(NeverShareWithListType{}); !ok {
+                log.Fatalf("Could not create pointer to NeverShareWithListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *NeverShareWithType) Clone() (*NeverShareWithType) {
 return reprint.This(t).(*NeverShareWithType)
@@ -4557,6 +7504,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to NeverShareWithType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewNeverShareWithType() *NeverShareWithType {
+  if out, ok := NeverShareWithTypePointer(NeverShareWithType{}); !ok {
+                log.Fatalf("Could not create pointer to NeverShareWithType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OrganizationsType) Clone() (*OrganizationsType) {
@@ -4576,6 +7533,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewOrganizationsType() *OrganizationsType {
+  if out, ok := OrganizationsTypePointer(OrganizationsType{}); !ok {
+                log.Fatalf("Could not create pointer to OrganizationsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OtherCodeListType) Clone() (*OtherCodeListType) {
 return reprint.This(t).(*OtherCodeListType)
@@ -4593,6 +7560,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to OtherCodeListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewOtherCodeListType() *OtherCodeListType {
+  if out, ok := OtherCodeListTypePointer(OtherCodeListType{}); !ok {
+                log.Fatalf("Could not create pointer to OtherCodeListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OtherCodeListType_OtherCode) Clone() (*OtherCodeListType_OtherCode) {
@@ -4612,6 +7589,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewOtherCodeListType_OtherCode() *OtherCodeListType_OtherCode {
+  if out, ok := OtherCodeListType_OtherCodePointer(OtherCodeListType_OtherCode{}); !ok {
+                log.Fatalf("Could not create pointer to OtherCodeListType_OtherCode\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OtherIdListType) Clone() (*OtherIdListType) {
 return reprint.This(t).(*OtherIdListType)
@@ -4629,6 +7616,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to OtherIdListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewOtherIdListType() *OtherIdListType {
+  if out, ok := OtherIdListTypePointer(OtherIdListType{}); !ok {
+                log.Fatalf("Could not create pointer to OtherIdListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OtherIdType) Clone() (*OtherIdType) {
@@ -4648,6 +7645,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewOtherIdType() *OtherIdType {
+  if out, ok := OtherIdTypePointer(OtherIdType{}); !ok {
+                log.Fatalf("Could not create pointer to OtherIdType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OtherNameType) Clone() (*OtherNameType) {
 return reprint.This(t).(*OtherNameType)
@@ -4665,6 +7672,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to OtherNameType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewOtherNameType() *OtherNameType {
+  if out, ok := OtherNameTypePointer(OtherNameType{}); !ok {
+                log.Fatalf("Could not create pointer to OtherNameType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OtherNamesType) Clone() (*OtherNamesType) {
@@ -4684,6 +7701,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewOtherNamesType() *OtherNamesType {
+  if out, ok := OtherNamesTypePointer(OtherNamesType{}); !ok {
+                log.Fatalf("Could not create pointer to OtherNamesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *OtherWellbeingResponseContainerType) Clone() (*OtherWellbeingResponseContainerType) {
 return reprint.This(t).(*OtherWellbeingResponseContainerType)
@@ -4701,6 +7728,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to OtherWellbeingResponseContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewOtherWellbeingResponseContainerType() *OtherWellbeingResponseContainerType {
+  if out, ok := OtherWellbeingResponseContainerTypePointer(OtherWellbeingResponseContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to OtherWellbeingResponseContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PNPCodeListType) Clone() (*PNPCodeListType) {
@@ -4720,6 +7757,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPNPCodeListType() *PNPCodeListType {
+  if out, ok := PNPCodeListTypePointer(PNPCodeListType{}); !ok {
+                log.Fatalf("Could not create pointer to PNPCodeListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PassportType) Clone() (*PassportType) {
 return reprint.This(t).(*PassportType)
@@ -4737,6 +7784,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PassportType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPassportType() *PassportType {
+  if out, ok := PassportTypePointer(PassportType{}); !ok {
+                log.Fatalf("Could not create pointer to PassportType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PasswordListType) Clone() (*PasswordListType) {
@@ -4756,6 +7813,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPasswordListType() *PasswordListType {
+  if out, ok := PasswordListTypePointer(PasswordListType{}); !ok {
+                log.Fatalf("Could not create pointer to PasswordListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PasswordListType_Password) Clone() (*PasswordListType_Password) {
 return reprint.This(t).(*PasswordListType_Password)
@@ -4773,6 +7840,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PasswordListType_Password\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPasswordListType_Password() *PasswordListType_Password {
+  if out, ok := PasswordListType_PasswordPointer(PasswordListType_Password{}); !ok {
+                log.Fatalf("Could not create pointer to PasswordListType_Password\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PaymentReceipt) Clone() (*PaymentReceipt) {
@@ -4792,6 +7869,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPaymentReceipt() *PaymentReceipt {
+  if out, ok := PaymentReceiptPointer(PaymentReceipt{}); !ok {
+                log.Fatalf("Could not create pointer to PaymentReceipt\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PaymentReceiptLineListType) Clone() (*PaymentReceiptLineListType) {
 return reprint.This(t).(*PaymentReceiptLineListType)
@@ -4810,6 +7897,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPaymentReceiptLineListType() *PaymentReceiptLineListType {
+  if out, ok := PaymentReceiptLineListTypePointer(PaymentReceiptLineListType{}); !ok {
+                log.Fatalf("Could not create pointer to PaymentReceiptLineListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PaymentReceiptLineType) Clone() (*PaymentReceiptLineType) {
 return reprint.This(t).(*PaymentReceiptLineType)
@@ -4825,6 +7922,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to PaymentReceiptLineType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPaymentReceiptLineType() *PaymentReceiptLineType {
+  if out, ok := PaymentReceiptLineTypePointer(PaymentReceiptLineType{}); !ok {
+                log.Fatalf("Could not create pointer to PaymentReceiptLineType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PaymentReceipts) Clone() (*PaymentReceipts) {
+return reprint.This(t).(*PaymentReceipts)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PaymentReceiptsPointer(value interface{}) (*PaymentReceipts, bool) {
+switch t := value.(type) {
+        case *PaymentReceipts:
+                return value.(*PaymentReceipts), true
+        case PaymentReceipts:
+                v, _ := value.(PaymentReceipts)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PaymentReceipts\n", t, value)
         }
         return nil, false
   }
@@ -4846,6 +7971,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPeriodAttendanceType() *PeriodAttendanceType {
+  if out, ok := PeriodAttendanceTypePointer(PeriodAttendanceType{}); !ok {
+                log.Fatalf("Could not create pointer to PeriodAttendanceType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PeriodAttendancesType) Clone() (*PeriodAttendancesType) {
 return reprint.This(t).(*PeriodAttendancesType)
@@ -4863,6 +7998,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PeriodAttendancesType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPeriodAttendancesType() *PeriodAttendancesType {
+  if out, ok := PeriodAttendancesTypePointer(PeriodAttendancesType{}); !ok {
+                log.Fatalf("Could not create pointer to PeriodAttendancesType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PermissionToParticipateListType) Clone() (*PermissionToParticipateListType) {
@@ -4882,6 +8027,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPermissionToParticipateListType() *PermissionToParticipateListType {
+  if out, ok := PermissionToParticipateListTypePointer(PermissionToParticipateListType{}); !ok {
+                log.Fatalf("Could not create pointer to PermissionToParticipateListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PermissionToParticipateType) Clone() (*PermissionToParticipateType) {
 return reprint.This(t).(*PermissionToParticipateType)
@@ -4899,6 +8054,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PermissionToParticipateType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPermissionToParticipateType() *PermissionToParticipateType {
+  if out, ok := PermissionToParticipateTypePointer(PermissionToParticipateType{}); !ok {
+                log.Fatalf("Could not create pointer to PermissionToParticipateType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonInfoType) Clone() (*PersonInfoType) {
@@ -4918,6 +8083,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPersonInfoType() *PersonInfoType {
+  if out, ok := PersonInfoTypePointer(PersonInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to PersonInfoType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonInvolvementListType) Clone() (*PersonInvolvementListType) {
 return reprint.This(t).(*PersonInvolvementListType)
@@ -4935,6 +8110,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PersonInvolvementListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPersonInvolvementListType() *PersonInvolvementListType {
+  if out, ok := PersonInvolvementListTypePointer(PersonInvolvementListType{}); !ok {
+                log.Fatalf("Could not create pointer to PersonInvolvementListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonInvolvementType) Clone() (*PersonInvolvementType) {
@@ -4954,6 +8139,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPersonInvolvementType() *PersonInvolvementType {
+  if out, ok := PersonInvolvementTypePointer(PersonInvolvementType{}); !ok {
+                log.Fatalf("Could not create pointer to PersonInvolvementType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonInvolvementType_PersonRefId) Clone() (*PersonInvolvementType_PersonRefId) {
 return reprint.This(t).(*PersonInvolvementType_PersonRefId)
@@ -4971,6 +8166,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PersonInvolvementType_PersonRefId\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPersonInvolvementType_PersonRefId() *PersonInvolvementType_PersonRefId {
+  if out, ok := PersonInvolvementType_PersonRefIdPointer(PersonInvolvementType_PersonRefId{}); !ok {
+                log.Fatalf("Could not create pointer to PersonInvolvementType_PersonRefId\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonPicture) Clone() (*PersonPicture) {
@@ -4990,6 +8195,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPersonPicture() *PersonPicture {
+  if out, ok := PersonPicturePointer(PersonPicture{}); !ok {
+                log.Fatalf("Could not create pointer to PersonPicture\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonPicture_ParentObjectRefId) Clone() (*PersonPicture_ParentObjectRefId) {
 return reprint.This(t).(*PersonPicture_ParentObjectRefId)
@@ -5005,6 +8220,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to PersonPicture_ParentObjectRefId\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPersonPicture_ParentObjectRefId() *PersonPicture_ParentObjectRefId {
+  if out, ok := PersonPicture_ParentObjectRefIdPointer(PersonPicture_ParentObjectRefId{}); !ok {
+                log.Fatalf("Could not create pointer to PersonPicture_ParentObjectRefId\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PersonPictures) Clone() (*PersonPictures) {
+return reprint.This(t).(*PersonPictures)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PersonPicturesPointer(value interface{}) (*PersonPictures, bool) {
+switch t := value.(type) {
+        case *PersonPictures:
+                return value.(*PersonPictures), true
+        case PersonPictures:
+                v, _ := value.(PersonPictures)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PersonPictures\n", t, value)
         }
         return nil, false
   }
@@ -5026,6 +8269,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPersonPrivacyObligationDocument() *PersonPrivacyObligationDocument {
+  if out, ok := PersonPrivacyObligationDocumentPointer(PersonPrivacyObligationDocument{}); !ok {
+                log.Fatalf("Could not create pointer to PersonPrivacyObligationDocument\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PersonPrivacyObligationDocuments) Clone() (*PersonPrivacyObligationDocuments) {
+return reprint.This(t).(*PersonPrivacyObligationDocuments)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PersonPrivacyObligationDocumentsPointer(value interface{}) (*PersonPrivacyObligationDocuments, bool) {
+switch t := value.(type) {
+        case *PersonPrivacyObligationDocuments:
+                return value.(*PersonPrivacyObligationDocuments), true
+        case PersonPrivacyObligationDocuments:
+                v, _ := value.(PersonPrivacyObligationDocuments)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PersonPrivacyObligationDocuments\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PersonalisedPlan) Clone() (*PersonalisedPlan) {
 return reprint.This(t).(*PersonalisedPlan)
@@ -5041,6 +8312,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to PersonalisedPlan\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPersonalisedPlan() *PersonalisedPlan {
+  if out, ok := PersonalisedPlanPointer(PersonalisedPlan{}); !ok {
+                log.Fatalf("Could not create pointer to PersonalisedPlan\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PersonalisedPlans) Clone() (*PersonalisedPlans) {
+return reprint.This(t).(*PersonalisedPlans)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PersonalisedPlansPointer(value interface{}) (*PersonalisedPlans, bool) {
+switch t := value.(type) {
+        case *PersonalisedPlans:
+                return value.(*PersonalisedPlans), true
+        case PersonalisedPlans:
+                v, _ := value.(PersonalisedPlans)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PersonalisedPlans\n", t, value)
         }
         return nil, false
   }
@@ -5062,6 +8361,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPhoneNumberListType() *PhoneNumberListType {
+  if out, ok := PhoneNumberListTypePointer(PhoneNumberListType{}); !ok {
+                log.Fatalf("Could not create pointer to PhoneNumberListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PhoneNumberType) Clone() (*PhoneNumberType) {
 return reprint.This(t).(*PhoneNumberType)
@@ -5079,6 +8388,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PhoneNumberType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPhoneNumberType() *PhoneNumberType {
+  if out, ok := PhoneNumberTypePointer(PhoneNumberType{}); !ok {
+                log.Fatalf("Could not create pointer to PhoneNumberType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PictureSourceType) Clone() (*PictureSourceType) {
@@ -5098,6 +8417,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPictureSourceType() *PictureSourceType {
+  if out, ok := PictureSourceTypePointer(PictureSourceType{}); !ok {
+                log.Fatalf("Could not create pointer to PictureSourceType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PlanRequiredContainerType) Clone() (*PlanRequiredContainerType) {
 return reprint.This(t).(*PlanRequiredContainerType)
@@ -5115,6 +8444,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PlanRequiredContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPlanRequiredContainerType() *PlanRequiredContainerType {
+  if out, ok := PlanRequiredContainerTypePointer(PlanRequiredContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to PlanRequiredContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PlanRequiredListType) Clone() (*PlanRequiredListType) {
@@ -5134,6 +8473,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPlanRequiredListType() *PlanRequiredListType {
+  if out, ok := PlanRequiredListTypePointer(PlanRequiredListType{}); !ok {
+                log.Fatalf("Could not create pointer to PlanRequiredListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PlausibleScaledValueListType) Clone() (*PlausibleScaledValueListType) {
 return reprint.This(t).(*PlausibleScaledValueListType)
@@ -5151,6 +8500,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PlausibleScaledValueListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPlausibleScaledValueListType() *PlausibleScaledValueListType {
+  if out, ok := PlausibleScaledValueListTypePointer(PlausibleScaledValueListType{}); !ok {
+                log.Fatalf("Could not create pointer to PlausibleScaledValueListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PrerequisitesType) Clone() (*PrerequisitesType) {
@@ -5170,6 +8529,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPrerequisitesType() *PrerequisitesType {
+  if out, ok := PrerequisitesTypePointer(PrerequisitesType{}); !ok {
+                log.Fatalf("Could not create pointer to PrerequisitesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PreviousSchoolListType) Clone() (*PreviousSchoolListType) {
 return reprint.This(t).(*PreviousSchoolListType)
@@ -5187,6 +8556,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PreviousSchoolListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPreviousSchoolListType() *PreviousSchoolListType {
+  if out, ok := PreviousSchoolListTypePointer(PreviousSchoolListType{}); !ok {
+                log.Fatalf("Could not create pointer to PreviousSchoolListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PreviousSchoolType) Clone() (*PreviousSchoolType) {
@@ -5206,6 +8585,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPreviousSchoolType() *PreviousSchoolType {
+  if out, ok := PreviousSchoolTypePointer(PreviousSchoolType{}); !ok {
+                log.Fatalf("Could not create pointer to PreviousSchoolType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PrincipalInfoType) Clone() (*PrincipalInfoType) {
 return reprint.This(t).(*PrincipalInfoType)
@@ -5223,6 +8612,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PrincipalInfoType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPrincipalInfoType() *PrincipalInfoType {
+  if out, ok := PrincipalInfoTypePointer(PrincipalInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to PrincipalInfoType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PrivateHealthInsuranceType) Clone() (*PrivateHealthInsuranceType) {
@@ -5242,6 +8641,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPrivateHealthInsuranceType() *PrivateHealthInsuranceType {
+  if out, ok := PrivateHealthInsuranceTypePointer(PrivateHealthInsuranceType{}); !ok {
+                log.Fatalf("Could not create pointer to PrivateHealthInsuranceType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ProgramAvailabilityType) Clone() (*ProgramAvailabilityType) {
 return reprint.This(t).(*ProgramAvailabilityType)
@@ -5259,6 +8668,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ProgramAvailabilityType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewProgramAvailabilityType() *ProgramAvailabilityType {
+  if out, ok := ProgramAvailabilityTypePointer(ProgramAvailabilityType{}); !ok {
+                log.Fatalf("Could not create pointer to ProgramAvailabilityType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ProgramFundingSourceType) Clone() (*ProgramFundingSourceType) {
@@ -5278,6 +8697,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewProgramFundingSourceType() *ProgramFundingSourceType {
+  if out, ok := ProgramFundingSourceTypePointer(ProgramFundingSourceType{}); !ok {
+                log.Fatalf("Could not create pointer to ProgramFundingSourceType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ProgramFundingSourcesType) Clone() (*ProgramFundingSourcesType) {
 return reprint.This(t).(*ProgramFundingSourcesType)
@@ -5295,6 +8724,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ProgramFundingSourcesType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewProgramFundingSourcesType() *ProgramFundingSourcesType {
+  if out, ok := ProgramFundingSourcesTypePointer(ProgramFundingSourcesType{}); !ok {
+                log.Fatalf("Could not create pointer to ProgramFundingSourcesType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ProgramStatusType) Clone() (*ProgramStatusType) {
@@ -5314,6 +8753,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewProgramStatusType() *ProgramStatusType {
+  if out, ok := ProgramStatusTypePointer(ProgramStatusType{}); !ok {
+                log.Fatalf("Could not create pointer to ProgramStatusType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PromotionInfoType) Clone() (*PromotionInfoType) {
 return reprint.This(t).(*PromotionInfoType)
@@ -5331,6 +8780,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PromotionInfoType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPromotionInfoType() *PromotionInfoType {
+  if out, ok := PromotionInfoTypePointer(PromotionInfoType{}); !ok {
+                log.Fatalf("Could not create pointer to PromotionInfoType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PublishingPermissionListType) Clone() (*PublishingPermissionListType) {
@@ -5350,6 +8809,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPublishingPermissionListType() *PublishingPermissionListType {
+  if out, ok := PublishingPermissionListTypePointer(PublishingPermissionListType{}); !ok {
+                log.Fatalf("Could not create pointer to PublishingPermissionListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PublishingPermissionType) Clone() (*PublishingPermissionType) {
 return reprint.This(t).(*PublishingPermissionType)
@@ -5368,6 +8837,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPublishingPermissionType() *PublishingPermissionType {
+  if out, ok := PublishingPermissionTypePointer(PublishingPermissionType{}); !ok {
+                log.Fatalf("Could not create pointer to PublishingPermissionType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PurchaseOrder) Clone() (*PurchaseOrder) {
 return reprint.This(t).(*PurchaseOrder)
@@ -5383,6 +8862,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to PurchaseOrder\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPurchaseOrder() *PurchaseOrder {
+  if out, ok := PurchaseOrderPointer(PurchaseOrder{}); !ok {
+                log.Fatalf("Could not create pointer to PurchaseOrder\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *PurchaseOrders) Clone() (*PurchaseOrders) {
+return reprint.This(t).(*PurchaseOrders)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func PurchaseOrdersPointer(value interface{}) (*PurchaseOrders, bool) {
+switch t := value.(type) {
+        case *PurchaseOrders:
+                return value.(*PurchaseOrders), true
+        case PurchaseOrders:
+                v, _ := value.(PurchaseOrders)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to PurchaseOrders\n", t, value)
         }
         return nil, false
   }
@@ -5404,6 +8911,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewPurchasingItemType() *PurchasingItemType {
+  if out, ok := PurchasingItemTypePointer(PurchasingItemType{}); !ok {
+                log.Fatalf("Could not create pointer to PurchasingItemType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *PurchasingItemsType) Clone() (*PurchasingItemsType) {
 return reprint.This(t).(*PurchasingItemsType)
@@ -5421,6 +8938,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to PurchasingItemsType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewPurchasingItemsType() *PurchasingItemsType {
+  if out, ok := PurchasingItemsTypePointer(PurchasingItemsType{}); !ok {
+                log.Fatalf("Could not create pointer to PurchasingItemsType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *RecognitionListType) Clone() (*RecognitionListType) {
@@ -5440,6 +8967,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewRecognitionListType() *RecognitionListType {
+  if out, ok := RecognitionListTypePointer(RecognitionListType{}); !ok {
+                log.Fatalf("Could not create pointer to RecognitionListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReferenceDataType) Clone() (*ReferenceDataType) {
 return reprint.This(t).(*ReferenceDataType)
@@ -5457,6 +8994,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ReferenceDataType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewReferenceDataType() *ReferenceDataType {
+  if out, ok := ReferenceDataTypePointer(ReferenceDataType{}); !ok {
+                log.Fatalf("Could not create pointer to ReferenceDataType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReferralSourceType) Clone() (*ReferralSourceType) {
@@ -5476,6 +9023,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewReferralSourceType() *ReferralSourceType {
+  if out, ok := ReferralSourceTypePointer(ReferralSourceType{}); !ok {
+                log.Fatalf("Could not create pointer to ReferralSourceType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *RelatedLearningStandardItemRefIdListType) Clone() (*RelatedLearningStandardItemRefIdListType) {
 return reprint.This(t).(*RelatedLearningStandardItemRefIdListType)
@@ -5493,6 +9050,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to RelatedLearningStandardItemRefIdListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewRelatedLearningStandardItemRefIdListType() *RelatedLearningStandardItemRefIdListType {
+  if out, ok := RelatedLearningStandardItemRefIdListTypePointer(RelatedLearningStandardItemRefIdListType{}); !ok {
+                log.Fatalf("Could not create pointer to RelatedLearningStandardItemRefIdListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *RelatedLearningStandardItemRefIdType) Clone() (*RelatedLearningStandardItemRefIdType) {
@@ -5512,6 +9079,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewRelatedLearningStandardItemRefIdType() *RelatedLearningStandardItemRefIdType {
+  if out, ok := RelatedLearningStandardItemRefIdTypePointer(RelatedLearningStandardItemRefIdType{}); !ok {
+                log.Fatalf("Could not create pointer to RelatedLearningStandardItemRefIdType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *RelationshipType) Clone() (*RelationshipType) {
 return reprint.This(t).(*RelationshipType)
@@ -5529,6 +9106,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to RelationshipType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewRelationshipType() *RelationshipType {
+  if out, ok := RelationshipTypePointer(RelationshipType{}); !ok {
+                log.Fatalf("Could not create pointer to RelationshipType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReligionType) Clone() (*ReligionType) {
@@ -5548,6 +9135,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewReligionType() *ReligionType {
+  if out, ok := ReligionTypePointer(ReligionType{}); !ok {
+                log.Fatalf("Could not create pointer to ReligionType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReligiousEventListType) Clone() (*ReligiousEventListType) {
 return reprint.This(t).(*ReligiousEventListType)
@@ -5565,6 +9162,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ReligiousEventListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewReligiousEventListType() *ReligiousEventListType {
+  if out, ok := ReligiousEventListTypePointer(ReligiousEventListType{}); !ok {
+                log.Fatalf("Could not create pointer to ReligiousEventListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReligiousEventType) Clone() (*ReligiousEventType) {
@@ -5584,6 +9191,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewReligiousEventType() *ReligiousEventType {
+  if out, ok := ReligiousEventTypePointer(ReligiousEventType{}); !ok {
+                log.Fatalf("Could not create pointer to ReligiousEventType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReportingAuthorityListType) Clone() (*ReportingAuthorityListType) {
 return reprint.This(t).(*ReportingAuthorityListType)
@@ -5601,6 +9218,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ReportingAuthorityListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewReportingAuthorityListType() *ReportingAuthorityListType {
+  if out, ok := ReportingAuthorityListTypePointer(ReportingAuthorityListType{}); !ok {
+                log.Fatalf("Could not create pointer to ReportingAuthorityListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ReportingAuthorityType) Clone() (*ReportingAuthorityType) {
@@ -5620,6 +9247,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewReportingAuthorityType() *ReportingAuthorityType {
+  if out, ok := ReportingAuthorityTypePointer(ReportingAuthorityType{}); !ok {
+                log.Fatalf("Could not create pointer to ReportingAuthorityType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ResourceBooking) Clone() (*ResourceBooking) {
 return reprint.This(t).(*ResourceBooking)
@@ -5638,6 +9275,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewResourceBooking() *ResourceBooking {
+  if out, ok := ResourceBookingPointer(ResourceBooking{}); !ok {
+                log.Fatalf("Could not create pointer to ResourceBooking\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ResourceBooking_ResourceRefId) Clone() (*ResourceBooking_ResourceRefId) {
 return reprint.This(t).(*ResourceBooking_ResourceRefId)
@@ -5653,6 +9300,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to ResourceBooking_ResourceRefId\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewResourceBooking_ResourceRefId() *ResourceBooking_ResourceRefId {
+  if out, ok := ResourceBooking_ResourceRefIdPointer(ResourceBooking_ResourceRefId{}); !ok {
+                log.Fatalf("Could not create pointer to ResourceBooking_ResourceRefId\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ResourceBookings) Clone() (*ResourceBookings) {
+return reprint.This(t).(*ResourceBookings)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ResourceBookingsPointer(value interface{}) (*ResourceBookings, bool) {
+switch t := value.(type) {
+        case *ResourceBookings:
+                return value.(*ResourceBookings), true
+        case ResourceBookings:
+                v, _ := value.(ResourceBookings)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ResourceBookings\n", t, value)
         }
         return nil, false
   }
@@ -5674,6 +9349,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewResourcesType() *ResourcesType {
+  if out, ok := ResourcesTypePointer(ResourcesType{}); !ok {
+                log.Fatalf("Could not create pointer to ResourcesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *RoomInfo) Clone() (*RoomInfo) {
 return reprint.This(t).(*RoomInfo)
@@ -5689,6 +9374,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to RoomInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewRoomInfo() *RoomInfo {
+  if out, ok := RoomInfoPointer(RoomInfo{}); !ok {
+                log.Fatalf("Could not create pointer to RoomInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *RoomInfos) Clone() (*RoomInfos) {
+return reprint.This(t).(*RoomInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func RoomInfosPointer(value interface{}) (*RoomInfos, bool) {
+switch t := value.(type) {
+        case *RoomInfos:
+                return value.(*RoomInfos), true
+        case RoomInfos:
+                v, _ := value.(RoomInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to RoomInfos\n", t, value)
         }
         return nil, false
   }
@@ -5710,6 +9423,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewRoomListType() *RoomListType {
+  if out, ok := RoomListTypePointer(RoomListType{}); !ok {
+                log.Fatalf("Could not create pointer to RoomListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SIF_ExtendedElementsType) Clone() (*SIF_ExtendedElementsType) {
 return reprint.This(t).(*SIF_ExtendedElementsType)
@@ -5727,6 +9450,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SIF_ExtendedElementsType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSIF_ExtendedElementsType() *SIF_ExtendedElementsType {
+  if out, ok := SIF_ExtendedElementsTypePointer(SIF_ExtendedElementsType{}); !ok {
+                log.Fatalf("Could not create pointer to SIF_ExtendedElementsType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SIF_ExtendedElementsType_SIF_ExtendedElement) Clone() (*SIF_ExtendedElementsType_SIF_ExtendedElement) {
@@ -5746,6 +9479,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSIF_ExtendedElementsType_SIF_ExtendedElement() *SIF_ExtendedElementsType_SIF_ExtendedElement {
+  if out, ok := SIF_ExtendedElementsType_SIF_ExtendedElementPointer(SIF_ExtendedElementsType_SIF_ExtendedElement{}); !ok {
+                log.Fatalf("Could not create pointer to SIF_ExtendedElementsType_SIF_ExtendedElement\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SIF_MetadataType) Clone() (*SIF_MetadataType) {
 return reprint.This(t).(*SIF_MetadataType)
@@ -5763,6 +9506,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SIF_MetadataType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSIF_MetadataType() *SIF_MetadataType {
+  if out, ok := SIF_MetadataTypePointer(SIF_MetadataType{}); !ok {
+                log.Fatalf("Could not create pointer to SIF_MetadataType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *STDNGradeListType) Clone() (*STDNGradeListType) {
@@ -5782,6 +9535,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSTDNGradeListType() *STDNGradeListType {
+  if out, ok := STDNGradeListTypePointer(STDNGradeListType{}); !ok {
+                log.Fatalf("Could not create pointer to STDNGradeListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *STDNGradeType) Clone() (*STDNGradeType) {
 return reprint.This(t).(*STDNGradeType)
@@ -5799,6 +9562,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to STDNGradeType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSTDNGradeType() *STDNGradeType {
+  if out, ok := STDNGradeTypePointer(STDNGradeType{}); !ok {
+                log.Fatalf("Could not create pointer to STDNGradeType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ScheduledActivity) Clone() (*ScheduledActivity) {
@@ -5818,6 +9591,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewScheduledActivity() *ScheduledActivity {
+  if out, ok := ScheduledActivityPointer(ScheduledActivity{}); !ok {
+                log.Fatalf("Could not create pointer to ScheduledActivity\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ScheduledActivityOverrideType) Clone() (*ScheduledActivityOverrideType) {
 return reprint.This(t).(*ScheduledActivityOverrideType)
@@ -5833,6 +9616,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to ScheduledActivityOverrideType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewScheduledActivityOverrideType() *ScheduledActivityOverrideType {
+  if out, ok := ScheduledActivityOverrideTypePointer(ScheduledActivityOverrideType{}); !ok {
+                log.Fatalf("Could not create pointer to ScheduledActivityOverrideType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *ScheduledActivitys) Clone() (*ScheduledActivitys) {
+return reprint.This(t).(*ScheduledActivitys)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func ScheduledActivitysPointer(value interface{}) (*ScheduledActivitys, bool) {
+switch t := value.(type) {
+        case *ScheduledActivitys:
+                return value.(*ScheduledActivitys), true
+        case ScheduledActivitys:
+                v, _ := value.(ScheduledActivitys)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to ScheduledActivitys\n", t, value)
         }
         return nil, false
   }
@@ -5854,6 +9665,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewScheduledTeacherListType() *ScheduledTeacherListType {
+  if out, ok := ScheduledTeacherListTypePointer(ScheduledTeacherListType{}); !ok {
+                log.Fatalf("Could not create pointer to ScheduledTeacherListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolContactListType) Clone() (*SchoolContactListType) {
 return reprint.This(t).(*SchoolContactListType)
@@ -5871,6 +9692,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SchoolContactListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolContactListType() *SchoolContactListType {
+  if out, ok := SchoolContactListTypePointer(SchoolContactListType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolContactListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolContactType) Clone() (*SchoolContactType) {
@@ -5890,6 +9721,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolContactType() *SchoolContactType {
+  if out, ok := SchoolContactTypePointer(SchoolContactType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolContactType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolCourseInfo) Clone() (*SchoolCourseInfo) {
 return reprint.This(t).(*SchoolCourseInfo)
@@ -5908,6 +9749,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolCourseInfo() *SchoolCourseInfo {
+  if out, ok := SchoolCourseInfoPointer(SchoolCourseInfo{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolCourseInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolCourseInfoOverrideType) Clone() (*SchoolCourseInfoOverrideType) {
 return reprint.This(t).(*SchoolCourseInfoOverrideType)
@@ -5923,6 +9774,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to SchoolCourseInfoOverrideType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolCourseInfoOverrideType() *SchoolCourseInfoOverrideType {
+  if out, ok := SchoolCourseInfoOverrideTypePointer(SchoolCourseInfoOverrideType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolCourseInfoOverrideType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SchoolCourseInfos) Clone() (*SchoolCourseInfos) {
+return reprint.This(t).(*SchoolCourseInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SchoolCourseInfosPointer(value interface{}) (*SchoolCourseInfos, bool) {
+switch t := value.(type) {
+        case *SchoolCourseInfos:
+                return value.(*SchoolCourseInfos), true
+        case SchoolCourseInfos:
+                v, _ := value.(SchoolCourseInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SchoolCourseInfos\n", t, value)
         }
         return nil, false
   }
@@ -5944,6 +9823,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolFocusListType() *SchoolFocusListType {
+  if out, ok := SchoolFocusListTypePointer(SchoolFocusListType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolFocusListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolGroupListType) Clone() (*SchoolGroupListType) {
 return reprint.This(t).(*SchoolGroupListType)
@@ -5961,6 +9850,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SchoolGroupListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolGroupListType() *SchoolGroupListType {
+  if out, ok := SchoolGroupListTypePointer(SchoolGroupListType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolGroupListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolInfo) Clone() (*SchoolInfo) {
@@ -5980,6 +9879,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolInfo() *SchoolInfo {
+  if out, ok := SchoolInfoPointer(SchoolInfo{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolInfo_OtherLEA) Clone() (*SchoolInfo_OtherLEA) {
 return reprint.This(t).(*SchoolInfo_OtherLEA)
@@ -5995,6 +9904,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to SchoolInfo_OtherLEA\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolInfo_OtherLEA() *SchoolInfo_OtherLEA {
+  if out, ok := SchoolInfo_OtherLEAPointer(SchoolInfo_OtherLEA{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolInfo_OtherLEA\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SchoolInfos) Clone() (*SchoolInfos) {
+return reprint.This(t).(*SchoolInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SchoolInfosPointer(value interface{}) (*SchoolInfos, bool) {
+switch t := value.(type) {
+        case *SchoolInfos:
+                return value.(*SchoolInfos), true
+        case SchoolInfos:
+                v, _ := value.(SchoolInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SchoolInfos\n", t, value)
         }
         return nil, false
   }
@@ -6016,6 +9953,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolProgramListType() *SchoolProgramListType {
+  if out, ok := SchoolProgramListTypePointer(SchoolProgramListType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolProgramListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolProgramType) Clone() (*SchoolProgramType) {
 return reprint.This(t).(*SchoolProgramType)
@@ -6034,6 +9981,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolProgramType() *SchoolProgramType {
+  if out, ok := SchoolProgramTypePointer(SchoolProgramType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolProgramType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SchoolPrograms) Clone() (*SchoolPrograms) {
 return reprint.This(t).(*SchoolPrograms)
@@ -6049,6 +10006,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to SchoolPrograms\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolPrograms() *SchoolPrograms {
+  if out, ok := SchoolProgramsPointer(SchoolPrograms{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolPrograms\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SchoolProgramss) Clone() (*SchoolProgramss) {
+return reprint.This(t).(*SchoolProgramss)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SchoolProgramssPointer(value interface{}) (*SchoolProgramss, bool) {
+switch t := value.(type) {
+        case *SchoolProgramss:
+                return value.(*SchoolProgramss), true
+        case SchoolProgramss:
+                v, _ := value.(SchoolProgramss)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SchoolProgramss\n", t, value)
         }
         return nil, false
   }
@@ -6070,6 +10055,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSchoolTravelType() *SchoolTravelType {
+  if out, ok := SchoolTravelTypePointer(SchoolTravelType{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolTravelType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ScoreDescriptionListType) Clone() (*ScoreDescriptionListType) {
 return reprint.This(t).(*ScoreDescriptionListType)
@@ -6087,6 +10082,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ScoreDescriptionListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewScoreDescriptionListType() *ScoreDescriptionListType {
+  if out, ok := ScoreDescriptionListTypePointer(ScoreDescriptionListType{}); !ok {
+                log.Fatalf("Could not create pointer to ScoreDescriptionListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ScoreDescriptionType) Clone() (*ScoreDescriptionType) {
@@ -6106,6 +10111,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewScoreDescriptionType() *ScoreDescriptionType {
+  if out, ok := ScoreDescriptionTypePointer(ScoreDescriptionType{}); !ok {
+                log.Fatalf("Could not create pointer to ScoreDescriptionType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ScoreListType) Clone() (*ScoreListType) {
 return reprint.This(t).(*ScoreListType)
@@ -6123,6 +10138,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ScoreListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewScoreListType() *ScoreListType {
+  if out, ok := ScoreListTypePointer(ScoreListType{}); !ok {
+                log.Fatalf("Could not create pointer to ScoreListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ScoreType) Clone() (*ScoreType) {
@@ -6142,6 +10167,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewScoreType() *ScoreType {
+  if out, ok := ScoreTypePointer(ScoreType{}); !ok {
+                log.Fatalf("Could not create pointer to ScoreType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SectionInfo) Clone() (*SectionInfo) {
 return reprint.This(t).(*SectionInfo)
@@ -6157,6 +10192,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to SectionInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSectionInfo() *SectionInfo {
+  if out, ok := SectionInfoPointer(SectionInfo{}); !ok {
+                log.Fatalf("Could not create pointer to SectionInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SectionInfos) Clone() (*SectionInfos) {
+return reprint.This(t).(*SectionInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SectionInfosPointer(value interface{}) (*SectionInfos, bool) {
+switch t := value.(type) {
+        case *SectionInfos:
+                return value.(*SectionInfos), true
+        case SectionInfos:
+                v, _ := value.(SectionInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SectionInfos\n", t, value)
         }
         return nil, false
   }
@@ -6178,6 +10241,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSessionInfo() *SessionInfo {
+  if out, ok := SessionInfoPointer(SessionInfo{}); !ok {
+                log.Fatalf("Could not create pointer to SessionInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *SessionInfos) Clone() (*SessionInfos) {
+return reprint.This(t).(*SessionInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func SessionInfosPointer(value interface{}) (*SessionInfos, bool) {
+switch t := value.(type) {
+        case *SessionInfos:
+                return value.(*SessionInfos), true
+        case SessionInfos:
+                v, _ := value.(SessionInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to SessionInfos\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SettingLocationListType) Clone() (*SettingLocationListType) {
 return reprint.This(t).(*SettingLocationListType)
@@ -6195,6 +10286,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SettingLocationListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSettingLocationListType() *SettingLocationListType {
+  if out, ok := SettingLocationListTypePointer(SettingLocationListType{}); !ok {
+                log.Fatalf("Could not create pointer to SettingLocationListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SettingLocationType) Clone() (*SettingLocationType) {
@@ -6214,6 +10315,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSettingLocationType() *SettingLocationType {
+  if out, ok := SettingLocationTypePointer(SettingLocationType{}); !ok {
+                log.Fatalf("Could not create pointer to SettingLocationType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ShareWithListType) Clone() (*ShareWithListType) {
 return reprint.This(t).(*ShareWithListType)
@@ -6231,6 +10342,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ShareWithListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewShareWithListType() *ShareWithListType {
+  if out, ok := ShareWithListTypePointer(ShareWithListType{}); !ok {
+                log.Fatalf("Could not create pointer to ShareWithListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ShareWithType) Clone() (*ShareWithType) {
@@ -6250,6 +10371,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewShareWithType() *ShareWithType {
+  if out, ok := ShareWithTypePointer(ShareWithType{}); !ok {
+                log.Fatalf("Could not create pointer to ShareWithType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SignatoryType) Clone() (*SignatoryType) {
 return reprint.This(t).(*SignatoryType)
@@ -6267,6 +10398,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SignatoryType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSignatoryType() *SignatoryType {
+  if out, ok := SignatoryTypePointer(SignatoryType{}); !ok {
+                log.Fatalf("Could not create pointer to SignatoryType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SoftwareRequirementListType) Clone() (*SoftwareRequirementListType) {
@@ -6286,6 +10427,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSoftwareRequirementListType() *SoftwareRequirementListType {
+  if out, ok := SoftwareRequirementListTypePointer(SoftwareRequirementListType{}); !ok {
+                log.Fatalf("Could not create pointer to SoftwareRequirementListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SoftwareRequirementType) Clone() (*SoftwareRequirementType) {
 return reprint.This(t).(*SoftwareRequirementType)
@@ -6303,6 +10454,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SoftwareRequirementType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSoftwareRequirementType() *SoftwareRequirementType {
+  if out, ok := SoftwareRequirementTypePointer(SoftwareRequirementType{}); !ok {
+                log.Fatalf("Could not create pointer to SoftwareRequirementType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SoftwareVendorInfoContainerType) Clone() (*SoftwareVendorInfoContainerType) {
@@ -6322,6 +10483,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSoftwareVendorInfoContainerType() *SoftwareVendorInfoContainerType {
+  if out, ok := SoftwareVendorInfoContainerTypePointer(SoftwareVendorInfoContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to SoftwareVendorInfoContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SourceObjectsType) Clone() (*SourceObjectsType) {
 return reprint.This(t).(*SourceObjectsType)
@@ -6339,6 +10510,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SourceObjectsType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSourceObjectsType() *SourceObjectsType {
+  if out, ok := SourceObjectsTypePointer(SourceObjectsType{}); !ok {
+                log.Fatalf("Could not create pointer to SourceObjectsType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SourceObjectsType_SourceObject) Clone() (*SourceObjectsType_SourceObject) {
@@ -6358,6 +10539,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSourceObjectsType_SourceObject() *SourceObjectsType_SourceObject {
+  if out, ok := SourceObjectsType_SourceObjectPointer(SourceObjectsType_SourceObject{}); !ok {
+                log.Fatalf("Could not create pointer to SourceObjectsType_SourceObject\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SpanGapListType) Clone() (*SpanGapListType) {
 return reprint.This(t).(*SpanGapListType)
@@ -6375,6 +10566,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SpanGapListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSpanGapListType() *SpanGapListType {
+  if out, ok := SpanGapListTypePointer(SpanGapListType{}); !ok {
+                log.Fatalf("Could not create pointer to SpanGapListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SpanGapType) Clone() (*SpanGapType) {
@@ -6394,6 +10595,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSpanGapType() *SpanGapType {
+  if out, ok := SpanGapTypePointer(SpanGapType{}); !ok {
+                log.Fatalf("Could not create pointer to SpanGapType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StaffActivityExtensionType) Clone() (*StaffActivityExtensionType) {
 return reprint.This(t).(*StaffActivityExtensionType)
@@ -6411,6 +10622,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StaffActivityExtensionType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStaffActivityExtensionType() *StaffActivityExtensionType {
+  if out, ok := StaffActivityExtensionTypePointer(StaffActivityExtensionType{}); !ok {
+                log.Fatalf("Could not create pointer to StaffActivityExtensionType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StaffAssignment) Clone() (*StaffAssignment) {
@@ -6430,6 +10651,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStaffAssignment() *StaffAssignment {
+  if out, ok := StaffAssignmentPointer(StaffAssignment{}); !ok {
+                log.Fatalf("Could not create pointer to StaffAssignment\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StaffAssignmentMostRecentContainerType) Clone() (*StaffAssignmentMostRecentContainerType) {
 return reprint.This(t).(*StaffAssignmentMostRecentContainerType)
@@ -6445,6 +10676,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StaffAssignmentMostRecentContainerType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStaffAssignmentMostRecentContainerType() *StaffAssignmentMostRecentContainerType {
+  if out, ok := StaffAssignmentMostRecentContainerTypePointer(StaffAssignmentMostRecentContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to StaffAssignmentMostRecentContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StaffAssignments) Clone() (*StaffAssignments) {
+return reprint.This(t).(*StaffAssignments)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StaffAssignmentsPointer(value interface{}) (*StaffAssignments, bool) {
+switch t := value.(type) {
+        case *StaffAssignments:
+                return value.(*StaffAssignments), true
+        case StaffAssignments:
+                v, _ := value.(StaffAssignments)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StaffAssignments\n", t, value)
         }
         return nil, false
   }
@@ -6466,6 +10725,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStaffListType() *StaffListType {
+  if out, ok := StaffListTypePointer(StaffListType{}); !ok {
+                log.Fatalf("Could not create pointer to StaffListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StaffMostRecentContainerType) Clone() (*StaffMostRecentContainerType) {
 return reprint.This(t).(*StaffMostRecentContainerType)
@@ -6484,6 +10753,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStaffMostRecentContainerType() *StaffMostRecentContainerType {
+  if out, ok := StaffMostRecentContainerTypePointer(StaffMostRecentContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to StaffMostRecentContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StaffPersonal) Clone() (*StaffPersonal) {
 return reprint.This(t).(*StaffPersonal)
@@ -6499,6 +10778,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StaffPersonal\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStaffPersonal() *StaffPersonal {
+  if out, ok := StaffPersonalPointer(StaffPersonal{}); !ok {
+                log.Fatalf("Could not create pointer to StaffPersonal\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StaffPersonals) Clone() (*StaffPersonals) {
+return reprint.This(t).(*StaffPersonals)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StaffPersonalsPointer(value interface{}) (*StaffPersonals, bool) {
+switch t := value.(type) {
+        case *StaffPersonals:
+                return value.(*StaffPersonals), true
+        case StaffPersonals:
+                v, _ := value.(StaffPersonals)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StaffPersonals\n", t, value)
         }
         return nil, false
   }
@@ -6520,6 +10827,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStaffRefIdType() *StaffRefIdType {
+  if out, ok := StaffRefIdTypePointer(StaffRefIdType{}); !ok {
+                log.Fatalf("Could not create pointer to StaffRefIdType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StaffSubjectListType) Clone() (*StaffSubjectListType) {
 return reprint.This(t).(*StaffSubjectListType)
@@ -6537,6 +10854,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StaffSubjectListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStaffSubjectListType() *StaffSubjectListType {
+  if out, ok := StaffSubjectListTypePointer(StaffSubjectListType{}); !ok {
+                log.Fatalf("Could not create pointer to StaffSubjectListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StaffSubjectType) Clone() (*StaffSubjectType) {
@@ -6556,6 +10883,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStaffSubjectType() *StaffSubjectType {
+  if out, ok := StaffSubjectTypePointer(StaffSubjectType{}); !ok {
+                log.Fatalf("Could not create pointer to StaffSubjectType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StandardHierarchyLevelType) Clone() (*StandardHierarchyLevelType) {
 return reprint.This(t).(*StandardHierarchyLevelType)
@@ -6573,6 +10910,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StandardHierarchyLevelType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStandardHierarchyLevelType() *StandardHierarchyLevelType {
+  if out, ok := StandardHierarchyLevelTypePointer(StandardHierarchyLevelType{}); !ok {
+                log.Fatalf("Could not create pointer to StandardHierarchyLevelType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StandardIdentifierType) Clone() (*StandardIdentifierType) {
@@ -6592,6 +10939,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStandardIdentifierType() *StandardIdentifierType {
+  if out, ok := StandardIdentifierTypePointer(StandardIdentifierType{}); !ok {
+                log.Fatalf("Could not create pointer to StandardIdentifierType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StandardsSettingBodyType) Clone() (*StandardsSettingBodyType) {
 return reprint.This(t).(*StandardsSettingBodyType)
@@ -6609,6 +10966,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StandardsSettingBodyType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStandardsSettingBodyType() *StandardsSettingBodyType {
+  if out, ok := StandardsSettingBodyTypePointer(StandardsSettingBodyType{}); !ok {
+                log.Fatalf("Could not create pointer to StandardsSettingBodyType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatementCodesType) Clone() (*StatementCodesType) {
@@ -6628,6 +10995,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStatementCodesType() *StatementCodesType {
+  if out, ok := StatementCodesTypePointer(StatementCodesType{}); !ok {
+                log.Fatalf("Could not create pointer to StatementCodesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatementsType) Clone() (*StatementsType) {
 return reprint.This(t).(*StatementsType)
@@ -6645,6 +11022,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StatementsType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStatementsType() *StatementsType {
+  if out, ok := StatementsTypePointer(StatementsType{}); !ok {
+                log.Fatalf("Could not create pointer to StatementsType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatisticalAreaType) Clone() (*StatisticalAreaType) {
@@ -6664,6 +11051,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStatisticalAreaType() *StatisticalAreaType {
+  if out, ok := StatisticalAreaTypePointer(StatisticalAreaType{}); !ok {
+                log.Fatalf("Could not create pointer to StatisticalAreaType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatisticalAreasType) Clone() (*StatisticalAreasType) {
 return reprint.This(t).(*StatisticalAreasType)
@@ -6681,6 +11078,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StatisticalAreasType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStatisticalAreasType() *StatisticalAreasType {
+  if out, ok := StatisticalAreasTypePointer(StatisticalAreasType{}); !ok {
+                log.Fatalf("Could not create pointer to StatisticalAreasType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatsCohortListType) Clone() (*StatsCohortListType) {
@@ -6700,6 +11107,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStatsCohortListType() *StatsCohortListType {
+  if out, ok := StatsCohortListTypePointer(StatsCohortListType{}); !ok {
+                log.Fatalf("Could not create pointer to StatsCohortListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatsCohortType) Clone() (*StatsCohortType) {
 return reprint.This(t).(*StatsCohortType)
@@ -6717,6 +11134,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StatsCohortType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStatsCohortType() *StatsCohortType {
+  if out, ok := StatsCohortTypePointer(StatsCohortType{}); !ok {
+                log.Fatalf("Could not create pointer to StatsCohortType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatsCohortYearLevelListType) Clone() (*StatsCohortYearLevelListType) {
@@ -6736,6 +11163,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStatsCohortYearLevelListType() *StatsCohortYearLevelListType {
+  if out, ok := StatsCohortYearLevelListTypePointer(StatsCohortYearLevelListType{}); !ok {
+                log.Fatalf("Could not create pointer to StatsCohortYearLevelListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StatsCohortYearLevelType) Clone() (*StatsCohortYearLevelType) {
 return reprint.This(t).(*StatsCohortYearLevelType)
@@ -6753,6 +11190,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StatsCohortYearLevelType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStatsCohortYearLevelType() *StatsCohortYearLevelType {
+  if out, ok := StatsCohortYearLevelTypePointer(StatsCohortYearLevelType{}); !ok {
+                log.Fatalf("Could not create pointer to StatsCohortYearLevelType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StimulusListType) Clone() (*StimulusListType) {
@@ -6772,6 +11219,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStimulusListType() *StimulusListType {
+  if out, ok := StimulusListTypePointer(StimulusListType{}); !ok {
+                log.Fatalf("Could not create pointer to StimulusListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StimulusLocalIdListType) Clone() (*StimulusLocalIdListType) {
 return reprint.This(t).(*StimulusLocalIdListType)
@@ -6789,6 +11246,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StimulusLocalIdListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStimulusLocalIdListType() *StimulusLocalIdListType {
+  if out, ok := StimulusLocalIdListTypePointer(StimulusLocalIdListType{}); !ok {
+                log.Fatalf("Could not create pointer to StimulusLocalIdListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StimulusType) Clone() (*StimulusType) {
@@ -6808,6 +11275,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStimulusType() *StimulusType {
+  if out, ok := StimulusTypePointer(StimulusType{}); !ok {
+                log.Fatalf("Could not create pointer to StimulusType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StrategiesType) Clone() (*StrategiesType) {
 return reprint.This(t).(*StrategiesType)
@@ -6826,6 +11303,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStrategiesType() *StrategiesType {
+  if out, ok := StrategiesTypePointer(StrategiesType{}); !ok {
+                log.Fatalf("Could not create pointer to StrategiesType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentActivityInfo) Clone() (*StudentActivityInfo) {
 return reprint.This(t).(*StudentActivityInfo)
@@ -6841,6 +11328,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentActivityInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentActivityInfo() *StudentActivityInfo {
+  if out, ok := StudentActivityInfoPointer(StudentActivityInfo{}); !ok {
+                log.Fatalf("Could not create pointer to StudentActivityInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentActivityInfos) Clone() (*StudentActivityInfos) {
+return reprint.This(t).(*StudentActivityInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentActivityInfosPointer(value interface{}) (*StudentActivityInfos, bool) {
+switch t := value.(type) {
+        case *StudentActivityInfos:
+                return value.(*StudentActivityInfos), true
+        case StudentActivityInfos:
+                v, _ := value.(StudentActivityInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentActivityInfos\n", t, value)
         }
         return nil, false
   }
@@ -6862,6 +11377,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentActivityParticipation() *StudentActivityParticipation {
+  if out, ok := StudentActivityParticipationPointer(StudentActivityParticipation{}); !ok {
+                log.Fatalf("Could not create pointer to StudentActivityParticipation\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentActivityParticipations) Clone() (*StudentActivityParticipations) {
+return reprint.This(t).(*StudentActivityParticipations)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentActivityParticipationsPointer(value interface{}) (*StudentActivityParticipations, bool) {
+switch t := value.(type) {
+        case *StudentActivityParticipations:
+                return value.(*StudentActivityParticipations), true
+        case StudentActivityParticipations:
+                v, _ := value.(StudentActivityParticipations)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentActivityParticipations\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentActivityType) Clone() (*StudentActivityType) {
 return reprint.This(t).(*StudentActivityType)
@@ -6879,6 +11422,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentActivityType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentActivityType() *StudentActivityType {
+  if out, ok := StudentActivityTypePointer(StudentActivityType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentActivityType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentAttendanceCollection) Clone() (*StudentAttendanceCollection) {
@@ -6898,6 +11451,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentAttendanceCollection() *StudentAttendanceCollection {
+  if out, ok := StudentAttendanceCollectionPointer(StudentAttendanceCollection{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceCollection\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentAttendanceCollectionReportingListType) Clone() (*StudentAttendanceCollectionReportingListType) {
 return reprint.This(t).(*StudentAttendanceCollectionReportingListType)
@@ -6916,6 +11479,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentAttendanceCollectionReportingListType() *StudentAttendanceCollectionReportingListType {
+  if out, ok := StudentAttendanceCollectionReportingListTypePointer(StudentAttendanceCollectionReportingListType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceCollectionReportingListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentAttendanceCollectionReportingType) Clone() (*StudentAttendanceCollectionReportingType) {
 return reprint.This(t).(*StudentAttendanceCollectionReportingType)
@@ -6931,6 +11504,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentAttendanceCollectionReportingType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentAttendanceCollectionReportingType() *StudentAttendanceCollectionReportingType {
+  if out, ok := StudentAttendanceCollectionReportingTypePointer(StudentAttendanceCollectionReportingType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceCollectionReportingType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentAttendanceCollections) Clone() (*StudentAttendanceCollections) {
+return reprint.This(t).(*StudentAttendanceCollections)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentAttendanceCollectionsPointer(value interface{}) (*StudentAttendanceCollections, bool) {
+switch t := value.(type) {
+        case *StudentAttendanceCollections:
+                return value.(*StudentAttendanceCollections), true
+        case StudentAttendanceCollections:
+                v, _ := value.(StudentAttendanceCollections)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentAttendanceCollections\n", t, value)
         }
         return nil, false
   }
@@ -6952,6 +11553,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentAttendanceSummary() *StudentAttendanceSummary {
+  if out, ok := StudentAttendanceSummaryPointer(StudentAttendanceSummary{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceSummary\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentAttendanceSummarys) Clone() (*StudentAttendanceSummarys) {
+return reprint.This(t).(*StudentAttendanceSummarys)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentAttendanceSummarysPointer(value interface{}) (*StudentAttendanceSummarys, bool) {
+switch t := value.(type) {
+        case *StudentAttendanceSummarys:
+                return value.(*StudentAttendanceSummarys), true
+        case StudentAttendanceSummarys:
+                v, _ := value.(StudentAttendanceSummarys)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentAttendanceSummarys\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentAttendanceTimeList) Clone() (*StudentAttendanceTimeList) {
 return reprint.This(t).(*StudentAttendanceTimeList)
@@ -6967,6 +11596,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentAttendanceTimeList\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentAttendanceTimeList() *StudentAttendanceTimeList {
+  if out, ok := StudentAttendanceTimeListPointer(StudentAttendanceTimeList{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceTimeList\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentAttendanceTimeLists) Clone() (*StudentAttendanceTimeLists) {
+return reprint.This(t).(*StudentAttendanceTimeLists)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentAttendanceTimeListsPointer(value interface{}) (*StudentAttendanceTimeLists, bool) {
+switch t := value.(type) {
+        case *StudentAttendanceTimeLists:
+                return value.(*StudentAttendanceTimeLists), true
+        case StudentAttendanceTimeLists:
+                v, _ := value.(StudentAttendanceTimeLists)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentAttendanceTimeLists\n", t, value)
         }
         return nil, false
   }
@@ -6988,6 +11645,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentContactFeePercentageType() *StudentContactFeePercentageType {
+  if out, ok := StudentContactFeePercentageTypePointer(StudentContactFeePercentageType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentContactFeePercentageType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentContactPersonal) Clone() (*StudentContactPersonal) {
 return reprint.This(t).(*StudentContactPersonal)
@@ -7003,6 +11670,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentContactPersonal\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentContactPersonal() *StudentContactPersonal {
+  if out, ok := StudentContactPersonalPointer(StudentContactPersonal{}); !ok {
+                log.Fatalf("Could not create pointer to StudentContactPersonal\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentContactPersonals) Clone() (*StudentContactPersonals) {
+return reprint.This(t).(*StudentContactPersonals)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentContactPersonalsPointer(value interface{}) (*StudentContactPersonals, bool) {
+switch t := value.(type) {
+        case *StudentContactPersonals:
+                return value.(*StudentContactPersonals), true
+        case StudentContactPersonals:
+                v, _ := value.(StudentContactPersonals)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentContactPersonals\n", t, value)
         }
         return nil, false
   }
@@ -7024,6 +11719,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentContactRelationship() *StudentContactRelationship {
+  if out, ok := StudentContactRelationshipPointer(StudentContactRelationship{}); !ok {
+                log.Fatalf("Could not create pointer to StudentContactRelationship\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentContactRelationships) Clone() (*StudentContactRelationships) {
+return reprint.This(t).(*StudentContactRelationships)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentContactRelationshipsPointer(value interface{}) (*StudentContactRelationships, bool) {
+switch t := value.(type) {
+        case *StudentContactRelationships:
+                return value.(*StudentContactRelationships), true
+        case StudentContactRelationships:
+                v, _ := value.(StudentContactRelationships)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentContactRelationships\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentDailyAttendance) Clone() (*StudentDailyAttendance) {
 return reprint.This(t).(*StudentDailyAttendance)
@@ -7039,6 +11762,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentDailyAttendance\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentDailyAttendance() *StudentDailyAttendance {
+  if out, ok := StudentDailyAttendancePointer(StudentDailyAttendance{}); !ok {
+                log.Fatalf("Could not create pointer to StudentDailyAttendance\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentDailyAttendances) Clone() (*StudentDailyAttendances) {
+return reprint.This(t).(*StudentDailyAttendances)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentDailyAttendancesPointer(value interface{}) (*StudentDailyAttendances, bool) {
+switch t := value.(type) {
+        case *StudentDailyAttendances:
+                return value.(*StudentDailyAttendances), true
+        case StudentDailyAttendances:
+                v, _ := value.(StudentDailyAttendances)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentDailyAttendances\n", t, value)
         }
         return nil, false
   }
@@ -7060,6 +11811,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentDataTransferNote() *StudentDataTransferNote {
+  if out, ok := StudentDataTransferNotePointer(StudentDataTransferNote{}); !ok {
+                log.Fatalf("Could not create pointer to StudentDataTransferNote\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentDataTransferNotes) Clone() (*StudentDataTransferNotes) {
+return reprint.This(t).(*StudentDataTransferNotes)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentDataTransferNotesPointer(value interface{}) (*StudentDataTransferNotes, bool) {
+switch t := value.(type) {
+        case *StudentDataTransferNotes:
+                return value.(*StudentDataTransferNotes), true
+        case StudentDataTransferNotes:
+                v, _ := value.(StudentDataTransferNotes)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentDataTransferNotes\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentEntryContainerType) Clone() (*StudentEntryContainerType) {
 return reprint.This(t).(*StudentEntryContainerType)
@@ -7077,6 +11856,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentEntryContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentEntryContainerType() *StudentEntryContainerType {
+  if out, ok := StudentEntryContainerTypePointer(StudentEntryContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentEntryContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentExitContainerType) Clone() (*StudentExitContainerType) {
@@ -7096,6 +11885,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentExitContainerType() *StudentExitContainerType {
+  if out, ok := StudentExitContainerTypePointer(StudentExitContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentExitContainerType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentExitStatusContainerType) Clone() (*StudentExitStatusContainerType) {
 return reprint.This(t).(*StudentExitStatusContainerType)
@@ -7113,6 +11912,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentExitStatusContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentExitStatusContainerType() *StudentExitStatusContainerType {
+  if out, ok := StudentExitStatusContainerTypePointer(StudentExitStatusContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentExitStatusContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentGrade) Clone() (*StudentGrade) {
@@ -7132,6 +11941,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentGrade() *StudentGrade {
+  if out, ok := StudentGradePointer(StudentGrade{}); !ok {
+                log.Fatalf("Could not create pointer to StudentGrade\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentGradeMarkersListType) Clone() (*StudentGradeMarkersListType) {
 return reprint.This(t).(*StudentGradeMarkersListType)
@@ -7147,6 +11966,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentGradeMarkersListType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentGradeMarkersListType() *StudentGradeMarkersListType {
+  if out, ok := StudentGradeMarkersListTypePointer(StudentGradeMarkersListType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentGradeMarkersListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentGrades) Clone() (*StudentGrades) {
+return reprint.This(t).(*StudentGrades)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentGradesPointer(value interface{}) (*StudentGrades, bool) {
+switch t := value.(type) {
+        case *StudentGrades:
+                return value.(*StudentGrades), true
+        case StudentGrades:
+                v, _ := value.(StudentGrades)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentGrades\n", t, value)
         }
         return nil, false
   }
@@ -7168,6 +12015,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentGroupListType() *StudentGroupListType {
+  if out, ok := StudentGroupListTypePointer(StudentGroupListType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentGroupListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentGroupType) Clone() (*StudentGroupType) {
 return reprint.This(t).(*StudentGroupType)
@@ -7185,6 +12042,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentGroupType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentGroupType() *StudentGroupType {
+  if out, ok := StudentGroupTypePointer(StudentGroupType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentGroupType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentListType) Clone() (*StudentListType) {
@@ -7204,6 +12071,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentListType() *StudentListType {
+  if out, ok := StudentListTypePointer(StudentListType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentMostRecentContainerType) Clone() (*StudentMostRecentContainerType) {
 return reprint.This(t).(*StudentMostRecentContainerType)
@@ -7221,6 +12098,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentMostRecentContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentMostRecentContainerType() *StudentMostRecentContainerType {
+  if out, ok := StudentMostRecentContainerTypePointer(StudentMostRecentContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentMostRecentContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentParticipation) Clone() (*StudentParticipation) {
@@ -7240,6 +12127,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentParticipation() *StudentParticipation {
+  if out, ok := StudentParticipationPointer(StudentParticipation{}); !ok {
+                log.Fatalf("Could not create pointer to StudentParticipation\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentParticipation_ManagingSchool) Clone() (*StudentParticipation_ManagingSchool) {
 return reprint.This(t).(*StudentParticipation_ManagingSchool)
@@ -7255,6 +12152,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentParticipation_ManagingSchool\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentParticipation_ManagingSchool() *StudentParticipation_ManagingSchool {
+  if out, ok := StudentParticipation_ManagingSchoolPointer(StudentParticipation_ManagingSchool{}); !ok {
+                log.Fatalf("Could not create pointer to StudentParticipation_ManagingSchool\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentParticipations) Clone() (*StudentParticipations) {
+return reprint.This(t).(*StudentParticipations)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentParticipationsPointer(value interface{}) (*StudentParticipations, bool) {
+switch t := value.(type) {
+        case *StudentParticipations:
+                return value.(*StudentParticipations), true
+        case StudentParticipations:
+                v, _ := value.(StudentParticipations)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentParticipations\n", t, value)
         }
         return nil, false
   }
@@ -7276,6 +12201,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentPeriodAttendance() *StudentPeriodAttendance {
+  if out, ok := StudentPeriodAttendancePointer(StudentPeriodAttendance{}); !ok {
+                log.Fatalf("Could not create pointer to StudentPeriodAttendance\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentPeriodAttendances) Clone() (*StudentPeriodAttendances) {
+return reprint.This(t).(*StudentPeriodAttendances)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentPeriodAttendancesPointer(value interface{}) (*StudentPeriodAttendances, bool) {
+switch t := value.(type) {
+        case *StudentPeriodAttendances:
+                return value.(*StudentPeriodAttendances), true
+        case StudentPeriodAttendances:
+                v, _ := value.(StudentPeriodAttendances)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentPeriodAttendances\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentPersonal) Clone() (*StudentPersonal) {
 return reprint.This(t).(*StudentPersonal)
@@ -7291,6 +12244,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentPersonal\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentPersonal() *StudentPersonal {
+  if out, ok := StudentPersonalPointer(StudentPersonal{}); !ok {
+                log.Fatalf("Could not create pointer to StudentPersonal\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentPersonals) Clone() (*StudentPersonals) {
+return reprint.This(t).(*StudentPersonals)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentPersonalsPointer(value interface{}) (*StudentPersonals, bool) {
+switch t := value.(type) {
+        case *StudentPersonals:
+                return value.(*StudentPersonals), true
+        case StudentPersonals:
+                v, _ := value.(StudentPersonals)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentPersonals\n", t, value)
         }
         return nil, false
   }
@@ -7312,6 +12293,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentSchoolEnrollment() *StudentSchoolEnrollment {
+  if out, ok := StudentSchoolEnrollmentPointer(StudentSchoolEnrollment{}); !ok {
+                log.Fatalf("Could not create pointer to StudentSchoolEnrollment\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentSchoolEnrollment_Calendar) Clone() (*StudentSchoolEnrollment_Calendar) {
 return reprint.This(t).(*StudentSchoolEnrollment_Calendar)
@@ -7327,6 +12318,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentSchoolEnrollment_Calendar\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentSchoolEnrollment_Calendar() *StudentSchoolEnrollment_Calendar {
+  if out, ok := StudentSchoolEnrollment_CalendarPointer(StudentSchoolEnrollment_Calendar{}); !ok {
+                log.Fatalf("Could not create pointer to StudentSchoolEnrollment_Calendar\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentSchoolEnrollments) Clone() (*StudentSchoolEnrollments) {
+return reprint.This(t).(*StudentSchoolEnrollments)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentSchoolEnrollmentsPointer(value interface{}) (*StudentSchoolEnrollments, bool) {
+switch t := value.(type) {
+        case *StudentSchoolEnrollments:
+                return value.(*StudentSchoolEnrollments), true
+        case StudentSchoolEnrollments:
+                v, _ := value.(StudentSchoolEnrollments)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentSchoolEnrollments\n", t, value)
         }
         return nil, false
   }
@@ -7348,6 +12367,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentScoreJudgementAgainstStandard() *StudentScoreJudgementAgainstStandard {
+  if out, ok := StudentScoreJudgementAgainstStandardPointer(StudentScoreJudgementAgainstStandard{}); !ok {
+                log.Fatalf("Could not create pointer to StudentScoreJudgementAgainstStandard\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentScoreJudgementAgainstStandards) Clone() (*StudentScoreJudgementAgainstStandards) {
+return reprint.This(t).(*StudentScoreJudgementAgainstStandards)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentScoreJudgementAgainstStandardsPointer(value interface{}) (*StudentScoreJudgementAgainstStandards, bool) {
+switch t := value.(type) {
+        case *StudentScoreJudgementAgainstStandards:
+                return value.(*StudentScoreJudgementAgainstStandards), true
+        case StudentScoreJudgementAgainstStandards:
+                v, _ := value.(StudentScoreJudgementAgainstStandards)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentScoreJudgementAgainstStandards\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentSectionEnrollment) Clone() (*StudentSectionEnrollment) {
 return reprint.This(t).(*StudentSectionEnrollment)
@@ -7363,6 +12410,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentSectionEnrollment\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentSectionEnrollment() *StudentSectionEnrollment {
+  if out, ok := StudentSectionEnrollmentPointer(StudentSectionEnrollment{}); !ok {
+                log.Fatalf("Could not create pointer to StudentSectionEnrollment\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *StudentSectionEnrollments) Clone() (*StudentSectionEnrollments) {
+return reprint.This(t).(*StudentSectionEnrollments)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func StudentSectionEnrollmentsPointer(value interface{}) (*StudentSectionEnrollments, bool) {
+switch t := value.(type) {
+        case *StudentSectionEnrollments:
+                return value.(*StudentSectionEnrollments), true
+        case StudentSectionEnrollments:
+                v, _ := value.(StudentSectionEnrollments)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to StudentSectionEnrollments\n", t, value)
         }
         return nil, false
   }
@@ -7384,6 +12459,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentSubjectChoiceListType() *StudentSubjectChoiceListType {
+  if out, ok := StudentSubjectChoiceListTypePointer(StudentSubjectChoiceListType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentSubjectChoiceListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentSubjectChoiceType) Clone() (*StudentSubjectChoiceType) {
 return reprint.This(t).(*StudentSubjectChoiceType)
@@ -7401,6 +12486,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to StudentSubjectChoiceType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewStudentSubjectChoiceType() *StudentSubjectChoiceType {
+  if out, ok := StudentSubjectChoiceTypePointer(StudentSubjectChoiceType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentSubjectChoiceType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *StudentsType) Clone() (*StudentsType) {
@@ -7420,6 +12515,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewStudentsType() *StudentsType {
+  if out, ok := StudentsTypePointer(StudentsType{}); !ok {
+                log.Fatalf("Could not create pointer to StudentsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SubjectAreaListType) Clone() (*SubjectAreaListType) {
 return reprint.This(t).(*SubjectAreaListType)
@@ -7437,6 +12542,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SubjectAreaListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSubjectAreaListType() *SubjectAreaListType {
+  if out, ok := SubjectAreaListTypePointer(SubjectAreaListType{}); !ok {
+                log.Fatalf("Could not create pointer to SubjectAreaListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SubjectAreaType) Clone() (*SubjectAreaType) {
@@ -7456,6 +12571,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSubjectAreaType() *SubjectAreaType {
+  if out, ok := SubjectAreaTypePointer(SubjectAreaType{}); !ok {
+                log.Fatalf("Could not create pointer to SubjectAreaType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SubstituteItemListType) Clone() (*SubstituteItemListType) {
 return reprint.This(t).(*SubstituteItemListType)
@@ -7473,6 +12598,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SubstituteItemListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSubstituteItemListType() *SubstituteItemListType {
+  if out, ok := SubstituteItemListTypePointer(SubstituteItemListType{}); !ok {
+                log.Fatalf("Could not create pointer to SubstituteItemListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SubstituteItemType) Clone() (*SubstituteItemType) {
@@ -7492,6 +12627,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSubstituteItemType() *SubstituteItemType {
+  if out, ok := SubstituteItemTypePointer(SubstituteItemType{}); !ok {
+                log.Fatalf("Could not create pointer to SubstituteItemType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SuspensionContainerType) Clone() (*SuspensionContainerType) {
 return reprint.This(t).(*SuspensionContainerType)
@@ -7509,6 +12654,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to SuspensionContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSuspensionContainerType() *SuspensionContainerType {
+  if out, ok := SuspensionContainerTypePointer(SuspensionContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to SuspensionContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *SymptomListType) Clone() (*SymptomListType) {
@@ -7528,6 +12683,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewSymptomListType() *SymptomListType {
+  if out, ok := SymptomListTypePointer(SymptomListType{}); !ok {
+                log.Fatalf("Could not create pointer to SymptomListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeacherCoverType) Clone() (*TeacherCoverType) {
 return reprint.This(t).(*TeacherCoverType)
@@ -7545,6 +12710,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TeacherCoverType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTeacherCoverType() *TeacherCoverType {
+  if out, ok := TeacherCoverTypePointer(TeacherCoverType{}); !ok {
+                log.Fatalf("Could not create pointer to TeacherCoverType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeacherListType) Clone() (*TeacherListType) {
@@ -7564,6 +12739,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTeacherListType() *TeacherListType {
+  if out, ok := TeacherListTypePointer(TeacherListType{}); !ok {
+                log.Fatalf("Could not create pointer to TeacherListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroup) Clone() (*TeachingGroup) {
 return reprint.This(t).(*TeachingGroup)
@@ -7581,6 +12766,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TeachingGroup\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroup() *TeachingGroup {
+  if out, ok := TeachingGroupPointer(TeachingGroup{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroup\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroupListType) Clone() (*TeachingGroupListType) {
@@ -7600,6 +12795,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroupListType() *TeachingGroupListType {
+  if out, ok := TeachingGroupListTypePointer(TeachingGroupListType{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroupListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroupPeriodListType) Clone() (*TeachingGroupPeriodListType) {
 return reprint.This(t).(*TeachingGroupPeriodListType)
@@ -7617,6 +12822,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TeachingGroupPeriodListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroupPeriodListType() *TeachingGroupPeriodListType {
+  if out, ok := TeachingGroupPeriodListTypePointer(TeachingGroupPeriodListType{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroupPeriodListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroupPeriodType) Clone() (*TeachingGroupPeriodType) {
@@ -7636,6 +12851,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroupPeriodType() *TeachingGroupPeriodType {
+  if out, ok := TeachingGroupPeriodTypePointer(TeachingGroupPeriodType{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroupPeriodType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroupScheduleListType) Clone() (*TeachingGroupScheduleListType) {
 return reprint.This(t).(*TeachingGroupScheduleListType)
@@ -7653,6 +12878,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TeachingGroupScheduleListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroupScheduleListType() *TeachingGroupScheduleListType {
+  if out, ok := TeachingGroupScheduleListTypePointer(TeachingGroupScheduleListType{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroupScheduleListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroupScheduleType) Clone() (*TeachingGroupScheduleType) {
@@ -7672,6 +12907,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroupScheduleType() *TeachingGroupScheduleType {
+  if out, ok := TeachingGroupScheduleTypePointer(TeachingGroupScheduleType{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroupScheduleType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroupStudentType) Clone() (*TeachingGroupStudentType) {
 return reprint.This(t).(*TeachingGroupStudentType)
@@ -7690,6 +12935,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroupStudentType() *TeachingGroupStudentType {
+  if out, ok := TeachingGroupStudentTypePointer(TeachingGroupStudentType{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroupStudentType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TeachingGroupTeacherType) Clone() (*TeachingGroupTeacherType) {
 return reprint.This(t).(*TeachingGroupTeacherType)
@@ -7705,6 +12960,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to TeachingGroupTeacherType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTeachingGroupTeacherType() *TeachingGroupTeacherType {
+  if out, ok := TeachingGroupTeacherTypePointer(TeachingGroupTeacherType{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroupTeacherType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TeachingGroups) Clone() (*TeachingGroups) {
+return reprint.This(t).(*TeachingGroups)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TeachingGroupsPointer(value interface{}) (*TeachingGroups, bool) {
+switch t := value.(type) {
+        case *TeachingGroups:
+                return value.(*TeachingGroups), true
+        case TeachingGroups:
+                v, _ := value.(TeachingGroups)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TeachingGroups\n", t, value)
         }
         return nil, false
   }
@@ -7726,6 +13009,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTechnicalRequirementsType() *TechnicalRequirementsType {
+  if out, ok := TechnicalRequirementsTypePointer(TechnicalRequirementsType{}); !ok {
+                log.Fatalf("Could not create pointer to TechnicalRequirementsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TermInfo) Clone() (*TermInfo) {
 return reprint.This(t).(*TermInfo)
@@ -7741,6 +13034,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to TermInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTermInfo() *TermInfo {
+  if out, ok := TermInfoPointer(TermInfo{}); !ok {
+                log.Fatalf("Could not create pointer to TermInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TermInfos) Clone() (*TermInfos) {
+return reprint.This(t).(*TermInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TermInfosPointer(value interface{}) (*TermInfos, bool) {
+switch t := value.(type) {
+        case *TermInfos:
+                return value.(*TermInfos), true
+        case TermInfos:
+                v, _ := value.(TermInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TermInfos\n", t, value)
         }
         return nil, false
   }
@@ -7762,6 +13083,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTestDisruptionListType() *TestDisruptionListType {
+  if out, ok := TestDisruptionListTypePointer(TestDisruptionListType{}); !ok {
+                log.Fatalf("Could not create pointer to TestDisruptionListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TestDisruptionType) Clone() (*TestDisruptionType) {
 return reprint.This(t).(*TestDisruptionType)
@@ -7779,6 +13110,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TestDisruptionType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTestDisruptionType() *TestDisruptionType {
+  if out, ok := TestDisruptionTypePointer(TestDisruptionType{}); !ok {
+                log.Fatalf("Could not create pointer to TestDisruptionType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TextDataType) Clone() (*TextDataType) {
@@ -7798,6 +13139,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTextDataType() *TextDataType {
+  if out, ok := TextDataTypePointer(TextDataType{}); !ok {
+                log.Fatalf("Could not create pointer to TextDataType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeElementListType) Clone() (*TimeElementListType) {
 return reprint.This(t).(*TimeElementListType)
@@ -7815,6 +13166,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeElementListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTimeElementListType() *TimeElementListType {
+  if out, ok := TimeElementListTypePointer(TimeElementListType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeElementListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeElementType) Clone() (*TimeElementType) {
@@ -7834,6 +13195,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeElementType() *TimeElementType {
+  if out, ok := TimeElementTypePointer(TimeElementType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeElementType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTable) Clone() (*TimeTable) {
 return reprint.This(t).(*TimeTable)
@@ -7852,6 +13223,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTable() *TimeTable {
+  if out, ok := TimeTablePointer(TimeTable{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTable\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableCell) Clone() (*TimeTableCell) {
 return reprint.This(t).(*TimeTableCell)
@@ -7867,6 +13248,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableCell\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableCell() *TimeTableCell {
+  if out, ok := TimeTableCellPointer(TimeTableCell{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableCell\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TimeTableCells) Clone() (*TimeTableCells) {
+return reprint.This(t).(*TimeTableCells)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TimeTableCellsPointer(value interface{}) (*TimeTableCells, bool) {
+switch t := value.(type) {
+        case *TimeTableCells:
+                return value.(*TimeTableCells), true
+        case TimeTableCells:
+                v, _ := value.(TimeTableCells)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableCells\n", t, value)
         }
         return nil, false
   }
@@ -7888,6 +13297,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableChangeReasonListType() *TimeTableChangeReasonListType {
+  if out, ok := TimeTableChangeReasonListTypePointer(TimeTableChangeReasonListType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableChangeReasonListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableChangeReasonType) Clone() (*TimeTableChangeReasonType) {
 return reprint.This(t).(*TimeTableChangeReasonType)
@@ -7906,6 +13325,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableChangeReasonType() *TimeTableChangeReasonType {
+  if out, ok := TimeTableChangeReasonTypePointer(TimeTableChangeReasonType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableChangeReasonType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableContainer) Clone() (*TimeTableContainer) {
 return reprint.This(t).(*TimeTableContainer)
@@ -7921,6 +13350,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableContainer\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableContainer() *TimeTableContainer {
+  if out, ok := TimeTableContainerPointer(TimeTableContainer{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableContainer\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TimeTableContainers) Clone() (*TimeTableContainers) {
+return reprint.This(t).(*TimeTableContainers)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TimeTableContainersPointer(value interface{}) (*TimeTableContainers, bool) {
+switch t := value.(type) {
+        case *TimeTableContainers:
+                return value.(*TimeTableContainers), true
+        case TimeTableContainers:
+                v, _ := value.(TimeTableContainers)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableContainers\n", t, value)
         }
         return nil, false
   }
@@ -7942,6 +13399,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableDayListType() *TimeTableDayListType {
+  if out, ok := TimeTableDayListTypePointer(TimeTableDayListType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableDayListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableDayType) Clone() (*TimeTableDayType) {
 return reprint.This(t).(*TimeTableDayType)
@@ -7959,6 +13426,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableDayType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableDayType() *TimeTableDayType {
+  if out, ok := TimeTableDayTypePointer(TimeTableDayType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableDayType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTablePeriodListType) Clone() (*TimeTablePeriodListType) {
@@ -7978,6 +13455,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTablePeriodListType() *TimeTablePeriodListType {
+  if out, ok := TimeTablePeriodListTypePointer(TimeTablePeriodListType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTablePeriodListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTablePeriodType) Clone() (*TimeTablePeriodType) {
 return reprint.This(t).(*TimeTablePeriodType)
@@ -7995,6 +13482,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeTablePeriodType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTablePeriodType() *TimeTablePeriodType {
+  if out, ok := TimeTablePeriodTypePointer(TimeTablePeriodType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTablePeriodType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableScheduleCellListType) Clone() (*TimeTableScheduleCellListType) {
@@ -8014,6 +13511,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableScheduleCellListType() *TimeTableScheduleCellListType {
+  if out, ok := TimeTableScheduleCellListTypePointer(TimeTableScheduleCellListType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableScheduleCellListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableScheduleCellType) Clone() (*TimeTableScheduleCellType) {
 return reprint.This(t).(*TimeTableScheduleCellType)
@@ -8031,6 +13538,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableScheduleCellType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableScheduleCellType() *TimeTableScheduleCellType {
+  if out, ok := TimeTableScheduleCellTypePointer(TimeTableScheduleCellType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableScheduleCellType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableScheduleType) Clone() (*TimeTableScheduleType) {
@@ -8050,6 +13567,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableScheduleType() *TimeTableScheduleType {
+  if out, ok := TimeTableScheduleTypePointer(TimeTableScheduleType{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableScheduleType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TimeTableSubject) Clone() (*TimeTableSubject) {
 return reprint.This(t).(*TimeTableSubject)
@@ -8065,6 +13592,52 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableSubject\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTimeTableSubject() *TimeTableSubject {
+  if out, ok := TimeTableSubjectPointer(TimeTableSubject{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableSubject\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TimeTableSubjects) Clone() (*TimeTableSubjects) {
+return reprint.This(t).(*TimeTableSubjects)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TimeTableSubjectsPointer(value interface{}) (*TimeTableSubjects, bool) {
+switch t := value.(type) {
+        case *TimeTableSubjects:
+                return value.(*TimeTableSubjects), true
+        case TimeTableSubjects:
+                v, _ := value.(TimeTableSubjects)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TimeTableSubjects\n", t, value)
+        }
+        return nil, false
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *TimeTables) Clone() (*TimeTables) {
+return reprint.This(t).(*TimeTables)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func TimeTablesPointer(value interface{}) (*TimeTables, bool) {
+switch t := value.(type) {
+        case *TimeTables:
+                return value.(*TimeTables), true
+        case TimeTables:
+                v, _ := value.(TimeTables)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to TimeTables\n", t, value)
         }
         return nil, false
   }
@@ -8086,6 +13659,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTotalEnrollmentsType() *TotalEnrollmentsType {
+  if out, ok := TotalEnrollmentsTypePointer(TotalEnrollmentsType{}); !ok {
+                log.Fatalf("Could not create pointer to TotalEnrollmentsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TravelDetailsContainerType) Clone() (*TravelDetailsContainerType) {
 return reprint.This(t).(*TravelDetailsContainerType)
@@ -8103,6 +13686,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to TravelDetailsContainerType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewTravelDetailsContainerType() *TravelDetailsContainerType {
+  if out, ok := TravelDetailsContainerTypePointer(TravelDetailsContainerType{}); !ok {
+                log.Fatalf("Could not create pointer to TravelDetailsContainerType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *TypedIdRefType) Clone() (*TypedIdRefType) {
@@ -8122,6 +13715,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewTypedIdRefType() *TypedIdRefType {
+  if out, ok := TypedIdRefTypePointer(TypedIdRefType{}); !ok {
+                log.Fatalf("Could not create pointer to TypedIdRefType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ValidLetterMarkListType) Clone() (*ValidLetterMarkListType) {
 return reprint.This(t).(*ValidLetterMarkListType)
@@ -8139,6 +13742,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to ValidLetterMarkListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewValidLetterMarkListType() *ValidLetterMarkListType {
+  if out, ok := ValidLetterMarkListTypePointer(ValidLetterMarkListType{}); !ok {
+                log.Fatalf("Could not create pointer to ValidLetterMarkListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *ValidLetterMarkType) Clone() (*ValidLetterMarkType) {
@@ -8158,6 +13771,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewValidLetterMarkType() *ValidLetterMarkType {
+  if out, ok := ValidLetterMarkTypePointer(ValidLetterMarkType{}); !ok {
+                log.Fatalf("Could not create pointer to ValidLetterMarkType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *VendorInfo) Clone() (*VendorInfo) {
 return reprint.This(t).(*VendorInfo)
@@ -8173,6 +13796,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to VendorInfo\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewVendorInfo() *VendorInfo {
+  if out, ok := VendorInfoPointer(VendorInfo{}); !ok {
+                log.Fatalf("Could not create pointer to VendorInfo\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *VendorInfos) Clone() (*VendorInfos) {
+return reprint.This(t).(*VendorInfos)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func VendorInfosPointer(value interface{}) (*VendorInfos, bool) {
+switch t := value.(type) {
+        case *VendorInfos:
+                return value.(*VendorInfos), true
+        case VendorInfos:
+                v, _ := value.(VendorInfos)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to VendorInfos\n", t, value)
         }
         return nil, false
   }
@@ -8194,6 +13845,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewVisaSubClassListType() *VisaSubClassListType {
+  if out, ok := VisaSubClassListTypePointer(VisaSubClassListType{}); !ok {
+                log.Fatalf("Could not create pointer to VisaSubClassListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *VisaSubClassType) Clone() (*VisaSubClassType) {
 return reprint.This(t).(*VisaSubClassType)
@@ -8212,6 +13873,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewVisaSubClassType() *VisaSubClassType {
+  if out, ok := VisaSubClassTypePointer(VisaSubClassType{}); !ok {
+                log.Fatalf("Could not create pointer to VisaSubClassType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingAlert) Clone() (*WellbeingAlert) {
 return reprint.This(t).(*WellbeingAlert)
@@ -8227,6 +13898,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingAlert\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingAlert() *WellbeingAlert {
+  if out, ok := WellbeingAlertPointer(WellbeingAlert{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingAlert\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *WellbeingAlerts) Clone() (*WellbeingAlerts) {
+return reprint.This(t).(*WellbeingAlerts)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func WellbeingAlertsPointer(value interface{}) (*WellbeingAlerts, bool) {
+switch t := value.(type) {
+        case *WellbeingAlerts:
+                return value.(*WellbeingAlerts), true
+        case WellbeingAlerts:
+                v, _ := value.(WellbeingAlerts)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingAlerts\n", t, value)
         }
         return nil, false
   }
@@ -8248,6 +13947,34 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingAppeal() *WellbeingAppeal {
+  if out, ok := WellbeingAppealPointer(WellbeingAppeal{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingAppeal\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *WellbeingAppeals) Clone() (*WellbeingAppeals) {
+return reprint.This(t).(*WellbeingAppeals)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func WellbeingAppealsPointer(value interface{}) (*WellbeingAppeals, bool) {
+switch t := value.(type) {
+        case *WellbeingAppeals:
+                return value.(*WellbeingAppeals), true
+        case WellbeingAppeals:
+                v, _ := value.(WellbeingAppeals)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingAppeals\n", t, value)
+        }
+        return nil, false
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingCharacteristic) Clone() (*WellbeingCharacteristic) {
 return reprint.This(t).(*WellbeingCharacteristic)
@@ -8263,6 +13990,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingCharacteristic\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingCharacteristic() *WellbeingCharacteristic {
+  if out, ok := WellbeingCharacteristicPointer(WellbeingCharacteristic{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingCharacteristic\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *WellbeingCharacteristics) Clone() (*WellbeingCharacteristics) {
+return reprint.This(t).(*WellbeingCharacteristics)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func WellbeingCharacteristicsPointer(value interface{}) (*WellbeingCharacteristics, bool) {
+switch t := value.(type) {
+        case *WellbeingCharacteristics:
+                return value.(*WellbeingCharacteristics), true
+        case WellbeingCharacteristics:
+                v, _ := value.(WellbeingCharacteristics)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingCharacteristics\n", t, value)
         }
         return nil, false
   }
@@ -8284,6 +14039,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingDocumentListType() *WellbeingDocumentListType {
+  if out, ok := WellbeingDocumentListTypePointer(WellbeingDocumentListType{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingDocumentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingDocumentType) Clone() (*WellbeingDocumentType) {
 return reprint.This(t).(*WellbeingDocumentType)
@@ -8301,6 +14066,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingDocumentType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingDocumentType() *WellbeingDocumentType {
+  if out, ok := WellbeingDocumentTypePointer(WellbeingDocumentType{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingDocumentType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingEvent) Clone() (*WellbeingEvent) {
@@ -8320,6 +14095,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingEvent() *WellbeingEvent {
+  if out, ok := WellbeingEventPointer(WellbeingEvent{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingEvent\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingEventCategoryListType) Clone() (*WellbeingEventCategoryListType) {
 return reprint.This(t).(*WellbeingEventCategoryListType)
@@ -8337,6 +14122,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingEventCategoryListType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingEventCategoryListType() *WellbeingEventCategoryListType {
+  if out, ok := WellbeingEventCategoryListTypePointer(WellbeingEventCategoryListType{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingEventCategoryListType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingEventCategoryType) Clone() (*WellbeingEventCategoryType) {
@@ -8356,6 +14151,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingEventCategoryType() *WellbeingEventCategoryType {
+  if out, ok := WellbeingEventCategoryTypePointer(WellbeingEventCategoryType{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingEventCategoryType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingEventLocationDetailsType) Clone() (*WellbeingEventLocationDetailsType) {
 return reprint.This(t).(*WellbeingEventLocationDetailsType)
@@ -8374,6 +14179,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingEventLocationDetailsType() *WellbeingEventLocationDetailsType {
+  if out, ok := WellbeingEventLocationDetailsTypePointer(WellbeingEventLocationDetailsType{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingEventLocationDetailsType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingEventSubCategoryListType) Clone() (*WellbeingEventSubCategoryListType) {
 return reprint.This(t).(*WellbeingEventSubCategoryListType)
@@ -8389,6 +14204,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingEventSubCategoryListType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingEventSubCategoryListType() *WellbeingEventSubCategoryListType {
+  if out, ok := WellbeingEventSubCategoryListTypePointer(WellbeingEventSubCategoryListType{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingEventSubCategoryListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *WellbeingEvents) Clone() (*WellbeingEvents) {
+return reprint.This(t).(*WellbeingEvents)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func WellbeingEventsPointer(value interface{}) (*WellbeingEvents, bool) {
+switch t := value.(type) {
+        case *WellbeingEvents:
+                return value.(*WellbeingEvents), true
+        case WellbeingEvents:
+                v, _ := value.(WellbeingEvents)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingEvents\n", t, value)
         }
         return nil, false
   }
@@ -8410,6 +14253,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingPersonLink() *WellbeingPersonLink {
+  if out, ok := WellbeingPersonLinkPointer(WellbeingPersonLink{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingPersonLink\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingPersonLink_PersonRefId) Clone() (*WellbeingPersonLink_PersonRefId) {
 return reprint.This(t).(*WellbeingPersonLink_PersonRefId)
@@ -8425,6 +14278,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingPersonLink_PersonRefId\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingPersonLink_PersonRefId() *WellbeingPersonLink_PersonRefId {
+  if out, ok := WellbeingPersonLink_PersonRefIdPointer(WellbeingPersonLink_PersonRefId{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingPersonLink_PersonRefId\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *WellbeingPersonLinks) Clone() (*WellbeingPersonLinks) {
+return reprint.This(t).(*WellbeingPersonLinks)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func WellbeingPersonLinksPointer(value interface{}) (*WellbeingPersonLinks, bool) {
+switch t := value.(type) {
+        case *WellbeingPersonLinks:
+                return value.(*WellbeingPersonLinks), true
+        case WellbeingPersonLinks:
+                v, _ := value.(WellbeingPersonLinks)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingPersonLinks\n", t, value)
         }
         return nil, false
   }
@@ -8446,6 +14327,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingPlanType() *WellbeingPlanType {
+  if out, ok := WellbeingPlanTypePointer(WellbeingPlanType{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingPlanType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WellbeingResponse) Clone() (*WellbeingResponse) {
 return reprint.This(t).(*WellbeingResponse)
@@ -8461,6 +14352,34 @@ switch t := value.(type) {
                 return &v, true
         default:
                 fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingResponse\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWellbeingResponse() *WellbeingResponse {
+  if out, ok := WellbeingResponsePointer(WellbeingResponse{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingResponse\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *WellbeingResponses) Clone() (*WellbeingResponses) {
+return reprint.This(t).(*WellbeingResponses)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func WellbeingResponsesPointer(value interface{}) (*WellbeingResponses, bool) {
+switch t := value.(type) {
+        case *WellbeingResponses:
+                return value.(*WellbeingResponses), true
+        case WellbeingResponses:
+                v, _ := value.(WellbeingResponses)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to WellbeingResponses\n", t, value)
         }
         return nil, false
   }
@@ -8482,6 +14401,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWithdrawalTimeListType() *WithdrawalTimeListType {
+  if out, ok := WithdrawalTimeListTypePointer(WithdrawalTimeListType{}); !ok {
+                log.Fatalf("Could not create pointer to WithdrawalTimeListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WithdrawalType) Clone() (*WithdrawalType) {
 return reprint.This(t).(*WithdrawalType)
@@ -8499,6 +14428,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to WithdrawalType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewWithdrawalType() *WithdrawalType {
+  if out, ok := WithdrawalTypePointer(WithdrawalType{}); !ok {
+                log.Fatalf("Could not create pointer to WithdrawalType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *WorkingWithChildrenCheckType) Clone() (*WorkingWithChildrenCheckType) {
@@ -8518,6 +14457,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewWorkingWithChildrenCheckType() *WorkingWithChildrenCheckType {
+  if out, ok := WorkingWithChildrenCheckTypePointer(WorkingWithChildrenCheckType{}); !ok {
+                log.Fatalf("Could not create pointer to WorkingWithChildrenCheckType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *XMLDataType) Clone() (*XMLDataType) {
 return reprint.This(t).(*XMLDataType)
@@ -8535,6 +14484,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to XMLDataType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewXMLDataType() *XMLDataType {
+  if out, ok := XMLDataTypePointer(XMLDataType{}); !ok {
+                log.Fatalf("Could not create pointer to XMLDataType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *YearLevelEnrollmentListType) Clone() (*YearLevelEnrollmentListType) {
@@ -8554,6 +14513,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewYearLevelEnrollmentListType() *YearLevelEnrollmentListType {
+  if out, ok := YearLevelEnrollmentListTypePointer(YearLevelEnrollmentListType{}); !ok {
+                log.Fatalf("Could not create pointer to YearLevelEnrollmentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *YearLevelEnrollmentType) Clone() (*YearLevelEnrollmentType) {
 return reprint.This(t).(*YearLevelEnrollmentType)
@@ -8571,6 +14540,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to YearLevelEnrollmentType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewYearLevelEnrollmentType() *YearLevelEnrollmentType {
+  if out, ok := YearLevelEnrollmentTypePointer(YearLevelEnrollmentType{}); !ok {
+                log.Fatalf("Could not create pointer to YearLevelEnrollmentType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *YearLevelType) Clone() (*YearLevelType) {
@@ -8590,6 +14569,16 @@ switch t := value.(type) {
         }
         return nil, false
   }
+
+// Generates a new object as a pointer to a struct
+func NewYearLevelType() *YearLevelType {
+  if out, ok := YearLevelTypePointer(YearLevelType{}); !ok {
+                log.Fatalf("Could not create pointer to YearLevelType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *YearLevelsType) Clone() (*YearLevelsType) {
 return reprint.This(t).(*YearLevelsType)
@@ -8607,6 +14596,16 @@ switch t := value.(type) {
                 fmt.Printf("Warning: cannot resolve %T (%v) to YearLevelsType\n", t, value)
         }
         return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewYearLevelsType() *YearLevelsType {
+  if out, ok := YearLevelsTypePointer(YearLevelsType{}); !ok {
+                log.Fatalf("Could not create pointer to YearLevelsType\n")
+                return nil
+        } else {
+                return out
+        }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *YearRangeType) Clone() (*YearRangeType) {
@@ -8627,9 +14626,19 @@ switch t := value.(type) {
         return nil, false
   }
 
+// Generates a new object as a pointer to a struct
+func NewYearRangeType() *YearRangeType {
+  if out, ok := YearRangeTypePointer(YearRangeType{}); !ok {
+                log.Fatalf("Could not create pointer to YearRangeType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ACStrandAreaListType) Append(value ACStrandSubjectAreaType) *ACStrandAreaListType {
+  func (t *ACStrandAreaListType) Append(values ...ACStrandSubjectAreaType) *ACStrandAreaListType {
     
         if t == nil {
                 t, _ = ACStrandAreaListTypePointer(ACStrandAreaListType{})
@@ -8637,7 +14646,9 @@ switch t := value.(type) {
         if t.ACStrandSubjectArea == nil {
                 t.ACStrandSubjectArea = make([]ACStrandSubjectAreaType, 0)
         }
+        for _, value := range values {
         t.ACStrandSubjectArea = append(t.ACStrandSubjectArea, value)
+        }
         return t
 }
 
@@ -8661,15 +14672,15 @@ func (t *ACStrandAreaListType) Last() *ACStrandSubjectAreaType {
         return &(t.ACStrandSubjectArea[len(t.ACStrandSubjectArea)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ACStrandAreaListType) Index(n int) (*ACStrandSubjectAreaType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ACStrandAreaListType) Index(n int) (*ACStrandSubjectAreaType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ACStrandAreaListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ACStrandSubjectArea == nil {
     t = t.AddNew()
     }
-        return &(t.ACStrandSubjectArea[n]), nil
+        return &(t.ACStrandSubjectArea[n])
 }
 
 // Length of the list.
@@ -8680,11 +14691,20 @@ func (t *ACStrandAreaListType) Len() int {
         return len(t.ACStrandSubjectArea)
 }
 
+// Convert list object to slice
+func (t *ACStrandAreaListType) ToSlice() []*ACStrandSubjectAreaType {
+  ret := make([]*ACStrandSubjectAreaType, 0)
+  for _, x:= range t.ACStrandSubjectArea {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AGContextualQuestionListType) Append(value AGContextualQuestionType) *AGContextualQuestionListType {
+  func (t *AGContextualQuestionListType) Append(values ...AGContextualQuestionType) *AGContextualQuestionListType {
     
         if t == nil {
                 t, _ = AGContextualQuestionListTypePointer(AGContextualQuestionListType{})
@@ -8692,7 +14712,9 @@ func (t *ACStrandAreaListType) Len() int {
         if t.AGContextualQuestion == nil {
                 t.AGContextualQuestion = make([]AGContextualQuestionType, 0)
         }
+        for _, value := range values {
         t.AGContextualQuestion = append(t.AGContextualQuestion, value)
+        }
         return t
 }
 
@@ -8716,15 +14738,15 @@ func (t *AGContextualQuestionListType) Last() *AGContextualQuestionType {
         return &(t.AGContextualQuestion[len(t.AGContextualQuestion)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AGContextualQuestionListType) Index(n int) (*AGContextualQuestionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AGContextualQuestionListType) Index(n int) (*AGContextualQuestionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AGContextualQuestionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AGContextualQuestion == nil {
     t = t.AddNew()
     }
-        return &(t.AGContextualQuestion[n]), nil
+        return &(t.AGContextualQuestion[n])
 }
 
 // Length of the list.
@@ -8735,11 +14757,20 @@ func (t *AGContextualQuestionListType) Len() int {
         return len(t.AGContextualQuestion)
 }
 
+// Convert list object to slice
+func (t *AGContextualQuestionListType) ToSlice() []*AGContextualQuestionType {
+  ret := make([]*AGContextualQuestionType, 0)
+  for _, x:= range t.AGContextualQuestion {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AGReportingObjectResponseListType) Append(value AGReportingObjectResponseType) *AGReportingObjectResponseListType {
+  func (t *AGReportingObjectResponseListType) Append(values ...AGReportingObjectResponseType) *AGReportingObjectResponseListType {
     
         if t == nil {
                 t, _ = AGReportingObjectResponseListTypePointer(AGReportingObjectResponseListType{})
@@ -8747,7 +14778,9 @@ func (t *AGContextualQuestionListType) Len() int {
         if t.AGReportingObjectResponse == nil {
                 t.AGReportingObjectResponse = make([]AGReportingObjectResponseType, 0)
         }
+        for _, value := range values {
         t.AGReportingObjectResponse = append(t.AGReportingObjectResponse, value)
+        }
         return t
 }
 
@@ -8771,15 +14804,15 @@ func (t *AGReportingObjectResponseListType) Last() *AGReportingObjectResponseTyp
         return &(t.AGReportingObjectResponse[len(t.AGReportingObjectResponse)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AGReportingObjectResponseListType) Index(n int) (*AGReportingObjectResponseType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AGReportingObjectResponseListType) Index(n int) (*AGReportingObjectResponseType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AGReportingObjectResponseListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AGReportingObjectResponse == nil {
     t = t.AddNew()
     }
-        return &(t.AGReportingObjectResponse[n]), nil
+        return &(t.AGReportingObjectResponse[n])
 }
 
 // Length of the list.
@@ -8790,11 +14823,20 @@ func (t *AGReportingObjectResponseListType) Len() int {
         return len(t.AGReportingObjectResponse)
 }
 
+// Convert list object to slice
+func (t *AGReportingObjectResponseListType) ToSlice() []*AGReportingObjectResponseType {
+  ret := make([]*AGReportingObjectResponseType, 0)
+  for _, x:= range t.AGReportingObjectResponse {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AGRoundListType) Append(value AGRoundType) *AGRoundListType {
+  func (t *AGRoundListType) Append(values ...AGRoundType) *AGRoundListType {
     
         if t == nil {
                 t, _ = AGRoundListTypePointer(AGRoundListType{})
@@ -8802,7 +14844,9 @@ func (t *AGReportingObjectResponseListType) Len() int {
         if t.AGRound == nil {
                 t.AGRound = make([]AGRoundType, 0)
         }
+        for _, value := range values {
         t.AGRound = append(t.AGRound, value)
+        }
         return t
 }
 
@@ -8826,15 +14870,15 @@ func (t *AGRoundListType) Last() *AGRoundType {
         return &(t.AGRound[len(t.AGRound)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AGRoundListType) Index(n int) (*AGRoundType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AGRoundListType) Index(n int) (*AGRoundType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AGRoundListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AGRound == nil {
     t = t.AddNew()
     }
-        return &(t.AGRound[n]), nil
+        return &(t.AGRound[n])
 }
 
 // Length of the list.
@@ -8845,11 +14889,20 @@ func (t *AGRoundListType) Len() int {
         return len(t.AGRound)
 }
 
+// Convert list object to slice
+func (t *AGRoundListType) ToSlice() []*AGRoundType {
+  ret := make([]*AGRoundType, 0)
+  for _, x:= range t.AGRound {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AGRuleListType) Append(value AGRuleType) *AGRuleListType {
+  func (t *AGRuleListType) Append(values ...AGRuleType) *AGRuleListType {
     
         if t == nil {
                 t, _ = AGRuleListTypePointer(AGRuleListType{})
@@ -8857,7 +14910,9 @@ func (t *AGRoundListType) Len() int {
         if t.AGRule == nil {
                 t.AGRule = make([]AGRuleType, 0)
         }
+        for _, value := range values {
         t.AGRule = append(t.AGRule, value)
+        }
         return t
 }
 
@@ -8881,15 +14936,15 @@ func (t *AGRuleListType) Last() *AGRuleType {
         return &(t.AGRule[len(t.AGRule)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AGRuleListType) Index(n int) (*AGRuleType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AGRuleListType) Index(n int) (*AGRuleType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AGRuleListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AGRule == nil {
     t = t.AddNew()
     }
-        return &(t.AGRule[n]), nil
+        return &(t.AGRule[n])
 }
 
 // Length of the list.
@@ -8900,11 +14955,20 @@ func (t *AGRuleListType) Len() int {
         return len(t.AGRule)
 }
 
+// Convert list object to slice
+func (t *AGRuleListType) ToSlice() []*AGRuleType {
+  ret := make([]*AGRuleType, 0)
+  for _, x:= range t.AGRule {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AccountCodeListType) Append(value string) *AccountCodeListType {
+  func (t *AccountCodeListType) Append(values ...string) *AccountCodeListType {
     
         if t == nil {
                 t, _ = AccountCodeListTypePointer(AccountCodeListType{})
@@ -8912,7 +14976,9 @@ func (t *AGRuleListType) Len() int {
         if t.AccountCode == nil {
                 t.AccountCode = make([]string, 0)
         }
+        for _, value := range values {
         t.AccountCode = append(t.AccountCode, value)
+        }
         return t
 }
 
@@ -8936,15 +15002,15 @@ func (t *AccountCodeListType) Last() *string {
         return &(t.AccountCode[len(t.AccountCode)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AccountCodeListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AccountCodeListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AccountCodeListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AccountCode == nil {
     t = t.AddNew()
     }
-        return &(t.AccountCode[n]), nil
+        return &(t.AccountCode[n])
 }
 
 // Length of the list.
@@ -8955,6 +15021,15 @@ func (t *AccountCodeListType) Len() int {
         return len(t.AccountCode)
 }
 
+// Convert list object to slice
+func (t *AccountCodeListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.AccountCode {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *AccountCodeListType) AppendString(value string) *AccountCodeListType {
@@ -8963,7 +15038,7 @@ func (t *AccountCodeListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AddressCollectionReportingListType) Append(value AddressCollectionReportingType) *AddressCollectionReportingListType {
+  func (t *AddressCollectionReportingListType) Append(values ...AddressCollectionReportingType) *AddressCollectionReportingListType {
     
         if t == nil {
                 t, _ = AddressCollectionReportingListTypePointer(AddressCollectionReportingListType{})
@@ -8971,7 +15046,9 @@ func (t *AccountCodeListType) Len() int {
         if t.AddressCollectionReporting == nil {
                 t.AddressCollectionReporting = make([]AddressCollectionReportingType, 0)
         }
+        for _, value := range values {
         t.AddressCollectionReporting = append(t.AddressCollectionReporting, value)
+        }
         return t
 }
 
@@ -8995,15 +15072,15 @@ func (t *AddressCollectionReportingListType) Last() *AddressCollectionReportingT
         return &(t.AddressCollectionReporting[len(t.AddressCollectionReporting)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AddressCollectionReportingListType) Index(n int) (*AddressCollectionReportingType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AddressCollectionReportingListType) Index(n int) (*AddressCollectionReportingType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AddressCollectionReportingListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AddressCollectionReporting == nil {
     t = t.AddNew()
     }
-        return &(t.AddressCollectionReporting[n]), nil
+        return &(t.AddressCollectionReporting[n])
 }
 
 // Length of the list.
@@ -9014,11 +15091,20 @@ func (t *AddressCollectionReportingListType) Len() int {
         return len(t.AddressCollectionReporting)
 }
 
+// Convert list object to slice
+func (t *AddressCollectionReportingListType) ToSlice() []*AddressCollectionReportingType {
+  ret := make([]*AddressCollectionReportingType, 0)
+  for _, x:= range t.AddressCollectionReporting {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AddressCollectionStudentListType) Append(value AddressCollectionStudentType) *AddressCollectionStudentListType {
+  func (t *AddressCollectionStudentListType) Append(values ...AddressCollectionStudentType) *AddressCollectionStudentListType {
     
         if t == nil {
                 t, _ = AddressCollectionStudentListTypePointer(AddressCollectionStudentListType{})
@@ -9026,7 +15112,9 @@ func (t *AddressCollectionReportingListType) Len() int {
         if t.AddressCollectionStudent == nil {
                 t.AddressCollectionStudent = make([]AddressCollectionStudentType, 0)
         }
+        for _, value := range values {
         t.AddressCollectionStudent = append(t.AddressCollectionStudent, value)
+        }
         return t
 }
 
@@ -9050,15 +15138,15 @@ func (t *AddressCollectionStudentListType) Last() *AddressCollectionStudentType 
         return &(t.AddressCollectionStudent[len(t.AddressCollectionStudent)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AddressCollectionStudentListType) Index(n int) (*AddressCollectionStudentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AddressCollectionStudentListType) Index(n int) (*AddressCollectionStudentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AddressCollectionStudentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AddressCollectionStudent == nil {
     t = t.AddNew()
     }
-        return &(t.AddressCollectionStudent[n]), nil
+        return &(t.AddressCollectionStudent[n])
 }
 
 // Length of the list.
@@ -9069,11 +15157,20 @@ func (t *AddressCollectionStudentListType) Len() int {
         return len(t.AddressCollectionStudent)
 }
 
+// Convert list object to slice
+func (t *AddressCollectionStudentListType) ToSlice() []*AddressCollectionStudentType {
+  ret := make([]*AddressCollectionStudentType, 0)
+  for _, x:= range t.AddressCollectionStudent {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AddressListType) Append(value AddressType) *AddressListType {
+  func (t *AddressListType) Append(values ...AddressType) *AddressListType {
     
         if t == nil {
                 t, _ = AddressListTypePointer(AddressListType{})
@@ -9081,7 +15178,9 @@ func (t *AddressCollectionStudentListType) Len() int {
         if t.Address == nil {
                 t.Address = make([]AddressType, 0)
         }
+        for _, value := range values {
         t.Address = append(t.Address, value)
+        }
         return t
 }
 
@@ -9105,15 +15204,15 @@ func (t *AddressListType) Last() *AddressType {
         return &(t.Address[len(t.Address)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AddressListType) Index(n int) (*AddressType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AddressListType) Index(n int) (*AddressType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AddressListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Address == nil {
     t = t.AddNew()
     }
-        return &(t.Address[n]), nil
+        return &(t.Address[n])
 }
 
 // Length of the list.
@@ -9124,11 +15223,20 @@ func (t *AddressListType) Len() int {
         return len(t.Address)
 }
 
+// Convert list object to slice
+func (t *AddressListType) ToSlice() []*AddressType {
+  ret := make([]*AddressType, 0)
+  for _, x:= range t.Address {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AlertMessagesType) Append(value AlertMessageType) *AlertMessagesType {
+  func (t *AlertMessagesType) Append(values ...AlertMessageType) *AlertMessagesType {
     
         if t == nil {
                 t, _ = AlertMessagesTypePointer(AlertMessagesType{})
@@ -9136,7 +15244,9 @@ func (t *AddressListType) Len() int {
         if t.AlertMessage == nil {
                 t.AlertMessage = make([]AlertMessageType, 0)
         }
+        for _, value := range values {
         t.AlertMessage = append(t.AlertMessage, value)
+        }
         return t
 }
 
@@ -9160,15 +15270,15 @@ func (t *AlertMessagesType) Last() *AlertMessageType {
         return &(t.AlertMessage[len(t.AlertMessage)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AlertMessagesType) Index(n int) (*AlertMessageType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AlertMessagesType) Index(n int) (*AlertMessageType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AlertMessagesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AlertMessage == nil {
     t = t.AddNew()
     }
-        return &(t.AlertMessage[n]), nil
+        return &(t.AlertMessage[n])
 }
 
 // Length of the list.
@@ -9179,11 +15289,20 @@ func (t *AlertMessagesType) Len() int {
         return len(t.AlertMessage)
 }
 
+// Convert list object to slice
+func (t *AlertMessagesType) ToSlice() []*AlertMessageType {
+  ret := make([]*AlertMessageType, 0)
+  for _, x:= range t.AlertMessage {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AlternateIdentificationCodeListType) Append(value string) *AlternateIdentificationCodeListType {
+  func (t *AlternateIdentificationCodeListType) Append(values ...string) *AlternateIdentificationCodeListType {
     
         if t == nil {
                 t, _ = AlternateIdentificationCodeListTypePointer(AlternateIdentificationCodeListType{})
@@ -9191,7 +15310,9 @@ func (t *AlertMessagesType) Len() int {
         if t.AlternateIdentificationCode == nil {
                 t.AlternateIdentificationCode = make([]string, 0)
         }
+        for _, value := range values {
         t.AlternateIdentificationCode = append(t.AlternateIdentificationCode, value)
+        }
         return t
 }
 
@@ -9215,15 +15336,15 @@ func (t *AlternateIdentificationCodeListType) Last() *string {
         return &(t.AlternateIdentificationCode[len(t.AlternateIdentificationCode)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AlternateIdentificationCodeListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AlternateIdentificationCodeListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AlternateIdentificationCodeListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AlternateIdentificationCode == nil {
     t = t.AddNew()
     }
-        return &(t.AlternateIdentificationCode[n]), nil
+        return &(t.AlternateIdentificationCode[n])
 }
 
 // Length of the list.
@@ -9234,6 +15355,15 @@ func (t *AlternateIdentificationCodeListType) Len() int {
         return len(t.AlternateIdentificationCode)
 }
 
+// Convert list object to slice
+func (t *AlternateIdentificationCodeListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.AlternateIdentificationCode {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *AlternateIdentificationCodeListType) AppendString(value string) *AlternateIdentificationCodeListType {
@@ -9242,7 +15372,7 @@ func (t *AlternateIdentificationCodeListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ApplicableLawListType) Append(value ApplicableLawType) *ApplicableLawListType {
+  func (t *ApplicableLawListType) Append(values ...ApplicableLawType) *ApplicableLawListType {
     
         if t == nil {
                 t, _ = ApplicableLawListTypePointer(ApplicableLawListType{})
@@ -9250,7 +15380,9 @@ func (t *AlternateIdentificationCodeListType) Len() int {
         if t.ApplicableLaw == nil {
                 t.ApplicableLaw = make([]ApplicableLawType, 0)
         }
+        for _, value := range values {
         t.ApplicableLaw = append(t.ApplicableLaw, value)
+        }
         return t
 }
 
@@ -9274,15 +15406,15 @@ func (t *ApplicableLawListType) Last() *ApplicableLawType {
         return &(t.ApplicableLaw[len(t.ApplicableLaw)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ApplicableLawListType) Index(n int) (*ApplicableLawType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ApplicableLawListType) Index(n int) (*ApplicableLawType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ApplicableLawListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ApplicableLaw == nil {
     t = t.AddNew()
     }
-        return &(t.ApplicableLaw[n]), nil
+        return &(t.ApplicableLaw[n])
 }
 
 // Length of the list.
@@ -9293,11 +15425,20 @@ func (t *ApplicableLawListType) Len() int {
         return len(t.ApplicableLaw)
 }
 
+// Convert list object to slice
+func (t *ApplicableLawListType) ToSlice() []*ApplicableLawType {
+  ret := make([]*ApplicableLawType, 0)
+  for _, x:= range t.ApplicableLaw {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ApprovalsType) Append(value ApprovalType) *ApprovalsType {
+  func (t *ApprovalsType) Append(values ...ApprovalType) *ApprovalsType {
     
         if t == nil {
                 t, _ = ApprovalsTypePointer(ApprovalsType{})
@@ -9305,7 +15446,9 @@ func (t *ApplicableLawListType) Len() int {
         if t.Approval == nil {
                 t.Approval = make([]ApprovalType, 0)
         }
+        for _, value := range values {
         t.Approval = append(t.Approval, value)
+        }
         return t
 }
 
@@ -9329,15 +15472,15 @@ func (t *ApprovalsType) Last() *ApprovalType {
         return &(t.Approval[len(t.Approval)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ApprovalsType) Index(n int) (*ApprovalType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ApprovalsType) Index(n int) (*ApprovalType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ApprovalsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Approval == nil {
     t = t.AddNew()
     }
-        return &(t.Approval[n]), nil
+        return &(t.Approval[n])
 }
 
 // Length of the list.
@@ -9348,11 +15491,20 @@ func (t *ApprovalsType) Len() int {
         return len(t.Approval)
 }
 
+// Convert list object to slice
+func (t *ApprovalsType) ToSlice() []*ApprovalType {
+  ret := make([]*ApprovalType, 0)
+  for _, x:= range t.Approval {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AssignmentListType) Append(value string) *AssignmentListType {
+  func (t *AssignmentListType) Append(values ...string) *AssignmentListType {
     
         if t == nil {
                 t, _ = AssignmentListTypePointer(AssignmentListType{})
@@ -9360,7 +15512,9 @@ func (t *ApprovalsType) Len() int {
         if t.GradingAssignmentRefId == nil {
                 t.GradingAssignmentRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.GradingAssignmentRefId = append(t.GradingAssignmentRefId, value)
+        }
         return t
 }
 
@@ -9384,15 +15538,15 @@ func (t *AssignmentListType) Last() *string {
         return &(t.GradingAssignmentRefId[len(t.GradingAssignmentRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AssignmentListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AssignmentListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AssignmentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.GradingAssignmentRefId == nil {
     t = t.AddNew()
     }
-        return &(t.GradingAssignmentRefId[n]), nil
+        return &(t.GradingAssignmentRefId[n])
 }
 
 // Length of the list.
@@ -9403,6 +15557,15 @@ func (t *AssignmentListType) Len() int {
         return len(t.GradingAssignmentRefId)
 }
 
+// Convert list object to slice
+func (t *AssignmentListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.GradingAssignmentRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *AssignmentListType) AppendString(value string) *AssignmentListType {
@@ -9411,7 +15574,7 @@ func (t *AssignmentListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AssociatedObjectsType) Append(value AssociatedObjectsType_AssociatedObject) *AssociatedObjectsType {
+  func (t *AssociatedObjectsType) Append(values ...AssociatedObjectsType_AssociatedObject) *AssociatedObjectsType {
     
         if t == nil {
                 t, _ = AssociatedObjectsTypePointer(AssociatedObjectsType{})
@@ -9419,7 +15582,9 @@ func (t *AssignmentListType) Len() int {
         if t.AssociatedObject == nil {
                 t.AssociatedObject = make([]AssociatedObjectsType_AssociatedObject, 0)
         }
+        for _, value := range values {
         t.AssociatedObject = append(t.AssociatedObject, value)
+        }
         return t
 }
 
@@ -9443,15 +15608,15 @@ func (t *AssociatedObjectsType) Last() *AssociatedObjectsType_AssociatedObject {
         return &(t.AssociatedObject[len(t.AssociatedObject)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AssociatedObjectsType) Index(n int) (*AssociatedObjectsType_AssociatedObject, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AssociatedObjectsType) Index(n int) (*AssociatedObjectsType_AssociatedObject) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AssociatedObjectsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AssociatedObject == nil {
     t = t.AddNew()
     }
-        return &(t.AssociatedObject[n]), nil
+        return &(t.AssociatedObject[n])
 }
 
 // Length of the list.
@@ -9462,11 +15627,20 @@ func (t *AssociatedObjectsType) Len() int {
         return len(t.AssociatedObject)
 }
 
+// Convert list object to slice
+func (t *AssociatedObjectsType) ToSlice() []*AssociatedObjectsType_AssociatedObject {
+  ret := make([]*AssociatedObjectsType_AssociatedObject, 0)
+  for _, x:= range t.AssociatedObject {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AttendanceTimesType) Append(value AttendanceTimeType) *AttendanceTimesType {
+  func (t *AttendanceTimesType) Append(values ...AttendanceTimeType) *AttendanceTimesType {
     
         if t == nil {
                 t, _ = AttendanceTimesTypePointer(AttendanceTimesType{})
@@ -9474,7 +15648,9 @@ func (t *AssociatedObjectsType) Len() int {
         if t.AttendanceTime == nil {
                 t.AttendanceTime = make([]AttendanceTimeType, 0)
         }
+        for _, value := range values {
         t.AttendanceTime = append(t.AttendanceTime, value)
+        }
         return t
 }
 
@@ -9498,15 +15674,15 @@ func (t *AttendanceTimesType) Last() *AttendanceTimeType {
         return &(t.AttendanceTime[len(t.AttendanceTime)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AttendanceTimesType) Index(n int) (*AttendanceTimeType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AttendanceTimesType) Index(n int) (*AttendanceTimeType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AttendanceTimesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AttendanceTime == nil {
     t = t.AddNew()
     }
-        return &(t.AttendanceTime[n]), nil
+        return &(t.AttendanceTime[n])
 }
 
 // Length of the list.
@@ -9517,11 +15693,20 @@ func (t *AttendanceTimesType) Len() int {
         return len(t.AttendanceTime)
 }
 
+// Convert list object to slice
+func (t *AttendanceTimesType) ToSlice() []*AttendanceTimeType {
+  ret := make([]*AttendanceTimeType, 0)
+  for _, x:= range t.AttendanceTime {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *AuthorsType) Append(value string) *AuthorsType {
+  func (t *AuthorsType) Append(values ...string) *AuthorsType {
     
         if t == nil {
                 t, _ = AuthorsTypePointer(AuthorsType{})
@@ -9529,7 +15714,9 @@ func (t *AttendanceTimesType) Len() int {
         if t.Author == nil {
                 t.Author = make([]string, 0)
         }
+        for _, value := range values {
         t.Author = append(t.Author, value)
+        }
         return t
 }
 
@@ -9553,15 +15740,15 @@ func (t *AuthorsType) Last() *string {
         return &(t.Author[len(t.Author)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *AuthorsType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *AuthorsType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("AuthorsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Author == nil {
     t = t.AddNew()
     }
-        return &(t.Author[n]), nil
+        return &(t.Author[n])
 }
 
 // Length of the list.
@@ -9572,6 +15759,15 @@ func (t *AuthorsType) Len() int {
         return len(t.Author)
 }
 
+// Convert list object to slice
+func (t *AuthorsType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.Author {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *AuthorsType) AppendString(value string) *AuthorsType {
@@ -9580,7 +15776,7 @@ func (t *AuthorsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CalendarSummaryListType) Append(value string) *CalendarSummaryListType {
+  func (t *CalendarSummaryListType) Append(values ...string) *CalendarSummaryListType {
     
         if t == nil {
                 t, _ = CalendarSummaryListTypePointer(CalendarSummaryListType{})
@@ -9588,7 +15784,9 @@ func (t *AuthorsType) Len() int {
         if t.CalendarSummaryRefId == nil {
                 t.CalendarSummaryRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.CalendarSummaryRefId = append(t.CalendarSummaryRefId, value)
+        }
         return t
 }
 
@@ -9612,15 +15810,15 @@ func (t *CalendarSummaryListType) Last() *string {
         return &(t.CalendarSummaryRefId[len(t.CalendarSummaryRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CalendarSummaryListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CalendarSummaryListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CalendarSummaryListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.CalendarSummaryRefId == nil {
     t = t.AddNew()
     }
-        return &(t.CalendarSummaryRefId[n]), nil
+        return &(t.CalendarSummaryRefId[n])
 }
 
 // Length of the list.
@@ -9631,6 +15829,15 @@ func (t *CalendarSummaryListType) Len() int {
         return len(t.CalendarSummaryRefId)
 }
 
+// Convert list object to slice
+func (t *CalendarSummaryListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.CalendarSummaryRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *CalendarSummaryListType) AppendString(value string) *CalendarSummaryListType {
@@ -9639,7 +15846,7 @@ func (t *CalendarSummaryListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CensusReportingListType) Append(value CensusReportingType) *CensusReportingListType {
+  func (t *CensusReportingListType) Append(values ...CensusReportingType) *CensusReportingListType {
     
         if t == nil {
                 t, _ = CensusReportingListTypePointer(CensusReportingListType{})
@@ -9647,7 +15854,9 @@ func (t *CalendarSummaryListType) Len() int {
         if t.CensusReporting == nil {
                 t.CensusReporting = make([]CensusReportingType, 0)
         }
+        for _, value := range values {
         t.CensusReporting = append(t.CensusReporting, value)
+        }
         return t
 }
 
@@ -9671,15 +15880,15 @@ func (t *CensusReportingListType) Last() *CensusReportingType {
         return &(t.CensusReporting[len(t.CensusReporting)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CensusReportingListType) Index(n int) (*CensusReportingType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CensusReportingListType) Index(n int) (*CensusReportingType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CensusReportingListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.CensusReporting == nil {
     t = t.AddNew()
     }
-        return &(t.CensusReporting[n]), nil
+        return &(t.CensusReporting[n])
 }
 
 // Length of the list.
@@ -9690,11 +15899,20 @@ func (t *CensusReportingListType) Len() int {
         return len(t.CensusReporting)
 }
 
+// Convert list object to slice
+func (t *CensusReportingListType) ToSlice() []*CensusReportingType {
+  ret := make([]*CensusReportingType, 0)
+  for _, x:= range t.CensusReporting {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CensusStaffListType) Append(value CensusStaffType) *CensusStaffListType {
+  func (t *CensusStaffListType) Append(values ...CensusStaffType) *CensusStaffListType {
     
         if t == nil {
                 t, _ = CensusStaffListTypePointer(CensusStaffListType{})
@@ -9702,7 +15920,9 @@ func (t *CensusReportingListType) Len() int {
         if t.CensusStaff == nil {
                 t.CensusStaff = make([]CensusStaffType, 0)
         }
+        for _, value := range values {
         t.CensusStaff = append(t.CensusStaff, value)
+        }
         return t
 }
 
@@ -9726,15 +15946,15 @@ func (t *CensusStaffListType) Last() *CensusStaffType {
         return &(t.CensusStaff[len(t.CensusStaff)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CensusStaffListType) Index(n int) (*CensusStaffType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CensusStaffListType) Index(n int) (*CensusStaffType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CensusStaffListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.CensusStaff == nil {
     t = t.AddNew()
     }
-        return &(t.CensusStaff[n]), nil
+        return &(t.CensusStaff[n])
 }
 
 // Length of the list.
@@ -9745,11 +15965,20 @@ func (t *CensusStaffListType) Len() int {
         return len(t.CensusStaff)
 }
 
+// Convert list object to slice
+func (t *CensusStaffListType) ToSlice() []*CensusStaffType {
+  ret := make([]*CensusStaffType, 0)
+  for _, x:= range t.CensusStaff {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CensusStudentListType) Append(value CensusStudentType) *CensusStudentListType {
+  func (t *CensusStudentListType) Append(values ...CensusStudentType) *CensusStudentListType {
     
         if t == nil {
                 t, _ = CensusStudentListTypePointer(CensusStudentListType{})
@@ -9757,7 +15986,9 @@ func (t *CensusStaffListType) Len() int {
         if t.CensusStudent == nil {
                 t.CensusStudent = make([]CensusStudentType, 0)
         }
+        for _, value := range values {
         t.CensusStudent = append(t.CensusStudent, value)
+        }
         return t
 }
 
@@ -9781,15 +16012,15 @@ func (t *CensusStudentListType) Last() *CensusStudentType {
         return &(t.CensusStudent[len(t.CensusStudent)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CensusStudentListType) Index(n int) (*CensusStudentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CensusStudentListType) Index(n int) (*CensusStudentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CensusStudentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.CensusStudent == nil {
     t = t.AddNew()
     }
-        return &(t.CensusStudent[n]), nil
+        return &(t.CensusStudent[n])
 }
 
 // Length of the list.
@@ -9800,11 +16031,20 @@ func (t *CensusStudentListType) Len() int {
         return len(t.CensusStudent)
 }
 
+// Convert list object to slice
+func (t *CensusStudentListType) ToSlice() []*CensusStudentType {
+  ret := make([]*CensusStudentType, 0)
+  for _, x:= range t.CensusStudent {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CharacteristicsType) Append(value string) *CharacteristicsType {
+  func (t *CharacteristicsType) Append(values ...string) *CharacteristicsType {
     
         if t == nil {
                 t, _ = CharacteristicsTypePointer(CharacteristicsType{})
@@ -9812,7 +16052,9 @@ func (t *CensusStudentListType) Len() int {
         if t.AggregateCharacteristicInfoRefId == nil {
                 t.AggregateCharacteristicInfoRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.AggregateCharacteristicInfoRefId = append(t.AggregateCharacteristicInfoRefId, value)
+        }
         return t
 }
 
@@ -9836,15 +16078,15 @@ func (t *CharacteristicsType) Last() *string {
         return &(t.AggregateCharacteristicInfoRefId[len(t.AggregateCharacteristicInfoRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CharacteristicsType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CharacteristicsType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CharacteristicsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.AggregateCharacteristicInfoRefId == nil {
     t = t.AddNew()
     }
-        return &(t.AggregateCharacteristicInfoRefId[n]), nil
+        return &(t.AggregateCharacteristicInfoRefId[n])
 }
 
 // Length of the list.
@@ -9855,6 +16097,15 @@ func (t *CharacteristicsType) Len() int {
         return len(t.AggregateCharacteristicInfoRefId)
 }
 
+// Convert list object to slice
+func (t *CharacteristicsType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.AggregateCharacteristicInfoRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *CharacteristicsType) AppendString(value string) *CharacteristicsType {
@@ -9863,7 +16114,7 @@ func (t *CharacteristicsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CodeFrameTestItemListType) Append(value CodeFrameTestItemType) *CodeFrameTestItemListType {
+  func (t *CodeFrameTestItemListType) Append(values ...CodeFrameTestItemType) *CodeFrameTestItemListType {
     
         if t == nil {
                 t, _ = CodeFrameTestItemListTypePointer(CodeFrameTestItemListType{})
@@ -9871,7 +16122,9 @@ func (t *CharacteristicsType) Len() int {
         if t.TestItem == nil {
                 t.TestItem = make([]CodeFrameTestItemType, 0)
         }
+        for _, value := range values {
         t.TestItem = append(t.TestItem, value)
+        }
         return t
 }
 
@@ -9895,15 +16148,15 @@ func (t *CodeFrameTestItemListType) Last() *CodeFrameTestItemType {
         return &(t.TestItem[len(t.TestItem)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CodeFrameTestItemListType) Index(n int) (*CodeFrameTestItemType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CodeFrameTestItemListType) Index(n int) (*CodeFrameTestItemType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CodeFrameTestItemListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TestItem == nil {
     t = t.AddNew()
     }
-        return &(t.TestItem[n]), nil
+        return &(t.TestItem[n])
 }
 
 // Length of the list.
@@ -9914,11 +16167,20 @@ func (t *CodeFrameTestItemListType) Len() int {
         return len(t.TestItem)
 }
 
+// Convert list object to slice
+func (t *CodeFrameTestItemListType) ToSlice() []*CodeFrameTestItemType {
+  ret := make([]*CodeFrameTestItemType, 0)
+  for _, x:= range t.TestItem {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ComponentsType) Append(value ComponentType) *ComponentsType {
+  func (t *ComponentsType) Append(values ...ComponentType) *ComponentsType {
     
         if t == nil {
                 t, _ = ComponentsTypePointer(ComponentsType{})
@@ -9926,7 +16188,9 @@ func (t *CodeFrameTestItemListType) Len() int {
         if t.Component == nil {
                 t.Component = make([]ComponentType, 0)
         }
+        for _, value := range values {
         t.Component = append(t.Component, value)
+        }
         return t
 }
 
@@ -9950,15 +16214,15 @@ func (t *ComponentsType) Last() *ComponentType {
         return &(t.Component[len(t.Component)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ComponentsType) Index(n int) (*ComponentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ComponentsType) Index(n int) (*ComponentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ComponentsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Component == nil {
     t = t.AddNew()
     }
-        return &(t.Component[n]), nil
+        return &(t.Component[n])
 }
 
 // Length of the list.
@@ -9969,11 +16233,20 @@ func (t *ComponentsType) Len() int {
         return len(t.Component)
 }
 
+// Convert list object to slice
+func (t *ComponentsType) ToSlice() []*ComponentType {
+  ret := make([]*ComponentType, 0)
+  for _, x:= range t.Component {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ContactsType) Append(value ContactType) *ContactsType {
+  func (t *ContactsType) Append(values ...ContactType) *ContactsType {
     
         if t == nil {
                 t, _ = ContactsTypePointer(ContactsType{})
@@ -9981,7 +16254,9 @@ func (t *ComponentsType) Len() int {
         if t.Contact == nil {
                 t.Contact = make([]ContactType, 0)
         }
+        for _, value := range values {
         t.Contact = append(t.Contact, value)
+        }
         return t
 }
 
@@ -10005,15 +16280,15 @@ func (t *ContactsType) Last() *ContactType {
         return &(t.Contact[len(t.Contact)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ContactsType) Index(n int) (*ContactType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ContactsType) Index(n int) (*ContactType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ContactsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Contact == nil {
     t = t.AddNew()
     }
-        return &(t.Contact[n]), nil
+        return &(t.Contact[n])
 }
 
 // Length of the list.
@@ -10024,11 +16299,20 @@ func (t *ContactsType) Len() int {
         return len(t.Contact)
 }
 
+// Convert list object to slice
+func (t *ContactsType) ToSlice() []*ContactType {
+  ret := make([]*ContactType, 0)
+  for _, x:= range t.Contact {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ContentDescriptionListType) Append(value string) *ContentDescriptionListType {
+  func (t *ContentDescriptionListType) Append(values ...string) *ContentDescriptionListType {
     
         if t == nil {
                 t, _ = ContentDescriptionListTypePointer(ContentDescriptionListType{})
@@ -10036,7 +16320,9 @@ func (t *ContactsType) Len() int {
         if t.ContentDescription == nil {
                 t.ContentDescription = make([]string, 0)
         }
+        for _, value := range values {
         t.ContentDescription = append(t.ContentDescription, value)
+        }
         return t
 }
 
@@ -10060,15 +16346,15 @@ func (t *ContentDescriptionListType) Last() *string {
         return &(t.ContentDescription[len(t.ContentDescription)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ContentDescriptionListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ContentDescriptionListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ContentDescriptionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ContentDescription == nil {
     t = t.AddNew()
     }
-        return &(t.ContentDescription[n]), nil
+        return &(t.ContentDescription[n])
 }
 
 // Length of the list.
@@ -10079,6 +16365,15 @@ func (t *ContentDescriptionListType) Len() int {
         return len(t.ContentDescription)
 }
 
+// Convert list object to slice
+func (t *ContentDescriptionListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.ContentDescription {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *ContentDescriptionListType) AppendString(value string) *ContentDescriptionListType {
@@ -10087,7 +16382,7 @@ func (t *ContentDescriptionListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CountryList2Type) Append(value CountryType) *CountryList2Type {
+  func (t *CountryList2Type) Append(values ...CountryType) *CountryList2Type {
     
         if t == nil {
                 t, _ = CountryList2TypePointer(CountryList2Type{})
@@ -10095,7 +16390,9 @@ func (t *ContentDescriptionListType) Len() int {
         if t.CountryOfResidency == nil {
                 t.CountryOfResidency = make([]CountryType, 0)
         }
+        for _, value := range values {
         t.CountryOfResidency = append(t.CountryOfResidency, value)
+        }
         return t
 }
 
@@ -10119,15 +16416,15 @@ func (t *CountryList2Type) Last() *CountryType {
         return &(t.CountryOfResidency[len(t.CountryOfResidency)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CountryList2Type) Index(n int) (*CountryType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CountryList2Type) Index(n int) (*CountryType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CountryList2Type.Index(): subscript %d out of range on list\n", n)
     }
   if t.CountryOfResidency == nil {
     t = t.AddNew()
     }
-        return &(t.CountryOfResidency[n]), nil
+        return &(t.CountryOfResidency[n])
 }
 
 // Length of the list.
@@ -10138,6 +16435,15 @@ func (t *CountryList2Type) Len() int {
         return len(t.CountryOfResidency)
 }
 
+// Convert list object to slice
+func (t *CountryList2Type) ToSlice() []*CountryType {
+  ret := make([]*CountryType, 0)
+  for _, x:= range t.CountryOfResidency {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *CountryList2Type) AppendString(value string) *CountryList2Type {
@@ -10146,7 +16452,7 @@ func (t *CountryList2Type) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CountryListType) Append(value CountryType) *CountryListType {
+  func (t *CountryListType) Append(values ...CountryType) *CountryListType {
     
         if t == nil {
                 t, _ = CountryListTypePointer(CountryListType{})
@@ -10154,7 +16460,9 @@ func (t *CountryList2Type) Len() int {
         if t.CountryOfCitizenship == nil {
                 t.CountryOfCitizenship = make([]CountryType, 0)
         }
+        for _, value := range values {
         t.CountryOfCitizenship = append(t.CountryOfCitizenship, value)
+        }
         return t
 }
 
@@ -10178,15 +16486,15 @@ func (t *CountryListType) Last() *CountryType {
         return &(t.CountryOfCitizenship[len(t.CountryOfCitizenship)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CountryListType) Index(n int) (*CountryType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CountryListType) Index(n int) (*CountryType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CountryListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.CountryOfCitizenship == nil {
     t = t.AddNew()
     }
-        return &(t.CountryOfCitizenship[n]), nil
+        return &(t.CountryOfCitizenship[n])
 }
 
 // Length of the list.
@@ -10197,6 +16505,15 @@ func (t *CountryListType) Len() int {
         return len(t.CountryOfCitizenship)
 }
 
+// Convert list object to slice
+func (t *CountryListType) ToSlice() []*CountryType {
+  ret := make([]*CountryType, 0)
+  for _, x:= range t.CountryOfCitizenship {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *CountryListType) AppendString(value string) *CountryListType {
@@ -10205,7 +16522,7 @@ func (t *CountryListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *CreatorListType) Append(value LifeCycleCreatorType) *CreatorListType {
+  func (t *CreatorListType) Append(values ...LifeCycleCreatorType) *CreatorListType {
     
         if t == nil {
                 t, _ = CreatorListTypePointer(CreatorListType{})
@@ -10213,7 +16530,9 @@ func (t *CountryListType) Len() int {
         if t.Creator == nil {
                 t.Creator = make([]LifeCycleCreatorType, 0)
         }
+        for _, value := range values {
         t.Creator = append(t.Creator, value)
+        }
         return t
 }
 
@@ -10237,15 +16556,15 @@ func (t *CreatorListType) Last() *LifeCycleCreatorType {
         return &(t.Creator[len(t.Creator)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *CreatorListType) Index(n int) (*LifeCycleCreatorType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *CreatorListType) Index(n int) (*LifeCycleCreatorType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("CreatorListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Creator == nil {
     t = t.AddNew()
     }
-        return &(t.Creator[n]), nil
+        return &(t.Creator[n])
 }
 
 // Length of the list.
@@ -10256,11 +16575,20 @@ func (t *CreatorListType) Len() int {
         return len(t.Creator)
 }
 
+// Convert list object to slice
+func (t *CreatorListType) ToSlice() []*LifeCycleCreatorType {
+  ret := make([]*LifeCycleCreatorType, 0)
+  for _, x:= range t.Creator {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *DataDomainObligationListType) Append(value DataDomainObligationType) *DataDomainObligationListType {
+  func (t *DataDomainObligationListType) Append(values ...DataDomainObligationType) *DataDomainObligationListType {
     
         if t == nil {
                 t, _ = DataDomainObligationListTypePointer(DataDomainObligationListType{})
@@ -10268,7 +16596,9 @@ func (t *CreatorListType) Len() int {
         if t.DataDomainObligation == nil {
                 t.DataDomainObligation = make([]DataDomainObligationType, 0)
         }
+        for _, value := range values {
         t.DataDomainObligation = append(t.DataDomainObligation, value)
+        }
         return t
 }
 
@@ -10292,15 +16622,15 @@ func (t *DataDomainObligationListType) Last() *DataDomainObligationType {
         return &(t.DataDomainObligation[len(t.DataDomainObligation)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *DataDomainObligationListType) Index(n int) (*DataDomainObligationType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *DataDomainObligationListType) Index(n int) (*DataDomainObligationType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("DataDomainObligationListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.DataDomainObligation == nil {
     t = t.AddNew()
     }
-        return &(t.DataDomainObligation[n]), nil
+        return &(t.DataDomainObligation[n])
 }
 
 // Length of the list.
@@ -10311,11 +16641,20 @@ func (t *DataDomainObligationListType) Len() int {
         return len(t.DataDomainObligation)
 }
 
+// Convert list object to slice
+func (t *DataDomainObligationListType) ToSlice() []*DataDomainObligationType {
+  ret := make([]*DataDomainObligationType, 0)
+  for _, x:= range t.DataDomainObligation {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *DisabilityCategoryListType) Append(value AUCodeSetsNCCDDisabilityType) *DisabilityCategoryListType {
+  func (t *DisabilityCategoryListType) Append(values ...AUCodeSetsNCCDDisabilityType) *DisabilityCategoryListType {
     
         if t == nil {
                 t, _ = DisabilityCategoryListTypePointer(DisabilityCategoryListType{})
@@ -10323,7 +16662,9 @@ func (t *DataDomainObligationListType) Len() int {
         if t.DisabilityCategoryConsidered == nil {
                 t.DisabilityCategoryConsidered = make([]AUCodeSetsNCCDDisabilityType, 0)
         }
+        for _, value := range values {
         t.DisabilityCategoryConsidered = append(t.DisabilityCategoryConsidered, value)
+        }
         return t
 }
 
@@ -10347,15 +16688,15 @@ func (t *DisabilityCategoryListType) Last() *AUCodeSetsNCCDDisabilityType {
         return &(t.DisabilityCategoryConsidered[len(t.DisabilityCategoryConsidered)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *DisabilityCategoryListType) Index(n int) (*AUCodeSetsNCCDDisabilityType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *DisabilityCategoryListType) Index(n int) (*AUCodeSetsNCCDDisabilityType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("DisabilityCategoryListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.DisabilityCategoryConsidered == nil {
     t = t.AddNew()
     }
-        return &(t.DisabilityCategoryConsidered[n]), nil
+        return &(t.DisabilityCategoryConsidered[n])
 }
 
 // Length of the list.
@@ -10366,6 +16707,15 @@ func (t *DisabilityCategoryListType) Len() int {
         return len(t.DisabilityCategoryConsidered)
 }
 
+// Convert list object to slice
+func (t *DisabilityCategoryListType) ToSlice() []*AUCodeSetsNCCDDisabilityType {
+  ret := make([]*AUCodeSetsNCCDDisabilityType, 0)
+  for _, x:= range t.DisabilityCategoryConsidered {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *DisabilityCategoryListType) AppendString(value string) *DisabilityCategoryListType {
@@ -10374,7 +16724,7 @@ func (t *DisabilityCategoryListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *DoNotShareWithListType) Append(value DoNotShareWithType) *DoNotShareWithListType {
+  func (t *DoNotShareWithListType) Append(values ...DoNotShareWithType) *DoNotShareWithListType {
     
         if t == nil {
                 t, _ = DoNotShareWithListTypePointer(DoNotShareWithListType{})
@@ -10382,7 +16732,9 @@ func (t *DisabilityCategoryListType) Len() int {
         if t.DoNotShareWith == nil {
                 t.DoNotShareWith = make([]DoNotShareWithType, 0)
         }
+        for _, value := range values {
         t.DoNotShareWith = append(t.DoNotShareWith, value)
+        }
         return t
 }
 
@@ -10406,15 +16758,15 @@ func (t *DoNotShareWithListType) Last() *DoNotShareWithType {
         return &(t.DoNotShareWith[len(t.DoNotShareWith)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *DoNotShareWithListType) Index(n int) (*DoNotShareWithType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *DoNotShareWithListType) Index(n int) (*DoNotShareWithType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("DoNotShareWithListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.DoNotShareWith == nil {
     t = t.AddNew()
     }
-        return &(t.DoNotShareWith[n]), nil
+        return &(t.DoNotShareWith[n])
 }
 
 // Length of the list.
@@ -10425,11 +16777,20 @@ func (t *DoNotShareWithListType) Len() int {
         return len(t.DoNotShareWith)
 }
 
+// Convert list object to slice
+func (t *DoNotShareWithListType) ToSlice() []*DoNotShareWithType {
+  ret := make([]*DoNotShareWithType, 0)
+  for _, x:= range t.DoNotShareWith {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *EducationalAssessmentListType) Append(value EducationalAssessmentType) *EducationalAssessmentListType {
+  func (t *EducationalAssessmentListType) Append(values ...EducationalAssessmentType) *EducationalAssessmentListType {
     
         if t == nil {
                 t, _ = EducationalAssessmentListTypePointer(EducationalAssessmentListType{})
@@ -10437,7 +16798,9 @@ func (t *DoNotShareWithListType) Len() int {
         if t.EducationalAssessment == nil {
                 t.EducationalAssessment = make([]EducationalAssessmentType, 0)
         }
+        for _, value := range values {
         t.EducationalAssessment = append(t.EducationalAssessment, value)
+        }
         return t
 }
 
@@ -10461,15 +16824,15 @@ func (t *EducationalAssessmentListType) Last() *EducationalAssessmentType {
         return &(t.EducationalAssessment[len(t.EducationalAssessment)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *EducationalAssessmentListType) Index(n int) (*EducationalAssessmentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *EducationalAssessmentListType) Index(n int) (*EducationalAssessmentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("EducationalAssessmentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.EducationalAssessment == nil {
     t = t.AddNew()
     }
-        return &(t.EducationalAssessment[n]), nil
+        return &(t.EducationalAssessment[n])
 }
 
 // Length of the list.
@@ -10480,11 +16843,20 @@ func (t *EducationalAssessmentListType) Len() int {
         return len(t.EducationalAssessment)
 }
 
+// Convert list object to slice
+func (t *EducationalAssessmentListType) ToSlice() []*EducationalAssessmentType {
+  ret := make([]*EducationalAssessmentType, 0)
+  for _, x:= range t.EducationalAssessment {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ElectronicIdListType) Append(value ElectronicIdType) *ElectronicIdListType {
+  func (t *ElectronicIdListType) Append(values ...ElectronicIdType) *ElectronicIdListType {
     
         if t == nil {
                 t, _ = ElectronicIdListTypePointer(ElectronicIdListType{})
@@ -10492,7 +16864,9 @@ func (t *EducationalAssessmentListType) Len() int {
         if t.ElectronicId == nil {
                 t.ElectronicId = make([]ElectronicIdType, 0)
         }
+        for _, value := range values {
         t.ElectronicId = append(t.ElectronicId, value)
+        }
         return t
 }
 
@@ -10516,15 +16890,15 @@ func (t *ElectronicIdListType) Last() *ElectronicIdType {
         return &(t.ElectronicId[len(t.ElectronicId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ElectronicIdListType) Index(n int) (*ElectronicIdType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ElectronicIdListType) Index(n int) (*ElectronicIdType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ElectronicIdListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ElectronicId == nil {
     t = t.AddNew()
     }
-        return &(t.ElectronicId[n]), nil
+        return &(t.ElectronicId[n])
 }
 
 // Length of the list.
@@ -10535,11 +16909,20 @@ func (t *ElectronicIdListType) Len() int {
         return len(t.ElectronicId)
 }
 
+// Convert list object to slice
+func (t *ElectronicIdListType) ToSlice() []*ElectronicIdType {
+  ret := make([]*ElectronicIdType, 0)
+  for _, x:= range t.ElectronicId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *EmailListType) Append(value EmailType) *EmailListType {
+  func (t *EmailListType) Append(values ...EmailType) *EmailListType {
     
         if t == nil {
                 t, _ = EmailListTypePointer(EmailListType{})
@@ -10547,7 +16930,9 @@ func (t *ElectronicIdListType) Len() int {
         if t.Email == nil {
                 t.Email = make([]EmailType, 0)
         }
+        for _, value := range values {
         t.Email = append(t.Email, value)
+        }
         return t
 }
 
@@ -10571,15 +16956,15 @@ func (t *EmailListType) Last() *EmailType {
         return &(t.Email[len(t.Email)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *EmailListType) Index(n int) (*EmailType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *EmailListType) Index(n int) (*EmailType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("EmailListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Email == nil {
     t = t.AddNew()
     }
-        return &(t.Email[n]), nil
+        return &(t.Email[n])
 }
 
 // Length of the list.
@@ -10590,11 +16975,20 @@ func (t *EmailListType) Len() int {
         return len(t.Email)
 }
 
+// Convert list object to slice
+func (t *EmailListType) ToSlice() []*EmailType {
+  ret := make([]*EmailType, 0)
+  for _, x:= range t.Email {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *EssentialMaterialsType) Append(value string) *EssentialMaterialsType {
+  func (t *EssentialMaterialsType) Append(values ...string) *EssentialMaterialsType {
     
         if t == nil {
                 t, _ = EssentialMaterialsTypePointer(EssentialMaterialsType{})
@@ -10602,7 +16996,9 @@ func (t *EmailListType) Len() int {
         if t.EssentialMaterial == nil {
                 t.EssentialMaterial = make([]string, 0)
         }
+        for _, value := range values {
         t.EssentialMaterial = append(t.EssentialMaterial, value)
+        }
         return t
 }
 
@@ -10626,15 +17022,15 @@ func (t *EssentialMaterialsType) Last() *string {
         return &(t.EssentialMaterial[len(t.EssentialMaterial)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *EssentialMaterialsType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *EssentialMaterialsType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("EssentialMaterialsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.EssentialMaterial == nil {
     t = t.AddNew()
     }
-        return &(t.EssentialMaterial[n]), nil
+        return &(t.EssentialMaterial[n])
 }
 
 // Length of the list.
@@ -10645,6 +17041,15 @@ func (t *EssentialMaterialsType) Len() int {
         return len(t.EssentialMaterial)
 }
 
+// Convert list object to slice
+func (t *EssentialMaterialsType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.EssentialMaterial {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *EssentialMaterialsType) AppendString(value string) *EssentialMaterialsType {
@@ -10653,7 +17058,7 @@ func (t *EssentialMaterialsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *EvaluationsType) Append(value EvaluationType) *EvaluationsType {
+  func (t *EvaluationsType) Append(values ...EvaluationType) *EvaluationsType {
     
         if t == nil {
                 t, _ = EvaluationsTypePointer(EvaluationsType{})
@@ -10661,7 +17066,9 @@ func (t *EssentialMaterialsType) Len() int {
         if t.Evaluation == nil {
                 t.Evaluation = make([]EvaluationType, 0)
         }
+        for _, value := range values {
         t.Evaluation = append(t.Evaluation, value)
+        }
         return t
 }
 
@@ -10685,15 +17092,15 @@ func (t *EvaluationsType) Last() *EvaluationType {
         return &(t.Evaluation[len(t.Evaluation)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *EvaluationsType) Index(n int) (*EvaluationType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *EvaluationsType) Index(n int) (*EvaluationType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("EvaluationsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Evaluation == nil {
     t = t.AddNew()
     }
-        return &(t.Evaluation[n]), nil
+        return &(t.Evaluation[n])
 }
 
 // Length of the list.
@@ -10704,11 +17111,20 @@ func (t *EvaluationsType) Len() int {
         return len(t.Evaluation)
 }
 
+// Convert list object to slice
+func (t *EvaluationsType) ToSlice() []*EvaluationType {
+  ret := make([]*EvaluationType, 0)
+  for _, x:= range t.Evaluation {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ExclusionRulesType) Append(value ExclusionRuleType) *ExclusionRulesType {
+  func (t *ExclusionRulesType) Append(values ...ExclusionRuleType) *ExclusionRulesType {
     
         if t == nil {
                 t, _ = ExclusionRulesTypePointer(ExclusionRulesType{})
@@ -10716,7 +17132,9 @@ func (t *EvaluationsType) Len() int {
         if t.ExclusionRule == nil {
                 t.ExclusionRule = make([]ExclusionRuleType, 0)
         }
+        for _, value := range values {
         t.ExclusionRule = append(t.ExclusionRule, value)
+        }
         return t
 }
 
@@ -10740,15 +17158,15 @@ func (t *ExclusionRulesType) Last() *ExclusionRuleType {
         return &(t.ExclusionRule[len(t.ExclusionRule)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ExclusionRulesType) Index(n int) (*ExclusionRuleType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ExclusionRulesType) Index(n int) (*ExclusionRuleType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ExclusionRulesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ExclusionRule == nil {
     t = t.AddNew()
     }
-        return &(t.ExclusionRule[n]), nil
+        return &(t.ExclusionRule[n])
 }
 
 // Length of the list.
@@ -10759,11 +17177,20 @@ func (t *ExclusionRulesType) Len() int {
         return len(t.ExclusionRule)
 }
 
+// Convert list object to slice
+func (t *ExclusionRulesType) ToSlice() []*ExclusionRuleType {
+  ret := make([]*ExclusionRuleType, 0)
+  for _, x:= range t.ExclusionRule {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ExpenseAccountsType) Append(value ExpenseAccountType) *ExpenseAccountsType {
+  func (t *ExpenseAccountsType) Append(values ...ExpenseAccountType) *ExpenseAccountsType {
     
         if t == nil {
                 t, _ = ExpenseAccountsTypePointer(ExpenseAccountsType{})
@@ -10771,7 +17198,9 @@ func (t *ExclusionRulesType) Len() int {
         if t.ExpenseAccount == nil {
                 t.ExpenseAccount = make([]ExpenseAccountType, 0)
         }
+        for _, value := range values {
         t.ExpenseAccount = append(t.ExpenseAccount, value)
+        }
         return t
 }
 
@@ -10795,15 +17224,15 @@ func (t *ExpenseAccountsType) Last() *ExpenseAccountType {
         return &(t.ExpenseAccount[len(t.ExpenseAccount)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ExpenseAccountsType) Index(n int) (*ExpenseAccountType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ExpenseAccountsType) Index(n int) (*ExpenseAccountType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ExpenseAccountsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ExpenseAccount == nil {
     t = t.AddNew()
     }
-        return &(t.ExpenseAccount[n]), nil
+        return &(t.ExpenseAccount[n])
 }
 
 // Length of the list.
@@ -10814,11 +17243,20 @@ func (t *ExpenseAccountsType) Len() int {
         return len(t.ExpenseAccount)
 }
 
+// Convert list object to slice
+func (t *ExpenseAccountsType) ToSlice() []*ExpenseAccountType {
+  ret := make([]*ExpenseAccountType, 0)
+  for _, x:= range t.ExpenseAccount {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *FQContextualQuestionListType) Append(value FQContextualQuestionType) *FQContextualQuestionListType {
+  func (t *FQContextualQuestionListType) Append(values ...FQContextualQuestionType) *FQContextualQuestionListType {
     
         if t == nil {
                 t, _ = FQContextualQuestionListTypePointer(FQContextualQuestionListType{})
@@ -10826,7 +17264,9 @@ func (t *ExpenseAccountsType) Len() int {
         if t.FQContextualQuestion == nil {
                 t.FQContextualQuestion = make([]FQContextualQuestionType, 0)
         }
+        for _, value := range values {
         t.FQContextualQuestion = append(t.FQContextualQuestion, value)
+        }
         return t
 }
 
@@ -10850,15 +17290,15 @@ func (t *FQContextualQuestionListType) Last() *FQContextualQuestionType {
         return &(t.FQContextualQuestion[len(t.FQContextualQuestion)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *FQContextualQuestionListType) Index(n int) (*FQContextualQuestionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *FQContextualQuestionListType) Index(n int) (*FQContextualQuestionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("FQContextualQuestionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.FQContextualQuestion == nil {
     t = t.AddNew()
     }
-        return &(t.FQContextualQuestion[n]), nil
+        return &(t.FQContextualQuestion[n])
 }
 
 // Length of the list.
@@ -10869,11 +17309,20 @@ func (t *FQContextualQuestionListType) Len() int {
         return len(t.FQContextualQuestion)
 }
 
+// Convert list object to slice
+func (t *FQContextualQuestionListType) ToSlice() []*FQContextualQuestionType {
+  ret := make([]*FQContextualQuestionType, 0)
+  for _, x:= range t.FQContextualQuestion {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *FQItemListType) Append(value FQItemType) *FQItemListType {
+  func (t *FQItemListType) Append(values ...FQItemType) *FQItemListType {
     
         if t == nil {
                 t, _ = FQItemListTypePointer(FQItemListType{})
@@ -10881,7 +17330,9 @@ func (t *FQContextualQuestionListType) Len() int {
         if t.FQItem == nil {
                 t.FQItem = make([]FQItemType, 0)
         }
+        for _, value := range values {
         t.FQItem = append(t.FQItem, value)
+        }
         return t
 }
 
@@ -10905,15 +17356,15 @@ func (t *FQItemListType) Last() *FQItemType {
         return &(t.FQItem[len(t.FQItem)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *FQItemListType) Index(n int) (*FQItemType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *FQItemListType) Index(n int) (*FQItemType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("FQItemListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.FQItem == nil {
     t = t.AddNew()
     }
-        return &(t.FQItem[n]), nil
+        return &(t.FQItem[n])
 }
 
 // Length of the list.
@@ -10924,11 +17375,20 @@ func (t *FQItemListType) Len() int {
         return len(t.FQItem)
 }
 
+// Convert list object to slice
+func (t *FQItemListType) ToSlice() []*FQItemType {
+  ret := make([]*FQItemType, 0)
+  for _, x:= range t.FQItem {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *FQReportingListType) Append(value FQReportingType) *FQReportingListType {
+  func (t *FQReportingListType) Append(values ...FQReportingType) *FQReportingListType {
     
         if t == nil {
                 t, _ = FQReportingListTypePointer(FQReportingListType{})
@@ -10936,7 +17396,9 @@ func (t *FQItemListType) Len() int {
         if t.FQReporting == nil {
                 t.FQReporting = make([]FQReportingType, 0)
         }
+        for _, value := range values {
         t.FQReporting = append(t.FQReporting, value)
+        }
         return t
 }
 
@@ -10960,15 +17422,15 @@ func (t *FQReportingListType) Last() *FQReportingType {
         return &(t.FQReporting[len(t.FQReporting)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *FQReportingListType) Index(n int) (*FQReportingType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *FQReportingListType) Index(n int) (*FQReportingType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("FQReportingListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.FQReporting == nil {
     t = t.AddNew()
     }
-        return &(t.FQReporting[n]), nil
+        return &(t.FQReporting[n])
 }
 
 // Length of the list.
@@ -10979,11 +17441,20 @@ func (t *FQReportingListType) Len() int {
         return len(t.FQReporting)
 }
 
+// Convert list object to slice
+func (t *FQReportingListType) ToSlice() []*FQReportingType {
+  ret := make([]*FQReportingType, 0)
+  for _, x:= range t.FQReporting {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *FinancialAccountRefIdListType) Append(value string) *FinancialAccountRefIdListType {
+  func (t *FinancialAccountRefIdListType) Append(values ...string) *FinancialAccountRefIdListType {
     
         if t == nil {
                 t, _ = FinancialAccountRefIdListTypePointer(FinancialAccountRefIdListType{})
@@ -10991,7 +17462,9 @@ func (t *FQReportingListType) Len() int {
         if t.FinancialAccountRefId == nil {
                 t.FinancialAccountRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.FinancialAccountRefId = append(t.FinancialAccountRefId, value)
+        }
         return t
 }
 
@@ -11015,15 +17488,15 @@ func (t *FinancialAccountRefIdListType) Last() *string {
         return &(t.FinancialAccountRefId[len(t.FinancialAccountRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *FinancialAccountRefIdListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *FinancialAccountRefIdListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("FinancialAccountRefIdListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.FinancialAccountRefId == nil {
     t = t.AddNew()
     }
-        return &(t.FinancialAccountRefId[n]), nil
+        return &(t.FinancialAccountRefId[n])
 }
 
 // Length of the list.
@@ -11034,6 +17507,15 @@ func (t *FinancialAccountRefIdListType) Len() int {
         return len(t.FinancialAccountRefId)
 }
 
+// Convert list object to slice
+func (t *FinancialAccountRefIdListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.FinancialAccountRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *FinancialAccountRefIdListType) AppendString(value string) *FinancialAccountRefIdListType {
@@ -11042,7 +17524,7 @@ func (t *FinancialAccountRefIdListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *FineInfoListType) Append(value FineInfoType) *FineInfoListType {
+  func (t *FineInfoListType) Append(values ...FineInfoType) *FineInfoListType {
     
         if t == nil {
                 t, _ = FineInfoListTypePointer(FineInfoListType{})
@@ -11050,7 +17532,9 @@ func (t *FinancialAccountRefIdListType) Len() int {
         if t.FineInfo == nil {
                 t.FineInfo = make([]FineInfoType, 0)
         }
+        for _, value := range values {
         t.FineInfo = append(t.FineInfo, value)
+        }
         return t
 }
 
@@ -11074,15 +17558,15 @@ func (t *FineInfoListType) Last() *FineInfoType {
         return &(t.FineInfo[len(t.FineInfo)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *FineInfoListType) Index(n int) (*FineInfoType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *FineInfoListType) Index(n int) (*FineInfoType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("FineInfoListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.FineInfo == nil {
     t = t.AddNew()
     }
-        return &(t.FineInfo[n]), nil
+        return &(t.FineInfo[n])
 }
 
 // Length of the list.
@@ -11093,11 +17577,20 @@ func (t *FineInfoListType) Len() int {
         return len(t.FineInfo)
 }
 
+// Convert list object to slice
+func (t *FineInfoListType) ToSlice() []*FineInfoType {
+  ret := make([]*FineInfoType, 0)
+  for _, x:= range t.FineInfo {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *FollowUpActionListType) Append(value FollowUpActionType) *FollowUpActionListType {
+  func (t *FollowUpActionListType) Append(values ...FollowUpActionType) *FollowUpActionListType {
     
         if t == nil {
                 t, _ = FollowUpActionListTypePointer(FollowUpActionListType{})
@@ -11105,7 +17598,9 @@ func (t *FineInfoListType) Len() int {
         if t.FollowUpAction == nil {
                 t.FollowUpAction = make([]FollowUpActionType, 0)
         }
+        for _, value := range values {
         t.FollowUpAction = append(t.FollowUpAction, value)
+        }
         return t
 }
 
@@ -11129,15 +17624,15 @@ func (t *FollowUpActionListType) Last() *FollowUpActionType {
         return &(t.FollowUpAction[len(t.FollowUpAction)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *FollowUpActionListType) Index(n int) (*FollowUpActionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *FollowUpActionListType) Index(n int) (*FollowUpActionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("FollowUpActionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.FollowUpAction == nil {
     t = t.AddNew()
     }
-        return &(t.FollowUpAction[n]), nil
+        return &(t.FollowUpAction[n])
 }
 
 // Length of the list.
@@ -11148,11 +17643,20 @@ func (t *FollowUpActionListType) Len() int {
         return len(t.FollowUpAction)
 }
 
+// Convert list object to slice
+func (t *FollowUpActionListType) ToSlice() []*FollowUpActionType {
+  ret := make([]*FollowUpActionType, 0)
+  for _, x:= range t.FollowUpAction {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *GradingScoreListType) Append(value AssignmentScoreType) *GradingScoreListType {
+  func (t *GradingScoreListType) Append(values ...AssignmentScoreType) *GradingScoreListType {
     
         if t == nil {
                 t, _ = GradingScoreListTypePointer(GradingScoreListType{})
@@ -11160,7 +17664,9 @@ func (t *FollowUpActionListType) Len() int {
         if t.GradingAssignmentScore == nil {
                 t.GradingAssignmentScore = make([]AssignmentScoreType, 0)
         }
+        for _, value := range values {
         t.GradingAssignmentScore = append(t.GradingAssignmentScore, value)
+        }
         return t
 }
 
@@ -11184,15 +17690,15 @@ func (t *GradingScoreListType) Last() *AssignmentScoreType {
         return &(t.GradingAssignmentScore[len(t.GradingAssignmentScore)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *GradingScoreListType) Index(n int) (*AssignmentScoreType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *GradingScoreListType) Index(n int) (*AssignmentScoreType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("GradingScoreListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.GradingAssignmentScore == nil {
     t = t.AddNew()
     }
-        return &(t.GradingAssignmentScore[n]), nil
+        return &(t.GradingAssignmentScore[n])
 }
 
 // Length of the list.
@@ -11203,11 +17709,20 @@ func (t *GradingScoreListType) Len() int {
         return len(t.GradingAssignmentScore)
 }
 
+// Convert list object to slice
+func (t *GradingScoreListType) ToSlice() []*AssignmentScoreType {
+  ret := make([]*AssignmentScoreType, 0)
+  for _, x:= range t.GradingAssignmentScore {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *HoldInfoListType) Append(value HoldInfoType) *HoldInfoListType {
+  func (t *HoldInfoListType) Append(values ...HoldInfoType) *HoldInfoListType {
     
         if t == nil {
                 t, _ = HoldInfoListTypePointer(HoldInfoListType{})
@@ -11215,7 +17730,9 @@ func (t *GradingScoreListType) Len() int {
         if t.HoldInfo == nil {
                 t.HoldInfo = make([]HoldInfoType, 0)
         }
+        for _, value := range values {
         t.HoldInfo = append(t.HoldInfo, value)
+        }
         return t
 }
 
@@ -11239,15 +17756,15 @@ func (t *HoldInfoListType) Last() *HoldInfoType {
         return &(t.HoldInfo[len(t.HoldInfo)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *HoldInfoListType) Index(n int) (*HoldInfoType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *HoldInfoListType) Index(n int) (*HoldInfoType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("HoldInfoListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.HoldInfo == nil {
     t = t.AddNew()
     }
-        return &(t.HoldInfo[n]), nil
+        return &(t.HoldInfo[n])
 }
 
 // Length of the list.
@@ -11258,11 +17775,20 @@ func (t *HoldInfoListType) Len() int {
         return len(t.HoldInfo)
 }
 
+// Convert list object to slice
+func (t *HoldInfoListType) ToSlice() []*HoldInfoType {
+  ret := make([]*HoldInfoType, 0)
+  for _, x:= range t.HoldInfo {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *HouseholdContactInfoListType) Append(value HouseholdContactInfoType) *HouseholdContactInfoListType {
+  func (t *HouseholdContactInfoListType) Append(values ...HouseholdContactInfoType) *HouseholdContactInfoListType {
     
         if t == nil {
                 t, _ = HouseholdContactInfoListTypePointer(HouseholdContactInfoListType{})
@@ -11270,7 +17796,9 @@ func (t *HoldInfoListType) Len() int {
         if t.HouseholdContactInfo == nil {
                 t.HouseholdContactInfo = make([]HouseholdContactInfoType, 0)
         }
+        for _, value := range values {
         t.HouseholdContactInfo = append(t.HouseholdContactInfo, value)
+        }
         return t
 }
 
@@ -11294,15 +17822,15 @@ func (t *HouseholdContactInfoListType) Last() *HouseholdContactInfoType {
         return &(t.HouseholdContactInfo[len(t.HouseholdContactInfo)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *HouseholdContactInfoListType) Index(n int) (*HouseholdContactInfoType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *HouseholdContactInfoListType) Index(n int) (*HouseholdContactInfoType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("HouseholdContactInfoListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.HouseholdContactInfo == nil {
     t = t.AddNew()
     }
-        return &(t.HouseholdContactInfo[n]), nil
+        return &(t.HouseholdContactInfo[n])
 }
 
 // Length of the list.
@@ -11313,11 +17841,20 @@ func (t *HouseholdContactInfoListType) Len() int {
         return len(t.HouseholdContactInfo)
 }
 
+// Convert list object to slice
+func (t *HouseholdContactInfoListType) ToSlice() []*HouseholdContactInfoType {
+  ret := make([]*HouseholdContactInfoType, 0)
+  for _, x:= range t.HouseholdContactInfo {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *HouseholdListType) Append(value LocalIdType) *HouseholdListType {
+  func (t *HouseholdListType) Append(values ...LocalIdType) *HouseholdListType {
     
         if t == nil {
                 t, _ = HouseholdListTypePointer(HouseholdListType{})
@@ -11325,7 +17862,9 @@ func (t *HouseholdContactInfoListType) Len() int {
         if t.Household == nil {
                 t.Household = make([]LocalIdType, 0)
         }
+        for _, value := range values {
         t.Household = append(t.Household, value)
+        }
         return t
 }
 
@@ -11349,15 +17888,15 @@ func (t *HouseholdListType) Last() *LocalIdType {
         return &(t.Household[len(t.Household)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *HouseholdListType) Index(n int) (*LocalIdType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *HouseholdListType) Index(n int) (*LocalIdType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("HouseholdListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Household == nil {
     t = t.AddNew()
     }
-        return &(t.Household[n]), nil
+        return &(t.Household[n])
 }
 
 // Length of the list.
@@ -11368,6 +17907,15 @@ func (t *HouseholdListType) Len() int {
         return len(t.Household)
 }
 
+// Convert list object to slice
+func (t *HouseholdListType) ToSlice() []*LocalIdType {
+  ret := make([]*LocalIdType, 0)
+  for _, x:= range t.Household {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *HouseholdListType) AppendString(value string) *HouseholdListType {
@@ -11376,7 +17924,7 @@ func (t *HouseholdListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *IdentityAssertionsType) Append(value IdentityAssertionType) *IdentityAssertionsType {
+  func (t *IdentityAssertionsType) Append(values ...IdentityAssertionType) *IdentityAssertionsType {
     
         if t == nil {
                 t, _ = IdentityAssertionsTypePointer(IdentityAssertionsType{})
@@ -11384,7 +17932,9 @@ func (t *HouseholdListType) Len() int {
         if t.IdentityAssertion == nil {
                 t.IdentityAssertion = make([]IdentityAssertionType, 0)
         }
+        for _, value := range values {
         t.IdentityAssertion = append(t.IdentityAssertion, value)
+        }
         return t
 }
 
@@ -11408,15 +17958,15 @@ func (t *IdentityAssertionsType) Last() *IdentityAssertionType {
         return &(t.IdentityAssertion[len(t.IdentityAssertion)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *IdentityAssertionsType) Index(n int) (*IdentityAssertionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *IdentityAssertionsType) Index(n int) (*IdentityAssertionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("IdentityAssertionsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.IdentityAssertion == nil {
     t = t.AddNew()
     }
-        return &(t.IdentityAssertion[n]), nil
+        return &(t.IdentityAssertion[n])
 }
 
 // Length of the list.
@@ -11427,11 +17977,20 @@ func (t *IdentityAssertionsType) Len() int {
         return len(t.IdentityAssertion)
 }
 
+// Convert list object to slice
+func (t *IdentityAssertionsType) ToSlice() []*IdentityAssertionType {
+  ret := make([]*IdentityAssertionType, 0)
+  for _, x:= range t.IdentityAssertion {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *JournalAdjustmentListType) Append(value JournalAdjustmentType) *JournalAdjustmentListType {
+  func (t *JournalAdjustmentListType) Append(values ...JournalAdjustmentType) *JournalAdjustmentListType {
     
         if t == nil {
                 t, _ = JournalAdjustmentListTypePointer(JournalAdjustmentListType{})
@@ -11439,7 +17998,9 @@ func (t *IdentityAssertionsType) Len() int {
         if t.JournalAdjustment == nil {
                 t.JournalAdjustment = make([]JournalAdjustmentType, 0)
         }
+        for _, value := range values {
         t.JournalAdjustment = append(t.JournalAdjustment, value)
+        }
         return t
 }
 
@@ -11463,15 +18024,15 @@ func (t *JournalAdjustmentListType) Last() *JournalAdjustmentType {
         return &(t.JournalAdjustment[len(t.JournalAdjustment)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *JournalAdjustmentListType) Index(n int) (*JournalAdjustmentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *JournalAdjustmentListType) Index(n int) (*JournalAdjustmentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("JournalAdjustmentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.JournalAdjustment == nil {
     t = t.AddNew()
     }
-        return &(t.JournalAdjustment[n]), nil
+        return &(t.JournalAdjustment[n])
 }
 
 // Length of the list.
@@ -11482,11 +18043,20 @@ func (t *JournalAdjustmentListType) Len() int {
         return len(t.JournalAdjustment)
 }
 
+// Convert list object to slice
+func (t *JournalAdjustmentListType) ToSlice() []*JournalAdjustmentType {
+  ret := make([]*JournalAdjustmentType, 0)
+  for _, x:= range t.JournalAdjustment {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LEAContactListType) Append(value LEAContactType) *LEAContactListType {
+  func (t *LEAContactListType) Append(values ...LEAContactType) *LEAContactListType {
     
         if t == nil {
                 t, _ = LEAContactListTypePointer(LEAContactListType{})
@@ -11494,7 +18064,9 @@ func (t *JournalAdjustmentListType) Len() int {
         if t.LEAContact == nil {
                 t.LEAContact = make([]LEAContactType, 0)
         }
+        for _, value := range values {
         t.LEAContact = append(t.LEAContact, value)
+        }
         return t
 }
 
@@ -11518,15 +18090,15 @@ func (t *LEAContactListType) Last() *LEAContactType {
         return &(t.LEAContact[len(t.LEAContact)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LEAContactListType) Index(n int) (*LEAContactType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LEAContactListType) Index(n int) (*LEAContactType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LEAContactListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LEAContact == nil {
     t = t.AddNew()
     }
-        return &(t.LEAContact[n]), nil
+        return &(t.LEAContact[n])
 }
 
 // Length of the list.
@@ -11537,11 +18109,20 @@ func (t *LEAContactListType) Len() int {
         return len(t.LEAContact)
 }
 
+// Convert list object to slice
+func (t *LEAContactListType) ToSlice() []*LEAContactType {
+  ret := make([]*LEAContactType, 0)
+  for _, x:= range t.LEAContact {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LResourcesType) Append(value ResourcesType) *LResourcesType {
+  func (t *LResourcesType) Append(values ...ResourcesType) *LResourcesType {
     
         if t == nil {
                 t, _ = LResourcesTypePointer(LResourcesType{})
@@ -11549,7 +18130,9 @@ func (t *LEAContactListType) Len() int {
         if t.LearningResourceRefId == nil {
                 t.LearningResourceRefId = make([]ResourcesType, 0)
         }
+        for _, value := range values {
         t.LearningResourceRefId = append(t.LearningResourceRefId, value)
+        }
         return t
 }
 
@@ -11573,15 +18156,15 @@ func (t *LResourcesType) Last() *ResourcesType {
         return &(t.LearningResourceRefId[len(t.LearningResourceRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LResourcesType) Index(n int) (*ResourcesType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LResourcesType) Index(n int) (*ResourcesType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LResourcesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LearningResourceRefId == nil {
     t = t.AddNew()
     }
-        return &(t.LearningResourceRefId[n]), nil
+        return &(t.LearningResourceRefId[n])
 }
 
 // Length of the list.
@@ -11592,11 +18175,20 @@ func (t *LResourcesType) Len() int {
         return len(t.LearningResourceRefId)
 }
 
+// Convert list object to slice
+func (t *LResourcesType) ToSlice() []*ResourcesType {
+  ret := make([]*ResourcesType, 0)
+  for _, x:= range t.LearningResourceRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LanguageListType) Append(value LanguageBaseType) *LanguageListType {
+  func (t *LanguageListType) Append(values ...LanguageBaseType) *LanguageListType {
     
         if t == nil {
                 t, _ = LanguageListTypePointer(LanguageListType{})
@@ -11604,7 +18196,9 @@ func (t *LResourcesType) Len() int {
         if t.Language == nil {
                 t.Language = make([]LanguageBaseType, 0)
         }
+        for _, value := range values {
         t.Language = append(t.Language, value)
+        }
         return t
 }
 
@@ -11628,15 +18222,15 @@ func (t *LanguageListType) Last() *LanguageBaseType {
         return &(t.Language[len(t.Language)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LanguageListType) Index(n int) (*LanguageBaseType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LanguageListType) Index(n int) (*LanguageBaseType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LanguageListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Language == nil {
     t = t.AddNew()
     }
-        return &(t.Language[n]), nil
+        return &(t.Language[n])
 }
 
 // Length of the list.
@@ -11647,11 +18241,20 @@ func (t *LanguageListType) Len() int {
         return len(t.Language)
 }
 
+// Convert list object to slice
+func (t *LanguageListType) ToSlice() []*LanguageBaseType {
+  ret := make([]*LanguageBaseType, 0)
+  for _, x:= range t.Language {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LearningObjectivesType) Append(value string) *LearningObjectivesType {
+  func (t *LearningObjectivesType) Append(values ...string) *LearningObjectivesType {
     
         if t == nil {
                 t, _ = LearningObjectivesTypePointer(LearningObjectivesType{})
@@ -11659,7 +18262,9 @@ func (t *LanguageListType) Len() int {
         if t.LearningObjective == nil {
                 t.LearningObjective = make([]string, 0)
         }
+        for _, value := range values {
         t.LearningObjective = append(t.LearningObjective, value)
+        }
         return t
 }
 
@@ -11683,15 +18288,15 @@ func (t *LearningObjectivesType) Last() *string {
         return &(t.LearningObjective[len(t.LearningObjective)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LearningObjectivesType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LearningObjectivesType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LearningObjectivesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LearningObjective == nil {
     t = t.AddNew()
     }
-        return &(t.LearningObjective[n]), nil
+        return &(t.LearningObjective[n])
 }
 
 // Length of the list.
@@ -11702,6 +18307,15 @@ func (t *LearningObjectivesType) Len() int {
         return len(t.LearningObjective)
 }
 
+// Convert list object to slice
+func (t *LearningObjectivesType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.LearningObjective {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *LearningObjectivesType) AppendString(value string) *LearningObjectivesType {
@@ -11710,7 +18324,7 @@ func (t *LearningObjectivesType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LearningResourcesType) Append(value string) *LearningResourcesType {
+  func (t *LearningResourcesType) Append(values ...string) *LearningResourcesType {
     
         if t == nil {
                 t, _ = LearningResourcesTypePointer(LearningResourcesType{})
@@ -11718,7 +18332,9 @@ func (t *LearningObjectivesType) Len() int {
         if t.LearningResourceRefId == nil {
                 t.LearningResourceRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.LearningResourceRefId = append(t.LearningResourceRefId, value)
+        }
         return t
 }
 
@@ -11742,15 +18358,15 @@ func (t *LearningResourcesType) Last() *string {
         return &(t.LearningResourceRefId[len(t.LearningResourceRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LearningResourcesType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LearningResourcesType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LearningResourcesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LearningResourceRefId == nil {
     t = t.AddNew()
     }
-        return &(t.LearningResourceRefId[n]), nil
+        return &(t.LearningResourceRefId[n])
 }
 
 // Length of the list.
@@ -11761,6 +18377,15 @@ func (t *LearningResourcesType) Len() int {
         return len(t.LearningResourceRefId)
 }
 
+// Convert list object to slice
+func (t *LearningResourcesType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.LearningResourceRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *LearningResourcesType) AppendString(value string) *LearningResourcesType {
@@ -11769,7 +18394,7 @@ func (t *LearningResourcesType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LearningStandardListType) Append(value LearningStandardType) *LearningStandardListType {
+  func (t *LearningStandardListType) Append(values ...LearningStandardType) *LearningStandardListType {
     
         if t == nil {
                 t, _ = LearningStandardListTypePointer(LearningStandardListType{})
@@ -11777,7 +18402,9 @@ func (t *LearningResourcesType) Len() int {
         if t.LearningStandard == nil {
                 t.LearningStandard = make([]LearningStandardType, 0)
         }
+        for _, value := range values {
         t.LearningStandard = append(t.LearningStandard, value)
+        }
         return t
 }
 
@@ -11801,15 +18428,15 @@ func (t *LearningStandardListType) Last() *LearningStandardType {
         return &(t.LearningStandard[len(t.LearningStandard)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LearningStandardListType) Index(n int) (*LearningStandardType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LearningStandardListType) Index(n int) (*LearningStandardType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LearningStandardListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LearningStandard == nil {
     t = t.AddNew()
     }
-        return &(t.LearningStandard[n]), nil
+        return &(t.LearningStandard[n])
 }
 
 // Length of the list.
@@ -11820,11 +18447,20 @@ func (t *LearningStandardListType) Len() int {
         return len(t.LearningStandard)
 }
 
+// Convert list object to slice
+func (t *LearningStandardListType) ToSlice() []*LearningStandardType {
+  ret := make([]*LearningStandardType, 0)
+  for _, x:= range t.LearningStandard {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LearningStandardsDocumentType) Append(value string) *LearningStandardsDocumentType {
+  func (t *LearningStandardsDocumentType) Append(values ...string) *LearningStandardsDocumentType {
     
         if t == nil {
                 t, _ = LearningStandardsDocumentTypePointer(LearningStandardsDocumentType{})
@@ -11832,7 +18468,9 @@ func (t *LearningStandardListType) Len() int {
         if t.LearningStandardDocumentRefId == nil {
                 t.LearningStandardDocumentRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.LearningStandardDocumentRefId = append(t.LearningStandardDocumentRefId, value)
+        }
         return t
 }
 
@@ -11856,15 +18494,15 @@ func (t *LearningStandardsDocumentType) Last() *string {
         return &(t.LearningStandardDocumentRefId[len(t.LearningStandardDocumentRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LearningStandardsDocumentType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LearningStandardsDocumentType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LearningStandardsDocumentType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LearningStandardDocumentRefId == nil {
     t = t.AddNew()
     }
-        return &(t.LearningStandardDocumentRefId[n]), nil
+        return &(t.LearningStandardDocumentRefId[n])
 }
 
 // Length of the list.
@@ -11875,6 +18513,15 @@ func (t *LearningStandardsDocumentType) Len() int {
         return len(t.LearningStandardDocumentRefId)
 }
 
+// Convert list object to slice
+func (t *LearningStandardsDocumentType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.LearningStandardDocumentRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *LearningStandardsDocumentType) AppendString(value string) *LearningStandardsDocumentType {
@@ -11883,7 +18530,7 @@ func (t *LearningStandardsDocumentType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LearningStandardsType) Append(value string) *LearningStandardsType {
+  func (t *LearningStandardsType) Append(values ...string) *LearningStandardsType {
     
         if t == nil {
                 t, _ = LearningStandardsTypePointer(LearningStandardsType{})
@@ -11891,7 +18538,9 @@ func (t *LearningStandardsDocumentType) Len() int {
         if t.LearningStandardItemRefId == nil {
                 t.LearningStandardItemRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.LearningStandardItemRefId = append(t.LearningStandardItemRefId, value)
+        }
         return t
 }
 
@@ -11915,15 +18564,15 @@ func (t *LearningStandardsType) Last() *string {
         return &(t.LearningStandardItemRefId[len(t.LearningStandardItemRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LearningStandardsType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LearningStandardsType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LearningStandardsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LearningStandardItemRefId == nil {
     t = t.AddNew()
     }
-        return &(t.LearningStandardItemRefId[n]), nil
+        return &(t.LearningStandardItemRefId[n])
 }
 
 // Length of the list.
@@ -11934,6 +18583,15 @@ func (t *LearningStandardsType) Len() int {
         return len(t.LearningStandardItemRefId)
 }
 
+// Convert list object to slice
+func (t *LearningStandardsType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.LearningStandardItemRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *LearningStandardsType) AppendString(value string) *LearningStandardsType {
@@ -11942,7 +18600,7 @@ func (t *LearningStandardsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LibraryMessageListType) Append(value LibraryMessageType) *LibraryMessageListType {
+  func (t *LibraryMessageListType) Append(values ...LibraryMessageType) *LibraryMessageListType {
     
         if t == nil {
                 t, _ = LibraryMessageListTypePointer(LibraryMessageListType{})
@@ -11950,7 +18608,9 @@ func (t *LearningStandardsType) Len() int {
         if t.Message == nil {
                 t.Message = make([]LibraryMessageType, 0)
         }
+        for _, value := range values {
         t.Message = append(t.Message, value)
+        }
         return t
 }
 
@@ -11974,15 +18634,15 @@ func (t *LibraryMessageListType) Last() *LibraryMessageType {
         return &(t.Message[len(t.Message)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LibraryMessageListType) Index(n int) (*LibraryMessageType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LibraryMessageListType) Index(n int) (*LibraryMessageType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LibraryMessageListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Message == nil {
     t = t.AddNew()
     }
-        return &(t.Message[n]), nil
+        return &(t.Message[n])
 }
 
 // Length of the list.
@@ -11993,11 +18653,20 @@ func (t *LibraryMessageListType) Len() int {
         return len(t.Message)
 }
 
+// Convert list object to slice
+func (t *LibraryMessageListType) ToSlice() []*LibraryMessageType {
+  ret := make([]*LibraryMessageType, 0)
+  for _, x:= range t.Message {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LibraryTransactionListType) Append(value LibraryTransactionType) *LibraryTransactionListType {
+  func (t *LibraryTransactionListType) Append(values ...LibraryTransactionType) *LibraryTransactionListType {
     
         if t == nil {
                 t, _ = LibraryTransactionListTypePointer(LibraryTransactionListType{})
@@ -12005,7 +18674,9 @@ func (t *LibraryMessageListType) Len() int {
         if t.Transaction == nil {
                 t.Transaction = make([]LibraryTransactionType, 0)
         }
+        for _, value := range values {
         t.Transaction = append(t.Transaction, value)
+        }
         return t
 }
 
@@ -12029,15 +18700,15 @@ func (t *LibraryTransactionListType) Last() *LibraryTransactionType {
         return &(t.Transaction[len(t.Transaction)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LibraryTransactionListType) Index(n int) (*LibraryTransactionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LibraryTransactionListType) Index(n int) (*LibraryTransactionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LibraryTransactionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Transaction == nil {
     t = t.AddNew()
     }
-        return &(t.Transaction[n]), nil
+        return &(t.Transaction[n])
 }
 
 // Length of the list.
@@ -12048,11 +18719,20 @@ func (t *LibraryTransactionListType) Len() int {
         return len(t.Transaction)
 }
 
+// Convert list object to slice
+func (t *LibraryTransactionListType) ToSlice() []*LibraryTransactionType {
+  ret := make([]*LibraryTransactionType, 0)
+  for _, x:= range t.Transaction {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *LocalCodeListType) Append(value LocalCodeType) *LocalCodeListType {
+  func (t *LocalCodeListType) Append(values ...LocalCodeType) *LocalCodeListType {
     
         if t == nil {
                 t, _ = LocalCodeListTypePointer(LocalCodeListType{})
@@ -12060,7 +18740,9 @@ func (t *LibraryTransactionListType) Len() int {
         if t.LocalCode == nil {
                 t.LocalCode = make([]LocalCodeType, 0)
         }
+        for _, value := range values {
         t.LocalCode = append(t.LocalCode, value)
+        }
         return t
 }
 
@@ -12084,15 +18766,15 @@ func (t *LocalCodeListType) Last() *LocalCodeType {
         return &(t.LocalCode[len(t.LocalCode)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *LocalCodeListType) Index(n int) (*LocalCodeType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *LocalCodeListType) Index(n int) (*LocalCodeType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("LocalCodeListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LocalCode == nil {
     t = t.AddNew()
     }
-        return &(t.LocalCode[n]), nil
+        return &(t.LocalCode[n])
 }
 
 // Length of the list.
@@ -12103,11 +18785,20 @@ func (t *LocalCodeListType) Len() int {
         return len(t.LocalCode)
 }
 
+// Convert list object to slice
+func (t *LocalCodeListType) ToSlice() []*LocalCodeType {
+  ret := make([]*LocalCodeType, 0)
+  for _, x:= range t.LocalCode {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *MediaTypesType) Append(value string) *MediaTypesType {
+  func (t *MediaTypesType) Append(values ...string) *MediaTypesType {
     
         if t == nil {
                 t, _ = MediaTypesTypePointer(MediaTypesType{})
@@ -12115,7 +18806,9 @@ func (t *LocalCodeListType) Len() int {
         if t.MediaType == nil {
                 t.MediaType = make([]string, 0)
         }
+        for _, value := range values {
         t.MediaType = append(t.MediaType, value)
+        }
         return t
 }
 
@@ -12139,15 +18832,15 @@ func (t *MediaTypesType) Last() *string {
         return &(t.MediaType[len(t.MediaType)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *MediaTypesType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *MediaTypesType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("MediaTypesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.MediaType == nil {
     t = t.AddNew()
     }
-        return &(t.MediaType[n]), nil
+        return &(t.MediaType[n])
 }
 
 // Length of the list.
@@ -12158,6 +18851,15 @@ func (t *MediaTypesType) Len() int {
         return len(t.MediaType)
 }
 
+// Convert list object to slice
+func (t *MediaTypesType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.MediaType {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *MediaTypesType) AppendString(value string) *MediaTypesType {
@@ -12166,7 +18868,7 @@ func (t *MediaTypesType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *MedicalAlertMessagesType) Append(value MedicalAlertMessageType) *MedicalAlertMessagesType {
+  func (t *MedicalAlertMessagesType) Append(values ...MedicalAlertMessageType) *MedicalAlertMessagesType {
     
         if t == nil {
                 t, _ = MedicalAlertMessagesTypePointer(MedicalAlertMessagesType{})
@@ -12174,7 +18876,9 @@ func (t *MediaTypesType) Len() int {
         if t.MedicalAlertMessage == nil {
                 t.MedicalAlertMessage = make([]MedicalAlertMessageType, 0)
         }
+        for _, value := range values {
         t.MedicalAlertMessage = append(t.MedicalAlertMessage, value)
+        }
         return t
 }
 
@@ -12198,15 +18902,15 @@ func (t *MedicalAlertMessagesType) Last() *MedicalAlertMessageType {
         return &(t.MedicalAlertMessage[len(t.MedicalAlertMessage)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *MedicalAlertMessagesType) Index(n int) (*MedicalAlertMessageType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *MedicalAlertMessagesType) Index(n int) (*MedicalAlertMessageType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("MedicalAlertMessagesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.MedicalAlertMessage == nil {
     t = t.AddNew()
     }
-        return &(t.MedicalAlertMessage[n]), nil
+        return &(t.MedicalAlertMessage[n])
 }
 
 // Length of the list.
@@ -12217,11 +18921,20 @@ func (t *MedicalAlertMessagesType) Len() int {
         return len(t.MedicalAlertMessage)
 }
 
+// Convert list object to slice
+func (t *MedicalAlertMessagesType) ToSlice() []*MedicalAlertMessageType {
+  ret := make([]*MedicalAlertMessageType, 0)
+  for _, x:= range t.MedicalAlertMessage {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *MedicationListType) Append(value MedicationType) *MedicationListType {
+  func (t *MedicationListType) Append(values ...MedicationType) *MedicationListType {
     
         if t == nil {
                 t, _ = MedicationListTypePointer(MedicationListType{})
@@ -12229,7 +18942,9 @@ func (t *MedicalAlertMessagesType) Len() int {
         if t.Medication == nil {
                 t.Medication = make([]MedicationType, 0)
         }
+        for _, value := range values {
         t.Medication = append(t.Medication, value)
+        }
         return t
 }
 
@@ -12253,15 +18968,15 @@ func (t *MedicationListType) Last() *MedicationType {
         return &(t.Medication[len(t.Medication)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *MedicationListType) Index(n int) (*MedicationType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *MedicationListType) Index(n int) (*MedicationType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("MedicationListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Medication == nil {
     t = t.AddNew()
     }
-        return &(t.Medication[n]), nil
+        return &(t.Medication[n])
 }
 
 // Length of the list.
@@ -12272,11 +18987,20 @@ func (t *MedicationListType) Len() int {
         return len(t.Medication)
 }
 
+// Convert list object to slice
+func (t *MedicationListType) ToSlice() []*MedicationType {
+  ret := make([]*MedicationType, 0)
+  for _, x:= range t.Medication {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ModifiedListType) Append(value ModifiedType) *ModifiedListType {
+  func (t *ModifiedListType) Append(values ...ModifiedType) *ModifiedListType {
     
         if t == nil {
                 t, _ = ModifiedListTypePointer(ModifiedListType{})
@@ -12284,7 +19008,9 @@ func (t *MedicationListType) Len() int {
         if t.Modified == nil {
                 t.Modified = make([]ModifiedType, 0)
         }
+        for _, value := range values {
         t.Modified = append(t.Modified, value)
+        }
         return t
 }
 
@@ -12308,15 +19034,15 @@ func (t *ModifiedListType) Last() *ModifiedType {
         return &(t.Modified[len(t.Modified)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ModifiedListType) Index(n int) (*ModifiedType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ModifiedListType) Index(n int) (*ModifiedType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ModifiedListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Modified == nil {
     t = t.AddNew()
     }
-        return &(t.Modified[n]), nil
+        return &(t.Modified[n])
 }
 
 // Length of the list.
@@ -12327,11 +19053,20 @@ func (t *ModifiedListType) Len() int {
         return len(t.Modified)
 }
 
+// Convert list object to slice
+func (t *ModifiedListType) ToSlice() []*ModifiedType {
+  ret := make([]*ModifiedType, 0)
+  for _, x:= range t.Modified {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPCodeFrameTestletListType) Append(value NAPTestletCodeFrameType) *NAPCodeFrameTestletListType {
+  func (t *NAPCodeFrameTestletListType) Append(values ...NAPTestletCodeFrameType) *NAPCodeFrameTestletListType {
     
         if t == nil {
                 t, _ = NAPCodeFrameTestletListTypePointer(NAPCodeFrameTestletListType{})
@@ -12339,7 +19074,9 @@ func (t *ModifiedListType) Len() int {
         if t.Testlet == nil {
                 t.Testlet = make([]NAPTestletCodeFrameType, 0)
         }
+        for _, value := range values {
         t.Testlet = append(t.Testlet, value)
+        }
         return t
 }
 
@@ -12363,15 +19100,15 @@ func (t *NAPCodeFrameTestletListType) Last() *NAPTestletCodeFrameType {
         return &(t.Testlet[len(t.Testlet)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPCodeFrameTestletListType) Index(n int) (*NAPTestletCodeFrameType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPCodeFrameTestletListType) Index(n int) (*NAPTestletCodeFrameType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPCodeFrameTestletListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Testlet == nil {
     t = t.AddNew()
     }
-        return &(t.Testlet[n]), nil
+        return &(t.Testlet[n])
 }
 
 // Length of the list.
@@ -12382,11 +19119,20 @@ func (t *NAPCodeFrameTestletListType) Len() int {
         return len(t.Testlet)
 }
 
+// Convert list object to slice
+func (t *NAPCodeFrameTestletListType) ToSlice() []*NAPTestletCodeFrameType {
+  ret := make([]*NAPTestletCodeFrameType, 0)
+  for _, x:= range t.Testlet {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPLANClassListType) Append(value string) *NAPLANClassListType {
+  func (t *NAPLANClassListType) Append(values ...string) *NAPLANClassListType {
     
         if t == nil {
                 t, _ = NAPLANClassListTypePointer(NAPLANClassListType{})
@@ -12394,7 +19140,9 @@ func (t *NAPCodeFrameTestletListType) Len() int {
         if t.ClassCode == nil {
                 t.ClassCode = make([]string, 0)
         }
+        for _, value := range values {
         t.ClassCode = append(t.ClassCode, value)
+        }
         return t
 }
 
@@ -12418,15 +19166,15 @@ func (t *NAPLANClassListType) Last() *string {
         return &(t.ClassCode[len(t.ClassCode)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPLANClassListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPLANClassListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPLANClassListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ClassCode == nil {
     t = t.AddNew()
     }
-        return &(t.ClassCode[n]), nil
+        return &(t.ClassCode[n])
 }
 
 // Length of the list.
@@ -12437,6 +19185,15 @@ func (t *NAPLANClassListType) Len() int {
         return len(t.ClassCode)
 }
 
+// Convert list object to slice
+func (t *NAPLANClassListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.ClassCode {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *NAPLANClassListType) AppendString(value string) *NAPLANClassListType {
@@ -12445,7 +19202,7 @@ func (t *NAPLANClassListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPLANScoreListType) Append(value NAPLANScoreType) *NAPLANScoreListType {
+  func (t *NAPLANScoreListType) Append(values ...NAPLANScoreType) *NAPLANScoreListType {
     
         if t == nil {
                 t, _ = NAPLANScoreListTypePointer(NAPLANScoreListType{})
@@ -12453,7 +19210,9 @@ func (t *NAPLANClassListType) Len() int {
         if t.NAPLANScore == nil {
                 t.NAPLANScore = make([]NAPLANScoreType, 0)
         }
+        for _, value := range values {
         t.NAPLANScore = append(t.NAPLANScore, value)
+        }
         return t
 }
 
@@ -12477,15 +19236,15 @@ func (t *NAPLANScoreListType) Last() *NAPLANScoreType {
         return &(t.NAPLANScore[len(t.NAPLANScore)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPLANScoreListType) Index(n int) (*NAPLANScoreType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPLANScoreListType) Index(n int) (*NAPLANScoreType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPLANScoreListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.NAPLANScore == nil {
     t = t.AddNew()
     }
-        return &(t.NAPLANScore[n]), nil
+        return &(t.NAPLANScore[n])
 }
 
 // Length of the list.
@@ -12496,11 +19255,20 @@ func (t *NAPLANScoreListType) Len() int {
         return len(t.NAPLANScore)
 }
 
+// Convert list object to slice
+func (t *NAPLANScoreListType) ToSlice() []*NAPLANScoreType {
+  ret := make([]*NAPLANScoreType, 0)
+  for _, x:= range t.NAPLANScore {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPLANScoreWithYearsListType) Append(value NAPLANScoreWithYearsType) *NAPLANScoreWithYearsListType {
+  func (t *NAPLANScoreWithYearsListType) Append(values ...NAPLANScoreWithYearsType) *NAPLANScoreWithYearsListType {
     
         if t == nil {
                 t, _ = NAPLANScoreWithYearsListTypePointer(NAPLANScoreWithYearsListType{})
@@ -12508,7 +19276,9 @@ func (t *NAPLANScoreListType) Len() int {
         if t.NAPLANScore == nil {
                 t.NAPLANScore = make([]NAPLANScoreWithYearsType, 0)
         }
+        for _, value := range values {
         t.NAPLANScore = append(t.NAPLANScore, value)
+        }
         return t
 }
 
@@ -12532,15 +19302,15 @@ func (t *NAPLANScoreWithYearsListType) Last() *NAPLANScoreWithYearsType {
         return &(t.NAPLANScore[len(t.NAPLANScore)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPLANScoreWithYearsListType) Index(n int) (*NAPLANScoreWithYearsType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPLANScoreWithYearsListType) Index(n int) (*NAPLANScoreWithYearsType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPLANScoreWithYearsListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.NAPLANScore == nil {
     t = t.AddNew()
     }
-        return &(t.NAPLANScore[n]), nil
+        return &(t.NAPLANScore[n])
 }
 
 // Length of the list.
@@ -12551,11 +19321,20 @@ func (t *NAPLANScoreWithYearsListType) Len() int {
         return len(t.NAPLANScore)
 }
 
+// Convert list object to slice
+func (t *NAPLANScoreWithYearsListType) ToSlice() []*NAPLANScoreWithYearsType {
+  ret := make([]*NAPLANScoreWithYearsType, 0)
+  for _, x:= range t.NAPLANScore {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPStudentResponseTestletListType) Append(value NAPTestletResponseType) *NAPStudentResponseTestletListType {
+  func (t *NAPStudentResponseTestletListType) Append(values ...NAPTestletResponseType) *NAPStudentResponseTestletListType {
     
         if t == nil {
                 t, _ = NAPStudentResponseTestletListTypePointer(NAPStudentResponseTestletListType{})
@@ -12563,7 +19342,9 @@ func (t *NAPLANScoreWithYearsListType) Len() int {
         if t.Testlet == nil {
                 t.Testlet = make([]NAPTestletResponseType, 0)
         }
+        for _, value := range values {
         t.Testlet = append(t.Testlet, value)
+        }
         return t
 }
 
@@ -12587,15 +19368,15 @@ func (t *NAPStudentResponseTestletListType) Last() *NAPTestletResponseType {
         return &(t.Testlet[len(t.Testlet)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPStudentResponseTestletListType) Index(n int) (*NAPTestletResponseType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPStudentResponseTestletListType) Index(n int) (*NAPTestletResponseType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPStudentResponseTestletListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Testlet == nil {
     t = t.AddNew()
     }
-        return &(t.Testlet[n]), nil
+        return &(t.Testlet[n])
 }
 
 // Length of the list.
@@ -12606,11 +19387,20 @@ func (t *NAPStudentResponseTestletListType) Len() int {
         return len(t.Testlet)
 }
 
+// Convert list object to slice
+func (t *NAPStudentResponseTestletListType) ToSlice() []*NAPTestletResponseType {
+  ret := make([]*NAPTestletResponseType, 0)
+  for _, x:= range t.Testlet {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPSubscoreListType) Append(value NAPSubscoreType) *NAPSubscoreListType {
+  func (t *NAPSubscoreListType) Append(values ...NAPSubscoreType) *NAPSubscoreListType {
     
         if t == nil {
                 t, _ = NAPSubscoreListTypePointer(NAPSubscoreListType{})
@@ -12618,7 +19408,9 @@ func (t *NAPStudentResponseTestletListType) Len() int {
         if t.Subscore == nil {
                 t.Subscore = make([]NAPSubscoreType, 0)
         }
+        for _, value := range values {
         t.Subscore = append(t.Subscore, value)
+        }
         return t
 }
 
@@ -12642,15 +19434,15 @@ func (t *NAPSubscoreListType) Last() *NAPSubscoreType {
         return &(t.Subscore[len(t.Subscore)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPSubscoreListType) Index(n int) (*NAPSubscoreType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPSubscoreListType) Index(n int) (*NAPSubscoreType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPSubscoreListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Subscore == nil {
     t = t.AddNew()
     }
-        return &(t.Subscore[n]), nil
+        return &(t.Subscore[n])
 }
 
 // Length of the list.
@@ -12661,11 +19453,20 @@ func (t *NAPSubscoreListType) Len() int {
         return len(t.Subscore)
 }
 
+// Convert list object to slice
+func (t *NAPSubscoreListType) ToSlice() []*NAPSubscoreType {
+  ret := make([]*NAPSubscoreType, 0)
+  for _, x:= range t.Subscore {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPTestItemListType) Append(value NAPTestItem2Type) *NAPTestItemListType {
+  func (t *NAPTestItemListType) Append(values ...NAPTestItem2Type) *NAPTestItemListType {
     
         if t == nil {
                 t, _ = NAPTestItemListTypePointer(NAPTestItemListType{})
@@ -12673,7 +19474,9 @@ func (t *NAPSubscoreListType) Len() int {
         if t.TestItem == nil {
                 t.TestItem = make([]NAPTestItem2Type, 0)
         }
+        for _, value := range values {
         t.TestItem = append(t.TestItem, value)
+        }
         return t
 }
 
@@ -12697,15 +19500,15 @@ func (t *NAPTestItemListType) Last() *NAPTestItem2Type {
         return &(t.TestItem[len(t.TestItem)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPTestItemListType) Index(n int) (*NAPTestItem2Type, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPTestItemListType) Index(n int) (*NAPTestItem2Type) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPTestItemListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TestItem == nil {
     t = t.AddNew()
     }
-        return &(t.TestItem[n]), nil
+        return &(t.TestItem[n])
 }
 
 // Length of the list.
@@ -12716,11 +19519,20 @@ func (t *NAPTestItemListType) Len() int {
         return len(t.TestItem)
 }
 
+// Convert list object to slice
+func (t *NAPTestItemListType) ToSlice() []*NAPTestItem2Type {
+  ret := make([]*NAPTestItem2Type, 0)
+  for _, x:= range t.TestItem {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPTestletItemResponseListType) Append(value NAPTestletResponseItemType) *NAPTestletItemResponseListType {
+  func (t *NAPTestletItemResponseListType) Append(values ...NAPTestletResponseItemType) *NAPTestletItemResponseListType {
     
         if t == nil {
                 t, _ = NAPTestletItemResponseListTypePointer(NAPTestletItemResponseListType{})
@@ -12728,7 +19540,9 @@ func (t *NAPTestItemListType) Len() int {
         if t.ItemResponse == nil {
                 t.ItemResponse = make([]NAPTestletResponseItemType, 0)
         }
+        for _, value := range values {
         t.ItemResponse = append(t.ItemResponse, value)
+        }
         return t
 }
 
@@ -12752,15 +19566,15 @@ func (t *NAPTestletItemResponseListType) Last() *NAPTestletResponseItemType {
         return &(t.ItemResponse[len(t.ItemResponse)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPTestletItemResponseListType) Index(n int) (*NAPTestletResponseItemType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPTestletItemResponseListType) Index(n int) (*NAPTestletResponseItemType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPTestletItemResponseListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ItemResponse == nil {
     t = t.AddNew()
     }
-        return &(t.ItemResponse[n]), nil
+        return &(t.ItemResponse[n])
 }
 
 // Length of the list.
@@ -12771,11 +19585,20 @@ func (t *NAPTestletItemResponseListType) Len() int {
         return len(t.ItemResponse)
 }
 
+// Convert list object to slice
+func (t *NAPTestletItemResponseListType) ToSlice() []*NAPTestletResponseItemType {
+  ret := make([]*NAPTestletResponseItemType, 0)
+  for _, x:= range t.ItemResponse {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NAPWritingRubricListType) Append(value NAPWritingRubricType) *NAPWritingRubricListType {
+  func (t *NAPWritingRubricListType) Append(values ...NAPWritingRubricType) *NAPWritingRubricListType {
     
         if t == nil {
                 t, _ = NAPWritingRubricListTypePointer(NAPWritingRubricListType{})
@@ -12783,7 +19606,9 @@ func (t *NAPTestletItemResponseListType) Len() int {
         if t.NAPWritingRubric == nil {
                 t.NAPWritingRubric = make([]NAPWritingRubricType, 0)
         }
+        for _, value := range values {
         t.NAPWritingRubric = append(t.NAPWritingRubric, value)
+        }
         return t
 }
 
@@ -12807,15 +19632,15 @@ func (t *NAPWritingRubricListType) Last() *NAPWritingRubricType {
         return &(t.NAPWritingRubric[len(t.NAPWritingRubric)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NAPWritingRubricListType) Index(n int) (*NAPWritingRubricType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NAPWritingRubricListType) Index(n int) (*NAPWritingRubricType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NAPWritingRubricListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.NAPWritingRubric == nil {
     t = t.AddNew()
     }
-        return &(t.NAPWritingRubric[n]), nil
+        return &(t.NAPWritingRubric[n])
 }
 
 // Length of the list.
@@ -12826,11 +19651,20 @@ func (t *NAPWritingRubricListType) Len() int {
         return len(t.NAPWritingRubric)
 }
 
+// Convert list object to slice
+func (t *NAPWritingRubricListType) ToSlice() []*NAPWritingRubricType {
+  ret := make([]*NAPWritingRubricType, 0)
+  for _, x:= range t.NAPWritingRubric {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NCCDListType) Append(value NCCDType) *NCCDListType {
+  func (t *NCCDListType) Append(values ...NCCDType) *NCCDListType {
     
         if t == nil {
                 t, _ = NCCDListTypePointer(NCCDListType{})
@@ -12838,7 +19672,9 @@ func (t *NAPWritingRubricListType) Len() int {
         if t.NCCD == nil {
                 t.NCCD = make([]NCCDType, 0)
         }
+        for _, value := range values {
         t.NCCD = append(t.NCCD, value)
+        }
         return t
 }
 
@@ -12862,15 +19698,15 @@ func (t *NCCDListType) Last() *NCCDType {
         return &(t.NCCD[len(t.NCCD)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NCCDListType) Index(n int) (*NCCDType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NCCDListType) Index(n int) (*NCCDType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NCCDListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.NCCD == nil {
     t = t.AddNew()
     }
-        return &(t.NCCD[n]), nil
+        return &(t.NCCD[n])
 }
 
 // Length of the list.
@@ -12881,11 +19717,20 @@ func (t *NCCDListType) Len() int {
         return len(t.NCCD)
 }
 
+// Convert list object to slice
+func (t *NCCDListType) ToSlice() []*NCCDType {
+  ret := make([]*NCCDType, 0)
+  for _, x:= range t.NCCD {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *NeverShareWithListType) Append(value NeverShareWithType) *NeverShareWithListType {
+  func (t *NeverShareWithListType) Append(values ...NeverShareWithType) *NeverShareWithListType {
     
         if t == nil {
                 t, _ = NeverShareWithListTypePointer(NeverShareWithListType{})
@@ -12893,7 +19738,9 @@ func (t *NCCDListType) Len() int {
         if t.NeverShareWith == nil {
                 t.NeverShareWith = make([]NeverShareWithType, 0)
         }
+        for _, value := range values {
         t.NeverShareWith = append(t.NeverShareWith, value)
+        }
         return t
 }
 
@@ -12917,15 +19764,15 @@ func (t *NeverShareWithListType) Last() *NeverShareWithType {
         return &(t.NeverShareWith[len(t.NeverShareWith)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *NeverShareWithListType) Index(n int) (*NeverShareWithType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *NeverShareWithListType) Index(n int) (*NeverShareWithType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("NeverShareWithListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.NeverShareWith == nil {
     t = t.AddNew()
     }
-        return &(t.NeverShareWith[n]), nil
+        return &(t.NeverShareWith[n])
 }
 
 // Length of the list.
@@ -12936,11 +19783,20 @@ func (t *NeverShareWithListType) Len() int {
         return len(t.NeverShareWith)
 }
 
+// Convert list object to slice
+func (t *NeverShareWithListType) ToSlice() []*NeverShareWithType {
+  ret := make([]*NeverShareWithType, 0)
+  for _, x:= range t.NeverShareWith {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *OrganizationsType) Append(value string) *OrganizationsType {
+  func (t *OrganizationsType) Append(values ...string) *OrganizationsType {
     
         if t == nil {
                 t, _ = OrganizationsTypePointer(OrganizationsType{})
@@ -12948,7 +19804,9 @@ func (t *NeverShareWithListType) Len() int {
         if t.Organization == nil {
                 t.Organization = make([]string, 0)
         }
+        for _, value := range values {
         t.Organization = append(t.Organization, value)
+        }
         return t
 }
 
@@ -12972,15 +19830,15 @@ func (t *OrganizationsType) Last() *string {
         return &(t.Organization[len(t.Organization)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *OrganizationsType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *OrganizationsType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("OrganizationsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Organization == nil {
     t = t.AddNew()
     }
-        return &(t.Organization[n]), nil
+        return &(t.Organization[n])
 }
 
 // Length of the list.
@@ -12991,6 +19849,15 @@ func (t *OrganizationsType) Len() int {
         return len(t.Organization)
 }
 
+// Convert list object to slice
+func (t *OrganizationsType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.Organization {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *OrganizationsType) AppendString(value string) *OrganizationsType {
@@ -12999,7 +19866,7 @@ func (t *OrganizationsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *OtherCodeListType) Append(value OtherCodeListType_OtherCode) *OtherCodeListType {
+  func (t *OtherCodeListType) Append(values ...OtherCodeListType_OtherCode) *OtherCodeListType {
     
         if t == nil {
                 t, _ = OtherCodeListTypePointer(OtherCodeListType{})
@@ -13007,7 +19874,9 @@ func (t *OrganizationsType) Len() int {
         if t.OtherCode == nil {
                 t.OtherCode = make([]OtherCodeListType_OtherCode, 0)
         }
+        for _, value := range values {
         t.OtherCode = append(t.OtherCode, value)
+        }
         return t
 }
 
@@ -13031,15 +19900,15 @@ func (t *OtherCodeListType) Last() *OtherCodeListType_OtherCode {
         return &(t.OtherCode[len(t.OtherCode)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *OtherCodeListType) Index(n int) (*OtherCodeListType_OtherCode, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *OtherCodeListType) Index(n int) (*OtherCodeListType_OtherCode) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("OtherCodeListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.OtherCode == nil {
     t = t.AddNew()
     }
-        return &(t.OtherCode[n]), nil
+        return &(t.OtherCode[n])
 }
 
 // Length of the list.
@@ -13050,11 +19919,20 @@ func (t *OtherCodeListType) Len() int {
         return len(t.OtherCode)
 }
 
+// Convert list object to slice
+func (t *OtherCodeListType) ToSlice() []*OtherCodeListType_OtherCode {
+  ret := make([]*OtherCodeListType_OtherCode, 0)
+  for _, x:= range t.OtherCode {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *OtherIdListType) Append(value OtherIdType) *OtherIdListType {
+  func (t *OtherIdListType) Append(values ...OtherIdType) *OtherIdListType {
     
         if t == nil {
                 t, _ = OtherIdListTypePointer(OtherIdListType{})
@@ -13062,7 +19940,9 @@ func (t *OtherCodeListType) Len() int {
         if t.OtherId == nil {
                 t.OtherId = make([]OtherIdType, 0)
         }
+        for _, value := range values {
         t.OtherId = append(t.OtherId, value)
+        }
         return t
 }
 
@@ -13086,15 +19966,15 @@ func (t *OtherIdListType) Last() *OtherIdType {
         return &(t.OtherId[len(t.OtherId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *OtherIdListType) Index(n int) (*OtherIdType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *OtherIdListType) Index(n int) (*OtherIdType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("OtherIdListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.OtherId == nil {
     t = t.AddNew()
     }
-        return &(t.OtherId[n]), nil
+        return &(t.OtherId[n])
 }
 
 // Length of the list.
@@ -13105,11 +19985,20 @@ func (t *OtherIdListType) Len() int {
         return len(t.OtherId)
 }
 
+// Convert list object to slice
+func (t *OtherIdListType) ToSlice() []*OtherIdType {
+  ret := make([]*OtherIdType, 0)
+  for _, x:= range t.OtherId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *OtherNamesType) Append(value OtherNameType) *OtherNamesType {
+  func (t *OtherNamesType) Append(values ...OtherNameType) *OtherNamesType {
     
         if t == nil {
                 t, _ = OtherNamesTypePointer(OtherNamesType{})
@@ -13117,7 +20006,9 @@ func (t *OtherIdListType) Len() int {
         if t.Name == nil {
                 t.Name = make([]OtherNameType, 0)
         }
+        for _, value := range values {
         t.Name = append(t.Name, value)
+        }
         return t
 }
 
@@ -13141,15 +20032,15 @@ func (t *OtherNamesType) Last() *OtherNameType {
         return &(t.Name[len(t.Name)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *OtherNamesType) Index(n int) (*OtherNameType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *OtherNamesType) Index(n int) (*OtherNameType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("OtherNamesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Name == nil {
     t = t.AddNew()
     }
-        return &(t.Name[n]), nil
+        return &(t.Name[n])
 }
 
 // Length of the list.
@@ -13160,11 +20051,20 @@ func (t *OtherNamesType) Len() int {
         return len(t.Name)
 }
 
+// Convert list object to slice
+func (t *OtherNamesType) ToSlice() []*OtherNameType {
+  ret := make([]*OtherNameType, 0)
+  for _, x:= range t.Name {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PNPCodeListType) Append(value AUCodeSetsPNPCodeType) *PNPCodeListType {
+  func (t *PNPCodeListType) Append(values ...AUCodeSetsPNPCodeType) *PNPCodeListType {
     
         if t == nil {
                 t, _ = PNPCodeListTypePointer(PNPCodeListType{})
@@ -13172,7 +20072,9 @@ func (t *OtherNamesType) Len() int {
         if t.PNPCode == nil {
                 t.PNPCode = make([]AUCodeSetsPNPCodeType, 0)
         }
+        for _, value := range values {
         t.PNPCode = append(t.PNPCode, value)
+        }
         return t
 }
 
@@ -13196,15 +20098,15 @@ func (t *PNPCodeListType) Last() *AUCodeSetsPNPCodeType {
         return &(t.PNPCode[len(t.PNPCode)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PNPCodeListType) Index(n int) (*AUCodeSetsPNPCodeType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PNPCodeListType) Index(n int) (*AUCodeSetsPNPCodeType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PNPCodeListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PNPCode == nil {
     t = t.AddNew()
     }
-        return &(t.PNPCode[n]), nil
+        return &(t.PNPCode[n])
 }
 
 // Length of the list.
@@ -13215,6 +20117,15 @@ func (t *PNPCodeListType) Len() int {
         return len(t.PNPCode)
 }
 
+// Convert list object to slice
+func (t *PNPCodeListType) ToSlice() []*AUCodeSetsPNPCodeType {
+  ret := make([]*AUCodeSetsPNPCodeType, 0)
+  for _, x:= range t.PNPCode {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *PNPCodeListType) AppendString(value string) *PNPCodeListType {
@@ -13223,7 +20134,7 @@ func (t *PNPCodeListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PasswordListType) Append(value PasswordListType_Password) *PasswordListType {
+  func (t *PasswordListType) Append(values ...PasswordListType_Password) *PasswordListType {
     
         if t == nil {
                 t, _ = PasswordListTypePointer(PasswordListType{})
@@ -13231,7 +20142,9 @@ func (t *PNPCodeListType) Len() int {
         if t.Password == nil {
                 t.Password = make([]PasswordListType_Password, 0)
         }
+        for _, value := range values {
         t.Password = append(t.Password, value)
+        }
         return t
 }
 
@@ -13255,15 +20168,15 @@ func (t *PasswordListType) Last() *PasswordListType_Password {
         return &(t.Password[len(t.Password)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PasswordListType) Index(n int) (*PasswordListType_Password, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PasswordListType) Index(n int) (*PasswordListType_Password) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PasswordListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Password == nil {
     t = t.AddNew()
     }
-        return &(t.Password[n]), nil
+        return &(t.Password[n])
 }
 
 // Length of the list.
@@ -13274,11 +20187,20 @@ func (t *PasswordListType) Len() int {
         return len(t.Password)
 }
 
+// Convert list object to slice
+func (t *PasswordListType) ToSlice() []*PasswordListType_Password {
+  ret := make([]*PasswordListType_Password, 0)
+  for _, x:= range t.Password {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PaymentReceiptLineListType) Append(value PaymentReceiptLineType) *PaymentReceiptLineListType {
+  func (t *PaymentReceiptLineListType) Append(values ...PaymentReceiptLineType) *PaymentReceiptLineListType {
     
         if t == nil {
                 t, _ = PaymentReceiptLineListTypePointer(PaymentReceiptLineListType{})
@@ -13286,7 +20208,9 @@ func (t *PasswordListType) Len() int {
         if t.PaymentReceiptLine == nil {
                 t.PaymentReceiptLine = make([]PaymentReceiptLineType, 0)
         }
+        for _, value := range values {
         t.PaymentReceiptLine = append(t.PaymentReceiptLine, value)
+        }
         return t
 }
 
@@ -13310,15 +20234,15 @@ func (t *PaymentReceiptLineListType) Last() *PaymentReceiptLineType {
         return &(t.PaymentReceiptLine[len(t.PaymentReceiptLine)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PaymentReceiptLineListType) Index(n int) (*PaymentReceiptLineType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PaymentReceiptLineListType) Index(n int) (*PaymentReceiptLineType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PaymentReceiptLineListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PaymentReceiptLine == nil {
     t = t.AddNew()
     }
-        return &(t.PaymentReceiptLine[n]), nil
+        return &(t.PaymentReceiptLine[n])
 }
 
 // Length of the list.
@@ -13329,11 +20253,20 @@ func (t *PaymentReceiptLineListType) Len() int {
         return len(t.PaymentReceiptLine)
 }
 
+// Convert list object to slice
+func (t *PaymentReceiptLineListType) ToSlice() []*PaymentReceiptLineType {
+  ret := make([]*PaymentReceiptLineType, 0)
+  for _, x:= range t.PaymentReceiptLine {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PeriodAttendancesType) Append(value PeriodAttendanceType) *PeriodAttendancesType {
+  func (t *PeriodAttendancesType) Append(values ...PeriodAttendanceType) *PeriodAttendancesType {
     
         if t == nil {
                 t, _ = PeriodAttendancesTypePointer(PeriodAttendancesType{})
@@ -13341,7 +20274,9 @@ func (t *PaymentReceiptLineListType) Len() int {
         if t.PeriodAttendance == nil {
                 t.PeriodAttendance = make([]PeriodAttendanceType, 0)
         }
+        for _, value := range values {
         t.PeriodAttendance = append(t.PeriodAttendance, value)
+        }
         return t
 }
 
@@ -13365,15 +20300,15 @@ func (t *PeriodAttendancesType) Last() *PeriodAttendanceType {
         return &(t.PeriodAttendance[len(t.PeriodAttendance)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PeriodAttendancesType) Index(n int) (*PeriodAttendanceType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PeriodAttendancesType) Index(n int) (*PeriodAttendanceType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PeriodAttendancesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PeriodAttendance == nil {
     t = t.AddNew()
     }
-        return &(t.PeriodAttendance[n]), nil
+        return &(t.PeriodAttendance[n])
 }
 
 // Length of the list.
@@ -13384,11 +20319,20 @@ func (t *PeriodAttendancesType) Len() int {
         return len(t.PeriodAttendance)
 }
 
+// Convert list object to slice
+func (t *PeriodAttendancesType) ToSlice() []*PeriodAttendanceType {
+  ret := make([]*PeriodAttendanceType, 0)
+  for _, x:= range t.PeriodAttendance {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PermissionToParticipateListType) Append(value PermissionToParticipateType) *PermissionToParticipateListType {
+  func (t *PermissionToParticipateListType) Append(values ...PermissionToParticipateType) *PermissionToParticipateListType {
     
         if t == nil {
                 t, _ = PermissionToParticipateListTypePointer(PermissionToParticipateListType{})
@@ -13396,7 +20340,9 @@ func (t *PeriodAttendancesType) Len() int {
         if t.PermissionToParticipate == nil {
                 t.PermissionToParticipate = make([]PermissionToParticipateType, 0)
         }
+        for _, value := range values {
         t.PermissionToParticipate = append(t.PermissionToParticipate, value)
+        }
         return t
 }
 
@@ -13420,15 +20366,15 @@ func (t *PermissionToParticipateListType) Last() *PermissionToParticipateType {
         return &(t.PermissionToParticipate[len(t.PermissionToParticipate)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PermissionToParticipateListType) Index(n int) (*PermissionToParticipateType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PermissionToParticipateListType) Index(n int) (*PermissionToParticipateType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PermissionToParticipateListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PermissionToParticipate == nil {
     t = t.AddNew()
     }
-        return &(t.PermissionToParticipate[n]), nil
+        return &(t.PermissionToParticipate[n])
 }
 
 // Length of the list.
@@ -13439,11 +20385,20 @@ func (t *PermissionToParticipateListType) Len() int {
         return len(t.PermissionToParticipate)
 }
 
+// Convert list object to slice
+func (t *PermissionToParticipateListType) ToSlice() []*PermissionToParticipateType {
+  ret := make([]*PermissionToParticipateType, 0)
+  for _, x:= range t.PermissionToParticipate {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PersonInvolvementListType) Append(value PersonInvolvementType) *PersonInvolvementListType {
+  func (t *PersonInvolvementListType) Append(values ...PersonInvolvementType) *PersonInvolvementListType {
     
         if t == nil {
                 t, _ = PersonInvolvementListTypePointer(PersonInvolvementListType{})
@@ -13451,7 +20406,9 @@ func (t *PermissionToParticipateListType) Len() int {
         if t.PersonInvolvement == nil {
                 t.PersonInvolvement = make([]PersonInvolvementType, 0)
         }
+        for _, value := range values {
         t.PersonInvolvement = append(t.PersonInvolvement, value)
+        }
         return t
 }
 
@@ -13475,15 +20432,15 @@ func (t *PersonInvolvementListType) Last() *PersonInvolvementType {
         return &(t.PersonInvolvement[len(t.PersonInvolvement)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PersonInvolvementListType) Index(n int) (*PersonInvolvementType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PersonInvolvementListType) Index(n int) (*PersonInvolvementType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PersonInvolvementListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PersonInvolvement == nil {
     t = t.AddNew()
     }
-        return &(t.PersonInvolvement[n]), nil
+        return &(t.PersonInvolvement[n])
 }
 
 // Length of the list.
@@ -13494,11 +20451,20 @@ func (t *PersonInvolvementListType) Len() int {
         return len(t.PersonInvolvement)
 }
 
+// Convert list object to slice
+func (t *PersonInvolvementListType) ToSlice() []*PersonInvolvementType {
+  ret := make([]*PersonInvolvementType, 0)
+  for _, x:= range t.PersonInvolvement {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PhoneNumberListType) Append(value PhoneNumberType) *PhoneNumberListType {
+  func (t *PhoneNumberListType) Append(values ...PhoneNumberType) *PhoneNumberListType {
     
         if t == nil {
                 t, _ = PhoneNumberListTypePointer(PhoneNumberListType{})
@@ -13506,7 +20472,9 @@ func (t *PersonInvolvementListType) Len() int {
         if t.PhoneNumber == nil {
                 t.PhoneNumber = make([]PhoneNumberType, 0)
         }
+        for _, value := range values {
         t.PhoneNumber = append(t.PhoneNumber, value)
+        }
         return t
 }
 
@@ -13530,15 +20498,15 @@ func (t *PhoneNumberListType) Last() *PhoneNumberType {
         return &(t.PhoneNumber[len(t.PhoneNumber)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PhoneNumberListType) Index(n int) (*PhoneNumberType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PhoneNumberListType) Index(n int) (*PhoneNumberType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PhoneNumberListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PhoneNumber == nil {
     t = t.AddNew()
     }
-        return &(t.PhoneNumber[n]), nil
+        return &(t.PhoneNumber[n])
 }
 
 // Length of the list.
@@ -13549,11 +20517,20 @@ func (t *PhoneNumberListType) Len() int {
         return len(t.PhoneNumber)
 }
 
+// Convert list object to slice
+func (t *PhoneNumberListType) ToSlice() []*PhoneNumberType {
+  ret := make([]*PhoneNumberType, 0)
+  for _, x:= range t.PhoneNumber {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PlanRequiredListType) Append(value WellbeingPlanType) *PlanRequiredListType {
+  func (t *PlanRequiredListType) Append(values ...WellbeingPlanType) *PlanRequiredListType {
     
         if t == nil {
                 t, _ = PlanRequiredListTypePointer(PlanRequiredListType{})
@@ -13561,7 +20538,9 @@ func (t *PhoneNumberListType) Len() int {
         if t.Plan == nil {
                 t.Plan = make([]WellbeingPlanType, 0)
         }
+        for _, value := range values {
         t.Plan = append(t.Plan, value)
+        }
         return t
 }
 
@@ -13585,15 +20564,15 @@ func (t *PlanRequiredListType) Last() *WellbeingPlanType {
         return &(t.Plan[len(t.Plan)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PlanRequiredListType) Index(n int) (*WellbeingPlanType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PlanRequiredListType) Index(n int) (*WellbeingPlanType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PlanRequiredListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Plan == nil {
     t = t.AddNew()
     }
-        return &(t.Plan[n]), nil
+        return &(t.Plan[n])
 }
 
 // Length of the list.
@@ -13604,11 +20583,20 @@ func (t *PlanRequiredListType) Len() int {
         return len(t.Plan)
 }
 
+// Convert list object to slice
+func (t *PlanRequiredListType) ToSlice() []*WellbeingPlanType {
+  ret := make([]*WellbeingPlanType, 0)
+  for _, x:= range t.Plan {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PlausibleScaledValueListType) Append(value float64) *PlausibleScaledValueListType {
+  func (t *PlausibleScaledValueListType) Append(values ...float64) *PlausibleScaledValueListType {
     
         if t == nil {
                 t, _ = PlausibleScaledValueListTypePointer(PlausibleScaledValueListType{})
@@ -13616,7 +20604,9 @@ func (t *PlanRequiredListType) Len() int {
         if t.PlausibleScaledValue == nil {
                 t.PlausibleScaledValue = make([]float64, 0)
         }
+        for _, value := range values {
         t.PlausibleScaledValue = append(t.PlausibleScaledValue, value)
+        }
         return t
 }
 
@@ -13640,15 +20630,15 @@ func (t *PlausibleScaledValueListType) Last() *float64 {
         return &(t.PlausibleScaledValue[len(t.PlausibleScaledValue)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PlausibleScaledValueListType) Index(n int) (*float64, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PlausibleScaledValueListType) Index(n int) (*float64) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PlausibleScaledValueListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PlausibleScaledValue == nil {
     t = t.AddNew()
     }
-        return &(t.PlausibleScaledValue[n]), nil
+        return &(t.PlausibleScaledValue[n])
 }
 
 // Length of the list.
@@ -13659,11 +20649,20 @@ func (t *PlausibleScaledValueListType) Len() int {
         return len(t.PlausibleScaledValue)
 }
 
+// Convert list object to slice
+func (t *PlausibleScaledValueListType) ToSlice() []*float64 {
+  ret := make([]*float64, 0)
+  for _, x:= range t.PlausibleScaledValue {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PrerequisitesType) Append(value string) *PrerequisitesType {
+  func (t *PrerequisitesType) Append(values ...string) *PrerequisitesType {
     
         if t == nil {
                 t, _ = PrerequisitesTypePointer(PrerequisitesType{})
@@ -13671,7 +20670,9 @@ func (t *PlausibleScaledValueListType) Len() int {
         if t.Prerequisite == nil {
                 t.Prerequisite = make([]string, 0)
         }
+        for _, value := range values {
         t.Prerequisite = append(t.Prerequisite, value)
+        }
         return t
 }
 
@@ -13695,15 +20696,15 @@ func (t *PrerequisitesType) Last() *string {
         return &(t.Prerequisite[len(t.Prerequisite)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PrerequisitesType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PrerequisitesType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PrerequisitesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Prerequisite == nil {
     t = t.AddNew()
     }
-        return &(t.Prerequisite[n]), nil
+        return &(t.Prerequisite[n])
 }
 
 // Length of the list.
@@ -13714,6 +20715,15 @@ func (t *PrerequisitesType) Len() int {
         return len(t.Prerequisite)
 }
 
+// Convert list object to slice
+func (t *PrerequisitesType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.Prerequisite {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *PrerequisitesType) AppendString(value string) *PrerequisitesType {
@@ -13722,7 +20732,7 @@ func (t *PrerequisitesType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PreviousSchoolListType) Append(value PreviousSchoolType) *PreviousSchoolListType {
+  func (t *PreviousSchoolListType) Append(values ...PreviousSchoolType) *PreviousSchoolListType {
     
         if t == nil {
                 t, _ = PreviousSchoolListTypePointer(PreviousSchoolListType{})
@@ -13730,7 +20740,9 @@ func (t *PrerequisitesType) Len() int {
         if t.PreviousSchool == nil {
                 t.PreviousSchool = make([]PreviousSchoolType, 0)
         }
+        for _, value := range values {
         t.PreviousSchool = append(t.PreviousSchool, value)
+        }
         return t
 }
 
@@ -13754,15 +20766,15 @@ func (t *PreviousSchoolListType) Last() *PreviousSchoolType {
         return &(t.PreviousSchool[len(t.PreviousSchool)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PreviousSchoolListType) Index(n int) (*PreviousSchoolType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PreviousSchoolListType) Index(n int) (*PreviousSchoolType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PreviousSchoolListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PreviousSchool == nil {
     t = t.AddNew()
     }
-        return &(t.PreviousSchool[n]), nil
+        return &(t.PreviousSchool[n])
 }
 
 // Length of the list.
@@ -13773,11 +20785,20 @@ func (t *PreviousSchoolListType) Len() int {
         return len(t.PreviousSchool)
 }
 
+// Convert list object to slice
+func (t *PreviousSchoolListType) ToSlice() []*PreviousSchoolType {
+  ret := make([]*PreviousSchoolType, 0)
+  for _, x:= range t.PreviousSchool {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ProgramFundingSourcesType) Append(value ProgramFundingSourceType) *ProgramFundingSourcesType {
+  func (t *ProgramFundingSourcesType) Append(values ...ProgramFundingSourceType) *ProgramFundingSourcesType {
     
         if t == nil {
                 t, _ = ProgramFundingSourcesTypePointer(ProgramFundingSourcesType{})
@@ -13785,7 +20806,9 @@ func (t *PreviousSchoolListType) Len() int {
         if t.ProgramFundingSource == nil {
                 t.ProgramFundingSource = make([]ProgramFundingSourceType, 0)
         }
+        for _, value := range values {
         t.ProgramFundingSource = append(t.ProgramFundingSource, value)
+        }
         return t
 }
 
@@ -13809,15 +20832,15 @@ func (t *ProgramFundingSourcesType) Last() *ProgramFundingSourceType {
         return &(t.ProgramFundingSource[len(t.ProgramFundingSource)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ProgramFundingSourcesType) Index(n int) (*ProgramFundingSourceType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ProgramFundingSourcesType) Index(n int) (*ProgramFundingSourceType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ProgramFundingSourcesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ProgramFundingSource == nil {
     t = t.AddNew()
     }
-        return &(t.ProgramFundingSource[n]), nil
+        return &(t.ProgramFundingSource[n])
 }
 
 // Length of the list.
@@ -13828,11 +20851,20 @@ func (t *ProgramFundingSourcesType) Len() int {
         return len(t.ProgramFundingSource)
 }
 
+// Convert list object to slice
+func (t *ProgramFundingSourcesType) ToSlice() []*ProgramFundingSourceType {
+  ret := make([]*ProgramFundingSourceType, 0)
+  for _, x:= range t.ProgramFundingSource {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PublishingPermissionListType) Append(value PublishingPermissionType) *PublishingPermissionListType {
+  func (t *PublishingPermissionListType) Append(values ...PublishingPermissionType) *PublishingPermissionListType {
     
         if t == nil {
                 t, _ = PublishingPermissionListTypePointer(PublishingPermissionListType{})
@@ -13840,7 +20872,9 @@ func (t *ProgramFundingSourcesType) Len() int {
         if t.PublishingPermission == nil {
                 t.PublishingPermission = make([]PublishingPermissionType, 0)
         }
+        for _, value := range values {
         t.PublishingPermission = append(t.PublishingPermission, value)
+        }
         return t
 }
 
@@ -13864,15 +20898,15 @@ func (t *PublishingPermissionListType) Last() *PublishingPermissionType {
         return &(t.PublishingPermission[len(t.PublishingPermission)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PublishingPermissionListType) Index(n int) (*PublishingPermissionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PublishingPermissionListType) Index(n int) (*PublishingPermissionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PublishingPermissionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PublishingPermission == nil {
     t = t.AddNew()
     }
-        return &(t.PublishingPermission[n]), nil
+        return &(t.PublishingPermission[n])
 }
 
 // Length of the list.
@@ -13883,11 +20917,20 @@ func (t *PublishingPermissionListType) Len() int {
         return len(t.PublishingPermission)
 }
 
+// Convert list object to slice
+func (t *PublishingPermissionListType) ToSlice() []*PublishingPermissionType {
+  ret := make([]*PublishingPermissionType, 0)
+  for _, x:= range t.PublishingPermission {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *PurchasingItemsType) Append(value PurchasingItemType) *PurchasingItemsType {
+  func (t *PurchasingItemsType) Append(values ...PurchasingItemType) *PurchasingItemsType {
     
         if t == nil {
                 t, _ = PurchasingItemsTypePointer(PurchasingItemsType{})
@@ -13895,7 +20938,9 @@ func (t *PublishingPermissionListType) Len() int {
         if t.PurchasingItem == nil {
                 t.PurchasingItem = make([]PurchasingItemType, 0)
         }
+        for _, value := range values {
         t.PurchasingItem = append(t.PurchasingItem, value)
+        }
         return t
 }
 
@@ -13919,15 +20964,15 @@ func (t *PurchasingItemsType) Last() *PurchasingItemType {
         return &(t.PurchasingItem[len(t.PurchasingItem)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *PurchasingItemsType) Index(n int) (*PurchasingItemType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *PurchasingItemsType) Index(n int) (*PurchasingItemType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("PurchasingItemsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.PurchasingItem == nil {
     t = t.AddNew()
     }
-        return &(t.PurchasingItem[n]), nil
+        return &(t.PurchasingItem[n])
 }
 
 // Length of the list.
@@ -13938,11 +20983,20 @@ func (t *PurchasingItemsType) Len() int {
         return len(t.PurchasingItem)
 }
 
+// Convert list object to slice
+func (t *PurchasingItemsType) ToSlice() []*PurchasingItemType {
+  ret := make([]*PurchasingItemType, 0)
+  for _, x:= range t.PurchasingItem {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *RecognitionListType) Append(value string) *RecognitionListType {
+  func (t *RecognitionListType) Append(values ...string) *RecognitionListType {
     
         if t == nil {
                 t, _ = RecognitionListTypePointer(RecognitionListType{})
@@ -13950,7 +21004,9 @@ func (t *PurchasingItemsType) Len() int {
         if t.Recognition == nil {
                 t.Recognition = make([]string, 0)
         }
+        for _, value := range values {
         t.Recognition = append(t.Recognition, value)
+        }
         return t
 }
 
@@ -13974,15 +21030,15 @@ func (t *RecognitionListType) Last() *string {
         return &(t.Recognition[len(t.Recognition)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *RecognitionListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *RecognitionListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("RecognitionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Recognition == nil {
     t = t.AddNew()
     }
-        return &(t.Recognition[n]), nil
+        return &(t.Recognition[n])
 }
 
 // Length of the list.
@@ -13993,6 +21049,15 @@ func (t *RecognitionListType) Len() int {
         return len(t.Recognition)
 }
 
+// Convert list object to slice
+func (t *RecognitionListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.Recognition {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *RecognitionListType) AppendString(value string) *RecognitionListType {
@@ -14001,7 +21066,7 @@ func (t *RecognitionListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *RelatedLearningStandardItemRefIdListType) Append(value RelatedLearningStandardItemRefIdType) *RelatedLearningStandardItemRefIdListType {
+  func (t *RelatedLearningStandardItemRefIdListType) Append(values ...RelatedLearningStandardItemRefIdType) *RelatedLearningStandardItemRefIdListType {
     
         if t == nil {
                 t, _ = RelatedLearningStandardItemRefIdListTypePointer(RelatedLearningStandardItemRefIdListType{})
@@ -14009,7 +21074,9 @@ func (t *RecognitionListType) Len() int {
         if t.LearningStandardItemRefId == nil {
                 t.LearningStandardItemRefId = make([]RelatedLearningStandardItemRefIdType, 0)
         }
+        for _, value := range values {
         t.LearningStandardItemRefId = append(t.LearningStandardItemRefId, value)
+        }
         return t
 }
 
@@ -14033,15 +21100,15 @@ func (t *RelatedLearningStandardItemRefIdListType) Last() *RelatedLearningStanda
         return &(t.LearningStandardItemRefId[len(t.LearningStandardItemRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *RelatedLearningStandardItemRefIdListType) Index(n int) (*RelatedLearningStandardItemRefIdType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *RelatedLearningStandardItemRefIdListType) Index(n int) (*RelatedLearningStandardItemRefIdType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("RelatedLearningStandardItemRefIdListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.LearningStandardItemRefId == nil {
     t = t.AddNew()
     }
-        return &(t.LearningStandardItemRefId[n]), nil
+        return &(t.LearningStandardItemRefId[n])
 }
 
 // Length of the list.
@@ -14052,11 +21119,20 @@ func (t *RelatedLearningStandardItemRefIdListType) Len() int {
         return len(t.LearningStandardItemRefId)
 }
 
+// Convert list object to slice
+func (t *RelatedLearningStandardItemRefIdListType) ToSlice() []*RelatedLearningStandardItemRefIdType {
+  ret := make([]*RelatedLearningStandardItemRefIdType, 0)
+  for _, x:= range t.LearningStandardItemRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ReligiousEventListType) Append(value ReligiousEventType) *ReligiousEventListType {
+  func (t *ReligiousEventListType) Append(values ...ReligiousEventType) *ReligiousEventListType {
     
         if t == nil {
                 t, _ = ReligiousEventListTypePointer(ReligiousEventListType{})
@@ -14064,7 +21140,9 @@ func (t *RelatedLearningStandardItemRefIdListType) Len() int {
         if t.ReligiousEvent == nil {
                 t.ReligiousEvent = make([]ReligiousEventType, 0)
         }
+        for _, value := range values {
         t.ReligiousEvent = append(t.ReligiousEvent, value)
+        }
         return t
 }
 
@@ -14088,15 +21166,15 @@ func (t *ReligiousEventListType) Last() *ReligiousEventType {
         return &(t.ReligiousEvent[len(t.ReligiousEvent)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ReligiousEventListType) Index(n int) (*ReligiousEventType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ReligiousEventListType) Index(n int) (*ReligiousEventType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ReligiousEventListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ReligiousEvent == nil {
     t = t.AddNew()
     }
-        return &(t.ReligiousEvent[n]), nil
+        return &(t.ReligiousEvent[n])
 }
 
 // Length of the list.
@@ -14107,11 +21185,20 @@ func (t *ReligiousEventListType) Len() int {
         return len(t.ReligiousEvent)
 }
 
+// Convert list object to slice
+func (t *ReligiousEventListType) ToSlice() []*ReligiousEventType {
+  ret := make([]*ReligiousEventType, 0)
+  for _, x:= range t.ReligiousEvent {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ReportingAuthorityListType) Append(value ReportingAuthorityType) *ReportingAuthorityListType {
+  func (t *ReportingAuthorityListType) Append(values ...ReportingAuthorityType) *ReportingAuthorityListType {
     
         if t == nil {
                 t, _ = ReportingAuthorityListTypePointer(ReportingAuthorityListType{})
@@ -14119,7 +21206,9 @@ func (t *ReligiousEventListType) Len() int {
         if t.ReportingAuthority == nil {
                 t.ReportingAuthority = make([]ReportingAuthorityType, 0)
         }
+        for _, value := range values {
         t.ReportingAuthority = append(t.ReportingAuthority, value)
+        }
         return t
 }
 
@@ -14143,15 +21232,15 @@ func (t *ReportingAuthorityListType) Last() *ReportingAuthorityType {
         return &(t.ReportingAuthority[len(t.ReportingAuthority)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ReportingAuthorityListType) Index(n int) (*ReportingAuthorityType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ReportingAuthorityListType) Index(n int) (*ReportingAuthorityType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ReportingAuthorityListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ReportingAuthority == nil {
     t = t.AddNew()
     }
-        return &(t.ReportingAuthority[n]), nil
+        return &(t.ReportingAuthority[n])
 }
 
 // Length of the list.
@@ -14162,11 +21251,20 @@ func (t *ReportingAuthorityListType) Len() int {
         return len(t.ReportingAuthority)
 }
 
+// Convert list object to slice
+func (t *ReportingAuthorityListType) ToSlice() []*ReportingAuthorityType {
+  ret := make([]*ReportingAuthorityType, 0)
+  for _, x:= range t.ReportingAuthority {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *RoomListType) Append(value string) *RoomListType {
+  func (t *RoomListType) Append(values ...string) *RoomListType {
     
         if t == nil {
                 t, _ = RoomListTypePointer(RoomListType{})
@@ -14174,7 +21272,9 @@ func (t *ReportingAuthorityListType) Len() int {
         if t.RoomInfoRefId == nil {
                 t.RoomInfoRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.RoomInfoRefId = append(t.RoomInfoRefId, value)
+        }
         return t
 }
 
@@ -14198,15 +21298,15 @@ func (t *RoomListType) Last() *string {
         return &(t.RoomInfoRefId[len(t.RoomInfoRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *RoomListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *RoomListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("RoomListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.RoomInfoRefId == nil {
     t = t.AddNew()
     }
-        return &(t.RoomInfoRefId[n]), nil
+        return &(t.RoomInfoRefId[n])
 }
 
 // Length of the list.
@@ -14217,6 +21317,15 @@ func (t *RoomListType) Len() int {
         return len(t.RoomInfoRefId)
 }
 
+// Convert list object to slice
+func (t *RoomListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.RoomInfoRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *RoomListType) AppendString(value string) *RoomListType {
@@ -14225,7 +21334,7 @@ func (t *RoomListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SIF_ExtendedElementsType) Append(value SIF_ExtendedElementsType_SIF_ExtendedElement) *SIF_ExtendedElementsType {
+  func (t *SIF_ExtendedElementsType) Append(values ...SIF_ExtendedElementsType_SIF_ExtendedElement) *SIF_ExtendedElementsType {
     
         if t == nil {
                 t, _ = SIF_ExtendedElementsTypePointer(SIF_ExtendedElementsType{})
@@ -14233,7 +21342,9 @@ func (t *RoomListType) Len() int {
         if t.SIF_ExtendedElement == nil {
                 t.SIF_ExtendedElement = make([]SIF_ExtendedElementsType_SIF_ExtendedElement, 0)
         }
+        for _, value := range values {
         t.SIF_ExtendedElement = append(t.SIF_ExtendedElement, value)
+        }
         return t
 }
 
@@ -14257,15 +21368,15 @@ func (t *SIF_ExtendedElementsType) Last() *SIF_ExtendedElementsType_SIF_Extended
         return &(t.SIF_ExtendedElement[len(t.SIF_ExtendedElement)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SIF_ExtendedElementsType) Index(n int) (*SIF_ExtendedElementsType_SIF_ExtendedElement, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SIF_ExtendedElementsType) Index(n int) (*SIF_ExtendedElementsType_SIF_ExtendedElement) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SIF_ExtendedElementsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SIF_ExtendedElement == nil {
     t = t.AddNew()
     }
-        return &(t.SIF_ExtendedElement[n]), nil
+        return &(t.SIF_ExtendedElement[n])
 }
 
 // Length of the list.
@@ -14276,11 +21387,20 @@ func (t *SIF_ExtendedElementsType) Len() int {
         return len(t.SIF_ExtendedElement)
 }
 
+// Convert list object to slice
+func (t *SIF_ExtendedElementsType) ToSlice() []*SIF_ExtendedElementsType_SIF_ExtendedElement {
+  ret := make([]*SIF_ExtendedElementsType_SIF_ExtendedElement, 0)
+  for _, x:= range t.SIF_ExtendedElement {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *STDNGradeListType) Append(value STDNGradeType) *STDNGradeListType {
+  func (t *STDNGradeListType) Append(values ...STDNGradeType) *STDNGradeListType {
     
         if t == nil {
                 t, _ = STDNGradeListTypePointer(STDNGradeListType{})
@@ -14288,7 +21408,9 @@ func (t *SIF_ExtendedElementsType) Len() int {
         if t.StudentGrade == nil {
                 t.StudentGrade = make([]STDNGradeType, 0)
         }
+        for _, value := range values {
         t.StudentGrade = append(t.StudentGrade, value)
+        }
         return t
 }
 
@@ -14312,15 +21434,15 @@ func (t *STDNGradeListType) Last() *STDNGradeType {
         return &(t.StudentGrade[len(t.StudentGrade)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *STDNGradeListType) Index(n int) (*STDNGradeType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *STDNGradeListType) Index(n int) (*STDNGradeType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("STDNGradeListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StudentGrade == nil {
     t = t.AddNew()
     }
-        return &(t.StudentGrade[n]), nil
+        return &(t.StudentGrade[n])
 }
 
 // Length of the list.
@@ -14331,11 +21453,20 @@ func (t *STDNGradeListType) Len() int {
         return len(t.StudentGrade)
 }
 
+// Convert list object to slice
+func (t *STDNGradeListType) ToSlice() []*STDNGradeType {
+  ret := make([]*STDNGradeType, 0)
+  for _, x:= range t.StudentGrade {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ScheduledTeacherListType) Append(value TeacherCoverType) *ScheduledTeacherListType {
+  func (t *ScheduledTeacherListType) Append(values ...TeacherCoverType) *ScheduledTeacherListType {
     
         if t == nil {
                 t, _ = ScheduledTeacherListTypePointer(ScheduledTeacherListType{})
@@ -14343,7 +21474,9 @@ func (t *STDNGradeListType) Len() int {
         if t.TeacherCover == nil {
                 t.TeacherCover = make([]TeacherCoverType, 0)
         }
+        for _, value := range values {
         t.TeacherCover = append(t.TeacherCover, value)
+        }
         return t
 }
 
@@ -14367,15 +21500,15 @@ func (t *ScheduledTeacherListType) Last() *TeacherCoverType {
         return &(t.TeacherCover[len(t.TeacherCover)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ScheduledTeacherListType) Index(n int) (*TeacherCoverType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ScheduledTeacherListType) Index(n int) (*TeacherCoverType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ScheduledTeacherListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TeacherCover == nil {
     t = t.AddNew()
     }
-        return &(t.TeacherCover[n]), nil
+        return &(t.TeacherCover[n])
 }
 
 // Length of the list.
@@ -14386,11 +21519,20 @@ func (t *ScheduledTeacherListType) Len() int {
         return len(t.TeacherCover)
 }
 
+// Convert list object to slice
+func (t *ScheduledTeacherListType) ToSlice() []*TeacherCoverType {
+  ret := make([]*TeacherCoverType, 0)
+  for _, x:= range t.TeacherCover {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SchoolContactListType) Append(value SchoolContactType) *SchoolContactListType {
+  func (t *SchoolContactListType) Append(values ...SchoolContactType) *SchoolContactListType {
     
         if t == nil {
                 t, _ = SchoolContactListTypePointer(SchoolContactListType{})
@@ -14398,7 +21540,9 @@ func (t *ScheduledTeacherListType) Len() int {
         if t.SchoolContact == nil {
                 t.SchoolContact = make([]SchoolContactType, 0)
         }
+        for _, value := range values {
         t.SchoolContact = append(t.SchoolContact, value)
+        }
         return t
 }
 
@@ -14422,15 +21566,15 @@ func (t *SchoolContactListType) Last() *SchoolContactType {
         return &(t.SchoolContact[len(t.SchoolContact)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SchoolContactListType) Index(n int) (*SchoolContactType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SchoolContactListType) Index(n int) (*SchoolContactType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SchoolContactListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SchoolContact == nil {
     t = t.AddNew()
     }
-        return &(t.SchoolContact[n]), nil
+        return &(t.SchoolContact[n])
 }
 
 // Length of the list.
@@ -14441,11 +21585,20 @@ func (t *SchoolContactListType) Len() int {
         return len(t.SchoolContact)
 }
 
+// Convert list object to slice
+func (t *SchoolContactListType) ToSlice() []*SchoolContactType {
+  ret := make([]*SchoolContactType, 0)
+  for _, x:= range t.SchoolContact {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SchoolFocusListType) Append(value AUCodeSetsSchoolFocusCodeType) *SchoolFocusListType {
+  func (t *SchoolFocusListType) Append(values ...AUCodeSetsSchoolFocusCodeType) *SchoolFocusListType {
     
         if t == nil {
                 t, _ = SchoolFocusListTypePointer(SchoolFocusListType{})
@@ -14453,7 +21606,9 @@ func (t *SchoolContactListType) Len() int {
         if t.SchoolFocus == nil {
                 t.SchoolFocus = make([]AUCodeSetsSchoolFocusCodeType, 0)
         }
+        for _, value := range values {
         t.SchoolFocus = append(t.SchoolFocus, value)
+        }
         return t
 }
 
@@ -14477,15 +21632,15 @@ func (t *SchoolFocusListType) Last() *AUCodeSetsSchoolFocusCodeType {
         return &(t.SchoolFocus[len(t.SchoolFocus)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SchoolFocusListType) Index(n int) (*AUCodeSetsSchoolFocusCodeType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SchoolFocusListType) Index(n int) (*AUCodeSetsSchoolFocusCodeType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SchoolFocusListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SchoolFocus == nil {
     t = t.AddNew()
     }
-        return &(t.SchoolFocus[n]), nil
+        return &(t.SchoolFocus[n])
 }
 
 // Length of the list.
@@ -14496,6 +21651,15 @@ func (t *SchoolFocusListType) Len() int {
         return len(t.SchoolFocus)
 }
 
+// Convert list object to slice
+func (t *SchoolFocusListType) ToSlice() []*AUCodeSetsSchoolFocusCodeType {
+  ret := make([]*AUCodeSetsSchoolFocusCodeType, 0)
+  for _, x:= range t.SchoolFocus {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *SchoolFocusListType) AppendString(value string) *SchoolFocusListType {
@@ -14504,7 +21668,7 @@ func (t *SchoolFocusListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SchoolGroupListType) Append(value LocalIdType) *SchoolGroupListType {
+  func (t *SchoolGroupListType) Append(values ...LocalIdType) *SchoolGroupListType {
     
         if t == nil {
                 t, _ = SchoolGroupListTypePointer(SchoolGroupListType{})
@@ -14512,7 +21676,9 @@ func (t *SchoolFocusListType) Len() int {
         if t.SchoolGroup == nil {
                 t.SchoolGroup = make([]LocalIdType, 0)
         }
+        for _, value := range values {
         t.SchoolGroup = append(t.SchoolGroup, value)
+        }
         return t
 }
 
@@ -14536,15 +21702,15 @@ func (t *SchoolGroupListType) Last() *LocalIdType {
         return &(t.SchoolGroup[len(t.SchoolGroup)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SchoolGroupListType) Index(n int) (*LocalIdType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SchoolGroupListType) Index(n int) (*LocalIdType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SchoolGroupListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SchoolGroup == nil {
     t = t.AddNew()
     }
-        return &(t.SchoolGroup[n]), nil
+        return &(t.SchoolGroup[n])
 }
 
 // Length of the list.
@@ -14555,6 +21721,15 @@ func (t *SchoolGroupListType) Len() int {
         return len(t.SchoolGroup)
 }
 
+// Convert list object to slice
+func (t *SchoolGroupListType) ToSlice() []*LocalIdType {
+  ret := make([]*LocalIdType, 0)
+  for _, x:= range t.SchoolGroup {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *SchoolGroupListType) AppendString(value string) *SchoolGroupListType {
@@ -14563,7 +21738,7 @@ func (t *SchoolGroupListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SchoolProgramListType) Append(value SchoolProgramType) *SchoolProgramListType {
+  func (t *SchoolProgramListType) Append(values ...SchoolProgramType) *SchoolProgramListType {
     
         if t == nil {
                 t, _ = SchoolProgramListTypePointer(SchoolProgramListType{})
@@ -14571,7 +21746,9 @@ func (t *SchoolGroupListType) Len() int {
         if t.Program == nil {
                 t.Program = make([]SchoolProgramType, 0)
         }
+        for _, value := range values {
         t.Program = append(t.Program, value)
+        }
         return t
 }
 
@@ -14595,15 +21772,15 @@ func (t *SchoolProgramListType) Last() *SchoolProgramType {
         return &(t.Program[len(t.Program)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SchoolProgramListType) Index(n int) (*SchoolProgramType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SchoolProgramListType) Index(n int) (*SchoolProgramType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SchoolProgramListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Program == nil {
     t = t.AddNew()
     }
-        return &(t.Program[n]), nil
+        return &(t.Program[n])
 }
 
 // Length of the list.
@@ -14614,11 +21791,20 @@ func (t *SchoolProgramListType) Len() int {
         return len(t.Program)
 }
 
+// Convert list object to slice
+func (t *SchoolProgramListType) ToSlice() []*SchoolProgramType {
+  ret := make([]*SchoolProgramType, 0)
+  for _, x:= range t.Program {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ScoreDescriptionListType) Append(value ScoreDescriptionType) *ScoreDescriptionListType {
+  func (t *ScoreDescriptionListType) Append(values ...ScoreDescriptionType) *ScoreDescriptionListType {
     
         if t == nil {
                 t, _ = ScoreDescriptionListTypePointer(ScoreDescriptionListType{})
@@ -14626,7 +21812,9 @@ func (t *SchoolProgramListType) Len() int {
         if t.ScoreDescription == nil {
                 t.ScoreDescription = make([]ScoreDescriptionType, 0)
         }
+        for _, value := range values {
         t.ScoreDescription = append(t.ScoreDescription, value)
+        }
         return t
 }
 
@@ -14650,15 +21838,15 @@ func (t *ScoreDescriptionListType) Last() *ScoreDescriptionType {
         return &(t.ScoreDescription[len(t.ScoreDescription)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ScoreDescriptionListType) Index(n int) (*ScoreDescriptionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ScoreDescriptionListType) Index(n int) (*ScoreDescriptionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ScoreDescriptionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ScoreDescription == nil {
     t = t.AddNew()
     }
-        return &(t.ScoreDescription[n]), nil
+        return &(t.ScoreDescription[n])
 }
 
 // Length of the list.
@@ -14669,11 +21857,20 @@ func (t *ScoreDescriptionListType) Len() int {
         return len(t.ScoreDescription)
 }
 
+// Convert list object to slice
+func (t *ScoreDescriptionListType) ToSlice() []*ScoreDescriptionType {
+  ret := make([]*ScoreDescriptionType, 0)
+  for _, x:= range t.ScoreDescription {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ScoreListType) Append(value ScoreType) *ScoreListType {
+  func (t *ScoreListType) Append(values ...ScoreType) *ScoreListType {
     
         if t == nil {
                 t, _ = ScoreListTypePointer(ScoreListType{})
@@ -14681,7 +21878,9 @@ func (t *ScoreDescriptionListType) Len() int {
         if t.Score == nil {
                 t.Score = make([]ScoreType, 0)
         }
+        for _, value := range values {
         t.Score = append(t.Score, value)
+        }
         return t
 }
 
@@ -14705,15 +21904,15 @@ func (t *ScoreListType) Last() *ScoreType {
         return &(t.Score[len(t.Score)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ScoreListType) Index(n int) (*ScoreType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ScoreListType) Index(n int) (*ScoreType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ScoreListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Score == nil {
     t = t.AddNew()
     }
-        return &(t.Score[n]), nil
+        return &(t.Score[n])
 }
 
 // Length of the list.
@@ -14724,11 +21923,20 @@ func (t *ScoreListType) Len() int {
         return len(t.Score)
 }
 
+// Convert list object to slice
+func (t *ScoreListType) ToSlice() []*ScoreType {
+  ret := make([]*ScoreType, 0)
+  for _, x:= range t.Score {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SettingLocationListType) Append(value SettingLocationType) *SettingLocationListType {
+  func (t *SettingLocationListType) Append(values ...SettingLocationType) *SettingLocationListType {
     
         if t == nil {
                 t, _ = SettingLocationListTypePointer(SettingLocationListType{})
@@ -14736,7 +21944,9 @@ func (t *ScoreListType) Len() int {
         if t.SettingLocation == nil {
                 t.SettingLocation = make([]SettingLocationType, 0)
         }
+        for _, value := range values {
         t.SettingLocation = append(t.SettingLocation, value)
+        }
         return t
 }
 
@@ -14760,15 +21970,15 @@ func (t *SettingLocationListType) Last() *SettingLocationType {
         return &(t.SettingLocation[len(t.SettingLocation)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SettingLocationListType) Index(n int) (*SettingLocationType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SettingLocationListType) Index(n int) (*SettingLocationType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SettingLocationListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SettingLocation == nil {
     t = t.AddNew()
     }
-        return &(t.SettingLocation[n]), nil
+        return &(t.SettingLocation[n])
 }
 
 // Length of the list.
@@ -14779,11 +21989,20 @@ func (t *SettingLocationListType) Len() int {
         return len(t.SettingLocation)
 }
 
+// Convert list object to slice
+func (t *SettingLocationListType) ToSlice() []*SettingLocationType {
+  ret := make([]*SettingLocationType, 0)
+  for _, x:= range t.SettingLocation {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ShareWithListType) Append(value ShareWithType) *ShareWithListType {
+  func (t *ShareWithListType) Append(values ...ShareWithType) *ShareWithListType {
     
         if t == nil {
                 t, _ = ShareWithListTypePointer(ShareWithListType{})
@@ -14791,7 +22010,9 @@ func (t *SettingLocationListType) Len() int {
         if t.ShareWith == nil {
                 t.ShareWith = make([]ShareWithType, 0)
         }
+        for _, value := range values {
         t.ShareWith = append(t.ShareWith, value)
+        }
         return t
 }
 
@@ -14815,15 +22036,15 @@ func (t *ShareWithListType) Last() *ShareWithType {
         return &(t.ShareWith[len(t.ShareWith)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ShareWithListType) Index(n int) (*ShareWithType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ShareWithListType) Index(n int) (*ShareWithType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ShareWithListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ShareWith == nil {
     t = t.AddNew()
     }
-        return &(t.ShareWith[n]), nil
+        return &(t.ShareWith[n])
 }
 
 // Length of the list.
@@ -14834,11 +22055,20 @@ func (t *ShareWithListType) Len() int {
         return len(t.ShareWith)
 }
 
+// Convert list object to slice
+func (t *ShareWithListType) ToSlice() []*ShareWithType {
+  ret := make([]*ShareWithType, 0)
+  for _, x:= range t.ShareWith {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SoftwareRequirementListType) Append(value SoftwareRequirementType) *SoftwareRequirementListType {
+  func (t *SoftwareRequirementListType) Append(values ...SoftwareRequirementType) *SoftwareRequirementListType {
     
         if t == nil {
                 t, _ = SoftwareRequirementListTypePointer(SoftwareRequirementListType{})
@@ -14846,7 +22076,9 @@ func (t *ShareWithListType) Len() int {
         if t.SoftwareRequirement == nil {
                 t.SoftwareRequirement = make([]SoftwareRequirementType, 0)
         }
+        for _, value := range values {
         t.SoftwareRequirement = append(t.SoftwareRequirement, value)
+        }
         return t
 }
 
@@ -14870,15 +22102,15 @@ func (t *SoftwareRequirementListType) Last() *SoftwareRequirementType {
         return &(t.SoftwareRequirement[len(t.SoftwareRequirement)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SoftwareRequirementListType) Index(n int) (*SoftwareRequirementType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SoftwareRequirementListType) Index(n int) (*SoftwareRequirementType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SoftwareRequirementListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SoftwareRequirement == nil {
     t = t.AddNew()
     }
-        return &(t.SoftwareRequirement[n]), nil
+        return &(t.SoftwareRequirement[n])
 }
 
 // Length of the list.
@@ -14889,11 +22121,20 @@ func (t *SoftwareRequirementListType) Len() int {
         return len(t.SoftwareRequirement)
 }
 
+// Convert list object to slice
+func (t *SoftwareRequirementListType) ToSlice() []*SoftwareRequirementType {
+  ret := make([]*SoftwareRequirementType, 0)
+  for _, x:= range t.SoftwareRequirement {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SourceObjectsType) Append(value SourceObjectsType_SourceObject) *SourceObjectsType {
+  func (t *SourceObjectsType) Append(values ...SourceObjectsType_SourceObject) *SourceObjectsType {
     
         if t == nil {
                 t, _ = SourceObjectsTypePointer(SourceObjectsType{})
@@ -14901,7 +22142,9 @@ func (t *SoftwareRequirementListType) Len() int {
         if t.SourceObject == nil {
                 t.SourceObject = make([]SourceObjectsType_SourceObject, 0)
         }
+        for _, value := range values {
         t.SourceObject = append(t.SourceObject, value)
+        }
         return t
 }
 
@@ -14925,15 +22168,15 @@ func (t *SourceObjectsType) Last() *SourceObjectsType_SourceObject {
         return &(t.SourceObject[len(t.SourceObject)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SourceObjectsType) Index(n int) (*SourceObjectsType_SourceObject, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SourceObjectsType) Index(n int) (*SourceObjectsType_SourceObject) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SourceObjectsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SourceObject == nil {
     t = t.AddNew()
     }
-        return &(t.SourceObject[n]), nil
+        return &(t.SourceObject[n])
 }
 
 // Length of the list.
@@ -14944,11 +22187,20 @@ func (t *SourceObjectsType) Len() int {
         return len(t.SourceObject)
 }
 
+// Convert list object to slice
+func (t *SourceObjectsType) ToSlice() []*SourceObjectsType_SourceObject {
+  ret := make([]*SourceObjectsType_SourceObject, 0)
+  for _, x:= range t.SourceObject {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SpanGapListType) Append(value SpanGapType) *SpanGapListType {
+  func (t *SpanGapListType) Append(values ...SpanGapType) *SpanGapListType {
     
         if t == nil {
                 t, _ = SpanGapListTypePointer(SpanGapListType{})
@@ -14956,7 +22208,9 @@ func (t *SourceObjectsType) Len() int {
         if t.SpanGap == nil {
                 t.SpanGap = make([]SpanGapType, 0)
         }
+        for _, value := range values {
         t.SpanGap = append(t.SpanGap, value)
+        }
         return t
 }
 
@@ -14980,15 +22234,15 @@ func (t *SpanGapListType) Last() *SpanGapType {
         return &(t.SpanGap[len(t.SpanGap)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SpanGapListType) Index(n int) (*SpanGapType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SpanGapListType) Index(n int) (*SpanGapType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SpanGapListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SpanGap == nil {
     t = t.AddNew()
     }
-        return &(t.SpanGap[n]), nil
+        return &(t.SpanGap[n])
 }
 
 // Length of the list.
@@ -14999,11 +22253,20 @@ func (t *SpanGapListType) Len() int {
         return len(t.SpanGap)
 }
 
+// Convert list object to slice
+func (t *SpanGapListType) ToSlice() []*SpanGapType {
+  ret := make([]*SpanGapType, 0)
+  for _, x:= range t.SpanGap {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StaffListType) Append(value string) *StaffListType {
+  func (t *StaffListType) Append(values ...string) *StaffListType {
     
         if t == nil {
                 t, _ = StaffListTypePointer(StaffListType{})
@@ -15011,7 +22274,9 @@ func (t *SpanGapListType) Len() int {
         if t.StaffPersonalRefId == nil {
                 t.StaffPersonalRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.StaffPersonalRefId = append(t.StaffPersonalRefId, value)
+        }
         return t
 }
 
@@ -15035,15 +22300,15 @@ func (t *StaffListType) Last() *string {
         return &(t.StaffPersonalRefId[len(t.StaffPersonalRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StaffListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StaffListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StaffListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StaffPersonalRefId == nil {
     t = t.AddNew()
     }
-        return &(t.StaffPersonalRefId[n]), nil
+        return &(t.StaffPersonalRefId[n])
 }
 
 // Length of the list.
@@ -15054,6 +22319,15 @@ func (t *StaffListType) Len() int {
         return len(t.StaffPersonalRefId)
 }
 
+// Convert list object to slice
+func (t *StaffListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.StaffPersonalRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *StaffListType) AppendString(value string) *StaffListType {
@@ -15062,7 +22336,7 @@ func (t *StaffListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StaffSubjectListType) Append(value StaffSubjectType) *StaffSubjectListType {
+  func (t *StaffSubjectListType) Append(values ...StaffSubjectType) *StaffSubjectListType {
     
         if t == nil {
                 t, _ = StaffSubjectListTypePointer(StaffSubjectListType{})
@@ -15070,7 +22344,9 @@ func (t *StaffListType) Len() int {
         if t.StaffSubject == nil {
                 t.StaffSubject = make([]StaffSubjectType, 0)
         }
+        for _, value := range values {
         t.StaffSubject = append(t.StaffSubject, value)
+        }
         return t
 }
 
@@ -15094,15 +22370,15 @@ func (t *StaffSubjectListType) Last() *StaffSubjectType {
         return &(t.StaffSubject[len(t.StaffSubject)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StaffSubjectListType) Index(n int) (*StaffSubjectType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StaffSubjectListType) Index(n int) (*StaffSubjectType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StaffSubjectListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StaffSubject == nil {
     t = t.AddNew()
     }
-        return &(t.StaffSubject[n]), nil
+        return &(t.StaffSubject[n])
 }
 
 // Length of the list.
@@ -15113,11 +22389,20 @@ func (t *StaffSubjectListType) Len() int {
         return len(t.StaffSubject)
 }
 
+// Convert list object to slice
+func (t *StaffSubjectListType) ToSlice() []*StaffSubjectType {
+  ret := make([]*StaffSubjectType, 0)
+  for _, x:= range t.StaffSubject {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StatementCodesType) Append(value string) *StatementCodesType {
+  func (t *StatementCodesType) Append(values ...string) *StatementCodesType {
     
         if t == nil {
                 t, _ = StatementCodesTypePointer(StatementCodesType{})
@@ -15125,7 +22410,9 @@ func (t *StaffSubjectListType) Len() int {
         if t.StatementCode == nil {
                 t.StatementCode = make([]string, 0)
         }
+        for _, value := range values {
         t.StatementCode = append(t.StatementCode, value)
+        }
         return t
 }
 
@@ -15149,15 +22436,15 @@ func (t *StatementCodesType) Last() *string {
         return &(t.StatementCode[len(t.StatementCode)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StatementCodesType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StatementCodesType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StatementCodesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StatementCode == nil {
     t = t.AddNew()
     }
-        return &(t.StatementCode[n]), nil
+        return &(t.StatementCode[n])
 }
 
 // Length of the list.
@@ -15168,6 +22455,15 @@ func (t *StatementCodesType) Len() int {
         return len(t.StatementCode)
 }
 
+// Convert list object to slice
+func (t *StatementCodesType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.StatementCode {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *StatementCodesType) AppendString(value string) *StatementCodesType {
@@ -15176,7 +22472,7 @@ func (t *StatementCodesType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StatementsType) Append(value string) *StatementsType {
+  func (t *StatementsType) Append(values ...string) *StatementsType {
     
         if t == nil {
                 t, _ = StatementsTypePointer(StatementsType{})
@@ -15184,7 +22480,9 @@ func (t *StatementCodesType) Len() int {
         if t.Statement == nil {
                 t.Statement = make([]string, 0)
         }
+        for _, value := range values {
         t.Statement = append(t.Statement, value)
+        }
         return t
 }
 
@@ -15208,15 +22506,15 @@ func (t *StatementsType) Last() *string {
         return &(t.Statement[len(t.Statement)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StatementsType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StatementsType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StatementsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Statement == nil {
     t = t.AddNew()
     }
-        return &(t.Statement[n]), nil
+        return &(t.Statement[n])
 }
 
 // Length of the list.
@@ -15227,6 +22525,15 @@ func (t *StatementsType) Len() int {
         return len(t.Statement)
 }
 
+// Convert list object to slice
+func (t *StatementsType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.Statement {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *StatementsType) AppendString(value string) *StatementsType {
@@ -15235,7 +22542,7 @@ func (t *StatementsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StatisticalAreasType) Append(value StatisticalAreaType) *StatisticalAreasType {
+  func (t *StatisticalAreasType) Append(values ...StatisticalAreaType) *StatisticalAreasType {
     
         if t == nil {
                 t, _ = StatisticalAreasTypePointer(StatisticalAreasType{})
@@ -15243,7 +22550,9 @@ func (t *StatementsType) Len() int {
         if t.StatisticalArea == nil {
                 t.StatisticalArea = make([]StatisticalAreaType, 0)
         }
+        for _, value := range values {
         t.StatisticalArea = append(t.StatisticalArea, value)
+        }
         return t
 }
 
@@ -15267,15 +22576,15 @@ func (t *StatisticalAreasType) Last() *StatisticalAreaType {
         return &(t.StatisticalArea[len(t.StatisticalArea)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StatisticalAreasType) Index(n int) (*StatisticalAreaType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StatisticalAreasType) Index(n int) (*StatisticalAreaType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StatisticalAreasType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StatisticalArea == nil {
     t = t.AddNew()
     }
-        return &(t.StatisticalArea[n]), nil
+        return &(t.StatisticalArea[n])
 }
 
 // Length of the list.
@@ -15286,11 +22595,20 @@ func (t *StatisticalAreasType) Len() int {
         return len(t.StatisticalArea)
 }
 
+// Convert list object to slice
+func (t *StatisticalAreasType) ToSlice() []*StatisticalAreaType {
+  ret := make([]*StatisticalAreaType, 0)
+  for _, x:= range t.StatisticalArea {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StatsCohortListType) Append(value StatsCohortType) *StatsCohortListType {
+  func (t *StatsCohortListType) Append(values ...StatsCohortType) *StatsCohortListType {
     
         if t == nil {
                 t, _ = StatsCohortListTypePointer(StatsCohortListType{})
@@ -15298,7 +22616,9 @@ func (t *StatisticalAreasType) Len() int {
         if t.StatsCohort == nil {
                 t.StatsCohort = make([]StatsCohortType, 0)
         }
+        for _, value := range values {
         t.StatsCohort = append(t.StatsCohort, value)
+        }
         return t
 }
 
@@ -15322,15 +22642,15 @@ func (t *StatsCohortListType) Last() *StatsCohortType {
         return &(t.StatsCohort[len(t.StatsCohort)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StatsCohortListType) Index(n int) (*StatsCohortType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StatsCohortListType) Index(n int) (*StatsCohortType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StatsCohortListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StatsCohort == nil {
     t = t.AddNew()
     }
-        return &(t.StatsCohort[n]), nil
+        return &(t.StatsCohort[n])
 }
 
 // Length of the list.
@@ -15341,11 +22661,20 @@ func (t *StatsCohortListType) Len() int {
         return len(t.StatsCohort)
 }
 
+// Convert list object to slice
+func (t *StatsCohortListType) ToSlice() []*StatsCohortType {
+  ret := make([]*StatsCohortType, 0)
+  for _, x:= range t.StatsCohort {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StatsCohortYearLevelListType) Append(value StatsCohortYearLevelType) *StatsCohortYearLevelListType {
+  func (t *StatsCohortYearLevelListType) Append(values ...StatsCohortYearLevelType) *StatsCohortYearLevelListType {
     
         if t == nil {
                 t, _ = StatsCohortYearLevelListTypePointer(StatsCohortYearLevelListType{})
@@ -15353,7 +22682,9 @@ func (t *StatsCohortListType) Len() int {
         if t.StatsCohortYearLevel == nil {
                 t.StatsCohortYearLevel = make([]StatsCohortYearLevelType, 0)
         }
+        for _, value := range values {
         t.StatsCohortYearLevel = append(t.StatsCohortYearLevel, value)
+        }
         return t
 }
 
@@ -15377,15 +22708,15 @@ func (t *StatsCohortYearLevelListType) Last() *StatsCohortYearLevelType {
         return &(t.StatsCohortYearLevel[len(t.StatsCohortYearLevel)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StatsCohortYearLevelListType) Index(n int) (*StatsCohortYearLevelType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StatsCohortYearLevelListType) Index(n int) (*StatsCohortYearLevelType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StatsCohortYearLevelListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StatsCohortYearLevel == nil {
     t = t.AddNew()
     }
-        return &(t.StatsCohortYearLevel[n]), nil
+        return &(t.StatsCohortYearLevel[n])
 }
 
 // Length of the list.
@@ -15396,11 +22727,20 @@ func (t *StatsCohortYearLevelListType) Len() int {
         return len(t.StatsCohortYearLevel)
 }
 
+// Convert list object to slice
+func (t *StatsCohortYearLevelListType) ToSlice() []*StatsCohortYearLevelType {
+  ret := make([]*StatsCohortYearLevelType, 0)
+  for _, x:= range t.StatsCohortYearLevel {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StimulusListType) Append(value StimulusType) *StimulusListType {
+  func (t *StimulusListType) Append(values ...StimulusType) *StimulusListType {
     
         if t == nil {
                 t, _ = StimulusListTypePointer(StimulusListType{})
@@ -15408,7 +22748,9 @@ func (t *StatsCohortYearLevelListType) Len() int {
         if t.Stimulus == nil {
                 t.Stimulus = make([]StimulusType, 0)
         }
+        for _, value := range values {
         t.Stimulus = append(t.Stimulus, value)
+        }
         return t
 }
 
@@ -15432,15 +22774,15 @@ func (t *StimulusListType) Last() *StimulusType {
         return &(t.Stimulus[len(t.Stimulus)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StimulusListType) Index(n int) (*StimulusType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StimulusListType) Index(n int) (*StimulusType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StimulusListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Stimulus == nil {
     t = t.AddNew()
     }
-        return &(t.Stimulus[n]), nil
+        return &(t.Stimulus[n])
 }
 
 // Length of the list.
@@ -15451,11 +22793,20 @@ func (t *StimulusListType) Len() int {
         return len(t.Stimulus)
 }
 
+// Convert list object to slice
+func (t *StimulusListType) ToSlice() []*StimulusType {
+  ret := make([]*StimulusType, 0)
+  for _, x:= range t.Stimulus {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StimulusLocalIdListType) Append(value LocalIdType) *StimulusLocalIdListType {
+  func (t *StimulusLocalIdListType) Append(values ...LocalIdType) *StimulusLocalIdListType {
     
         if t == nil {
                 t, _ = StimulusLocalIdListTypePointer(StimulusLocalIdListType{})
@@ -15463,7 +22814,9 @@ func (t *StimulusListType) Len() int {
         if t.StimulusLocalId == nil {
                 t.StimulusLocalId = make([]LocalIdType, 0)
         }
+        for _, value := range values {
         t.StimulusLocalId = append(t.StimulusLocalId, value)
+        }
         return t
 }
 
@@ -15487,15 +22840,15 @@ func (t *StimulusLocalIdListType) Last() *LocalIdType {
         return &(t.StimulusLocalId[len(t.StimulusLocalId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StimulusLocalIdListType) Index(n int) (*LocalIdType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StimulusLocalIdListType) Index(n int) (*LocalIdType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StimulusLocalIdListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StimulusLocalId == nil {
     t = t.AddNew()
     }
-        return &(t.StimulusLocalId[n]), nil
+        return &(t.StimulusLocalId[n])
 }
 
 // Length of the list.
@@ -15506,6 +22859,15 @@ func (t *StimulusLocalIdListType) Len() int {
         return len(t.StimulusLocalId)
 }
 
+// Convert list object to slice
+func (t *StimulusLocalIdListType) ToSlice() []*LocalIdType {
+  ret := make([]*LocalIdType, 0)
+  for _, x:= range t.StimulusLocalId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *StimulusLocalIdListType) AppendString(value string) *StimulusLocalIdListType {
@@ -15514,7 +22876,7 @@ func (t *StimulusLocalIdListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StrategiesType) Append(value string) *StrategiesType {
+  func (t *StrategiesType) Append(values ...string) *StrategiesType {
     
         if t == nil {
                 t, _ = StrategiesTypePointer(StrategiesType{})
@@ -15522,7 +22884,9 @@ func (t *StimulusLocalIdListType) Len() int {
         if t.Strategy == nil {
                 t.Strategy = make([]string, 0)
         }
+        for _, value := range values {
         t.Strategy = append(t.Strategy, value)
+        }
         return t
 }
 
@@ -15546,15 +22910,15 @@ func (t *StrategiesType) Last() *string {
         return &(t.Strategy[len(t.Strategy)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StrategiesType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StrategiesType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StrategiesType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Strategy == nil {
     t = t.AddNew()
     }
-        return &(t.Strategy[n]), nil
+        return &(t.Strategy[n])
 }
 
 // Length of the list.
@@ -15565,6 +22929,15 @@ func (t *StrategiesType) Len() int {
         return len(t.Strategy)
 }
 
+// Convert list object to slice
+func (t *StrategiesType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.Strategy {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *StrategiesType) AppendString(value string) *StrategiesType {
@@ -15573,7 +22946,7 @@ func (t *StrategiesType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StudentAttendanceCollectionReportingListType) Append(value StudentAttendanceCollectionReportingType) *StudentAttendanceCollectionReportingListType {
+  func (t *StudentAttendanceCollectionReportingListType) Append(values ...StudentAttendanceCollectionReportingType) *StudentAttendanceCollectionReportingListType {
     
         if t == nil {
                 t, _ = StudentAttendanceCollectionReportingListTypePointer(StudentAttendanceCollectionReportingListType{})
@@ -15581,7 +22954,9 @@ func (t *StrategiesType) Len() int {
         if t.StudentAttendanceCollectionReporting == nil {
                 t.StudentAttendanceCollectionReporting = make([]StudentAttendanceCollectionReportingType, 0)
         }
+        for _, value := range values {
         t.StudentAttendanceCollectionReporting = append(t.StudentAttendanceCollectionReporting, value)
+        }
         return t
 }
 
@@ -15605,15 +22980,15 @@ func (t *StudentAttendanceCollectionReportingListType) Last() *StudentAttendance
         return &(t.StudentAttendanceCollectionReporting[len(t.StudentAttendanceCollectionReporting)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StudentAttendanceCollectionReportingListType) Index(n int) (*StudentAttendanceCollectionReportingType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StudentAttendanceCollectionReportingListType) Index(n int) (*StudentAttendanceCollectionReportingType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StudentAttendanceCollectionReportingListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StudentAttendanceCollectionReporting == nil {
     t = t.AddNew()
     }
-        return &(t.StudentAttendanceCollectionReporting[n]), nil
+        return &(t.StudentAttendanceCollectionReporting[n])
 }
 
 // Length of the list.
@@ -15624,11 +22999,20 @@ func (t *StudentAttendanceCollectionReportingListType) Len() int {
         return len(t.StudentAttendanceCollectionReporting)
 }
 
+// Convert list object to slice
+func (t *StudentAttendanceCollectionReportingListType) ToSlice() []*StudentAttendanceCollectionReportingType {
+  ret := make([]*StudentAttendanceCollectionReportingType, 0)
+  for _, x:= range t.StudentAttendanceCollectionReporting {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StudentGradeMarkersListType) Append(value MarkerType) *StudentGradeMarkersListType {
+  func (t *StudentGradeMarkersListType) Append(values ...MarkerType) *StudentGradeMarkersListType {
     
         if t == nil {
                 t, _ = StudentGradeMarkersListTypePointer(StudentGradeMarkersListType{})
@@ -15636,7 +23020,9 @@ func (t *StudentAttendanceCollectionReportingListType) Len() int {
         if t.Marker == nil {
                 t.Marker = make([]MarkerType, 0)
         }
+        for _, value := range values {
         t.Marker = append(t.Marker, value)
+        }
         return t
 }
 
@@ -15660,15 +23046,15 @@ func (t *StudentGradeMarkersListType) Last() *MarkerType {
         return &(t.Marker[len(t.Marker)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StudentGradeMarkersListType) Index(n int) (*MarkerType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StudentGradeMarkersListType) Index(n int) (*MarkerType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StudentGradeMarkersListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Marker == nil {
     t = t.AddNew()
     }
-        return &(t.Marker[n]), nil
+        return &(t.Marker[n])
 }
 
 // Length of the list.
@@ -15679,11 +23065,20 @@ func (t *StudentGradeMarkersListType) Len() int {
         return len(t.Marker)
 }
 
+// Convert list object to slice
+func (t *StudentGradeMarkersListType) ToSlice() []*MarkerType {
+  ret := make([]*MarkerType, 0)
+  for _, x:= range t.Marker {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StudentGroupListType) Append(value StudentGroupType) *StudentGroupListType {
+  func (t *StudentGroupListType) Append(values ...StudentGroupType) *StudentGroupListType {
     
         if t == nil {
                 t, _ = StudentGroupListTypePointer(StudentGroupListType{})
@@ -15691,7 +23086,9 @@ func (t *StudentGradeMarkersListType) Len() int {
         if t.StudentGroup == nil {
                 t.StudentGroup = make([]StudentGroupType, 0)
         }
+        for _, value := range values {
         t.StudentGroup = append(t.StudentGroup, value)
+        }
         return t
 }
 
@@ -15715,15 +23112,15 @@ func (t *StudentGroupListType) Last() *StudentGroupType {
         return &(t.StudentGroup[len(t.StudentGroup)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StudentGroupListType) Index(n int) (*StudentGroupType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StudentGroupListType) Index(n int) (*StudentGroupType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StudentGroupListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StudentGroup == nil {
     t = t.AddNew()
     }
-        return &(t.StudentGroup[n]), nil
+        return &(t.StudentGroup[n])
 }
 
 // Length of the list.
@@ -15734,11 +23131,20 @@ func (t *StudentGroupListType) Len() int {
         return len(t.StudentGroup)
 }
 
+// Convert list object to slice
+func (t *StudentGroupListType) ToSlice() []*StudentGroupType {
+  ret := make([]*StudentGroupType, 0)
+  for _, x:= range t.StudentGroup {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StudentListType) Append(value TeachingGroupStudentType) *StudentListType {
+  func (t *StudentListType) Append(values ...TeachingGroupStudentType) *StudentListType {
     
         if t == nil {
                 t, _ = StudentListTypePointer(StudentListType{})
@@ -15746,7 +23152,9 @@ func (t *StudentGroupListType) Len() int {
         if t.TeachingGroupStudent == nil {
                 t.TeachingGroupStudent = make([]TeachingGroupStudentType, 0)
         }
+        for _, value := range values {
         t.TeachingGroupStudent = append(t.TeachingGroupStudent, value)
+        }
         return t
 }
 
@@ -15770,15 +23178,15 @@ func (t *StudentListType) Last() *TeachingGroupStudentType {
         return &(t.TeachingGroupStudent[len(t.TeachingGroupStudent)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StudentListType) Index(n int) (*TeachingGroupStudentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StudentListType) Index(n int) (*TeachingGroupStudentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StudentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TeachingGroupStudent == nil {
     t = t.AddNew()
     }
-        return &(t.TeachingGroupStudent[n]), nil
+        return &(t.TeachingGroupStudent[n])
 }
 
 // Length of the list.
@@ -15789,11 +23197,20 @@ func (t *StudentListType) Len() int {
         return len(t.TeachingGroupStudent)
 }
 
+// Convert list object to slice
+func (t *StudentListType) ToSlice() []*TeachingGroupStudentType {
+  ret := make([]*TeachingGroupStudentType, 0)
+  for _, x:= range t.TeachingGroupStudent {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StudentSubjectChoiceListType) Append(value StudentSubjectChoiceType) *StudentSubjectChoiceListType {
+  func (t *StudentSubjectChoiceListType) Append(values ...StudentSubjectChoiceType) *StudentSubjectChoiceListType {
     
         if t == nil {
                 t, _ = StudentSubjectChoiceListTypePointer(StudentSubjectChoiceListType{})
@@ -15801,7 +23218,9 @@ func (t *StudentListType) Len() int {
         if t.StudentSubjectChoice == nil {
                 t.StudentSubjectChoice = make([]StudentSubjectChoiceType, 0)
         }
+        for _, value := range values {
         t.StudentSubjectChoice = append(t.StudentSubjectChoice, value)
+        }
         return t
 }
 
@@ -15825,15 +23244,15 @@ func (t *StudentSubjectChoiceListType) Last() *StudentSubjectChoiceType {
         return &(t.StudentSubjectChoice[len(t.StudentSubjectChoice)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StudentSubjectChoiceListType) Index(n int) (*StudentSubjectChoiceType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StudentSubjectChoiceListType) Index(n int) (*StudentSubjectChoiceType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StudentSubjectChoiceListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StudentSubjectChoice == nil {
     t = t.AddNew()
     }
-        return &(t.StudentSubjectChoice[n]), nil
+        return &(t.StudentSubjectChoice[n])
 }
 
 // Length of the list.
@@ -15844,11 +23263,20 @@ func (t *StudentSubjectChoiceListType) Len() int {
         return len(t.StudentSubjectChoice)
 }
 
+// Convert list object to slice
+func (t *StudentSubjectChoiceListType) ToSlice() []*StudentSubjectChoiceType {
+  ret := make([]*StudentSubjectChoiceType, 0)
+  for _, x:= range t.StudentSubjectChoice {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *StudentsType) Append(value string) *StudentsType {
+  func (t *StudentsType) Append(values ...string) *StudentsType {
     
         if t == nil {
                 t, _ = StudentsTypePointer(StudentsType{})
@@ -15856,7 +23284,9 @@ func (t *StudentSubjectChoiceListType) Len() int {
         if t.StudentPersonalRefId == nil {
                 t.StudentPersonalRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.StudentPersonalRefId = append(t.StudentPersonalRefId, value)
+        }
         return t
 }
 
@@ -15880,15 +23310,15 @@ func (t *StudentsType) Last() *string {
         return &(t.StudentPersonalRefId[len(t.StudentPersonalRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *StudentsType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *StudentsType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("StudentsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.StudentPersonalRefId == nil {
     t = t.AddNew()
     }
-        return &(t.StudentPersonalRefId[n]), nil
+        return &(t.StudentPersonalRefId[n])
 }
 
 // Length of the list.
@@ -15899,6 +23329,15 @@ func (t *StudentsType) Len() int {
         return len(t.StudentPersonalRefId)
 }
 
+// Convert list object to slice
+func (t *StudentsType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.StudentPersonalRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *StudentsType) AppendString(value string) *StudentsType {
@@ -15907,7 +23346,7 @@ func (t *StudentsType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SubjectAreaListType) Append(value SubjectAreaType) *SubjectAreaListType {
+  func (t *SubjectAreaListType) Append(values ...SubjectAreaType) *SubjectAreaListType {
     
         if t == nil {
                 t, _ = SubjectAreaListTypePointer(SubjectAreaListType{})
@@ -15915,7 +23354,9 @@ func (t *StudentsType) Len() int {
         if t.SubjectArea == nil {
                 t.SubjectArea = make([]SubjectAreaType, 0)
         }
+        for _, value := range values {
         t.SubjectArea = append(t.SubjectArea, value)
+        }
         return t
 }
 
@@ -15939,15 +23380,15 @@ func (t *SubjectAreaListType) Last() *SubjectAreaType {
         return &(t.SubjectArea[len(t.SubjectArea)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SubjectAreaListType) Index(n int) (*SubjectAreaType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SubjectAreaListType) Index(n int) (*SubjectAreaType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SubjectAreaListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SubjectArea == nil {
     t = t.AddNew()
     }
-        return &(t.SubjectArea[n]), nil
+        return &(t.SubjectArea[n])
 }
 
 // Length of the list.
@@ -15958,11 +23399,20 @@ func (t *SubjectAreaListType) Len() int {
         return len(t.SubjectArea)
 }
 
+// Convert list object to slice
+func (t *SubjectAreaListType) ToSlice() []*SubjectAreaType {
+  ret := make([]*SubjectAreaType, 0)
+  for _, x:= range t.SubjectArea {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SubstituteItemListType) Append(value SubstituteItemType) *SubstituteItemListType {
+  func (t *SubstituteItemListType) Append(values ...SubstituteItemType) *SubstituteItemListType {
     
         if t == nil {
                 t, _ = SubstituteItemListTypePointer(SubstituteItemListType{})
@@ -15970,7 +23420,9 @@ func (t *SubjectAreaListType) Len() int {
         if t.SubstituteItem == nil {
                 t.SubstituteItem = make([]SubstituteItemType, 0)
         }
+        for _, value := range values {
         t.SubstituteItem = append(t.SubstituteItem, value)
+        }
         return t
 }
 
@@ -15994,15 +23446,15 @@ func (t *SubstituteItemListType) Last() *SubstituteItemType {
         return &(t.SubstituteItem[len(t.SubstituteItem)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SubstituteItemListType) Index(n int) (*SubstituteItemType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SubstituteItemListType) Index(n int) (*SubstituteItemType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SubstituteItemListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.SubstituteItem == nil {
     t = t.AddNew()
     }
-        return &(t.SubstituteItem[n]), nil
+        return &(t.SubstituteItem[n])
 }
 
 // Length of the list.
@@ -16013,11 +23465,20 @@ func (t *SubstituteItemListType) Len() int {
         return len(t.SubstituteItem)
 }
 
+// Convert list object to slice
+func (t *SubstituteItemListType) ToSlice() []*SubstituteItemType {
+  ret := make([]*SubstituteItemType, 0)
+  for _, x:= range t.SubstituteItem {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *SymptomListType) Append(value string) *SymptomListType {
+  func (t *SymptomListType) Append(values ...string) *SymptomListType {
     
         if t == nil {
                 t, _ = SymptomListTypePointer(SymptomListType{})
@@ -16025,7 +23486,9 @@ func (t *SubstituteItemListType) Len() int {
         if t.Symptom == nil {
                 t.Symptom = make([]string, 0)
         }
+        for _, value := range values {
         t.Symptom = append(t.Symptom, value)
+        }
         return t
 }
 
@@ -16049,15 +23512,15 @@ func (t *SymptomListType) Last() *string {
         return &(t.Symptom[len(t.Symptom)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *SymptomListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *SymptomListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("SymptomListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Symptom == nil {
     t = t.AddNew()
     }
-        return &(t.Symptom[n]), nil
+        return &(t.Symptom[n])
 }
 
 // Length of the list.
@@ -16068,6 +23531,15 @@ func (t *SymptomListType) Len() int {
         return len(t.Symptom)
 }
 
+// Convert list object to slice
+func (t *SymptomListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.Symptom {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *SymptomListType) AppendString(value string) *SymptomListType {
@@ -16076,7 +23548,7 @@ func (t *SymptomListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TeacherListType) Append(value TeachingGroupTeacherType) *TeacherListType {
+  func (t *TeacherListType) Append(values ...TeachingGroupTeacherType) *TeacherListType {
     
         if t == nil {
                 t, _ = TeacherListTypePointer(TeacherListType{})
@@ -16084,7 +23556,9 @@ func (t *SymptomListType) Len() int {
         if t.TeachingGroupTeacher == nil {
                 t.TeachingGroupTeacher = make([]TeachingGroupTeacherType, 0)
         }
+        for _, value := range values {
         t.TeachingGroupTeacher = append(t.TeachingGroupTeacher, value)
+        }
         return t
 }
 
@@ -16108,15 +23582,15 @@ func (t *TeacherListType) Last() *TeachingGroupTeacherType {
         return &(t.TeachingGroupTeacher[len(t.TeachingGroupTeacher)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TeacherListType) Index(n int) (*TeachingGroupTeacherType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TeacherListType) Index(n int) (*TeachingGroupTeacherType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TeacherListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TeachingGroupTeacher == nil {
     t = t.AddNew()
     }
-        return &(t.TeachingGroupTeacher[n]), nil
+        return &(t.TeachingGroupTeacher[n])
 }
 
 // Length of the list.
@@ -16127,11 +23601,20 @@ func (t *TeacherListType) Len() int {
         return len(t.TeachingGroupTeacher)
 }
 
+// Convert list object to slice
+func (t *TeacherListType) ToSlice() []*TeachingGroupTeacherType {
+  ret := make([]*TeachingGroupTeacherType, 0)
+  for _, x:= range t.TeachingGroupTeacher {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TeachingGroupListType) Append(value string) *TeachingGroupListType {
+  func (t *TeachingGroupListType) Append(values ...string) *TeachingGroupListType {
     
         if t == nil {
                 t, _ = TeachingGroupListTypePointer(TeachingGroupListType{})
@@ -16139,7 +23622,9 @@ func (t *TeacherListType) Len() int {
         if t.TeachingGroupRefId == nil {
                 t.TeachingGroupRefId = make([]string, 0)
         }
+        for _, value := range values {
         t.TeachingGroupRefId = append(t.TeachingGroupRefId, value)
+        }
         return t
 }
 
@@ -16163,15 +23648,15 @@ func (t *TeachingGroupListType) Last() *string {
         return &(t.TeachingGroupRefId[len(t.TeachingGroupRefId)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TeachingGroupListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TeachingGroupListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TeachingGroupListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TeachingGroupRefId == nil {
     t = t.AddNew()
     }
-        return &(t.TeachingGroupRefId[n]), nil
+        return &(t.TeachingGroupRefId[n])
 }
 
 // Length of the list.
@@ -16182,6 +23667,15 @@ func (t *TeachingGroupListType) Len() int {
         return len(t.TeachingGroupRefId)
 }
 
+// Convert list object to slice
+func (t *TeachingGroupListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.TeachingGroupRefId {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *TeachingGroupListType) AppendString(value string) *TeachingGroupListType {
@@ -16190,7 +23684,7 @@ func (t *TeachingGroupListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TeachingGroupPeriodListType) Append(value TeachingGroupPeriodType) *TeachingGroupPeriodListType {
+  func (t *TeachingGroupPeriodListType) Append(values ...TeachingGroupPeriodType) *TeachingGroupPeriodListType {
     
         if t == nil {
                 t, _ = TeachingGroupPeriodListTypePointer(TeachingGroupPeriodListType{})
@@ -16198,7 +23692,9 @@ func (t *TeachingGroupListType) Len() int {
         if t.TeachingGroupPeriod == nil {
                 t.TeachingGroupPeriod = make([]TeachingGroupPeriodType, 0)
         }
+        for _, value := range values {
         t.TeachingGroupPeriod = append(t.TeachingGroupPeriod, value)
+        }
         return t
 }
 
@@ -16222,15 +23718,15 @@ func (t *TeachingGroupPeriodListType) Last() *TeachingGroupPeriodType {
         return &(t.TeachingGroupPeriod[len(t.TeachingGroupPeriod)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TeachingGroupPeriodListType) Index(n int) (*TeachingGroupPeriodType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TeachingGroupPeriodListType) Index(n int) (*TeachingGroupPeriodType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TeachingGroupPeriodListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TeachingGroupPeriod == nil {
     t = t.AddNew()
     }
-        return &(t.TeachingGroupPeriod[n]), nil
+        return &(t.TeachingGroupPeriod[n])
 }
 
 // Length of the list.
@@ -16241,11 +23737,20 @@ func (t *TeachingGroupPeriodListType) Len() int {
         return len(t.TeachingGroupPeriod)
 }
 
+// Convert list object to slice
+func (t *TeachingGroupPeriodListType) ToSlice() []*TeachingGroupPeriodType {
+  ret := make([]*TeachingGroupPeriodType, 0)
+  for _, x:= range t.TeachingGroupPeriod {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TeachingGroupScheduleListType) Append(value TeachingGroupScheduleType) *TeachingGroupScheduleListType {
+  func (t *TeachingGroupScheduleListType) Append(values ...TeachingGroupScheduleType) *TeachingGroupScheduleListType {
     
         if t == nil {
                 t, _ = TeachingGroupScheduleListTypePointer(TeachingGroupScheduleListType{})
@@ -16253,7 +23758,9 @@ func (t *TeachingGroupPeriodListType) Len() int {
         if t.TeachingGroupSchedule == nil {
                 t.TeachingGroupSchedule = make([]TeachingGroupScheduleType, 0)
         }
+        for _, value := range values {
         t.TeachingGroupSchedule = append(t.TeachingGroupSchedule, value)
+        }
         return t
 }
 
@@ -16277,15 +23784,15 @@ func (t *TeachingGroupScheduleListType) Last() *TeachingGroupScheduleType {
         return &(t.TeachingGroupSchedule[len(t.TeachingGroupSchedule)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TeachingGroupScheduleListType) Index(n int) (*TeachingGroupScheduleType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TeachingGroupScheduleListType) Index(n int) (*TeachingGroupScheduleType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TeachingGroupScheduleListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TeachingGroupSchedule == nil {
     t = t.AddNew()
     }
-        return &(t.TeachingGroupSchedule[n]), nil
+        return &(t.TeachingGroupSchedule[n])
 }
 
 // Length of the list.
@@ -16296,11 +23803,20 @@ func (t *TeachingGroupScheduleListType) Len() int {
         return len(t.TeachingGroupSchedule)
 }
 
+// Convert list object to slice
+func (t *TeachingGroupScheduleListType) ToSlice() []*TeachingGroupScheduleType {
+  ret := make([]*TeachingGroupScheduleType, 0)
+  for _, x:= range t.TeachingGroupSchedule {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TestDisruptionListType) Append(value TestDisruptionType) *TestDisruptionListType {
+  func (t *TestDisruptionListType) Append(values ...TestDisruptionType) *TestDisruptionListType {
     
         if t == nil {
                 t, _ = TestDisruptionListTypePointer(TestDisruptionListType{})
@@ -16308,7 +23824,9 @@ func (t *TeachingGroupScheduleListType) Len() int {
         if t.TestDisruption == nil {
                 t.TestDisruption = make([]TestDisruptionType, 0)
         }
+        for _, value := range values {
         t.TestDisruption = append(t.TestDisruption, value)
+        }
         return t
 }
 
@@ -16332,15 +23850,15 @@ func (t *TestDisruptionListType) Last() *TestDisruptionType {
         return &(t.TestDisruption[len(t.TestDisruption)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TestDisruptionListType) Index(n int) (*TestDisruptionType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TestDisruptionListType) Index(n int) (*TestDisruptionType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TestDisruptionListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TestDisruption == nil {
     t = t.AddNew()
     }
-        return &(t.TestDisruption[n]), nil
+        return &(t.TestDisruption[n])
 }
 
 // Length of the list.
@@ -16351,11 +23869,20 @@ func (t *TestDisruptionListType) Len() int {
         return len(t.TestDisruption)
 }
 
+// Convert list object to slice
+func (t *TestDisruptionListType) ToSlice() []*TestDisruptionType {
+  ret := make([]*TestDisruptionType, 0)
+  for _, x:= range t.TestDisruption {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TimeElementListType) Append(value TimeElementType) *TimeElementListType {
+  func (t *TimeElementListType) Append(values ...TimeElementType) *TimeElementListType {
     
         if t == nil {
                 t, _ = TimeElementListTypePointer(TimeElementListType{})
@@ -16363,7 +23890,9 @@ func (t *TestDisruptionListType) Len() int {
         if t.TimeElement == nil {
                 t.TimeElement = make([]TimeElementType, 0)
         }
+        for _, value := range values {
         t.TimeElement = append(t.TimeElement, value)
+        }
         return t
 }
 
@@ -16387,15 +23916,15 @@ func (t *TimeElementListType) Last() *TimeElementType {
         return &(t.TimeElement[len(t.TimeElement)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TimeElementListType) Index(n int) (*TimeElementType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TimeElementListType) Index(n int) (*TimeElementType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TimeElementListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TimeElement == nil {
     t = t.AddNew()
     }
-        return &(t.TimeElement[n]), nil
+        return &(t.TimeElement[n])
 }
 
 // Length of the list.
@@ -16406,11 +23935,20 @@ func (t *TimeElementListType) Len() int {
         return len(t.TimeElement)
 }
 
+// Convert list object to slice
+func (t *TimeElementListType) ToSlice() []*TimeElementType {
+  ret := make([]*TimeElementType, 0)
+  for _, x:= range t.TimeElement {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TimeTableChangeReasonListType) Append(value TimeTableChangeReasonType) *TimeTableChangeReasonListType {
+  func (t *TimeTableChangeReasonListType) Append(values ...TimeTableChangeReasonType) *TimeTableChangeReasonListType {
     
         if t == nil {
                 t, _ = TimeTableChangeReasonListTypePointer(TimeTableChangeReasonListType{})
@@ -16418,7 +23956,9 @@ func (t *TimeElementListType) Len() int {
         if t.TimeTableChangeReason == nil {
                 t.TimeTableChangeReason = make([]TimeTableChangeReasonType, 0)
         }
+        for _, value := range values {
         t.TimeTableChangeReason = append(t.TimeTableChangeReason, value)
+        }
         return t
 }
 
@@ -16442,15 +23982,15 @@ func (t *TimeTableChangeReasonListType) Last() *TimeTableChangeReasonType {
         return &(t.TimeTableChangeReason[len(t.TimeTableChangeReason)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TimeTableChangeReasonListType) Index(n int) (*TimeTableChangeReasonType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TimeTableChangeReasonListType) Index(n int) (*TimeTableChangeReasonType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TimeTableChangeReasonListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TimeTableChangeReason == nil {
     t = t.AddNew()
     }
-        return &(t.TimeTableChangeReason[n]), nil
+        return &(t.TimeTableChangeReason[n])
 }
 
 // Length of the list.
@@ -16461,11 +24001,20 @@ func (t *TimeTableChangeReasonListType) Len() int {
         return len(t.TimeTableChangeReason)
 }
 
+// Convert list object to slice
+func (t *TimeTableChangeReasonListType) ToSlice() []*TimeTableChangeReasonType {
+  ret := make([]*TimeTableChangeReasonType, 0)
+  for _, x:= range t.TimeTableChangeReason {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TimeTableDayListType) Append(value TimeTableDayType) *TimeTableDayListType {
+  func (t *TimeTableDayListType) Append(values ...TimeTableDayType) *TimeTableDayListType {
     
         if t == nil {
                 t, _ = TimeTableDayListTypePointer(TimeTableDayListType{})
@@ -16473,7 +24022,9 @@ func (t *TimeTableChangeReasonListType) Len() int {
         if t.TimeTableDay == nil {
                 t.TimeTableDay = make([]TimeTableDayType, 0)
         }
+        for _, value := range values {
         t.TimeTableDay = append(t.TimeTableDay, value)
+        }
         return t
 }
 
@@ -16497,15 +24048,15 @@ func (t *TimeTableDayListType) Last() *TimeTableDayType {
         return &(t.TimeTableDay[len(t.TimeTableDay)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TimeTableDayListType) Index(n int) (*TimeTableDayType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TimeTableDayListType) Index(n int) (*TimeTableDayType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TimeTableDayListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TimeTableDay == nil {
     t = t.AddNew()
     }
-        return &(t.TimeTableDay[n]), nil
+        return &(t.TimeTableDay[n])
 }
 
 // Length of the list.
@@ -16516,11 +24067,20 @@ func (t *TimeTableDayListType) Len() int {
         return len(t.TimeTableDay)
 }
 
+// Convert list object to slice
+func (t *TimeTableDayListType) ToSlice() []*TimeTableDayType {
+  ret := make([]*TimeTableDayType, 0)
+  for _, x:= range t.TimeTableDay {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TimeTablePeriodListType) Append(value TimeTablePeriodType) *TimeTablePeriodListType {
+  func (t *TimeTablePeriodListType) Append(values ...TimeTablePeriodType) *TimeTablePeriodListType {
     
         if t == nil {
                 t, _ = TimeTablePeriodListTypePointer(TimeTablePeriodListType{})
@@ -16528,7 +24088,9 @@ func (t *TimeTableDayListType) Len() int {
         if t.TimeTablePeriod == nil {
                 t.TimeTablePeriod = make([]TimeTablePeriodType, 0)
         }
+        for _, value := range values {
         t.TimeTablePeriod = append(t.TimeTablePeriod, value)
+        }
         return t
 }
 
@@ -16552,15 +24114,15 @@ func (t *TimeTablePeriodListType) Last() *TimeTablePeriodType {
         return &(t.TimeTablePeriod[len(t.TimeTablePeriod)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TimeTablePeriodListType) Index(n int) (*TimeTablePeriodType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TimeTablePeriodListType) Index(n int) (*TimeTablePeriodType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TimeTablePeriodListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TimeTablePeriod == nil {
     t = t.AddNew()
     }
-        return &(t.TimeTablePeriod[n]), nil
+        return &(t.TimeTablePeriod[n])
 }
 
 // Length of the list.
@@ -16571,11 +24133,20 @@ func (t *TimeTablePeriodListType) Len() int {
         return len(t.TimeTablePeriod)
 }
 
+// Convert list object to slice
+func (t *TimeTablePeriodListType) ToSlice() []*TimeTablePeriodType {
+  ret := make([]*TimeTablePeriodType, 0)
+  for _, x:= range t.TimeTablePeriod {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *TimeTableScheduleCellListType) Append(value TimeTableScheduleCellType) *TimeTableScheduleCellListType {
+  func (t *TimeTableScheduleCellListType) Append(values ...TimeTableScheduleCellType) *TimeTableScheduleCellListType {
     
         if t == nil {
                 t, _ = TimeTableScheduleCellListTypePointer(TimeTableScheduleCellListType{})
@@ -16583,7 +24154,9 @@ func (t *TimeTablePeriodListType) Len() int {
         if t.TimeTableScheduleCell == nil {
                 t.TimeTableScheduleCell = make([]TimeTableScheduleCellType, 0)
         }
+        for _, value := range values {
         t.TimeTableScheduleCell = append(t.TimeTableScheduleCell, value)
+        }
         return t
 }
 
@@ -16607,15 +24180,15 @@ func (t *TimeTableScheduleCellListType) Last() *TimeTableScheduleCellType {
         return &(t.TimeTableScheduleCell[len(t.TimeTableScheduleCell)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *TimeTableScheduleCellListType) Index(n int) (*TimeTableScheduleCellType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *TimeTableScheduleCellListType) Index(n int) (*TimeTableScheduleCellType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("TimeTableScheduleCellListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.TimeTableScheduleCell == nil {
     t = t.AddNew()
     }
-        return &(t.TimeTableScheduleCell[n]), nil
+        return &(t.TimeTableScheduleCell[n])
 }
 
 // Length of the list.
@@ -16626,11 +24199,20 @@ func (t *TimeTableScheduleCellListType) Len() int {
         return len(t.TimeTableScheduleCell)
 }
 
+// Convert list object to slice
+func (t *TimeTableScheduleCellListType) ToSlice() []*TimeTableScheduleCellType {
+  ret := make([]*TimeTableScheduleCellType, 0)
+  for _, x:= range t.TimeTableScheduleCell {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *ValidLetterMarkListType) Append(value ValidLetterMarkType) *ValidLetterMarkListType {
+  func (t *ValidLetterMarkListType) Append(values ...ValidLetterMarkType) *ValidLetterMarkListType {
     
         if t == nil {
                 t, _ = ValidLetterMarkListTypePointer(ValidLetterMarkListType{})
@@ -16638,7 +24220,9 @@ func (t *TimeTableScheduleCellListType) Len() int {
         if t.ValidLetterMark == nil {
                 t.ValidLetterMark = make([]ValidLetterMarkType, 0)
         }
+        for _, value := range values {
         t.ValidLetterMark = append(t.ValidLetterMark, value)
+        }
         return t
 }
 
@@ -16662,15 +24246,15 @@ func (t *ValidLetterMarkListType) Last() *ValidLetterMarkType {
         return &(t.ValidLetterMark[len(t.ValidLetterMark)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *ValidLetterMarkListType) Index(n int) (*ValidLetterMarkType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *ValidLetterMarkListType) Index(n int) (*ValidLetterMarkType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("ValidLetterMarkListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.ValidLetterMark == nil {
     t = t.AddNew()
     }
-        return &(t.ValidLetterMark[n]), nil
+        return &(t.ValidLetterMark[n])
 }
 
 // Length of the list.
@@ -16681,11 +24265,20 @@ func (t *ValidLetterMarkListType) Len() int {
         return len(t.ValidLetterMark)
 }
 
+// Convert list object to slice
+func (t *ValidLetterMarkListType) ToSlice() []*ValidLetterMarkType {
+  ret := make([]*ValidLetterMarkType, 0)
+  for _, x:= range t.ValidLetterMark {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *VisaSubClassListType) Append(value VisaSubClassType) *VisaSubClassListType {
+  func (t *VisaSubClassListType) Append(values ...VisaSubClassType) *VisaSubClassListType {
     
         if t == nil {
                 t, _ = VisaSubClassListTypePointer(VisaSubClassListType{})
@@ -16693,7 +24286,9 @@ func (t *ValidLetterMarkListType) Len() int {
         if t.VisaSubClass == nil {
                 t.VisaSubClass = make([]VisaSubClassType, 0)
         }
+        for _, value := range values {
         t.VisaSubClass = append(t.VisaSubClass, value)
+        }
         return t
 }
 
@@ -16717,15 +24312,15 @@ func (t *VisaSubClassListType) Last() *VisaSubClassType {
         return &(t.VisaSubClass[len(t.VisaSubClass)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *VisaSubClassListType) Index(n int) (*VisaSubClassType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *VisaSubClassListType) Index(n int) (*VisaSubClassType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("VisaSubClassListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.VisaSubClass == nil {
     t = t.AddNew()
     }
-        return &(t.VisaSubClass[n]), nil
+        return &(t.VisaSubClass[n])
 }
 
 // Length of the list.
@@ -16736,11 +24331,20 @@ func (t *VisaSubClassListType) Len() int {
         return len(t.VisaSubClass)
 }
 
+// Convert list object to slice
+func (t *VisaSubClassListType) ToSlice() []*VisaSubClassType {
+  ret := make([]*VisaSubClassType, 0)
+  for _, x:= range t.VisaSubClass {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *WellbeingDocumentListType) Append(value WellbeingDocumentType) *WellbeingDocumentListType {
+  func (t *WellbeingDocumentListType) Append(values ...WellbeingDocumentType) *WellbeingDocumentListType {
     
         if t == nil {
                 t, _ = WellbeingDocumentListTypePointer(WellbeingDocumentListType{})
@@ -16748,7 +24352,9 @@ func (t *VisaSubClassListType) Len() int {
         if t.Document == nil {
                 t.Document = make([]WellbeingDocumentType, 0)
         }
+        for _, value := range values {
         t.Document = append(t.Document, value)
+        }
         return t
 }
 
@@ -16772,15 +24378,15 @@ func (t *WellbeingDocumentListType) Last() *WellbeingDocumentType {
         return &(t.Document[len(t.Document)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *WellbeingDocumentListType) Index(n int) (*WellbeingDocumentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *WellbeingDocumentListType) Index(n int) (*WellbeingDocumentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("WellbeingDocumentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Document == nil {
     t = t.AddNew()
     }
-        return &(t.Document[n]), nil
+        return &(t.Document[n])
 }
 
 // Length of the list.
@@ -16791,11 +24397,20 @@ func (t *WellbeingDocumentListType) Len() int {
         return len(t.Document)
 }
 
+// Convert list object to slice
+func (t *WellbeingDocumentListType) ToSlice() []*WellbeingDocumentType {
+  ret := make([]*WellbeingDocumentType, 0)
+  for _, x:= range t.Document {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *WellbeingEventCategoryListType) Append(value WellbeingEventCategoryType) *WellbeingEventCategoryListType {
+  func (t *WellbeingEventCategoryListType) Append(values ...WellbeingEventCategoryType) *WellbeingEventCategoryListType {
     
         if t == nil {
                 t, _ = WellbeingEventCategoryListTypePointer(WellbeingEventCategoryListType{})
@@ -16803,7 +24418,9 @@ func (t *WellbeingDocumentListType) Len() int {
         if t.WellbeingEventCategory == nil {
                 t.WellbeingEventCategory = make([]WellbeingEventCategoryType, 0)
         }
+        for _, value := range values {
         t.WellbeingEventCategory = append(t.WellbeingEventCategory, value)
+        }
         return t
 }
 
@@ -16827,15 +24444,15 @@ func (t *WellbeingEventCategoryListType) Last() *WellbeingEventCategoryType {
         return &(t.WellbeingEventCategory[len(t.WellbeingEventCategory)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *WellbeingEventCategoryListType) Index(n int) (*WellbeingEventCategoryType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *WellbeingEventCategoryListType) Index(n int) (*WellbeingEventCategoryType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("WellbeingEventCategoryListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.WellbeingEventCategory == nil {
     t = t.AddNew()
     }
-        return &(t.WellbeingEventCategory[n]), nil
+        return &(t.WellbeingEventCategory[n])
 }
 
 // Length of the list.
@@ -16846,11 +24463,20 @@ func (t *WellbeingEventCategoryListType) Len() int {
         return len(t.WellbeingEventCategory)
 }
 
+// Convert list object to slice
+func (t *WellbeingEventCategoryListType) ToSlice() []*WellbeingEventCategoryType {
+  ret := make([]*WellbeingEventCategoryType, 0)
+  for _, x:= range t.WellbeingEventCategory {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *WellbeingEventSubCategoryListType) Append(value string) *WellbeingEventSubCategoryListType {
+  func (t *WellbeingEventSubCategoryListType) Append(values ...string) *WellbeingEventSubCategoryListType {
     
         if t == nil {
                 t, _ = WellbeingEventSubCategoryListTypePointer(WellbeingEventSubCategoryListType{})
@@ -16858,7 +24484,9 @@ func (t *WellbeingEventCategoryListType) Len() int {
         if t.WellbeingEventSubCategory == nil {
                 t.WellbeingEventSubCategory = make([]string, 0)
         }
+        for _, value := range values {
         t.WellbeingEventSubCategory = append(t.WellbeingEventSubCategory, value)
+        }
         return t
 }
 
@@ -16882,15 +24510,15 @@ func (t *WellbeingEventSubCategoryListType) Last() *string {
         return &(t.WellbeingEventSubCategory[len(t.WellbeingEventSubCategory)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *WellbeingEventSubCategoryListType) Index(n int) (*string, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *WellbeingEventSubCategoryListType) Index(n int) (*string) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("WellbeingEventSubCategoryListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.WellbeingEventSubCategory == nil {
     t = t.AddNew()
     }
-        return &(t.WellbeingEventSubCategory[n]), nil
+        return &(t.WellbeingEventSubCategory[n])
 }
 
 // Length of the list.
@@ -16901,6 +24529,15 @@ func (t *WellbeingEventSubCategoryListType) Len() int {
         return len(t.WellbeingEventSubCategory)
 }
 
+// Convert list object to slice
+func (t *WellbeingEventSubCategoryListType) ToSlice() []*string {
+  ret := make([]*string, 0)
+  for _, x:= range t.WellbeingEventSubCategory {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 // Append a single string to the list. Only defined for lists of strings or of types aliased to string.
       func (t *WellbeingEventSubCategoryListType) AppendString(value string) *WellbeingEventSubCategoryListType {
@@ -16909,7 +24546,7 @@ func (t *WellbeingEventSubCategoryListType) Len() int {
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *WithdrawalTimeListType) Append(value WithdrawalType) *WithdrawalTimeListType {
+  func (t *WithdrawalTimeListType) Append(values ...WithdrawalType) *WithdrawalTimeListType {
     
         if t == nil {
                 t, _ = WithdrawalTimeListTypePointer(WithdrawalTimeListType{})
@@ -16917,7 +24554,9 @@ func (t *WellbeingEventSubCategoryListType) Len() int {
         if t.Withdrawal == nil {
                 t.Withdrawal = make([]WithdrawalType, 0)
         }
+        for _, value := range values {
         t.Withdrawal = append(t.Withdrawal, value)
+        }
         return t
 }
 
@@ -16941,15 +24580,15 @@ func (t *WithdrawalTimeListType) Last() *WithdrawalType {
         return &(t.Withdrawal[len(t.Withdrawal)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *WithdrawalTimeListType) Index(n int) (*WithdrawalType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *WithdrawalTimeListType) Index(n int) (*WithdrawalType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("WithdrawalTimeListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.Withdrawal == nil {
     t = t.AddNew()
     }
-        return &(t.Withdrawal[n]), nil
+        return &(t.Withdrawal[n])
 }
 
 // Length of the list.
@@ -16960,11 +24599,20 @@ func (t *WithdrawalTimeListType) Len() int {
         return len(t.Withdrawal)
 }
 
+// Convert list object to slice
+func (t *WithdrawalTimeListType) ToSlice() []*WithdrawalType {
+  ret := make([]*WithdrawalType, 0)
+  for _, x:= range t.Withdrawal {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *YearLevelEnrollmentListType) Append(value YearLevelEnrollmentType) *YearLevelEnrollmentListType {
+  func (t *YearLevelEnrollmentListType) Append(values ...YearLevelEnrollmentType) *YearLevelEnrollmentListType {
     
         if t == nil {
                 t, _ = YearLevelEnrollmentListTypePointer(YearLevelEnrollmentListType{})
@@ -16972,7 +24620,9 @@ func (t *WithdrawalTimeListType) Len() int {
         if t.YearLevelEnrollment == nil {
                 t.YearLevelEnrollment = make([]YearLevelEnrollmentType, 0)
         }
+        for _, value := range values {
         t.YearLevelEnrollment = append(t.YearLevelEnrollment, value)
+        }
         return t
 }
 
@@ -16996,15 +24646,15 @@ func (t *YearLevelEnrollmentListType) Last() *YearLevelEnrollmentType {
         return &(t.YearLevelEnrollment[len(t.YearLevelEnrollment)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *YearLevelEnrollmentListType) Index(n int) (*YearLevelEnrollmentType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *YearLevelEnrollmentListType) Index(n int) (*YearLevelEnrollmentType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("YearLevelEnrollmentListType.Index(): subscript %d out of range on list\n", n)
     }
   if t.YearLevelEnrollment == nil {
     t = t.AddNew()
     }
-        return &(t.YearLevelEnrollment[n]), nil
+        return &(t.YearLevelEnrollment[n])
 }
 
 // Length of the list.
@@ -17015,11 +24665,20 @@ func (t *YearLevelEnrollmentListType) Len() int {
         return len(t.YearLevelEnrollment)
 }
 
+// Convert list object to slice
+func (t *YearLevelEnrollmentListType) ToSlice() []*YearLevelEnrollmentType {
+  ret := make([]*YearLevelEnrollmentType, 0)
+  for _, x:= range t.YearLevelEnrollment {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
 
 
 // Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
 // and the value does not match the codeset.
-  func (t *YearLevelsType) Append(value YearLevelType) *YearLevelsType {
+  func (t *YearLevelsType) Append(values ...YearLevelType) *YearLevelsType {
     
         if t == nil {
                 t, _ = YearLevelsTypePointer(YearLevelsType{})
@@ -17027,7 +24686,9 @@ func (t *YearLevelEnrollmentListType) Len() int {
         if t.YearLevel == nil {
                 t.YearLevel = make([]YearLevelType, 0)
         }
+        for _, value := range values {
         t.YearLevel = append(t.YearLevel, value)
+        }
         return t
 }
 
@@ -17051,15 +24712,15 @@ func (t *YearLevelsType) Last() *YearLevelType {
         return &(t.YearLevel[len(t.YearLevel)-1])
 }
 
-// Retrieves the nth value in the list. Raises error if index is out of bounds.
-func (t *YearLevelsType) Index(n int) (*YearLevelType, error) {
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *YearLevelsType) Index(n int) (*YearLevelType) {
   if (n >= t.Len() || n < 0) {
-    return nil, errors.New("subscript out of range on list")
+    log.Fatalf("YearLevelsType.Index(): subscript %d out of range on list\n", n)
     }
   if t.YearLevel == nil {
     t = t.AddNew()
     }
-        return &(t.YearLevel[n]), nil
+        return &(t.YearLevel[n])
 }
 
 // Length of the list.
@@ -17070,6 +24731,7994 @@ func (t *YearLevelsType) Len() int {
         return len(t.YearLevel)
 }
 
+// Convert list object to slice
+func (t *YearLevelsType) ToSlice() []*YearLevelType {
+  ret := make([]*YearLevelType, 0)
+  for _, x:= range t.YearLevel {
+    ret = append(ret, &x)
+  }
+  return ret
+}
+
+
+
+  // Generates a new object as a pointer to a struct
+func NewActivitys() *Activitys {
+  if out, ok := ActivitysPointer(Activitys{}); !ok {
+                log.Fatalf("Could not create pointer to Activitys\n")
+                return nil
+        } else {
+          out.activitys.Activity = make([]activity, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *Activitys) Append(values ...*Activity) *Activitys {
+        if t == nil {
+                t, _ = ActivitysPointer(Activitys{})
+        }
+        /*
+        if t.activitys == nil {
+          t.activitys = activitys{Activity: make([]activity, 0)}
+        }
+        */
+        if t.activitys.Activity == nil {
+                t.activitys.Activity = make([]activity, 0)
+        }
+        for _, value := range values {
+        t.activitys.Activity = append(t.activitys.Activity, value.activity)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *Activitys) AddNew() *Activitys {
+        if t == nil {
+                t, _ = ActivitysPointer(Activitys{})
+        }
+        /*
+        if t.activitys == nil {
+          t.activitys = activitys{Activity: make([]activity, 0)}
+        }
+        */
+        if t.activitys.Activity == nil {
+                t.activitys.Activity = make([]activity, 0)
+        }
+        t.activitys.Activity = append(t.activitys.Activity, activity{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *Activitys) Last() *activity {
+  /*
+  if t.activitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.activitys.Activity == nil {
+    t = t.AddNew()
+    }
+        return &(t.activitys.Activity[len(t.activitys.Activity)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *Activitys) Index(n int) *Activity {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("Activitys.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.activitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.activitys.Activity == nil {
+    t = t.AddNew()
+    }
+        return &Activity{(t.activitys.Activity[n])}
+}
+
+// Length of the list.
+func (t *Activitys) Len() int {
+  /*
+  if t.activitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.activitys.Activity == nil {
+    t = t.AddNew()
+    }
+        return len(t.activitys.Activity)
+}
+
+// Convert list object to slice
+func (t *Activitys) ToSlice() []*Activity {
+    ret := make([]*Activity, 0)
+  for _, x:= range t.activitys.Activity {
+    ret = append(ret, &Activity{activity: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewAddressCollections() *AddressCollections {
+  if out, ok := AddressCollectionsPointer(AddressCollections{}); !ok {
+                log.Fatalf("Could not create pointer to AddressCollections\n")
+                return nil
+        } else {
+          out.addresscollections.AddressCollection = make([]addresscollection, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *AddressCollections) Append(values ...*AddressCollection) *AddressCollections {
+        if t == nil {
+                t, _ = AddressCollectionsPointer(AddressCollections{})
+        }
+        /*
+        if t.addresscollections == nil {
+          t.addresscollections = addresscollections{AddressCollection: make([]addresscollection, 0)}
+        }
+        */
+        if t.addresscollections.AddressCollection == nil {
+                t.addresscollections.AddressCollection = make([]addresscollection, 0)
+        }
+        for _, value := range values {
+        t.addresscollections.AddressCollection = append(t.addresscollections.AddressCollection, value.addresscollection)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *AddressCollections) AddNew() *AddressCollections {
+        if t == nil {
+                t, _ = AddressCollectionsPointer(AddressCollections{})
+        }
+        /*
+        if t.addresscollections == nil {
+          t.addresscollections = addresscollections{AddressCollection: make([]addresscollection, 0)}
+        }
+        */
+        if t.addresscollections.AddressCollection == nil {
+                t.addresscollections.AddressCollection = make([]addresscollection, 0)
+        }
+        t.addresscollections.AddressCollection = append(t.addresscollections.AddressCollection, addresscollection{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *AddressCollections) Last() *addresscollection {
+  /*
+  if t.addresscollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.addresscollections.AddressCollection == nil {
+    t = t.AddNew()
+    }
+        return &(t.addresscollections.AddressCollection[len(t.addresscollections.AddressCollection)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *AddressCollections) Index(n int) *AddressCollection {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("AddressCollections.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.addresscollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.addresscollections.AddressCollection == nil {
+    t = t.AddNew()
+    }
+        return &AddressCollection{(t.addresscollections.AddressCollection[n])}
+}
+
+// Length of the list.
+func (t *AddressCollections) Len() int {
+  /*
+  if t.addresscollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.addresscollections.AddressCollection == nil {
+    t = t.AddNew()
+    }
+        return len(t.addresscollections.AddressCollection)
+}
+
+// Convert list object to slice
+func (t *AddressCollections) ToSlice() []*AddressCollection {
+    ret := make([]*AddressCollection, 0)
+  for _, x:= range t.addresscollections.AddressCollection {
+    ret = append(ret, &AddressCollection{addresscollection: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewAggregateCharacteristicInfos() *AggregateCharacteristicInfos {
+  if out, ok := AggregateCharacteristicInfosPointer(AggregateCharacteristicInfos{}); !ok {
+                log.Fatalf("Could not create pointer to AggregateCharacteristicInfos\n")
+                return nil
+        } else {
+          out.aggregatecharacteristicinfos.AggregateCharacteristicInfo = make([]aggregatecharacteristicinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *AggregateCharacteristicInfos) Append(values ...*AggregateCharacteristicInfo) *AggregateCharacteristicInfos {
+        if t == nil {
+                t, _ = AggregateCharacteristicInfosPointer(AggregateCharacteristicInfos{})
+        }
+        /*
+        if t.aggregatecharacteristicinfos == nil {
+          t.aggregatecharacteristicinfos = aggregatecharacteristicinfos{AggregateCharacteristicInfo: make([]aggregatecharacteristicinfo, 0)}
+        }
+        */
+        if t.aggregatecharacteristicinfos.AggregateCharacteristicInfo == nil {
+                t.aggregatecharacteristicinfos.AggregateCharacteristicInfo = make([]aggregatecharacteristicinfo, 0)
+        }
+        for _, value := range values {
+        t.aggregatecharacteristicinfos.AggregateCharacteristicInfo = append(t.aggregatecharacteristicinfos.AggregateCharacteristicInfo, value.aggregatecharacteristicinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *AggregateCharacteristicInfos) AddNew() *AggregateCharacteristicInfos {
+        if t == nil {
+                t, _ = AggregateCharacteristicInfosPointer(AggregateCharacteristicInfos{})
+        }
+        /*
+        if t.aggregatecharacteristicinfos == nil {
+          t.aggregatecharacteristicinfos = aggregatecharacteristicinfos{AggregateCharacteristicInfo: make([]aggregatecharacteristicinfo, 0)}
+        }
+        */
+        if t.aggregatecharacteristicinfos.AggregateCharacteristicInfo == nil {
+                t.aggregatecharacteristicinfos.AggregateCharacteristicInfo = make([]aggregatecharacteristicinfo, 0)
+        }
+        t.aggregatecharacteristicinfos.AggregateCharacteristicInfo = append(t.aggregatecharacteristicinfos.AggregateCharacteristicInfo, aggregatecharacteristicinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *AggregateCharacteristicInfos) Last() *aggregatecharacteristicinfo {
+  /*
+  if t.aggregatecharacteristicinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatecharacteristicinfos.AggregateCharacteristicInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.aggregatecharacteristicinfos.AggregateCharacteristicInfo[len(t.aggregatecharacteristicinfos.AggregateCharacteristicInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *AggregateCharacteristicInfos) Index(n int) *AggregateCharacteristicInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("AggregateCharacteristicInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.aggregatecharacteristicinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatecharacteristicinfos.AggregateCharacteristicInfo == nil {
+    t = t.AddNew()
+    }
+        return &AggregateCharacteristicInfo{(t.aggregatecharacteristicinfos.AggregateCharacteristicInfo[n])}
+}
+
+// Length of the list.
+func (t *AggregateCharacteristicInfos) Len() int {
+  /*
+  if t.aggregatecharacteristicinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatecharacteristicinfos.AggregateCharacteristicInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.aggregatecharacteristicinfos.AggregateCharacteristicInfo)
+}
+
+// Convert list object to slice
+func (t *AggregateCharacteristicInfos) ToSlice() []*AggregateCharacteristicInfo {
+    ret := make([]*AggregateCharacteristicInfo, 0)
+  for _, x:= range t.aggregatecharacteristicinfos.AggregateCharacteristicInfo {
+    ret = append(ret, &AggregateCharacteristicInfo{aggregatecharacteristicinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewAggregateStatisticFacts() *AggregateStatisticFacts {
+  if out, ok := AggregateStatisticFactsPointer(AggregateStatisticFacts{}); !ok {
+                log.Fatalf("Could not create pointer to AggregateStatisticFacts\n")
+                return nil
+        } else {
+          out.aggregatestatisticfacts.AggregateStatisticFact = make([]aggregatestatisticfact, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *AggregateStatisticFacts) Append(values ...*AggregateStatisticFact) *AggregateStatisticFacts {
+        if t == nil {
+                t, _ = AggregateStatisticFactsPointer(AggregateStatisticFacts{})
+        }
+        /*
+        if t.aggregatestatisticfacts == nil {
+          t.aggregatestatisticfacts = aggregatestatisticfacts{AggregateStatisticFact: make([]aggregatestatisticfact, 0)}
+        }
+        */
+        if t.aggregatestatisticfacts.AggregateStatisticFact == nil {
+                t.aggregatestatisticfacts.AggregateStatisticFact = make([]aggregatestatisticfact, 0)
+        }
+        for _, value := range values {
+        t.aggregatestatisticfacts.AggregateStatisticFact = append(t.aggregatestatisticfacts.AggregateStatisticFact, value.aggregatestatisticfact)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *AggregateStatisticFacts) AddNew() *AggregateStatisticFacts {
+        if t == nil {
+                t, _ = AggregateStatisticFactsPointer(AggregateStatisticFacts{})
+        }
+        /*
+        if t.aggregatestatisticfacts == nil {
+          t.aggregatestatisticfacts = aggregatestatisticfacts{AggregateStatisticFact: make([]aggregatestatisticfact, 0)}
+        }
+        */
+        if t.aggregatestatisticfacts.AggregateStatisticFact == nil {
+                t.aggregatestatisticfacts.AggregateStatisticFact = make([]aggregatestatisticfact, 0)
+        }
+        t.aggregatestatisticfacts.AggregateStatisticFact = append(t.aggregatestatisticfacts.AggregateStatisticFact, aggregatestatisticfact{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *AggregateStatisticFacts) Last() *aggregatestatisticfact {
+  /*
+  if t.aggregatestatisticfacts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatestatisticfacts.AggregateStatisticFact == nil {
+    t = t.AddNew()
+    }
+        return &(t.aggregatestatisticfacts.AggregateStatisticFact[len(t.aggregatestatisticfacts.AggregateStatisticFact)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *AggregateStatisticFacts) Index(n int) *AggregateStatisticFact {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("AggregateStatisticFacts.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.aggregatestatisticfacts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatestatisticfacts.AggregateStatisticFact == nil {
+    t = t.AddNew()
+    }
+        return &AggregateStatisticFact{(t.aggregatestatisticfacts.AggregateStatisticFact[n])}
+}
+
+// Length of the list.
+func (t *AggregateStatisticFacts) Len() int {
+  /*
+  if t.aggregatestatisticfacts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatestatisticfacts.AggregateStatisticFact == nil {
+    t = t.AddNew()
+    }
+        return len(t.aggregatestatisticfacts.AggregateStatisticFact)
+}
+
+// Convert list object to slice
+func (t *AggregateStatisticFacts) ToSlice() []*AggregateStatisticFact {
+    ret := make([]*AggregateStatisticFact, 0)
+  for _, x:= range t.aggregatestatisticfacts.AggregateStatisticFact {
+    ret = append(ret, &AggregateStatisticFact{aggregatestatisticfact: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewAggregateStatisticInfos() *AggregateStatisticInfos {
+  if out, ok := AggregateStatisticInfosPointer(AggregateStatisticInfos{}); !ok {
+                log.Fatalf("Could not create pointer to AggregateStatisticInfos\n")
+                return nil
+        } else {
+          out.aggregatestatisticinfos.AggregateStatisticInfo = make([]aggregatestatisticinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *AggregateStatisticInfos) Append(values ...*AggregateStatisticInfo) *AggregateStatisticInfos {
+        if t == nil {
+                t, _ = AggregateStatisticInfosPointer(AggregateStatisticInfos{})
+        }
+        /*
+        if t.aggregatestatisticinfos == nil {
+          t.aggregatestatisticinfos = aggregatestatisticinfos{AggregateStatisticInfo: make([]aggregatestatisticinfo, 0)}
+        }
+        */
+        if t.aggregatestatisticinfos.AggregateStatisticInfo == nil {
+                t.aggregatestatisticinfos.AggregateStatisticInfo = make([]aggregatestatisticinfo, 0)
+        }
+        for _, value := range values {
+        t.aggregatestatisticinfos.AggregateStatisticInfo = append(t.aggregatestatisticinfos.AggregateStatisticInfo, value.aggregatestatisticinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *AggregateStatisticInfos) AddNew() *AggregateStatisticInfos {
+        if t == nil {
+                t, _ = AggregateStatisticInfosPointer(AggregateStatisticInfos{})
+        }
+        /*
+        if t.aggregatestatisticinfos == nil {
+          t.aggregatestatisticinfos = aggregatestatisticinfos{AggregateStatisticInfo: make([]aggregatestatisticinfo, 0)}
+        }
+        */
+        if t.aggregatestatisticinfos.AggregateStatisticInfo == nil {
+                t.aggregatestatisticinfos.AggregateStatisticInfo = make([]aggregatestatisticinfo, 0)
+        }
+        t.aggregatestatisticinfos.AggregateStatisticInfo = append(t.aggregatestatisticinfos.AggregateStatisticInfo, aggregatestatisticinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *AggregateStatisticInfos) Last() *aggregatestatisticinfo {
+  /*
+  if t.aggregatestatisticinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatestatisticinfos.AggregateStatisticInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.aggregatestatisticinfos.AggregateStatisticInfo[len(t.aggregatestatisticinfos.AggregateStatisticInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *AggregateStatisticInfos) Index(n int) *AggregateStatisticInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("AggregateStatisticInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.aggregatestatisticinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatestatisticinfos.AggregateStatisticInfo == nil {
+    t = t.AddNew()
+    }
+        return &AggregateStatisticInfo{(t.aggregatestatisticinfos.AggregateStatisticInfo[n])}
+}
+
+// Length of the list.
+func (t *AggregateStatisticInfos) Len() int {
+  /*
+  if t.aggregatestatisticinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.aggregatestatisticinfos.AggregateStatisticInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.aggregatestatisticinfos.AggregateStatisticInfo)
+}
+
+// Convert list object to slice
+func (t *AggregateStatisticInfos) ToSlice() []*AggregateStatisticInfo {
+    ret := make([]*AggregateStatisticInfo, 0)
+  for _, x:= range t.aggregatestatisticinfos.AggregateStatisticInfo {
+    ret = append(ret, &AggregateStatisticInfo{aggregatestatisticinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewCalendarDates() *CalendarDates {
+  if out, ok := CalendarDatesPointer(CalendarDates{}); !ok {
+                log.Fatalf("Could not create pointer to CalendarDates\n")
+                return nil
+        } else {
+          out.calendardates.CalendarDate = make([]calendardate, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *CalendarDates) Append(values ...*CalendarDate) *CalendarDates {
+        if t == nil {
+                t, _ = CalendarDatesPointer(CalendarDates{})
+        }
+        /*
+        if t.calendardates == nil {
+          t.calendardates = calendardates{CalendarDate: make([]calendardate, 0)}
+        }
+        */
+        if t.calendardates.CalendarDate == nil {
+                t.calendardates.CalendarDate = make([]calendardate, 0)
+        }
+        for _, value := range values {
+        t.calendardates.CalendarDate = append(t.calendardates.CalendarDate, value.calendardate)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CalendarDates) AddNew() *CalendarDates {
+        if t == nil {
+                t, _ = CalendarDatesPointer(CalendarDates{})
+        }
+        /*
+        if t.calendardates == nil {
+          t.calendardates = calendardates{CalendarDate: make([]calendardate, 0)}
+        }
+        */
+        if t.calendardates.CalendarDate == nil {
+                t.calendardates.CalendarDate = make([]calendardate, 0)
+        }
+        t.calendardates.CalendarDate = append(t.calendardates.CalendarDate, calendardate{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CalendarDates) Last() *calendardate {
+  /*
+  if t.calendardates == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.calendardates.CalendarDate == nil {
+    t = t.AddNew()
+    }
+        return &(t.calendardates.CalendarDate[len(t.calendardates.CalendarDate)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *CalendarDates) Index(n int) *CalendarDate {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("CalendarDates.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.calendardates == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.calendardates.CalendarDate == nil {
+    t = t.AddNew()
+    }
+        return &CalendarDate{(t.calendardates.CalendarDate[n])}
+}
+
+// Length of the list.
+func (t *CalendarDates) Len() int {
+  /*
+  if t.calendardates == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.calendardates.CalendarDate == nil {
+    t = t.AddNew()
+    }
+        return len(t.calendardates.CalendarDate)
+}
+
+// Convert list object to slice
+func (t *CalendarDates) ToSlice() []*CalendarDate {
+    ret := make([]*CalendarDate, 0)
+  for _, x:= range t.calendardates.CalendarDate {
+    ret = append(ret, &CalendarDate{calendardate: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewCalendarSummarys() *CalendarSummarys {
+  if out, ok := CalendarSummarysPointer(CalendarSummarys{}); !ok {
+                log.Fatalf("Could not create pointer to CalendarSummarys\n")
+                return nil
+        } else {
+          out.calendarsummarys.CalendarSummary = make([]calendarsummary, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *CalendarSummarys) Append(values ...*CalendarSummary) *CalendarSummarys {
+        if t == nil {
+                t, _ = CalendarSummarysPointer(CalendarSummarys{})
+        }
+        /*
+        if t.calendarsummarys == nil {
+          t.calendarsummarys = calendarsummarys{CalendarSummary: make([]calendarsummary, 0)}
+        }
+        */
+        if t.calendarsummarys.CalendarSummary == nil {
+                t.calendarsummarys.CalendarSummary = make([]calendarsummary, 0)
+        }
+        for _, value := range values {
+        t.calendarsummarys.CalendarSummary = append(t.calendarsummarys.CalendarSummary, value.calendarsummary)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CalendarSummarys) AddNew() *CalendarSummarys {
+        if t == nil {
+                t, _ = CalendarSummarysPointer(CalendarSummarys{})
+        }
+        /*
+        if t.calendarsummarys == nil {
+          t.calendarsummarys = calendarsummarys{CalendarSummary: make([]calendarsummary, 0)}
+        }
+        */
+        if t.calendarsummarys.CalendarSummary == nil {
+                t.calendarsummarys.CalendarSummary = make([]calendarsummary, 0)
+        }
+        t.calendarsummarys.CalendarSummary = append(t.calendarsummarys.CalendarSummary, calendarsummary{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CalendarSummarys) Last() *calendarsummary {
+  /*
+  if t.calendarsummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.calendarsummarys.CalendarSummary == nil {
+    t = t.AddNew()
+    }
+        return &(t.calendarsummarys.CalendarSummary[len(t.calendarsummarys.CalendarSummary)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *CalendarSummarys) Index(n int) *CalendarSummary {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("CalendarSummarys.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.calendarsummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.calendarsummarys.CalendarSummary == nil {
+    t = t.AddNew()
+    }
+        return &CalendarSummary{(t.calendarsummarys.CalendarSummary[n])}
+}
+
+// Length of the list.
+func (t *CalendarSummarys) Len() int {
+  /*
+  if t.calendarsummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.calendarsummarys.CalendarSummary == nil {
+    t = t.AddNew()
+    }
+        return len(t.calendarsummarys.CalendarSummary)
+}
+
+// Convert list object to slice
+func (t *CalendarSummarys) ToSlice() []*CalendarSummary {
+    ret := make([]*CalendarSummary, 0)
+  for _, x:= range t.calendarsummarys.CalendarSummary {
+    ret = append(ret, &CalendarSummary{calendarsummary: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewCensusCollections() *CensusCollections {
+  if out, ok := CensusCollectionsPointer(CensusCollections{}); !ok {
+                log.Fatalf("Could not create pointer to CensusCollections\n")
+                return nil
+        } else {
+          out.censuscollections.CensusCollection = make([]censuscollection, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *CensusCollections) Append(values ...*CensusCollection) *CensusCollections {
+        if t == nil {
+                t, _ = CensusCollectionsPointer(CensusCollections{})
+        }
+        /*
+        if t.censuscollections == nil {
+          t.censuscollections = censuscollections{CensusCollection: make([]censuscollection, 0)}
+        }
+        */
+        if t.censuscollections.CensusCollection == nil {
+                t.censuscollections.CensusCollection = make([]censuscollection, 0)
+        }
+        for _, value := range values {
+        t.censuscollections.CensusCollection = append(t.censuscollections.CensusCollection, value.censuscollection)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CensusCollections) AddNew() *CensusCollections {
+        if t == nil {
+                t, _ = CensusCollectionsPointer(CensusCollections{})
+        }
+        /*
+        if t.censuscollections == nil {
+          t.censuscollections = censuscollections{CensusCollection: make([]censuscollection, 0)}
+        }
+        */
+        if t.censuscollections.CensusCollection == nil {
+                t.censuscollections.CensusCollection = make([]censuscollection, 0)
+        }
+        t.censuscollections.CensusCollection = append(t.censuscollections.CensusCollection, censuscollection{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CensusCollections) Last() *censuscollection {
+  /*
+  if t.censuscollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.censuscollections.CensusCollection == nil {
+    t = t.AddNew()
+    }
+        return &(t.censuscollections.CensusCollection[len(t.censuscollections.CensusCollection)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *CensusCollections) Index(n int) *CensusCollection {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("CensusCollections.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.censuscollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.censuscollections.CensusCollection == nil {
+    t = t.AddNew()
+    }
+        return &CensusCollection{(t.censuscollections.CensusCollection[n])}
+}
+
+// Length of the list.
+func (t *CensusCollections) Len() int {
+  /*
+  if t.censuscollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.censuscollections.CensusCollection == nil {
+    t = t.AddNew()
+    }
+        return len(t.censuscollections.CensusCollection)
+}
+
+// Convert list object to slice
+func (t *CensusCollections) ToSlice() []*CensusCollection {
+    ret := make([]*CensusCollection, 0)
+  for _, x:= range t.censuscollections.CensusCollection {
+    ret = append(ret, &CensusCollection{censuscollection: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewChargedLocationInfos() *ChargedLocationInfos {
+  if out, ok := ChargedLocationInfosPointer(ChargedLocationInfos{}); !ok {
+                log.Fatalf("Could not create pointer to ChargedLocationInfos\n")
+                return nil
+        } else {
+          out.chargedlocationinfos.ChargedLocationInfo = make([]chargedlocationinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *ChargedLocationInfos) Append(values ...*ChargedLocationInfo) *ChargedLocationInfos {
+        if t == nil {
+                t, _ = ChargedLocationInfosPointer(ChargedLocationInfos{})
+        }
+        /*
+        if t.chargedlocationinfos == nil {
+          t.chargedlocationinfos = chargedlocationinfos{ChargedLocationInfo: make([]chargedlocationinfo, 0)}
+        }
+        */
+        if t.chargedlocationinfos.ChargedLocationInfo == nil {
+                t.chargedlocationinfos.ChargedLocationInfo = make([]chargedlocationinfo, 0)
+        }
+        for _, value := range values {
+        t.chargedlocationinfos.ChargedLocationInfo = append(t.chargedlocationinfos.ChargedLocationInfo, value.chargedlocationinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *ChargedLocationInfos) AddNew() *ChargedLocationInfos {
+        if t == nil {
+                t, _ = ChargedLocationInfosPointer(ChargedLocationInfos{})
+        }
+        /*
+        if t.chargedlocationinfos == nil {
+          t.chargedlocationinfos = chargedlocationinfos{ChargedLocationInfo: make([]chargedlocationinfo, 0)}
+        }
+        */
+        if t.chargedlocationinfos.ChargedLocationInfo == nil {
+                t.chargedlocationinfos.ChargedLocationInfo = make([]chargedlocationinfo, 0)
+        }
+        t.chargedlocationinfos.ChargedLocationInfo = append(t.chargedlocationinfos.ChargedLocationInfo, chargedlocationinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *ChargedLocationInfos) Last() *chargedlocationinfo {
+  /*
+  if t.chargedlocationinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.chargedlocationinfos.ChargedLocationInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.chargedlocationinfos.ChargedLocationInfo[len(t.chargedlocationinfos.ChargedLocationInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *ChargedLocationInfos) Index(n int) *ChargedLocationInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("ChargedLocationInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.chargedlocationinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.chargedlocationinfos.ChargedLocationInfo == nil {
+    t = t.AddNew()
+    }
+        return &ChargedLocationInfo{(t.chargedlocationinfos.ChargedLocationInfo[n])}
+}
+
+// Length of the list.
+func (t *ChargedLocationInfos) Len() int {
+  /*
+  if t.chargedlocationinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.chargedlocationinfos.ChargedLocationInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.chargedlocationinfos.ChargedLocationInfo)
+}
+
+// Convert list object to slice
+func (t *ChargedLocationInfos) ToSlice() []*ChargedLocationInfo {
+    ret := make([]*ChargedLocationInfo, 0)
+  for _, x:= range t.chargedlocationinfos.ChargedLocationInfo {
+    ret = append(ret, &ChargedLocationInfo{chargedlocationinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewCollectionAcquittals() *CollectionAcquittals {
+  if out, ok := CollectionAcquittalsPointer(CollectionAcquittals{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionAcquittals\n")
+                return nil
+        } else {
+          out.collectionacquittals.CollectionAcquittal = make([]collectionacquittal, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *CollectionAcquittals) Append(values ...*CollectionAcquittal) *CollectionAcquittals {
+        if t == nil {
+                t, _ = CollectionAcquittalsPointer(CollectionAcquittals{})
+        }
+        /*
+        if t.collectionacquittals == nil {
+          t.collectionacquittals = collectionacquittals{CollectionAcquittal: make([]collectionacquittal, 0)}
+        }
+        */
+        if t.collectionacquittals.CollectionAcquittal == nil {
+                t.collectionacquittals.CollectionAcquittal = make([]collectionacquittal, 0)
+        }
+        for _, value := range values {
+        t.collectionacquittals.CollectionAcquittal = append(t.collectionacquittals.CollectionAcquittal, value.collectionacquittal)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CollectionAcquittals) AddNew() *CollectionAcquittals {
+        if t == nil {
+                t, _ = CollectionAcquittalsPointer(CollectionAcquittals{})
+        }
+        /*
+        if t.collectionacquittals == nil {
+          t.collectionacquittals = collectionacquittals{CollectionAcquittal: make([]collectionacquittal, 0)}
+        }
+        */
+        if t.collectionacquittals.CollectionAcquittal == nil {
+                t.collectionacquittals.CollectionAcquittal = make([]collectionacquittal, 0)
+        }
+        t.collectionacquittals.CollectionAcquittal = append(t.collectionacquittals.CollectionAcquittal, collectionacquittal{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CollectionAcquittals) Last() *collectionacquittal {
+  /*
+  if t.collectionacquittals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionacquittals.CollectionAcquittal == nil {
+    t = t.AddNew()
+    }
+        return &(t.collectionacquittals.CollectionAcquittal[len(t.collectionacquittals.CollectionAcquittal)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *CollectionAcquittals) Index(n int) *CollectionAcquittal {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("CollectionAcquittals.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.collectionacquittals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionacquittals.CollectionAcquittal == nil {
+    t = t.AddNew()
+    }
+        return &CollectionAcquittal{(t.collectionacquittals.CollectionAcquittal[n])}
+}
+
+// Length of the list.
+func (t *CollectionAcquittals) Len() int {
+  /*
+  if t.collectionacquittals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionacquittals.CollectionAcquittal == nil {
+    t = t.AddNew()
+    }
+        return len(t.collectionacquittals.CollectionAcquittal)
+}
+
+// Convert list object to slice
+func (t *CollectionAcquittals) ToSlice() []*CollectionAcquittal {
+    ret := make([]*CollectionAcquittal, 0)
+  for _, x:= range t.collectionacquittals.CollectionAcquittal {
+    ret = append(ret, &CollectionAcquittal{collectionacquittal: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewCollectionDeclarations() *CollectionDeclarations {
+  if out, ok := CollectionDeclarationsPointer(CollectionDeclarations{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionDeclarations\n")
+                return nil
+        } else {
+          out.collectiondeclarations.CollectionDeclaration = make([]collectiondeclaration, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *CollectionDeclarations) Append(values ...*CollectionDeclaration) *CollectionDeclarations {
+        if t == nil {
+                t, _ = CollectionDeclarationsPointer(CollectionDeclarations{})
+        }
+        /*
+        if t.collectiondeclarations == nil {
+          t.collectiondeclarations = collectiondeclarations{CollectionDeclaration: make([]collectiondeclaration, 0)}
+        }
+        */
+        if t.collectiondeclarations.CollectionDeclaration == nil {
+                t.collectiondeclarations.CollectionDeclaration = make([]collectiondeclaration, 0)
+        }
+        for _, value := range values {
+        t.collectiondeclarations.CollectionDeclaration = append(t.collectiondeclarations.CollectionDeclaration, value.collectiondeclaration)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CollectionDeclarations) AddNew() *CollectionDeclarations {
+        if t == nil {
+                t, _ = CollectionDeclarationsPointer(CollectionDeclarations{})
+        }
+        /*
+        if t.collectiondeclarations == nil {
+          t.collectiondeclarations = collectiondeclarations{CollectionDeclaration: make([]collectiondeclaration, 0)}
+        }
+        */
+        if t.collectiondeclarations.CollectionDeclaration == nil {
+                t.collectiondeclarations.CollectionDeclaration = make([]collectiondeclaration, 0)
+        }
+        t.collectiondeclarations.CollectionDeclaration = append(t.collectiondeclarations.CollectionDeclaration, collectiondeclaration{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CollectionDeclarations) Last() *collectiondeclaration {
+  /*
+  if t.collectiondeclarations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectiondeclarations.CollectionDeclaration == nil {
+    t = t.AddNew()
+    }
+        return &(t.collectiondeclarations.CollectionDeclaration[len(t.collectiondeclarations.CollectionDeclaration)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *CollectionDeclarations) Index(n int) *CollectionDeclaration {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("CollectionDeclarations.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.collectiondeclarations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectiondeclarations.CollectionDeclaration == nil {
+    t = t.AddNew()
+    }
+        return &CollectionDeclaration{(t.collectiondeclarations.CollectionDeclaration[n])}
+}
+
+// Length of the list.
+func (t *CollectionDeclarations) Len() int {
+  /*
+  if t.collectiondeclarations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectiondeclarations.CollectionDeclaration == nil {
+    t = t.AddNew()
+    }
+        return len(t.collectiondeclarations.CollectionDeclaration)
+}
+
+// Convert list object to slice
+func (t *CollectionDeclarations) ToSlice() []*CollectionDeclaration {
+    ret := make([]*CollectionDeclaration, 0)
+  for _, x:= range t.collectiondeclarations.CollectionDeclaration {
+    ret = append(ret, &CollectionDeclaration{collectiondeclaration: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewCollectionRounds() *CollectionRounds {
+  if out, ok := CollectionRoundsPointer(CollectionRounds{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionRounds\n")
+                return nil
+        } else {
+          out.collectionrounds.CollectionRound = make([]collectionround, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *CollectionRounds) Append(values ...*CollectionRound) *CollectionRounds {
+        if t == nil {
+                t, _ = CollectionRoundsPointer(CollectionRounds{})
+        }
+        /*
+        if t.collectionrounds == nil {
+          t.collectionrounds = collectionrounds{CollectionRound: make([]collectionround, 0)}
+        }
+        */
+        if t.collectionrounds.CollectionRound == nil {
+                t.collectionrounds.CollectionRound = make([]collectionround, 0)
+        }
+        for _, value := range values {
+        t.collectionrounds.CollectionRound = append(t.collectionrounds.CollectionRound, value.collectionround)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CollectionRounds) AddNew() *CollectionRounds {
+        if t == nil {
+                t, _ = CollectionRoundsPointer(CollectionRounds{})
+        }
+        /*
+        if t.collectionrounds == nil {
+          t.collectionrounds = collectionrounds{CollectionRound: make([]collectionround, 0)}
+        }
+        */
+        if t.collectionrounds.CollectionRound == nil {
+                t.collectionrounds.CollectionRound = make([]collectionround, 0)
+        }
+        t.collectionrounds.CollectionRound = append(t.collectionrounds.CollectionRound, collectionround{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CollectionRounds) Last() *collectionround {
+  /*
+  if t.collectionrounds == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionrounds.CollectionRound == nil {
+    t = t.AddNew()
+    }
+        return &(t.collectionrounds.CollectionRound[len(t.collectionrounds.CollectionRound)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *CollectionRounds) Index(n int) *CollectionRound {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("CollectionRounds.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.collectionrounds == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionrounds.CollectionRound == nil {
+    t = t.AddNew()
+    }
+        return &CollectionRound{(t.collectionrounds.CollectionRound[n])}
+}
+
+// Length of the list.
+func (t *CollectionRounds) Len() int {
+  /*
+  if t.collectionrounds == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionrounds.CollectionRound == nil {
+    t = t.AddNew()
+    }
+        return len(t.collectionrounds.CollectionRound)
+}
+
+// Convert list object to slice
+func (t *CollectionRounds) ToSlice() []*CollectionRound {
+    ret := make([]*CollectionRound, 0)
+  for _, x:= range t.collectionrounds.CollectionRound {
+    ret = append(ret, &CollectionRound{collectionround: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewCollectionStatuss() *CollectionStatuss {
+  if out, ok := CollectionStatussPointer(CollectionStatuss{}); !ok {
+                log.Fatalf("Could not create pointer to CollectionStatuss\n")
+                return nil
+        } else {
+          out.collectionstatuss.CollectionStatus = make([]collectionstatus, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *CollectionStatuss) Append(values ...*CollectionStatus) *CollectionStatuss {
+        if t == nil {
+                t, _ = CollectionStatussPointer(CollectionStatuss{})
+        }
+        /*
+        if t.collectionstatuss == nil {
+          t.collectionstatuss = collectionstatuss{CollectionStatus: make([]collectionstatus, 0)}
+        }
+        */
+        if t.collectionstatuss.CollectionStatus == nil {
+                t.collectionstatuss.CollectionStatus = make([]collectionstatus, 0)
+        }
+        for _, value := range values {
+        t.collectionstatuss.CollectionStatus = append(t.collectionstatuss.CollectionStatus, value.collectionstatus)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *CollectionStatuss) AddNew() *CollectionStatuss {
+        if t == nil {
+                t, _ = CollectionStatussPointer(CollectionStatuss{})
+        }
+        /*
+        if t.collectionstatuss == nil {
+          t.collectionstatuss = collectionstatuss{CollectionStatus: make([]collectionstatus, 0)}
+        }
+        */
+        if t.collectionstatuss.CollectionStatus == nil {
+                t.collectionstatuss.CollectionStatus = make([]collectionstatus, 0)
+        }
+        t.collectionstatuss.CollectionStatus = append(t.collectionstatuss.CollectionStatus, collectionstatus{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *CollectionStatuss) Last() *collectionstatus {
+  /*
+  if t.collectionstatuss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionstatuss.CollectionStatus == nil {
+    t = t.AddNew()
+    }
+        return &(t.collectionstatuss.CollectionStatus[len(t.collectionstatuss.CollectionStatus)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *CollectionStatuss) Index(n int) *CollectionStatus {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("CollectionStatuss.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.collectionstatuss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionstatuss.CollectionStatus == nil {
+    t = t.AddNew()
+    }
+        return &CollectionStatus{(t.collectionstatuss.CollectionStatus[n])}
+}
+
+// Length of the list.
+func (t *CollectionStatuss) Len() int {
+  /*
+  if t.collectionstatuss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.collectionstatuss.CollectionStatus == nil {
+    t = t.AddNew()
+    }
+        return len(t.collectionstatuss.CollectionStatus)
+}
+
+// Convert list object to slice
+func (t *CollectionStatuss) ToSlice() []*CollectionStatus {
+    ret := make([]*CollectionStatus, 0)
+  for _, x:= range t.collectionstatuss.CollectionStatus {
+    ret = append(ret, &CollectionStatus{collectionstatus: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewDebtors() *Debtors {
+  if out, ok := DebtorsPointer(Debtors{}); !ok {
+                log.Fatalf("Could not create pointer to Debtors\n")
+                return nil
+        } else {
+          out.debtors.Debtor = make([]debtor, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *Debtors) Append(values ...*Debtor) *Debtors {
+        if t == nil {
+                t, _ = DebtorsPointer(Debtors{})
+        }
+        /*
+        if t.debtors == nil {
+          t.debtors = debtors{Debtor: make([]debtor, 0)}
+        }
+        */
+        if t.debtors.Debtor == nil {
+                t.debtors.Debtor = make([]debtor, 0)
+        }
+        for _, value := range values {
+        t.debtors.Debtor = append(t.debtors.Debtor, value.debtor)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *Debtors) AddNew() *Debtors {
+        if t == nil {
+                t, _ = DebtorsPointer(Debtors{})
+        }
+        /*
+        if t.debtors == nil {
+          t.debtors = debtors{Debtor: make([]debtor, 0)}
+        }
+        */
+        if t.debtors.Debtor == nil {
+                t.debtors.Debtor = make([]debtor, 0)
+        }
+        t.debtors.Debtor = append(t.debtors.Debtor, debtor{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *Debtors) Last() *debtor {
+  /*
+  if t.debtors == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.debtors.Debtor == nil {
+    t = t.AddNew()
+    }
+        return &(t.debtors.Debtor[len(t.debtors.Debtor)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *Debtors) Index(n int) *Debtor {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("Debtors.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.debtors == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.debtors.Debtor == nil {
+    t = t.AddNew()
+    }
+        return &Debtor{(t.debtors.Debtor[n])}
+}
+
+// Length of the list.
+func (t *Debtors) Len() int {
+  /*
+  if t.debtors == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.debtors.Debtor == nil {
+    t = t.AddNew()
+    }
+        return len(t.debtors.Debtor)
+}
+
+// Convert list object to slice
+func (t *Debtors) ToSlice() []*Debtor {
+    ret := make([]*Debtor, 0)
+  for _, x:= range t.debtors.Debtor {
+    ret = append(ret, &Debtor{debtor: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewEquipmentInfos() *EquipmentInfos {
+  if out, ok := EquipmentInfosPointer(EquipmentInfos{}); !ok {
+                log.Fatalf("Could not create pointer to EquipmentInfos\n")
+                return nil
+        } else {
+          out.equipmentinfos.EquipmentInfo = make([]equipmentinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *EquipmentInfos) Append(values ...*EquipmentInfo) *EquipmentInfos {
+        if t == nil {
+                t, _ = EquipmentInfosPointer(EquipmentInfos{})
+        }
+        /*
+        if t.equipmentinfos == nil {
+          t.equipmentinfos = equipmentinfos{EquipmentInfo: make([]equipmentinfo, 0)}
+        }
+        */
+        if t.equipmentinfos.EquipmentInfo == nil {
+                t.equipmentinfos.EquipmentInfo = make([]equipmentinfo, 0)
+        }
+        for _, value := range values {
+        t.equipmentinfos.EquipmentInfo = append(t.equipmentinfos.EquipmentInfo, value.equipmentinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *EquipmentInfos) AddNew() *EquipmentInfos {
+        if t == nil {
+                t, _ = EquipmentInfosPointer(EquipmentInfos{})
+        }
+        /*
+        if t.equipmentinfos == nil {
+          t.equipmentinfos = equipmentinfos{EquipmentInfo: make([]equipmentinfo, 0)}
+        }
+        */
+        if t.equipmentinfos.EquipmentInfo == nil {
+                t.equipmentinfos.EquipmentInfo = make([]equipmentinfo, 0)
+        }
+        t.equipmentinfos.EquipmentInfo = append(t.equipmentinfos.EquipmentInfo, equipmentinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *EquipmentInfos) Last() *equipmentinfo {
+  /*
+  if t.equipmentinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.equipmentinfos.EquipmentInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.equipmentinfos.EquipmentInfo[len(t.equipmentinfos.EquipmentInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *EquipmentInfos) Index(n int) *EquipmentInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("EquipmentInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.equipmentinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.equipmentinfos.EquipmentInfo == nil {
+    t = t.AddNew()
+    }
+        return &EquipmentInfo{(t.equipmentinfos.EquipmentInfo[n])}
+}
+
+// Length of the list.
+func (t *EquipmentInfos) Len() int {
+  /*
+  if t.equipmentinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.equipmentinfos.EquipmentInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.equipmentinfos.EquipmentInfo)
+}
+
+// Convert list object to slice
+func (t *EquipmentInfos) ToSlice() []*EquipmentInfo {
+    ret := make([]*EquipmentInfo, 0)
+  for _, x:= range t.equipmentinfos.EquipmentInfo {
+    ret = append(ret, &EquipmentInfo{equipmentinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewFinancialAccounts() *FinancialAccounts {
+  if out, ok := FinancialAccountsPointer(FinancialAccounts{}); !ok {
+                log.Fatalf("Could not create pointer to FinancialAccounts\n")
+                return nil
+        } else {
+          out.financialaccounts.FinancialAccount = make([]financialaccount, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *FinancialAccounts) Append(values ...*FinancialAccount) *FinancialAccounts {
+        if t == nil {
+                t, _ = FinancialAccountsPointer(FinancialAccounts{})
+        }
+        /*
+        if t.financialaccounts == nil {
+          t.financialaccounts = financialaccounts{FinancialAccount: make([]financialaccount, 0)}
+        }
+        */
+        if t.financialaccounts.FinancialAccount == nil {
+                t.financialaccounts.FinancialAccount = make([]financialaccount, 0)
+        }
+        for _, value := range values {
+        t.financialaccounts.FinancialAccount = append(t.financialaccounts.FinancialAccount, value.financialaccount)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *FinancialAccounts) AddNew() *FinancialAccounts {
+        if t == nil {
+                t, _ = FinancialAccountsPointer(FinancialAccounts{})
+        }
+        /*
+        if t.financialaccounts == nil {
+          t.financialaccounts = financialaccounts{FinancialAccount: make([]financialaccount, 0)}
+        }
+        */
+        if t.financialaccounts.FinancialAccount == nil {
+                t.financialaccounts.FinancialAccount = make([]financialaccount, 0)
+        }
+        t.financialaccounts.FinancialAccount = append(t.financialaccounts.FinancialAccount, financialaccount{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *FinancialAccounts) Last() *financialaccount {
+  /*
+  if t.financialaccounts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.financialaccounts.FinancialAccount == nil {
+    t = t.AddNew()
+    }
+        return &(t.financialaccounts.FinancialAccount[len(t.financialaccounts.FinancialAccount)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *FinancialAccounts) Index(n int) *FinancialAccount {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("FinancialAccounts.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.financialaccounts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.financialaccounts.FinancialAccount == nil {
+    t = t.AddNew()
+    }
+        return &FinancialAccount{(t.financialaccounts.FinancialAccount[n])}
+}
+
+// Length of the list.
+func (t *FinancialAccounts) Len() int {
+  /*
+  if t.financialaccounts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.financialaccounts.FinancialAccount == nil {
+    t = t.AddNew()
+    }
+        return len(t.financialaccounts.FinancialAccount)
+}
+
+// Convert list object to slice
+func (t *FinancialAccounts) ToSlice() []*FinancialAccount {
+    ret := make([]*FinancialAccount, 0)
+  for _, x:= range t.financialaccounts.FinancialAccount {
+    ret = append(ret, &FinancialAccount{financialaccount: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewFinancialQuestionnaireCollections() *FinancialQuestionnaireCollections {
+  if out, ok := FinancialQuestionnaireCollectionsPointer(FinancialQuestionnaireCollections{}); !ok {
+                log.Fatalf("Could not create pointer to FinancialQuestionnaireCollections\n")
+                return nil
+        } else {
+          out.financialquestionnairecollections.FinancialQuestionnaireCollection = make([]financialquestionnairecollection, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *FinancialQuestionnaireCollections) Append(values ...*FinancialQuestionnaireCollection) *FinancialQuestionnaireCollections {
+        if t == nil {
+                t, _ = FinancialQuestionnaireCollectionsPointer(FinancialQuestionnaireCollections{})
+        }
+        /*
+        if t.financialquestionnairecollections == nil {
+          t.financialquestionnairecollections = financialquestionnairecollections{FinancialQuestionnaireCollection: make([]financialquestionnairecollection, 0)}
+        }
+        */
+        if t.financialquestionnairecollections.FinancialQuestionnaireCollection == nil {
+                t.financialquestionnairecollections.FinancialQuestionnaireCollection = make([]financialquestionnairecollection, 0)
+        }
+        for _, value := range values {
+        t.financialquestionnairecollections.FinancialQuestionnaireCollection = append(t.financialquestionnairecollections.FinancialQuestionnaireCollection, value.financialquestionnairecollection)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *FinancialQuestionnaireCollections) AddNew() *FinancialQuestionnaireCollections {
+        if t == nil {
+                t, _ = FinancialQuestionnaireCollectionsPointer(FinancialQuestionnaireCollections{})
+        }
+        /*
+        if t.financialquestionnairecollections == nil {
+          t.financialquestionnairecollections = financialquestionnairecollections{FinancialQuestionnaireCollection: make([]financialquestionnairecollection, 0)}
+        }
+        */
+        if t.financialquestionnairecollections.FinancialQuestionnaireCollection == nil {
+                t.financialquestionnairecollections.FinancialQuestionnaireCollection = make([]financialquestionnairecollection, 0)
+        }
+        t.financialquestionnairecollections.FinancialQuestionnaireCollection = append(t.financialquestionnairecollections.FinancialQuestionnaireCollection, financialquestionnairecollection{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *FinancialQuestionnaireCollections) Last() *financialquestionnairecollection {
+  /*
+  if t.financialquestionnairecollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.financialquestionnairecollections.FinancialQuestionnaireCollection == nil {
+    t = t.AddNew()
+    }
+        return &(t.financialquestionnairecollections.FinancialQuestionnaireCollection[len(t.financialquestionnairecollections.FinancialQuestionnaireCollection)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *FinancialQuestionnaireCollections) Index(n int) *FinancialQuestionnaireCollection {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("FinancialQuestionnaireCollections.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.financialquestionnairecollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.financialquestionnairecollections.FinancialQuestionnaireCollection == nil {
+    t = t.AddNew()
+    }
+        return &FinancialQuestionnaireCollection{(t.financialquestionnairecollections.FinancialQuestionnaireCollection[n])}
+}
+
+// Length of the list.
+func (t *FinancialQuestionnaireCollections) Len() int {
+  /*
+  if t.financialquestionnairecollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.financialquestionnairecollections.FinancialQuestionnaireCollection == nil {
+    t = t.AddNew()
+    }
+        return len(t.financialquestionnairecollections.FinancialQuestionnaireCollection)
+}
+
+// Convert list object to slice
+func (t *FinancialQuestionnaireCollections) ToSlice() []*FinancialQuestionnaireCollection {
+    ret := make([]*FinancialQuestionnaireCollection, 0)
+  for _, x:= range t.financialquestionnairecollections.FinancialQuestionnaireCollection {
+    ret = append(ret, &FinancialQuestionnaireCollection{financialquestionnairecollection: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewGradingAssignmentScores() *GradingAssignmentScores {
+  if out, ok := GradingAssignmentScoresPointer(GradingAssignmentScores{}); !ok {
+                log.Fatalf("Could not create pointer to GradingAssignmentScores\n")
+                return nil
+        } else {
+          out.gradingassignmentscores.GradingAssignmentScore = make([]gradingassignmentscore, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *GradingAssignmentScores) Append(values ...*GradingAssignmentScore) *GradingAssignmentScores {
+        if t == nil {
+                t, _ = GradingAssignmentScoresPointer(GradingAssignmentScores{})
+        }
+        /*
+        if t.gradingassignmentscores == nil {
+          t.gradingassignmentscores = gradingassignmentscores{GradingAssignmentScore: make([]gradingassignmentscore, 0)}
+        }
+        */
+        if t.gradingassignmentscores.GradingAssignmentScore == nil {
+                t.gradingassignmentscores.GradingAssignmentScore = make([]gradingassignmentscore, 0)
+        }
+        for _, value := range values {
+        t.gradingassignmentscores.GradingAssignmentScore = append(t.gradingassignmentscores.GradingAssignmentScore, value.gradingassignmentscore)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *GradingAssignmentScores) AddNew() *GradingAssignmentScores {
+        if t == nil {
+                t, _ = GradingAssignmentScoresPointer(GradingAssignmentScores{})
+        }
+        /*
+        if t.gradingassignmentscores == nil {
+          t.gradingassignmentscores = gradingassignmentscores{GradingAssignmentScore: make([]gradingassignmentscore, 0)}
+        }
+        */
+        if t.gradingassignmentscores.GradingAssignmentScore == nil {
+                t.gradingassignmentscores.GradingAssignmentScore = make([]gradingassignmentscore, 0)
+        }
+        t.gradingassignmentscores.GradingAssignmentScore = append(t.gradingassignmentscores.GradingAssignmentScore, gradingassignmentscore{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *GradingAssignmentScores) Last() *gradingassignmentscore {
+  /*
+  if t.gradingassignmentscores == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.gradingassignmentscores.GradingAssignmentScore == nil {
+    t = t.AddNew()
+    }
+        return &(t.gradingassignmentscores.GradingAssignmentScore[len(t.gradingassignmentscores.GradingAssignmentScore)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *GradingAssignmentScores) Index(n int) *GradingAssignmentScore {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("GradingAssignmentScores.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.gradingassignmentscores == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.gradingassignmentscores.GradingAssignmentScore == nil {
+    t = t.AddNew()
+    }
+        return &GradingAssignmentScore{(t.gradingassignmentscores.GradingAssignmentScore[n])}
+}
+
+// Length of the list.
+func (t *GradingAssignmentScores) Len() int {
+  /*
+  if t.gradingassignmentscores == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.gradingassignmentscores.GradingAssignmentScore == nil {
+    t = t.AddNew()
+    }
+        return len(t.gradingassignmentscores.GradingAssignmentScore)
+}
+
+// Convert list object to slice
+func (t *GradingAssignmentScores) ToSlice() []*GradingAssignmentScore {
+    ret := make([]*GradingAssignmentScore, 0)
+  for _, x:= range t.gradingassignmentscores.GradingAssignmentScore {
+    ret = append(ret, &GradingAssignmentScore{gradingassignmentscore: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewGradingAssignments() *GradingAssignments {
+  if out, ok := GradingAssignmentsPointer(GradingAssignments{}); !ok {
+                log.Fatalf("Could not create pointer to GradingAssignments\n")
+                return nil
+        } else {
+          out.gradingassignments.GradingAssignment = make([]gradingassignment, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *GradingAssignments) Append(values ...*GradingAssignment) *GradingAssignments {
+        if t == nil {
+                t, _ = GradingAssignmentsPointer(GradingAssignments{})
+        }
+        /*
+        if t.gradingassignments == nil {
+          t.gradingassignments = gradingassignments{GradingAssignment: make([]gradingassignment, 0)}
+        }
+        */
+        if t.gradingassignments.GradingAssignment == nil {
+                t.gradingassignments.GradingAssignment = make([]gradingassignment, 0)
+        }
+        for _, value := range values {
+        t.gradingassignments.GradingAssignment = append(t.gradingassignments.GradingAssignment, value.gradingassignment)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *GradingAssignments) AddNew() *GradingAssignments {
+        if t == nil {
+                t, _ = GradingAssignmentsPointer(GradingAssignments{})
+        }
+        /*
+        if t.gradingassignments == nil {
+          t.gradingassignments = gradingassignments{GradingAssignment: make([]gradingassignment, 0)}
+        }
+        */
+        if t.gradingassignments.GradingAssignment == nil {
+                t.gradingassignments.GradingAssignment = make([]gradingassignment, 0)
+        }
+        t.gradingassignments.GradingAssignment = append(t.gradingassignments.GradingAssignment, gradingassignment{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *GradingAssignments) Last() *gradingassignment {
+  /*
+  if t.gradingassignments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.gradingassignments.GradingAssignment == nil {
+    t = t.AddNew()
+    }
+        return &(t.gradingassignments.GradingAssignment[len(t.gradingassignments.GradingAssignment)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *GradingAssignments) Index(n int) *GradingAssignment {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("GradingAssignments.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.gradingassignments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.gradingassignments.GradingAssignment == nil {
+    t = t.AddNew()
+    }
+        return &GradingAssignment{(t.gradingassignments.GradingAssignment[n])}
+}
+
+// Length of the list.
+func (t *GradingAssignments) Len() int {
+  /*
+  if t.gradingassignments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.gradingassignments.GradingAssignment == nil {
+    t = t.AddNew()
+    }
+        return len(t.gradingassignments.GradingAssignment)
+}
+
+// Convert list object to slice
+func (t *GradingAssignments) ToSlice() []*GradingAssignment {
+    ret := make([]*GradingAssignment, 0)
+  for _, x:= range t.gradingassignments.GradingAssignment {
+    ret = append(ret, &GradingAssignment{gradingassignment: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewIdentitys() *Identitys {
+  if out, ok := IdentitysPointer(Identitys{}); !ok {
+                log.Fatalf("Could not create pointer to Identitys\n")
+                return nil
+        } else {
+          out.identitys.Identity = make([]identity, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *Identitys) Append(values ...*Identity) *Identitys {
+        if t == nil {
+                t, _ = IdentitysPointer(Identitys{})
+        }
+        /*
+        if t.identitys == nil {
+          t.identitys = identitys{Identity: make([]identity, 0)}
+        }
+        */
+        if t.identitys.Identity == nil {
+                t.identitys.Identity = make([]identity, 0)
+        }
+        for _, value := range values {
+        t.identitys.Identity = append(t.identitys.Identity, value.identity)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *Identitys) AddNew() *Identitys {
+        if t == nil {
+                t, _ = IdentitysPointer(Identitys{})
+        }
+        /*
+        if t.identitys == nil {
+          t.identitys = identitys{Identity: make([]identity, 0)}
+        }
+        */
+        if t.identitys.Identity == nil {
+                t.identitys.Identity = make([]identity, 0)
+        }
+        t.identitys.Identity = append(t.identitys.Identity, identity{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *Identitys) Last() *identity {
+  /*
+  if t.identitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.identitys.Identity == nil {
+    t = t.AddNew()
+    }
+        return &(t.identitys.Identity[len(t.identitys.Identity)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *Identitys) Index(n int) *Identity {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("Identitys.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.identitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.identitys.Identity == nil {
+    t = t.AddNew()
+    }
+        return &Identity{(t.identitys.Identity[n])}
+}
+
+// Length of the list.
+func (t *Identitys) Len() int {
+  /*
+  if t.identitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.identitys.Identity == nil {
+    t = t.AddNew()
+    }
+        return len(t.identitys.Identity)
+}
+
+// Convert list object to slice
+func (t *Identitys) ToSlice() []*Identity {
+    ret := make([]*Identity, 0)
+  for _, x:= range t.identitys.Identity {
+    ret = append(ret, &Identity{identity: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewInvoices() *Invoices {
+  if out, ok := InvoicesPointer(Invoices{}); !ok {
+                log.Fatalf("Could not create pointer to Invoices\n")
+                return nil
+        } else {
+          out.invoices.Invoice = make([]invoice, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *Invoices) Append(values ...*Invoice) *Invoices {
+        if t == nil {
+                t, _ = InvoicesPointer(Invoices{})
+        }
+        /*
+        if t.invoices == nil {
+          t.invoices = invoices{Invoice: make([]invoice, 0)}
+        }
+        */
+        if t.invoices.Invoice == nil {
+                t.invoices.Invoice = make([]invoice, 0)
+        }
+        for _, value := range values {
+        t.invoices.Invoice = append(t.invoices.Invoice, value.invoice)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *Invoices) AddNew() *Invoices {
+        if t == nil {
+                t, _ = InvoicesPointer(Invoices{})
+        }
+        /*
+        if t.invoices == nil {
+          t.invoices = invoices{Invoice: make([]invoice, 0)}
+        }
+        */
+        if t.invoices.Invoice == nil {
+                t.invoices.Invoice = make([]invoice, 0)
+        }
+        t.invoices.Invoice = append(t.invoices.Invoice, invoice{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *Invoices) Last() *invoice {
+  /*
+  if t.invoices == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.invoices.Invoice == nil {
+    t = t.AddNew()
+    }
+        return &(t.invoices.Invoice[len(t.invoices.Invoice)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *Invoices) Index(n int) *Invoice {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("Invoices.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.invoices == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.invoices.Invoice == nil {
+    t = t.AddNew()
+    }
+        return &Invoice{(t.invoices.Invoice[n])}
+}
+
+// Length of the list.
+func (t *Invoices) Len() int {
+  /*
+  if t.invoices == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.invoices.Invoice == nil {
+    t = t.AddNew()
+    }
+        return len(t.invoices.Invoice)
+}
+
+// Convert list object to slice
+func (t *Invoices) ToSlice() []*Invoice {
+    ret := make([]*Invoice, 0)
+  for _, x:= range t.invoices.Invoice {
+    ret = append(ret, &Invoice{invoice: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewJournals() *Journals {
+  if out, ok := JournalsPointer(Journals{}); !ok {
+                log.Fatalf("Could not create pointer to Journals\n")
+                return nil
+        } else {
+          out.journals.Journal = make([]journal, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *Journals) Append(values ...*Journal) *Journals {
+        if t == nil {
+                t, _ = JournalsPointer(Journals{})
+        }
+        /*
+        if t.journals == nil {
+          t.journals = journals{Journal: make([]journal, 0)}
+        }
+        */
+        if t.journals.Journal == nil {
+                t.journals.Journal = make([]journal, 0)
+        }
+        for _, value := range values {
+        t.journals.Journal = append(t.journals.Journal, value.journal)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *Journals) AddNew() *Journals {
+        if t == nil {
+                t, _ = JournalsPointer(Journals{})
+        }
+        /*
+        if t.journals == nil {
+          t.journals = journals{Journal: make([]journal, 0)}
+        }
+        */
+        if t.journals.Journal == nil {
+                t.journals.Journal = make([]journal, 0)
+        }
+        t.journals.Journal = append(t.journals.Journal, journal{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *Journals) Last() *journal {
+  /*
+  if t.journals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.journals.Journal == nil {
+    t = t.AddNew()
+    }
+        return &(t.journals.Journal[len(t.journals.Journal)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *Journals) Index(n int) *Journal {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("Journals.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.journals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.journals.Journal == nil {
+    t = t.AddNew()
+    }
+        return &Journal{(t.journals.Journal[n])}
+}
+
+// Length of the list.
+func (t *Journals) Len() int {
+  /*
+  if t.journals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.journals.Journal == nil {
+    t = t.AddNew()
+    }
+        return len(t.journals.Journal)
+}
+
+// Convert list object to slice
+func (t *Journals) ToSlice() []*Journal {
+    ret := make([]*Journal, 0)
+  for _, x:= range t.journals.Journal {
+    ret = append(ret, &Journal{journal: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewLEAInfos() *LEAInfos {
+  if out, ok := LEAInfosPointer(LEAInfos{}); !ok {
+                log.Fatalf("Could not create pointer to LEAInfos\n")
+                return nil
+        } else {
+          out.leainfos.LEAInfo = make([]leainfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *LEAInfos) Append(values ...*LEAInfo) *LEAInfos {
+        if t == nil {
+                t, _ = LEAInfosPointer(LEAInfos{})
+        }
+        /*
+        if t.leainfos == nil {
+          t.leainfos = leainfos{LEAInfo: make([]leainfo, 0)}
+        }
+        */
+        if t.leainfos.LEAInfo == nil {
+                t.leainfos.LEAInfo = make([]leainfo, 0)
+        }
+        for _, value := range values {
+        t.leainfos.LEAInfo = append(t.leainfos.LEAInfo, value.leainfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *LEAInfos) AddNew() *LEAInfos {
+        if t == nil {
+                t, _ = LEAInfosPointer(LEAInfos{})
+        }
+        /*
+        if t.leainfos == nil {
+          t.leainfos = leainfos{LEAInfo: make([]leainfo, 0)}
+        }
+        */
+        if t.leainfos.LEAInfo == nil {
+                t.leainfos.LEAInfo = make([]leainfo, 0)
+        }
+        t.leainfos.LEAInfo = append(t.leainfos.LEAInfo, leainfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *LEAInfos) Last() *leainfo {
+  /*
+  if t.leainfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.leainfos.LEAInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.leainfos.LEAInfo[len(t.leainfos.LEAInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *LEAInfos) Index(n int) *LEAInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("LEAInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.leainfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.leainfos.LEAInfo == nil {
+    t = t.AddNew()
+    }
+        return &LEAInfo{(t.leainfos.LEAInfo[n])}
+}
+
+// Length of the list.
+func (t *LEAInfos) Len() int {
+  /*
+  if t.leainfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.leainfos.LEAInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.leainfos.LEAInfo)
+}
+
+// Convert list object to slice
+func (t *LEAInfos) ToSlice() []*LEAInfo {
+    ret := make([]*LEAInfo, 0)
+  for _, x:= range t.leainfos.LEAInfo {
+    ret = append(ret, &LEAInfo{leainfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewLearningResources() *LearningResources {
+  if out, ok := LearningResourcesPointer(LearningResources{}); !ok {
+                log.Fatalf("Could not create pointer to LearningResources\n")
+                return nil
+        } else {
+          out.learningresources.LearningResource = make([]learningresource, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *LearningResources) Append(values ...*LearningResource) *LearningResources {
+        if t == nil {
+                t, _ = LearningResourcesPointer(LearningResources{})
+        }
+        /*
+        if t.learningresources == nil {
+          t.learningresources = learningresources{LearningResource: make([]learningresource, 0)}
+        }
+        */
+        if t.learningresources.LearningResource == nil {
+                t.learningresources.LearningResource = make([]learningresource, 0)
+        }
+        for _, value := range values {
+        t.learningresources.LearningResource = append(t.learningresources.LearningResource, value.learningresource)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *LearningResources) AddNew() *LearningResources {
+        if t == nil {
+                t, _ = LearningResourcesPointer(LearningResources{})
+        }
+        /*
+        if t.learningresources == nil {
+          t.learningresources = learningresources{LearningResource: make([]learningresource, 0)}
+        }
+        */
+        if t.learningresources.LearningResource == nil {
+                t.learningresources.LearningResource = make([]learningresource, 0)
+        }
+        t.learningresources.LearningResource = append(t.learningresources.LearningResource, learningresource{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *LearningResources) Last() *learningresource {
+  /*
+  if t.learningresources == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningresources.LearningResource == nil {
+    t = t.AddNew()
+    }
+        return &(t.learningresources.LearningResource[len(t.learningresources.LearningResource)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *LearningResources) Index(n int) *LearningResource {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("LearningResources.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.learningresources == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningresources.LearningResource == nil {
+    t = t.AddNew()
+    }
+        return &LearningResource{(t.learningresources.LearningResource[n])}
+}
+
+// Length of the list.
+func (t *LearningResources) Len() int {
+  /*
+  if t.learningresources == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningresources.LearningResource == nil {
+    t = t.AddNew()
+    }
+        return len(t.learningresources.LearningResource)
+}
+
+// Convert list object to slice
+func (t *LearningResources) ToSlice() []*LearningResource {
+    ret := make([]*LearningResource, 0)
+  for _, x:= range t.learningresources.LearningResource {
+    ret = append(ret, &LearningResource{learningresource: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewLearningStandardDocuments() *LearningStandardDocuments {
+  if out, ok := LearningStandardDocumentsPointer(LearningStandardDocuments{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardDocuments\n")
+                return nil
+        } else {
+          out.learningstandarddocuments.LearningStandardDocument = make([]learningstandarddocument, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *LearningStandardDocuments) Append(values ...*LearningStandardDocument) *LearningStandardDocuments {
+        if t == nil {
+                t, _ = LearningStandardDocumentsPointer(LearningStandardDocuments{})
+        }
+        /*
+        if t.learningstandarddocuments == nil {
+          t.learningstandarddocuments = learningstandarddocuments{LearningStandardDocument: make([]learningstandarddocument, 0)}
+        }
+        */
+        if t.learningstandarddocuments.LearningStandardDocument == nil {
+                t.learningstandarddocuments.LearningStandardDocument = make([]learningstandarddocument, 0)
+        }
+        for _, value := range values {
+        t.learningstandarddocuments.LearningStandardDocument = append(t.learningstandarddocuments.LearningStandardDocument, value.learningstandarddocument)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *LearningStandardDocuments) AddNew() *LearningStandardDocuments {
+        if t == nil {
+                t, _ = LearningStandardDocumentsPointer(LearningStandardDocuments{})
+        }
+        /*
+        if t.learningstandarddocuments == nil {
+          t.learningstandarddocuments = learningstandarddocuments{LearningStandardDocument: make([]learningstandarddocument, 0)}
+        }
+        */
+        if t.learningstandarddocuments.LearningStandardDocument == nil {
+                t.learningstandarddocuments.LearningStandardDocument = make([]learningstandarddocument, 0)
+        }
+        t.learningstandarddocuments.LearningStandardDocument = append(t.learningstandarddocuments.LearningStandardDocument, learningstandarddocument{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *LearningStandardDocuments) Last() *learningstandarddocument {
+  /*
+  if t.learningstandarddocuments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningstandarddocuments.LearningStandardDocument == nil {
+    t = t.AddNew()
+    }
+        return &(t.learningstandarddocuments.LearningStandardDocument[len(t.learningstandarddocuments.LearningStandardDocument)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *LearningStandardDocuments) Index(n int) *LearningStandardDocument {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("LearningStandardDocuments.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.learningstandarddocuments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningstandarddocuments.LearningStandardDocument == nil {
+    t = t.AddNew()
+    }
+        return &LearningStandardDocument{(t.learningstandarddocuments.LearningStandardDocument[n])}
+}
+
+// Length of the list.
+func (t *LearningStandardDocuments) Len() int {
+  /*
+  if t.learningstandarddocuments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningstandarddocuments.LearningStandardDocument == nil {
+    t = t.AddNew()
+    }
+        return len(t.learningstandarddocuments.LearningStandardDocument)
+}
+
+// Convert list object to slice
+func (t *LearningStandardDocuments) ToSlice() []*LearningStandardDocument {
+    ret := make([]*LearningStandardDocument, 0)
+  for _, x:= range t.learningstandarddocuments.LearningStandardDocument {
+    ret = append(ret, &LearningStandardDocument{learningstandarddocument: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewLearningStandardItems() *LearningStandardItems {
+  if out, ok := LearningStandardItemsPointer(LearningStandardItems{}); !ok {
+                log.Fatalf("Could not create pointer to LearningStandardItems\n")
+                return nil
+        } else {
+          out.learningstandarditems.LearningStandardItem = make([]learningstandarditem, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *LearningStandardItems) Append(values ...*LearningStandardItem) *LearningStandardItems {
+        if t == nil {
+                t, _ = LearningStandardItemsPointer(LearningStandardItems{})
+        }
+        /*
+        if t.learningstandarditems == nil {
+          t.learningstandarditems = learningstandarditems{LearningStandardItem: make([]learningstandarditem, 0)}
+        }
+        */
+        if t.learningstandarditems.LearningStandardItem == nil {
+                t.learningstandarditems.LearningStandardItem = make([]learningstandarditem, 0)
+        }
+        for _, value := range values {
+        t.learningstandarditems.LearningStandardItem = append(t.learningstandarditems.LearningStandardItem, value.learningstandarditem)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *LearningStandardItems) AddNew() *LearningStandardItems {
+        if t == nil {
+                t, _ = LearningStandardItemsPointer(LearningStandardItems{})
+        }
+        /*
+        if t.learningstandarditems == nil {
+          t.learningstandarditems = learningstandarditems{LearningStandardItem: make([]learningstandarditem, 0)}
+        }
+        */
+        if t.learningstandarditems.LearningStandardItem == nil {
+                t.learningstandarditems.LearningStandardItem = make([]learningstandarditem, 0)
+        }
+        t.learningstandarditems.LearningStandardItem = append(t.learningstandarditems.LearningStandardItem, learningstandarditem{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *LearningStandardItems) Last() *learningstandarditem {
+  /*
+  if t.learningstandarditems == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningstandarditems.LearningStandardItem == nil {
+    t = t.AddNew()
+    }
+        return &(t.learningstandarditems.LearningStandardItem[len(t.learningstandarditems.LearningStandardItem)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *LearningStandardItems) Index(n int) *LearningStandardItem {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("LearningStandardItems.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.learningstandarditems == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningstandarditems.LearningStandardItem == nil {
+    t = t.AddNew()
+    }
+        return &LearningStandardItem{(t.learningstandarditems.LearningStandardItem[n])}
+}
+
+// Length of the list.
+func (t *LearningStandardItems) Len() int {
+  /*
+  if t.learningstandarditems == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.learningstandarditems.LearningStandardItem == nil {
+    t = t.AddNew()
+    }
+        return len(t.learningstandarditems.LearningStandardItem)
+}
+
+// Convert list object to slice
+func (t *LearningStandardItems) ToSlice() []*LearningStandardItem {
+    ret := make([]*LearningStandardItem, 0)
+  for _, x:= range t.learningstandarditems.LearningStandardItem {
+    ret = append(ret, &LearningStandardItem{learningstandarditem: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewLibraryPatronStatuss() *LibraryPatronStatuss {
+  if out, ok := LibraryPatronStatussPointer(LibraryPatronStatuss{}); !ok {
+                log.Fatalf("Could not create pointer to LibraryPatronStatuss\n")
+                return nil
+        } else {
+          out.librarypatronstatuss.LibraryPatronStatus = make([]librarypatronstatus, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *LibraryPatronStatuss) Append(values ...*LibraryPatronStatus) *LibraryPatronStatuss {
+        if t == nil {
+                t, _ = LibraryPatronStatussPointer(LibraryPatronStatuss{})
+        }
+        /*
+        if t.librarypatronstatuss == nil {
+          t.librarypatronstatuss = librarypatronstatuss{LibraryPatronStatus: make([]librarypatronstatus, 0)}
+        }
+        */
+        if t.librarypatronstatuss.LibraryPatronStatus == nil {
+                t.librarypatronstatuss.LibraryPatronStatus = make([]librarypatronstatus, 0)
+        }
+        for _, value := range values {
+        t.librarypatronstatuss.LibraryPatronStatus = append(t.librarypatronstatuss.LibraryPatronStatus, value.librarypatronstatus)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *LibraryPatronStatuss) AddNew() *LibraryPatronStatuss {
+        if t == nil {
+                t, _ = LibraryPatronStatussPointer(LibraryPatronStatuss{})
+        }
+        /*
+        if t.librarypatronstatuss == nil {
+          t.librarypatronstatuss = librarypatronstatuss{LibraryPatronStatus: make([]librarypatronstatus, 0)}
+        }
+        */
+        if t.librarypatronstatuss.LibraryPatronStatus == nil {
+                t.librarypatronstatuss.LibraryPatronStatus = make([]librarypatronstatus, 0)
+        }
+        t.librarypatronstatuss.LibraryPatronStatus = append(t.librarypatronstatuss.LibraryPatronStatus, librarypatronstatus{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *LibraryPatronStatuss) Last() *librarypatronstatus {
+  /*
+  if t.librarypatronstatuss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.librarypatronstatuss.LibraryPatronStatus == nil {
+    t = t.AddNew()
+    }
+        return &(t.librarypatronstatuss.LibraryPatronStatus[len(t.librarypatronstatuss.LibraryPatronStatus)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *LibraryPatronStatuss) Index(n int) *LibraryPatronStatus {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("LibraryPatronStatuss.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.librarypatronstatuss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.librarypatronstatuss.LibraryPatronStatus == nil {
+    t = t.AddNew()
+    }
+        return &LibraryPatronStatus{(t.librarypatronstatuss.LibraryPatronStatus[n])}
+}
+
+// Length of the list.
+func (t *LibraryPatronStatuss) Len() int {
+  /*
+  if t.librarypatronstatuss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.librarypatronstatuss.LibraryPatronStatus == nil {
+    t = t.AddNew()
+    }
+        return len(t.librarypatronstatuss.LibraryPatronStatus)
+}
+
+// Convert list object to slice
+func (t *LibraryPatronStatuss) ToSlice() []*LibraryPatronStatus {
+    ret := make([]*LibraryPatronStatus, 0)
+  for _, x:= range t.librarypatronstatuss.LibraryPatronStatus {
+    ret = append(ret, &LibraryPatronStatus{librarypatronstatus: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewMarkValueInfos() *MarkValueInfos {
+  if out, ok := MarkValueInfosPointer(MarkValueInfos{}); !ok {
+                log.Fatalf("Could not create pointer to MarkValueInfos\n")
+                return nil
+        } else {
+          out.markvalueinfos.MarkValueInfo = make([]markvalueinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *MarkValueInfos) Append(values ...*MarkValueInfo) *MarkValueInfos {
+        if t == nil {
+                t, _ = MarkValueInfosPointer(MarkValueInfos{})
+        }
+        /*
+        if t.markvalueinfos == nil {
+          t.markvalueinfos = markvalueinfos{MarkValueInfo: make([]markvalueinfo, 0)}
+        }
+        */
+        if t.markvalueinfos.MarkValueInfo == nil {
+                t.markvalueinfos.MarkValueInfo = make([]markvalueinfo, 0)
+        }
+        for _, value := range values {
+        t.markvalueinfos.MarkValueInfo = append(t.markvalueinfos.MarkValueInfo, value.markvalueinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *MarkValueInfos) AddNew() *MarkValueInfos {
+        if t == nil {
+                t, _ = MarkValueInfosPointer(MarkValueInfos{})
+        }
+        /*
+        if t.markvalueinfos == nil {
+          t.markvalueinfos = markvalueinfos{MarkValueInfo: make([]markvalueinfo, 0)}
+        }
+        */
+        if t.markvalueinfos.MarkValueInfo == nil {
+                t.markvalueinfos.MarkValueInfo = make([]markvalueinfo, 0)
+        }
+        t.markvalueinfos.MarkValueInfo = append(t.markvalueinfos.MarkValueInfo, markvalueinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *MarkValueInfos) Last() *markvalueinfo {
+  /*
+  if t.markvalueinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.markvalueinfos.MarkValueInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.markvalueinfos.MarkValueInfo[len(t.markvalueinfos.MarkValueInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *MarkValueInfos) Index(n int) *MarkValueInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("MarkValueInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.markvalueinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.markvalueinfos.MarkValueInfo == nil {
+    t = t.AddNew()
+    }
+        return &MarkValueInfo{(t.markvalueinfos.MarkValueInfo[n])}
+}
+
+// Length of the list.
+func (t *MarkValueInfos) Len() int {
+  /*
+  if t.markvalueinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.markvalueinfos.MarkValueInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.markvalueinfos.MarkValueInfo)
+}
+
+// Convert list object to slice
+func (t *MarkValueInfos) ToSlice() []*MarkValueInfo {
+    ret := make([]*MarkValueInfo, 0)
+  for _, x:= range t.markvalueinfos.MarkValueInfo {
+    ret = append(ret, &MarkValueInfo{markvalueinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewNAPCodeFrames() *NAPCodeFrames {
+  if out, ok := NAPCodeFramesPointer(NAPCodeFrames{}); !ok {
+                log.Fatalf("Could not create pointer to NAPCodeFrames\n")
+                return nil
+        } else {
+          out.napcodeframes.NAPCodeFrame = make([]napcodeframe, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *NAPCodeFrames) Append(values ...*NAPCodeFrame) *NAPCodeFrames {
+        if t == nil {
+                t, _ = NAPCodeFramesPointer(NAPCodeFrames{})
+        }
+        /*
+        if t.napcodeframes == nil {
+          t.napcodeframes = napcodeframes{NAPCodeFrame: make([]napcodeframe, 0)}
+        }
+        */
+        if t.napcodeframes.NAPCodeFrame == nil {
+                t.napcodeframes.NAPCodeFrame = make([]napcodeframe, 0)
+        }
+        for _, value := range values {
+        t.napcodeframes.NAPCodeFrame = append(t.napcodeframes.NAPCodeFrame, value.napcodeframe)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NAPCodeFrames) AddNew() *NAPCodeFrames {
+        if t == nil {
+                t, _ = NAPCodeFramesPointer(NAPCodeFrames{})
+        }
+        /*
+        if t.napcodeframes == nil {
+          t.napcodeframes = napcodeframes{NAPCodeFrame: make([]napcodeframe, 0)}
+        }
+        */
+        if t.napcodeframes.NAPCodeFrame == nil {
+                t.napcodeframes.NAPCodeFrame = make([]napcodeframe, 0)
+        }
+        t.napcodeframes.NAPCodeFrame = append(t.napcodeframes.NAPCodeFrame, napcodeframe{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NAPCodeFrames) Last() *napcodeframe {
+  /*
+  if t.napcodeframes == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napcodeframes.NAPCodeFrame == nil {
+    t = t.AddNew()
+    }
+        return &(t.napcodeframes.NAPCodeFrame[len(t.napcodeframes.NAPCodeFrame)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *NAPCodeFrames) Index(n int) *NAPCodeFrame {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("NAPCodeFrames.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.napcodeframes == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napcodeframes.NAPCodeFrame == nil {
+    t = t.AddNew()
+    }
+        return &NAPCodeFrame{(t.napcodeframes.NAPCodeFrame[n])}
+}
+
+// Length of the list.
+func (t *NAPCodeFrames) Len() int {
+  /*
+  if t.napcodeframes == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napcodeframes.NAPCodeFrame == nil {
+    t = t.AddNew()
+    }
+        return len(t.napcodeframes.NAPCodeFrame)
+}
+
+// Convert list object to slice
+func (t *NAPCodeFrames) ToSlice() []*NAPCodeFrame {
+    ret := make([]*NAPCodeFrame, 0)
+  for _, x:= range t.napcodeframes.NAPCodeFrame {
+    ret = append(ret, &NAPCodeFrame{napcodeframe: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewNAPEventStudentLinks() *NAPEventStudentLinks {
+  if out, ok := NAPEventStudentLinksPointer(NAPEventStudentLinks{}); !ok {
+                log.Fatalf("Could not create pointer to NAPEventStudentLinks\n")
+                return nil
+        } else {
+          out.napeventstudentlinks.NAPEventStudentLink = make([]napeventstudentlink, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *NAPEventStudentLinks) Append(values ...*NAPEventStudentLink) *NAPEventStudentLinks {
+        if t == nil {
+                t, _ = NAPEventStudentLinksPointer(NAPEventStudentLinks{})
+        }
+        /*
+        if t.napeventstudentlinks == nil {
+          t.napeventstudentlinks = napeventstudentlinks{NAPEventStudentLink: make([]napeventstudentlink, 0)}
+        }
+        */
+        if t.napeventstudentlinks.NAPEventStudentLink == nil {
+                t.napeventstudentlinks.NAPEventStudentLink = make([]napeventstudentlink, 0)
+        }
+        for _, value := range values {
+        t.napeventstudentlinks.NAPEventStudentLink = append(t.napeventstudentlinks.NAPEventStudentLink, value.napeventstudentlink)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NAPEventStudentLinks) AddNew() *NAPEventStudentLinks {
+        if t == nil {
+                t, _ = NAPEventStudentLinksPointer(NAPEventStudentLinks{})
+        }
+        /*
+        if t.napeventstudentlinks == nil {
+          t.napeventstudentlinks = napeventstudentlinks{NAPEventStudentLink: make([]napeventstudentlink, 0)}
+        }
+        */
+        if t.napeventstudentlinks.NAPEventStudentLink == nil {
+                t.napeventstudentlinks.NAPEventStudentLink = make([]napeventstudentlink, 0)
+        }
+        t.napeventstudentlinks.NAPEventStudentLink = append(t.napeventstudentlinks.NAPEventStudentLink, napeventstudentlink{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NAPEventStudentLinks) Last() *napeventstudentlink {
+  /*
+  if t.napeventstudentlinks == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napeventstudentlinks.NAPEventStudentLink == nil {
+    t = t.AddNew()
+    }
+        return &(t.napeventstudentlinks.NAPEventStudentLink[len(t.napeventstudentlinks.NAPEventStudentLink)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *NAPEventStudentLinks) Index(n int) *NAPEventStudentLink {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("NAPEventStudentLinks.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.napeventstudentlinks == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napeventstudentlinks.NAPEventStudentLink == nil {
+    t = t.AddNew()
+    }
+        return &NAPEventStudentLink{(t.napeventstudentlinks.NAPEventStudentLink[n])}
+}
+
+// Length of the list.
+func (t *NAPEventStudentLinks) Len() int {
+  /*
+  if t.napeventstudentlinks == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napeventstudentlinks.NAPEventStudentLink == nil {
+    t = t.AddNew()
+    }
+        return len(t.napeventstudentlinks.NAPEventStudentLink)
+}
+
+// Convert list object to slice
+func (t *NAPEventStudentLinks) ToSlice() []*NAPEventStudentLink {
+    ret := make([]*NAPEventStudentLink, 0)
+  for _, x:= range t.napeventstudentlinks.NAPEventStudentLink {
+    ret = append(ret, &NAPEventStudentLink{napeventstudentlink: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewNAPStudentResponseSets() *NAPStudentResponseSets {
+  if out, ok := NAPStudentResponseSetsPointer(NAPStudentResponseSets{}); !ok {
+                log.Fatalf("Could not create pointer to NAPStudentResponseSets\n")
+                return nil
+        } else {
+          out.napstudentresponsesets.NAPStudentResponseSet = make([]napstudentresponseset, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *NAPStudentResponseSets) Append(values ...*NAPStudentResponseSet) *NAPStudentResponseSets {
+        if t == nil {
+                t, _ = NAPStudentResponseSetsPointer(NAPStudentResponseSets{})
+        }
+        /*
+        if t.napstudentresponsesets == nil {
+          t.napstudentresponsesets = napstudentresponsesets{NAPStudentResponseSet: make([]napstudentresponseset, 0)}
+        }
+        */
+        if t.napstudentresponsesets.NAPStudentResponseSet == nil {
+                t.napstudentresponsesets.NAPStudentResponseSet = make([]napstudentresponseset, 0)
+        }
+        for _, value := range values {
+        t.napstudentresponsesets.NAPStudentResponseSet = append(t.napstudentresponsesets.NAPStudentResponseSet, value.napstudentresponseset)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NAPStudentResponseSets) AddNew() *NAPStudentResponseSets {
+        if t == nil {
+                t, _ = NAPStudentResponseSetsPointer(NAPStudentResponseSets{})
+        }
+        /*
+        if t.napstudentresponsesets == nil {
+          t.napstudentresponsesets = napstudentresponsesets{NAPStudentResponseSet: make([]napstudentresponseset, 0)}
+        }
+        */
+        if t.napstudentresponsesets.NAPStudentResponseSet == nil {
+                t.napstudentresponsesets.NAPStudentResponseSet = make([]napstudentresponseset, 0)
+        }
+        t.napstudentresponsesets.NAPStudentResponseSet = append(t.napstudentresponsesets.NAPStudentResponseSet, napstudentresponseset{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NAPStudentResponseSets) Last() *napstudentresponseset {
+  /*
+  if t.napstudentresponsesets == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napstudentresponsesets.NAPStudentResponseSet == nil {
+    t = t.AddNew()
+    }
+        return &(t.napstudentresponsesets.NAPStudentResponseSet[len(t.napstudentresponsesets.NAPStudentResponseSet)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *NAPStudentResponseSets) Index(n int) *NAPStudentResponseSet {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("NAPStudentResponseSets.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.napstudentresponsesets == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napstudentresponsesets.NAPStudentResponseSet == nil {
+    t = t.AddNew()
+    }
+        return &NAPStudentResponseSet{(t.napstudentresponsesets.NAPStudentResponseSet[n])}
+}
+
+// Length of the list.
+func (t *NAPStudentResponseSets) Len() int {
+  /*
+  if t.napstudentresponsesets == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.napstudentresponsesets.NAPStudentResponseSet == nil {
+    t = t.AddNew()
+    }
+        return len(t.napstudentresponsesets.NAPStudentResponseSet)
+}
+
+// Convert list object to slice
+func (t *NAPStudentResponseSets) ToSlice() []*NAPStudentResponseSet {
+    ret := make([]*NAPStudentResponseSet, 0)
+  for _, x:= range t.napstudentresponsesets.NAPStudentResponseSet {
+    ret = append(ret, &NAPStudentResponseSet{napstudentresponseset: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewNAPTestItems() *NAPTestItems {
+  if out, ok := NAPTestItemsPointer(NAPTestItems{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestItems\n")
+                return nil
+        } else {
+          out.naptestitems.NAPTestItem = make([]naptestitem, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *NAPTestItems) Append(values ...*NAPTestItem) *NAPTestItems {
+        if t == nil {
+                t, _ = NAPTestItemsPointer(NAPTestItems{})
+        }
+        /*
+        if t.naptestitems == nil {
+          t.naptestitems = naptestitems{NAPTestItem: make([]naptestitem, 0)}
+        }
+        */
+        if t.naptestitems.NAPTestItem == nil {
+                t.naptestitems.NAPTestItem = make([]naptestitem, 0)
+        }
+        for _, value := range values {
+        t.naptestitems.NAPTestItem = append(t.naptestitems.NAPTestItem, value.naptestitem)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NAPTestItems) AddNew() *NAPTestItems {
+        if t == nil {
+                t, _ = NAPTestItemsPointer(NAPTestItems{})
+        }
+        /*
+        if t.naptestitems == nil {
+          t.naptestitems = naptestitems{NAPTestItem: make([]naptestitem, 0)}
+        }
+        */
+        if t.naptestitems.NAPTestItem == nil {
+                t.naptestitems.NAPTestItem = make([]naptestitem, 0)
+        }
+        t.naptestitems.NAPTestItem = append(t.naptestitems.NAPTestItem, naptestitem{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NAPTestItems) Last() *naptestitem {
+  /*
+  if t.naptestitems == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestitems.NAPTestItem == nil {
+    t = t.AddNew()
+    }
+        return &(t.naptestitems.NAPTestItem[len(t.naptestitems.NAPTestItem)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *NAPTestItems) Index(n int) *NAPTestItem {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("NAPTestItems.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.naptestitems == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestitems.NAPTestItem == nil {
+    t = t.AddNew()
+    }
+        return &NAPTestItem{(t.naptestitems.NAPTestItem[n])}
+}
+
+// Length of the list.
+func (t *NAPTestItems) Len() int {
+  /*
+  if t.naptestitems == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestitems.NAPTestItem == nil {
+    t = t.AddNew()
+    }
+        return len(t.naptestitems.NAPTestItem)
+}
+
+// Convert list object to slice
+func (t *NAPTestItems) ToSlice() []*NAPTestItem {
+    ret := make([]*NAPTestItem, 0)
+  for _, x:= range t.naptestitems.NAPTestItem {
+    ret = append(ret, &NAPTestItem{naptestitem: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewNAPTestScoreSummarys() *NAPTestScoreSummarys {
+  if out, ok := NAPTestScoreSummarysPointer(NAPTestScoreSummarys{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestScoreSummarys\n")
+                return nil
+        } else {
+          out.naptestscoresummarys.NAPTestScoreSummary = make([]naptestscoresummary, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *NAPTestScoreSummarys) Append(values ...*NAPTestScoreSummary) *NAPTestScoreSummarys {
+        if t == nil {
+                t, _ = NAPTestScoreSummarysPointer(NAPTestScoreSummarys{})
+        }
+        /*
+        if t.naptestscoresummarys == nil {
+          t.naptestscoresummarys = naptestscoresummarys{NAPTestScoreSummary: make([]naptestscoresummary, 0)}
+        }
+        */
+        if t.naptestscoresummarys.NAPTestScoreSummary == nil {
+                t.naptestscoresummarys.NAPTestScoreSummary = make([]naptestscoresummary, 0)
+        }
+        for _, value := range values {
+        t.naptestscoresummarys.NAPTestScoreSummary = append(t.naptestscoresummarys.NAPTestScoreSummary, value.naptestscoresummary)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NAPTestScoreSummarys) AddNew() *NAPTestScoreSummarys {
+        if t == nil {
+                t, _ = NAPTestScoreSummarysPointer(NAPTestScoreSummarys{})
+        }
+        /*
+        if t.naptestscoresummarys == nil {
+          t.naptestscoresummarys = naptestscoresummarys{NAPTestScoreSummary: make([]naptestscoresummary, 0)}
+        }
+        */
+        if t.naptestscoresummarys.NAPTestScoreSummary == nil {
+                t.naptestscoresummarys.NAPTestScoreSummary = make([]naptestscoresummary, 0)
+        }
+        t.naptestscoresummarys.NAPTestScoreSummary = append(t.naptestscoresummarys.NAPTestScoreSummary, naptestscoresummary{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NAPTestScoreSummarys) Last() *naptestscoresummary {
+  /*
+  if t.naptestscoresummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestscoresummarys.NAPTestScoreSummary == nil {
+    t = t.AddNew()
+    }
+        return &(t.naptestscoresummarys.NAPTestScoreSummary[len(t.naptestscoresummarys.NAPTestScoreSummary)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *NAPTestScoreSummarys) Index(n int) *NAPTestScoreSummary {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("NAPTestScoreSummarys.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.naptestscoresummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestscoresummarys.NAPTestScoreSummary == nil {
+    t = t.AddNew()
+    }
+        return &NAPTestScoreSummary{(t.naptestscoresummarys.NAPTestScoreSummary[n])}
+}
+
+// Length of the list.
+func (t *NAPTestScoreSummarys) Len() int {
+  /*
+  if t.naptestscoresummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestscoresummarys.NAPTestScoreSummary == nil {
+    t = t.AddNew()
+    }
+        return len(t.naptestscoresummarys.NAPTestScoreSummary)
+}
+
+// Convert list object to slice
+func (t *NAPTestScoreSummarys) ToSlice() []*NAPTestScoreSummary {
+    ret := make([]*NAPTestScoreSummary, 0)
+  for _, x:= range t.naptestscoresummarys.NAPTestScoreSummary {
+    ret = append(ret, &NAPTestScoreSummary{naptestscoresummary: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewNAPTestlets() *NAPTestlets {
+  if out, ok := NAPTestletsPointer(NAPTestlets{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTestlets\n")
+                return nil
+        } else {
+          out.naptestlets.NAPTestlet = make([]naptestlet, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *NAPTestlets) Append(values ...*NAPTestlet) *NAPTestlets {
+        if t == nil {
+                t, _ = NAPTestletsPointer(NAPTestlets{})
+        }
+        /*
+        if t.naptestlets == nil {
+          t.naptestlets = naptestlets{NAPTestlet: make([]naptestlet, 0)}
+        }
+        */
+        if t.naptestlets.NAPTestlet == nil {
+                t.naptestlets.NAPTestlet = make([]naptestlet, 0)
+        }
+        for _, value := range values {
+        t.naptestlets.NAPTestlet = append(t.naptestlets.NAPTestlet, value.naptestlet)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NAPTestlets) AddNew() *NAPTestlets {
+        if t == nil {
+                t, _ = NAPTestletsPointer(NAPTestlets{})
+        }
+        /*
+        if t.naptestlets == nil {
+          t.naptestlets = naptestlets{NAPTestlet: make([]naptestlet, 0)}
+        }
+        */
+        if t.naptestlets.NAPTestlet == nil {
+                t.naptestlets.NAPTestlet = make([]naptestlet, 0)
+        }
+        t.naptestlets.NAPTestlet = append(t.naptestlets.NAPTestlet, naptestlet{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NAPTestlets) Last() *naptestlet {
+  /*
+  if t.naptestlets == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestlets.NAPTestlet == nil {
+    t = t.AddNew()
+    }
+        return &(t.naptestlets.NAPTestlet[len(t.naptestlets.NAPTestlet)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *NAPTestlets) Index(n int) *NAPTestlet {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("NAPTestlets.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.naptestlets == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestlets.NAPTestlet == nil {
+    t = t.AddNew()
+    }
+        return &NAPTestlet{(t.naptestlets.NAPTestlet[n])}
+}
+
+// Length of the list.
+func (t *NAPTestlets) Len() int {
+  /*
+  if t.naptestlets == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptestlets.NAPTestlet == nil {
+    t = t.AddNew()
+    }
+        return len(t.naptestlets.NAPTestlet)
+}
+
+// Convert list object to slice
+func (t *NAPTestlets) ToSlice() []*NAPTestlet {
+    ret := make([]*NAPTestlet, 0)
+  for _, x:= range t.naptestlets.NAPTestlet {
+    ret = append(ret, &NAPTestlet{naptestlet: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewNAPTests() *NAPTests {
+  if out, ok := NAPTestsPointer(NAPTests{}); !ok {
+                log.Fatalf("Could not create pointer to NAPTests\n")
+                return nil
+        } else {
+          out.naptests.NAPTest = make([]naptest, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *NAPTests) Append(values ...*NAPTest) *NAPTests {
+        if t == nil {
+                t, _ = NAPTestsPointer(NAPTests{})
+        }
+        /*
+        if t.naptests == nil {
+          t.naptests = naptests{NAPTest: make([]naptest, 0)}
+        }
+        */
+        if t.naptests.NAPTest == nil {
+                t.naptests.NAPTest = make([]naptest, 0)
+        }
+        for _, value := range values {
+        t.naptests.NAPTest = append(t.naptests.NAPTest, value.naptest)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *NAPTests) AddNew() *NAPTests {
+        if t == nil {
+                t, _ = NAPTestsPointer(NAPTests{})
+        }
+        /*
+        if t.naptests == nil {
+          t.naptests = naptests{NAPTest: make([]naptest, 0)}
+        }
+        */
+        if t.naptests.NAPTest == nil {
+                t.naptests.NAPTest = make([]naptest, 0)
+        }
+        t.naptests.NAPTest = append(t.naptests.NAPTest, naptest{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *NAPTests) Last() *naptest {
+  /*
+  if t.naptests == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptests.NAPTest == nil {
+    t = t.AddNew()
+    }
+        return &(t.naptests.NAPTest[len(t.naptests.NAPTest)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *NAPTests) Index(n int) *NAPTest {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("NAPTests.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.naptests == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptests.NAPTest == nil {
+    t = t.AddNew()
+    }
+        return &NAPTest{(t.naptests.NAPTest[n])}
+}
+
+// Length of the list.
+func (t *NAPTests) Len() int {
+  /*
+  if t.naptests == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.naptests.NAPTest == nil {
+    t = t.AddNew()
+    }
+        return len(t.naptests.NAPTest)
+}
+
+// Convert list object to slice
+func (t *NAPTests) ToSlice() []*NAPTest {
+    ret := make([]*NAPTest, 0)
+  for _, x:= range t.naptests.NAPTest {
+    ret = append(ret, &NAPTest{naptest: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewPaymentReceipts() *PaymentReceipts {
+  if out, ok := PaymentReceiptsPointer(PaymentReceipts{}); !ok {
+                log.Fatalf("Could not create pointer to PaymentReceipts\n")
+                return nil
+        } else {
+          out.paymentreceipts.PaymentReceipt = make([]paymentreceipt, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *PaymentReceipts) Append(values ...*PaymentReceipt) *PaymentReceipts {
+        if t == nil {
+                t, _ = PaymentReceiptsPointer(PaymentReceipts{})
+        }
+        /*
+        if t.paymentreceipts == nil {
+          t.paymentreceipts = paymentreceipts{PaymentReceipt: make([]paymentreceipt, 0)}
+        }
+        */
+        if t.paymentreceipts.PaymentReceipt == nil {
+                t.paymentreceipts.PaymentReceipt = make([]paymentreceipt, 0)
+        }
+        for _, value := range values {
+        t.paymentreceipts.PaymentReceipt = append(t.paymentreceipts.PaymentReceipt, value.paymentreceipt)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *PaymentReceipts) AddNew() *PaymentReceipts {
+        if t == nil {
+                t, _ = PaymentReceiptsPointer(PaymentReceipts{})
+        }
+        /*
+        if t.paymentreceipts == nil {
+          t.paymentreceipts = paymentreceipts{PaymentReceipt: make([]paymentreceipt, 0)}
+        }
+        */
+        if t.paymentreceipts.PaymentReceipt == nil {
+                t.paymentreceipts.PaymentReceipt = make([]paymentreceipt, 0)
+        }
+        t.paymentreceipts.PaymentReceipt = append(t.paymentreceipts.PaymentReceipt, paymentreceipt{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *PaymentReceipts) Last() *paymentreceipt {
+  /*
+  if t.paymentreceipts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.paymentreceipts.PaymentReceipt == nil {
+    t = t.AddNew()
+    }
+        return &(t.paymentreceipts.PaymentReceipt[len(t.paymentreceipts.PaymentReceipt)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *PaymentReceipts) Index(n int) *PaymentReceipt {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("PaymentReceipts.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.paymentreceipts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.paymentreceipts.PaymentReceipt == nil {
+    t = t.AddNew()
+    }
+        return &PaymentReceipt{(t.paymentreceipts.PaymentReceipt[n])}
+}
+
+// Length of the list.
+func (t *PaymentReceipts) Len() int {
+  /*
+  if t.paymentreceipts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.paymentreceipts.PaymentReceipt == nil {
+    t = t.AddNew()
+    }
+        return len(t.paymentreceipts.PaymentReceipt)
+}
+
+// Convert list object to slice
+func (t *PaymentReceipts) ToSlice() []*PaymentReceipt {
+    ret := make([]*PaymentReceipt, 0)
+  for _, x:= range t.paymentreceipts.PaymentReceipt {
+    ret = append(ret, &PaymentReceipt{paymentreceipt: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewPersonPictures() *PersonPictures {
+  if out, ok := PersonPicturesPointer(PersonPictures{}); !ok {
+                log.Fatalf("Could not create pointer to PersonPictures\n")
+                return nil
+        } else {
+          out.personpictures.PersonPicture = make([]personpicture, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *PersonPictures) Append(values ...*PersonPicture) *PersonPictures {
+        if t == nil {
+                t, _ = PersonPicturesPointer(PersonPictures{})
+        }
+        /*
+        if t.personpictures == nil {
+          t.personpictures = personpictures{PersonPicture: make([]personpicture, 0)}
+        }
+        */
+        if t.personpictures.PersonPicture == nil {
+                t.personpictures.PersonPicture = make([]personpicture, 0)
+        }
+        for _, value := range values {
+        t.personpictures.PersonPicture = append(t.personpictures.PersonPicture, value.personpicture)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *PersonPictures) AddNew() *PersonPictures {
+        if t == nil {
+                t, _ = PersonPicturesPointer(PersonPictures{})
+        }
+        /*
+        if t.personpictures == nil {
+          t.personpictures = personpictures{PersonPicture: make([]personpicture, 0)}
+        }
+        */
+        if t.personpictures.PersonPicture == nil {
+                t.personpictures.PersonPicture = make([]personpicture, 0)
+        }
+        t.personpictures.PersonPicture = append(t.personpictures.PersonPicture, personpicture{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *PersonPictures) Last() *personpicture {
+  /*
+  if t.personpictures == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personpictures.PersonPicture == nil {
+    t = t.AddNew()
+    }
+        return &(t.personpictures.PersonPicture[len(t.personpictures.PersonPicture)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *PersonPictures) Index(n int) *PersonPicture {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("PersonPictures.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.personpictures == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personpictures.PersonPicture == nil {
+    t = t.AddNew()
+    }
+        return &PersonPicture{(t.personpictures.PersonPicture[n])}
+}
+
+// Length of the list.
+func (t *PersonPictures) Len() int {
+  /*
+  if t.personpictures == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personpictures.PersonPicture == nil {
+    t = t.AddNew()
+    }
+        return len(t.personpictures.PersonPicture)
+}
+
+// Convert list object to slice
+func (t *PersonPictures) ToSlice() []*PersonPicture {
+    ret := make([]*PersonPicture, 0)
+  for _, x:= range t.personpictures.PersonPicture {
+    ret = append(ret, &PersonPicture{personpicture: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewPersonPrivacyObligationDocuments() *PersonPrivacyObligationDocuments {
+  if out, ok := PersonPrivacyObligationDocumentsPointer(PersonPrivacyObligationDocuments{}); !ok {
+                log.Fatalf("Could not create pointer to PersonPrivacyObligationDocuments\n")
+                return nil
+        } else {
+          out.personprivacyobligationdocuments.PersonPrivacyObligationDocument = make([]personprivacyobligationdocument, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *PersonPrivacyObligationDocuments) Append(values ...*PersonPrivacyObligationDocument) *PersonPrivacyObligationDocuments {
+        if t == nil {
+                t, _ = PersonPrivacyObligationDocumentsPointer(PersonPrivacyObligationDocuments{})
+        }
+        /*
+        if t.personprivacyobligationdocuments == nil {
+          t.personprivacyobligationdocuments = personprivacyobligationdocuments{PersonPrivacyObligationDocument: make([]personprivacyobligationdocument, 0)}
+        }
+        */
+        if t.personprivacyobligationdocuments.PersonPrivacyObligationDocument == nil {
+                t.personprivacyobligationdocuments.PersonPrivacyObligationDocument = make([]personprivacyobligationdocument, 0)
+        }
+        for _, value := range values {
+        t.personprivacyobligationdocuments.PersonPrivacyObligationDocument = append(t.personprivacyobligationdocuments.PersonPrivacyObligationDocument, value.personprivacyobligationdocument)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *PersonPrivacyObligationDocuments) AddNew() *PersonPrivacyObligationDocuments {
+        if t == nil {
+                t, _ = PersonPrivacyObligationDocumentsPointer(PersonPrivacyObligationDocuments{})
+        }
+        /*
+        if t.personprivacyobligationdocuments == nil {
+          t.personprivacyobligationdocuments = personprivacyobligationdocuments{PersonPrivacyObligationDocument: make([]personprivacyobligationdocument, 0)}
+        }
+        */
+        if t.personprivacyobligationdocuments.PersonPrivacyObligationDocument == nil {
+                t.personprivacyobligationdocuments.PersonPrivacyObligationDocument = make([]personprivacyobligationdocument, 0)
+        }
+        t.personprivacyobligationdocuments.PersonPrivacyObligationDocument = append(t.personprivacyobligationdocuments.PersonPrivacyObligationDocument, personprivacyobligationdocument{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *PersonPrivacyObligationDocuments) Last() *personprivacyobligationdocument {
+  /*
+  if t.personprivacyobligationdocuments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personprivacyobligationdocuments.PersonPrivacyObligationDocument == nil {
+    t = t.AddNew()
+    }
+        return &(t.personprivacyobligationdocuments.PersonPrivacyObligationDocument[len(t.personprivacyobligationdocuments.PersonPrivacyObligationDocument)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *PersonPrivacyObligationDocuments) Index(n int) *PersonPrivacyObligationDocument {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("PersonPrivacyObligationDocuments.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.personprivacyobligationdocuments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personprivacyobligationdocuments.PersonPrivacyObligationDocument == nil {
+    t = t.AddNew()
+    }
+        return &PersonPrivacyObligationDocument{(t.personprivacyobligationdocuments.PersonPrivacyObligationDocument[n])}
+}
+
+// Length of the list.
+func (t *PersonPrivacyObligationDocuments) Len() int {
+  /*
+  if t.personprivacyobligationdocuments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personprivacyobligationdocuments.PersonPrivacyObligationDocument == nil {
+    t = t.AddNew()
+    }
+        return len(t.personprivacyobligationdocuments.PersonPrivacyObligationDocument)
+}
+
+// Convert list object to slice
+func (t *PersonPrivacyObligationDocuments) ToSlice() []*PersonPrivacyObligationDocument {
+    ret := make([]*PersonPrivacyObligationDocument, 0)
+  for _, x:= range t.personprivacyobligationdocuments.PersonPrivacyObligationDocument {
+    ret = append(ret, &PersonPrivacyObligationDocument{personprivacyobligationdocument: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewPersonalisedPlans() *PersonalisedPlans {
+  if out, ok := PersonalisedPlansPointer(PersonalisedPlans{}); !ok {
+                log.Fatalf("Could not create pointer to PersonalisedPlans\n")
+                return nil
+        } else {
+          out.personalisedplans.PersonalisedPlan = make([]personalisedplan, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *PersonalisedPlans) Append(values ...*PersonalisedPlan) *PersonalisedPlans {
+        if t == nil {
+                t, _ = PersonalisedPlansPointer(PersonalisedPlans{})
+        }
+        /*
+        if t.personalisedplans == nil {
+          t.personalisedplans = personalisedplans{PersonalisedPlan: make([]personalisedplan, 0)}
+        }
+        */
+        if t.personalisedplans.PersonalisedPlan == nil {
+                t.personalisedplans.PersonalisedPlan = make([]personalisedplan, 0)
+        }
+        for _, value := range values {
+        t.personalisedplans.PersonalisedPlan = append(t.personalisedplans.PersonalisedPlan, value.personalisedplan)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *PersonalisedPlans) AddNew() *PersonalisedPlans {
+        if t == nil {
+                t, _ = PersonalisedPlansPointer(PersonalisedPlans{})
+        }
+        /*
+        if t.personalisedplans == nil {
+          t.personalisedplans = personalisedplans{PersonalisedPlan: make([]personalisedplan, 0)}
+        }
+        */
+        if t.personalisedplans.PersonalisedPlan == nil {
+                t.personalisedplans.PersonalisedPlan = make([]personalisedplan, 0)
+        }
+        t.personalisedplans.PersonalisedPlan = append(t.personalisedplans.PersonalisedPlan, personalisedplan{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *PersonalisedPlans) Last() *personalisedplan {
+  /*
+  if t.personalisedplans == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personalisedplans.PersonalisedPlan == nil {
+    t = t.AddNew()
+    }
+        return &(t.personalisedplans.PersonalisedPlan[len(t.personalisedplans.PersonalisedPlan)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *PersonalisedPlans) Index(n int) *PersonalisedPlan {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("PersonalisedPlans.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.personalisedplans == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personalisedplans.PersonalisedPlan == nil {
+    t = t.AddNew()
+    }
+        return &PersonalisedPlan{(t.personalisedplans.PersonalisedPlan[n])}
+}
+
+// Length of the list.
+func (t *PersonalisedPlans) Len() int {
+  /*
+  if t.personalisedplans == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.personalisedplans.PersonalisedPlan == nil {
+    t = t.AddNew()
+    }
+        return len(t.personalisedplans.PersonalisedPlan)
+}
+
+// Convert list object to slice
+func (t *PersonalisedPlans) ToSlice() []*PersonalisedPlan {
+    ret := make([]*PersonalisedPlan, 0)
+  for _, x:= range t.personalisedplans.PersonalisedPlan {
+    ret = append(ret, &PersonalisedPlan{personalisedplan: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewPurchaseOrders() *PurchaseOrders {
+  if out, ok := PurchaseOrdersPointer(PurchaseOrders{}); !ok {
+                log.Fatalf("Could not create pointer to PurchaseOrders\n")
+                return nil
+        } else {
+          out.purchaseorders.PurchaseOrder = make([]purchaseorder, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *PurchaseOrders) Append(values ...*PurchaseOrder) *PurchaseOrders {
+        if t == nil {
+                t, _ = PurchaseOrdersPointer(PurchaseOrders{})
+        }
+        /*
+        if t.purchaseorders == nil {
+          t.purchaseorders = purchaseorders{PurchaseOrder: make([]purchaseorder, 0)}
+        }
+        */
+        if t.purchaseorders.PurchaseOrder == nil {
+                t.purchaseorders.PurchaseOrder = make([]purchaseorder, 0)
+        }
+        for _, value := range values {
+        t.purchaseorders.PurchaseOrder = append(t.purchaseorders.PurchaseOrder, value.purchaseorder)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *PurchaseOrders) AddNew() *PurchaseOrders {
+        if t == nil {
+                t, _ = PurchaseOrdersPointer(PurchaseOrders{})
+        }
+        /*
+        if t.purchaseorders == nil {
+          t.purchaseorders = purchaseorders{PurchaseOrder: make([]purchaseorder, 0)}
+        }
+        */
+        if t.purchaseorders.PurchaseOrder == nil {
+                t.purchaseorders.PurchaseOrder = make([]purchaseorder, 0)
+        }
+        t.purchaseorders.PurchaseOrder = append(t.purchaseorders.PurchaseOrder, purchaseorder{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *PurchaseOrders) Last() *purchaseorder {
+  /*
+  if t.purchaseorders == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.purchaseorders.PurchaseOrder == nil {
+    t = t.AddNew()
+    }
+        return &(t.purchaseorders.PurchaseOrder[len(t.purchaseorders.PurchaseOrder)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *PurchaseOrders) Index(n int) *PurchaseOrder {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("PurchaseOrders.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.purchaseorders == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.purchaseorders.PurchaseOrder == nil {
+    t = t.AddNew()
+    }
+        return &PurchaseOrder{(t.purchaseorders.PurchaseOrder[n])}
+}
+
+// Length of the list.
+func (t *PurchaseOrders) Len() int {
+  /*
+  if t.purchaseorders == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.purchaseorders.PurchaseOrder == nil {
+    t = t.AddNew()
+    }
+        return len(t.purchaseorders.PurchaseOrder)
+}
+
+// Convert list object to slice
+func (t *PurchaseOrders) ToSlice() []*PurchaseOrder {
+    ret := make([]*PurchaseOrder, 0)
+  for _, x:= range t.purchaseorders.PurchaseOrder {
+    ret = append(ret, &PurchaseOrder{purchaseorder: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewResourceBookings() *ResourceBookings {
+  if out, ok := ResourceBookingsPointer(ResourceBookings{}); !ok {
+                log.Fatalf("Could not create pointer to ResourceBookings\n")
+                return nil
+        } else {
+          out.resourcebookings.ResourceBooking = make([]resourcebooking, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *ResourceBookings) Append(values ...*ResourceBooking) *ResourceBookings {
+        if t == nil {
+                t, _ = ResourceBookingsPointer(ResourceBookings{})
+        }
+        /*
+        if t.resourcebookings == nil {
+          t.resourcebookings = resourcebookings{ResourceBooking: make([]resourcebooking, 0)}
+        }
+        */
+        if t.resourcebookings.ResourceBooking == nil {
+                t.resourcebookings.ResourceBooking = make([]resourcebooking, 0)
+        }
+        for _, value := range values {
+        t.resourcebookings.ResourceBooking = append(t.resourcebookings.ResourceBooking, value.resourcebooking)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *ResourceBookings) AddNew() *ResourceBookings {
+        if t == nil {
+                t, _ = ResourceBookingsPointer(ResourceBookings{})
+        }
+        /*
+        if t.resourcebookings == nil {
+          t.resourcebookings = resourcebookings{ResourceBooking: make([]resourcebooking, 0)}
+        }
+        */
+        if t.resourcebookings.ResourceBooking == nil {
+                t.resourcebookings.ResourceBooking = make([]resourcebooking, 0)
+        }
+        t.resourcebookings.ResourceBooking = append(t.resourcebookings.ResourceBooking, resourcebooking{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *ResourceBookings) Last() *resourcebooking {
+  /*
+  if t.resourcebookings == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.resourcebookings.ResourceBooking == nil {
+    t = t.AddNew()
+    }
+        return &(t.resourcebookings.ResourceBooking[len(t.resourcebookings.ResourceBooking)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *ResourceBookings) Index(n int) *ResourceBooking {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("ResourceBookings.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.resourcebookings == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.resourcebookings.ResourceBooking == nil {
+    t = t.AddNew()
+    }
+        return &ResourceBooking{(t.resourcebookings.ResourceBooking[n])}
+}
+
+// Length of the list.
+func (t *ResourceBookings) Len() int {
+  /*
+  if t.resourcebookings == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.resourcebookings.ResourceBooking == nil {
+    t = t.AddNew()
+    }
+        return len(t.resourcebookings.ResourceBooking)
+}
+
+// Convert list object to slice
+func (t *ResourceBookings) ToSlice() []*ResourceBooking {
+    ret := make([]*ResourceBooking, 0)
+  for _, x:= range t.resourcebookings.ResourceBooking {
+    ret = append(ret, &ResourceBooking{resourcebooking: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewRoomInfos() *RoomInfos {
+  if out, ok := RoomInfosPointer(RoomInfos{}); !ok {
+                log.Fatalf("Could not create pointer to RoomInfos\n")
+                return nil
+        } else {
+          out.roominfos.RoomInfo = make([]roominfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *RoomInfos) Append(values ...*RoomInfo) *RoomInfos {
+        if t == nil {
+                t, _ = RoomInfosPointer(RoomInfos{})
+        }
+        /*
+        if t.roominfos == nil {
+          t.roominfos = roominfos{RoomInfo: make([]roominfo, 0)}
+        }
+        */
+        if t.roominfos.RoomInfo == nil {
+                t.roominfos.RoomInfo = make([]roominfo, 0)
+        }
+        for _, value := range values {
+        t.roominfos.RoomInfo = append(t.roominfos.RoomInfo, value.roominfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *RoomInfos) AddNew() *RoomInfos {
+        if t == nil {
+                t, _ = RoomInfosPointer(RoomInfos{})
+        }
+        /*
+        if t.roominfos == nil {
+          t.roominfos = roominfos{RoomInfo: make([]roominfo, 0)}
+        }
+        */
+        if t.roominfos.RoomInfo == nil {
+                t.roominfos.RoomInfo = make([]roominfo, 0)
+        }
+        t.roominfos.RoomInfo = append(t.roominfos.RoomInfo, roominfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *RoomInfos) Last() *roominfo {
+  /*
+  if t.roominfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.roominfos.RoomInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.roominfos.RoomInfo[len(t.roominfos.RoomInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *RoomInfos) Index(n int) *RoomInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("RoomInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.roominfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.roominfos.RoomInfo == nil {
+    t = t.AddNew()
+    }
+        return &RoomInfo{(t.roominfos.RoomInfo[n])}
+}
+
+// Length of the list.
+func (t *RoomInfos) Len() int {
+  /*
+  if t.roominfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.roominfos.RoomInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.roominfos.RoomInfo)
+}
+
+// Convert list object to slice
+func (t *RoomInfos) ToSlice() []*RoomInfo {
+    ret := make([]*RoomInfo, 0)
+  for _, x:= range t.roominfos.RoomInfo {
+    ret = append(ret, &RoomInfo{roominfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewScheduledActivitys() *ScheduledActivitys {
+  if out, ok := ScheduledActivitysPointer(ScheduledActivitys{}); !ok {
+                log.Fatalf("Could not create pointer to ScheduledActivitys\n")
+                return nil
+        } else {
+          out.scheduledactivitys.ScheduledActivity = make([]scheduledactivity, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *ScheduledActivitys) Append(values ...*ScheduledActivity) *ScheduledActivitys {
+        if t == nil {
+                t, _ = ScheduledActivitysPointer(ScheduledActivitys{})
+        }
+        /*
+        if t.scheduledactivitys == nil {
+          t.scheduledactivitys = scheduledactivitys{ScheduledActivity: make([]scheduledactivity, 0)}
+        }
+        */
+        if t.scheduledactivitys.ScheduledActivity == nil {
+                t.scheduledactivitys.ScheduledActivity = make([]scheduledactivity, 0)
+        }
+        for _, value := range values {
+        t.scheduledactivitys.ScheduledActivity = append(t.scheduledactivitys.ScheduledActivity, value.scheduledactivity)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *ScheduledActivitys) AddNew() *ScheduledActivitys {
+        if t == nil {
+                t, _ = ScheduledActivitysPointer(ScheduledActivitys{})
+        }
+        /*
+        if t.scheduledactivitys == nil {
+          t.scheduledactivitys = scheduledactivitys{ScheduledActivity: make([]scheduledactivity, 0)}
+        }
+        */
+        if t.scheduledactivitys.ScheduledActivity == nil {
+                t.scheduledactivitys.ScheduledActivity = make([]scheduledactivity, 0)
+        }
+        t.scheduledactivitys.ScheduledActivity = append(t.scheduledactivitys.ScheduledActivity, scheduledactivity{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *ScheduledActivitys) Last() *scheduledactivity {
+  /*
+  if t.scheduledactivitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.scheduledactivitys.ScheduledActivity == nil {
+    t = t.AddNew()
+    }
+        return &(t.scheduledactivitys.ScheduledActivity[len(t.scheduledactivitys.ScheduledActivity)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *ScheduledActivitys) Index(n int) *ScheduledActivity {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("ScheduledActivitys.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.scheduledactivitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.scheduledactivitys.ScheduledActivity == nil {
+    t = t.AddNew()
+    }
+        return &ScheduledActivity{(t.scheduledactivitys.ScheduledActivity[n])}
+}
+
+// Length of the list.
+func (t *ScheduledActivitys) Len() int {
+  /*
+  if t.scheduledactivitys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.scheduledactivitys.ScheduledActivity == nil {
+    t = t.AddNew()
+    }
+        return len(t.scheduledactivitys.ScheduledActivity)
+}
+
+// Convert list object to slice
+func (t *ScheduledActivitys) ToSlice() []*ScheduledActivity {
+    ret := make([]*ScheduledActivity, 0)
+  for _, x:= range t.scheduledactivitys.ScheduledActivity {
+    ret = append(ret, &ScheduledActivity{scheduledactivity: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewSchoolCourseInfos() *SchoolCourseInfos {
+  if out, ok := SchoolCourseInfosPointer(SchoolCourseInfos{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolCourseInfos\n")
+                return nil
+        } else {
+          out.schoolcourseinfos.SchoolCourseInfo = make([]schoolcourseinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *SchoolCourseInfos) Append(values ...*SchoolCourseInfo) *SchoolCourseInfos {
+        if t == nil {
+                t, _ = SchoolCourseInfosPointer(SchoolCourseInfos{})
+        }
+        /*
+        if t.schoolcourseinfos == nil {
+          t.schoolcourseinfos = schoolcourseinfos{SchoolCourseInfo: make([]schoolcourseinfo, 0)}
+        }
+        */
+        if t.schoolcourseinfos.SchoolCourseInfo == nil {
+                t.schoolcourseinfos.SchoolCourseInfo = make([]schoolcourseinfo, 0)
+        }
+        for _, value := range values {
+        t.schoolcourseinfos.SchoolCourseInfo = append(t.schoolcourseinfos.SchoolCourseInfo, value.schoolcourseinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *SchoolCourseInfos) AddNew() *SchoolCourseInfos {
+        if t == nil {
+                t, _ = SchoolCourseInfosPointer(SchoolCourseInfos{})
+        }
+        /*
+        if t.schoolcourseinfos == nil {
+          t.schoolcourseinfos = schoolcourseinfos{SchoolCourseInfo: make([]schoolcourseinfo, 0)}
+        }
+        */
+        if t.schoolcourseinfos.SchoolCourseInfo == nil {
+                t.schoolcourseinfos.SchoolCourseInfo = make([]schoolcourseinfo, 0)
+        }
+        t.schoolcourseinfos.SchoolCourseInfo = append(t.schoolcourseinfos.SchoolCourseInfo, schoolcourseinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *SchoolCourseInfos) Last() *schoolcourseinfo {
+  /*
+  if t.schoolcourseinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolcourseinfos.SchoolCourseInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.schoolcourseinfos.SchoolCourseInfo[len(t.schoolcourseinfos.SchoolCourseInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *SchoolCourseInfos) Index(n int) *SchoolCourseInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("SchoolCourseInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.schoolcourseinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolcourseinfos.SchoolCourseInfo == nil {
+    t = t.AddNew()
+    }
+        return &SchoolCourseInfo{(t.schoolcourseinfos.SchoolCourseInfo[n])}
+}
+
+// Length of the list.
+func (t *SchoolCourseInfos) Len() int {
+  /*
+  if t.schoolcourseinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolcourseinfos.SchoolCourseInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.schoolcourseinfos.SchoolCourseInfo)
+}
+
+// Convert list object to slice
+func (t *SchoolCourseInfos) ToSlice() []*SchoolCourseInfo {
+    ret := make([]*SchoolCourseInfo, 0)
+  for _, x:= range t.schoolcourseinfos.SchoolCourseInfo {
+    ret = append(ret, &SchoolCourseInfo{schoolcourseinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewSchoolInfos() *SchoolInfos {
+  if out, ok := SchoolInfosPointer(SchoolInfos{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolInfos\n")
+                return nil
+        } else {
+          out.schoolinfos.SchoolInfo = make([]schoolinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *SchoolInfos) Append(values ...*SchoolInfo) *SchoolInfos {
+        if t == nil {
+                t, _ = SchoolInfosPointer(SchoolInfos{})
+        }
+        /*
+        if t.schoolinfos == nil {
+          t.schoolinfos = schoolinfos{SchoolInfo: make([]schoolinfo, 0)}
+        }
+        */
+        if t.schoolinfos.SchoolInfo == nil {
+                t.schoolinfos.SchoolInfo = make([]schoolinfo, 0)
+        }
+        for _, value := range values {
+        t.schoolinfos.SchoolInfo = append(t.schoolinfos.SchoolInfo, value.schoolinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *SchoolInfos) AddNew() *SchoolInfos {
+        if t == nil {
+                t, _ = SchoolInfosPointer(SchoolInfos{})
+        }
+        /*
+        if t.schoolinfos == nil {
+          t.schoolinfos = schoolinfos{SchoolInfo: make([]schoolinfo, 0)}
+        }
+        */
+        if t.schoolinfos.SchoolInfo == nil {
+                t.schoolinfos.SchoolInfo = make([]schoolinfo, 0)
+        }
+        t.schoolinfos.SchoolInfo = append(t.schoolinfos.SchoolInfo, schoolinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *SchoolInfos) Last() *schoolinfo {
+  /*
+  if t.schoolinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolinfos.SchoolInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.schoolinfos.SchoolInfo[len(t.schoolinfos.SchoolInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *SchoolInfos) Index(n int) *SchoolInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("SchoolInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.schoolinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolinfos.SchoolInfo == nil {
+    t = t.AddNew()
+    }
+        return &SchoolInfo{(t.schoolinfos.SchoolInfo[n])}
+}
+
+// Length of the list.
+func (t *SchoolInfos) Len() int {
+  /*
+  if t.schoolinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolinfos.SchoolInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.schoolinfos.SchoolInfo)
+}
+
+// Convert list object to slice
+func (t *SchoolInfos) ToSlice() []*SchoolInfo {
+    ret := make([]*SchoolInfo, 0)
+  for _, x:= range t.schoolinfos.SchoolInfo {
+    ret = append(ret, &SchoolInfo{schoolinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewSchoolProgramss() *SchoolProgramss {
+  if out, ok := SchoolProgramssPointer(SchoolProgramss{}); !ok {
+                log.Fatalf("Could not create pointer to SchoolProgramss\n")
+                return nil
+        } else {
+          out.schoolprogramss.SchoolPrograms = make([]schoolprograms, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *SchoolProgramss) Append(values ...*SchoolPrograms) *SchoolProgramss {
+        if t == nil {
+                t, _ = SchoolProgramssPointer(SchoolProgramss{})
+        }
+        /*
+        if t.schoolprogramss == nil {
+          t.schoolprogramss = schoolprogramss{SchoolPrograms: make([]schoolprograms, 0)}
+        }
+        */
+        if t.schoolprogramss.SchoolPrograms == nil {
+                t.schoolprogramss.SchoolPrograms = make([]schoolprograms, 0)
+        }
+        for _, value := range values {
+        t.schoolprogramss.SchoolPrograms = append(t.schoolprogramss.SchoolPrograms, value.schoolprograms)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *SchoolProgramss) AddNew() *SchoolProgramss {
+        if t == nil {
+                t, _ = SchoolProgramssPointer(SchoolProgramss{})
+        }
+        /*
+        if t.schoolprogramss == nil {
+          t.schoolprogramss = schoolprogramss{SchoolPrograms: make([]schoolprograms, 0)}
+        }
+        */
+        if t.schoolprogramss.SchoolPrograms == nil {
+                t.schoolprogramss.SchoolPrograms = make([]schoolprograms, 0)
+        }
+        t.schoolprogramss.SchoolPrograms = append(t.schoolprogramss.SchoolPrograms, schoolprograms{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *SchoolProgramss) Last() *schoolprograms {
+  /*
+  if t.schoolprogramss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolprogramss.SchoolPrograms == nil {
+    t = t.AddNew()
+    }
+        return &(t.schoolprogramss.SchoolPrograms[len(t.schoolprogramss.SchoolPrograms)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *SchoolProgramss) Index(n int) *SchoolPrograms {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("SchoolProgramss.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.schoolprogramss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolprogramss.SchoolPrograms == nil {
+    t = t.AddNew()
+    }
+        return &SchoolPrograms{(t.schoolprogramss.SchoolPrograms[n])}
+}
+
+// Length of the list.
+func (t *SchoolProgramss) Len() int {
+  /*
+  if t.schoolprogramss == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.schoolprogramss.SchoolPrograms == nil {
+    t = t.AddNew()
+    }
+        return len(t.schoolprogramss.SchoolPrograms)
+}
+
+// Convert list object to slice
+func (t *SchoolProgramss) ToSlice() []*SchoolPrograms {
+    ret := make([]*SchoolPrograms, 0)
+  for _, x:= range t.schoolprogramss.SchoolPrograms {
+    ret = append(ret, &SchoolPrograms{schoolprograms: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewSectionInfos() *SectionInfos {
+  if out, ok := SectionInfosPointer(SectionInfos{}); !ok {
+                log.Fatalf("Could not create pointer to SectionInfos\n")
+                return nil
+        } else {
+          out.sectioninfos.SectionInfo = make([]sectioninfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *SectionInfos) Append(values ...*SectionInfo) *SectionInfos {
+        if t == nil {
+                t, _ = SectionInfosPointer(SectionInfos{})
+        }
+        /*
+        if t.sectioninfos == nil {
+          t.sectioninfos = sectioninfos{SectionInfo: make([]sectioninfo, 0)}
+        }
+        */
+        if t.sectioninfos.SectionInfo == nil {
+                t.sectioninfos.SectionInfo = make([]sectioninfo, 0)
+        }
+        for _, value := range values {
+        t.sectioninfos.SectionInfo = append(t.sectioninfos.SectionInfo, value.sectioninfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *SectionInfos) AddNew() *SectionInfos {
+        if t == nil {
+                t, _ = SectionInfosPointer(SectionInfos{})
+        }
+        /*
+        if t.sectioninfos == nil {
+          t.sectioninfos = sectioninfos{SectionInfo: make([]sectioninfo, 0)}
+        }
+        */
+        if t.sectioninfos.SectionInfo == nil {
+                t.sectioninfos.SectionInfo = make([]sectioninfo, 0)
+        }
+        t.sectioninfos.SectionInfo = append(t.sectioninfos.SectionInfo, sectioninfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *SectionInfos) Last() *sectioninfo {
+  /*
+  if t.sectioninfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.sectioninfos.SectionInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.sectioninfos.SectionInfo[len(t.sectioninfos.SectionInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *SectionInfos) Index(n int) *SectionInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("SectionInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.sectioninfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.sectioninfos.SectionInfo == nil {
+    t = t.AddNew()
+    }
+        return &SectionInfo{(t.sectioninfos.SectionInfo[n])}
+}
+
+// Length of the list.
+func (t *SectionInfos) Len() int {
+  /*
+  if t.sectioninfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.sectioninfos.SectionInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.sectioninfos.SectionInfo)
+}
+
+// Convert list object to slice
+func (t *SectionInfos) ToSlice() []*SectionInfo {
+    ret := make([]*SectionInfo, 0)
+  for _, x:= range t.sectioninfos.SectionInfo {
+    ret = append(ret, &SectionInfo{sectioninfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewSessionInfos() *SessionInfos {
+  if out, ok := SessionInfosPointer(SessionInfos{}); !ok {
+                log.Fatalf("Could not create pointer to SessionInfos\n")
+                return nil
+        } else {
+          out.sessioninfos.SessionInfo = make([]sessioninfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *SessionInfos) Append(values ...*SessionInfo) *SessionInfos {
+        if t == nil {
+                t, _ = SessionInfosPointer(SessionInfos{})
+        }
+        /*
+        if t.sessioninfos == nil {
+          t.sessioninfos = sessioninfos{SessionInfo: make([]sessioninfo, 0)}
+        }
+        */
+        if t.sessioninfos.SessionInfo == nil {
+                t.sessioninfos.SessionInfo = make([]sessioninfo, 0)
+        }
+        for _, value := range values {
+        t.sessioninfos.SessionInfo = append(t.sessioninfos.SessionInfo, value.sessioninfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *SessionInfos) AddNew() *SessionInfos {
+        if t == nil {
+                t, _ = SessionInfosPointer(SessionInfos{})
+        }
+        /*
+        if t.sessioninfos == nil {
+          t.sessioninfos = sessioninfos{SessionInfo: make([]sessioninfo, 0)}
+        }
+        */
+        if t.sessioninfos.SessionInfo == nil {
+                t.sessioninfos.SessionInfo = make([]sessioninfo, 0)
+        }
+        t.sessioninfos.SessionInfo = append(t.sessioninfos.SessionInfo, sessioninfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *SessionInfos) Last() *sessioninfo {
+  /*
+  if t.sessioninfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.sessioninfos.SessionInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.sessioninfos.SessionInfo[len(t.sessioninfos.SessionInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *SessionInfos) Index(n int) *SessionInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("SessionInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.sessioninfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.sessioninfos.SessionInfo == nil {
+    t = t.AddNew()
+    }
+        return &SessionInfo{(t.sessioninfos.SessionInfo[n])}
+}
+
+// Length of the list.
+func (t *SessionInfos) Len() int {
+  /*
+  if t.sessioninfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.sessioninfos.SessionInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.sessioninfos.SessionInfo)
+}
+
+// Convert list object to slice
+func (t *SessionInfos) ToSlice() []*SessionInfo {
+    ret := make([]*SessionInfo, 0)
+  for _, x:= range t.sessioninfos.SessionInfo {
+    ret = append(ret, &SessionInfo{sessioninfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStaffAssignments() *StaffAssignments {
+  if out, ok := StaffAssignmentsPointer(StaffAssignments{}); !ok {
+                log.Fatalf("Could not create pointer to StaffAssignments\n")
+                return nil
+        } else {
+          out.staffassignments.StaffAssignment = make([]staffassignment, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StaffAssignments) Append(values ...*StaffAssignment) *StaffAssignments {
+        if t == nil {
+                t, _ = StaffAssignmentsPointer(StaffAssignments{})
+        }
+        /*
+        if t.staffassignments == nil {
+          t.staffassignments = staffassignments{StaffAssignment: make([]staffassignment, 0)}
+        }
+        */
+        if t.staffassignments.StaffAssignment == nil {
+                t.staffassignments.StaffAssignment = make([]staffassignment, 0)
+        }
+        for _, value := range values {
+        t.staffassignments.StaffAssignment = append(t.staffassignments.StaffAssignment, value.staffassignment)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StaffAssignments) AddNew() *StaffAssignments {
+        if t == nil {
+                t, _ = StaffAssignmentsPointer(StaffAssignments{})
+        }
+        /*
+        if t.staffassignments == nil {
+          t.staffassignments = staffassignments{StaffAssignment: make([]staffassignment, 0)}
+        }
+        */
+        if t.staffassignments.StaffAssignment == nil {
+                t.staffassignments.StaffAssignment = make([]staffassignment, 0)
+        }
+        t.staffassignments.StaffAssignment = append(t.staffassignments.StaffAssignment, staffassignment{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StaffAssignments) Last() *staffassignment {
+  /*
+  if t.staffassignments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.staffassignments.StaffAssignment == nil {
+    t = t.AddNew()
+    }
+        return &(t.staffassignments.StaffAssignment[len(t.staffassignments.StaffAssignment)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StaffAssignments) Index(n int) *StaffAssignment {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StaffAssignments.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.staffassignments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.staffassignments.StaffAssignment == nil {
+    t = t.AddNew()
+    }
+        return &StaffAssignment{(t.staffassignments.StaffAssignment[n])}
+}
+
+// Length of the list.
+func (t *StaffAssignments) Len() int {
+  /*
+  if t.staffassignments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.staffassignments.StaffAssignment == nil {
+    t = t.AddNew()
+    }
+        return len(t.staffassignments.StaffAssignment)
+}
+
+// Convert list object to slice
+func (t *StaffAssignments) ToSlice() []*StaffAssignment {
+    ret := make([]*StaffAssignment, 0)
+  for _, x:= range t.staffassignments.StaffAssignment {
+    ret = append(ret, &StaffAssignment{staffassignment: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStaffPersonals() *StaffPersonals {
+  if out, ok := StaffPersonalsPointer(StaffPersonals{}); !ok {
+                log.Fatalf("Could not create pointer to StaffPersonals\n")
+                return nil
+        } else {
+          out.staffpersonals.StaffPersonal = make([]staffpersonal, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StaffPersonals) Append(values ...*StaffPersonal) *StaffPersonals {
+        if t == nil {
+                t, _ = StaffPersonalsPointer(StaffPersonals{})
+        }
+        /*
+        if t.staffpersonals == nil {
+          t.staffpersonals = staffpersonals{StaffPersonal: make([]staffpersonal, 0)}
+        }
+        */
+        if t.staffpersonals.StaffPersonal == nil {
+                t.staffpersonals.StaffPersonal = make([]staffpersonal, 0)
+        }
+        for _, value := range values {
+        t.staffpersonals.StaffPersonal = append(t.staffpersonals.StaffPersonal, value.staffpersonal)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StaffPersonals) AddNew() *StaffPersonals {
+        if t == nil {
+                t, _ = StaffPersonalsPointer(StaffPersonals{})
+        }
+        /*
+        if t.staffpersonals == nil {
+          t.staffpersonals = staffpersonals{StaffPersonal: make([]staffpersonal, 0)}
+        }
+        */
+        if t.staffpersonals.StaffPersonal == nil {
+                t.staffpersonals.StaffPersonal = make([]staffpersonal, 0)
+        }
+        t.staffpersonals.StaffPersonal = append(t.staffpersonals.StaffPersonal, staffpersonal{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StaffPersonals) Last() *staffpersonal {
+  /*
+  if t.staffpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.staffpersonals.StaffPersonal == nil {
+    t = t.AddNew()
+    }
+        return &(t.staffpersonals.StaffPersonal[len(t.staffpersonals.StaffPersonal)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StaffPersonals) Index(n int) *StaffPersonal {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StaffPersonals.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.staffpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.staffpersonals.StaffPersonal == nil {
+    t = t.AddNew()
+    }
+        return &StaffPersonal{(t.staffpersonals.StaffPersonal[n])}
+}
+
+// Length of the list.
+func (t *StaffPersonals) Len() int {
+  /*
+  if t.staffpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.staffpersonals.StaffPersonal == nil {
+    t = t.AddNew()
+    }
+        return len(t.staffpersonals.StaffPersonal)
+}
+
+// Convert list object to slice
+func (t *StaffPersonals) ToSlice() []*StaffPersonal {
+    ret := make([]*StaffPersonal, 0)
+  for _, x:= range t.staffpersonals.StaffPersonal {
+    ret = append(ret, &StaffPersonal{staffpersonal: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentActivityInfos() *StudentActivityInfos {
+  if out, ok := StudentActivityInfosPointer(StudentActivityInfos{}); !ok {
+                log.Fatalf("Could not create pointer to StudentActivityInfos\n")
+                return nil
+        } else {
+          out.studentactivityinfos.StudentActivityInfo = make([]studentactivityinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentActivityInfos) Append(values ...*StudentActivityInfo) *StudentActivityInfos {
+        if t == nil {
+                t, _ = StudentActivityInfosPointer(StudentActivityInfos{})
+        }
+        /*
+        if t.studentactivityinfos == nil {
+          t.studentactivityinfos = studentactivityinfos{StudentActivityInfo: make([]studentactivityinfo, 0)}
+        }
+        */
+        if t.studentactivityinfos.StudentActivityInfo == nil {
+                t.studentactivityinfos.StudentActivityInfo = make([]studentactivityinfo, 0)
+        }
+        for _, value := range values {
+        t.studentactivityinfos.StudentActivityInfo = append(t.studentactivityinfos.StudentActivityInfo, value.studentactivityinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentActivityInfos) AddNew() *StudentActivityInfos {
+        if t == nil {
+                t, _ = StudentActivityInfosPointer(StudentActivityInfos{})
+        }
+        /*
+        if t.studentactivityinfos == nil {
+          t.studentactivityinfos = studentactivityinfos{StudentActivityInfo: make([]studentactivityinfo, 0)}
+        }
+        */
+        if t.studentactivityinfos.StudentActivityInfo == nil {
+                t.studentactivityinfos.StudentActivityInfo = make([]studentactivityinfo, 0)
+        }
+        t.studentactivityinfos.StudentActivityInfo = append(t.studentactivityinfos.StudentActivityInfo, studentactivityinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentActivityInfos) Last() *studentactivityinfo {
+  /*
+  if t.studentactivityinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentactivityinfos.StudentActivityInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentactivityinfos.StudentActivityInfo[len(t.studentactivityinfos.StudentActivityInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentActivityInfos) Index(n int) *StudentActivityInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentActivityInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentactivityinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentactivityinfos.StudentActivityInfo == nil {
+    t = t.AddNew()
+    }
+        return &StudentActivityInfo{(t.studentactivityinfos.StudentActivityInfo[n])}
+}
+
+// Length of the list.
+func (t *StudentActivityInfos) Len() int {
+  /*
+  if t.studentactivityinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentactivityinfos.StudentActivityInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentactivityinfos.StudentActivityInfo)
+}
+
+// Convert list object to slice
+func (t *StudentActivityInfos) ToSlice() []*StudentActivityInfo {
+    ret := make([]*StudentActivityInfo, 0)
+  for _, x:= range t.studentactivityinfos.StudentActivityInfo {
+    ret = append(ret, &StudentActivityInfo{studentactivityinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentActivityParticipations() *StudentActivityParticipations {
+  if out, ok := StudentActivityParticipationsPointer(StudentActivityParticipations{}); !ok {
+                log.Fatalf("Could not create pointer to StudentActivityParticipations\n")
+                return nil
+        } else {
+          out.studentactivityparticipations.StudentActivityParticipation = make([]studentactivityparticipation, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentActivityParticipations) Append(values ...*StudentActivityParticipation) *StudentActivityParticipations {
+        if t == nil {
+                t, _ = StudentActivityParticipationsPointer(StudentActivityParticipations{})
+        }
+        /*
+        if t.studentactivityparticipations == nil {
+          t.studentactivityparticipations = studentactivityparticipations{StudentActivityParticipation: make([]studentactivityparticipation, 0)}
+        }
+        */
+        if t.studentactivityparticipations.StudentActivityParticipation == nil {
+                t.studentactivityparticipations.StudentActivityParticipation = make([]studentactivityparticipation, 0)
+        }
+        for _, value := range values {
+        t.studentactivityparticipations.StudentActivityParticipation = append(t.studentactivityparticipations.StudentActivityParticipation, value.studentactivityparticipation)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentActivityParticipations) AddNew() *StudentActivityParticipations {
+        if t == nil {
+                t, _ = StudentActivityParticipationsPointer(StudentActivityParticipations{})
+        }
+        /*
+        if t.studentactivityparticipations == nil {
+          t.studentactivityparticipations = studentactivityparticipations{StudentActivityParticipation: make([]studentactivityparticipation, 0)}
+        }
+        */
+        if t.studentactivityparticipations.StudentActivityParticipation == nil {
+                t.studentactivityparticipations.StudentActivityParticipation = make([]studentactivityparticipation, 0)
+        }
+        t.studentactivityparticipations.StudentActivityParticipation = append(t.studentactivityparticipations.StudentActivityParticipation, studentactivityparticipation{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentActivityParticipations) Last() *studentactivityparticipation {
+  /*
+  if t.studentactivityparticipations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentactivityparticipations.StudentActivityParticipation == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentactivityparticipations.StudentActivityParticipation[len(t.studentactivityparticipations.StudentActivityParticipation)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentActivityParticipations) Index(n int) *StudentActivityParticipation {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentActivityParticipations.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentactivityparticipations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentactivityparticipations.StudentActivityParticipation == nil {
+    t = t.AddNew()
+    }
+        return &StudentActivityParticipation{(t.studentactivityparticipations.StudentActivityParticipation[n])}
+}
+
+// Length of the list.
+func (t *StudentActivityParticipations) Len() int {
+  /*
+  if t.studentactivityparticipations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentactivityparticipations.StudentActivityParticipation == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentactivityparticipations.StudentActivityParticipation)
+}
+
+// Convert list object to slice
+func (t *StudentActivityParticipations) ToSlice() []*StudentActivityParticipation {
+    ret := make([]*StudentActivityParticipation, 0)
+  for _, x:= range t.studentactivityparticipations.StudentActivityParticipation {
+    ret = append(ret, &StudentActivityParticipation{studentactivityparticipation: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentAttendanceCollections() *StudentAttendanceCollections {
+  if out, ok := StudentAttendanceCollectionsPointer(StudentAttendanceCollections{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceCollections\n")
+                return nil
+        } else {
+          out.studentattendancecollections.StudentAttendanceCollection = make([]studentattendancecollection, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentAttendanceCollections) Append(values ...*StudentAttendanceCollection) *StudentAttendanceCollections {
+        if t == nil {
+                t, _ = StudentAttendanceCollectionsPointer(StudentAttendanceCollections{})
+        }
+        /*
+        if t.studentattendancecollections == nil {
+          t.studentattendancecollections = studentattendancecollections{StudentAttendanceCollection: make([]studentattendancecollection, 0)}
+        }
+        */
+        if t.studentattendancecollections.StudentAttendanceCollection == nil {
+                t.studentattendancecollections.StudentAttendanceCollection = make([]studentattendancecollection, 0)
+        }
+        for _, value := range values {
+        t.studentattendancecollections.StudentAttendanceCollection = append(t.studentattendancecollections.StudentAttendanceCollection, value.studentattendancecollection)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentAttendanceCollections) AddNew() *StudentAttendanceCollections {
+        if t == nil {
+                t, _ = StudentAttendanceCollectionsPointer(StudentAttendanceCollections{})
+        }
+        /*
+        if t.studentattendancecollections == nil {
+          t.studentattendancecollections = studentattendancecollections{StudentAttendanceCollection: make([]studentattendancecollection, 0)}
+        }
+        */
+        if t.studentattendancecollections.StudentAttendanceCollection == nil {
+                t.studentattendancecollections.StudentAttendanceCollection = make([]studentattendancecollection, 0)
+        }
+        t.studentattendancecollections.StudentAttendanceCollection = append(t.studentattendancecollections.StudentAttendanceCollection, studentattendancecollection{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentAttendanceCollections) Last() *studentattendancecollection {
+  /*
+  if t.studentattendancecollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancecollections.StudentAttendanceCollection == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentattendancecollections.StudentAttendanceCollection[len(t.studentattendancecollections.StudentAttendanceCollection)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentAttendanceCollections) Index(n int) *StudentAttendanceCollection {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentAttendanceCollections.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentattendancecollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancecollections.StudentAttendanceCollection == nil {
+    t = t.AddNew()
+    }
+        return &StudentAttendanceCollection{(t.studentattendancecollections.StudentAttendanceCollection[n])}
+}
+
+// Length of the list.
+func (t *StudentAttendanceCollections) Len() int {
+  /*
+  if t.studentattendancecollections == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancecollections.StudentAttendanceCollection == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentattendancecollections.StudentAttendanceCollection)
+}
+
+// Convert list object to slice
+func (t *StudentAttendanceCollections) ToSlice() []*StudentAttendanceCollection {
+    ret := make([]*StudentAttendanceCollection, 0)
+  for _, x:= range t.studentattendancecollections.StudentAttendanceCollection {
+    ret = append(ret, &StudentAttendanceCollection{studentattendancecollection: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentAttendanceSummarys() *StudentAttendanceSummarys {
+  if out, ok := StudentAttendanceSummarysPointer(StudentAttendanceSummarys{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceSummarys\n")
+                return nil
+        } else {
+          out.studentattendancesummarys.StudentAttendanceSummary = make([]studentattendancesummary, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentAttendanceSummarys) Append(values ...*StudentAttendanceSummary) *StudentAttendanceSummarys {
+        if t == nil {
+                t, _ = StudentAttendanceSummarysPointer(StudentAttendanceSummarys{})
+        }
+        /*
+        if t.studentattendancesummarys == nil {
+          t.studentattendancesummarys = studentattendancesummarys{StudentAttendanceSummary: make([]studentattendancesummary, 0)}
+        }
+        */
+        if t.studentattendancesummarys.StudentAttendanceSummary == nil {
+                t.studentattendancesummarys.StudentAttendanceSummary = make([]studentattendancesummary, 0)
+        }
+        for _, value := range values {
+        t.studentattendancesummarys.StudentAttendanceSummary = append(t.studentattendancesummarys.StudentAttendanceSummary, value.studentattendancesummary)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentAttendanceSummarys) AddNew() *StudentAttendanceSummarys {
+        if t == nil {
+                t, _ = StudentAttendanceSummarysPointer(StudentAttendanceSummarys{})
+        }
+        /*
+        if t.studentattendancesummarys == nil {
+          t.studentattendancesummarys = studentattendancesummarys{StudentAttendanceSummary: make([]studentattendancesummary, 0)}
+        }
+        */
+        if t.studentattendancesummarys.StudentAttendanceSummary == nil {
+                t.studentattendancesummarys.StudentAttendanceSummary = make([]studentattendancesummary, 0)
+        }
+        t.studentattendancesummarys.StudentAttendanceSummary = append(t.studentattendancesummarys.StudentAttendanceSummary, studentattendancesummary{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentAttendanceSummarys) Last() *studentattendancesummary {
+  /*
+  if t.studentattendancesummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancesummarys.StudentAttendanceSummary == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentattendancesummarys.StudentAttendanceSummary[len(t.studentattendancesummarys.StudentAttendanceSummary)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentAttendanceSummarys) Index(n int) *StudentAttendanceSummary {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentAttendanceSummarys.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentattendancesummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancesummarys.StudentAttendanceSummary == nil {
+    t = t.AddNew()
+    }
+        return &StudentAttendanceSummary{(t.studentattendancesummarys.StudentAttendanceSummary[n])}
+}
+
+// Length of the list.
+func (t *StudentAttendanceSummarys) Len() int {
+  /*
+  if t.studentattendancesummarys == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancesummarys.StudentAttendanceSummary == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentattendancesummarys.StudentAttendanceSummary)
+}
+
+// Convert list object to slice
+func (t *StudentAttendanceSummarys) ToSlice() []*StudentAttendanceSummary {
+    ret := make([]*StudentAttendanceSummary, 0)
+  for _, x:= range t.studentattendancesummarys.StudentAttendanceSummary {
+    ret = append(ret, &StudentAttendanceSummary{studentattendancesummary: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentAttendanceTimeLists() *StudentAttendanceTimeLists {
+  if out, ok := StudentAttendanceTimeListsPointer(StudentAttendanceTimeLists{}); !ok {
+                log.Fatalf("Could not create pointer to StudentAttendanceTimeLists\n")
+                return nil
+        } else {
+          out.studentattendancetimelists.StudentAttendanceTimeList = make([]studentattendancetimelist, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentAttendanceTimeLists) Append(values ...*StudentAttendanceTimeList) *StudentAttendanceTimeLists {
+        if t == nil {
+                t, _ = StudentAttendanceTimeListsPointer(StudentAttendanceTimeLists{})
+        }
+        /*
+        if t.studentattendancetimelists == nil {
+          t.studentattendancetimelists = studentattendancetimelists{StudentAttendanceTimeList: make([]studentattendancetimelist, 0)}
+        }
+        */
+        if t.studentattendancetimelists.StudentAttendanceTimeList == nil {
+                t.studentattendancetimelists.StudentAttendanceTimeList = make([]studentattendancetimelist, 0)
+        }
+        for _, value := range values {
+        t.studentattendancetimelists.StudentAttendanceTimeList = append(t.studentattendancetimelists.StudentAttendanceTimeList, value.studentattendancetimelist)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentAttendanceTimeLists) AddNew() *StudentAttendanceTimeLists {
+        if t == nil {
+                t, _ = StudentAttendanceTimeListsPointer(StudentAttendanceTimeLists{})
+        }
+        /*
+        if t.studentattendancetimelists == nil {
+          t.studentattendancetimelists = studentattendancetimelists{StudentAttendanceTimeList: make([]studentattendancetimelist, 0)}
+        }
+        */
+        if t.studentattendancetimelists.StudentAttendanceTimeList == nil {
+                t.studentattendancetimelists.StudentAttendanceTimeList = make([]studentattendancetimelist, 0)
+        }
+        t.studentattendancetimelists.StudentAttendanceTimeList = append(t.studentattendancetimelists.StudentAttendanceTimeList, studentattendancetimelist{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentAttendanceTimeLists) Last() *studentattendancetimelist {
+  /*
+  if t.studentattendancetimelists == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancetimelists.StudentAttendanceTimeList == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentattendancetimelists.StudentAttendanceTimeList[len(t.studentattendancetimelists.StudentAttendanceTimeList)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentAttendanceTimeLists) Index(n int) *StudentAttendanceTimeList {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentAttendanceTimeLists.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentattendancetimelists == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancetimelists.StudentAttendanceTimeList == nil {
+    t = t.AddNew()
+    }
+        return &StudentAttendanceTimeList{(t.studentattendancetimelists.StudentAttendanceTimeList[n])}
+}
+
+// Length of the list.
+func (t *StudentAttendanceTimeLists) Len() int {
+  /*
+  if t.studentattendancetimelists == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentattendancetimelists.StudentAttendanceTimeList == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentattendancetimelists.StudentAttendanceTimeList)
+}
+
+// Convert list object to slice
+func (t *StudentAttendanceTimeLists) ToSlice() []*StudentAttendanceTimeList {
+    ret := make([]*StudentAttendanceTimeList, 0)
+  for _, x:= range t.studentattendancetimelists.StudentAttendanceTimeList {
+    ret = append(ret, &StudentAttendanceTimeList{studentattendancetimelist: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentContactPersonals() *StudentContactPersonals {
+  if out, ok := StudentContactPersonalsPointer(StudentContactPersonals{}); !ok {
+                log.Fatalf("Could not create pointer to StudentContactPersonals\n")
+                return nil
+        } else {
+          out.studentcontactpersonals.StudentContactPersonal = make([]studentcontactpersonal, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentContactPersonals) Append(values ...*StudentContactPersonal) *StudentContactPersonals {
+        if t == nil {
+                t, _ = StudentContactPersonalsPointer(StudentContactPersonals{})
+        }
+        /*
+        if t.studentcontactpersonals == nil {
+          t.studentcontactpersonals = studentcontactpersonals{StudentContactPersonal: make([]studentcontactpersonal, 0)}
+        }
+        */
+        if t.studentcontactpersonals.StudentContactPersonal == nil {
+                t.studentcontactpersonals.StudentContactPersonal = make([]studentcontactpersonal, 0)
+        }
+        for _, value := range values {
+        t.studentcontactpersonals.StudentContactPersonal = append(t.studentcontactpersonals.StudentContactPersonal, value.studentcontactpersonal)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentContactPersonals) AddNew() *StudentContactPersonals {
+        if t == nil {
+                t, _ = StudentContactPersonalsPointer(StudentContactPersonals{})
+        }
+        /*
+        if t.studentcontactpersonals == nil {
+          t.studentcontactpersonals = studentcontactpersonals{StudentContactPersonal: make([]studentcontactpersonal, 0)}
+        }
+        */
+        if t.studentcontactpersonals.StudentContactPersonal == nil {
+                t.studentcontactpersonals.StudentContactPersonal = make([]studentcontactpersonal, 0)
+        }
+        t.studentcontactpersonals.StudentContactPersonal = append(t.studentcontactpersonals.StudentContactPersonal, studentcontactpersonal{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentContactPersonals) Last() *studentcontactpersonal {
+  /*
+  if t.studentcontactpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentcontactpersonals.StudentContactPersonal == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentcontactpersonals.StudentContactPersonal[len(t.studentcontactpersonals.StudentContactPersonal)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentContactPersonals) Index(n int) *StudentContactPersonal {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentContactPersonals.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentcontactpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentcontactpersonals.StudentContactPersonal == nil {
+    t = t.AddNew()
+    }
+        return &StudentContactPersonal{(t.studentcontactpersonals.StudentContactPersonal[n])}
+}
+
+// Length of the list.
+func (t *StudentContactPersonals) Len() int {
+  /*
+  if t.studentcontactpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentcontactpersonals.StudentContactPersonal == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentcontactpersonals.StudentContactPersonal)
+}
+
+// Convert list object to slice
+func (t *StudentContactPersonals) ToSlice() []*StudentContactPersonal {
+    ret := make([]*StudentContactPersonal, 0)
+  for _, x:= range t.studentcontactpersonals.StudentContactPersonal {
+    ret = append(ret, &StudentContactPersonal{studentcontactpersonal: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentContactRelationships() *StudentContactRelationships {
+  if out, ok := StudentContactRelationshipsPointer(StudentContactRelationships{}); !ok {
+                log.Fatalf("Could not create pointer to StudentContactRelationships\n")
+                return nil
+        } else {
+          out.studentcontactrelationships.StudentContactRelationship = make([]studentcontactrelationship, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentContactRelationships) Append(values ...*StudentContactRelationship) *StudentContactRelationships {
+        if t == nil {
+                t, _ = StudentContactRelationshipsPointer(StudentContactRelationships{})
+        }
+        /*
+        if t.studentcontactrelationships == nil {
+          t.studentcontactrelationships = studentcontactrelationships{StudentContactRelationship: make([]studentcontactrelationship, 0)}
+        }
+        */
+        if t.studentcontactrelationships.StudentContactRelationship == nil {
+                t.studentcontactrelationships.StudentContactRelationship = make([]studentcontactrelationship, 0)
+        }
+        for _, value := range values {
+        t.studentcontactrelationships.StudentContactRelationship = append(t.studentcontactrelationships.StudentContactRelationship, value.studentcontactrelationship)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentContactRelationships) AddNew() *StudentContactRelationships {
+        if t == nil {
+                t, _ = StudentContactRelationshipsPointer(StudentContactRelationships{})
+        }
+        /*
+        if t.studentcontactrelationships == nil {
+          t.studentcontactrelationships = studentcontactrelationships{StudentContactRelationship: make([]studentcontactrelationship, 0)}
+        }
+        */
+        if t.studentcontactrelationships.StudentContactRelationship == nil {
+                t.studentcontactrelationships.StudentContactRelationship = make([]studentcontactrelationship, 0)
+        }
+        t.studentcontactrelationships.StudentContactRelationship = append(t.studentcontactrelationships.StudentContactRelationship, studentcontactrelationship{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentContactRelationships) Last() *studentcontactrelationship {
+  /*
+  if t.studentcontactrelationships == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentcontactrelationships.StudentContactRelationship == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentcontactrelationships.StudentContactRelationship[len(t.studentcontactrelationships.StudentContactRelationship)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentContactRelationships) Index(n int) *StudentContactRelationship {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentContactRelationships.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentcontactrelationships == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentcontactrelationships.StudentContactRelationship == nil {
+    t = t.AddNew()
+    }
+        return &StudentContactRelationship{(t.studentcontactrelationships.StudentContactRelationship[n])}
+}
+
+// Length of the list.
+func (t *StudentContactRelationships) Len() int {
+  /*
+  if t.studentcontactrelationships == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentcontactrelationships.StudentContactRelationship == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentcontactrelationships.StudentContactRelationship)
+}
+
+// Convert list object to slice
+func (t *StudentContactRelationships) ToSlice() []*StudentContactRelationship {
+    ret := make([]*StudentContactRelationship, 0)
+  for _, x:= range t.studentcontactrelationships.StudentContactRelationship {
+    ret = append(ret, &StudentContactRelationship{studentcontactrelationship: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentDailyAttendances() *StudentDailyAttendances {
+  if out, ok := StudentDailyAttendancesPointer(StudentDailyAttendances{}); !ok {
+                log.Fatalf("Could not create pointer to StudentDailyAttendances\n")
+                return nil
+        } else {
+          out.studentdailyattendances.StudentDailyAttendance = make([]studentdailyattendance, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentDailyAttendances) Append(values ...*StudentDailyAttendance) *StudentDailyAttendances {
+        if t == nil {
+                t, _ = StudentDailyAttendancesPointer(StudentDailyAttendances{})
+        }
+        /*
+        if t.studentdailyattendances == nil {
+          t.studentdailyattendances = studentdailyattendances{StudentDailyAttendance: make([]studentdailyattendance, 0)}
+        }
+        */
+        if t.studentdailyattendances.StudentDailyAttendance == nil {
+                t.studentdailyattendances.StudentDailyAttendance = make([]studentdailyattendance, 0)
+        }
+        for _, value := range values {
+        t.studentdailyattendances.StudentDailyAttendance = append(t.studentdailyattendances.StudentDailyAttendance, value.studentdailyattendance)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentDailyAttendances) AddNew() *StudentDailyAttendances {
+        if t == nil {
+                t, _ = StudentDailyAttendancesPointer(StudentDailyAttendances{})
+        }
+        /*
+        if t.studentdailyattendances == nil {
+          t.studentdailyattendances = studentdailyattendances{StudentDailyAttendance: make([]studentdailyattendance, 0)}
+        }
+        */
+        if t.studentdailyattendances.StudentDailyAttendance == nil {
+                t.studentdailyattendances.StudentDailyAttendance = make([]studentdailyattendance, 0)
+        }
+        t.studentdailyattendances.StudentDailyAttendance = append(t.studentdailyattendances.StudentDailyAttendance, studentdailyattendance{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentDailyAttendances) Last() *studentdailyattendance {
+  /*
+  if t.studentdailyattendances == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentdailyattendances.StudentDailyAttendance == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentdailyattendances.StudentDailyAttendance[len(t.studentdailyattendances.StudentDailyAttendance)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentDailyAttendances) Index(n int) *StudentDailyAttendance {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentDailyAttendances.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentdailyattendances == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentdailyattendances.StudentDailyAttendance == nil {
+    t = t.AddNew()
+    }
+        return &StudentDailyAttendance{(t.studentdailyattendances.StudentDailyAttendance[n])}
+}
+
+// Length of the list.
+func (t *StudentDailyAttendances) Len() int {
+  /*
+  if t.studentdailyattendances == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentdailyattendances.StudentDailyAttendance == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentdailyattendances.StudentDailyAttendance)
+}
+
+// Convert list object to slice
+func (t *StudentDailyAttendances) ToSlice() []*StudentDailyAttendance {
+    ret := make([]*StudentDailyAttendance, 0)
+  for _, x:= range t.studentdailyattendances.StudentDailyAttendance {
+    ret = append(ret, &StudentDailyAttendance{studentdailyattendance: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentDataTransferNotes() *StudentDataTransferNotes {
+  if out, ok := StudentDataTransferNotesPointer(StudentDataTransferNotes{}); !ok {
+                log.Fatalf("Could not create pointer to StudentDataTransferNotes\n")
+                return nil
+        } else {
+          out.studentdatatransfernotes.StudentDataTransferNote = make([]studentdatatransfernote, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentDataTransferNotes) Append(values ...*StudentDataTransferNote) *StudentDataTransferNotes {
+        if t == nil {
+                t, _ = StudentDataTransferNotesPointer(StudentDataTransferNotes{})
+        }
+        /*
+        if t.studentdatatransfernotes == nil {
+          t.studentdatatransfernotes = studentdatatransfernotes{StudentDataTransferNote: make([]studentdatatransfernote, 0)}
+        }
+        */
+        if t.studentdatatransfernotes.StudentDataTransferNote == nil {
+                t.studentdatatransfernotes.StudentDataTransferNote = make([]studentdatatransfernote, 0)
+        }
+        for _, value := range values {
+        t.studentdatatransfernotes.StudentDataTransferNote = append(t.studentdatatransfernotes.StudentDataTransferNote, value.studentdatatransfernote)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentDataTransferNotes) AddNew() *StudentDataTransferNotes {
+        if t == nil {
+                t, _ = StudentDataTransferNotesPointer(StudentDataTransferNotes{})
+        }
+        /*
+        if t.studentdatatransfernotes == nil {
+          t.studentdatatransfernotes = studentdatatransfernotes{StudentDataTransferNote: make([]studentdatatransfernote, 0)}
+        }
+        */
+        if t.studentdatatransfernotes.StudentDataTransferNote == nil {
+                t.studentdatatransfernotes.StudentDataTransferNote = make([]studentdatatransfernote, 0)
+        }
+        t.studentdatatransfernotes.StudentDataTransferNote = append(t.studentdatatransfernotes.StudentDataTransferNote, studentdatatransfernote{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentDataTransferNotes) Last() *studentdatatransfernote {
+  /*
+  if t.studentdatatransfernotes == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentdatatransfernotes.StudentDataTransferNote == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentdatatransfernotes.StudentDataTransferNote[len(t.studentdatatransfernotes.StudentDataTransferNote)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentDataTransferNotes) Index(n int) *StudentDataTransferNote {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentDataTransferNotes.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentdatatransfernotes == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentdatatransfernotes.StudentDataTransferNote == nil {
+    t = t.AddNew()
+    }
+        return &StudentDataTransferNote{(t.studentdatatransfernotes.StudentDataTransferNote[n])}
+}
+
+// Length of the list.
+func (t *StudentDataTransferNotes) Len() int {
+  /*
+  if t.studentdatatransfernotes == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentdatatransfernotes.StudentDataTransferNote == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentdatatransfernotes.StudentDataTransferNote)
+}
+
+// Convert list object to slice
+func (t *StudentDataTransferNotes) ToSlice() []*StudentDataTransferNote {
+    ret := make([]*StudentDataTransferNote, 0)
+  for _, x:= range t.studentdatatransfernotes.StudentDataTransferNote {
+    ret = append(ret, &StudentDataTransferNote{studentdatatransfernote: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentGrades() *StudentGrades {
+  if out, ok := StudentGradesPointer(StudentGrades{}); !ok {
+                log.Fatalf("Could not create pointer to StudentGrades\n")
+                return nil
+        } else {
+          out.studentgrades.StudentGrade = make([]studentgrade, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentGrades) Append(values ...*StudentGrade) *StudentGrades {
+        if t == nil {
+                t, _ = StudentGradesPointer(StudentGrades{})
+        }
+        /*
+        if t.studentgrades == nil {
+          t.studentgrades = studentgrades{StudentGrade: make([]studentgrade, 0)}
+        }
+        */
+        if t.studentgrades.StudentGrade == nil {
+                t.studentgrades.StudentGrade = make([]studentgrade, 0)
+        }
+        for _, value := range values {
+        t.studentgrades.StudentGrade = append(t.studentgrades.StudentGrade, value.studentgrade)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentGrades) AddNew() *StudentGrades {
+        if t == nil {
+                t, _ = StudentGradesPointer(StudentGrades{})
+        }
+        /*
+        if t.studentgrades == nil {
+          t.studentgrades = studentgrades{StudentGrade: make([]studentgrade, 0)}
+        }
+        */
+        if t.studentgrades.StudentGrade == nil {
+                t.studentgrades.StudentGrade = make([]studentgrade, 0)
+        }
+        t.studentgrades.StudentGrade = append(t.studentgrades.StudentGrade, studentgrade{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentGrades) Last() *studentgrade {
+  /*
+  if t.studentgrades == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentgrades.StudentGrade == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentgrades.StudentGrade[len(t.studentgrades.StudentGrade)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentGrades) Index(n int) *StudentGrade {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentGrades.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentgrades == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentgrades.StudentGrade == nil {
+    t = t.AddNew()
+    }
+        return &StudentGrade{(t.studentgrades.StudentGrade[n])}
+}
+
+// Length of the list.
+func (t *StudentGrades) Len() int {
+  /*
+  if t.studentgrades == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentgrades.StudentGrade == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentgrades.StudentGrade)
+}
+
+// Convert list object to slice
+func (t *StudentGrades) ToSlice() []*StudentGrade {
+    ret := make([]*StudentGrade, 0)
+  for _, x:= range t.studentgrades.StudentGrade {
+    ret = append(ret, &StudentGrade{studentgrade: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentParticipations() *StudentParticipations {
+  if out, ok := StudentParticipationsPointer(StudentParticipations{}); !ok {
+                log.Fatalf("Could not create pointer to StudentParticipations\n")
+                return nil
+        } else {
+          out.studentparticipations.StudentParticipation = make([]studentparticipation, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentParticipations) Append(values ...*StudentParticipation) *StudentParticipations {
+        if t == nil {
+                t, _ = StudentParticipationsPointer(StudentParticipations{})
+        }
+        /*
+        if t.studentparticipations == nil {
+          t.studentparticipations = studentparticipations{StudentParticipation: make([]studentparticipation, 0)}
+        }
+        */
+        if t.studentparticipations.StudentParticipation == nil {
+                t.studentparticipations.StudentParticipation = make([]studentparticipation, 0)
+        }
+        for _, value := range values {
+        t.studentparticipations.StudentParticipation = append(t.studentparticipations.StudentParticipation, value.studentparticipation)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentParticipations) AddNew() *StudentParticipations {
+        if t == nil {
+                t, _ = StudentParticipationsPointer(StudentParticipations{})
+        }
+        /*
+        if t.studentparticipations == nil {
+          t.studentparticipations = studentparticipations{StudentParticipation: make([]studentparticipation, 0)}
+        }
+        */
+        if t.studentparticipations.StudentParticipation == nil {
+                t.studentparticipations.StudentParticipation = make([]studentparticipation, 0)
+        }
+        t.studentparticipations.StudentParticipation = append(t.studentparticipations.StudentParticipation, studentparticipation{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentParticipations) Last() *studentparticipation {
+  /*
+  if t.studentparticipations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentparticipations.StudentParticipation == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentparticipations.StudentParticipation[len(t.studentparticipations.StudentParticipation)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentParticipations) Index(n int) *StudentParticipation {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentParticipations.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentparticipations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentparticipations.StudentParticipation == nil {
+    t = t.AddNew()
+    }
+        return &StudentParticipation{(t.studentparticipations.StudentParticipation[n])}
+}
+
+// Length of the list.
+func (t *StudentParticipations) Len() int {
+  /*
+  if t.studentparticipations == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentparticipations.StudentParticipation == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentparticipations.StudentParticipation)
+}
+
+// Convert list object to slice
+func (t *StudentParticipations) ToSlice() []*StudentParticipation {
+    ret := make([]*StudentParticipation, 0)
+  for _, x:= range t.studentparticipations.StudentParticipation {
+    ret = append(ret, &StudentParticipation{studentparticipation: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentPeriodAttendances() *StudentPeriodAttendances {
+  if out, ok := StudentPeriodAttendancesPointer(StudentPeriodAttendances{}); !ok {
+                log.Fatalf("Could not create pointer to StudentPeriodAttendances\n")
+                return nil
+        } else {
+          out.studentperiodattendances.StudentPeriodAttendance = make([]studentperiodattendance, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentPeriodAttendances) Append(values ...*StudentPeriodAttendance) *StudentPeriodAttendances {
+        if t == nil {
+                t, _ = StudentPeriodAttendancesPointer(StudentPeriodAttendances{})
+        }
+        /*
+        if t.studentperiodattendances == nil {
+          t.studentperiodattendances = studentperiodattendances{StudentPeriodAttendance: make([]studentperiodattendance, 0)}
+        }
+        */
+        if t.studentperiodattendances.StudentPeriodAttendance == nil {
+                t.studentperiodattendances.StudentPeriodAttendance = make([]studentperiodattendance, 0)
+        }
+        for _, value := range values {
+        t.studentperiodattendances.StudentPeriodAttendance = append(t.studentperiodattendances.StudentPeriodAttendance, value.studentperiodattendance)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentPeriodAttendances) AddNew() *StudentPeriodAttendances {
+        if t == nil {
+                t, _ = StudentPeriodAttendancesPointer(StudentPeriodAttendances{})
+        }
+        /*
+        if t.studentperiodattendances == nil {
+          t.studentperiodattendances = studentperiodattendances{StudentPeriodAttendance: make([]studentperiodattendance, 0)}
+        }
+        */
+        if t.studentperiodattendances.StudentPeriodAttendance == nil {
+                t.studentperiodattendances.StudentPeriodAttendance = make([]studentperiodattendance, 0)
+        }
+        t.studentperiodattendances.StudentPeriodAttendance = append(t.studentperiodattendances.StudentPeriodAttendance, studentperiodattendance{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentPeriodAttendances) Last() *studentperiodattendance {
+  /*
+  if t.studentperiodattendances == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentperiodattendances.StudentPeriodAttendance == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentperiodattendances.StudentPeriodAttendance[len(t.studentperiodattendances.StudentPeriodAttendance)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentPeriodAttendances) Index(n int) *StudentPeriodAttendance {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentPeriodAttendances.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentperiodattendances == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentperiodattendances.StudentPeriodAttendance == nil {
+    t = t.AddNew()
+    }
+        return &StudentPeriodAttendance{(t.studentperiodattendances.StudentPeriodAttendance[n])}
+}
+
+// Length of the list.
+func (t *StudentPeriodAttendances) Len() int {
+  /*
+  if t.studentperiodattendances == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentperiodattendances.StudentPeriodAttendance == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentperiodattendances.StudentPeriodAttendance)
+}
+
+// Convert list object to slice
+func (t *StudentPeriodAttendances) ToSlice() []*StudentPeriodAttendance {
+    ret := make([]*StudentPeriodAttendance, 0)
+  for _, x:= range t.studentperiodattendances.StudentPeriodAttendance {
+    ret = append(ret, &StudentPeriodAttendance{studentperiodattendance: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentPersonals() *StudentPersonals {
+  if out, ok := StudentPersonalsPointer(StudentPersonals{}); !ok {
+                log.Fatalf("Could not create pointer to StudentPersonals\n")
+                return nil
+        } else {
+          out.studentpersonals.StudentPersonal = make([]studentpersonal, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentPersonals) Append(values ...*StudentPersonal) *StudentPersonals {
+        if t == nil {
+                t, _ = StudentPersonalsPointer(StudentPersonals{})
+        }
+        /*
+        if t.studentpersonals == nil {
+          t.studentpersonals = studentpersonals{StudentPersonal: make([]studentpersonal, 0)}
+        }
+        */
+        if t.studentpersonals.StudentPersonal == nil {
+                t.studentpersonals.StudentPersonal = make([]studentpersonal, 0)
+        }
+        for _, value := range values {
+        t.studentpersonals.StudentPersonal = append(t.studentpersonals.StudentPersonal, value.studentpersonal)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentPersonals) AddNew() *StudentPersonals {
+        if t == nil {
+                t, _ = StudentPersonalsPointer(StudentPersonals{})
+        }
+        /*
+        if t.studentpersonals == nil {
+          t.studentpersonals = studentpersonals{StudentPersonal: make([]studentpersonal, 0)}
+        }
+        */
+        if t.studentpersonals.StudentPersonal == nil {
+                t.studentpersonals.StudentPersonal = make([]studentpersonal, 0)
+        }
+        t.studentpersonals.StudentPersonal = append(t.studentpersonals.StudentPersonal, studentpersonal{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentPersonals) Last() *studentpersonal {
+  /*
+  if t.studentpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentpersonals.StudentPersonal == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentpersonals.StudentPersonal[len(t.studentpersonals.StudentPersonal)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentPersonals) Index(n int) *StudentPersonal {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentPersonals.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentpersonals.StudentPersonal == nil {
+    t = t.AddNew()
+    }
+        return &StudentPersonal{(t.studentpersonals.StudentPersonal[n])}
+}
+
+// Length of the list.
+func (t *StudentPersonals) Len() int {
+  /*
+  if t.studentpersonals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentpersonals.StudentPersonal == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentpersonals.StudentPersonal)
+}
+
+// Convert list object to slice
+func (t *StudentPersonals) ToSlice() []*StudentPersonal {
+    ret := make([]*StudentPersonal, 0)
+  for _, x:= range t.studentpersonals.StudentPersonal {
+    ret = append(ret, &StudentPersonal{studentpersonal: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentSchoolEnrollments() *StudentSchoolEnrollments {
+  if out, ok := StudentSchoolEnrollmentsPointer(StudentSchoolEnrollments{}); !ok {
+                log.Fatalf("Could not create pointer to StudentSchoolEnrollments\n")
+                return nil
+        } else {
+          out.studentschoolenrollments.StudentSchoolEnrollment = make([]studentschoolenrollment, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentSchoolEnrollments) Append(values ...*StudentSchoolEnrollment) *StudentSchoolEnrollments {
+        if t == nil {
+                t, _ = StudentSchoolEnrollmentsPointer(StudentSchoolEnrollments{})
+        }
+        /*
+        if t.studentschoolenrollments == nil {
+          t.studentschoolenrollments = studentschoolenrollments{StudentSchoolEnrollment: make([]studentschoolenrollment, 0)}
+        }
+        */
+        if t.studentschoolenrollments.StudentSchoolEnrollment == nil {
+                t.studentschoolenrollments.StudentSchoolEnrollment = make([]studentschoolenrollment, 0)
+        }
+        for _, value := range values {
+        t.studentschoolenrollments.StudentSchoolEnrollment = append(t.studentschoolenrollments.StudentSchoolEnrollment, value.studentschoolenrollment)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentSchoolEnrollments) AddNew() *StudentSchoolEnrollments {
+        if t == nil {
+                t, _ = StudentSchoolEnrollmentsPointer(StudentSchoolEnrollments{})
+        }
+        /*
+        if t.studentschoolenrollments == nil {
+          t.studentschoolenrollments = studentschoolenrollments{StudentSchoolEnrollment: make([]studentschoolenrollment, 0)}
+        }
+        */
+        if t.studentschoolenrollments.StudentSchoolEnrollment == nil {
+                t.studentschoolenrollments.StudentSchoolEnrollment = make([]studentschoolenrollment, 0)
+        }
+        t.studentschoolenrollments.StudentSchoolEnrollment = append(t.studentschoolenrollments.StudentSchoolEnrollment, studentschoolenrollment{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentSchoolEnrollments) Last() *studentschoolenrollment {
+  /*
+  if t.studentschoolenrollments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentschoolenrollments.StudentSchoolEnrollment == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentschoolenrollments.StudentSchoolEnrollment[len(t.studentschoolenrollments.StudentSchoolEnrollment)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentSchoolEnrollments) Index(n int) *StudentSchoolEnrollment {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentSchoolEnrollments.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentschoolenrollments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentschoolenrollments.StudentSchoolEnrollment == nil {
+    t = t.AddNew()
+    }
+        return &StudentSchoolEnrollment{(t.studentschoolenrollments.StudentSchoolEnrollment[n])}
+}
+
+// Length of the list.
+func (t *StudentSchoolEnrollments) Len() int {
+  /*
+  if t.studentschoolenrollments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentschoolenrollments.StudentSchoolEnrollment == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentschoolenrollments.StudentSchoolEnrollment)
+}
+
+// Convert list object to slice
+func (t *StudentSchoolEnrollments) ToSlice() []*StudentSchoolEnrollment {
+    ret := make([]*StudentSchoolEnrollment, 0)
+  for _, x:= range t.studentschoolenrollments.StudentSchoolEnrollment {
+    ret = append(ret, &StudentSchoolEnrollment{studentschoolenrollment: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentScoreJudgementAgainstStandards() *StudentScoreJudgementAgainstStandards {
+  if out, ok := StudentScoreJudgementAgainstStandardsPointer(StudentScoreJudgementAgainstStandards{}); !ok {
+                log.Fatalf("Could not create pointer to StudentScoreJudgementAgainstStandards\n")
+                return nil
+        } else {
+          out.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard = make([]studentscorejudgementagainststandard, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentScoreJudgementAgainstStandards) Append(values ...*StudentScoreJudgementAgainstStandard) *StudentScoreJudgementAgainstStandards {
+        if t == nil {
+                t, _ = StudentScoreJudgementAgainstStandardsPointer(StudentScoreJudgementAgainstStandards{})
+        }
+        /*
+        if t.studentscorejudgementagainststandards == nil {
+          t.studentscorejudgementagainststandards = studentscorejudgementagainststandards{StudentScoreJudgementAgainstStandard: make([]studentscorejudgementagainststandard, 0)}
+        }
+        */
+        if t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard == nil {
+                t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard = make([]studentscorejudgementagainststandard, 0)
+        }
+        for _, value := range values {
+        t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard = append(t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard, value.studentscorejudgementagainststandard)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentScoreJudgementAgainstStandards) AddNew() *StudentScoreJudgementAgainstStandards {
+        if t == nil {
+                t, _ = StudentScoreJudgementAgainstStandardsPointer(StudentScoreJudgementAgainstStandards{})
+        }
+        /*
+        if t.studentscorejudgementagainststandards == nil {
+          t.studentscorejudgementagainststandards = studentscorejudgementagainststandards{StudentScoreJudgementAgainstStandard: make([]studentscorejudgementagainststandard, 0)}
+        }
+        */
+        if t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard == nil {
+                t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard = make([]studentscorejudgementagainststandard, 0)
+        }
+        t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard = append(t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard, studentscorejudgementagainststandard{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentScoreJudgementAgainstStandards) Last() *studentscorejudgementagainststandard {
+  /*
+  if t.studentscorejudgementagainststandards == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard[len(t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentScoreJudgementAgainstStandards) Index(n int) *StudentScoreJudgementAgainstStandard {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentScoreJudgementAgainstStandards.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentscorejudgementagainststandards == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard == nil {
+    t = t.AddNew()
+    }
+        return &StudentScoreJudgementAgainstStandard{(t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard[n])}
+}
+
+// Length of the list.
+func (t *StudentScoreJudgementAgainstStandards) Len() int {
+  /*
+  if t.studentscorejudgementagainststandards == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard)
+}
+
+// Convert list object to slice
+func (t *StudentScoreJudgementAgainstStandards) ToSlice() []*StudentScoreJudgementAgainstStandard {
+    ret := make([]*StudentScoreJudgementAgainstStandard, 0)
+  for _, x:= range t.studentscorejudgementagainststandards.StudentScoreJudgementAgainstStandard {
+    ret = append(ret, &StudentScoreJudgementAgainstStandard{studentscorejudgementagainststandard: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewStudentSectionEnrollments() *StudentSectionEnrollments {
+  if out, ok := StudentSectionEnrollmentsPointer(StudentSectionEnrollments{}); !ok {
+                log.Fatalf("Could not create pointer to StudentSectionEnrollments\n")
+                return nil
+        } else {
+          out.studentsectionenrollments.StudentSectionEnrollment = make([]studentsectionenrollment, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *StudentSectionEnrollments) Append(values ...*StudentSectionEnrollment) *StudentSectionEnrollments {
+        if t == nil {
+                t, _ = StudentSectionEnrollmentsPointer(StudentSectionEnrollments{})
+        }
+        /*
+        if t.studentsectionenrollments == nil {
+          t.studentsectionenrollments = studentsectionenrollments{StudentSectionEnrollment: make([]studentsectionenrollment, 0)}
+        }
+        */
+        if t.studentsectionenrollments.StudentSectionEnrollment == nil {
+                t.studentsectionenrollments.StudentSectionEnrollment = make([]studentsectionenrollment, 0)
+        }
+        for _, value := range values {
+        t.studentsectionenrollments.StudentSectionEnrollment = append(t.studentsectionenrollments.StudentSectionEnrollment, value.studentsectionenrollment)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *StudentSectionEnrollments) AddNew() *StudentSectionEnrollments {
+        if t == nil {
+                t, _ = StudentSectionEnrollmentsPointer(StudentSectionEnrollments{})
+        }
+        /*
+        if t.studentsectionenrollments == nil {
+          t.studentsectionenrollments = studentsectionenrollments{StudentSectionEnrollment: make([]studentsectionenrollment, 0)}
+        }
+        */
+        if t.studentsectionenrollments.StudentSectionEnrollment == nil {
+                t.studentsectionenrollments.StudentSectionEnrollment = make([]studentsectionenrollment, 0)
+        }
+        t.studentsectionenrollments.StudentSectionEnrollment = append(t.studentsectionenrollments.StudentSectionEnrollment, studentsectionenrollment{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *StudentSectionEnrollments) Last() *studentsectionenrollment {
+  /*
+  if t.studentsectionenrollments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentsectionenrollments.StudentSectionEnrollment == nil {
+    t = t.AddNew()
+    }
+        return &(t.studentsectionenrollments.StudentSectionEnrollment[len(t.studentsectionenrollments.StudentSectionEnrollment)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *StudentSectionEnrollments) Index(n int) *StudentSectionEnrollment {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("StudentSectionEnrollments.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.studentsectionenrollments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentsectionenrollments.StudentSectionEnrollment == nil {
+    t = t.AddNew()
+    }
+        return &StudentSectionEnrollment{(t.studentsectionenrollments.StudentSectionEnrollment[n])}
+}
+
+// Length of the list.
+func (t *StudentSectionEnrollments) Len() int {
+  /*
+  if t.studentsectionenrollments == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.studentsectionenrollments.StudentSectionEnrollment == nil {
+    t = t.AddNew()
+    }
+        return len(t.studentsectionenrollments.StudentSectionEnrollment)
+}
+
+// Convert list object to slice
+func (t *StudentSectionEnrollments) ToSlice() []*StudentSectionEnrollment {
+    ret := make([]*StudentSectionEnrollment, 0)
+  for _, x:= range t.studentsectionenrollments.StudentSectionEnrollment {
+    ret = append(ret, &StudentSectionEnrollment{studentsectionenrollment: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewTeachingGroups() *TeachingGroups {
+  if out, ok := TeachingGroupsPointer(TeachingGroups{}); !ok {
+                log.Fatalf("Could not create pointer to TeachingGroups\n")
+                return nil
+        } else {
+          out.teachinggroups.TeachingGroup = make([]teachinggroup, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *TeachingGroups) Append(values ...*TeachingGroup) *TeachingGroups {
+        if t == nil {
+                t, _ = TeachingGroupsPointer(TeachingGroups{})
+        }
+        /*
+        if t.teachinggroups == nil {
+          t.teachinggroups = teachinggroups{TeachingGroup: make([]teachinggroup, 0)}
+        }
+        */
+        if t.teachinggroups.TeachingGroup == nil {
+                t.teachinggroups.TeachingGroup = make([]teachinggroup, 0)
+        }
+        for _, value := range values {
+        t.teachinggroups.TeachingGroup = append(t.teachinggroups.TeachingGroup, value.teachinggroup)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *TeachingGroups) AddNew() *TeachingGroups {
+        if t == nil {
+                t, _ = TeachingGroupsPointer(TeachingGroups{})
+        }
+        /*
+        if t.teachinggroups == nil {
+          t.teachinggroups = teachinggroups{TeachingGroup: make([]teachinggroup, 0)}
+        }
+        */
+        if t.teachinggroups.TeachingGroup == nil {
+                t.teachinggroups.TeachingGroup = make([]teachinggroup, 0)
+        }
+        t.teachinggroups.TeachingGroup = append(t.teachinggroups.TeachingGroup, teachinggroup{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *TeachingGroups) Last() *teachinggroup {
+  /*
+  if t.teachinggroups == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.teachinggroups.TeachingGroup == nil {
+    t = t.AddNew()
+    }
+        return &(t.teachinggroups.TeachingGroup[len(t.teachinggroups.TeachingGroup)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *TeachingGroups) Index(n int) *TeachingGroup {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("TeachingGroups.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.teachinggroups == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.teachinggroups.TeachingGroup == nil {
+    t = t.AddNew()
+    }
+        return &TeachingGroup{(t.teachinggroups.TeachingGroup[n])}
+}
+
+// Length of the list.
+func (t *TeachingGroups) Len() int {
+  /*
+  if t.teachinggroups == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.teachinggroups.TeachingGroup == nil {
+    t = t.AddNew()
+    }
+        return len(t.teachinggroups.TeachingGroup)
+}
+
+// Convert list object to slice
+func (t *TeachingGroups) ToSlice() []*TeachingGroup {
+    ret := make([]*TeachingGroup, 0)
+  for _, x:= range t.teachinggroups.TeachingGroup {
+    ret = append(ret, &TeachingGroup{teachinggroup: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewTermInfos() *TermInfos {
+  if out, ok := TermInfosPointer(TermInfos{}); !ok {
+                log.Fatalf("Could not create pointer to TermInfos\n")
+                return nil
+        } else {
+          out.terminfos.TermInfo = make([]terminfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *TermInfos) Append(values ...*TermInfo) *TermInfos {
+        if t == nil {
+                t, _ = TermInfosPointer(TermInfos{})
+        }
+        /*
+        if t.terminfos == nil {
+          t.terminfos = terminfos{TermInfo: make([]terminfo, 0)}
+        }
+        */
+        if t.terminfos.TermInfo == nil {
+                t.terminfos.TermInfo = make([]terminfo, 0)
+        }
+        for _, value := range values {
+        t.terminfos.TermInfo = append(t.terminfos.TermInfo, value.terminfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *TermInfos) AddNew() *TermInfos {
+        if t == nil {
+                t, _ = TermInfosPointer(TermInfos{})
+        }
+        /*
+        if t.terminfos == nil {
+          t.terminfos = terminfos{TermInfo: make([]terminfo, 0)}
+        }
+        */
+        if t.terminfos.TermInfo == nil {
+                t.terminfos.TermInfo = make([]terminfo, 0)
+        }
+        t.terminfos.TermInfo = append(t.terminfos.TermInfo, terminfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *TermInfos) Last() *terminfo {
+  /*
+  if t.terminfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.terminfos.TermInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.terminfos.TermInfo[len(t.terminfos.TermInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *TermInfos) Index(n int) *TermInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("TermInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.terminfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.terminfos.TermInfo == nil {
+    t = t.AddNew()
+    }
+        return &TermInfo{(t.terminfos.TermInfo[n])}
+}
+
+// Length of the list.
+func (t *TermInfos) Len() int {
+  /*
+  if t.terminfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.terminfos.TermInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.terminfos.TermInfo)
+}
+
+// Convert list object to slice
+func (t *TermInfos) ToSlice() []*TermInfo {
+    ret := make([]*TermInfo, 0)
+  for _, x:= range t.terminfos.TermInfo {
+    ret = append(ret, &TermInfo{terminfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewTimeTableCells() *TimeTableCells {
+  if out, ok := TimeTableCellsPointer(TimeTableCells{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableCells\n")
+                return nil
+        } else {
+          out.timetablecells.TimeTableCell = make([]timetablecell, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *TimeTableCells) Append(values ...*TimeTableCell) *TimeTableCells {
+        if t == nil {
+                t, _ = TimeTableCellsPointer(TimeTableCells{})
+        }
+        /*
+        if t.timetablecells == nil {
+          t.timetablecells = timetablecells{TimeTableCell: make([]timetablecell, 0)}
+        }
+        */
+        if t.timetablecells.TimeTableCell == nil {
+                t.timetablecells.TimeTableCell = make([]timetablecell, 0)
+        }
+        for _, value := range values {
+        t.timetablecells.TimeTableCell = append(t.timetablecells.TimeTableCell, value.timetablecell)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *TimeTableCells) AddNew() *TimeTableCells {
+        if t == nil {
+                t, _ = TimeTableCellsPointer(TimeTableCells{})
+        }
+        /*
+        if t.timetablecells == nil {
+          t.timetablecells = timetablecells{TimeTableCell: make([]timetablecell, 0)}
+        }
+        */
+        if t.timetablecells.TimeTableCell == nil {
+                t.timetablecells.TimeTableCell = make([]timetablecell, 0)
+        }
+        t.timetablecells.TimeTableCell = append(t.timetablecells.TimeTableCell, timetablecell{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *TimeTableCells) Last() *timetablecell {
+  /*
+  if t.timetablecells == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablecells.TimeTableCell == nil {
+    t = t.AddNew()
+    }
+        return &(t.timetablecells.TimeTableCell[len(t.timetablecells.TimeTableCell)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *TimeTableCells) Index(n int) *TimeTableCell {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("TimeTableCells.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.timetablecells == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablecells.TimeTableCell == nil {
+    t = t.AddNew()
+    }
+        return &TimeTableCell{(t.timetablecells.TimeTableCell[n])}
+}
+
+// Length of the list.
+func (t *TimeTableCells) Len() int {
+  /*
+  if t.timetablecells == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablecells.TimeTableCell == nil {
+    t = t.AddNew()
+    }
+        return len(t.timetablecells.TimeTableCell)
+}
+
+// Convert list object to slice
+func (t *TimeTableCells) ToSlice() []*TimeTableCell {
+    ret := make([]*TimeTableCell, 0)
+  for _, x:= range t.timetablecells.TimeTableCell {
+    ret = append(ret, &TimeTableCell{timetablecell: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewTimeTableContainers() *TimeTableContainers {
+  if out, ok := TimeTableContainersPointer(TimeTableContainers{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableContainers\n")
+                return nil
+        } else {
+          out.timetablecontainers.TimeTableContainer = make([]timetablecontainer, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *TimeTableContainers) Append(values ...*TimeTableContainer) *TimeTableContainers {
+        if t == nil {
+                t, _ = TimeTableContainersPointer(TimeTableContainers{})
+        }
+        /*
+        if t.timetablecontainers == nil {
+          t.timetablecontainers = timetablecontainers{TimeTableContainer: make([]timetablecontainer, 0)}
+        }
+        */
+        if t.timetablecontainers.TimeTableContainer == nil {
+                t.timetablecontainers.TimeTableContainer = make([]timetablecontainer, 0)
+        }
+        for _, value := range values {
+        t.timetablecontainers.TimeTableContainer = append(t.timetablecontainers.TimeTableContainer, value.timetablecontainer)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *TimeTableContainers) AddNew() *TimeTableContainers {
+        if t == nil {
+                t, _ = TimeTableContainersPointer(TimeTableContainers{})
+        }
+        /*
+        if t.timetablecontainers == nil {
+          t.timetablecontainers = timetablecontainers{TimeTableContainer: make([]timetablecontainer, 0)}
+        }
+        */
+        if t.timetablecontainers.TimeTableContainer == nil {
+                t.timetablecontainers.TimeTableContainer = make([]timetablecontainer, 0)
+        }
+        t.timetablecontainers.TimeTableContainer = append(t.timetablecontainers.TimeTableContainer, timetablecontainer{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *TimeTableContainers) Last() *timetablecontainer {
+  /*
+  if t.timetablecontainers == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablecontainers.TimeTableContainer == nil {
+    t = t.AddNew()
+    }
+        return &(t.timetablecontainers.TimeTableContainer[len(t.timetablecontainers.TimeTableContainer)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *TimeTableContainers) Index(n int) *TimeTableContainer {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("TimeTableContainers.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.timetablecontainers == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablecontainers.TimeTableContainer == nil {
+    t = t.AddNew()
+    }
+        return &TimeTableContainer{(t.timetablecontainers.TimeTableContainer[n])}
+}
+
+// Length of the list.
+func (t *TimeTableContainers) Len() int {
+  /*
+  if t.timetablecontainers == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablecontainers.TimeTableContainer == nil {
+    t = t.AddNew()
+    }
+        return len(t.timetablecontainers.TimeTableContainer)
+}
+
+// Convert list object to slice
+func (t *TimeTableContainers) ToSlice() []*TimeTableContainer {
+    ret := make([]*TimeTableContainer, 0)
+  for _, x:= range t.timetablecontainers.TimeTableContainer {
+    ret = append(ret, &TimeTableContainer{timetablecontainer: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewTimeTableSubjects() *TimeTableSubjects {
+  if out, ok := TimeTableSubjectsPointer(TimeTableSubjects{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTableSubjects\n")
+                return nil
+        } else {
+          out.timetablesubjects.TimeTableSubject = make([]timetablesubject, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *TimeTableSubjects) Append(values ...*TimeTableSubject) *TimeTableSubjects {
+        if t == nil {
+                t, _ = TimeTableSubjectsPointer(TimeTableSubjects{})
+        }
+        /*
+        if t.timetablesubjects == nil {
+          t.timetablesubjects = timetablesubjects{TimeTableSubject: make([]timetablesubject, 0)}
+        }
+        */
+        if t.timetablesubjects.TimeTableSubject == nil {
+                t.timetablesubjects.TimeTableSubject = make([]timetablesubject, 0)
+        }
+        for _, value := range values {
+        t.timetablesubjects.TimeTableSubject = append(t.timetablesubjects.TimeTableSubject, value.timetablesubject)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *TimeTableSubjects) AddNew() *TimeTableSubjects {
+        if t == nil {
+                t, _ = TimeTableSubjectsPointer(TimeTableSubjects{})
+        }
+        /*
+        if t.timetablesubjects == nil {
+          t.timetablesubjects = timetablesubjects{TimeTableSubject: make([]timetablesubject, 0)}
+        }
+        */
+        if t.timetablesubjects.TimeTableSubject == nil {
+                t.timetablesubjects.TimeTableSubject = make([]timetablesubject, 0)
+        }
+        t.timetablesubjects.TimeTableSubject = append(t.timetablesubjects.TimeTableSubject, timetablesubject{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *TimeTableSubjects) Last() *timetablesubject {
+  /*
+  if t.timetablesubjects == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablesubjects.TimeTableSubject == nil {
+    t = t.AddNew()
+    }
+        return &(t.timetablesubjects.TimeTableSubject[len(t.timetablesubjects.TimeTableSubject)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *TimeTableSubjects) Index(n int) *TimeTableSubject {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("TimeTableSubjects.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.timetablesubjects == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablesubjects.TimeTableSubject == nil {
+    t = t.AddNew()
+    }
+        return &TimeTableSubject{(t.timetablesubjects.TimeTableSubject[n])}
+}
+
+// Length of the list.
+func (t *TimeTableSubjects) Len() int {
+  /*
+  if t.timetablesubjects == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetablesubjects.TimeTableSubject == nil {
+    t = t.AddNew()
+    }
+        return len(t.timetablesubjects.TimeTableSubject)
+}
+
+// Convert list object to slice
+func (t *TimeTableSubjects) ToSlice() []*TimeTableSubject {
+    ret := make([]*TimeTableSubject, 0)
+  for _, x:= range t.timetablesubjects.TimeTableSubject {
+    ret = append(ret, &TimeTableSubject{timetablesubject: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewTimeTables() *TimeTables {
+  if out, ok := TimeTablesPointer(TimeTables{}); !ok {
+                log.Fatalf("Could not create pointer to TimeTables\n")
+                return nil
+        } else {
+          out.timetables.TimeTable = make([]timetable, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *TimeTables) Append(values ...*TimeTable) *TimeTables {
+        if t == nil {
+                t, _ = TimeTablesPointer(TimeTables{})
+        }
+        /*
+        if t.timetables == nil {
+          t.timetables = timetables{TimeTable: make([]timetable, 0)}
+        }
+        */
+        if t.timetables.TimeTable == nil {
+                t.timetables.TimeTable = make([]timetable, 0)
+        }
+        for _, value := range values {
+        t.timetables.TimeTable = append(t.timetables.TimeTable, value.timetable)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *TimeTables) AddNew() *TimeTables {
+        if t == nil {
+                t, _ = TimeTablesPointer(TimeTables{})
+        }
+        /*
+        if t.timetables == nil {
+          t.timetables = timetables{TimeTable: make([]timetable, 0)}
+        }
+        */
+        if t.timetables.TimeTable == nil {
+                t.timetables.TimeTable = make([]timetable, 0)
+        }
+        t.timetables.TimeTable = append(t.timetables.TimeTable, timetable{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *TimeTables) Last() *timetable {
+  /*
+  if t.timetables == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetables.TimeTable == nil {
+    t = t.AddNew()
+    }
+        return &(t.timetables.TimeTable[len(t.timetables.TimeTable)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *TimeTables) Index(n int) *TimeTable {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("TimeTables.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.timetables == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetables.TimeTable == nil {
+    t = t.AddNew()
+    }
+        return &TimeTable{(t.timetables.TimeTable[n])}
+}
+
+// Length of the list.
+func (t *TimeTables) Len() int {
+  /*
+  if t.timetables == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.timetables.TimeTable == nil {
+    t = t.AddNew()
+    }
+        return len(t.timetables.TimeTable)
+}
+
+// Convert list object to slice
+func (t *TimeTables) ToSlice() []*TimeTable {
+    ret := make([]*TimeTable, 0)
+  for _, x:= range t.timetables.TimeTable {
+    ret = append(ret, &TimeTable{timetable: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewVendorInfos() *VendorInfos {
+  if out, ok := VendorInfosPointer(VendorInfos{}); !ok {
+                log.Fatalf("Could not create pointer to VendorInfos\n")
+                return nil
+        } else {
+          out.vendorinfos.VendorInfo = make([]vendorinfo, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *VendorInfos) Append(values ...*VendorInfo) *VendorInfos {
+        if t == nil {
+                t, _ = VendorInfosPointer(VendorInfos{})
+        }
+        /*
+        if t.vendorinfos == nil {
+          t.vendorinfos = vendorinfos{VendorInfo: make([]vendorinfo, 0)}
+        }
+        */
+        if t.vendorinfos.VendorInfo == nil {
+                t.vendorinfos.VendorInfo = make([]vendorinfo, 0)
+        }
+        for _, value := range values {
+        t.vendorinfos.VendorInfo = append(t.vendorinfos.VendorInfo, value.vendorinfo)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *VendorInfos) AddNew() *VendorInfos {
+        if t == nil {
+                t, _ = VendorInfosPointer(VendorInfos{})
+        }
+        /*
+        if t.vendorinfos == nil {
+          t.vendorinfos = vendorinfos{VendorInfo: make([]vendorinfo, 0)}
+        }
+        */
+        if t.vendorinfos.VendorInfo == nil {
+                t.vendorinfos.VendorInfo = make([]vendorinfo, 0)
+        }
+        t.vendorinfos.VendorInfo = append(t.vendorinfos.VendorInfo, vendorinfo{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *VendorInfos) Last() *vendorinfo {
+  /*
+  if t.vendorinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.vendorinfos.VendorInfo == nil {
+    t = t.AddNew()
+    }
+        return &(t.vendorinfos.VendorInfo[len(t.vendorinfos.VendorInfo)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *VendorInfos) Index(n int) *VendorInfo {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("VendorInfos.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.vendorinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.vendorinfos.VendorInfo == nil {
+    t = t.AddNew()
+    }
+        return &VendorInfo{(t.vendorinfos.VendorInfo[n])}
+}
+
+// Length of the list.
+func (t *VendorInfos) Len() int {
+  /*
+  if t.vendorinfos == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.vendorinfos.VendorInfo == nil {
+    t = t.AddNew()
+    }
+        return len(t.vendorinfos.VendorInfo)
+}
+
+// Convert list object to slice
+func (t *VendorInfos) ToSlice() []*VendorInfo {
+    ret := make([]*VendorInfo, 0)
+  for _, x:= range t.vendorinfos.VendorInfo {
+    ret = append(ret, &VendorInfo{vendorinfo: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewWellbeingAlerts() *WellbeingAlerts {
+  if out, ok := WellbeingAlertsPointer(WellbeingAlerts{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingAlerts\n")
+                return nil
+        } else {
+          out.wellbeingalerts.WellbeingAlert = make([]wellbeingalert, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *WellbeingAlerts) Append(values ...*WellbeingAlert) *WellbeingAlerts {
+        if t == nil {
+                t, _ = WellbeingAlertsPointer(WellbeingAlerts{})
+        }
+        /*
+        if t.wellbeingalerts == nil {
+          t.wellbeingalerts = wellbeingalerts{WellbeingAlert: make([]wellbeingalert, 0)}
+        }
+        */
+        if t.wellbeingalerts.WellbeingAlert == nil {
+                t.wellbeingalerts.WellbeingAlert = make([]wellbeingalert, 0)
+        }
+        for _, value := range values {
+        t.wellbeingalerts.WellbeingAlert = append(t.wellbeingalerts.WellbeingAlert, value.wellbeingalert)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *WellbeingAlerts) AddNew() *WellbeingAlerts {
+        if t == nil {
+                t, _ = WellbeingAlertsPointer(WellbeingAlerts{})
+        }
+        /*
+        if t.wellbeingalerts == nil {
+          t.wellbeingalerts = wellbeingalerts{WellbeingAlert: make([]wellbeingalert, 0)}
+        }
+        */
+        if t.wellbeingalerts.WellbeingAlert == nil {
+                t.wellbeingalerts.WellbeingAlert = make([]wellbeingalert, 0)
+        }
+        t.wellbeingalerts.WellbeingAlert = append(t.wellbeingalerts.WellbeingAlert, wellbeingalert{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *WellbeingAlerts) Last() *wellbeingalert {
+  /*
+  if t.wellbeingalerts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingalerts.WellbeingAlert == nil {
+    t = t.AddNew()
+    }
+        return &(t.wellbeingalerts.WellbeingAlert[len(t.wellbeingalerts.WellbeingAlert)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *WellbeingAlerts) Index(n int) *WellbeingAlert {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("WellbeingAlerts.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.wellbeingalerts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingalerts.WellbeingAlert == nil {
+    t = t.AddNew()
+    }
+        return &WellbeingAlert{(t.wellbeingalerts.WellbeingAlert[n])}
+}
+
+// Length of the list.
+func (t *WellbeingAlerts) Len() int {
+  /*
+  if t.wellbeingalerts == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingalerts.WellbeingAlert == nil {
+    t = t.AddNew()
+    }
+        return len(t.wellbeingalerts.WellbeingAlert)
+}
+
+// Convert list object to slice
+func (t *WellbeingAlerts) ToSlice() []*WellbeingAlert {
+    ret := make([]*WellbeingAlert, 0)
+  for _, x:= range t.wellbeingalerts.WellbeingAlert {
+    ret = append(ret, &WellbeingAlert{wellbeingalert: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewWellbeingAppeals() *WellbeingAppeals {
+  if out, ok := WellbeingAppealsPointer(WellbeingAppeals{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingAppeals\n")
+                return nil
+        } else {
+          out.wellbeingappeals.WellbeingAppeal = make([]wellbeingappeal, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *WellbeingAppeals) Append(values ...*WellbeingAppeal) *WellbeingAppeals {
+        if t == nil {
+                t, _ = WellbeingAppealsPointer(WellbeingAppeals{})
+        }
+        /*
+        if t.wellbeingappeals == nil {
+          t.wellbeingappeals = wellbeingappeals{WellbeingAppeal: make([]wellbeingappeal, 0)}
+        }
+        */
+        if t.wellbeingappeals.WellbeingAppeal == nil {
+                t.wellbeingappeals.WellbeingAppeal = make([]wellbeingappeal, 0)
+        }
+        for _, value := range values {
+        t.wellbeingappeals.WellbeingAppeal = append(t.wellbeingappeals.WellbeingAppeal, value.wellbeingappeal)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *WellbeingAppeals) AddNew() *WellbeingAppeals {
+        if t == nil {
+                t, _ = WellbeingAppealsPointer(WellbeingAppeals{})
+        }
+        /*
+        if t.wellbeingappeals == nil {
+          t.wellbeingappeals = wellbeingappeals{WellbeingAppeal: make([]wellbeingappeal, 0)}
+        }
+        */
+        if t.wellbeingappeals.WellbeingAppeal == nil {
+                t.wellbeingappeals.WellbeingAppeal = make([]wellbeingappeal, 0)
+        }
+        t.wellbeingappeals.WellbeingAppeal = append(t.wellbeingappeals.WellbeingAppeal, wellbeingappeal{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *WellbeingAppeals) Last() *wellbeingappeal {
+  /*
+  if t.wellbeingappeals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingappeals.WellbeingAppeal == nil {
+    t = t.AddNew()
+    }
+        return &(t.wellbeingappeals.WellbeingAppeal[len(t.wellbeingappeals.WellbeingAppeal)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *WellbeingAppeals) Index(n int) *WellbeingAppeal {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("WellbeingAppeals.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.wellbeingappeals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingappeals.WellbeingAppeal == nil {
+    t = t.AddNew()
+    }
+        return &WellbeingAppeal{(t.wellbeingappeals.WellbeingAppeal[n])}
+}
+
+// Length of the list.
+func (t *WellbeingAppeals) Len() int {
+  /*
+  if t.wellbeingappeals == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingappeals.WellbeingAppeal == nil {
+    t = t.AddNew()
+    }
+        return len(t.wellbeingappeals.WellbeingAppeal)
+}
+
+// Convert list object to slice
+func (t *WellbeingAppeals) ToSlice() []*WellbeingAppeal {
+    ret := make([]*WellbeingAppeal, 0)
+  for _, x:= range t.wellbeingappeals.WellbeingAppeal {
+    ret = append(ret, &WellbeingAppeal{wellbeingappeal: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewWellbeingCharacteristics() *WellbeingCharacteristics {
+  if out, ok := WellbeingCharacteristicsPointer(WellbeingCharacteristics{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingCharacteristics\n")
+                return nil
+        } else {
+          out.wellbeingcharacteristics.WellbeingCharacteristic = make([]wellbeingcharacteristic, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *WellbeingCharacteristics) Append(values ...*WellbeingCharacteristic) *WellbeingCharacteristics {
+        if t == nil {
+                t, _ = WellbeingCharacteristicsPointer(WellbeingCharacteristics{})
+        }
+        /*
+        if t.wellbeingcharacteristics == nil {
+          t.wellbeingcharacteristics = wellbeingcharacteristics{WellbeingCharacteristic: make([]wellbeingcharacteristic, 0)}
+        }
+        */
+        if t.wellbeingcharacteristics.WellbeingCharacteristic == nil {
+                t.wellbeingcharacteristics.WellbeingCharacteristic = make([]wellbeingcharacteristic, 0)
+        }
+        for _, value := range values {
+        t.wellbeingcharacteristics.WellbeingCharacteristic = append(t.wellbeingcharacteristics.WellbeingCharacteristic, value.wellbeingcharacteristic)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *WellbeingCharacteristics) AddNew() *WellbeingCharacteristics {
+        if t == nil {
+                t, _ = WellbeingCharacteristicsPointer(WellbeingCharacteristics{})
+        }
+        /*
+        if t.wellbeingcharacteristics == nil {
+          t.wellbeingcharacteristics = wellbeingcharacteristics{WellbeingCharacteristic: make([]wellbeingcharacteristic, 0)}
+        }
+        */
+        if t.wellbeingcharacteristics.WellbeingCharacteristic == nil {
+                t.wellbeingcharacteristics.WellbeingCharacteristic = make([]wellbeingcharacteristic, 0)
+        }
+        t.wellbeingcharacteristics.WellbeingCharacteristic = append(t.wellbeingcharacteristics.WellbeingCharacteristic, wellbeingcharacteristic{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *WellbeingCharacteristics) Last() *wellbeingcharacteristic {
+  /*
+  if t.wellbeingcharacteristics == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingcharacteristics.WellbeingCharacteristic == nil {
+    t = t.AddNew()
+    }
+        return &(t.wellbeingcharacteristics.WellbeingCharacteristic[len(t.wellbeingcharacteristics.WellbeingCharacteristic)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *WellbeingCharacteristics) Index(n int) *WellbeingCharacteristic {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("WellbeingCharacteristics.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.wellbeingcharacteristics == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingcharacteristics.WellbeingCharacteristic == nil {
+    t = t.AddNew()
+    }
+        return &WellbeingCharacteristic{(t.wellbeingcharacteristics.WellbeingCharacteristic[n])}
+}
+
+// Length of the list.
+func (t *WellbeingCharacteristics) Len() int {
+  /*
+  if t.wellbeingcharacteristics == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingcharacteristics.WellbeingCharacteristic == nil {
+    t = t.AddNew()
+    }
+        return len(t.wellbeingcharacteristics.WellbeingCharacteristic)
+}
+
+// Convert list object to slice
+func (t *WellbeingCharacteristics) ToSlice() []*WellbeingCharacteristic {
+    ret := make([]*WellbeingCharacteristic, 0)
+  for _, x:= range t.wellbeingcharacteristics.WellbeingCharacteristic {
+    ret = append(ret, &WellbeingCharacteristic{wellbeingcharacteristic: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewWellbeingEvents() *WellbeingEvents {
+  if out, ok := WellbeingEventsPointer(WellbeingEvents{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingEvents\n")
+                return nil
+        } else {
+          out.wellbeingevents.WellbeingEvent = make([]wellbeingevent, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *WellbeingEvents) Append(values ...*WellbeingEvent) *WellbeingEvents {
+        if t == nil {
+                t, _ = WellbeingEventsPointer(WellbeingEvents{})
+        }
+        /*
+        if t.wellbeingevents == nil {
+          t.wellbeingevents = wellbeingevents{WellbeingEvent: make([]wellbeingevent, 0)}
+        }
+        */
+        if t.wellbeingevents.WellbeingEvent == nil {
+                t.wellbeingevents.WellbeingEvent = make([]wellbeingevent, 0)
+        }
+        for _, value := range values {
+        t.wellbeingevents.WellbeingEvent = append(t.wellbeingevents.WellbeingEvent, value.wellbeingevent)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *WellbeingEvents) AddNew() *WellbeingEvents {
+        if t == nil {
+                t, _ = WellbeingEventsPointer(WellbeingEvents{})
+        }
+        /*
+        if t.wellbeingevents == nil {
+          t.wellbeingevents = wellbeingevents{WellbeingEvent: make([]wellbeingevent, 0)}
+        }
+        */
+        if t.wellbeingevents.WellbeingEvent == nil {
+                t.wellbeingevents.WellbeingEvent = make([]wellbeingevent, 0)
+        }
+        t.wellbeingevents.WellbeingEvent = append(t.wellbeingevents.WellbeingEvent, wellbeingevent{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *WellbeingEvents) Last() *wellbeingevent {
+  /*
+  if t.wellbeingevents == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingevents.WellbeingEvent == nil {
+    t = t.AddNew()
+    }
+        return &(t.wellbeingevents.WellbeingEvent[len(t.wellbeingevents.WellbeingEvent)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *WellbeingEvents) Index(n int) *WellbeingEvent {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("WellbeingEvents.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.wellbeingevents == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingevents.WellbeingEvent == nil {
+    t = t.AddNew()
+    }
+        return &WellbeingEvent{(t.wellbeingevents.WellbeingEvent[n])}
+}
+
+// Length of the list.
+func (t *WellbeingEvents) Len() int {
+  /*
+  if t.wellbeingevents == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingevents.WellbeingEvent == nil {
+    t = t.AddNew()
+    }
+        return len(t.wellbeingevents.WellbeingEvent)
+}
+
+// Convert list object to slice
+func (t *WellbeingEvents) ToSlice() []*WellbeingEvent {
+    ret := make([]*WellbeingEvent, 0)
+  for _, x:= range t.wellbeingevents.WellbeingEvent {
+    ret = append(ret, &WellbeingEvent{wellbeingevent: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewWellbeingPersonLinks() *WellbeingPersonLinks {
+  if out, ok := WellbeingPersonLinksPointer(WellbeingPersonLinks{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingPersonLinks\n")
+                return nil
+        } else {
+          out.wellbeingpersonlinks.WellbeingPersonLink = make([]wellbeingpersonlink, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *WellbeingPersonLinks) Append(values ...*WellbeingPersonLink) *WellbeingPersonLinks {
+        if t == nil {
+                t, _ = WellbeingPersonLinksPointer(WellbeingPersonLinks{})
+        }
+        /*
+        if t.wellbeingpersonlinks == nil {
+          t.wellbeingpersonlinks = wellbeingpersonlinks{WellbeingPersonLink: make([]wellbeingpersonlink, 0)}
+        }
+        */
+        if t.wellbeingpersonlinks.WellbeingPersonLink == nil {
+                t.wellbeingpersonlinks.WellbeingPersonLink = make([]wellbeingpersonlink, 0)
+        }
+        for _, value := range values {
+        t.wellbeingpersonlinks.WellbeingPersonLink = append(t.wellbeingpersonlinks.WellbeingPersonLink, value.wellbeingpersonlink)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *WellbeingPersonLinks) AddNew() *WellbeingPersonLinks {
+        if t == nil {
+                t, _ = WellbeingPersonLinksPointer(WellbeingPersonLinks{})
+        }
+        /*
+        if t.wellbeingpersonlinks == nil {
+          t.wellbeingpersonlinks = wellbeingpersonlinks{WellbeingPersonLink: make([]wellbeingpersonlink, 0)}
+        }
+        */
+        if t.wellbeingpersonlinks.WellbeingPersonLink == nil {
+                t.wellbeingpersonlinks.WellbeingPersonLink = make([]wellbeingpersonlink, 0)
+        }
+        t.wellbeingpersonlinks.WellbeingPersonLink = append(t.wellbeingpersonlinks.WellbeingPersonLink, wellbeingpersonlink{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *WellbeingPersonLinks) Last() *wellbeingpersonlink {
+  /*
+  if t.wellbeingpersonlinks == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingpersonlinks.WellbeingPersonLink == nil {
+    t = t.AddNew()
+    }
+        return &(t.wellbeingpersonlinks.WellbeingPersonLink[len(t.wellbeingpersonlinks.WellbeingPersonLink)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *WellbeingPersonLinks) Index(n int) *WellbeingPersonLink {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("WellbeingPersonLinks.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.wellbeingpersonlinks == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingpersonlinks.WellbeingPersonLink == nil {
+    t = t.AddNew()
+    }
+        return &WellbeingPersonLink{(t.wellbeingpersonlinks.WellbeingPersonLink[n])}
+}
+
+// Length of the list.
+func (t *WellbeingPersonLinks) Len() int {
+  /*
+  if t.wellbeingpersonlinks == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingpersonlinks.WellbeingPersonLink == nil {
+    t = t.AddNew()
+    }
+        return len(t.wellbeingpersonlinks.WellbeingPersonLink)
+}
+
+// Convert list object to slice
+func (t *WellbeingPersonLinks) ToSlice() []*WellbeingPersonLink {
+    ret := make([]*WellbeingPersonLink, 0)
+  for _, x:= range t.wellbeingpersonlinks.WellbeingPersonLink {
+    ret = append(ret, &WellbeingPersonLink{wellbeingpersonlink: x})
+  }
+  return ret
+
+}
+
+
+  // Generates a new object as a pointer to a struct
+func NewWellbeingResponses() *WellbeingResponses {
+  if out, ok := WellbeingResponsesPointer(WellbeingResponses{}); !ok {
+                log.Fatalf("Could not create pointer to WellbeingResponses\n")
+                return nil
+        } else {
+          out.wellbeingresponses.WellbeingResponse = make([]wellbeingresponse, 0)
+                return out
+        }
+  }
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *WellbeingResponses) Append(values ...*WellbeingResponse) *WellbeingResponses {
+        if t == nil {
+                t, _ = WellbeingResponsesPointer(WellbeingResponses{})
+        }
+        /*
+        if t.wellbeingresponses == nil {
+          t.wellbeingresponses = wellbeingresponses{WellbeingResponse: make([]wellbeingresponse, 0)}
+        }
+        */
+        if t.wellbeingresponses.WellbeingResponse == nil {
+                t.wellbeingresponses.WellbeingResponse = make([]wellbeingresponse, 0)
+        }
+        for _, value := range values {
+        t.wellbeingresponses.WellbeingResponse = append(t.wellbeingresponses.WellbeingResponse, value.wellbeingresponse)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *WellbeingResponses) AddNew() *WellbeingResponses {
+        if t == nil {
+                t, _ = WellbeingResponsesPointer(WellbeingResponses{})
+        }
+        /*
+        if t.wellbeingresponses == nil {
+          t.wellbeingresponses = wellbeingresponses{WellbeingResponse: make([]wellbeingresponse, 0)}
+        }
+        */
+        if t.wellbeingresponses.WellbeingResponse == nil {
+                t.wellbeingresponses.WellbeingResponse = make([]wellbeingresponse, 0)
+        }
+        t.wellbeingresponses.WellbeingResponse = append(t.wellbeingresponses.WellbeingResponse, wellbeingresponse{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *WellbeingResponses) Last() *wellbeingresponse {
+  /*
+  if t.wellbeingresponses == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingresponses.WellbeingResponse == nil {
+    t = t.AddNew()
+    }
+        return &(t.wellbeingresponses.WellbeingResponse[len(t.wellbeingresponses.WellbeingResponse)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds. Returns copy of value.
+func (t *WellbeingResponses) Index(n int) *WellbeingResponse {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("WellbeingResponses.Index(): subscript %d out of range on list\n", n)
+    }
+    /*
+  if t.wellbeingresponses == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingresponses.WellbeingResponse == nil {
+    t = t.AddNew()
+    }
+        return &WellbeingResponse{(t.wellbeingresponses.WellbeingResponse[n])}
+}
+
+// Length of the list.
+func (t *WellbeingResponses) Len() int {
+  /*
+  if t.wellbeingresponses == nil {
+    t = t.AddNew()
+    }
+    */
+  if t.wellbeingresponses.WellbeingResponse == nil {
+    t = t.AddNew()
+    }
+        return len(t.wellbeingresponses.WellbeingResponse)
+}
+
+// Convert list object to slice
+func (t *WellbeingResponses) ToSlice() []*WellbeingResponse {
+    ret := make([]*WellbeingResponse, 0)
+  for _, x:= range t.wellbeingresponses.WellbeingResponse {
+    ret = append(ret, &WellbeingResponse{wellbeingresponse: x})
+  }
+  return ret
+
+}
 
 // Return string value
 func (t *AUCodeSets0211ProgramAvailabilityType) String() string {

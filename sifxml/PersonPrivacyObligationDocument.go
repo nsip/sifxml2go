@@ -1,13 +1,20 @@
 package sifxml
 
 
-type PersonPrivacyObligationDocuments []PersonPrivacyObligationDocument
+
+    type PersonPrivacyObligationDocuments struct {
+      personprivacyobligationdocuments `json:"PersonPrivacyObligationDocuments"`
+    }
+
+    type personprivacyobligationdocuments struct {
+      PersonPrivacyObligationDocument []personprivacyobligationdocument `json:"PersonPrivacyObligationDocument"`
+    }
 
     type PersonPrivacyObligationDocument struct {
-  personprivacyobligationdocument `xml:"PersonPrivacyObligationDocument" json:"PersonPrivacyObligationDocument"`
-}
+      personprivacyobligationdocument `xml:"PersonPrivacyObligationDocument" json:"PersonPrivacyObligationDocument"`
+     }
 
-type personprivacyobligationdocument struct {
+     type personprivacyobligationdocument struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       ParentRefId *String `xml:"ParentRefId" json:"ParentRefId"`
       ParentObjectTypeName *String `xml:"ParentObjectTypeName" json:"ParentObjectTypeName"`

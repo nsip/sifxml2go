@@ -1,13 +1,20 @@
 package sifxml
 
 
-type PurchaseOrders []PurchaseOrder
+
+    type PurchaseOrders struct {
+      purchaseorders `json:"PurchaseOrders"`
+    }
+
+    type purchaseorders struct {
+      PurchaseOrder []purchaseorder `json:"PurchaseOrder"`
+    }
 
     type PurchaseOrder struct {
-  purchaseorder `xml:"PurchaseOrder" json:"PurchaseOrder"`
-}
+      purchaseorder `xml:"PurchaseOrder" json:"PurchaseOrder"`
+     }
 
-type purchaseorder struct {
+     type purchaseorder struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       LocalId *LocalIdType `xml:"LocalId,omitempty" json:"LocalId,omitempty"`
       FormNumber *String `xml:"FormNumber" json:"FormNumber"`

@@ -7,9 +7,10 @@ while(<>) {
   s/Inherits://;
 
   # perl -s struct2go.pl -o
-  if (m/\btype (\S+)/ && !$seen && $o) {
-    print "type $1s []$1\n\n";
+  if (m/\btype (\S+).*\{/ && !$seen && $o) {
+    print;
     $seen++;
+    next;
   }
 
   @parts = split /(`)/;

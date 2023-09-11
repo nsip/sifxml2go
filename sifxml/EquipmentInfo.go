@@ -1,13 +1,20 @@
 package sifxml
 
 
-type EquipmentInfos []EquipmentInfo
+
+    type EquipmentInfos struct {
+      equipmentinfos `json:"EquipmentInfos"`
+    }
+
+    type equipmentinfos struct {
+      EquipmentInfo []equipmentinfo `json:"EquipmentInfo"`
+    }
 
     type EquipmentInfo struct {
-  equipmentinfo `xml:"EquipmentInfo" json:"EquipmentInfo"`
-}
+      equipmentinfo `xml:"EquipmentInfo" json:"EquipmentInfo"`
+     }
 
-type equipmentinfo struct {
+     type equipmentinfo struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       Name *String `xml:"Name" json:"Name"`
       Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
@@ -28,6 +35,7 @@ type EquipmentInfo_SIF_RefId struct {
 }
 
 type equipmentinfo_sif_refid struct {
+
       SIF_RefObject *String `xml:"SIF_RefObject,attr" json:"SIF_RefObject"`
       Value *String `xml:",chardata" json:"value"`
 }

@@ -1,13 +1,20 @@
 package sifxml
 
 
-type StudentAttendanceSummarys []StudentAttendanceSummary
+
+    type StudentAttendanceSummarys struct {
+      studentattendancesummarys `json:"StudentAttendanceSummarys"`
+    }
+
+    type studentattendancesummarys struct {
+      StudentAttendanceSummary []studentattendancesummary `json:"StudentAttendanceSummary"`
+    }
 
     type StudentAttendanceSummary struct {
-  studentattendancesummary `xml:"StudentAttendanceSummary" json:"StudentAttendanceSummary"`
-}
+      studentattendancesummary `xml:"StudentAttendanceSummary" json:"StudentAttendanceSummary"`
+     }
 
-type studentattendancesummary struct {
+     type studentattendancesummary struct {
         StudentAttendanceSummaryRefId *String `xml:"StudentAttendanceSummaryRefId,attr" json:"StudentAttendanceSummaryRefId"`
       StudentPersonalRefId *String `xml:"StudentPersonalRefId" json:"StudentPersonalRefId"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId" json:"SchoolInfoRefId"`

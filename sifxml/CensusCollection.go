@@ -1,13 +1,20 @@
 package sifxml
 
 
-type CensusCollections []CensusCollection
+
+    type CensusCollections struct {
+      censuscollections `json:"CensusCollections"`
+    }
+
+    type censuscollections struct {
+      CensusCollection []censuscollection `json:"CensusCollection"`
+    }
 
     type CensusCollection struct {
-  censuscollection `xml:"CensusCollection" json:"CensusCollection"`
-}
+      censuscollection `xml:"CensusCollection" json:"CensusCollection"`
+     }
 
-type censuscollection struct {
+     type censuscollection struct {
         RefId *RefIdType `xml:"RefId,attr" json:"RefId"`
       CensusYear *SchoolYearType `xml:"CensusYear" json:"CensusYear"`
       RoundCode *String `xml:"RoundCode" json:"RoundCode"`
