@@ -175,7 +175,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0802 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0109 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -1703,6 +1703,7 @@ var test_StudentGrade = `    <StudentGrade RefId="359D7510-1AD0-A9D7-A8C3-DAD0A8
         <Letter>C</Letter>
         <Narrative>Johnny is only achieving average performance.</Narrative>
       </Grade>
+	  <TeacherJudgement>Johnny is having challenges with the astronomy module.</TeacherJudgement>
  	  <TermSpan>0828</TermSpan>
 	  <SchoolYear>2021</SchoolYear>
    </StudentGrade>
@@ -1734,7 +1735,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0130 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0752 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -1996,6 +1997,13 @@ var test_StudentScoreJudgementAgainstStandardExample2NopreviousSIFObjectsPublish
       <CurriculumCode>AUSVELS</CurriculumCode>
       <CurriculumNodeCode>MATNUM</CurriculumNodeCode>
       <Score>10</Score>
+      <Grade>
+        <Percentage>79</Percentage>
+        <Numeric>3.0</Numeric>
+        <Letter>C</Letter>
+        <Narrative>Johnny is only achieving average performance.</Narrative>
+      </Grade>
+	  <TeacherJudgement>Johnny is having challenges with the astronomy module.</TeacherJudgement>
       <SpecialCircumstanceLocalCode>SCMP</SpecialCircumstanceLocalCode>
       <ManagedPathwayLocalCode>MPOMP</ManagedPathwayLocalCode>
       <SchoolLocalId>027789</SchoolLocalId>
@@ -4335,7 +4343,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0954 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0331 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>

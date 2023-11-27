@@ -49,7 +49,7 @@ package sifxml
       SchoolGeographicLocation *AUCodeSetsSchoolLocationType `xml:"SchoolGeographicLocation,omitempty" json:"SchoolGeographicLocation,omitempty"`
       LocalGovernmentArea *String `xml:"LocalGovernmentArea,omitempty" json:"LocalGovernmentArea,omitempty"`
       JurisdictionLowerHouse *String `xml:"JurisdictionLowerHouse,omitempty" json:"JurisdictionLowerHouse,omitempty"`
-      SLA *AUCodeSetsAustralianStandardGeographicalClassificationASGCType `xml:"SLA,omitempty" json:"SLA,omitempty"`
+      SLA *String `xml:"SLA,omitempty" json:"SLA,omitempty"`
       SchoolCoEdStatus *AUCodeSetsSchoolCoEdStatusType `xml:"SchoolCoEdStatus,omitempty" json:"SchoolCoEdStatus,omitempty"`
       BoardingSchoolStatus *AUCodeSetsYesOrNoCategoryType `xml:"BoardingSchoolStatus,omitempty" json:"BoardingSchoolStatus,omitempty"`
       YearLevelEnrollmentList *YearLevelEnrollmentListType `xml:"YearLevelEnrollmentList,omitempty" json:"YearLevelEnrollmentList,omitempty"`

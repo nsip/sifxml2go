@@ -31,6 +31,8 @@ package sifxml
       CurriculumCode *LocalIdType `xml:"CurriculumCode,omitempty" json:"CurriculumCode,omitempty"`
       CurriculumNodeCode *LocalIdType `xml:"CurriculumNodeCode,omitempty" json:"CurriculumNodeCode,omitempty"`
       Score *String `xml:"Score" json:"Score"`
+      Grade *GradeType `xml:"Grade,omitempty" json:"Grade,omitempty"`
+      TeacherJudgement *String `xml:"TeacherJudgement,omitempty" json:"TeacherJudgement,omitempty"`
       SpecialCircumstanceLocalCode *LocalIdType `xml:"SpecialCircumstanceLocalCode,omitempty" json:"SpecialCircumstanceLocalCode,omitempty"`
       ManagedPathwayLocalCode *LocalIdType `xml:"ManagedPathwayLocalCode,omitempty" json:"ManagedPathwayLocalCode,omitempty"`
       SchoolInfoRefId *String `xml:"SchoolInfoRefId,omitempty" json:"SchoolInfoRefId,omitempty"`

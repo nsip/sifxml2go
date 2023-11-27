@@ -33272,35 +33272,6 @@ switch t := value.(type) {
 
 
 // Return string value
-func (t *AUCodeSetsAustralianStandardGeographicalClassificationASGCType) String() string {
-  return fmt.Sprint(reflect.ValueOf(*t))
-  }
-
-// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
-// the value mismatches AUCodeSetsAustralianStandardGeographicalClassificationASGCType. In the case of aliased types, accepts primitive values and converts them to the required alias.
-func AUCodeSetsAustralianStandardGeographicalClassificationASGCTypePointer(value interface{}) (*AUCodeSetsAustralianStandardGeographicalClassificationASGCType, bool) {
-switch t := value.(type) {
- 	case *AUCodeSetsAustralianStandardGeographicalClassificationASGCType:
- 		return value.(*AUCodeSetsAustralianStandardGeographicalClassificationASGCType), true
-        case AUCodeSetsAustralianStandardGeographicalClassificationASGCType:
- 		v, _ := value.(AUCodeSetsAustralianStandardGeographicalClassificationASGCType)
- 		return &v, true
- 	case *string:
- 		vstr, _ := value.(*string)
- 		v := AUCodeSetsAustralianStandardGeographicalClassificationASGCType(*vstr)
- 		return &v, true
- 	case string:
- 		vstr, _ := value.(string)
- 		v := AUCodeSetsAustralianStandardGeographicalClassificationASGCType(vstr)
- 		return &v, true
- 	default:
- 		fmt.Printf("Warning: cannot resolve %T (%v) to AUCodeSetsAustralianStandardGeographicalClassificationASGCType\n", t, value)
- 	}
- 	return nil, false
-  }
-
-
-// Return string value
 func (t *AUCodeSetsAustralianTimeZoneType) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
@@ -54878,12 +54849,9 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
       n.leainfo.SIF_Metadata = v
       }
     case "SLA":
-        if !CodesetContains(AUCodeSetsAustralianStandardGeographicalClassificationASGCType_map, value) {
-      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardGeographicalClassificationASGCType_values")
-      }
-
+    
     if v, ok:= StringPointer(value); ok {
-      n.leainfo.SLA = ((*AUCodeSetsAustralianStandardGeographicalClassificationASGCType)(v))
+      n.leainfo.SLA = ((*String)(v))
       }
     case "StateProvinceId":
     
@@ -55079,10 +55047,10 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
     return s.leainfo.SIF_Metadata == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *LEAInfo) SLA() *AUCodeSetsAustralianStandardGeographicalClassificationASGCType {
+  func (s *LEAInfo) SLA() *String {
     if s.leainfo.SLA == nil {
     if v, ok:= StringPointer(""); ok {
-      s.leainfo.SLA = ((*AUCodeSetsAustralianStandardGeographicalClassificationASGCType)(v))
+      s.leainfo.SLA = ((*String)(v))
       }
       }
       return s.leainfo.SLA
@@ -71441,12 +71409,9 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SIF_Metadata = v
       }
     case "SLA":
-        if !CodesetContains(AUCodeSetsAustralianStandardGeographicalClassificationASGCType_map, value) {
-      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardGeographicalClassificationASGCType_values")
-      }
-
+    
     if v, ok:= StringPointer(value); ok {
-      n.schoolinfo.SLA = ((*AUCodeSetsAustralianStandardGeographicalClassificationASGCType)(v))
+      n.schoolinfo.SLA = ((*String)(v))
       }
     case "SchoolCoEdStatus":
         if !CodesetContains(AUCodeSetsSchoolCoEdStatusType_map, value) {
@@ -71902,10 +71867,10 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
     return s.schoolinfo.SIF_Metadata == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *SchoolInfo) SLA() *AUCodeSetsAustralianStandardGeographicalClassificationASGCType {
+  func (s *SchoolInfo) SLA() *String {
     if s.schoolinfo.SLA == nil {
     if v, ok:= StringPointer(""); ok {
-      s.schoolinfo.SLA = ((*AUCodeSetsAustralianStandardGeographicalClassificationASGCType)(v))
+      s.schoolinfo.SLA = ((*String)(v))
       }
       }
       return s.schoolinfo.SLA
@@ -83797,6 +83762,8 @@ func (n *StudentScoreJudgementAgainstStandard) Unset(key string) *StudentScoreJu
    n.studentscorejudgementagainststandard.CurriculumCode = nil
   case "CurriculumNodeCode":
    n.studentscorejudgementagainststandard.CurriculumNodeCode = nil
+  case "Grade":
+   n.studentscorejudgementagainststandard.Grade = nil
   case "LearningStandardList":
    n.studentscorejudgementagainststandard.LearningStandardList = nil
   case "LocalCodeList":
@@ -83833,6 +83800,8 @@ func (n *StudentScoreJudgementAgainstStandard) Unset(key string) *StudentScoreJu
    n.studentscorejudgementagainststandard.StudentPersonalRefId = nil
   case "StudentStateProvinceId":
    n.studentscorejudgementagainststandard.StudentStateProvinceId = nil
+  case "TeacherJudgement":
+   n.studentscorejudgementagainststandard.TeacherJudgement = nil
   case "TeachingGroupRefId":
    n.studentscorejudgementagainststandard.TeachingGroupRefId = nil
   case "TermInfoRefId":
@@ -83874,6 +83843,10 @@ func (n *StudentScoreJudgementAgainstStandard) SetProperty(key string, value int
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.CurriculumNodeCode = ((*LocalIdType)(v))
+      }
+    case "Grade":
+    if v, ok:= GradeTypePointer(value); ok {
+      n.studentscorejudgementagainststandard.Grade = v
       }
     case "LearningStandardList":
     if v, ok:= LearningStandardListTypePointer(value); ok {
@@ -83961,6 +83934,11 @@ func (n *StudentScoreJudgementAgainstStandard) SetProperty(key string, value int
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.StudentStateProvinceId = ((*StateProvinceIdType)(v))
       }
+    case "TeacherJudgement":
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentscorejudgementagainststandard.TeacherJudgement = ((*String)(v))
+      }
     case "TeachingGroupRefId":
     
     if v, ok:= StringPointer(value); ok {
@@ -84019,6 +83997,19 @@ func (n *StudentScoreJudgementAgainstStandard) SetProperty(key string, value int
 // Returns whether the element value for CurriculumNodeCode is nil in the container StudentScoreJudgementAgainstStandard.
   func (s *StudentScoreJudgementAgainstStandard) CurriculumNodeCode_IsNil() bool {
     return s.studentscorejudgementagainststandard.CurriculumNodeCode == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentScoreJudgementAgainstStandard) Grade() *GradeType {
+    if s.studentscorejudgementagainststandard.Grade == nil {
+     if v, ok:= GradeTypePointer(GradeType{}); ok {
+      s.studentscorejudgementagainststandard.Grade = v
+      }
+      }
+      return s.studentscorejudgementagainststandard.Grade
+    }
+// Returns whether the element value for Grade is nil in the container StudentScoreJudgementAgainstStandard.
+  func (s *StudentScoreJudgementAgainstStandard) Grade_IsNil() bool {
+    return s.studentscorejudgementagainststandard.Grade == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentScoreJudgementAgainstStandard) LearningStandardList() *LearningStandardListType {
@@ -84253,6 +84244,19 @@ func (n *StudentScoreJudgementAgainstStandard) SetProperty(key string, value int
 // Returns whether the element value for StudentStateProvinceId is nil in the container StudentScoreJudgementAgainstStandard.
   func (s *StudentScoreJudgementAgainstStandard) StudentStateProvinceId_IsNil() bool {
     return s.studentscorejudgementagainststandard.StudentStateProvinceId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentScoreJudgementAgainstStandard) TeacherJudgement() *String {
+    if s.studentscorejudgementagainststandard.TeacherJudgement == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentscorejudgementagainststandard.TeacherJudgement = ((*String)(v))
+      }
+      }
+      return s.studentscorejudgementagainststandard.TeacherJudgement
+    }
+// Returns whether the element value for TeacherJudgement is nil in the container StudentScoreJudgementAgainstStandard.
+  func (s *StudentScoreJudgementAgainstStandard) TeacherJudgement_IsNil() bool {
+    return s.studentscorejudgementagainststandard.TeacherJudgement == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentScoreJudgementAgainstStandard) TeachingGroupRefId() *String {

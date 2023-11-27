@@ -216,7 +216,7 @@ type Identity_SIF_RefId {
       AddressList: AddressListType OPT 
       OperationalStatus: OperationalStatusType OPT 
       JurisdictionLowerHouse: String OPT 
-      SLA: AUCodeSetsAustralianStandardGeographicalClassificationASGCType OPT 
+      SLA: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -517,7 +517,7 @@ type ResourceBooking_ResourceRefId {
       SchoolGeographicLocation: AUCodeSetsSchoolLocationType OPT 
       LocalGovernmentArea: String OPT 
       JurisdictionLowerHouse: String OPT 
-      SLA: AUCodeSetsAustralianStandardGeographicalClassificationASGCType OPT 
+      SLA: String OPT 
       SchoolCoEdStatus: AUCodeSetsSchoolCoEdStatusType OPT 
       BoardingSchoolStatus: AUCodeSetsYesOrNoCategoryType OPT 
       YearLevelEnrollmentList: YearLevelEnrollmentListType OPT 
@@ -970,6 +970,8 @@ type StudentSchoolEnrollment_Calendar {
       CurriculumCode: LocalIdType OPT 
       CurriculumNodeCode: LocalIdType OPT 
       Score: String 
+      Grade: GradeType OPT 
+      TeacherJudgement: String OPT 
       SpecialCircumstanceLocalCode: LocalIdType OPT 
       ManagedPathwayLocalCode: LocalIdType OPT 
       SchoolInfoRefId: String OPT 

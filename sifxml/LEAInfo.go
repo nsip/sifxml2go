@@ -27,7 +27,7 @@ package sifxml
       AddressList *AddressListType `xml:"AddressList,omitempty" json:"AddressList,omitempty"`
       OperationalStatus *OperationalStatusType `xml:"OperationalStatus,omitempty" json:"OperationalStatus,omitempty"`
       JurisdictionLowerHouse *String `xml:"JurisdictionLowerHouse,omitempty" json:"JurisdictionLowerHouse,omitempty"`
-      SLA *AUCodeSetsAustralianStandardGeographicalClassificationASGCType `xml:"SLA,omitempty" json:"SLA,omitempty"`
+      SLA *String `xml:"SLA,omitempty" json:"SLA,omitempty"`
       LocalCodeList *LocalCodeListType `xml:"LocalCodeList,omitempty" json:"LocalCodeList,omitempty"`
       SIF_Metadata *SIF_MetadataType `xml:"SIF_Metadata,omitempty" json:"SIF_Metadata,omitempty"`
       SIF_ExtendedElements *SIF_ExtendedElementsType `xml:"SIF_ExtendedElements,omitempty" json:"SIF_ExtendedElements,omitempty"`
