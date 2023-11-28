@@ -14695,7 +14695,8 @@ func (t *ACStrandAreaListType) Len() int {
 func (t *ACStrandAreaListType) ToSlice() []*ACStrandSubjectAreaType {
   ret := make([]*ACStrandSubjectAreaType, 0)
   for _, x:= range t.ACStrandSubjectArea {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -14761,7 +14762,8 @@ func (t *AGContextualQuestionListType) Len() int {
 func (t *AGContextualQuestionListType) ToSlice() []*AGContextualQuestionType {
   ret := make([]*AGContextualQuestionType, 0)
   for _, x:= range t.AGContextualQuestion {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -14827,7 +14829,8 @@ func (t *AGReportingObjectResponseListType) Len() int {
 func (t *AGReportingObjectResponseListType) ToSlice() []*AGReportingObjectResponseType {
   ret := make([]*AGReportingObjectResponseType, 0)
   for _, x:= range t.AGReportingObjectResponse {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -14893,7 +14896,8 @@ func (t *AGRoundListType) Len() int {
 func (t *AGRoundListType) ToSlice() []*AGRoundType {
   ret := make([]*AGRoundType, 0)
   for _, x:= range t.AGRound {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -14959,7 +14963,8 @@ func (t *AGRuleListType) Len() int {
 func (t *AGRuleListType) ToSlice() []*AGRuleType {
   ret := make([]*AGRuleType, 0)
   for _, x:= range t.AGRule {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15025,7 +15030,8 @@ func (t *AccountCodeListType) Len() int {
 func (t *AccountCodeListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.AccountCode {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15095,7 +15101,8 @@ func (t *AddressCollectionReportingListType) Len() int {
 func (t *AddressCollectionReportingListType) ToSlice() []*AddressCollectionReportingType {
   ret := make([]*AddressCollectionReportingType, 0)
   for _, x:= range t.AddressCollectionReporting {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15161,7 +15168,8 @@ func (t *AddressCollectionStudentListType) Len() int {
 func (t *AddressCollectionStudentListType) ToSlice() []*AddressCollectionStudentType {
   ret := make([]*AddressCollectionStudentType, 0)
   for _, x:= range t.AddressCollectionStudent {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15227,7 +15235,8 @@ func (t *AddressListType) Len() int {
 func (t *AddressListType) ToSlice() []*AddressType {
   ret := make([]*AddressType, 0)
   for _, x:= range t.Address {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15293,7 +15302,8 @@ func (t *AlertMessagesType) Len() int {
 func (t *AlertMessagesType) ToSlice() []*AlertMessageType {
   ret := make([]*AlertMessageType, 0)
   for _, x:= range t.AlertMessage {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15359,7 +15369,8 @@ func (t *AlternateIdentificationCodeListType) Len() int {
 func (t *AlternateIdentificationCodeListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.AlternateIdentificationCode {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15429,7 +15440,8 @@ func (t *ApplicableLawListType) Len() int {
 func (t *ApplicableLawListType) ToSlice() []*ApplicableLawType {
   ret := make([]*ApplicableLawType, 0)
   for _, x:= range t.ApplicableLaw {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15495,7 +15507,8 @@ func (t *ApprovalsType) Len() int {
 func (t *ApprovalsType) ToSlice() []*ApprovalType {
   ret := make([]*ApprovalType, 0)
   for _, x:= range t.Approval {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15561,7 +15574,8 @@ func (t *AssignmentListType) Len() int {
 func (t *AssignmentListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.GradingAssignmentRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15631,7 +15645,8 @@ func (t *AssociatedObjectsType) Len() int {
 func (t *AssociatedObjectsType) ToSlice() []*AssociatedObjectsType_AssociatedObject {
   ret := make([]*AssociatedObjectsType_AssociatedObject, 0)
   for _, x:= range t.AssociatedObject {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15697,7 +15712,8 @@ func (t *AttendanceTimesType) Len() int {
 func (t *AttendanceTimesType) ToSlice() []*AttendanceTimeType {
   ret := make([]*AttendanceTimeType, 0)
   for _, x:= range t.AttendanceTime {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15763,7 +15779,8 @@ func (t *AuthorsType) Len() int {
 func (t *AuthorsType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.Author {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15833,7 +15850,8 @@ func (t *CalendarSummaryListType) Len() int {
 func (t *CalendarSummaryListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.CalendarSummaryRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15903,7 +15921,8 @@ func (t *CensusReportingListType) Len() int {
 func (t *CensusReportingListType) ToSlice() []*CensusReportingType {
   ret := make([]*CensusReportingType, 0)
   for _, x:= range t.CensusReporting {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -15969,7 +15988,8 @@ func (t *CensusStaffListType) Len() int {
 func (t *CensusStaffListType) ToSlice() []*CensusStaffType {
   ret := make([]*CensusStaffType, 0)
   for _, x:= range t.CensusStaff {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16035,7 +16055,8 @@ func (t *CensusStudentListType) Len() int {
 func (t *CensusStudentListType) ToSlice() []*CensusStudentType {
   ret := make([]*CensusStudentType, 0)
   for _, x:= range t.CensusStudent {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16101,7 +16122,8 @@ func (t *CharacteristicsType) Len() int {
 func (t *CharacteristicsType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.AggregateCharacteristicInfoRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16171,7 +16193,8 @@ func (t *CodeFrameTestItemListType) Len() int {
 func (t *CodeFrameTestItemListType) ToSlice() []*CodeFrameTestItemType {
   ret := make([]*CodeFrameTestItemType, 0)
   for _, x:= range t.TestItem {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16237,7 +16260,8 @@ func (t *ComponentsType) Len() int {
 func (t *ComponentsType) ToSlice() []*ComponentType {
   ret := make([]*ComponentType, 0)
   for _, x:= range t.Component {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16303,7 +16327,8 @@ func (t *ContactsType) Len() int {
 func (t *ContactsType) ToSlice() []*ContactType {
   ret := make([]*ContactType, 0)
   for _, x:= range t.Contact {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16369,7 +16394,8 @@ func (t *ContentDescriptionListType) Len() int {
 func (t *ContentDescriptionListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.ContentDescription {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16439,7 +16465,8 @@ func (t *CountryList2Type) Len() int {
 func (t *CountryList2Type) ToSlice() []*CountryType {
   ret := make([]*CountryType, 0)
   for _, x:= range t.CountryOfResidency {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16509,7 +16536,8 @@ func (t *CountryListType) Len() int {
 func (t *CountryListType) ToSlice() []*CountryType {
   ret := make([]*CountryType, 0)
   for _, x:= range t.CountryOfCitizenship {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16579,7 +16607,8 @@ func (t *CreatorListType) Len() int {
 func (t *CreatorListType) ToSlice() []*LifeCycleCreatorType {
   ret := make([]*LifeCycleCreatorType, 0)
   for _, x:= range t.Creator {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16645,7 +16674,8 @@ func (t *DataDomainObligationListType) Len() int {
 func (t *DataDomainObligationListType) ToSlice() []*DataDomainObligationType {
   ret := make([]*DataDomainObligationType, 0)
   for _, x:= range t.DataDomainObligation {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16711,7 +16741,8 @@ func (t *DisabilityCategoryListType) Len() int {
 func (t *DisabilityCategoryListType) ToSlice() []*AUCodeSetsNCCDDisabilityType {
   ret := make([]*AUCodeSetsNCCDDisabilityType, 0)
   for _, x:= range t.DisabilityCategoryConsidered {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16781,7 +16812,8 @@ func (t *DoNotShareWithListType) Len() int {
 func (t *DoNotShareWithListType) ToSlice() []*DoNotShareWithType {
   ret := make([]*DoNotShareWithType, 0)
   for _, x:= range t.DoNotShareWith {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16847,7 +16879,8 @@ func (t *EducationalAssessmentListType) Len() int {
 func (t *EducationalAssessmentListType) ToSlice() []*EducationalAssessmentType {
   ret := make([]*EducationalAssessmentType, 0)
   for _, x:= range t.EducationalAssessment {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16913,7 +16946,8 @@ func (t *ElectronicIdListType) Len() int {
 func (t *ElectronicIdListType) ToSlice() []*ElectronicIdType {
   ret := make([]*ElectronicIdType, 0)
   for _, x:= range t.ElectronicId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -16979,7 +17013,8 @@ func (t *EmailListType) Len() int {
 func (t *EmailListType) ToSlice() []*EmailType {
   ret := make([]*EmailType, 0)
   for _, x:= range t.Email {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17045,7 +17080,8 @@ func (t *EssentialMaterialsType) Len() int {
 func (t *EssentialMaterialsType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.EssentialMaterial {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17115,7 +17151,8 @@ func (t *EvaluationsType) Len() int {
 func (t *EvaluationsType) ToSlice() []*EvaluationType {
   ret := make([]*EvaluationType, 0)
   for _, x:= range t.Evaluation {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17181,7 +17218,8 @@ func (t *ExclusionRulesType) Len() int {
 func (t *ExclusionRulesType) ToSlice() []*ExclusionRuleType {
   ret := make([]*ExclusionRuleType, 0)
   for _, x:= range t.ExclusionRule {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17247,7 +17285,8 @@ func (t *ExpenseAccountsType) Len() int {
 func (t *ExpenseAccountsType) ToSlice() []*ExpenseAccountType {
   ret := make([]*ExpenseAccountType, 0)
   for _, x:= range t.ExpenseAccount {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17313,7 +17352,8 @@ func (t *FQContextualQuestionListType) Len() int {
 func (t *FQContextualQuestionListType) ToSlice() []*FQContextualQuestionType {
   ret := make([]*FQContextualQuestionType, 0)
   for _, x:= range t.FQContextualQuestion {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17379,7 +17419,8 @@ func (t *FQItemListType) Len() int {
 func (t *FQItemListType) ToSlice() []*FQItemType {
   ret := make([]*FQItemType, 0)
   for _, x:= range t.FQItem {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17445,7 +17486,8 @@ func (t *FQReportingListType) Len() int {
 func (t *FQReportingListType) ToSlice() []*FQReportingType {
   ret := make([]*FQReportingType, 0)
   for _, x:= range t.FQReporting {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17511,7 +17553,8 @@ func (t *FinancialAccountRefIdListType) Len() int {
 func (t *FinancialAccountRefIdListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.FinancialAccountRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17581,7 +17624,8 @@ func (t *FineInfoListType) Len() int {
 func (t *FineInfoListType) ToSlice() []*FineInfoType {
   ret := make([]*FineInfoType, 0)
   for _, x:= range t.FineInfo {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17647,7 +17691,8 @@ func (t *FollowUpActionListType) Len() int {
 func (t *FollowUpActionListType) ToSlice() []*FollowUpActionType {
   ret := make([]*FollowUpActionType, 0)
   for _, x:= range t.FollowUpAction {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17713,7 +17758,8 @@ func (t *GradingScoreListType) Len() int {
 func (t *GradingScoreListType) ToSlice() []*AssignmentScoreType {
   ret := make([]*AssignmentScoreType, 0)
   for _, x:= range t.GradingAssignmentScore {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17779,7 +17825,8 @@ func (t *HoldInfoListType) Len() int {
 func (t *HoldInfoListType) ToSlice() []*HoldInfoType {
   ret := make([]*HoldInfoType, 0)
   for _, x:= range t.HoldInfo {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17845,7 +17892,8 @@ func (t *HouseholdContactInfoListType) Len() int {
 func (t *HouseholdContactInfoListType) ToSlice() []*HouseholdContactInfoType {
   ret := make([]*HouseholdContactInfoType, 0)
   for _, x:= range t.HouseholdContactInfo {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17911,7 +17959,8 @@ func (t *HouseholdListType) Len() int {
 func (t *HouseholdListType) ToSlice() []*LocalIdType {
   ret := make([]*LocalIdType, 0)
   for _, x:= range t.Household {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -17981,7 +18030,8 @@ func (t *IdentityAssertionsType) Len() int {
 func (t *IdentityAssertionsType) ToSlice() []*IdentityAssertionType {
   ret := make([]*IdentityAssertionType, 0)
   for _, x:= range t.IdentityAssertion {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18047,7 +18097,8 @@ func (t *JournalAdjustmentListType) Len() int {
 func (t *JournalAdjustmentListType) ToSlice() []*JournalAdjustmentType {
   ret := make([]*JournalAdjustmentType, 0)
   for _, x:= range t.JournalAdjustment {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18113,7 +18164,8 @@ func (t *LEAContactListType) Len() int {
 func (t *LEAContactListType) ToSlice() []*LEAContactType {
   ret := make([]*LEAContactType, 0)
   for _, x:= range t.LEAContact {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18179,7 +18231,8 @@ func (t *LResourcesType) Len() int {
 func (t *LResourcesType) ToSlice() []*ResourcesType {
   ret := make([]*ResourcesType, 0)
   for _, x:= range t.LearningResourceRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18245,7 +18298,8 @@ func (t *LanguageListType) Len() int {
 func (t *LanguageListType) ToSlice() []*LanguageBaseType {
   ret := make([]*LanguageBaseType, 0)
   for _, x:= range t.Language {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18311,7 +18365,8 @@ func (t *LearningObjectivesType) Len() int {
 func (t *LearningObjectivesType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.LearningObjective {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18381,7 +18436,8 @@ func (t *LearningResourcesType) Len() int {
 func (t *LearningResourcesType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.LearningResourceRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18451,7 +18507,8 @@ func (t *LearningStandardListType) Len() int {
 func (t *LearningStandardListType) ToSlice() []*LearningStandardType {
   ret := make([]*LearningStandardType, 0)
   for _, x:= range t.LearningStandard {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18517,7 +18574,8 @@ func (t *LearningStandardsDocumentType) Len() int {
 func (t *LearningStandardsDocumentType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.LearningStandardDocumentRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18587,7 +18645,8 @@ func (t *LearningStandardsType) Len() int {
 func (t *LearningStandardsType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.LearningStandardItemRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18657,7 +18716,8 @@ func (t *LibraryMessageListType) Len() int {
 func (t *LibraryMessageListType) ToSlice() []*LibraryMessageType {
   ret := make([]*LibraryMessageType, 0)
   for _, x:= range t.Message {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18723,7 +18783,8 @@ func (t *LibraryTransactionListType) Len() int {
 func (t *LibraryTransactionListType) ToSlice() []*LibraryTransactionType {
   ret := make([]*LibraryTransactionType, 0)
   for _, x:= range t.Transaction {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18789,7 +18850,8 @@ func (t *LocalCodeListType) Len() int {
 func (t *LocalCodeListType) ToSlice() []*LocalCodeType {
   ret := make([]*LocalCodeType, 0)
   for _, x:= range t.LocalCode {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18855,7 +18917,8 @@ func (t *MediaTypesType) Len() int {
 func (t *MediaTypesType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.MediaType {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18925,7 +18988,8 @@ func (t *MedicalAlertMessagesType) Len() int {
 func (t *MedicalAlertMessagesType) ToSlice() []*MedicalAlertMessageType {
   ret := make([]*MedicalAlertMessageType, 0)
   for _, x:= range t.MedicalAlertMessage {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -18991,7 +19055,8 @@ func (t *MedicationListType) Len() int {
 func (t *MedicationListType) ToSlice() []*MedicationType {
   ret := make([]*MedicationType, 0)
   for _, x:= range t.Medication {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19057,7 +19122,8 @@ func (t *ModifiedListType) Len() int {
 func (t *ModifiedListType) ToSlice() []*ModifiedType {
   ret := make([]*ModifiedType, 0)
   for _, x:= range t.Modified {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19123,7 +19189,8 @@ func (t *NAPCodeFrameTestletListType) Len() int {
 func (t *NAPCodeFrameTestletListType) ToSlice() []*NAPTestletCodeFrameType {
   ret := make([]*NAPTestletCodeFrameType, 0)
   for _, x:= range t.Testlet {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19189,7 +19256,8 @@ func (t *NAPLANClassListType) Len() int {
 func (t *NAPLANClassListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.ClassCode {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19259,7 +19327,8 @@ func (t *NAPLANScoreListType) Len() int {
 func (t *NAPLANScoreListType) ToSlice() []*NAPLANScoreType {
   ret := make([]*NAPLANScoreType, 0)
   for _, x:= range t.NAPLANScore {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19325,7 +19394,8 @@ func (t *NAPLANScoreWithYearsListType) Len() int {
 func (t *NAPLANScoreWithYearsListType) ToSlice() []*NAPLANScoreWithYearsType {
   ret := make([]*NAPLANScoreWithYearsType, 0)
   for _, x:= range t.NAPLANScore {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19391,7 +19461,8 @@ func (t *NAPStudentResponseTestletListType) Len() int {
 func (t *NAPStudentResponseTestletListType) ToSlice() []*NAPTestletResponseType {
   ret := make([]*NAPTestletResponseType, 0)
   for _, x:= range t.Testlet {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19457,7 +19528,8 @@ func (t *NAPSubscoreListType) Len() int {
 func (t *NAPSubscoreListType) ToSlice() []*NAPSubscoreType {
   ret := make([]*NAPSubscoreType, 0)
   for _, x:= range t.Subscore {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19523,7 +19595,8 @@ func (t *NAPTestItemListType) Len() int {
 func (t *NAPTestItemListType) ToSlice() []*NAPTestItem2Type {
   ret := make([]*NAPTestItem2Type, 0)
   for _, x:= range t.TestItem {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19589,7 +19662,8 @@ func (t *NAPTestletItemResponseListType) Len() int {
 func (t *NAPTestletItemResponseListType) ToSlice() []*NAPTestletResponseItemType {
   ret := make([]*NAPTestletResponseItemType, 0)
   for _, x:= range t.ItemResponse {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19655,7 +19729,8 @@ func (t *NAPWritingRubricListType) Len() int {
 func (t *NAPWritingRubricListType) ToSlice() []*NAPWritingRubricType {
   ret := make([]*NAPWritingRubricType, 0)
   for _, x:= range t.NAPWritingRubric {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19721,7 +19796,8 @@ func (t *NCCDListType) Len() int {
 func (t *NCCDListType) ToSlice() []*NCCDType {
   ret := make([]*NCCDType, 0)
   for _, x:= range t.NCCD {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19787,7 +19863,8 @@ func (t *NeverShareWithListType) Len() int {
 func (t *NeverShareWithListType) ToSlice() []*NeverShareWithType {
   ret := make([]*NeverShareWithType, 0)
   for _, x:= range t.NeverShareWith {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19853,7 +19930,8 @@ func (t *OrganizationsType) Len() int {
 func (t *OrganizationsType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.Organization {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19923,7 +20001,8 @@ func (t *OtherCodeListType) Len() int {
 func (t *OtherCodeListType) ToSlice() []*OtherCodeListType_OtherCode {
   ret := make([]*OtherCodeListType_OtherCode, 0)
   for _, x:= range t.OtherCode {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -19989,7 +20068,8 @@ func (t *OtherIdListType) Len() int {
 func (t *OtherIdListType) ToSlice() []*OtherIdType {
   ret := make([]*OtherIdType, 0)
   for _, x:= range t.OtherId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20055,7 +20135,8 @@ func (t *OtherNamesType) Len() int {
 func (t *OtherNamesType) ToSlice() []*OtherNameType {
   ret := make([]*OtherNameType, 0)
   for _, x:= range t.Name {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20121,7 +20202,8 @@ func (t *PNPCodeListType) Len() int {
 func (t *PNPCodeListType) ToSlice() []*AUCodeSetsPNPCodeType {
   ret := make([]*AUCodeSetsPNPCodeType, 0)
   for _, x:= range t.PNPCode {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20191,7 +20273,8 @@ func (t *PasswordListType) Len() int {
 func (t *PasswordListType) ToSlice() []*PasswordListType_Password {
   ret := make([]*PasswordListType_Password, 0)
   for _, x:= range t.Password {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20257,7 +20340,8 @@ func (t *PaymentReceiptLineListType) Len() int {
 func (t *PaymentReceiptLineListType) ToSlice() []*PaymentReceiptLineType {
   ret := make([]*PaymentReceiptLineType, 0)
   for _, x:= range t.PaymentReceiptLine {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20323,7 +20407,8 @@ func (t *PeriodAttendancesType) Len() int {
 func (t *PeriodAttendancesType) ToSlice() []*PeriodAttendanceType {
   ret := make([]*PeriodAttendanceType, 0)
   for _, x:= range t.PeriodAttendance {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20389,7 +20474,8 @@ func (t *PermissionToParticipateListType) Len() int {
 func (t *PermissionToParticipateListType) ToSlice() []*PermissionToParticipateType {
   ret := make([]*PermissionToParticipateType, 0)
   for _, x:= range t.PermissionToParticipate {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20455,7 +20541,8 @@ func (t *PersonInvolvementListType) Len() int {
 func (t *PersonInvolvementListType) ToSlice() []*PersonInvolvementType {
   ret := make([]*PersonInvolvementType, 0)
   for _, x:= range t.PersonInvolvement {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20521,7 +20608,8 @@ func (t *PhoneNumberListType) Len() int {
 func (t *PhoneNumberListType) ToSlice() []*PhoneNumberType {
   ret := make([]*PhoneNumberType, 0)
   for _, x:= range t.PhoneNumber {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20587,7 +20675,8 @@ func (t *PlanRequiredListType) Len() int {
 func (t *PlanRequiredListType) ToSlice() []*WellbeingPlanType {
   ret := make([]*WellbeingPlanType, 0)
   for _, x:= range t.Plan {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20653,7 +20742,8 @@ func (t *PlausibleScaledValueListType) Len() int {
 func (t *PlausibleScaledValueListType) ToSlice() []*float64 {
   ret := make([]*float64, 0)
   for _, x:= range t.PlausibleScaledValue {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20719,7 +20809,8 @@ func (t *PrerequisitesType) Len() int {
 func (t *PrerequisitesType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.Prerequisite {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20789,7 +20880,8 @@ func (t *PreviousSchoolListType) Len() int {
 func (t *PreviousSchoolListType) ToSlice() []*PreviousSchoolType {
   ret := make([]*PreviousSchoolType, 0)
   for _, x:= range t.PreviousSchool {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20855,7 +20947,8 @@ func (t *ProgramFundingSourcesType) Len() int {
 func (t *ProgramFundingSourcesType) ToSlice() []*ProgramFundingSourceType {
   ret := make([]*ProgramFundingSourceType, 0)
   for _, x:= range t.ProgramFundingSource {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20921,7 +21014,8 @@ func (t *PublishingPermissionListType) Len() int {
 func (t *PublishingPermissionListType) ToSlice() []*PublishingPermissionType {
   ret := make([]*PublishingPermissionType, 0)
   for _, x:= range t.PublishingPermission {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -20987,7 +21081,8 @@ func (t *PurchasingItemsType) Len() int {
 func (t *PurchasingItemsType) ToSlice() []*PurchasingItemType {
   ret := make([]*PurchasingItemType, 0)
   for _, x:= range t.PurchasingItem {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21053,7 +21148,8 @@ func (t *RecognitionListType) Len() int {
 func (t *RecognitionListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.Recognition {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21123,7 +21219,8 @@ func (t *RelatedLearningStandardItemRefIdListType) Len() int {
 func (t *RelatedLearningStandardItemRefIdListType) ToSlice() []*RelatedLearningStandardItemRefIdType {
   ret := make([]*RelatedLearningStandardItemRefIdType, 0)
   for _, x:= range t.LearningStandardItemRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21189,7 +21286,8 @@ func (t *ReligiousEventListType) Len() int {
 func (t *ReligiousEventListType) ToSlice() []*ReligiousEventType {
   ret := make([]*ReligiousEventType, 0)
   for _, x:= range t.ReligiousEvent {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21255,7 +21353,8 @@ func (t *ReportingAuthorityListType) Len() int {
 func (t *ReportingAuthorityListType) ToSlice() []*ReportingAuthorityType {
   ret := make([]*ReportingAuthorityType, 0)
   for _, x:= range t.ReportingAuthority {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21321,7 +21420,8 @@ func (t *RoomListType) Len() int {
 func (t *RoomListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.RoomInfoRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21391,7 +21491,8 @@ func (t *SIF_ExtendedElementsType) Len() int {
 func (t *SIF_ExtendedElementsType) ToSlice() []*SIF_ExtendedElementsType_SIF_ExtendedElement {
   ret := make([]*SIF_ExtendedElementsType_SIF_ExtendedElement, 0)
   for _, x:= range t.SIF_ExtendedElement {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21457,7 +21558,8 @@ func (t *STDNGradeListType) Len() int {
 func (t *STDNGradeListType) ToSlice() []*STDNGradeType {
   ret := make([]*STDNGradeType, 0)
   for _, x:= range t.StudentGrade {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21523,7 +21625,8 @@ func (t *ScheduledTeacherListType) Len() int {
 func (t *ScheduledTeacherListType) ToSlice() []*TeacherCoverType {
   ret := make([]*TeacherCoverType, 0)
   for _, x:= range t.TeacherCover {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21589,7 +21692,8 @@ func (t *SchoolContactListType) Len() int {
 func (t *SchoolContactListType) ToSlice() []*SchoolContactType {
   ret := make([]*SchoolContactType, 0)
   for _, x:= range t.SchoolContact {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21655,7 +21759,8 @@ func (t *SchoolFocusListType) Len() int {
 func (t *SchoolFocusListType) ToSlice() []*AUCodeSetsSchoolFocusCodeType {
   ret := make([]*AUCodeSetsSchoolFocusCodeType, 0)
   for _, x:= range t.SchoolFocus {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21725,7 +21830,8 @@ func (t *SchoolGroupListType) Len() int {
 func (t *SchoolGroupListType) ToSlice() []*LocalIdType {
   ret := make([]*LocalIdType, 0)
   for _, x:= range t.SchoolGroup {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21795,7 +21901,8 @@ func (t *SchoolProgramListType) Len() int {
 func (t *SchoolProgramListType) ToSlice() []*SchoolProgramType {
   ret := make([]*SchoolProgramType, 0)
   for _, x:= range t.Program {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21861,7 +21968,8 @@ func (t *ScoreDescriptionListType) Len() int {
 func (t *ScoreDescriptionListType) ToSlice() []*ScoreDescriptionType {
   ret := make([]*ScoreDescriptionType, 0)
   for _, x:= range t.ScoreDescription {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21927,7 +22035,8 @@ func (t *ScoreListType) Len() int {
 func (t *ScoreListType) ToSlice() []*ScoreType {
   ret := make([]*ScoreType, 0)
   for _, x:= range t.Score {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -21993,7 +22102,8 @@ func (t *SettingLocationListType) Len() int {
 func (t *SettingLocationListType) ToSlice() []*SettingLocationType {
   ret := make([]*SettingLocationType, 0)
   for _, x:= range t.SettingLocation {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22059,7 +22169,8 @@ func (t *ShareWithListType) Len() int {
 func (t *ShareWithListType) ToSlice() []*ShareWithType {
   ret := make([]*ShareWithType, 0)
   for _, x:= range t.ShareWith {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22125,7 +22236,8 @@ func (t *SoftwareRequirementListType) Len() int {
 func (t *SoftwareRequirementListType) ToSlice() []*SoftwareRequirementType {
   ret := make([]*SoftwareRequirementType, 0)
   for _, x:= range t.SoftwareRequirement {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22191,7 +22303,8 @@ func (t *SourceObjectsType) Len() int {
 func (t *SourceObjectsType) ToSlice() []*SourceObjectsType_SourceObject {
   ret := make([]*SourceObjectsType_SourceObject, 0)
   for _, x:= range t.SourceObject {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22257,7 +22370,8 @@ func (t *SpanGapListType) Len() int {
 func (t *SpanGapListType) ToSlice() []*SpanGapType {
   ret := make([]*SpanGapType, 0)
   for _, x:= range t.SpanGap {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22323,7 +22437,8 @@ func (t *StaffListType) Len() int {
 func (t *StaffListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.StaffPersonalRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22393,7 +22508,8 @@ func (t *StaffSubjectListType) Len() int {
 func (t *StaffSubjectListType) ToSlice() []*StaffSubjectType {
   ret := make([]*StaffSubjectType, 0)
   for _, x:= range t.StaffSubject {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22459,7 +22575,8 @@ func (t *StatementCodesType) Len() int {
 func (t *StatementCodesType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.StatementCode {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22529,7 +22646,8 @@ func (t *StatementsType) Len() int {
 func (t *StatementsType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.Statement {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22599,7 +22717,8 @@ func (t *StatisticalAreasType) Len() int {
 func (t *StatisticalAreasType) ToSlice() []*StatisticalAreaType {
   ret := make([]*StatisticalAreaType, 0)
   for _, x:= range t.StatisticalArea {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22665,7 +22784,8 @@ func (t *StatsCohortListType) Len() int {
 func (t *StatsCohortListType) ToSlice() []*StatsCohortType {
   ret := make([]*StatsCohortType, 0)
   for _, x:= range t.StatsCohort {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22731,7 +22851,8 @@ func (t *StatsCohortYearLevelListType) Len() int {
 func (t *StatsCohortYearLevelListType) ToSlice() []*StatsCohortYearLevelType {
   ret := make([]*StatsCohortYearLevelType, 0)
   for _, x:= range t.StatsCohortYearLevel {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22797,7 +22918,8 @@ func (t *StimulusListType) Len() int {
 func (t *StimulusListType) ToSlice() []*StimulusType {
   ret := make([]*StimulusType, 0)
   for _, x:= range t.Stimulus {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22863,7 +22985,8 @@ func (t *StimulusLocalIdListType) Len() int {
 func (t *StimulusLocalIdListType) ToSlice() []*LocalIdType {
   ret := make([]*LocalIdType, 0)
   for _, x:= range t.StimulusLocalId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -22933,7 +23056,8 @@ func (t *StrategiesType) Len() int {
 func (t *StrategiesType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.Strategy {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23003,7 +23127,8 @@ func (t *StudentAttendanceCollectionReportingListType) Len() int {
 func (t *StudentAttendanceCollectionReportingListType) ToSlice() []*StudentAttendanceCollectionReportingType {
   ret := make([]*StudentAttendanceCollectionReportingType, 0)
   for _, x:= range t.StudentAttendanceCollectionReporting {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23069,7 +23194,8 @@ func (t *StudentGradeMarkersListType) Len() int {
 func (t *StudentGradeMarkersListType) ToSlice() []*MarkerType {
   ret := make([]*MarkerType, 0)
   for _, x:= range t.Marker {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23135,7 +23261,8 @@ func (t *StudentGroupListType) Len() int {
 func (t *StudentGroupListType) ToSlice() []*StudentGroupType {
   ret := make([]*StudentGroupType, 0)
   for _, x:= range t.StudentGroup {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23201,7 +23328,8 @@ func (t *StudentListType) Len() int {
 func (t *StudentListType) ToSlice() []*TeachingGroupStudentType {
   ret := make([]*TeachingGroupStudentType, 0)
   for _, x:= range t.TeachingGroupStudent {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23267,7 +23395,8 @@ func (t *StudentSubjectChoiceListType) Len() int {
 func (t *StudentSubjectChoiceListType) ToSlice() []*StudentSubjectChoiceType {
   ret := make([]*StudentSubjectChoiceType, 0)
   for _, x:= range t.StudentSubjectChoice {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23333,7 +23462,8 @@ func (t *StudentsType) Len() int {
 func (t *StudentsType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.StudentPersonalRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23403,7 +23533,8 @@ func (t *SubjectAreaListType) Len() int {
 func (t *SubjectAreaListType) ToSlice() []*SubjectAreaType {
   ret := make([]*SubjectAreaType, 0)
   for _, x:= range t.SubjectArea {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23469,7 +23600,8 @@ func (t *SubstituteItemListType) Len() int {
 func (t *SubstituteItemListType) ToSlice() []*SubstituteItemType {
   ret := make([]*SubstituteItemType, 0)
   for _, x:= range t.SubstituteItem {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23535,7 +23667,8 @@ func (t *SymptomListType) Len() int {
 func (t *SymptomListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.Symptom {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23605,7 +23738,8 @@ func (t *TeacherListType) Len() int {
 func (t *TeacherListType) ToSlice() []*TeachingGroupTeacherType {
   ret := make([]*TeachingGroupTeacherType, 0)
   for _, x:= range t.TeachingGroupTeacher {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23671,7 +23805,8 @@ func (t *TeachingGroupListType) Len() int {
 func (t *TeachingGroupListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.TeachingGroupRefId {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23741,7 +23876,8 @@ func (t *TeachingGroupPeriodListType) Len() int {
 func (t *TeachingGroupPeriodListType) ToSlice() []*TeachingGroupPeriodType {
   ret := make([]*TeachingGroupPeriodType, 0)
   for _, x:= range t.TeachingGroupPeriod {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23807,7 +23943,8 @@ func (t *TeachingGroupScheduleListType) Len() int {
 func (t *TeachingGroupScheduleListType) ToSlice() []*TeachingGroupScheduleType {
   ret := make([]*TeachingGroupScheduleType, 0)
   for _, x:= range t.TeachingGroupSchedule {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23873,7 +24010,8 @@ func (t *TestDisruptionListType) Len() int {
 func (t *TestDisruptionListType) ToSlice() []*TestDisruptionType {
   ret := make([]*TestDisruptionType, 0)
   for _, x:= range t.TestDisruption {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -23939,7 +24077,8 @@ func (t *TimeElementListType) Len() int {
 func (t *TimeElementListType) ToSlice() []*TimeElementType {
   ret := make([]*TimeElementType, 0)
   for _, x:= range t.TimeElement {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24005,7 +24144,8 @@ func (t *TimeTableChangeReasonListType) Len() int {
 func (t *TimeTableChangeReasonListType) ToSlice() []*TimeTableChangeReasonType {
   ret := make([]*TimeTableChangeReasonType, 0)
   for _, x:= range t.TimeTableChangeReason {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24071,7 +24211,8 @@ func (t *TimeTableDayListType) Len() int {
 func (t *TimeTableDayListType) ToSlice() []*TimeTableDayType {
   ret := make([]*TimeTableDayType, 0)
   for _, x:= range t.TimeTableDay {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24137,7 +24278,8 @@ func (t *TimeTablePeriodListType) Len() int {
 func (t *TimeTablePeriodListType) ToSlice() []*TimeTablePeriodType {
   ret := make([]*TimeTablePeriodType, 0)
   for _, x:= range t.TimeTablePeriod {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24203,7 +24345,8 @@ func (t *TimeTableScheduleCellListType) Len() int {
 func (t *TimeTableScheduleCellListType) ToSlice() []*TimeTableScheduleCellType {
   ret := make([]*TimeTableScheduleCellType, 0)
   for _, x:= range t.TimeTableScheduleCell {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24269,7 +24412,8 @@ func (t *ValidLetterMarkListType) Len() int {
 func (t *ValidLetterMarkListType) ToSlice() []*ValidLetterMarkType {
   ret := make([]*ValidLetterMarkType, 0)
   for _, x:= range t.ValidLetterMark {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24335,7 +24479,8 @@ func (t *VisaSubClassListType) Len() int {
 func (t *VisaSubClassListType) ToSlice() []*VisaSubClassType {
   ret := make([]*VisaSubClassType, 0)
   for _, x:= range t.VisaSubClass {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24401,7 +24546,8 @@ func (t *WellbeingDocumentListType) Len() int {
 func (t *WellbeingDocumentListType) ToSlice() []*WellbeingDocumentType {
   ret := make([]*WellbeingDocumentType, 0)
   for _, x:= range t.Document {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24467,7 +24613,8 @@ func (t *WellbeingEventCategoryListType) Len() int {
 func (t *WellbeingEventCategoryListType) ToSlice() []*WellbeingEventCategoryType {
   ret := make([]*WellbeingEventCategoryType, 0)
   for _, x:= range t.WellbeingEventCategory {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24533,7 +24680,8 @@ func (t *WellbeingEventSubCategoryListType) Len() int {
 func (t *WellbeingEventSubCategoryListType) ToSlice() []*string {
   ret := make([]*string, 0)
   for _, x:= range t.WellbeingEventSubCategory {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24603,7 +24751,8 @@ func (t *WithdrawalTimeListType) Len() int {
 func (t *WithdrawalTimeListType) ToSlice() []*WithdrawalType {
   ret := make([]*WithdrawalType, 0)
   for _, x:= range t.Withdrawal {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24669,7 +24818,8 @@ func (t *YearLevelEnrollmentListType) Len() int {
 func (t *YearLevelEnrollmentListType) ToSlice() []*YearLevelEnrollmentType {
   ret := make([]*YearLevelEnrollmentType, 0)
   for _, x:= range t.YearLevelEnrollment {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -24735,7 +24885,8 @@ func (t *YearLevelsType) Len() int {
 func (t *YearLevelsType) ToSlice() []*YearLevelType {
   ret := make([]*YearLevelType, 0)
   for _, x:= range t.YearLevel {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -37077,6 +37228,7 @@ func (n *ACStrandSubjectAreaType) SetProperty(key string, value interface{}) *AC
         }
         switch key {
     case "ACStrand":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsACStrandType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsACStrandType_values")
       }
@@ -37150,11 +37302,13 @@ func (n *AGContextualQuestionType) SetProperty(key string, value interface{}) *A
         }
         switch key {
     case "AGAnswer":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agcontextualquestiontype.AGAnswer = ((*String)(v))
       }
     case "AGContextCode":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAGContextQuestionType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAGContextQuestionType_values")
       }
@@ -37226,6 +37380,7 @@ func (n *AGParentType) SetProperty(key string, value interface{}) *AGParentType 
         }
         switch key {
     case "AddressSameAsStudent":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -37332,6 +37487,7 @@ func (n *AGReportingObjectResponseType) SetProperty(key string, value interface{
       n.agreportingobjectresponsetype.AGRuleList = v
       }
     case "AGSubmissionStatusCode":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAGSubmissionStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAGSubmissionStatusType_values")
       }
@@ -37340,31 +37496,37 @@ func (n *AGReportingObjectResponseType) SetProperty(key string, value interface{
       n.agreportingobjectresponsetype.AGSubmissionStatusCode = ((*AUCodeSetsAGSubmissionStatusType)(v))
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agreportingobjectresponsetype.CommonwealthId = ((*String)(v))
       }
     case "EntityName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agreportingobjectresponsetype.EntityName = ((*String)(v))
       }
     case "ErrorText":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agreportingobjectresponsetype.ErrorText = ((*String)(v))
       }
     case "HTTPStatusCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agreportingobjectresponsetype.HTTPStatusCode = ((*String)(v))
       }
     case "SIFRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agreportingobjectresponsetype.SIFRefId = ((*String)(v))
       }
     case "SubmittedRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agreportingobjectresponsetype.SubmittedRefId = ((*String)(v))
@@ -37515,26 +37677,31 @@ func (n *AGRoundType) SetProperty(key string, value interface{}) *AGRoundType {
         }
         switch key {
     case "DueDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agroundtype.DueDate = ((*String)(v))
       }
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agroundtype.EndDate = ((*String)(v))
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agroundtype.RoundCode = ((*String)(v))
       }
     case "RoundName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agroundtype.RoundName = ((*String)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agroundtype.StartDate = ((*String)(v))
@@ -37644,21 +37811,25 @@ func (n *AGRuleType) SetProperty(key string, value interface{}) *AGRuleType {
         }
         switch key {
     case "AGRuleCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agruletype.AGRuleCode = ((*String)(v))
       }
     case "AGRuleComment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agruletype.AGRuleComment = ((*String)(v))
       }
     case "AGRuleResponse":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agruletype.AGRuleResponse = ((*String)(v))
       }
     case "AGRuleStatus":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.agruletype.AGRuleStatus = ((*String)(v))
@@ -37761,6 +37932,7 @@ func (n *AbstractContentElementType) SetProperty(key string, value interface{}) 
       n.abstractcontentelementtype.BinaryData = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.abstractcontentelementtype.RefId = ((*RefIdType)(v))
@@ -37927,6 +38099,7 @@ func (n *Activity) SetProperty(key string, value interface{}) *Activity {
       n.activity.ActivityWeight = ((*Float)(v))
       }
     case "AssessmentRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activity.AssessmentRefId = ((*String)(v))
@@ -37966,6 +38139,7 @@ func (n *Activity) SetProperty(key string, value interface{}) *Activity {
       n.activity.Points = ((*Int)(v))
       }
     case "Preamble":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activity.Preamble = ((*String)(v))
@@ -37975,6 +38149,7 @@ func (n *Activity) SetProperty(key string, value interface{}) *Activity {
       n.activity.Prerequisites = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activity.RefId = ((*RefIdType)(v))
@@ -38008,6 +38183,7 @@ func (n *Activity) SetProperty(key string, value interface{}) *Activity {
       n.activity.TechnicalRequirements = v
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activity.Title = ((*String)(v))
@@ -38334,11 +38510,13 @@ func (n *ActivityEvaluationType) SetProperty(key string, value interface{}) *Act
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activityevaluationtype.Description = ((*String)(v))
       }
     case "EvaluationType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activityevaluationtype.EvaluationType = ((*String)(v))
@@ -38411,11 +38589,13 @@ func (n *ActivityTimeType) SetProperty(key string, value interface{}) *ActivityT
         }
         switch key {
     case "CreationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activitytimetype.CreationDate = ((*String)(v))
       }
     case "DueDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activitytimetype.DueDate = ((*String)(v))
@@ -38425,11 +38605,13 @@ func (n *ActivityTimeType) SetProperty(key string, value interface{}) *ActivityT
       n.activitytimetype.Duration = v
       }
     case "FinishDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activitytimetype.FinishDate = ((*String)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.activitytimetype.StartDate = ((*String)(v))
@@ -38551,6 +38733,7 @@ func (n *AddressCollection) SetProperty(key string, value interface{}) *AddressC
       n.addresscollection.AddressCollectionReportingList = v
       }
     case "AddressCollectionYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresscollection.AddressCollectionYear = ((*SchoolYearType)(v))
@@ -38560,11 +38743,13 @@ func (n *AddressCollection) SetProperty(key string, value interface{}) *AddressC
       n.addresscollection.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresscollection.RefId = ((*RefIdType)(v))
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresscollection.RoundCode = ((*String)(v))
@@ -38735,6 +38920,7 @@ func (n *AddressCollectionReportingType) SetProperty(key string, value interface
       n.addresscollectionreportingtype.AddressCollectionStudentList = v
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresscollectionreportingtype.CommonwealthId = ((*String)(v))
@@ -38744,6 +38930,7 @@ func (n *AddressCollectionReportingType) SetProperty(key string, value interface
       n.addresscollectionreportingtype.EntityContact = v
       }
     case "EntityName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresscollectionreportingtype.EntityName = ((*String)(v))
@@ -38859,6 +39046,7 @@ func (n *AddressCollectionStudentType) SetProperty(key string, value interface{}
         }
         switch key {
     case "BoardingStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsBoardingType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsBoardingType_values")
       }
@@ -38867,6 +39055,7 @@ func (n *AddressCollectionStudentType) SetProperty(key string, value interface{}
       n.addresscollectionstudenttype.BoardingStatus = ((*AUCodeSetsBoardingType)(v))
       }
     case "EducationLevel":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEducationLevelType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEducationLevelType_values")
       }
@@ -38875,6 +39064,7 @@ func (n *AddressCollectionStudentType) SetProperty(key string, value interface{}
       n.addresscollectionstudenttype.EducationLevel = ((*AUCodeSetsEducationLevelType)(v))
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresscollectionstudenttype.LocalId = ((*LocalIdType)(v))
@@ -38888,6 +39078,7 @@ func (n *AddressCollectionStudentType) SetProperty(key string, value interface{}
       n.addresscollectionstudenttype.Parent2 = v
       }
     case "ReportingParent2":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresscollectionstudenttype.ReportingParent2 = ((*String)(v))
@@ -39045,66 +39236,79 @@ func (n *AddressStreetType) SetProperty(key string, value interface{}) *AddressS
         }
         switch key {
     case "ApartmentNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.ApartmentNumber = ((*String)(v))
       }
     case "ApartmentNumberPrefix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.ApartmentNumberPrefix = ((*String)(v))
       }
     case "ApartmentNumberSuffix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.ApartmentNumberSuffix = ((*String)(v))
       }
     case "ApartmentType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.ApartmentType = ((*String)(v))
       }
     case "Complex":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.Complex = ((*String)(v))
       }
     case "Line1":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.Line1 = ((*String)(v))
       }
     case "Line2":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.Line2 = ((*String)(v))
       }
     case "Line3":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.Line3 = ((*String)(v))
       }
     case "StreetName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.StreetName = ((*String)(v))
       }
     case "StreetNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.StreetNumber = ((*String)(v))
       }
     case "StreetPrefix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.StreetPrefix = ((*String)(v))
       }
     case "StreetSuffix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.StreetSuffix = ((*String)(v))
       }
     case "StreetType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addressstreettype.StreetType = ((*String)(v))
@@ -39342,21 +39546,25 @@ func (n *AddressType) SetProperty(key string, value interface{}) *AddressType {
         }
         switch key {
     case "AddressGlobalUID":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.AddressGlobalUID = ((*GUIDType)(v))
       }
     case "City":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.City = ((*String)(v))
       }
     case "Community":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.Community = ((*String)(v))
       }
     case "Country":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_values")
       }
@@ -39365,11 +39573,13 @@ func (n *AddressType) SetProperty(key string, value interface{}) *AddressType {
       n.addresstype.Country = ((*CountryType)(v))
       }
     case "EffectiveFromDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.EffectiveFromDate = ((*String)(v))
       }
     case "EffectiveToDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.EffectiveToDate = ((*String)(v))
@@ -39379,6 +39589,7 @@ func (n *AddressType) SetProperty(key string, value interface{}) *AddressType {
       n.addresstype.GridLocation = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.LocalId = ((*LocalIdType)(v))
@@ -39388,16 +39599,19 @@ func (n *AddressType) SetProperty(key string, value interface{}) *AddressType {
       n.addresstype.MapReference = v
       }
     case "PostalCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.PostalCode = ((*String)(v))
       }
     case "RadioContact":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.RadioContact = ((*String)(v))
       }
     case "Role":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAddressRoleType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAddressRoleType_values")
       }
@@ -39406,6 +39620,7 @@ func (n *AddressType) SetProperty(key string, value interface{}) *AddressType {
       n.addresstype.Role = ((*AUCodeSetsAddressRoleType)(v))
       }
     case "StateProvince":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.addresstype.StateProvince = ((*StateProvinceType)(v))
@@ -39419,6 +39634,7 @@ func (n *AddressType) SetProperty(key string, value interface{}) *AddressType {
       n.addresstype.Street = v
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAddressTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAddressTypeType_values")
       }
@@ -39670,6 +39886,7 @@ func (n *AdjustmentContainerType) SetProperty(key string, value interface{}) *Ad
         }
         switch key {
     case "BookletType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.adjustmentcontainertype.BookletType = ((*String)(v))
@@ -39740,6 +39957,7 @@ func (n *AgencyType) SetProperty(key string, value interface{}) *AgencyType {
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEducationAgencyTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEducationAgencyTypeType_values")
       }
@@ -39823,16 +40041,19 @@ func (n *AggregateCharacteristicInfo) SetProperty(key string, value interface{})
         }
         switch key {
     case "Definition":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatecharacteristicinfo.Definition = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatecharacteristicinfo.Description = ((*String)(v))
       }
     case "ElementName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatecharacteristicinfo.ElementName = ((*String)(v))
@@ -39842,6 +40063,7 @@ func (n *AggregateCharacteristicInfo) SetProperty(key string, value interface{})
       n.aggregatecharacteristicinfo.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatecharacteristicinfo.RefId = ((*RefIdType)(v))
@@ -39993,6 +40215,7 @@ func (n *AggregateStatisticFact) SetProperty(key string, value interface{}) *Agg
         }
         switch key {
     case "AggregateStatisticInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticfact.AggregateStatisticInfoRefId = ((*String)(v))
@@ -40002,6 +40225,7 @@ func (n *AggregateStatisticFact) SetProperty(key string, value interface{}) *Agg
       n.aggregatestatisticfact.Characteristics = v
       }
     case "Excluded":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticfact.Excluded = ((*String)(v))
@@ -40011,6 +40235,7 @@ func (n *AggregateStatisticFact) SetProperty(key string, value interface{}) *Agg
       n.aggregatestatisticfact.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticfact.RefId = ((*RefIdType)(v))
@@ -40192,6 +40417,7 @@ func (n *AggregateStatisticInfo) SetProperty(key string, value interface{}) *Agg
         }
         switch key {
     case "ApprovalDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.ApprovalDate = ((*String)(v))
@@ -40201,11 +40427,13 @@ func (n *AggregateStatisticInfo) SetProperty(key string, value interface{}) *Agg
       n.aggregatestatisticinfo.CalculationRule = v
       }
     case "DiscontinueDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.DiscontinueDate = ((*String)(v))
       }
     case "EffectiveDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.EffectiveDate = ((*String)(v))
@@ -40215,6 +40443,7 @@ func (n *AggregateStatisticInfo) SetProperty(key string, value interface{}) *Agg
       n.aggregatestatisticinfo.ExclusionRules = v
       }
     case "ExpirationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.ExpirationDate = ((*String)(v))
@@ -40228,11 +40457,13 @@ func (n *AggregateStatisticInfo) SetProperty(key string, value interface{}) *Agg
       n.aggregatestatisticinfo.Location = v
       }
     case "Measure":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.Measure = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.RefId = ((*RefIdType)(v))
@@ -40246,11 +40477,13 @@ func (n *AggregateStatisticInfo) SetProperty(key string, value interface{}) *Agg
       n.aggregatestatisticinfo.SIF_Metadata = v
       }
     case "Source":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.Source = ((*String)(v))
       }
     case "StatisticName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.aggregatestatisticinfo.StatisticName = ((*String)(v))
@@ -40473,11 +40706,13 @@ func (n *AlertMessageType) SetProperty(key string, value interface{}) *AlertMess
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.alertmessagetype.Type = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.alertmessagetype.Value = ((*String)(v))
@@ -40546,16 +40781,19 @@ func (n *ApplicableLawType) SetProperty(key string, value interface{}) *Applicab
         }
         switch key {
     case "ApplicableCountry":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.applicablelawtype.ApplicableCountry = ((*String)(v))
       }
     case "ApplicableLawName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.applicablelawtype.ApplicableLawName = ((*String)(v))
       }
     case "ApplicableLawURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.applicablelawtype.ApplicableLawURL = ((*String)(v))
@@ -40635,11 +40873,13 @@ func (n *ApprovalType) SetProperty(key string, value interface{}) *ApprovalType 
         }
         switch key {
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.approvaltype.Date = ((*String)(v))
       }
     case "Organization":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.approvaltype.Organization = ((*String)(v))
@@ -40710,21 +40950,25 @@ func (n *ArrivalSchoolType) SetProperty(key string, value interface{}) *ArrivalS
         }
         switch key {
     case "ACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.arrivalschooltype.ACARAId = ((*String)(v))
       }
     case "City":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.arrivalschooltype.City = ((*String)(v))
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.arrivalschooltype.CommonwealthId = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.arrivalschooltype.Name = ((*String)(v))
@@ -40817,6 +41061,7 @@ func (n *AssignmentScoreType) SetProperty(key string, value interface{}) *Assign
         }
         switch key {
     case "GradingAssignmentScoreRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.assignmentscoretype.GradingAssignmentScoreRefId = ((*String)(v))
@@ -40888,11 +41133,13 @@ func (n *AssociatedObjectsType_AssociatedObject) SetProperty(key string, value i
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.associatedobjectstype_associatedobject.SIF_RefObject = ((*ObjectNameType)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.associatedobjectstype_associatedobject.Value = ((*String)(v))
@@ -40959,6 +41206,7 @@ func (n *AttendanceCodeType) SetProperty(key string, value interface{}) *Attenda
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAttendanceCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAttendanceCodeType_values")
       }
@@ -41032,11 +41280,13 @@ func (n *AttendanceInfoType) SetProperty(key string, value interface{}) *Attenda
         }
         switch key {
     case "AttendanceValue":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.attendanceinfotype.AttendanceValue = ((*String)(v))
       }
     case "CountsTowardAttendance":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.attendanceinfotype.CountsTowardAttendance = ((*String)(v))
@@ -41119,11 +41369,13 @@ func (n *AttendanceTimeType) SetProperty(key string, value interface{}) *Attenda
       n.attendancetimetype.AttendanceCode = v
       }
     case "AttendanceNote":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.attendancetimetype.AttendanceNote = ((*String)(v))
       }
     case "AttendanceStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAttendanceStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAttendanceStatusType_values")
       }
@@ -41132,6 +41384,7 @@ func (n *AttendanceTimeType) SetProperty(key string, value interface{}) *Attenda
       n.attendancetimetype.AttendanceStatus = ((*AUCodeSetsAttendanceStatusType)(v))
       }
     case "AttendanceType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.attendancetimetype.AttendanceType = ((*String)(v))
@@ -41142,16 +41395,19 @@ func (n *AttendanceTimeType) SetProperty(key string, value interface{}) *Attenda
       n.attendancetimetype.DurationValue = ((*Float)(v))
       }
     case "EndTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.attendancetimetype.EndTime = ((*String)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.attendancetimetype.StartTime = ((*String)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.attendancetimetype.TimeTableSubjectRefId = ((*RefIdType)(v))
@@ -41296,6 +41552,7 @@ func (n *AuditInfoType) SetProperty(key string, value interface{}) *AuditInfoTyp
         }
         switch key {
     case "CreationDateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.auditinfotype.CreationDateTime = ((*String)(v))
@@ -41372,26 +41629,31 @@ func (n *AwardContainerType) SetProperty(key string, value interface{}) *AwardCo
         }
         switch key {
     case "AwardDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.awardcontainertype.AwardDate = ((*String)(v))
       }
     case "AwardDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.awardcontainertype.AwardDescription = ((*String)(v))
       }
     case "AwardNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.awardcontainertype.AwardNotes = ((*String)(v))
       }
     case "AwardType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.awardcontainertype.AwardType = ((*String)(v))
       }
     case "Status":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingStatusType_values")
       }
@@ -41516,11 +41778,13 @@ func (n *BaseNameType) SetProperty(key string, value interface{}) *BaseNameType 
         }
         switch key {
     case "FamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.FamilyName = ((*String)(v))
       }
     case "FamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -41529,26 +41793,31 @@ func (n *BaseNameType) SetProperty(key string, value interface{}) *BaseNameType 
       n.basenametype.FamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FullName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.FullName = ((*String)(v))
       }
     case "GivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.GivenName = ((*String)(v))
       }
     case "MiddleName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.MiddleName = ((*String)(v))
       }
     case "PreferredFamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.PreferredFamilyName = ((*String)(v))
       }
     case "PreferredFamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -41557,16 +41826,19 @@ func (n *BaseNameType) SetProperty(key string, value interface{}) *BaseNameType 
       n.basenametype.PreferredFamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "PreferredGivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.PreferredGivenName = ((*String)(v))
       }
     case "Suffix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.Suffix = ((*String)(v))
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.basenametype.Title = ((*String)(v))
@@ -41741,21 +42013,25 @@ func (n *BinaryDataType) SetProperty(key string, value interface{}) *BinaryDataT
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.binarydatatype.Description = ((*String)(v))
       }
     case "FileName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.binarydatatype.FileName = ((*String)(v))
       }
     case "MIMEType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.binarydatatype.MIMEType = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.binarydatatype.Value = ((*String)(v))
@@ -41848,11 +42124,13 @@ func (n *CalculationRuleType) SetProperty(key string, value interface{}) *Calcul
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calculationruletype.Type = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calculationruletype.Value = ((*String)(v))
@@ -41950,6 +42228,7 @@ func (n *CalendarDate) SetProperty(key string, value interface{}) *CalendarDate 
       n.calendardate.CalendarDateNumber = ((*Int)(v))
       }
     case "CalendarDateRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendardate.CalendarDateRefId = ((*String)(v))
@@ -41959,11 +42238,13 @@ func (n *CalendarDate) SetProperty(key string, value interface{}) *CalendarDate 
       n.calendardate.CalendarDateType = v
       }
     case "CalendarSummaryRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendardate.CalendarSummaryRefId = ((*String)(v))
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendardate.Date = ((*String)(v))
@@ -41981,11 +42262,13 @@ func (n *CalendarDate) SetProperty(key string, value interface{}) *CalendarDate 
       n.calendardate.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendardate.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendardate.SchoolYear = ((*SchoolYearType)(v))
@@ -42203,6 +42486,7 @@ func (n *CalendarDateInfoType) SetProperty(key string, value interface{}) *Calen
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsCalendarEventType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsCalendarEventType_values")
       }
@@ -42311,21 +42595,25 @@ func (n *CalendarSummary) SetProperty(key string, value interface{}) *CalendarSu
       n.calendarsummary.DaysInSession = ((*Int)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.Description = ((*String)(v))
       }
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.EndDate = ((*String)(v))
       }
     case "FirstInstructionDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.FirstInstructionDate = ((*String)(v))
       }
     case "GraduationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.GraduationDate = ((*GraduationDateType)(v))
@@ -42336,6 +42624,7 @@ func (n *CalendarSummary) SetProperty(key string, value interface{}) *CalendarSu
       n.calendarsummary.InstructionalMinutes = ((*Int)(v))
       }
     case "LastInstructionDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.LastInstructionDate = ((*String)(v))
@@ -42345,6 +42634,7 @@ func (n *CalendarSummary) SetProperty(key string, value interface{}) *CalendarSu
       n.calendarsummary.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.LocalId = ((*LocalIdType)(v))
@@ -42355,6 +42645,7 @@ func (n *CalendarSummary) SetProperty(key string, value interface{}) *CalendarSu
       n.calendarsummary.MinutesPerDay = ((*Int)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.RefId = ((*RefIdType)(v))
@@ -42368,16 +42659,19 @@ func (n *CalendarSummary) SetProperty(key string, value interface{}) *CalendarSu
       n.calendarsummary.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.calendarsummary.StartDate = ((*String)(v))
@@ -42649,6 +42943,7 @@ func (n *CampusContainerType) SetProperty(key string, value interface{}) *Campus
         }
         switch key {
     case "AdminStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -42657,6 +42952,7 @@ func (n *CampusContainerType) SetProperty(key string, value interface{}) *Campus
       n.campuscontainertype.AdminStatus = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "CampusType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolLevelType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolLevelType_values")
       }
@@ -42665,16 +42961,19 @@ func (n *CampusContainerType) SetProperty(key string, value interface{}) *Campus
       n.campuscontainertype.CampusType = ((*AUCodeSetsSchoolLevelType)(v))
       }
     case "ParentSchoolId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.campuscontainertype.ParentSchoolId = ((*String)(v))
       }
     case "ParentSchoolRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.campuscontainertype.ParentSchoolRefId = ((*String)(v))
       }
     case "SchoolCampusId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.campuscontainertype.SchoolCampusId = ((*String)(v))
@@ -42780,6 +43079,7 @@ func (n *CatchmentStatusContainerType) SetProperty(key string, value interface{}
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsPublicSchoolCatchmentStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsPublicSchoolCatchmentStatusType_values")
       }
@@ -42869,6 +43169,7 @@ func (n *CensusCollection) SetProperty(key string, value interface{}) *CensusCol
       n.censuscollection.CensusReportingList = v
       }
     case "CensusYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censuscollection.CensusYear = ((*SchoolYearType)(v))
@@ -42878,11 +43179,13 @@ func (n *CensusCollection) SetProperty(key string, value interface{}) *CensusCol
       n.censuscollection.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censuscollection.RefId = ((*RefIdType)(v))
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censuscollection.RoundCode = ((*String)(v))
@@ -43055,6 +43358,7 @@ func (n *CensusReportingType) SetProperty(key string, value interface{}) *Census
       n.censusreportingtype.CensusStudentList = v
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusreportingtype.CommonwealthId = ((*String)(v))
@@ -43064,11 +43368,13 @@ func (n *CensusReportingType) SetProperty(key string, value interface{}) *Census
       n.censusreportingtype.EntityContact = v
       }
     case "EntityLevel":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusreportingtype.EntityLevel = ((*String)(v))
       }
     case "EntityName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusreportingtype.EntityName = ((*String)(v))
@@ -43199,11 +43505,13 @@ func (n *CensusStaffType) SetProperty(key string, value interface{}) *CensusStaf
         }
         switch key {
     case "CohortGender":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstafftype.CohortGender = ((*String)(v))
       }
     case "CohortIndigenousType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstafftype.CohortIndigenousType = ((*String)(v))
@@ -43214,16 +43522,19 @@ func (n *CensusStaffType) SetProperty(key string, value interface{}) *CensusStaf
       n.censusstafftype.Headcount = ((*Int)(v))
       }
     case "JobFTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstafftype.JobFTE = ((*String)(v))
       }
     case "PrimaryFTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstafftype.PrimaryFTE = ((*String)(v))
       }
     case "SecondaryFTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstafftype.SecondaryFTE = ((*String)(v))
@@ -43233,6 +43544,7 @@ func (n *CensusStaffType) SetProperty(key string, value interface{}) *CensusStaf
       n.censusstafftype.StaffActivity = v
       }
     case "StaffCohortId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstafftype.StaffCohortId = ((*LocalIdType)(v))
@@ -43402,16 +43714,19 @@ func (n *CensusStudentType) SetProperty(key string, value interface{}) *CensusSt
       n.censusstudenttype.CensusAge = ((*Int)(v))
       }
     case "CohortGender":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstudenttype.CohortGender = ((*String)(v))
       }
     case "CohortIndigenousType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstudenttype.CohortIndigenousType = ((*String)(v))
       }
     case "DisabilityCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNCCDDisabilityType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNCCDDisabilityType_values")
       }
@@ -43420,6 +43735,7 @@ func (n *CensusStudentType) SetProperty(key string, value interface{}) *CensusSt
       n.censusstudenttype.DisabilityCategory = ((*AUCodeSetsNCCDDisabilityType)(v))
       }
     case "DisabilityLevelOfAdjustment":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNCCDAdjustmentType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNCCDAdjustmentType_values")
       }
@@ -43428,11 +43744,13 @@ func (n *CensusStudentType) SetProperty(key string, value interface{}) *CensusSt
       n.censusstudenttype.DisabilityLevelOfAdjustment = ((*AUCodeSetsNCCDAdjustmentType)(v))
       }
     case "EducationMode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstudenttype.EducationMode = ((*String)(v))
       }
     case "FTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstudenttype.FTE = ((*FTEType)(v))
@@ -43443,16 +43761,19 @@ func (n *CensusStudentType) SetProperty(key string, value interface{}) *CensusSt
       n.censusstudenttype.Headcount = ((*Int)(v))
       }
     case "OverseasStudent":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstudenttype.OverseasStudent = ((*String)(v))
       }
     case "StudentCohortId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstudenttype.StudentCohortId = ((*LocalIdType)(v))
       }
     case "StudentOnVisa":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.censusstudenttype.StudentOnVisa = ((*String)(v))
@@ -43681,6 +44002,7 @@ func (n *ChargedLocationInfo) SetProperty(key string, value interface{}) *Charge
       n.chargedlocationinfo.AddressList = v
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.Description = ((*String)(v))
@@ -43690,21 +44012,25 @@ func (n *ChargedLocationInfo) SetProperty(key string, value interface{}) *Charge
       n.chargedlocationinfo.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.LocalId = ((*LocalIdType)(v))
       }
     case "LocationType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.LocationType = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.Name = ((*String)(v))
       }
     case "ParentChargedLocationInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.ParentChargedLocationInfoRefId = ((*String)(v))
@@ -43714,6 +44040,7 @@ func (n *ChargedLocationInfo) SetProperty(key string, value interface{}) *Charge
       n.chargedlocationinfo.PhoneNumberList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.RefId = ((*RefIdType)(v))
@@ -43727,16 +44054,19 @@ func (n *ChargedLocationInfo) SetProperty(key string, value interface{}) *Charge
       n.chargedlocationinfo.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.SchoolInfoRefId = ((*String)(v))
       }
     case "SiteCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.SiteCategory = ((*String)(v))
       }
     case "StateProvinceId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.chargedlocationinfo.StateProvinceId = ((*StateProvinceIdType)(v))
@@ -43961,6 +44291,7 @@ func (n *CheckoutInfoType) SetProperty(key string, value interface{}) *CheckoutI
         }
         switch key {
     case "CheckedOutOn":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.checkoutinfotype.CheckedOutOn = ((*String)(v))
@@ -43971,6 +44302,7 @@ func (n *CheckoutInfoType) SetProperty(key string, value interface{}) *CheckoutI
       n.checkoutinfotype.RenewalCount = ((*Int)(v))
       }
     case "ReturnBy":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.checkoutinfotype.ReturnBy = ((*String)(v))
@@ -44061,6 +44393,7 @@ func (n *CodeFrameTestItemType) SetProperty(key string, value interface{}) *Code
       n.codeframetestitemtype.TestItemContent = v
       }
     case "TestItemRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.codeframetestitemtype.TestItemRefId = ((*String)(v))
@@ -44170,26 +44503,31 @@ func (n *CollectionAcquittal) SetProperty(key string, value interface{}) *Collec
       n.collectionacquittal.AuditedBy = v
       }
     case "AuditorASICNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.AuditorASICNumber = ((*String)(v))
       }
     case "AuditorStatement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.AuditorStatement = ((*String)(v))
       }
     case "Collection":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.Collection = ((*String)(v))
       }
     case "CollectionYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.CollectionYear = ((*SchoolYearType)(v))
       }
     case "Declaration":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.Declaration = ((*String)(v))
@@ -44199,11 +44537,13 @@ func (n *CollectionAcquittal) SetProperty(key string, value interface{}) *Collec
       n.collectionacquittal.LocalCodeList = v
       }
     case "Recipient":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.Recipient = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.RefId = ((*RefIdType)(v))
@@ -44213,6 +44553,7 @@ func (n *CollectionAcquittal) SetProperty(key string, value interface{}) *Collec
       n.collectionacquittal.ReportingAuthorityList = v
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionacquittal.RoundCode = ((*String)(v))
@@ -44484,16 +44825,19 @@ func (n *CollectionDeclaration) SetProperty(key string, value interface{}) *Coll
         }
         switch key {
     case "Collection":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectiondeclaration.Collection = ((*String)(v))
       }
     case "CollectionYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectiondeclaration.CollectionYear = ((*SchoolYearType)(v))
       }
     case "Declaration":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectiondeclaration.Declaration = ((*String)(v))
@@ -44503,11 +44847,13 @@ func (n *CollectionDeclaration) SetProperty(key string, value interface{}) *Coll
       n.collectiondeclaration.LocalCodeList = v
       }
     case "Recipient":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectiondeclaration.Recipient = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectiondeclaration.RefId = ((*RefIdType)(v))
@@ -44517,6 +44863,7 @@ func (n *CollectionDeclaration) SetProperty(key string, value interface{}) *Coll
       n.collectiondeclaration.ReportingAuthorityList = v
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectiondeclaration.RoundCode = ((*String)(v))
@@ -44739,6 +45086,7 @@ func (n *CollectionRound) SetProperty(key string, value interface{}) *Collection
         }
         switch key {
     case "AGCollection":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAGCollectionType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAGCollectionType_values")
       }
@@ -44751,6 +45099,7 @@ func (n *CollectionRound) SetProperty(key string, value interface{}) *Collection
       n.collectionround.AGRoundList = v
       }
     case "CollectionYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionround.CollectionYear = ((*SchoolYearType)(v))
@@ -44760,6 +45109,7 @@ func (n *CollectionRound) SetProperty(key string, value interface{}) *Collection
       n.collectionround.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionround.RefId = ((*RefIdType)(v))
@@ -44921,6 +45271,7 @@ func (n *CollectionStatus) SetProperty(key string, value interface{}) *Collectio
         }
         switch key {
     case "AGCollection":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.AGCollection = ((*String)(v))
@@ -44930,6 +45281,7 @@ func (n *CollectionStatus) SetProperty(key string, value interface{}) *Collectio
       n.collectionstatus.AGReportingObjectResponseList = v
       }
     case "CollectionYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.CollectionYear = ((*SchoolYearType)(v))
@@ -44939,26 +45291,31 @@ func (n *CollectionStatus) SetProperty(key string, value interface{}) *Collectio
       n.collectionstatus.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.RefId = ((*RefIdType)(v))
       }
     case "ReportingAuthority":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.ReportingAuthority = ((*String)(v))
       }
     case "ReportingAuthorityCommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.ReportingAuthorityCommonwealthId = ((*String)(v))
       }
     case "ReportingAuthoritySystem":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.ReportingAuthoritySystem = ((*String)(v))
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.RoundCode = ((*String)(v))
@@ -44972,11 +45329,13 @@ func (n *CollectionStatus) SetProperty(key string, value interface{}) *Collectio
       n.collectionstatus.SIF_Metadata = v
       }
     case "SubmissionTimestamp":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.SubmissionTimestamp = ((*String)(v))
       }
     case "SubmittedBy":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.collectionstatus.SubmittedBy = ((*String)(v))
@@ -45196,16 +45555,19 @@ func (n *ComponentType) SetProperty(key string, value interface{}) *ComponentTyp
       n.componenttype.AssociatedObjects = v
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.componenttype.Description = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.componenttype.Name = ((*String)(v))
       }
     case "Reference":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.componenttype.Reference = ((*String)(v))
@@ -45408,6 +45770,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
         }
         switch key {
     case "AccessToRecords":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45416,6 +45779,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.AccessToRecords = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "AttendanceContact":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45424,6 +45788,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.AttendanceContact = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "DisciplinaryContact":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45432,6 +45797,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.DisciplinaryContact = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "EmergencyContact":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45440,6 +45806,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.EmergencyContact = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FamilyMail":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45448,6 +45815,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.FamilyMail = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FeesAccess":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45456,6 +45824,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.FeesAccess = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FeesBilling":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45464,6 +45833,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.FeesBilling = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "HasCustody":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45472,6 +45842,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.HasCustody = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "InterventionOrder":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45480,6 +45851,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.InterventionOrder = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "LivesWith":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45488,6 +45860,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.LivesWith = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "ParentLegalGuardian":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45496,6 +45869,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.ParentLegalGuardian = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "PickupRights":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45504,6 +45878,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.PickupRights = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "PrimaryCareProvider":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45512,6 +45887,7 @@ func (n *ContactFlagsType) SetProperty(key string, value interface{}) *ContactFl
       n.contactflagstype.PrimaryCareProvider = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "ReceivesAssessmentReport":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -45765,21 +46141,25 @@ func (n *ContactInfoType) SetProperty(key string, value interface{}) *ContactInf
       n.contactinfotype.PhoneNumberList = v
       }
     case "PositionTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.contactinfotype.PositionTitle = ((*String)(v))
       }
     case "Qualifications":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.contactinfotype.Qualifications = ((*String)(v))
       }
     case "RegistrationDetails":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.contactinfotype.RegistrationDetails = ((*String)(v))
       }
     case "Role":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.contactinfotype.Role = ((*String)(v))
@@ -46031,11 +46411,13 @@ func (n *CopyRightContainerType) SetProperty(key string, value interface{}) *Cop
         }
         switch key {
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.copyrightcontainertype.Date = ((*String)(v))
       }
     case "Holder":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.copyrightcontainertype.Holder = ((*String)(v))
@@ -46106,6 +46488,7 @@ func (n *CreatedType) SetProperty(key string, value interface{}) *CreatedType {
       n.createdtype.Creators = v
       }
     case "DateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.createdtype.DateTime = ((*String)(v))
@@ -46172,11 +46555,13 @@ func (n *CreationUserType) SetProperty(key string, value interface{}) *CreationU
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.creationusertype.Type = ((*String)(v))
       }
     case "UserId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.creationusertype.UserId = ((*String)(v))
@@ -46247,6 +46632,7 @@ func (n *DataDomainObligationType) SetProperty(key string, value interface{}) *D
         }
         switch key {
     case "DataDomain":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.datadomainobligationtype.DataDomain = ((*String)(v))
@@ -46256,6 +46642,7 @@ func (n *DataDomainObligationType) SetProperty(key string, value interface{}) *D
       n.datadomainobligationtype.DoNotShareWithList = v
       }
     case "DomainComments":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.datadomainobligationtype.DomainComments = ((*String)(v))
@@ -46354,11 +46741,13 @@ func (n *DebitOrCreditAmountType) SetProperty(key string, value interface{}) *De
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debitorcreditamounttype.Type = ((*String)(v))
       }
     case "Currency":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(ISO4217CurrencyNamesAndCodeElementsType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "ISO4217CurrencyNamesAndCodeElementsType_values")
       }
@@ -46468,11 +46857,13 @@ func (n *Debtor) SetProperty(key string, value interface{}) *Debtor {
         }
         switch key {
     case "AccountName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.AccountName = ((*String)(v))
       }
     case "AccountNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.AccountNumber = ((*String)(v))
@@ -46482,6 +46873,7 @@ func (n *Debtor) SetProperty(key string, value interface{}) *Debtor {
       n.debtor.AddressList = v
       }
     case "BSB":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.BSB = ((*String)(v))
@@ -46491,16 +46883,19 @@ func (n *Debtor) SetProperty(key string, value interface{}) *Debtor {
       n.debtor.BilledEntity = v
       }
     case "BillingName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.BillingName = ((*String)(v))
       }
     case "BillingNote":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.BillingNote = ((*String)(v))
       }
     case "Discount":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.Discount = ((*String)(v))
@@ -46510,11 +46905,13 @@ func (n *Debtor) SetProperty(key string, value interface{}) *Debtor {
       n.debtor.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.LocalId = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor.RefId = ((*RefIdType)(v))
@@ -46732,11 +47129,13 @@ func (n *Debtor_BilledEntity) SetProperty(key string, value interface{}) *Debtor
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor_billedentity.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.debtor_billedentity.Value = ((*String)(v))
@@ -46877,6 +47276,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
         }
         switch key {
     case "AustralianCitizenshipStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianCitizenshipStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianCitizenshipStatusType_values")
       }
@@ -46885,11 +47285,13 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.AustralianCitizenshipStatus = ((*AUCodeSetsAustralianCitizenshipStatusType)(v))
       }
     case "BirthDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.BirthDate = ((*BirthDateType)(v))
       }
     case "BirthDateVerification":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsBirthdateVerificationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsBirthdateVerificationType_values")
       }
@@ -46906,11 +47308,13 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.CountriesOfResidency = v
       }
     case "CountryArrivalDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.CountryArrivalDate = ((*String)(v))
       }
     case "CountryOfBirth":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_values")
       }
@@ -46919,6 +47323,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.CountryOfBirth = ((*CountryType)(v))
       }
     case "CulturalBackground":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType_values")
       }
@@ -46927,11 +47332,13 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.CulturalBackground = ((*AUCodeSetsAustralianStandardClassificationOfCulturalAndEthnicGroupsASCCEGType)(v))
       }
     case "DateOfDeath":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.DateOfDeath = ((*String)(v))
       }
     case "Deceased":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -46948,6 +47355,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.EnglishProficiency = v
       }
     case "Gender":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSexCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSexCodeType_values")
       }
@@ -46956,6 +47364,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.Gender = ((*AUCodeSetsSexCodeType)(v))
       }
     case "ImmunisationCertificateStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsImmunisationCertificateStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsImmunisationCertificateStatusType_values")
       }
@@ -46964,6 +47373,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.ImmunisationCertificateStatus = ((*AUCodeSetsImmunisationCertificateStatusType)(v))
       }
     case "IndigenousStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsIndigenousStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsIndigenousStatusType_values")
       }
@@ -46972,6 +47382,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.IndigenousStatus = ((*AUCodeSetsIndigenousStatusType)(v))
       }
     case "InterpreterRequired":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -46980,6 +47391,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.InterpreterRequired = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "LBOTE":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -46992,6 +47404,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.LanguageList = v
       }
     case "MaritalStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsMaritalStatusAIHWType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsMaritalStatusAIHWType_values")
       }
@@ -47000,16 +47413,19 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.MaritalStatus = ((*AUCodeSetsMaritalStatusAIHWType)(v))
       }
     case "MedicareCardHolder":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.MedicareCardHolder = ((*String)(v))
       }
     case "MedicareNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.MedicareNumber = ((*String)(v))
       }
     case "MedicarePositionNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.MedicarePositionNumber = ((*String)(v))
@@ -47019,6 +47435,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.Passport = v
       }
     case "PermanentResident":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsPermanentResidentStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsPermanentResidentStatusType_values")
       }
@@ -47027,6 +47444,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.PermanentResident = ((*AUCodeSetsPermanentResidentStatusType)(v))
       }
     case "PlaceOfBirth":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.PlaceOfBirth = ((*String)(v))
@@ -47044,11 +47462,13 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.ReligiousEventList = v
       }
     case "ReligiousRegion":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.ReligiousRegion = ((*String)(v))
       }
     case "Sex":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSexCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSexCodeType_values")
       }
@@ -47057,36 +47477,43 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.Sex = ((*AUCodeSetsSexCodeType)(v))
       }
     case "StateOfBirth":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.StateOfBirth = ((*StateProvinceType)(v))
       }
     case "VisaConditions":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaConditions = ((*String)(v))
       }
     case "VisaExpiryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaExpiryDate = ((*String)(v))
       }
     case "VisaGrantDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaGrantDate = ((*String)(v))
       }
     case "VisaNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaNumber = ((*String)(v))
       }
     case "VisaStatisticalCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaStatisticalCode = ((*String)(v))
       }
     case "VisaStudyEntitlement":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsVisaStudyEntitlementType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsVisaStudyEntitlementType_values")
       }
@@ -47095,6 +47522,7 @@ func (n *DemographicsType) SetProperty(key string, value interface{}) *Demograph
       n.demographicstype.VisaStudyEntitlement = ((*AUCodeSetsVisaStudyEntitlementType)(v))
       }
     case "VisaSubClass":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.demographicstype.VisaSubClass = ((*VisaSubClassCodeType)(v))
@@ -47652,21 +48080,25 @@ func (n *DepartureSchoolType) SetProperty(key string, value interface{}) *Depart
         }
         switch key {
     case "ACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.departureschooltype.ACARAId = ((*String)(v))
       }
     case "City":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.departureschooltype.City = ((*String)(v))
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.departureschooltype.CommonwealthId = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.departureschooltype.Name = ((*String)(v))
@@ -47782,6 +48214,7 @@ func (n *DetentionContainerType) SetProperty(key string, value interface{}) *Det
         }
         switch key {
     case "DetentionCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsDetentionCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsDetentionCategoryType_values")
       }
@@ -47790,21 +48223,25 @@ func (n *DetentionContainerType) SetProperty(key string, value interface{}) *Det
       n.detentioncontainertype.DetentionCategory = ((*AUCodeSetsDetentionCategoryType)(v))
       }
     case "DetentionDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.detentioncontainertype.DetentionDate = ((*String)(v))
       }
     case "DetentionLocation":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.detentioncontainertype.DetentionLocation = ((*String)(v))
       }
     case "DetentionNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.detentioncontainertype.DetentionNotes = ((*String)(v))
       }
     case "Status":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingStatusType_values")
       }
@@ -47929,51 +48366,61 @@ func (n *DoNotShareWithType) SetProperty(key string, value interface{}) *DoNotSh
         }
         switch key {
     case "DoNotShareWithComments":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithComments = ((*String)(v))
       }
     case "DoNotShareWithLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithLocalId = ((*LocalIdType)(v))
       }
     case "DoNotShareWithName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithName = ((*String)(v))
       }
     case "DoNotShareWithObjectTypeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithObjectTypeName = ((*String)(v))
       }
     case "DoNotShareWithParty":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithParty = ((*String)(v))
       }
     case "DoNotShareWithPurpose":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithPurpose = ((*String)(v))
       }
     case "DoNotShareWithRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithRefId = ((*String)(v))
       }
     case "DoNotShareWithRelationship":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithRelationship = ((*String)(v))
       }
     case "DoNotShareWithRole":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithRole = ((*String)(v))
       }
     case "DoNotShareWithURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.donotsharewithtype.DoNotShareWithURL = ((*String)(v))
@@ -48812,6 +49259,7 @@ func (n *DomainScoreSDTNType) SetProperty(key string, value interface{}) *Domain
       n.domainscoresdtntype.StudentDomainBand = ((*Int)(v))
       }
     case "StudentProficiency":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.domainscoresdtntype.StudentProficiency = ((*String)(v))
@@ -49002,6 +49450,7 @@ func (n *DomainScoreType) SetProperty(key string, value interface{}) *DomainScor
       n.domainscoretype.StudentDomainBand = ((*Int)(v))
       }
     case "StudentProficiency":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.domainscoretype.StudentProficiency = ((*String)(v))
@@ -49146,6 +49595,7 @@ func (n *DurationType) SetProperty(key string, value interface{}) *DurationType 
         }
         switch key {
     case "Units":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.durationtype.Units = ((*String)(v))
@@ -49217,6 +49667,7 @@ func (n *DwellingArrangementType) SetProperty(key string, value interface{}) *Dw
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsDwellingArrangementType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsDwellingArrangementType_values")
       }
@@ -49290,11 +49741,13 @@ func (n *EducationalAssessmentType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "Content":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.educationalassessmenttype.Content = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.educationalassessmenttype.Name = ((*String)(v))
@@ -49361,6 +49814,7 @@ func (n *ElectronicIdType) SetProperty(key string, value interface{}) *Electroni
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsElectronicIdTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsElectronicIdTypeType_values")
       }
@@ -49369,6 +49823,7 @@ func (n *ElectronicIdType) SetProperty(key string, value interface{}) *Electroni
       n.electronicidtype.Type = ((*AUCodeSetsElectronicIdTypeType)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.electronicidtype.Value = ((*String)(v))
@@ -49435,6 +49890,7 @@ func (n *EmailType) SetProperty(key string, value interface{}) *EmailType {
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEmailTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEmailTypeType_values")
       }
@@ -49443,6 +49899,7 @@ func (n *EmailType) SetProperty(key string, value interface{}) *EmailType {
       n.emailtype.Type = ((*AUCodeSetsEmailTypeType)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.emailtype.Value = ((*String)(v))
@@ -49509,6 +49966,7 @@ func (n *EnglishProficiencyType) SetProperty(key string, value interface{}) *Eng
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEnglishProficiencyType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEnglishProficiencyType_values")
       }
@@ -49610,21 +50068,25 @@ func (n *EntityContactInfoType) SetProperty(key string, value interface{}) *Enti
       n.entitycontactinfotype.PhoneNumber = v
       }
     case "PositionTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.entitycontactinfotype.PositionTitle = ((*String)(v))
       }
     case "Qualifications":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.entitycontactinfotype.Qualifications = ((*String)(v))
       }
     case "RegistrationDetails":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.entitycontactinfotype.RegistrationDetails = ((*String)(v))
       }
     case "Role":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.entitycontactinfotype.Role = ((*String)(v))
@@ -49789,21 +50251,25 @@ func (n *EquipmentInfo) SetProperty(key string, value interface{}) *EquipmentInf
         }
         switch key {
     case "AssetNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.AssetNumber = ((*LocalIdType)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.Description = ((*String)(v))
       }
     case "EquipmentType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.EquipmentType = ((*String)(v))
       }
     case "InvoiceRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.InvoiceRefId = ((*String)(v))
@@ -49813,21 +50279,25 @@ func (n *EquipmentInfo) SetProperty(key string, value interface{}) *EquipmentInf
       n.equipmentinfo.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.LocalId = ((*LocalIdType)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.Name = ((*String)(v))
       }
     case "PurchaseOrderRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.PurchaseOrderRefId = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo.RefId = ((*RefIdType)(v))
@@ -50036,11 +50506,13 @@ func (n *EquipmentInfo_SIF_RefId) SetProperty(key string, value interface{}) *Eq
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo_sif_refid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.equipmentinfo_sif_refid.Value = ((*String)(v))
@@ -50111,11 +50583,13 @@ func (n *EvaluationType) SetProperty(key string, value interface{}) *EvaluationT
         }
         switch key {
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.evaluationtype.Date = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.evaluationtype.Description = ((*String)(v))
@@ -50125,6 +50599,7 @@ func (n *EvaluationType) SetProperty(key string, value interface{}) *EvaluationT
       n.evaluationtype.Name = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.evaluationtype.RefId = ((*RefIdType)(v))
@@ -50217,11 +50692,13 @@ func (n *ExclusionRuleType) SetProperty(key string, value interface{}) *Exclusio
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.exclusionruletype.Type = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.exclusionruletype.Value = ((*String)(v))
@@ -50292,11 +50769,13 @@ func (n *ExpenseAccountType) SetProperty(key string, value interface{}) *Expense
         }
         switch key {
     case "AccountCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.expenseaccounttype.AccountCode = ((*String)(v))
       }
     case "AccountingPeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.expenseaccounttype.AccountingPeriod = ((*LocalIdType)(v))
@@ -50306,6 +50785,7 @@ func (n *ExpenseAccountType) SetProperty(key string, value interface{}) *Expense
       n.expenseaccounttype.Amount = v
       }
     case "FinancialAccountRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.expenseaccounttype.FinancialAccountRefId = ((*String)(v))
@@ -50398,11 +50878,13 @@ func (n *FQContextualQuestionType) SetProperty(key string, value interface{}) *F
         }
         switch key {
     case "FQAnswer":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fqcontextualquestiontype.FQAnswer = ((*String)(v))
       }
     case "FQContext":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fqcontextualquestiontype.FQContext = ((*String)(v))
@@ -50487,11 +50969,13 @@ func (n *FQItemType) SetProperty(key string, value interface{}) *FQItemType {
       n.fqitemtype.DioceseAmount = ((*Float)(v))
       }
     case "FQComments":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fqitemtype.FQComments = ((*String)(v))
       }
     case "FQItemCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fqitemtype.FQItemCode = ((*String)(v))
@@ -50632,6 +51116,7 @@ func (n *FQReportingType) SetProperty(key string, value interface{}) *FQReportin
       n.fqreportingtype.AGRuleList = v
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fqreportingtype.CommonwealthId = ((*String)(v))
@@ -50641,6 +51126,7 @@ func (n *FQReportingType) SetProperty(key string, value interface{}) *FQReportin
       n.fqreportingtype.EntityContact = v
       }
     case "EntityName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fqreportingtype.EntityName = ((*String)(v))
@@ -50791,36 +51277,43 @@ func (n *FinancialAccount) SetProperty(key string, value interface{}) *Financial
         }
         switch key {
     case "AccountCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.AccountCode = ((*String)(v))
       }
     case "AccountNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.AccountNumber = ((*String)(v))
       }
     case "ChargedLocationInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.ChargedLocationInfoRefId = ((*String)(v))
       }
     case "ClassType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.ClassType = ((*String)(v))
       }
     case "CreationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.CreationDate = ((*String)(v))
       }
     case "CreationTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.CreationTime = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.Description = ((*String)(v))
@@ -50830,21 +51323,25 @@ func (n *FinancialAccount) SetProperty(key string, value interface{}) *Financial
       n.financialaccount.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.LocalId = ((*LocalIdType)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.Name = ((*String)(v))
       }
     case "ParentAccountRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.ParentAccountRefId = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialaccount.RefId = ((*RefIdType)(v))
@@ -51091,6 +51588,7 @@ func (n *FinancialQuestionnaireCollection) SetProperty(key string, value interfa
       n.financialquestionnairecollection.FQReportingList = v
       }
     case "FQYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialquestionnairecollection.FQYear = ((*SchoolYearType)(v))
@@ -51100,11 +51598,13 @@ func (n *FinancialQuestionnaireCollection) SetProperty(key string, value interfa
       n.financialquestionnairecollection.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialquestionnairecollection.RefId = ((*RefIdType)(v))
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.financialquestionnairecollection.RoundCode = ((*String)(v))
@@ -51271,21 +51771,25 @@ func (n *FineInfoType) SetProperty(key string, value interface{}) *FineInfoType 
       n.fineinfotype.Amount = v
       }
     case "Assessed":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fineinfotype.Assessed = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fineinfotype.Description = ((*String)(v))
       }
     case "Reference":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fineinfotype.Reference = ((*String)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.fineinfotype.Type = ((*String)(v))
@@ -51395,21 +51899,25 @@ func (n *FollowUpActionType) SetProperty(key string, value interface{}) *FollowU
         }
         switch key {
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.followupactiontype.Date = ((*String)(v))
       }
     case "FollowUpActionCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.followupactiontype.FollowUpActionCategory = ((*String)(v))
       }
     case "FollowUpDetails":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.followupactiontype.FollowUpDetails = ((*String)(v))
       }
     case "WellbeingResponseRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.followupactiontype.WellbeingResponseRefId = ((*String)(v))
@@ -51504,11 +52012,13 @@ func (n *GenericRubricType) SetProperty(key string, value interface{}) *GenericR
         }
         switch key {
     case "Descriptor":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.genericrubrictype.Descriptor = ((*String)(v))
       }
     case "RubricType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.genericrubrictype.RubricType = ((*String)(v))
@@ -51598,16 +52108,19 @@ func (n *GradeType) SetProperty(key string, value interface{}) *GradeType {
         }
         switch key {
     case "Letter":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradetype.Letter = ((*String)(v))
       }
     case "MarkInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradetype.MarkInfoRefId = ((*String)(v))
       }
     case "Narrative":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradetype.Narrative = ((*String)(v))
@@ -51765,41 +52278,49 @@ func (n *GradingAssignment) SetProperty(key string, value interface{}) *GradingA
         }
         switch key {
     case "AssessmentType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.AssessmentType = ((*String)(v))
       }
     case "AssignmentPurpose":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.AssignmentPurpose = ((*String)(v))
       }
     case "CreateDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.CreateDate = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.Description = ((*String)(v))
       }
     case "DetailedDescriptionBinary":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.DetailedDescriptionBinary = ((*String)(v))
       }
     case "DetailedDescriptionURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.DetailedDescriptionURL = ((*String)(v))
       }
     case "DueDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.DueDate = ((*String)(v))
       }
     case "GradingCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.GradingCategory = ((*String)(v))
@@ -51809,6 +52330,7 @@ func (n *GradingAssignment) SetProperty(key string, value interface{}) *GradingA
       n.gradingassignment.LearningStandardList = v
       }
     case "LevelAssessed":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.LevelAssessed = ((*String)(v))
@@ -51832,6 +52354,7 @@ func (n *GradingAssignment) SetProperty(key string, value interface{}) *GradingA
       n.gradingassignment.PrerequisiteList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.RefId = ((*RefIdType)(v))
@@ -51849,6 +52372,7 @@ func (n *GradingAssignment) SetProperty(key string, value interface{}) *GradingA
       n.gradingassignment.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.SchoolInfoRefId = ((*String)(v))
@@ -51862,6 +52386,7 @@ func (n *GradingAssignment) SetProperty(key string, value interface{}) *GradingA
       n.gradingassignment.SubAssignmentList = v
       }
     case "TeachingGroupRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignment.TeachingGroupRefId = ((*String)(v))
@@ -52242,11 +52767,13 @@ func (n *GradingAssignmentScore) SetProperty(key string, value interface{}) *Gra
         }
         switch key {
     case "AssignmentScoreIteration":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.AssignmentScoreIteration = ((*String)(v))
       }
     case "DateGraded":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.DateGraded = ((*String)(v))
@@ -52257,6 +52784,7 @@ func (n *GradingAssignmentScore) SetProperty(key string, value interface{}) *Gra
       n.gradingassignmentscore.ExpectedScore = ((*Bool)(v))
       }
     case "GradingAssignmentRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.GradingAssignmentRefId = ((*String)(v))
@@ -52266,11 +52794,13 @@ func (n *GradingAssignmentScore) SetProperty(key string, value interface{}) *Gra
       n.gradingassignmentscore.LocalCodeList = v
       }
     case "MarkInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.MarkInfoRefId = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.RefId = ((*RefIdType)(v))
@@ -52284,16 +52814,19 @@ func (n *GradingAssignmentScore) SetProperty(key string, value interface{}) *Gra
       n.gradingassignmentscore.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.SchoolInfoRefId = ((*String)(v))
       }
     case "ScoreDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.ScoreDescription = ((*String)(v))
       }
     case "ScoreLetter":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.ScoreLetter = ((*String)(v))
@@ -52309,16 +52842,19 @@ func (n *GradingAssignmentScore) SetProperty(key string, value interface{}) *Gra
       n.gradingassignmentscore.ScorePoints = ((*Int)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.StaffPersonalRefId = ((*String)(v))
       }
     case "StudentPersonalLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.StudentPersonalLocalId = ((*LocalIdType)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.StudentPersonalRefId = ((*String)(v))
@@ -52328,11 +52864,13 @@ func (n *GradingAssignmentScore) SetProperty(key string, value interface{}) *Gra
       n.gradingassignmentscore.SubscoreList = v
       }
     case "TeacherJudgement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.TeacherJudgement = ((*String)(v))
       }
     case "TeachingGroupRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.gradingassignmentscore.TeachingGroupRefId = ((*String)(v))
@@ -52712,31 +53250,37 @@ func (n *HoldInfoType) SetProperty(key string, value interface{}) *HoldInfoType 
         }
         switch key {
     case "DateNeeded":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.holdinfotype.DateNeeded = ((*String)(v))
       }
     case "DatePlaced":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.holdinfotype.DatePlaced = ((*String)(v))
       }
     case "Expires":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.holdinfotype.Expires = ((*String)(v))
       }
     case "MadeAvailable":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.holdinfotype.MadeAvailable = ((*String)(v))
       }
     case "ReservationExpiry":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.holdinfotype.ReservationExpiry = ((*String)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.holdinfotype.Type = ((*String)(v))
@@ -52855,11 +53399,13 @@ func (n *HomeroomType) SetProperty(key string, value interface{}) *HomeroomType 
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.homeroomtype.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.homeroomtype.Value = ((*String)(v))
@@ -52942,11 +53488,13 @@ func (n *HouseholdContactInfoType) SetProperty(key string, value interface{}) *H
       n.householdcontactinfotype.EmailList = v
       }
     case "HouseholdContactId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.householdcontactinfotype.HouseholdContactId = ((*LocalIdType)(v))
       }
     case "HouseholdSalutation":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.householdcontactinfotype.HouseholdSalutation = ((*String)(v))
@@ -53088,11 +53636,13 @@ func (n *Identity) SetProperty(key string, value interface{}) *Identity {
         }
         switch key {
     case "AuthenticationSource":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.identity.AuthenticationSource = ((*String)(v))
       }
     case "AuthenticationSourceGlobalUID":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.identity.AuthenticationSourceGlobalUID = ((*String)(v))
@@ -53110,6 +53660,7 @@ func (n *Identity) SetProperty(key string, value interface{}) *Identity {
       n.identity.PasswordList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.identity.RefId = ((*RefIdType)(v))
@@ -53279,11 +53830,13 @@ func (n *IdentityAssertionType) SetProperty(key string, value interface{}) *Iden
         }
         switch key {
     case "SchemaName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.identityassertiontype.SchemaName = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.identityassertiontype.Value = ((*String)(v))
@@ -53350,11 +53903,13 @@ func (n *Identity_SIF_RefId) SetProperty(key string, value interface{}) *Identit
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.identity_sif_refid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.identity_sif_refid.Value = ((*String)(v))
@@ -53473,11 +54028,13 @@ func (n *Invoice) SetProperty(key string, value interface{}) *Invoice {
       n.invoice.AccountCodeList = v
       }
     case "AccountingPeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.AccountingPeriod = ((*LocalIdType)(v))
       }
     case "ApprovedBy":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.ApprovedBy = ((*String)(v))
@@ -53487,21 +54044,25 @@ func (n *Invoice) SetProperty(key string, value interface{}) *Invoice {
       n.invoice.BilledAmount = v
       }
     case "BillingDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.BillingDate = ((*String)(v))
       }
     case "ChargedLocationInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.ChargedLocationInfoRefId = ((*String)(v))
       }
     case "CreatedBy":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.CreatedBy = ((*String)(v))
       }
     case "DueDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.DueDate = ((*String)(v))
@@ -53511,6 +54072,7 @@ func (n *Invoice) SetProperty(key string, value interface{}) *Invoice {
       n.invoice.FinancialAccountRefIdList = v
       }
     case "FormNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.FormNumber = ((*LocalIdType)(v))
@@ -53520,11 +54082,13 @@ func (n *Invoice) SetProperty(key string, value interface{}) *Invoice {
       n.invoice.InvoicedEntity = v
       }
     case "ItemDetail":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.ItemDetail = ((*String)(v))
       }
     case "Ledger":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.Ledger = ((*String)(v))
@@ -53534,6 +54098,7 @@ func (n *Invoice) SetProperty(key string, value interface{}) *Invoice {
       n.invoice.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.LocalId = ((*LocalIdType)(v))
@@ -53547,11 +54112,13 @@ func (n *Invoice) SetProperty(key string, value interface{}) *Invoice {
       n.invoice.PurchasingItems = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.RefId = ((*RefIdType)(v))
       }
     case "RelatedPurchaseOrderRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.RelatedPurchaseOrderRefId = ((*String)(v))
@@ -53574,16 +54141,19 @@ func (n *Invoice) SetProperty(key string, value interface{}) *Invoice {
       n.invoice.TaxRate = ((*Float)(v))
       }
     case "TaxType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.TaxType = ((*String)(v))
       }
     case "TransactionDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice.TransactionDescription = ((*String)(v))
       }
     case "Voluntary":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -53965,11 +54535,13 @@ func (n *Invoice_InvoicedEntity) SetProperty(key string, value interface{}) *Inv
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice_invoicedentity.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.invoice_invoicedentity.Value = ((*String)(v))
@@ -54074,51 +54646,61 @@ func (n *Journal) SetProperty(key string, value interface{}) *Journal {
       n.journal.Amount = v
       }
     case "ApprovedBy":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.ApprovedBy = ((*String)(v))
       }
     case "ApprovedDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.ApprovedDate = ((*String)(v))
       }
     case "CreatedBy":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.CreatedBy = ((*String)(v))
       }
     case "CreatedDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.CreatedDate = ((*String)(v))
       }
     case "CreditAccountCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.CreditAccountCode = ((*String)(v))
       }
     case "CreditFinancialAccountRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.CreditFinancialAccountRefId = ((*String)(v))
       }
     case "DebitAccountCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.DebitAccountCode = ((*String)(v))
       }
     case "DebitFinancialAccountRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.DebitFinancialAccountRefId = ((*String)(v))
       }
     case "GSTCodeOriginal":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.GSTCodeOriginal = ((*String)(v))
       }
     case "GSTCodeReplacement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.GSTCodeReplacement = ((*String)(v))
@@ -54132,11 +54714,13 @@ func (n *Journal) SetProperty(key string, value interface{}) *Journal {
       n.journal.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.LocalId = ((*LocalIdType)(v))
       }
     case "Note":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.Note = ((*String)(v))
@@ -54146,6 +54730,7 @@ func (n *Journal) SetProperty(key string, value interface{}) *Journal {
       n.journal.OriginatingTransactionRefId = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal.RefId = ((*RefIdType)(v))
@@ -54451,31 +55036,37 @@ func (n *JournalAdjustmentType) SetProperty(key string, value interface{}) *Jour
         }
         switch key {
     case "CreditAccountCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journaladjustmenttype.CreditAccountCode = ((*String)(v))
       }
     case "CreditFinancialAccountRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journaladjustmenttype.CreditFinancialAccountRefId = ((*String)(v))
       }
     case "DebitAccountCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journaladjustmenttype.DebitAccountCode = ((*String)(v))
       }
     case "DebitFinancialAccountRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journaladjustmenttype.DebitFinancialAccountRefId = ((*String)(v))
       }
     case "GSTCodeOriginal":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journaladjustmenttype.GSTCodeOriginal = ((*String)(v))
       }
     case "GSTCodeReplacement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journaladjustmenttype.GSTCodeReplacement = ((*String)(v))
@@ -54611,11 +55202,13 @@ func (n *Journal_OriginatingTransactionRefId) SetProperty(key string, value inte
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal_originatingtransactionrefid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.journal_originatingtransactionrefid.Value = ((*String)(v))
@@ -54686,6 +55279,7 @@ func (n *LEAContactType) SetProperty(key string, value interface{}) *LEAContactT
       n.leacontacttype.ContactInfo = v
       }
     case "PublishInDirectory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -54787,6 +55381,7 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
       n.leainfo.AddressList = v
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.CommonwealthId = ((*String)(v))
@@ -54796,6 +55391,7 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
       n.leainfo.EducationAgencyType = v
       }
     case "JurisdictionLowerHouse":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.JurisdictionLowerHouse = ((*String)(v))
@@ -54805,11 +55401,13 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
       n.leainfo.LEAContactList = v
       }
     case "LEAName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.LEAName = ((*String)(v))
       }
     case "LEAURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.LEAURL = ((*String)(v))
@@ -54819,11 +55417,13 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
       n.leainfo.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.LocalId = ((*LocalIdType)(v))
       }
     case "OperationalStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsOperationalStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsOperationalStatusType_values")
       }
@@ -54836,6 +55436,7 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
       n.leainfo.PhoneNumberList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.RefId = ((*RefIdType)(v))
@@ -54849,11 +55450,13 @@ func (n *LEAInfo) SetProperty(key string, value interface{}) *LEAInfo {
       n.leainfo.SIF_Metadata = v
       }
     case "SLA":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.SLA = ((*String)(v))
       }
     case "StateProvinceId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.leainfo.StateProvinceId = ((*StateProvinceIdType)(v))
@@ -55106,6 +55709,7 @@ func (n *LanguageBaseType) SetProperty(key string, value interface{}) *LanguageB
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_values")
       }
@@ -55114,11 +55718,13 @@ func (n *LanguageBaseType) SetProperty(key string, value interface{}) *LanguageB
       n.languagebasetype.Code = ((*AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType)(v))
       }
     case "Dialect":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.languagebasetype.Dialect = ((*String)(v))
       }
     case "LanguageType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsLanguageTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsLanguageTypeType_values")
       }
@@ -55218,6 +55824,7 @@ func (n *LanguageOfInstructionType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_values")
       }
@@ -55327,6 +55934,7 @@ func (n *LearningResource) SetProperty(key string, value interface{}) *LearningR
         }
         switch key {
     case "AgreementDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.AgreementDate = ((*String)(v))
@@ -55336,6 +55944,7 @@ func (n *LearningResource) SetProperty(key string, value interface{}) *LearningR
       n.learningresource.Approvals = v
       }
     case "Author":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.Author = ((*String)(v))
@@ -55349,6 +55958,7 @@ func (n *LearningResource) SetProperty(key string, value interface{}) *LearningR
       n.learningresource.Contacts = v
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.Description = ((*String)(v))
@@ -55358,6 +55968,7 @@ func (n *LearningResource) SetProperty(key string, value interface{}) *LearningR
       n.learningresource.Evaluations = v
       }
     case "LearningResourcePackageRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.LearningResourcePackageRefId = ((*String)(v))
@@ -55379,11 +55990,13 @@ func (n *LearningResource) SetProperty(key string, value interface{}) *LearningR
       n.learningresource.MediaTypes = v
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.Name = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.RefId = ((*RefIdType)(v))
@@ -55397,6 +56010,7 @@ func (n *LearningResource) SetProperty(key string, value interface{}) *LearningR
       n.learningresource.SIF_Metadata = v
       }
     case "Status":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.Status = ((*String)(v))
@@ -55406,6 +56020,7 @@ func (n *LearningResource) SetProperty(key string, value interface{}) *LearningR
       n.learningresource.SubjectAreas = v
       }
     case "UseAgreement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresource.UseAgreement = ((*String)(v))
@@ -55710,11 +56325,13 @@ func (n *LearningResourceLocationType) SetProperty(key string, value interface{}
         }
         switch key {
     case "ReferenceType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresourcelocationtype.ReferenceType = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningresourcelocationtype.Value = ((*String)(v))
@@ -55829,36 +56446,43 @@ func (n *LearningStandardDocument) SetProperty(key string, value interface{}) *L
       n.learningstandarddocument.Copyright = v
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.Description = ((*String)(v))
       }
     case "DocumentDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.DocumentDate = ((*String)(v))
       }
     case "DocumentStatus":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.DocumentStatus = ((*String)(v))
       }
     case "EndOfLifeDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.EndOfLifeDate = ((*String)(v))
       }
     case "LearningStandardItemRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.LearningStandardItemRefId = ((*String)(v))
       }
     case "LocalAdoptionDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.LocalAdoptionDate = ((*String)(v))
       }
     case "LocalArchiveDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.LocalArchiveDate = ((*String)(v))
@@ -55868,6 +56492,7 @@ func (n *LearningStandardDocument) SetProperty(key string, value interface{}) *L
       n.learningstandarddocument.LocalCodeList = v
       }
     case "OrganizationContactPoint":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.OrganizationContactPoint = ((*String)(v))
@@ -55877,6 +56502,7 @@ func (n *LearningStandardDocument) SetProperty(key string, value interface{}) *L
       n.learningstandarddocument.Organizations = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.RefId = ((*RefIdType)(v))
@@ -55886,6 +56512,7 @@ func (n *LearningStandardDocument) SetProperty(key string, value interface{}) *L
       n.learningstandarddocument.RelatedLearningStandards = v
       }
     case "RepositoryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.RepositoryDate = ((*String)(v))
@@ -55903,6 +56530,7 @@ func (n *LearningStandardDocument) SetProperty(key string, value interface{}) *L
       n.learningstandarddocument.SIF_Metadata = v
       }
     case "Source":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.Source = ((*String)(v))
@@ -55912,6 +56540,7 @@ func (n *LearningStandardDocument) SetProperty(key string, value interface{}) *L
       n.learningstandarddocument.SubjectAreas = v
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarddocument.Title = ((*String)(v))
@@ -56276,16 +56905,19 @@ func (n *LearningStandardItem) SetProperty(key string, value interface{}) *Learn
       n.learningstandarditem.ACStrandSubjectArea = v
       }
     case "LearningStandardDocumentRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarditem.LearningStandardDocumentRefId = ((*String)(v))
       }
     case "Level4":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarditem.Level4 = ((*String)(v))
       }
     case "Level5":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarditem.Level5 = ((*String)(v))
@@ -56299,6 +56931,7 @@ func (n *LearningStandardItem) SetProperty(key string, value interface{}) *Learn
       n.learningstandarditem.PredecessorItems = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandarditem.RefId = ((*RefIdType)(v))
@@ -56602,16 +57235,19 @@ func (n *LearningStandardType) SetProperty(key string, value interface{}) *Learn
         }
         switch key {
     case "LearningStandardItemRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandardtype.LearningStandardItemRefId = ((*String)(v))
       }
     case "LearningStandardLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandardtype.LearningStandardLocalId = ((*LocalIdType)(v))
       }
     case "LearningStandardURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.learningstandardtype.LearningStandardURL = ((*String)(v))
@@ -56703,11 +57339,13 @@ func (n *LibraryItemInfoType) SetProperty(key string, value interface{}) *Librar
         }
         switch key {
     case "Author":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.libraryiteminfotype.Author = ((*String)(v))
       }
     case "CallNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.libraryiteminfotype.CallNumber = ((*String)(v))
@@ -56721,6 +57359,7 @@ func (n *LibraryItemInfoType) SetProperty(key string, value interface{}) *Librar
       n.libraryiteminfotype.ElectronicId = v
       }
     case "ISBN":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.libraryiteminfotype.ISBN = ((*String)(v))
@@ -56730,11 +57369,13 @@ func (n *LibraryItemInfoType) SetProperty(key string, value interface{}) *Librar
       n.libraryiteminfotype.ReplacementCost = v
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.libraryiteminfotype.Title = ((*String)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.libraryiteminfotype.Type = ((*String)(v))
@@ -56883,21 +57524,25 @@ func (n *LibraryMessageType) SetProperty(key string, value interface{}) *Library
         }
         switch key {
     case "Priority":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarymessagetype.Priority = ((*String)(v))
       }
     case "PriorityCodeset":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarymessagetype.PriorityCodeset = ((*String)(v))
       }
     case "Sent":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarymessagetype.Sent = ((*String)(v))
       }
     case "Text":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarymessagetype.Text = ((*String)(v))
@@ -57032,6 +57677,7 @@ func (n *LibraryPatronStatus) SetProperty(key string, value interface{}) *Librar
       n.librarypatronstatus.FineAmount = v
       }
     case "LibraryType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarypatronstatus.LibraryType = ((*String)(v))
@@ -57070,6 +57716,7 @@ func (n *LibraryPatronStatus) SetProperty(key string, value interface{}) *Librar
       n.librarypatronstatus.NumberOfRefunds = ((*Int)(v))
       }
     case "PatronLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarypatronstatus.PatronLocalId = ((*LocalIdType)(v))
@@ -57079,16 +57726,19 @@ func (n *LibraryPatronStatus) SetProperty(key string, value interface{}) *Librar
       n.librarypatronstatus.PatronName = v
       }
     case "PatronRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarypatronstatus.PatronRefId = ((*String)(v))
       }
     case "PatronRefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarypatronstatus.PatronRefObject = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.librarypatronstatus.RefId = ((*RefIdType)(v))
@@ -57499,11 +58149,13 @@ func (n *LifeCycleCreatorType) SetProperty(key string, value interface{}) *LifeC
         }
         switch key {
     case "ID":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.lifecyclecreatortype.ID = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.lifecyclecreatortype.Name = ((*String)(v))
@@ -57662,11 +58314,13 @@ func (n *LocalCodeType) SetProperty(key string, value interface{}) *LocalCodeTyp
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.localcodetype.Description = ((*String)(v))
       }
     case "Element":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.localcodetype.Element = ((*String)(v))
@@ -57677,6 +58331,7 @@ func (n *LocalCodeType) SetProperty(key string, value interface{}) *LocalCodeTyp
       n.localcodetype.ListIndex = ((*Int)(v))
       }
     case "LocalisedCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.localcodetype.LocalisedCode = ((*String)(v))
@@ -57769,6 +58424,7 @@ func (n *LocationOfInstructionType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsReceivingLocationOfInstructionType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsReceivingLocationOfInstructionType_values")
       }
@@ -57844,6 +58500,7 @@ func (n *LocationType) SetProperty(key string, value interface{}) *LocationType 
         }
         switch key {
     case "LocationName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.locationtype.LocationName = ((*String)(v))
@@ -57853,6 +58510,7 @@ func (n *LocationType) SetProperty(key string, value interface{}) *LocationType 
       n.locationtype.LocationRefId = v
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.locationtype.Type = ((*String)(v))
@@ -57932,11 +58590,13 @@ func (n *LocationType_LocationRefId) SetProperty(key string, value interface{}) 
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.locationtype_locationrefid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.locationtype_locationrefid.Value = ((*String)(v))
@@ -58007,21 +58667,25 @@ func (n *MapReferenceType) SetProperty(key string, value interface{}) *MapRefere
         }
         switch key {
     case "MapNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.mapreferencetype.MapNumber = ((*String)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.mapreferencetype.Type = ((*String)(v))
       }
     case "XCoordinate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.mapreferencetype.XCoordinate = ((*String)(v))
       }
     case "YCoordinate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.mapreferencetype.YCoordinate = ((*String)(v))
@@ -58150,11 +58814,13 @@ func (n *MarkValueInfo) SetProperty(key string, value interface{}) *MarkValueInf
       n.markvalueinfo.LocalCodeList = v
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.markvalueinfo.Name = ((*String)(v))
       }
     case "Narrative":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.markvalueinfo.Narrative = ((*String)(v))
@@ -58205,6 +58871,7 @@ func (n *MarkValueInfo) SetProperty(key string, value interface{}) *MarkValueInf
       n.markvalueinfo.PercentagePassingGrade = ((*Float)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.markvalueinfo.RefId = ((*RefIdType)(v))
@@ -58218,6 +58885,7 @@ func (n *MarkValueInfo) SetProperty(key string, value interface{}) *MarkValueInf
       n.markvalueinfo.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.markvalueinfo.SchoolInfoRefId = ((*String)(v))
@@ -58500,11 +59168,13 @@ func (n *MarkerType) SetProperty(key string, value interface{}) *MarkerType {
         }
         switch key {
     case "Role":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.markertype.Role = ((*String)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.markertype.StaffPersonalRefId = ((*String)(v))
@@ -58571,11 +59241,13 @@ func (n *MedicalAlertMessageType) SetProperty(key string, value interface{}) *Me
         }
         switch key {
     case "Severity":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.medicalalertmessagetype.Severity = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.medicalalertmessagetype.Value = ((*String)(v))
@@ -58648,26 +59320,31 @@ func (n *MedicationType) SetProperty(key string, value interface{}) *MedicationT
         }
         switch key {
     case "AdministrationInformation":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.medicationtype.AdministrationInformation = ((*String)(v))
       }
     case "Dosage":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.medicationtype.Dosage = ((*String)(v))
       }
     case "Frequency":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.medicationtype.Frequency = ((*String)(v))
       }
     case "MedicationName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.medicationtype.MedicationName = ((*String)(v))
       }
     case "Method":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.medicationtype.Method = ((*String)(v))
@@ -58773,6 +59450,7 @@ func (n *MediumOfInstructionType) SetProperty(key string, value interface{}) *Me
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsMediumOfInstructionType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsMediumOfInstructionType_values")
       }
@@ -58848,16 +59526,19 @@ func (n *ModifiedType) SetProperty(key string, value interface{}) *ModifiedType 
         }
         switch key {
     case "By":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.modifiedtype.By = ((*String)(v))
       }
     case "DateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.modifiedtype.DateTime = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.modifiedtype.Description = ((*String)(v))
@@ -58937,6 +59618,7 @@ func (n *MonetaryAmountType) SetProperty(key string, value interface{}) *Monetar
         }
         switch key {
     case "Currency":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(ISO4217CurrencyNamesAndCodeElementsType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "ISO4217CurrencyNamesAndCodeElementsType_values")
       }
@@ -59025,11 +59707,13 @@ func (n *NAPCodeFrame) SetProperty(key string, value interface{}) *NAPCodeFrame 
       n.napcodeframe.LocalCodeList = v
       }
     case "NAPTestRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napcodeframe.NAPTestRefId = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napcodeframe.RefId = ((*RefIdType)(v))
@@ -59238,21 +59922,25 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.DOBRange = ((*Bool)(v))
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.Date = ((*String)(v))
       }
     case "Device":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.Device = ((*String)(v))
       }
     case "ExemptionReason":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.ExemptionReason = ((*String)(v))
       }
     case "LapsedTimeTest":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.LapsedTimeTest = ((*String)(v))
@@ -59262,6 +59950,7 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.LocalCodeList = v
       }
     case "NAPJurisdiction":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPJurisdictionType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPJurisdictionType_values")
       }
@@ -59270,11 +59959,13 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.NAPJurisdiction = ((*AUCodeSetsNAPJurisdictionType)(v))
       }
     case "NAPTestLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.NAPTestLocalId = ((*LocalIdType)(v))
       }
     case "NAPTestRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.NAPTestRefId = ((*String)(v))
@@ -59285,6 +59976,7 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.PSIOtherIdMatch = ((*Bool)(v))
       }
     case "ParticipationCode":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPParticipationCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPParticipationCodeType_values")
       }
@@ -59293,6 +59985,7 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.ParticipationCode = ((*AUCodeSetsNAPParticipationCodeType)(v))
       }
     case "ParticipationText":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.ParticipationText = ((*String)(v))
@@ -59303,6 +59996,7 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.PersonalDetailsChanged = ((*Bool)(v))
       }
     case "PlatformStudentIdentifier":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.PlatformStudentIdentifier = ((*LocalIdType)(v))
@@ -59313,11 +60007,13 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.PossibleDuplicate = ((*Bool)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.RefId = ((*RefIdType)(v))
       }
     case "ReportingSchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.ReportingSchoolName = ((*String)(v))
@@ -59331,11 +60027,13 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.SIF_Metadata = v
       }
     case "SchoolACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.SchoolACARAId = ((*LocalIdType)(v))
       }
     case "SchoolGeolocation":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolLocationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolLocationType_values")
       }
@@ -59344,11 +60042,13 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.SchoolGeolocation = ((*AUCodeSetsSchoolLocationType)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolSector":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolSectorCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSectorCodeType_values")
       }
@@ -59357,16 +60057,19 @@ func (n *NAPEventStudentLink) SetProperty(key string, value interface{}) *NAPEve
       n.napeventstudentlink.SchoolSector = ((*AUCodeSetsSchoolSectorCodeType)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.StartTime = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napeventstudentlink.StudentPersonalRefId = ((*String)(v))
       }
     case "System":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolSystemType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSystemType_values")
       }
@@ -59780,6 +60483,7 @@ func (n *NAPLANScoreType) SetProperty(key string, value interface{}) *NAPLANScor
         }
         switch key {
     case "Domain":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPTestDomainType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPTestDomainType_values")
       }
@@ -59792,6 +60496,7 @@ func (n *NAPLANScoreType) SetProperty(key string, value interface{}) *NAPLANScor
       n.naplanscoretype.DomainScore = v
       }
     case "ParticipationCode":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPParticipationCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPParticipationCodeType_values")
       }
@@ -59880,6 +60585,7 @@ func (n *NAPLANScoreWithYearsType) SetProperty(key string, value interface{}) *N
         }
         switch key {
     case "Domain":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPTestDomainType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPTestDomainType_values")
       }
@@ -59892,6 +60598,7 @@ func (n *NAPLANScoreWithYearsType) SetProperty(key string, value interface{}) *N
       n.naplanscorewithyearstype.DomainScore = v
       }
     case "ParticipationCode":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPParticipationCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPParticipationCodeType_values")
       }
@@ -59904,6 +60611,7 @@ func (n *NAPLANScoreWithYearsType) SetProperty(key string, value interface{}) *N
       n.naplanscorewithyearstype.TestLevel = v
       }
     case "TestYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naplanscorewithyearstype.TestYear = ((*SchoolYearType)(v))
@@ -60035,6 +60743,7 @@ func (n *NAPStudentResponseSet) SetProperty(key string, value interface{}) *NAPS
         }
         switch key {
     case "CalibrationSampleFlag":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.CalibrationSampleFlag = ((*String)(v))
@@ -60044,6 +60753,7 @@ func (n *NAPStudentResponseSet) SetProperty(key string, value interface{}) *NAPS
       n.napstudentresponseset.DomainScore = v
       }
     case "EquatingSampleFlag":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.EquatingSampleFlag = ((*String)(v))
@@ -60053,31 +60763,37 @@ func (n *NAPStudentResponseSet) SetProperty(key string, value interface{}) *NAPS
       n.napstudentresponseset.LocalCodeList = v
       }
     case "NAPTestLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.NAPTestLocalId = ((*LocalIdType)(v))
       }
     case "NAPTestRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.NAPTestRefId = ((*String)(v))
       }
     case "ParallelTest":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.ParallelTest = ((*String)(v))
       }
     case "PathTakenForDomain":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.PathTakenForDomain = ((*String)(v))
       }
     case "PlatformStudentIdentifier":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.PlatformStudentIdentifier = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.RefId = ((*RefIdType)(v))
@@ -60096,6 +60812,7 @@ func (n *NAPStudentResponseSet) SetProperty(key string, value interface{}) *NAPS
       n.napstudentresponseset.SIF_Metadata = v
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napstudentresponseset.StudentPersonalRefId = ((*String)(v))
@@ -60335,6 +61052,7 @@ func (n *NAPSubscoreType) SetProperty(key string, value interface{}) *NAPSubscor
         }
         switch key {
     case "SubscoreType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napsubscoretype.SubscoreType = ((*String)(v))
@@ -60416,6 +61134,7 @@ func (n *NAPTest) SetProperty(key string, value interface{}) *NAPTest {
       n.naptest.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptest.RefId = ((*RefIdType)(v))
@@ -60547,6 +61266,7 @@ func (n *NAPTestContentType) SetProperty(key string, value interface{}) *NAPTest
         }
         switch key {
     case "Domain":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPTestDomainType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPTestDomainType_values")
       }
@@ -60563,6 +61283,7 @@ func (n *NAPTestContentType) SetProperty(key string, value interface{}) *NAPTest
       n.naptestcontenttype.DomainProficiency = v
       }
     case "NAPTestLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestcontenttype.NAPTestLocalId = ((*LocalIdType)(v))
@@ -60577,11 +61298,13 @@ func (n *NAPTestContentType) SetProperty(key string, value interface{}) *NAPTest
       n.naptestcontenttype.TestLevel = v
       }
     case "TestName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestcontenttype.TestName = ((*String)(v))
       }
     case "TestType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPTestTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPTestTypeType_values")
       }
@@ -60590,6 +61313,7 @@ func (n *NAPTestContentType) SetProperty(key string, value interface{}) *NAPTest
       n.naptestcontenttype.TestType = ((*AUCodeSetsNAPTestTypeType)(v))
       }
     case "TestYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestcontenttype.TestYear = ((*SchoolYearType)(v))
@@ -60757,6 +61481,7 @@ func (n *NAPTestItem) SetProperty(key string, value interface{}) *NAPTestItem {
       n.naptestitem.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitem.RefId = ((*RefIdType)(v))
@@ -60881,11 +61606,13 @@ func (n *NAPTestItem2Type) SetProperty(key string, value interface{}) *NAPTestIt
       n.naptestitem2type.SequenceNumber = ((*Int)(v))
       }
     case "TestItemLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitem2type.TestItemLocalId = ((*LocalIdType)(v))
       }
     case "TestItemRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitem2type.TestItemRefId = ((*String)(v))
@@ -61011,16 +61738,19 @@ func (n *NAPTestItemContentType) SetProperty(key string, value interface{}) *NAP
       n.naptestitemcontenttype.ContentDescriptionList = v
       }
     case "CorrectAnswer":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitemcontenttype.CorrectAnswer = ((*String)(v))
       }
     case "ExemplarURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitemcontenttype.ExemplarURL = ((*String)(v))
       }
     case "ItemDescriptor":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitemcontenttype.ItemDescriptor = ((*String)(v))
@@ -61051,6 +61781,7 @@ func (n *NAPTestItemContentType) SetProperty(key string, value interface{}) *NAP
       n.naptestitemcontenttype.ItemDifficultyLogit62SE = ((*Float)(v))
       }
     case "ItemName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitemcontenttype.ItemName = ((*String)(v))
@@ -61061,6 +61792,7 @@ func (n *NAPTestItemContentType) SetProperty(key string, value interface{}) *NAP
       n.naptestitemcontenttype.ItemProficiencyBand = ((*Int)(v))
       }
     case "ItemProficiencyLevel":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitemcontenttype.ItemProficiencyLevel = ((*String)(v))
@@ -61070,6 +61802,7 @@ func (n *NAPTestItemContentType) SetProperty(key string, value interface{}) *NAP
       n.naptestitemcontenttype.ItemSubstitutedForList = v
       }
     case "ItemType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPTestItemTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPTestItemTypeType_values")
       }
@@ -61078,6 +61811,7 @@ func (n *NAPTestItemContentType) SetProperty(key string, value interface{}) *NAP
       n.naptestitemcontenttype.ItemType = ((*AUCodeSetsNAPTestItemTypeType)(v))
       }
     case "MarkingType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPTestItemMarkingTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPTestItemMarkingTypeType_values")
       }
@@ -61096,6 +61830,7 @@ func (n *NAPTestItemContentType) SetProperty(key string, value interface{}) *NAP
       n.naptestitemcontenttype.MultipleChoiceOptionCount = ((*Int)(v))
       }
     case "NAPTestItemLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitemcontenttype.NAPTestItemLocalId = ((*LocalIdType)(v))
@@ -61114,11 +61849,13 @@ func (n *NAPTestItemContentType) SetProperty(key string, value interface{}) *NAP
       n.naptestitemcontenttype.StimulusList = v
       }
     case "Subdomain":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestitemcontenttype.Subdomain = ((*String)(v))
       }
     case "WritingGenre":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPWritingGenreType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPWritingGenreType_values")
       }
@@ -61512,16 +62249,19 @@ func (n *NAPTestScoreSummary) SetProperty(key string, value interface{}) *NAPTes
       n.naptestscoresummary.LocalCodeList = v
       }
     case "NAPTestLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestscoresummary.NAPTestLocalId = ((*LocalIdType)(v))
       }
     case "NAPTestRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestscoresummary.NAPTestRefId = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestscoresummary.RefId = ((*RefIdType)(v))
@@ -61535,11 +62275,13 @@ func (n *NAPTestScoreSummary) SetProperty(key string, value interface{}) *NAPTes
       n.naptestscoresummary.SIF_Metadata = v
       }
     case "SchoolACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestscoresummary.SchoolACARAId = ((*LocalIdType)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestscoresummary.SchoolInfoRefId = ((*String)(v))
@@ -61765,16 +62507,19 @@ func (n *NAPTestlet) SetProperty(key string, value interface{}) *NAPTestlet {
       n.naptestlet.LocalCodeList = v
       }
     case "NAPTestLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestlet.NAPTestLocalId = ((*LocalIdType)(v))
       }
     case "NAPTestRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestlet.NAPTestRefId = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestlet.RefId = ((*RefIdType)(v))
@@ -61937,6 +62682,7 @@ func (n *NAPTestletCodeFrameType) SetProperty(key string, value interface{}) *NA
         }
         switch key {
     case "NAPTestletRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletcodeframetype.NAPTestletRefId = ((*String)(v))
@@ -62035,11 +62781,13 @@ func (n *NAPTestletContentType) SetProperty(key string, value interface{}) *NAPT
       n.naptestletcontenttype.LocationInStage = ((*Int)(v))
       }
     case "NAPTestletLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletcontenttype.NAPTestletLocalId = ((*LocalIdType)(v))
       }
     case "Node":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletcontenttype.Node = ((*String)(v))
@@ -62050,6 +62798,7 @@ func (n *NAPTestletContentType) SetProperty(key string, value interface{}) *NAPT
       n.naptestletcontenttype.TestletMaximumScore = ((*Float)(v))
       }
     case "TestletName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletcontenttype.TestletName = ((*String)(v))
@@ -62174,26 +62923,31 @@ func (n *NAPTestletResponseItemType) SetProperty(key string, value interface{}) 
       n.naptestletresponseitemtype.ItemWeight = ((*Float)(v))
       }
     case "LapsedTimeItem":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletresponseitemtype.LapsedTimeItem = ((*String)(v))
       }
     case "NAPTestItemLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletresponseitemtype.NAPTestItemLocalId = ((*LocalIdType)(v))
       }
     case "NAPTestItemRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletresponseitemtype.NAPTestItemRefId = ((*String)(v))
       }
     case "Response":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletresponseitemtype.Response = ((*String)(v))
       }
     case "ResponseCorrectness":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNAPResponseCorrectnessType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNAPResponseCorrectnessType_values")
       }
@@ -62376,11 +63130,13 @@ func (n *NAPTestletResponseType) SetProperty(key string, value interface{}) *NAP
       n.naptestletresponsetype.ItemResponseList = v
       }
     case "NAPTestletLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletresponsetype.NAPTestletLocalId = ((*LocalIdType)(v))
       }
     case "NAPTestletRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.naptestletresponsetype.NAPTestletRefId = ((*String)(v))
@@ -62480,11 +63236,13 @@ func (n *NAPWritingRubricType) SetProperty(key string, value interface{}) *NAPWr
         }
         switch key {
     case "Descriptor":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napwritingrubrictype.Descriptor = ((*String)(v))
       }
     case "RubricType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.napwritingrubrictype.RubricType = ((*String)(v))
@@ -62572,6 +63330,7 @@ func (n *NCCDType) SetProperty(key string, value interface{}) *NCCDType {
         }
         switch key {
     case "CategoryOfDisability":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNCCDDisabilityType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNCCDDisabilityType_values")
       }
@@ -62580,6 +63339,7 @@ func (n *NCCDType) SetProperty(key string, value interface{}) *NCCDType {
       n.nccdtype.CategoryOfDisability = ((*AUCodeSetsNCCDDisabilityType)(v))
       }
     case "DateOfAssessment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nccdtype.DateOfAssessment = ((*String)(v))
@@ -62589,6 +63349,7 @@ func (n *NCCDType) SetProperty(key string, value interface{}) *NCCDType {
       n.nccdtype.DisabilityCategoryConsideredList = v
       }
     case "LevelOfAdjustment":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNCCDAdjustmentType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNCCDAdjustmentType_values")
       }
@@ -62702,16 +63463,19 @@ func (n *NameOfRecordType) SetProperty(key string, value interface{}) *NameOfRec
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.Type = ((*String)(v))
       }
     case "FamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.FamilyName = ((*String)(v))
       }
     case "FamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -62720,26 +63484,31 @@ func (n *NameOfRecordType) SetProperty(key string, value interface{}) *NameOfRec
       n.nameofrecordtype.FamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FullName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.FullName = ((*String)(v))
       }
     case "GivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.GivenName = ((*String)(v))
       }
     case "MiddleName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.MiddleName = ((*String)(v))
       }
     case "PreferredFamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.PreferredFamilyName = ((*String)(v))
       }
     case "PreferredFamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -62748,16 +63517,19 @@ func (n *NameOfRecordType) SetProperty(key string, value interface{}) *NameOfRec
       n.nameofrecordtype.PreferredFamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "PreferredGivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.PreferredGivenName = ((*String)(v))
       }
     case "Suffix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.Suffix = ((*String)(v))
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nameofrecordtype.Title = ((*String)(v))
@@ -62959,6 +63731,7 @@ func (n *NameType) SetProperty(key string, value interface{}) *NameType {
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNameUsageTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNameUsageTypeType_values")
       }
@@ -62967,11 +63740,13 @@ func (n *NameType) SetProperty(key string, value interface{}) *NameType {
       n.nametype.Type = ((*AUCodeSetsNameUsageTypeType)(v))
       }
     case "FamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.FamilyName = ((*String)(v))
       }
     case "FamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -62980,26 +63755,31 @@ func (n *NameType) SetProperty(key string, value interface{}) *NameType {
       n.nametype.FamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FullName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.FullName = ((*String)(v))
       }
     case "GivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.GivenName = ((*String)(v))
       }
     case "MiddleName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.MiddleName = ((*String)(v))
       }
     case "PreferredFamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.PreferredFamilyName = ((*String)(v))
       }
     case "PreferredFamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -63008,16 +63788,19 @@ func (n *NameType) SetProperty(key string, value interface{}) *NameType {
       n.nametype.PreferredFamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "PreferredGivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.PreferredGivenName = ((*String)(v))
       }
     case "Suffix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.Suffix = ((*String)(v))
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.nametype.Title = ((*String)(v))
@@ -63217,51 +64000,61 @@ func (n *NeverShareWithType) SetProperty(key string, value interface{}) *NeverSh
         }
         switch key {
     case "NeverShareWithComments":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithComments = ((*String)(v))
       }
     case "NeverShareWithLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithLocalId = ((*LocalIdType)(v))
       }
     case "NeverShareWithName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithName = ((*String)(v))
       }
     case "NeverShareWithObjectTypeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithObjectTypeName = ((*String)(v))
       }
     case "NeverShareWithParty":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithParty = ((*String)(v))
       }
     case "NeverShareWithPurpose":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithPurpose = ((*String)(v))
       }
     case "NeverShareWithRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithRefId = ((*String)(v))
       }
     case "NeverShareWithRelationship":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithRelationship = ((*String)(v))
       }
     case "NeverShareWithRole":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithRole = ((*String)(v))
       }
     case "NeverShareWithURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.neversharewithtype.NeverShareWithURL = ((*String)(v))
@@ -63432,11 +64225,13 @@ func (n *OtherCodeListType_OtherCode) SetProperty(key string, value interface{})
         }
         switch key {
     case "Codeset":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othercodelisttype_othercode.Codeset = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othercodelisttype_othercode.Value = ((*String)(v))
@@ -63503,11 +64298,13 @@ func (n *OtherIdType) SetProperty(key string, value interface{}) *OtherIdType {
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.otheridtype.Type = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.otheridtype.Value = ((*String)(v))
@@ -63592,6 +64389,7 @@ func (n *OtherNameType) SetProperty(key string, value interface{}) *OtherNameTyp
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNameUsageTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNameUsageTypeType_values")
       }
@@ -63600,11 +64398,13 @@ func (n *OtherNameType) SetProperty(key string, value interface{}) *OtherNameTyp
       n.othernametype.Type = ((*AUCodeSetsNameUsageTypeType)(v))
       }
     case "FamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.FamilyName = ((*String)(v))
       }
     case "FamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -63613,26 +64413,31 @@ func (n *OtherNameType) SetProperty(key string, value interface{}) *OtherNameTyp
       n.othernametype.FamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FullName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.FullName = ((*String)(v))
       }
     case "GivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.GivenName = ((*String)(v))
       }
     case "MiddleName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.MiddleName = ((*String)(v))
       }
     case "PreferredFamilyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.PreferredFamilyName = ((*String)(v))
       }
     case "PreferredFamilyNameFirst":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -63641,16 +64446,19 @@ func (n *OtherNameType) SetProperty(key string, value interface{}) *OtherNameTyp
       n.othernametype.PreferredFamilyNameFirst = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "PreferredGivenName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.PreferredGivenName = ((*String)(v))
       }
     case "Suffix":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.Suffix = ((*String)(v))
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.othernametype.Title = ((*String)(v))
@@ -63840,26 +64648,31 @@ func (n *OtherWellbeingResponseContainerType) SetProperty(key string, value inte
         }
         switch key {
     case "OtherResponseDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.otherwellbeingresponsecontainertype.OtherResponseDate = ((*String)(v))
       }
     case "OtherResponseDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.otherwellbeingresponsecontainertype.OtherResponseDescription = ((*String)(v))
       }
     case "OtherResponseNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.otherwellbeingresponsecontainertype.OtherResponseNotes = ((*String)(v))
       }
     case "OtherResponseType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.otherwellbeingresponsecontainertype.OtherResponseType = ((*String)(v))
       }
     case "Status":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingStatusType_values")
       }
@@ -63970,6 +64783,7 @@ func (n *PassportType) SetProperty(key string, value interface{}) *PassportType 
         }
         switch key {
     case "Country":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_values")
       }
@@ -63978,11 +64792,13 @@ func (n *PassportType) SetProperty(key string, value interface{}) *PassportType 
       n.passporttype.Country = ((*CountryType)(v))
       }
     case "ExpiryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.passporttype.ExpiryDate = ((*String)(v))
       }
     case "Number":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.passporttype.Number = ((*String)(v))
@@ -64064,16 +64880,19 @@ func (n *PasswordListType_Password) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "Algorithm":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.passwordlisttype_password.Algorithm = ((*String)(v))
       }
     case "KeyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.passwordlisttype_password.KeyName = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.passwordlisttype_password.Value = ((*String)(v))
@@ -64199,21 +65018,25 @@ func (n *PaymentReceipt) SetProperty(key string, value interface{}) *PaymentRece
       n.paymentreceipt.AccountCodeList = v
       }
     case "AccountingPeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.AccountingPeriod = ((*LocalIdType)(v))
       }
     case "ChargedLocationInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.ChargedLocationInfoRefId = ((*String)(v))
       }
     case "ChequeNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.ChequeNumber = ((*String)(v))
       }
     case "DebtorRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.DebtorRefId = ((*String)(v))
@@ -64223,6 +65046,7 @@ func (n *PaymentReceipt) SetProperty(key string, value interface{}) *PaymentRece
       n.paymentreceipt.FinancialAccountRefIdList = v
       }
     case "InvoiceRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.InvoiceRefId = ((*String)(v))
@@ -64232,6 +65056,7 @@ func (n *PaymentReceipt) SetProperty(key string, value interface{}) *PaymentRece
       n.paymentreceipt.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.LocalId = ((*LocalIdType)(v))
@@ -64241,11 +65066,13 @@ func (n *PaymentReceipt) SetProperty(key string, value interface{}) *PaymentRece
       n.paymentreceipt.PaymentReceiptLineList = v
       }
     case "ReceivedTransactionId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.ReceivedTransactionId = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.RefId = ((*RefIdType)(v))
@@ -64272,31 +65099,37 @@ func (n *PaymentReceipt) SetProperty(key string, value interface{}) *PaymentRece
       n.paymentreceipt.TransactionAmount = v
       }
     case "TransactionDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.TransactionDate = ((*String)(v))
       }
     case "TransactionDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.TransactionDescription = ((*String)(v))
       }
     case "TransactionMethod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.TransactionMethod = ((*String)(v))
       }
     case "TransactionNote":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.TransactionNote = ((*String)(v))
       }
     case "TransactionType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.TransactionType = ((*String)(v))
       }
     case "VendorInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceipt.VendorInfoRefId = ((*String)(v))
@@ -64650,26 +65483,31 @@ func (n *PaymentReceiptLineType) SetProperty(key string, value interface{}) *Pay
         }
         switch key {
     case "AccountCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceiptlinetype.AccountCode = ((*String)(v))
       }
     case "FinancialAccountRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceiptlinetype.FinancialAccountRefId = ((*String)(v))
       }
     case "InvoiceRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceiptlinetype.InvoiceRefId = ((*String)(v))
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceiptlinetype.LocalId = ((*LocalIdType)(v))
       }
     case "LocalPaymentReceiptLineId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceiptlinetype.LocalPaymentReceiptLineId = ((*LocalIdType)(v))
@@ -64688,6 +65526,7 @@ func (n *PaymentReceiptLineType) SetProperty(key string, value interface{}) *Pay
       n.paymentreceiptlinetype.TransactionAmount = v
       }
     case "TransactionDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.paymentreceiptlinetype.TransactionDescription = ((*String)(v))
@@ -64879,11 +65718,13 @@ func (n *PeriodAttendanceType) SetProperty(key string, value interface{}) *Perio
       n.periodattendancetype.AttendanceCode = v
       }
     case "AttendanceNote":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.AttendanceNote = ((*String)(v))
       }
     case "AttendanceStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAttendanceStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAttendanceStatusType_values")
       }
@@ -64892,21 +65733,25 @@ func (n *PeriodAttendanceType) SetProperty(key string, value interface{}) *Perio
       n.periodattendancetype.AttendanceStatus = ((*AUCodeSetsAttendanceStatusType)(v))
       }
     case "AttendanceType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.AttendanceType = ((*String)(v))
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.Date = ((*String)(v))
       }
     case "DayId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.DayId = ((*LocalIdType)(v))
       }
     case "EndTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.EndTime = ((*String)(v))
@@ -64916,16 +65761,19 @@ func (n *PeriodAttendanceType) SetProperty(key string, value interface{}) *Perio
       n.periodattendancetype.RoomList = v
       }
     case "ScheduledActivityRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.ScheduledActivityRefId = ((*String)(v))
       }
     case "SessionInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.SessionInfoRefId = ((*String)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.StartTime = ((*String)(v))
@@ -64935,26 +65783,31 @@ func (n *PeriodAttendanceType) SetProperty(key string, value interface{}) *Perio
       n.periodattendancetype.TeacherList = v
       }
     case "TimeIn":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.TimeIn = ((*String)(v))
       }
     case "TimeOut":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.TimeOut = ((*String)(v))
       }
     case "TimeTableCellRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.TimeTableCellRefId = ((*String)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.TimeTableSubjectRefId = ((*RefIdType)(v))
       }
     case "TimetablePeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.periodattendancetype.TimetablePeriod = ((*String)(v))
@@ -65232,51 +66085,61 @@ func (n *PermissionToParticipateType) SetProperty(key string, value interface{})
         }
         switch key {
     case "Permission":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.Permission = ((*String)(v))
       }
     case "PermissionCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionCategory = ((*String)(v))
       }
     case "PermissionComments":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionComments = ((*String)(v))
       }
     case "PermissionEndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionEndDate = ((*String)(v))
       }
     case "PermissionGranteeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionGranteeName = ((*String)(v))
       }
     case "PermissionGranteeObjectTypeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionGranteeObjectTypeName = ((*String)(v))
       }
     case "PermissionGranteeRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionGranteeRefId = ((*String)(v))
       }
     case "PermissionGranteeRelationship":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionGranteeRelationship = ((*String)(v))
       }
     case "PermissionStartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionStartDate = ((*String)(v))
       }
     case "PermissionValue":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.permissiontoparticipatetype.PermissionValue = ((*String)(v))
@@ -65613,6 +66476,7 @@ func (n *PersonInvolvementType) SetProperty(key string, value interface{}) *Pers
         }
         switch key {
     case "HowInvolved":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personinvolvementtype.HowInvolved = ((*String)(v))
@@ -65622,6 +66486,7 @@ func (n *PersonInvolvementType) SetProperty(key string, value interface{}) *Pers
       n.personinvolvementtype.PersonRefId = v
       }
     case "ShortName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personinvolvementtype.ShortName = ((*String)(v))
@@ -65701,11 +66566,13 @@ func (n *PersonInvolvementType_PersonRefId) SetProperty(key string, value interf
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personinvolvementtype_personrefid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personinvolvementtype_personrefid.Value = ((*String)(v))
@@ -65790,6 +66657,7 @@ func (n *PersonPicture) SetProperty(key string, value interface{}) *PersonPictur
       n.personpicture.LocalCodeList = v
       }
     case "OKToPublish":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -65810,6 +66678,7 @@ func (n *PersonPicture) SetProperty(key string, value interface{}) *PersonPictur
       n.personpicture.PublishingPermissionList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personpicture.RefId = ((*RefIdType)(v))
@@ -65823,6 +66692,7 @@ func (n *PersonPicture) SetProperty(key string, value interface{}) *PersonPictur
       n.personpicture.SIF_Metadata = v
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personpicture.SchoolYear = ((*SchoolYearType)(v))
@@ -65980,11 +66850,13 @@ func (n *PersonPicture_ParentObjectRefId) SetProperty(key string, value interfac
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personpicture_parentobjectrefid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personpicture_parentobjectrefid.Value = ((*String)(v))
@@ -66085,16 +66957,19 @@ func (n *PersonPrivacyObligationDocument) SetProperty(key string, value interfac
       n.personprivacyobligationdocument.ConsentToSharingOfData = v
       }
     case "ContactForRequestsObjectTypeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.ContactForRequestsObjectTypeName = ((*String)(v))
       }
     case "ContactForRequestsRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.ContactForRequestsRefId = ((*String)(v))
       }
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.EndDate = ((*String)(v))
@@ -66104,11 +66979,13 @@ func (n *PersonPrivacyObligationDocument) SetProperty(key string, value interfac
       n.personprivacyobligationdocument.LocalCodeList = v
       }
     case "ParentObjectTypeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.ParentObjectTypeName = ((*String)(v))
       }
     case "ParentRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.ParentRefId = ((*String)(v))
@@ -66118,6 +66995,7 @@ func (n *PersonPrivacyObligationDocument) SetProperty(key string, value interfac
       n.personprivacyobligationdocument.PermissionToParticipateList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.RefId = ((*RefIdType)(v))
@@ -66131,6 +67009,7 @@ func (n *PersonPrivacyObligationDocument) SetProperty(key string, value interfac
       n.personprivacyobligationdocument.SIF_Metadata = v
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.SchoolYear = ((*SchoolYearType)(v))
@@ -66140,6 +67019,7 @@ func (n *PersonPrivacyObligationDocument) SetProperty(key string, value interfac
       n.personprivacyobligationdocument.SettingLocationList = v
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personprivacyobligationdocument.StartDate = ((*String)(v))
@@ -66399,6 +67279,7 @@ func (n *PersonalisedPlan) SetProperty(key string, value interface{}) *Personali
         }
         switch key {
     case "AssociatedAttachment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.AssociatedAttachment = ((*String)(v))
@@ -66412,11 +67293,13 @@ func (n *PersonalisedPlan) SetProperty(key string, value interface{}) *Personali
       n.personalisedplan.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.LocalId = ((*LocalIdType)(v))
       }
     case "PersonalisedPlanCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsPersonalisedPlanType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsPersonalisedPlanType_values")
       }
@@ -66425,26 +67308,31 @@ func (n *PersonalisedPlan) SetProperty(key string, value interface{}) *Personali
       n.personalisedplan.PersonalisedPlanCategory = ((*AUCodeSetsPersonalisedPlanType)(v))
       }
     case "PersonalisedPlanEndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.PersonalisedPlanEndDate = ((*String)(v))
       }
     case "PersonalisedPlanNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.PersonalisedPlanNotes = ((*String)(v))
       }
     case "PersonalisedPlanReviewDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.PersonalisedPlanReviewDate = ((*String)(v))
       }
     case "PersonalisedPlanStartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.PersonalisedPlanStartDate = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.RefId = ((*RefIdType)(v))
@@ -66458,11 +67346,13 @@ func (n *PersonalisedPlan) SetProperty(key string, value interface{}) *Personali
       n.personalisedplan.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.SchoolInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.personalisedplan.StudentPersonalRefId = ((*String)(v))
@@ -66691,11 +67581,13 @@ func (n *PhoneNumberType) SetProperty(key string, value interface{}) *PhoneNumbe
         }
         switch key {
     case "Extension":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.phonenumbertype.Extension = ((*String)(v))
       }
     case "ListedStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -66704,6 +67596,7 @@ func (n *PhoneNumberType) SetProperty(key string, value interface{}) *PhoneNumbe
       n.phonenumbertype.ListedStatus = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "Number":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.phonenumbertype.Number = ((*String)(v))
@@ -66714,6 +67607,7 @@ func (n *PhoneNumberType) SetProperty(key string, value interface{}) *PhoneNumbe
       n.phonenumbertype.Preference = ((*Int)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsTelephoneNumberTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsTelephoneNumberTypeType_values")
       }
@@ -66822,6 +67716,7 @@ func (n *PictureSourceType) SetProperty(key string, value interface{}) *PictureS
         }
         switch key {
     case "Type":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsPictureSourceType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsPictureSourceType_values")
       }
@@ -66830,6 +67725,7 @@ func (n *PictureSourceType) SetProperty(key string, value interface{}) *PictureS
       n.picturesourcetype.Type = ((*AUCodeSetsPictureSourceType)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.picturesourcetype.Value = ((*String)(v))
@@ -66900,6 +67796,7 @@ func (n *PlanRequiredContainerType) SetProperty(key string, value interface{}) *
       n.planrequiredcontainertype.PlanRequiredList = v
       }
     case "Status":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingStatusType_values")
       }
@@ -66973,21 +67870,25 @@ func (n *PreviousSchoolType) SetProperty(key string, value interface{}) *Previou
         }
         switch key {
     case "ACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.previousschooltype.ACARAId = ((*String)(v))
       }
     case "City":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.previousschooltype.City = ((*String)(v))
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.previousschooltype.CommonwealthId = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.previousschooltype.Name = ((*String)(v))
@@ -67088,6 +67989,7 @@ func (n *PrincipalInfoType) SetProperty(key string, value interface{}) *Principa
       n.principalinfotype.ContactName = v
       }
     case "ContactTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.principalinfotype.ContactTitle = ((*String)(v))
@@ -67188,11 +68090,13 @@ func (n *PrivateHealthInsuranceType) SetProperty(key string, value interface{}) 
         }
         switch key {
     case "Company":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.privatehealthinsurancetype.Company = ((*String)(v))
       }
     case "Number":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.privatehealthinsurancetype.Number = ((*String)(v))
@@ -67259,6 +68163,7 @@ func (n *ProgramAvailabilityType) SetProperty(key string, value interface{}) *Pr
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSets0211ProgramAvailabilityType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSets0211ProgramAvailabilityType_values")
       }
@@ -67332,6 +68237,7 @@ func (n *ProgramFundingSourceType) SetProperty(key string, value interface{}) *P
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsProgramFundingSourceCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsProgramFundingSourceCodeType_values")
       }
@@ -67405,6 +68311,7 @@ func (n *ProgramStatusType) SetProperty(key string, value interface{}) *ProgramS
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.programstatustype.Code = ((*String)(v))
@@ -67473,6 +68380,7 @@ func (n *PromotionInfoType) SetProperty(key string, value interface{}) *Promotio
         }
         switch key {
     case "PromotionStatus":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.promotioninfotype.PromotionStatus = ((*String)(v))
@@ -67526,6 +68434,7 @@ func (n *PublishingPermissionType) SetProperty(key string, value interface{}) *P
         }
         switch key {
     case "PermissionCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsPermissionCategoryCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsPermissionCategoryCodeType_values")
       }
@@ -67534,6 +68443,7 @@ func (n *PublishingPermissionType) SetProperty(key string, value interface{}) *P
       n.publishingpermissiontype.PermissionCategory = ((*AUCodeSetsPermissionCategoryCodeType)(v))
       }
     case "PermissionValue":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -67633,26 +68543,31 @@ func (n *PurchaseOrder) SetProperty(key string, value interface{}) *PurchaseOrde
         }
         switch key {
     case "ChargedLocationInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.ChargedLocationInfoRefId = ((*String)(v))
       }
     case "CreationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.CreationDate = ((*String)(v))
       }
     case "EmployeePersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.EmployeePersonalRefId = ((*String)(v))
       }
     case "FormNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.FormNumber = ((*String)(v))
       }
     case "FullyDelivered":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -67665,11 +68580,13 @@ func (n *PurchaseOrder) SetProperty(key string, value interface{}) *PurchaseOrde
       n.purchaseorder.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.LocalId = ((*LocalIdType)(v))
       }
     case "OriginalPurchaseOrderRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.OriginalPurchaseOrderRefId = ((*String)(v))
@@ -67679,6 +68596,7 @@ func (n *PurchaseOrder) SetProperty(key string, value interface{}) *PurchaseOrde
       n.purchaseorder.PurchasingItems = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.RefId = ((*RefIdType)(v))
@@ -67705,11 +68623,13 @@ func (n *PurchaseOrder) SetProperty(key string, value interface{}) *PurchaseOrde
       n.purchaseorder.TotalAmount = v
       }
     case "UpdateDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.UpdateDate = ((*String)(v))
       }
     case "VendorInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchaseorder.VendorInfoRefId = ((*String)(v))
@@ -67987,6 +68907,7 @@ func (n *PurchasingItemType) SetProperty(key string, value interface{}) *Purchas
         }
         switch key {
     case "CancelledOrder":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -67999,26 +68920,31 @@ func (n *PurchasingItemType) SetProperty(key string, value interface{}) *Purchas
       n.purchasingitemtype.ExpenseAccounts = v
       }
     case "ItemDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchasingitemtype.ItemDescription = ((*String)(v))
       }
     case "ItemNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchasingitemtype.ItemNumber = ((*String)(v))
       }
     case "LocalItemId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchasingitemtype.LocalItemId = ((*LocalIdType)(v))
       }
     case "Quantity":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchasingitemtype.Quantity = ((*String)(v))
       }
     case "QuantityDelivered":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.purchasingitemtype.QuantityDelivered = ((*String)(v))
@@ -68204,16 +69130,19 @@ func (n *ReferenceDataType) SetProperty(key string, value interface{}) *Referenc
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.referencedatatype.Description = ((*String)(v))
       }
     case "MIMEType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.referencedatatype.MIMEType = ((*String)(v))
       }
     case "URL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.referencedatatype.URL = ((*String)(v))
@@ -68293,6 +69222,7 @@ func (n *ReferralSourceType) SetProperty(key string, value interface{}) *Referra
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSets0792IdentificationProcedureType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSets0792IdentificationProcedureType_values")
       }
@@ -68366,11 +69296,13 @@ func (n *RelatedLearningStandardItemRefIdType) SetProperty(key string, value int
         }
         switch key {
     case "RelationshipType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.relatedlearningstandarditemrefidtype.RelationshipType = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.relatedlearningstandarditemrefidtype.Value = ((*String)(v))
@@ -68437,6 +69369,7 @@ func (n *RelationshipType) SetProperty(key string, value interface{}) *Relations
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsRelationshipToStudentType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsRelationshipToStudentType_values")
       }
@@ -68510,6 +69443,7 @@ func (n *ReligionType) SetProperty(key string, value interface{}) *ReligionType 
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianStandardClassificationOfReligiousGroupsASCRGType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardClassificationOfReligiousGroupsASCRGType_values")
       }
@@ -68583,11 +69517,13 @@ func (n *ReligiousEventType) SetProperty(key string, value interface{}) *Religio
         }
         switch key {
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.religiouseventtype.Date = ((*String)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.religiouseventtype.Type = ((*String)(v))
@@ -68656,16 +69592,19 @@ func (n *ReportingAuthorityType) SetProperty(key string, value interface{}) *Rep
         }
         switch key {
     case "AuthorityId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.reportingauthoritytype.AuthorityId = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.reportingauthoritytype.Name = ((*String)(v))
       }
     case "System":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.reportingauthoritytype.System = ((*String)(v))
@@ -68769,16 +69708,19 @@ func (n *ResourceBooking) SetProperty(key string, value interface{}) *ResourceBo
         }
         switch key {
     case "Booker":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.Booker = ((*String)(v))
       }
     case "FinishDateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.FinishDateTime = ((*String)(v))
       }
     case "FromPeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.FromPeriod = ((*LocalIdType)(v))
@@ -68793,16 +69735,19 @@ func (n *ResourceBooking) SetProperty(key string, value interface{}) *ResourceBo
       n.resourcebooking.LocalCodeList = v
       }
     case "Reason":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.Reason = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.RefId = ((*RefIdType)(v))
       }
     case "ResourceLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.ResourceLocalId = ((*LocalIdType)(v))
@@ -68820,16 +69765,19 @@ func (n *ResourceBooking) SetProperty(key string, value interface{}) *ResourceBo
       n.resourcebooking.SIF_Metadata = v
       }
     case "ScheduledActivityRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.ScheduledActivityRefId = ((*String)(v))
       }
     case "StartDateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.StartDateTime = ((*String)(v))
       }
     case "ToPeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking.ToPeriod = ((*LocalIdType)(v))
@@ -69052,11 +70000,13 @@ func (n *ResourceBooking_ResourceRefId) SetProperty(key string, value interface{
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking_resourcerefid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcebooking_resourcerefid.Value = ((*String)(v))
@@ -69123,11 +70073,13 @@ func (n *ResourcesType) SetProperty(key string, value interface{}) *ResourcesTyp
         }
         switch key {
     case "ResourceType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcestype.ResourceType = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.resourcestype.Value = ((*String)(v))
@@ -69222,6 +70174,7 @@ func (n *RoomInfo) SetProperty(key string, value interface{}) *RoomInfo {
         }
         switch key {
     case "AvailableForTimetable":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -69230,6 +70183,7 @@ func (n *RoomInfo) SetProperty(key string, value interface{}) *RoomInfo {
       n.roominfo.AvailableForTimetable = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "Building":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.Building = ((*String)(v))
@@ -69240,11 +70194,13 @@ func (n *RoomInfo) SetProperty(key string, value interface{}) *RoomInfo {
       n.roominfo.Capacity = ((*Int)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.Description = ((*String)(v))
       }
     case "HomeroomNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.HomeroomNumber = ((*String)(v))
@@ -69254,6 +70210,7 @@ func (n *RoomInfo) SetProperty(key string, value interface{}) *RoomInfo {
       n.roominfo.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.LocalId = ((*LocalIdType)(v))
@@ -69263,16 +70220,19 @@ func (n *RoomInfo) SetProperty(key string, value interface{}) *RoomInfo {
       n.roominfo.PhoneNumber = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.RefId = ((*RefIdType)(v))
       }
     case "RoomNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.RoomNumber = ((*String)(v))
       }
     case "RoomType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.RoomType = ((*String)(v))
@@ -69286,6 +70246,7 @@ func (n *RoomInfo) SetProperty(key string, value interface{}) *RoomInfo {
       n.roominfo.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.roominfo.SchoolInfoRefId = ((*String)(v))
@@ -69547,21 +70508,25 @@ func (n *SIF_ExtendedElementsType_SIF_ExtendedElement) SetProperty(key string, v
         }
         switch key {
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sif_extendedelementstype_sif_extendedelement.Name = ((*String)(v))
       }
     case "SIF_Action":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sif_extendedelementstype_sif_extendedelement.SIF_Action = ((*String)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sif_extendedelementstype_sif_extendedelement.Type = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sif_extendedelementstype_sif_extendedelement.Value = ((*ExtendedContentType)(v))
@@ -69656,6 +70621,7 @@ func (n *SIF_MetadataType) SetProperty(key string, value interface{}) *SIF_Metad
         }
         switch key {
     case "ETag":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sif_metadatatype.ETag = ((*String)(v))
@@ -69753,6 +70719,7 @@ func (n *STDNGradeType) SetProperty(key string, value interface{}) *STDNGradeTyp
       n.stdngradetype.LearningArea = v
       }
     case "Subject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.stdngradetype.Subject = ((*String)(v))
@@ -69884,26 +70851,31 @@ func (n *ScheduledActivity) SetProperty(key string, value interface{}) *Schedule
         }
         switch key {
     case "ActivityComment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.ActivityComment = ((*String)(v))
       }
     case "ActivityDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.ActivityDate = ((*String)(v))
       }
     case "ActivityEndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.ActivityEndDate = ((*String)(v))
       }
     case "ActivityName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.ActivityName = ((*String)(v))
       }
     case "ActivityType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsScheduledActivityTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsScheduledActivityTypeType_values")
       }
@@ -69916,16 +70888,19 @@ func (n *ScheduledActivity) SetProperty(key string, value interface{}) *Schedule
       n.scheduledactivity.AddressList = v
       }
     case "CellType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.CellType = ((*String)(v))
       }
     case "DayId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.DayId = ((*LocalIdType)(v))
       }
     case "FinishTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.FinishTime = ((*String)(v))
@@ -69935,6 +70910,7 @@ func (n *ScheduledActivity) SetProperty(key string, value interface{}) *Schedule
       n.scheduledactivity.LocalCodeList = v
       }
     case "Location":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.Location = ((*String)(v))
@@ -69949,11 +70925,13 @@ func (n *ScheduledActivity) SetProperty(key string, value interface{}) *Schedule
       n.scheduledactivity.OverridePatch = ((*Bool)(v))
       }
     case "PeriodId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.PeriodId = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.RefId = ((*RefIdType)(v))
@@ -69971,11 +70949,13 @@ func (n *ScheduledActivity) SetProperty(key string, value interface{}) *Schedule
       n.scheduledactivity.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.SchoolInfoRefId = ((*String)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.StartTime = ((*String)(v))
@@ -69993,6 +70973,7 @@ func (n *ScheduledActivity) SetProperty(key string, value interface{}) *Schedule
       n.scheduledactivity.TeachingGroupList = v
       }
     case "TimeTableCellRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.TimeTableCellRefId = ((*String)(v))
@@ -70002,11 +70983,13 @@ func (n *ScheduledActivity) SetProperty(key string, value interface{}) *Schedule
       n.scheduledactivity.TimeTableChangeReasonList = v
       }
     case "TimeTableRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.TimeTableRefId = ((*String)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivity.TimeTableSubjectRefId = ((*String)(v))
@@ -70415,11 +71398,13 @@ func (n *ScheduledActivityOverrideType) SetProperty(key string, value interface{
         }
         switch key {
     case "DateOfOverride":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivityoverridetype.DateOfOverride = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scheduledactivityoverridetype.Value = ((*String)(v))
@@ -70490,6 +71475,7 @@ func (n *SchoolContactType) SetProperty(key string, value interface{}) *SchoolCo
       n.schoolcontacttype.ContactInfo = v
       }
     case "PublishInDirectory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -70595,6 +71581,7 @@ func (n *SchoolCourseInfo) SetProperty(key string, value interface{}) *SchoolCou
         }
         switch key {
     case "CoreAcademicCourse":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -70603,41 +71590,49 @@ func (n *SchoolCourseInfo) SetProperty(key string, value interface{}) *SchoolCou
       n.schoolcourseinfo.CoreAcademicCourse = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "CourseCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.CourseCode = ((*String)(v))
       }
     case "CourseContent":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.CourseContent = ((*String)(v))
       }
     case "CourseCredits":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.CourseCredits = ((*String)(v))
       }
     case "CourseTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.CourseTitle = ((*String)(v))
       }
     case "Department":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.Department = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.Description = ((*String)(v))
       }
     case "DistrictCourseCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.DistrictCourseCode = ((*String)(v))
       }
     case "GraduationRequirement":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -70646,6 +71641,7 @@ func (n *SchoolCourseInfo) SetProperty(key string, value interface{}) *SchoolCou
       n.schoolcourseinfo.GraduationRequirement = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "InstructionalLevel":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.InstructionalLevel = ((*String)(v))
@@ -70655,6 +71651,7 @@ func (n *SchoolCourseInfo) SetProperty(key string, value interface{}) *SchoolCou
       n.schoolcourseinfo.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.RefId = ((*RefIdType)(v))
@@ -70668,21 +71665,25 @@ func (n *SchoolCourseInfo) SetProperty(key string, value interface{}) *SchoolCou
       n.schoolcourseinfo.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StateCourseCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.StateCourseCode = ((*String)(v))
@@ -70692,6 +71693,7 @@ func (n *SchoolCourseInfo) SetProperty(key string, value interface{}) *SchoolCou
       n.schoolcourseinfo.SubjectAreaList = v
       }
     case "TermInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfo.TermInfoRefId = ((*String)(v))
@@ -71004,36 +72006,43 @@ func (n *SchoolCourseInfoOverrideType) SetProperty(key string, value interface{}
         }
         switch key {
     case "CourseCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfooverridetype.CourseCode = ((*String)(v))
       }
     case "CourseCredits":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfooverridetype.CourseCredits = ((*String)(v))
       }
     case "CourseTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfooverridetype.CourseTitle = ((*String)(v))
       }
     case "DistrictCourseCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfooverridetype.DistrictCourseCode = ((*String)(v))
       }
     case "InstructionalLevel":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfooverridetype.InstructionalLevel = ((*String)(v))
       }
     case "Override":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfooverridetype.Override = ((*String)(v))
       }
     case "StateCourseCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolcourseinfooverridetype.StateCourseCode = ((*String)(v))
@@ -71270,6 +72279,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
         }
         switch key {
     case "ACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.ACARAId = ((*String)(v))
@@ -71284,6 +72294,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.AddressList = v
       }
     case "BoardingSchoolStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -71296,21 +72307,25 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.Campus = v
       }
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.CommonwealthId = ((*String)(v))
       }
     case "Entity_Close":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.Entity_Close = ((*String)(v))
       }
     case "Entity_Open":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.Entity_Open = ((*String)(v))
       }
     case "FederalElectorate":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsFederalElectorateType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsFederalElectorateType_values")
       }
@@ -71319,6 +72334,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.FederalElectorate = ((*AUCodeSetsFederalElectorateType)(v))
       }
     case "IndependentSchool":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -71327,11 +72343,13 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.IndependentSchool = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "JurisdictionLowerHouse":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.JurisdictionLowerHouse = ((*String)(v))
       }
     case "LEAInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.LEAInfoRefId = ((*RefIdType)(v))
@@ -71341,16 +72359,19 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.LocalCodeList = v
       }
     case "LocalGovernmentArea":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.LocalGovernmentArea = ((*String)(v))
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.LocalId = ((*LocalIdType)(v))
       }
     case "NonGovSystemicStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSystemicStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSystemicStatusType_values")
       }
@@ -71359,6 +72380,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.NonGovSystemicStatus = ((*AUCodeSetsSystemicStatusType)(v))
       }
     case "OperationalStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsOperationalStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsOperationalStatusType_values")
       }
@@ -71375,6 +72397,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.OtherLEA = v
       }
     case "ParentCommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.ParentCommonwealthId = ((*String)(v))
@@ -71388,11 +72411,13 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.PrincipalInfo = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.RefId = ((*RefIdType)(v))
       }
     case "ReligiousAffiliation":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianStandardClassificationOfReligiousGroupsASCRGType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardClassificationOfReligiousGroupsASCRGType_values")
       }
@@ -71409,11 +72434,13 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SIF_Metadata = v
       }
     case "SLA":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.SLA = ((*String)(v))
       }
     case "SchoolCoEdStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolCoEdStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolCoEdStatusType_values")
       }
@@ -71426,11 +72453,13 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SchoolContactList = v
       }
     case "SchoolDistrict":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.SchoolDistrict = ((*String)(v))
       }
     case "SchoolDistrictLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.SchoolDistrictLocalId = ((*LocalIdType)(v))
@@ -71444,6 +72473,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SchoolFocusList = v
       }
     case "SchoolGeographicLocation":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolLocationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolLocationType_values")
       }
@@ -71456,11 +72486,13 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SchoolGroupList = v
       }
     case "SchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.SchoolName = ((*String)(v))
       }
     case "SchoolSector":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolSectorCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSectorCodeType_values")
       }
@@ -71469,6 +72501,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SchoolSector = ((*AUCodeSetsSchoolSectorCodeType)(v))
       }
     case "SchoolTimeZone":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianTimeZoneType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianTimeZoneType_values")
       }
@@ -71477,6 +72510,7 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SchoolTimeZone = ((*AUCodeSetsAustralianTimeZoneType)(v))
       }
     case "SchoolType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolLevelType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolLevelType_values")
       }
@@ -71485,11 +72519,13 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SchoolType = ((*AUCodeSetsSchoolLevelType)(v))
       }
     case "SchoolURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.SchoolURL = ((*SchoolURLType)(v))
       }
     case "SessionType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSessionTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSessionTypeType_values")
       }
@@ -71498,11 +72534,13 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
       n.schoolinfo.SessionType = ((*AUCodeSetsSessionTypeType)(v))
       }
     case "StateProvinceId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.StateProvinceId = ((*StateProvinceIdType)(v))
       }
     case "System":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolSystemType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSystemType_values")
       }
@@ -72156,11 +73194,13 @@ func (n *SchoolInfo_OtherLEA) SetProperty(key string, value interface{}) *School
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo_otherlea.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo_otherlea.Value = ((*RefIdType)(v))
@@ -72229,6 +73269,7 @@ func (n *SchoolProgramType) SetProperty(key string, value interface{}) *SchoolPr
         }
         switch key {
     case "Category":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolprogramtype.Category = ((*String)(v))
@@ -72238,6 +73279,7 @@ func (n *SchoolProgramType) SetProperty(key string, value interface{}) *SchoolPr
       n.schoolprogramtype.OtherCodeList = v
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolprogramtype.Type = ((*String)(v))
@@ -72331,6 +73373,7 @@ func (n *SchoolPrograms) SetProperty(key string, value interface{}) *SchoolProgr
       n.schoolprograms.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolprograms.RefId = ((*RefIdType)(v))
@@ -72344,6 +73387,7 @@ func (n *SchoolPrograms) SetProperty(key string, value interface{}) *SchoolProgr
       n.schoolprograms.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolprograms.SchoolInfoRefId = ((*String)(v))
@@ -72353,6 +73397,7 @@ func (n *SchoolPrograms) SetProperty(key string, value interface{}) *SchoolProgr
       n.schoolprograms.SchoolProgramList = v
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schoolprograms.SchoolYear = ((*SchoolYearType)(v))
@@ -72486,6 +73531,7 @@ func (n *SchoolTravelType) SetProperty(key string, value interface{}) *SchoolTra
         }
         switch key {
     case "TravelAccompaniment":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAccompanimentType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAccompanimentType_values")
       }
@@ -72494,11 +73540,13 @@ func (n *SchoolTravelType) SetProperty(key string, value interface{}) *SchoolTra
       n.schooltraveltype.TravelAccompaniment = ((*AUCodeSetsAccompanimentType)(v))
       }
     case "TravelDetails":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.schooltraveltype.TravelDetails = ((*String)(v))
       }
     case "TravelMode":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsTravelModeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsTravelModeType_values")
       }
@@ -72581,6 +73629,7 @@ func (n *ScoreDescriptionType) SetProperty(key string, value interface{}) *Score
         }
         switch key {
     case "Descriptor":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.scoredescriptiontype.Descriptor = ((*String)(v))
@@ -72752,16 +73801,19 @@ func (n *SectionInfo) SetProperty(key string, value interface{}) *SectionInfo {
         }
         switch key {
     case "CountForAttendance":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.CountForAttendance = ((*String)(v))
       }
     case "CourseSectionCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.CourseSectionCode = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.Description = ((*String)(v))
@@ -72775,6 +73827,7 @@ func (n *SectionInfo) SetProperty(key string, value interface{}) *SectionInfo {
       n.sectioninfo.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.LocalId = ((*LocalIdType)(v))
@@ -72788,6 +73841,7 @@ func (n *SectionInfo) SetProperty(key string, value interface{}) *SectionInfo {
       n.sectioninfo.MediumOfInstruction = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.RefId = ((*RefIdType)(v))
@@ -72805,26 +73859,31 @@ func (n *SectionInfo) SetProperty(key string, value interface{}) *SectionInfo {
       n.sectioninfo.SchoolCourseInfoOverride = v
       }
     case "SchoolCourseInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.SchoolCourseInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.SchoolYear = ((*SchoolYearType)(v))
       }
     case "SectionCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.SectionCode = ((*String)(v))
       }
     case "SummerSchool":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.SummerSchool = ((*String)(v))
       }
     case "TermInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sectioninfo.TermInfoRefId = ((*String)(v))
@@ -73120,11 +74179,13 @@ func (n *SessionInfo) SetProperty(key string, value interface{}) *SessionInfo {
         }
         switch key {
     case "DayId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.DayId = ((*LocalIdType)(v))
       }
     case "FinishTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.FinishTime = ((*String)(v))
@@ -73134,21 +74195,25 @@ func (n *SessionInfo) SetProperty(key string, value interface{}) *SessionInfo {
       n.sessioninfo.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.LocalId = ((*LocalIdType)(v))
       }
     case "PeriodId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.PeriodId = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.RefId = ((*RefIdType)(v))
       }
     case "RollMarked":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -73157,6 +74222,7 @@ func (n *SessionInfo) SetProperty(key string, value interface{}) *SessionInfo {
       n.sessioninfo.RollMarked = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "RoomNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.RoomNumber = ((*String)(v))
@@ -73170,46 +74236,55 @@ func (n *SessionInfo) SetProperty(key string, value interface{}) *SessionInfo {
       n.sessioninfo.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.SchoolYear = ((*SchoolYearType)(v))
       }
     case "SessionDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.SessionDate = ((*String)(v))
       }
     case "StaffPersonalLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.StaffPersonalLocalId = ((*LocalIdType)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.StartTime = ((*String)(v))
       }
     case "TeachingGroupLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.TeachingGroupLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableCellRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.TimeTableCellRefId = ((*String)(v))
       }
     case "TimeTableSubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sessioninfo.TimeTableSubjectLocalId = ((*LocalIdType)(v))
@@ -73501,21 +74576,25 @@ func (n *SettingLocationType) SetProperty(key string, value interface{}) *Settin
         }
         switch key {
     case "SettingLocationName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.settinglocationtype.SettingLocationName = ((*String)(v))
       }
     case "SettingLocationObjectTypeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.settinglocationtype.SettingLocationObjectTypeName = ((*String)(v))
       }
     case "SettingLocationRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.settinglocationtype.SettingLocationRefId = ((*String)(v))
       }
     case "SettingLocationType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.settinglocationtype.SettingLocationType = ((*String)(v))
@@ -73626,56 +74705,67 @@ func (n *ShareWithType) SetProperty(key string, value interface{}) *ShareWithTyp
         }
         switch key {
     case "PermissionToOnShare":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.PermissionToOnShare = ((*GenericYesNoType)(v))
       }
     case "ShareWithComments":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithComments = ((*String)(v))
       }
     case "ShareWithLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithLocalId = ((*LocalIdType)(v))
       }
     case "ShareWithName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithName = ((*String)(v))
       }
     case "ShareWithObjectTypeName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithObjectTypeName = ((*String)(v))
       }
     case "ShareWithParty":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithParty = ((*String)(v))
       }
     case "ShareWithPurpose":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithPurpose = ((*String)(v))
       }
     case "ShareWithRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithRefId = ((*String)(v))
       }
     case "ShareWithRelationship":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithRelationship = ((*String)(v))
       }
     case "ShareWithRole":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithRole = ((*String)(v))
       }
     case "ShareWithURL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sharewithtype.ShareWithURL = ((*String)(v))
@@ -73867,31 +74957,37 @@ func (n *SignatoryType) SetProperty(key string, value interface{}) *SignatoryTyp
         }
         switch key {
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.signatorytype.Date = ((*String)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.signatorytype.Name = ((*String)(v))
       }
     case "Organisation":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.signatorytype.Organisation = ((*String)(v))
       }
     case "Role":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.signatorytype.Role = ((*String)(v))
       }
     case "Signature":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.signatorytype.Signature = ((*URIOrBinaryType)(v))
       }
     case "SignatureImageType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsPictureSourceType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsPictureSourceType_values")
       }
@@ -74017,21 +75113,25 @@ func (n *SoftwareRequirementType) SetProperty(key string, value interface{}) *So
         }
         switch key {
     case "OS":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.softwarerequirementtype.OS = ((*String)(v))
       }
     case "SoftwareTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.softwarerequirementtype.SoftwareTitle = ((*String)(v))
       }
     case "Vendor":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.softwarerequirementtype.Vendor = ((*String)(v))
       }
     case "Version":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.softwarerequirementtype.Version = ((*String)(v))
@@ -74124,11 +75224,13 @@ func (n *SoftwareVendorInfoContainerType) SetProperty(key string, value interfac
         }
         switch key {
     case "SoftwareProduct":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.softwarevendorinfocontainertype.SoftwareProduct = ((*String)(v))
       }
     case "SoftwareVersion":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.softwarevendorinfocontainertype.SoftwareVersion = ((*String)(v))
@@ -74195,11 +75297,13 @@ func (n *SourceObjectsType_SourceObject) SetProperty(key string, value interface
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sourceobjectstype_sourceobject.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.sourceobjectstype_sourceobject.Value = ((*String)(v))
@@ -74266,11 +75370,13 @@ func (n *SpanGapType) SetProperty(key string, value interface{}) *SpanGapType {
         }
         switch key {
     case "EndDateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.spangaptype.EndDateTime = ((*String)(v))
       }
     case "StartDateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.spangaptype.StartDateTime = ((*String)(v))
@@ -74337,6 +75443,7 @@ func (n *StaffActivityExtensionType) SetProperty(key string, value interface{}) 
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStaffActivityType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStaffActivityType_values")
       }
@@ -74452,6 +75559,7 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
         }
         switch key {
     case "AvailableForTimetable":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -74464,6 +75572,7 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
       n.staffassignment.CalendarSummaryList = v
       }
     case "CasualReliefTeacher":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -74472,11 +75581,13 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
       n.staffassignment.CasualReliefTeacher = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.Description = ((*String)(v))
       }
     case "EmploymentStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStaffStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStaffStatusType_values")
       }
@@ -74485,31 +75596,37 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
       n.staffassignment.EmploymentStatus = ((*AUCodeSetsStaffStatusType)(v))
       }
     case "Homegroup":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.Homegroup = ((*String)(v))
       }
     case "House":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.House = ((*String)(v))
       }
     case "JobEndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.JobEndDate = ((*String)(v))
       }
     case "JobFTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.JobFTE = ((*FTEType)(v))
       }
     case "JobFunction":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.JobFunction = ((*String)(v))
       }
     case "JobStartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.JobStartDate = ((*String)(v))
@@ -74519,11 +75636,13 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
       n.staffassignment.LocalCodeList = v
       }
     case "PreviousSchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.PreviousSchoolName = ((*String)(v))
       }
     case "PrimaryAssignment":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -74532,6 +75651,7 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
       n.staffassignment.PrimaryAssignment = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.RefId = ((*RefIdType)(v))
@@ -74545,11 +75665,13 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
       n.staffassignment.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.SchoolYear = ((*SchoolYearType)(v))
@@ -74559,6 +75681,7 @@ func (n *StaffAssignment) SetProperty(key string, value interface{}) *StaffAssig
       n.staffassignment.StaffActivity = v
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignment.StaffPersonalRefId = ((*String)(v))
@@ -74906,11 +76029,13 @@ func (n *StaffAssignmentMostRecentContainerType) SetProperty(key string, value i
         }
         switch key {
     case "PrimaryFTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignmentmostrecentcontainertype.PrimaryFTE = ((*FTEType)(v))
       }
     case "SecondaryFTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffassignmentmostrecentcontainertype.SecondaryFTE = ((*FTEType)(v))
@@ -74983,11 +76108,13 @@ func (n *StaffMostRecentContainerType) SetProperty(key string, value interface{}
         }
         switch key {
     case "HomeGroup":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffmostrecentcontainertype.HomeGroup = ((*String)(v))
       }
     case "LocalCampusId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffmostrecentcontainertype.LocalCampusId = ((*LocalIdType)(v))
@@ -74997,11 +76124,13 @@ func (n *StaffMostRecentContainerType) SetProperty(key string, value interface{}
       n.staffmostrecentcontainertype.NAPLANClassList = v
       }
     case "SchoolACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffmostrecentcontainertype.SchoolACARAId = ((*LocalIdType)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffmostrecentcontainertype.SchoolLocalId = ((*LocalIdType)(v))
@@ -75131,6 +76260,7 @@ func (n *StaffPersonal) SetProperty(key string, value interface{}) *StaffPersona
       n.staffpersonal.ElectronicIdList = v
       }
     case "EmploymentStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStaffStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStaffStatusType_values")
       }
@@ -75143,6 +76273,7 @@ func (n *StaffPersonal) SetProperty(key string, value interface{}) *StaffPersona
       n.staffpersonal.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffpersonal.LocalId = ((*LocalIdType)(v))
@@ -75160,6 +76291,7 @@ func (n *StaffPersonal) SetProperty(key string, value interface{}) *StaffPersona
       n.staffpersonal.PersonInfo = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffpersonal.RefId = ((*RefIdType)(v))
@@ -75173,11 +76305,13 @@ func (n *StaffPersonal) SetProperty(key string, value interface{}) *StaffPersona
       n.staffpersonal.SIF_Metadata = v
       }
     case "StateProvinceId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffpersonal.StateProvinceId = ((*StateProvinceIdType)(v))
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffpersonal.Title = ((*String)(v))
@@ -75374,11 +76508,13 @@ func (n *StaffRefIdType) SetProperty(key string, value interface{}) *StaffRefIdT
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffrefidtype.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffrefidtype.Value = ((*String)(v))
@@ -75452,11 +76588,13 @@ func (n *StaffSubjectType) SetProperty(key string, value interface{}) *StaffSubj
       n.staffsubjecttype.PreferenceNumber = ((*Int)(v))
       }
     case "SubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffsubjecttype.SubjectLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.staffsubjecttype.TimeTableSubjectRefId = ((*RefIdType)(v))
@@ -75536,6 +76674,7 @@ func (n *StandardHierarchyLevelType) SetProperty(key string, value interface{}) 
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardhierarchyleveltype.Description = ((*String)(v))
@@ -75629,26 +76768,31 @@ func (n *StandardIdentifierType) SetProperty(key string, value interface{}) *Sta
       n.standardidentifiertype.AlternateIdentificationCodes = v
       }
     case "Benchmark":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardidentifiertype.Benchmark = ((*String)(v))
       }
     case "IndicatorNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardidentifiertype.IndicatorNumber = ((*String)(v))
       }
     case "Organization":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardidentifiertype.Organization = ((*String)(v))
       }
     case "StandardNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardidentifiertype.StandardNumber = ((*String)(v))
       }
     case "YearCreated":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardidentifiertype.YearCreated = ((*String)(v))
@@ -75816,6 +76960,7 @@ func (n *StandardsSettingBodyType) SetProperty(key string, value interface{}) *S
         }
         switch key {
     case "Country":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_values")
       }
@@ -75824,11 +76969,13 @@ func (n *StandardsSettingBodyType) SetProperty(key string, value interface{}) *S
       n.standardssettingbodytype.Country = ((*CountryType)(v))
       }
     case "SettingBodyName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardssettingbodytype.SettingBodyName = ((*String)(v))
       }
     case "StateProvince":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.standardssettingbodytype.StateProvince = ((*StateProvinceType)(v))
@@ -75908,11 +77055,13 @@ func (n *StatisticalAreaType) SetProperty(key string, value interface{}) *Statis
         }
         switch key {
     case "SpatialUnitType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.statisticalareatype.SpatialUnitType = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.statisticalareatype.Value = ((*String)(v))
@@ -75993,6 +77142,7 @@ func (n *StatsCohortType) SetProperty(key string, value interface{}) *StatsCohor
         }
         switch key {
     case "AttendanceDays":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.statscohorttype.AttendanceDays = ((*String)(v))
@@ -76008,6 +77158,7 @@ func (n *StatsCohortType) SetProperty(key string, value interface{}) *StatsCohor
       n.statscohorttype.AttendanceLess90Percent = ((*Int)(v))
       }
     case "CohortGender":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.statscohorttype.CohortGender = ((*String)(v))
@@ -76028,11 +77179,13 @@ func (n *StatsCohortType) SetProperty(key string, value interface{}) *StatsCohor
       n.statscohorttype.PossibleSchoolDaysGT90PercentAttendance = ((*Int)(v))
       }
     case "StatsCohortId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.statscohorttype.StatsCohortId = ((*LocalIdType)(v))
       }
     case "StatsIndigenousStudentType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.statscohorttype.StatsIndigenousStudentType = ((*String)(v))
@@ -76267,26 +77420,31 @@ func (n *StimulusType) SetProperty(key string, value interface{}) *StimulusType 
         }
         switch key {
     case "Content":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.stimulustype.Content = ((*String)(v))
       }
     case "StimulusLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.stimulustype.StimulusLocalId = ((*LocalIdType)(v))
       }
     case "TextDescriptor":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.stimulustype.TextDescriptor = ((*String)(v))
       }
     case "TextGenre":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.stimulustype.TextGenre = ((*String)(v))
       }
     case "TextType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.stimulustype.TextType = ((*String)(v))
@@ -76428,6 +77586,7 @@ func (n *StudentActivityInfo) SetProperty(key string, value interface{}) *Studen
         }
         switch key {
     case "CurricularStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsActivityTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsActivityTypeType_values")
       }
@@ -76436,6 +77595,7 @@ func (n *StudentActivityInfo) SetProperty(key string, value interface{}) *Studen
       n.studentactivityinfo.CurricularStatus = ((*AUCodeSetsActivityTypeType)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityinfo.Description = ((*String)(v))
@@ -76449,6 +77609,7 @@ func (n *StudentActivityInfo) SetProperty(key string, value interface{}) *Studen
       n.studentactivityinfo.Location = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityinfo.RefId = ((*RefIdType)(v))
@@ -76462,6 +77623,7 @@ func (n *StudentActivityInfo) SetProperty(key string, value interface{}) *Studen
       n.studentactivityinfo.SIF_Metadata = v
       }
     case "StudentActivityLevel":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityinfo.StudentActivityLevel = ((*String)(v))
@@ -76471,6 +77633,7 @@ func (n *StudentActivityInfo) SetProperty(key string, value interface{}) *Studen
       n.studentactivityinfo.StudentActivityType = v
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityinfo.Title = ((*String)(v))
@@ -76678,6 +77841,7 @@ func (n *StudentActivityParticipation) SetProperty(key string, value interface{}
         }
         switch key {
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.EndDate = ((*String)(v))
@@ -76687,6 +77851,7 @@ func (n *StudentActivityParticipation) SetProperty(key string, value interface{}
       n.studentactivityparticipation.LocalCodeList = v
       }
     case "ParticipationComment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.ParticipationComment = ((*String)(v))
@@ -76696,11 +77861,13 @@ func (n *StudentActivityParticipation) SetProperty(key string, value interface{}
       n.studentactivityparticipation.RecognitionList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.RefId = ((*RefIdType)(v))
       }
     case "Role":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.Role = ((*String)(v))
@@ -76714,21 +77881,25 @@ func (n *StudentActivityParticipation) SetProperty(key string, value interface{}
       n.studentactivityparticipation.SIF_Metadata = v
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.StartDate = ((*String)(v))
       }
     case "StudentActivityInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.StudentActivityInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentactivityparticipation.StudentPersonalRefId = ((*String)(v))
@@ -76925,6 +78096,7 @@ func (n *StudentActivityType) SetProperty(key string, value interface{}) *Studen
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsActivityInvolvementCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsActivityInvolvementCodeType_values")
       }
@@ -77014,11 +78186,13 @@ func (n *StudentAttendanceCollection) SetProperty(key string, value interface{})
       n.studentattendancecollection.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancecollection.RefId = ((*RefIdType)(v))
       }
     case "RoundCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancecollection.RoundCode = ((*String)(v))
@@ -77040,6 +78214,7 @@ func (n *StudentAttendanceCollection) SetProperty(key string, value interface{})
       n.studentattendancecollection.StudentAttendanceCollectionReportingList = v
       }
     case "StudentAttendanceCollectionYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancecollection.StudentAttendanceCollectionYear = ((*SchoolYearType)(v))
@@ -77188,6 +78363,7 @@ func (n *StudentAttendanceCollectionReportingType) SetProperty(key string, value
         }
         switch key {
     case "CommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancecollectionreportingtype.CommonwealthId = ((*String)(v))
@@ -77197,6 +78373,7 @@ func (n *StudentAttendanceCollectionReportingType) SetProperty(key string, value
       n.studentattendancecollectionreportingtype.EntityContact = v
       }
     case "EntityName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancecollectionreportingtype.EntityName = ((*String)(v))
@@ -77338,6 +78515,7 @@ func (n *StudentAttendanceSummary) SetProperty(key string, value interface{}) *S
       n.studentattendancesummary.DaysTardy = ((*Float)(v))
       }
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancesummary.EndDate = ((*String)(v))
@@ -77353,6 +78531,7 @@ func (n *StudentAttendanceSummary) SetProperty(key string, value interface{}) *S
       n.studentattendancesummary.ExcusedAbsences = ((*Float)(v))
       }
     case "FTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancesummary.FTE = ((*FTEType)(v))
@@ -77370,16 +78549,19 @@ func (n *StudentAttendanceSummary) SetProperty(key string, value interface{}) *S
       n.studentattendancesummary.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancesummary.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancesummary.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancesummary.StartDate = ((*String)(v))
@@ -77390,11 +78572,13 @@ func (n *StudentAttendanceSummary) SetProperty(key string, value interface{}) *S
       n.studentattendancesummary.StartDay = ((*Int)(v))
       }
     case "StudentAttendanceSummaryRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancesummary.StudentAttendanceSummaryRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancesummary.StudentPersonalRefId = ((*String)(v))
@@ -77681,6 +78865,7 @@ func (n *StudentAttendanceTimeList) SetProperty(key string, value interface{}) *
       n.studentattendancetimelist.AttendanceTimes = v
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancetimelist.Date = ((*String)(v))
@@ -77694,6 +78879,7 @@ func (n *StudentAttendanceTimeList) SetProperty(key string, value interface{}) *
       n.studentattendancetimelist.PeriodAttendances = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancetimelist.RefId = ((*RefIdType)(v))
@@ -77707,16 +78893,19 @@ func (n *StudentAttendanceTimeList) SetProperty(key string, value interface{}) *
       n.studentattendancetimelist.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancetimelist.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancetimelist.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentattendancetimelist.StudentPersonalRefId = ((*String)(v))
@@ -77980,11 +79169,13 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
         }
         switch key {
     case "Employment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactpersonal.Employment = ((*String)(v))
       }
     case "EmploymentType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEmploymentTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEmploymentTypeType_values")
       }
@@ -77997,11 +79188,13 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
       n.studentcontactpersonal.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactpersonal.LocalId = ((*LocalIdType)(v))
       }
     case "NonSchoolEducation":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNonSchoolEducationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNonSchoolEducationType_values")
       }
@@ -78018,6 +79211,7 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
       n.studentcontactpersonal.PersonInfo = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactpersonal.RefId = ((*RefIdType)(v))
@@ -78031,6 +79225,7 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
       n.studentcontactpersonal.SIF_Metadata = v
       }
     case "SchoolEducationalLevel":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolEducationLevelTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolEducationLevelTypeType_values")
       }
@@ -78043,6 +79238,7 @@ func (n *StudentContactPersonal) SetProperty(key string, value interface{}) *Stu
       n.studentcontactpersonal.WorkingWithChildrenCheck = v
       }
     case "Workplace":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactpersonal.Workplace = ((*String)(v))
@@ -78284,6 +79480,7 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
       n.studentcontactrelationship.ContactFlags = v
       }
     case "ContactMethod":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsContactMethodType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsContactMethodType_values")
       }
@@ -78297,6 +79494,7 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
       n.studentcontactrelationship.ContactSequence = ((*Int)(v))
       }
     case "ContactSequenceSource":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSourceCodeTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSourceCodeTypeType_values")
       }
@@ -78317,6 +79515,7 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
       n.studentcontactrelationship.LocalCodeList = v
       }
     case "MainlySpeaksEnglishAtHome":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -78325,6 +79524,7 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
       n.studentcontactrelationship.MainlySpeaksEnglishAtHome = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "ParentRelationshipStatus":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactrelationship.ParentRelationshipStatus = ((*String)(v))
@@ -78342,21 +79542,25 @@ func (n *StudentContactRelationship) SetProperty(key string, value interface{}) 
       n.studentcontactrelationship.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactrelationship.SchoolInfoRefId = ((*String)(v))
       }
     case "StudentContactPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactrelationship.StudentContactPersonalRefId = ((*RefIdType)(v))
       }
     case "StudentContactRelationshipRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactrelationship.StudentContactRelationshipRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentcontactrelationship.StudentPersonalRefId = ((*RefIdType)(v))
@@ -78640,11 +79844,13 @@ func (n *StudentDailyAttendance) SetProperty(key string, value interface{}) *Stu
       n.studentdailyattendance.AttendanceCode = v
       }
     case "AttendanceNote":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.AttendanceNote = ((*String)(v))
       }
     case "AttendanceStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAttendanceStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAttendanceStatusType_values")
       }
@@ -78653,11 +79859,13 @@ func (n *StudentDailyAttendance) SetProperty(key string, value interface{}) *Stu
       n.studentdailyattendance.AttendanceStatus = ((*AUCodeSetsAttendanceStatusType)(v))
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.Date = ((*String)(v))
       }
     case "DayValue":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsDayValueCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsDayValueCodeType_values")
       }
@@ -78670,6 +79878,7 @@ func (n *StudentDailyAttendance) SetProperty(key string, value interface{}) *Stu
       n.studentdailyattendance.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.RefId = ((*RefIdType)(v))
@@ -78683,26 +79892,31 @@ func (n *StudentDailyAttendance) SetProperty(key string, value interface{}) *Stu
       n.studentdailyattendance.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.StudentPersonalRefId = ((*String)(v))
       }
     case "TimeIn":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.TimeIn = ((*String)(v))
       }
     case "TimeOut":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdailyattendance.TimeOut = ((*String)(v))
@@ -78997,6 +80211,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.Attendance = ((*Bool)(v))
       }
     case "BirthDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.BirthDate = ((*BirthDateType)(v))
@@ -79011,6 +80226,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.CountriesOfCitizenship = v
       }
     case "CountryOfBirth":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStandardAustralianClassificationOfCountriesSACCType_values")
       }
@@ -79032,6 +80248,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.FollowupRequest = ((*Bool)(v))
       }
     case "Gender":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSexCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSexCodeType_values")
       }
@@ -79040,6 +80257,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.Gender = ((*AUCodeSetsSexCodeType)(v))
       }
     case "IndigenousStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsIndigenousStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsIndigenousStatusType_values")
       }
@@ -79048,6 +80266,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.IndigenousStatus = ((*AUCodeSetsIndigenousStatusType)(v))
       }
     case "LBOTE":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -79072,6 +80291,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.Name = v
       }
     case "NationalUniqueStudentIdentifier":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.NationalUniqueStudentIdentifier = ((*String)(v))
@@ -79081,6 +80301,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.OtherNames = v
       }
     case "PlaceOfBirth":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.PlaceOfBirth = ((*String)(v))
@@ -79090,6 +80311,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.PreviousSchoolList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.RefId = ((*RefIdType)(v))
@@ -79103,6 +80325,7 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
       n.studentdatatransfernote.SIF_Metadata = v
       }
     case "StateOfBirth":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.StateOfBirth = ((*StateProvinceType)(v))
@@ -79506,6 +80729,7 @@ func (n *StudentEntryContainerType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEntryTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEntryTypeType_values")
       }
@@ -79579,6 +80803,7 @@ func (n *StudentExitContainerType) SetProperty(key string, value interface{}) *S
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsExitWithdrawalTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsExitWithdrawalTypeType_values")
       }
@@ -79652,6 +80877,7 @@ func (n *StudentExitStatusContainerType) SetProperty(key string, value interface
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsExitWithdrawalStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsExitWithdrawalStatusType_values")
       }
@@ -79763,6 +80989,7 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.Description = ((*String)(v))
@@ -79776,6 +81003,7 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
       n.studentgrade.GradingScoreList = v
       }
     case "Homegroup":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.Homegroup = ((*String)(v))
@@ -79797,6 +81025,7 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
       n.studentgrade.Markers = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.RefId = ((*RefIdType)(v))
@@ -79810,46 +81039,55 @@ func (n *StudentGrade) SetProperty(key string, value interface{}) *StudentGrade 
       n.studentgrade.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.StaffPersonalRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.StudentPersonalRefId = ((*String)(v))
       }
     case "TeacherJudgement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.TeacherJudgement = ((*String)(v))
       }
     case "TeachingGroupRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.TeachingGroupRefId = ((*String)(v))
       }
     case "TeachingGroupShortName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.TeachingGroupShortName = ((*String)(v))
       }
     case "TermInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrade.TermInfoRefId = ((*String)(v))
       }
     case "TermSpan":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSessionTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSessionTypeType_values")
       }
@@ -80172,6 +81410,7 @@ func (n *StudentGroupType) SetProperty(key string, value interface{}) *StudentGr
         }
         switch key {
     case "GroupCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsGroupCategoryCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsGroupCategoryCodeType_values")
       }
@@ -80180,11 +81419,13 @@ func (n *StudentGroupType) SetProperty(key string, value interface{}) *StudentGr
       n.studentgrouptype.GroupCategory = ((*AUCodeSetsGroupCategoryCodeType)(v))
       }
     case "GroupDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrouptype.GroupDescription = ((*String)(v))
       }
     case "GroupLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentgrouptype.GroupLocalId = ((*LocalIdType)(v))
@@ -80314,6 +81555,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
         }
         switch key {
     case "BoardingStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsBoardingType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsBoardingType_values")
       }
@@ -80327,21 +81569,25 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.CensusAge = ((*Int)(v))
       }
     case "ClassCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.ClassCode = ((*String)(v))
       }
     case "DisabilityCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.DisabilityCategory = ((*String)(v))
       }
     case "DisabilityLevelOfAdjustment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.DisabilityLevelOfAdjustment = ((*String)(v))
       }
     case "DistanceEducationStudent":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -80350,6 +81596,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.DistanceEducationStudent = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "FFPOS":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsFFPOSStatusCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsFFPOSStatusCodeType_values")
       }
@@ -80358,26 +81605,31 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.FFPOS = ((*AUCodeSetsFFPOSStatusCodeType)(v))
       }
     case "FTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.FTE = ((*FTEType)(v))
       }
     case "Homegroup":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.Homegroup = ((*String)(v))
       }
     case "HomeroomLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.HomeroomLocalId = ((*LocalIdType)(v))
       }
     case "LocalCampusId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.LocalCampusId = ((*LocalIdType)(v))
       }
     case "MembershipType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolEnrollmentTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolEnrollmentTypeType_values")
       }
@@ -80386,16 +81638,19 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.MembershipType = ((*AUCodeSetsSchoolEnrollmentTypeType)(v))
       }
     case "OtherEnrollmentSchoolACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.OtherEnrollmentSchoolACARAId = ((*LocalIdType)(v))
       }
     case "OtherSchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.OtherSchoolName = ((*String)(v))
       }
     case "Parent1EmploymentType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEmploymentTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEmploymentTypeType_values")
       }
@@ -80404,6 +81659,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent1EmploymentType = ((*AUCodeSetsEmploymentTypeType)(v))
       }
     case "Parent1Language":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_values")
       }
@@ -80412,6 +81668,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent1Language = ((*AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType)(v))
       }
     case "Parent1NonSchoolEducation":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNonSchoolEducationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNonSchoolEducationType_values")
       }
@@ -80420,6 +81677,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent1NonSchoolEducation = ((*AUCodeSetsNonSchoolEducationType)(v))
       }
     case "Parent1SchoolEducationLevel":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolEducationLevelTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolEducationLevelTypeType_values")
       }
@@ -80428,6 +81686,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent1SchoolEducationLevel = ((*AUCodeSetsSchoolEducationLevelTypeType)(v))
       }
     case "Parent2EmploymentType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEmploymentTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEmploymentTypeType_values")
       }
@@ -80436,6 +81695,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent2EmploymentType = ((*AUCodeSetsEmploymentTypeType)(v))
       }
     case "Parent2Language":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType_values")
       }
@@ -80444,6 +81704,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent2Language = ((*AUCodeSetsAustralianStandardClassificationOfLanguagesASCLType)(v))
       }
     case "Parent2NonSchoolEducation":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNonSchoolEducationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNonSchoolEducationType_values")
       }
@@ -80452,6 +81713,7 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent2NonSchoolEducation = ((*AUCodeSetsNonSchoolEducationType)(v))
       }
     case "Parent2SchoolEducationLevel":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolEducationLevelTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolEducationLevelTypeType_values")
       }
@@ -80460,16 +81722,19 @@ func (n *StudentMostRecentContainerType) SetProperty(key string, value interface
       n.studentmostrecentcontainertype.Parent2SchoolEducationLevel = ((*AUCodeSetsSchoolEducationLevelTypeType)(v))
       }
     case "ReportingSchoolId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.ReportingSchoolId = ((*LocalIdType)(v))
       }
     case "SchoolACARAId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.SchoolACARAId = ((*LocalIdType)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentmostrecentcontainertype.SchoolLocalId = ((*LocalIdType)(v))
@@ -80925,21 +82190,25 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
         }
         switch key {
     case "EntryPerson":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.EntryPerson = ((*String)(v))
       }
     case "EvaluationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.EvaluationDate = ((*String)(v))
       }
     case "EvaluationExtensionDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.EvaluationExtensionDate = ((*String)(v))
       }
     case "EvaluationParentalConsentDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.EvaluationParentalConsentDate = ((*String)(v))
@@ -80955,11 +82224,13 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
       n.studentparticipation.ExtendedSchoolYear = ((*Bool)(v))
       }
     case "ExtensionComments":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ExtensionComments = ((*String)(v))
       }
     case "GiftedEligibilityCriteria":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -80976,16 +82247,19 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
       n.studentparticipation.ManagingSchool = v
       }
     case "NOREPDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.NOREPDate = ((*String)(v))
       }
     case "ParticipationContact":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ParticipationContact = ((*String)(v))
       }
     case "PlacementParentalConsentDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.PlacementParentalConsentDate = ((*String)(v))
@@ -80995,6 +82269,7 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
       n.studentparticipation.ProgramAvailability = v
       }
     case "ProgramEligibilityDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ProgramEligibilityDate = ((*String)(v))
@@ -81004,16 +82279,19 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
       n.studentparticipation.ProgramFundingSources = v
       }
     case "ProgramPlacementDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ProgramPlacementDate = ((*String)(v))
       }
     case "ProgramPlanDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ProgramPlanDate = ((*String)(v))
       }
     case "ProgramPlanEffectiveDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ProgramPlanEffectiveDate = ((*String)(v))
@@ -81023,6 +82301,7 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
       n.studentparticipation.ProgramStatus = v
       }
     case "ProgramType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsStudentFamilyProgramTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsStudentFamilyProgramTypeType_values")
       }
@@ -81031,16 +82310,19 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
       n.studentparticipation.ProgramType = ((*AUCodeSetsStudentFamilyProgramTypeType)(v))
       }
     case "ReevaluationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ReevaluationDate = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.RefId = ((*RefIdType)(v))
       }
     case "ReferralDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.ReferralDate = ((*String)(v))
@@ -81058,16 +82340,19 @@ func (n *StudentParticipation) SetProperty(key string, value interface{}) *Stude
       n.studentparticipation.SIF_Metadata = v
       }
     case "StudentParticipationAsOfDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.StudentParticipationAsOfDate = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.StudentPersonalRefId = ((*String)(v))
       }
     case "StudentSpecialEducationFTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation.StudentSpecialEducationFTE = ((*FTEType)(v))
@@ -81498,11 +82783,13 @@ func (n *StudentParticipation_ManagingSchool) SetProperty(key string, value inte
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation_managingschool.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentparticipation_managingschool.Value = ((*String)(v))
@@ -81603,11 +82890,13 @@ func (n *StudentPeriodAttendance) SetProperty(key string, value interface{}) *St
       n.studentperiodattendance.AttendanceCode = v
       }
     case "AttendanceComment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.AttendanceComment = ((*String)(v))
       }
     case "AttendanceStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsAttendanceStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsAttendanceStatusType_values")
       }
@@ -81620,6 +82909,7 @@ func (n *StudentPeriodAttendance) SetProperty(key string, value interface{}) *St
       n.studentperiodattendance.AuditInfo = v
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.Date = ((*String)(v))
@@ -81629,6 +82919,7 @@ func (n *StudentPeriodAttendance) SetProperty(key string, value interface{}) *St
       n.studentperiodattendance.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.RefId = ((*RefIdType)(v))
@@ -81642,41 +82933,49 @@ func (n *StudentPeriodAttendance) SetProperty(key string, value interface{}) *St
       n.studentperiodattendance.SIF_Metadata = v
       }
     case "ScheduledActivityRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.ScheduledActivityRefId = ((*String)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.SchoolYear = ((*SchoolYearType)(v))
       }
     case "SessionInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.SessionInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.StudentPersonalRefId = ((*String)(v))
       }
     case "TimeIn":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.TimeIn = ((*String)(v))
       }
     case "TimeOut":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.TimeOut = ((*String)(v))
       }
     case "TimetablePeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentperiodattendance.TimetablePeriod = ((*String)(v))
@@ -82002,6 +83301,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
         }
         switch key {
     case "AcceptableUsePolicy":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82014,6 +83314,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.AlertMessages = v
       }
     case "CategoryOfDisability":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNCCDDisabilityType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNCCDDisabilityType_values")
       }
@@ -82022,6 +83323,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.CategoryOfDisability = ((*AUCodeSetsNCCDDisabilityType)(v))
       }
     case "Disability":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82030,6 +83332,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.Disability = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "ESL":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82038,11 +83341,13 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.ESL = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "ESLDateAssessed":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.ESLDateAssessed = ((*String)(v))
       }
     case "ESLSupport":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82051,6 +83356,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.ESLSupport = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "EconomicDisadvantage":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82059,6 +83365,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.EconomicDisadvantage = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "EducationSupport":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82071,11 +83378,13 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.ElectronicIdList = v
       }
     case "FirstAUSchoolEnrollment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.FirstAUSchoolEnrollment = ((*String)(v))
       }
     case "GiftedTalented":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82084,11 +83393,13 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.GiftedTalented = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "GraduationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.GraduationDate = ((*GraduationDateType)(v))
       }
     case "HomeSchooledStudent":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82097,6 +83408,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.HomeSchooledStudent = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "IndependentStudent":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82105,6 +83417,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.IndependentStudent = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "IntegrationAide":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82117,6 +83430,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.LocalId = ((*LocalIdType)(v))
@@ -82130,11 +83444,13 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.MostRecent = v
       }
     case "NationalUniqueStudentIdentifier":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.NationalUniqueStudentIdentifier = ((*String)(v))
       }
     case "OfflineDelivery":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82143,6 +83459,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.OfflineDelivery = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "OnTimeGraduationYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.OnTimeGraduationYear = ((*OnTimeGraduationYearType)(v))
@@ -82156,11 +83473,13 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.PersonInfo = v
       }
     case "PrePrimaryEducation":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.PrePrimaryEducation = ((*String)(v))
       }
     case "PrePrimaryEducationHours":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsPrePrimaryHoursType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsPrePrimaryHoursType_values")
       }
@@ -82169,11 +83488,13 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.PrePrimaryEducationHours = ((*AUCodeSetsPrePrimaryHoursType)(v))
       }
     case "ProjectedGraduationYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.ProjectedGraduationYear = ((*ProjectedGraduationYearType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.RefId = ((*RefIdType)(v))
@@ -82187,6 +83508,7 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.SIF_Metadata = v
       }
     case "Sensitive":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82195,11 +83517,13 @@ func (n *StudentPersonal) SetProperty(key string, value interface{}) *StudentPer
       n.studentpersonal.Sensitive = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "StateProvinceId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentpersonal.StateProvinceId = ((*StateProvinceIdType)(v))
       }
     case "YoungCarersRole":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82779,6 +84103,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
         }
         switch key {
     case "ACARASchoolId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.ACARASchoolId = ((*LocalIdType)(v))
@@ -82788,6 +84113,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.Advisor = v
       }
     case "BoardingStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsBoardingType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsBoardingType_values")
       }
@@ -82809,6 +84135,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.CensusAge = ((*Int)(v))
       }
     case "ClassCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.ClassCode = ((*String)(v))
@@ -82818,16 +84145,19 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.Counselor = v
       }
     case "DestinationSchool":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.DestinationSchool = ((*LocalIdType)(v))
       }
     case "DestinationSchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.DestinationSchoolName = ((*String)(v))
       }
     case "DisabilityCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNCCDDisabilityType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNCCDDisabilityType_values")
       }
@@ -82836,6 +84166,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.DisabilityCategory = ((*AUCodeSetsNCCDDisabilityType)(v))
       }
     case "DisabilityLevelOfAdjustment":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsNCCDAdjustmentType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsNCCDAdjustmentType_values")
       }
@@ -82844,6 +84175,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.DisabilityLevelOfAdjustment = ((*AUCodeSetsNCCDAdjustmentType)(v))
       }
     case "DistanceEducationStudent":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82852,6 +84184,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.DistanceEducationStudent = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "EntryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.EntryDate = ((*String)(v))
@@ -82861,6 +84194,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.EntryType = v
       }
     case "ExitDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.ExitDate = ((*String)(v))
@@ -82874,6 +84208,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.ExitType = v
       }
     case "FFPOS":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsFFPOSStatusCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsFFPOSStatusCodeType_values")
       }
@@ -82882,11 +84217,13 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.FFPOS = ((*AUCodeSetsFFPOSStatusCodeType)(v))
       }
     case "FTE":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.FTE = ((*FTEType)(v))
       }
     case "FTPTStatus":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsFTPTStatusCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsFTPTStatusCodeType_values")
       }
@@ -82895,6 +84232,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.FTPTStatus = ((*AUCodeSetsFTPTStatusCodeType)(v))
       }
     case "Homegroup":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.Homegroup = ((*String)(v))
@@ -82904,11 +84242,13 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.Homeroom = v
       }
     case "House":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.House = ((*String)(v))
       }
     case "IndividualLearningPlan":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82917,11 +84257,13 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.IndividualLearningPlan = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "IntendedEntryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.IntendedEntryDate = ((*String)(v))
       }
     case "InternationalStudent":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82934,11 +84276,13 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.LocalId = ((*LocalIdType)(v))
       }
     case "MembershipType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSchoolEnrollmentTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolEnrollmentTypeType_values")
       }
@@ -82947,11 +84291,13 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.MembershipType = ((*AUCodeSetsSchoolEnrollmentTypeType)(v))
       }
     case "PreviousSchool":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.PreviousSchool = ((*LocalIdType)(v))
       }
     case "PreviousSchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.PreviousSchoolName = ((*String)(v))
@@ -82965,16 +84311,19 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.PublishingPermissionList = v
       }
     case "RecordClosureReason":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.RecordClosureReason = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.RefId = ((*RefIdType)(v))
       }
     case "ReportingSchool":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -82991,16 +84340,19 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StartedAtSchoolDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.StartedAtSchoolDate = ((*String)(v))
@@ -83010,6 +84362,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.StudentGroupList = v
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment.StudentPersonalRefId = ((*String)(v))
@@ -83023,6 +84376,7 @@ func (n *StudentSchoolEnrollment) SetProperty(key string, value interface{}) *St
       n.studentschoolenrollment.TestLevel = v
       }
     case "TimeFrame":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsEnrollmentTimeFrameType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEnrollmentTimeFrameType_values")
       }
@@ -83711,11 +85065,13 @@ func (n *StudentSchoolEnrollment_Calendar) SetProperty(key string, value interfa
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment_calendar.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentschoolenrollment_calendar.Value = ((*String)(v))
@@ -83830,16 +85186,19 @@ func (n *StudentScoreJudgementAgainstStandard) SetProperty(key string, value int
         }
         switch key {
     case "ClassLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.ClassLocalId = ((*String)(v))
       }
     case "CurriculumCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.CurriculumCode = ((*LocalIdType)(v))
       }
     case "CurriculumNodeCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.CurriculumNodeCode = ((*LocalIdType)(v))
@@ -83857,16 +85216,19 @@ func (n *StudentScoreJudgementAgainstStandard) SetProperty(key string, value int
       n.studentscorejudgementagainststandard.LocalCodeList = v
       }
     case "LocalTermCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.LocalTermCode = ((*LocalIdType)(v))
       }
     case "ManagedPathwayLocalCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.ManagedPathwayLocalCode = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.RefId = ((*RefIdType)(v))
@@ -83880,71 +85242,85 @@ func (n *StudentScoreJudgementAgainstStandard) SetProperty(key string, value int
       n.studentscorejudgementagainststandard.SIF_Metadata = v
       }
     case "SchoolCommonwealthId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.SchoolCommonwealthId = ((*String)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.SchoolYear = ((*SchoolYearType)(v))
       }
     case "Score":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.Score = ((*String)(v))
       }
     case "SpecialCircumstanceLocalCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.SpecialCircumstanceLocalCode = ((*LocalIdType)(v))
       }
     case "StaffLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.StaffLocalId = ((*LocalIdType)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.StaffPersonalRefId = ((*String)(v))
       }
     case "StudentLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.StudentLocalId = ((*LocalIdType)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.StudentPersonalRefId = ((*String)(v))
       }
     case "StudentStateProvinceId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.StudentStateProvinceId = ((*StateProvinceIdType)(v))
       }
     case "TeacherJudgement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.TeacherJudgement = ((*String)(v))
       }
     case "TeachingGroupRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.TeachingGroupRefId = ((*String)(v))
       }
     case "TermInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentscorejudgementagainststandard.TermInfoRefId = ((*String)(v))
@@ -84341,11 +85717,13 @@ func (n *StudentSectionEnrollment) SetProperty(key string, value interface{}) *S
         }
         switch key {
     case "EntryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsectionenrollment.EntryDate = ((*String)(v))
       }
     case "ExitDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsectionenrollment.ExitDate = ((*String)(v))
@@ -84355,6 +85733,7 @@ func (n *StudentSectionEnrollment) SetProperty(key string, value interface{}) *S
       n.studentsectionenrollment.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsectionenrollment.RefId = ((*RefIdType)(v))
@@ -84368,16 +85747,19 @@ func (n *StudentSectionEnrollment) SetProperty(key string, value interface{}) *S
       n.studentsectionenrollment.SIF_Metadata = v
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsectionenrollment.SchoolYear = ((*SchoolYearType)(v))
       }
     case "SectionInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsectionenrollment.SectionInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsectionenrollment.StudentPersonalRefId = ((*String)(v))
@@ -84539,6 +85921,7 @@ func (n *StudentSubjectChoiceType) SetProperty(key string, value interface{}) *S
         }
         switch key {
     case "OtherSchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsubjectchoicetype.OtherSchoolLocalId = ((*LocalIdType)(v))
@@ -84553,6 +85936,7 @@ func (n *StudentSubjectChoiceType) SetProperty(key string, value interface{}) *S
       n.studentsubjectchoicetype.StudyDescription = v
       }
     case "SubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.studentsubjectchoicetype.SubjectLocalId = ((*LocalIdType)(v))
@@ -84645,6 +86029,7 @@ func (n *SubjectAreaType) SetProperty(key string, value interface{}) *SubjectAre
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.subjectareatype.Code = ((*String)(v))
@@ -84721,11 +86106,13 @@ func (n *SubstituteItemType) SetProperty(key string, value interface{}) *Substit
       n.substituteitemtype.PNPCodeList = v
       }
     case "SubstituteItemLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.substituteitemtype.SubstituteItemLocalId = ((*LocalIdType)(v))
       }
     case "SubstituteItemRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.substituteitemtype.SubstituteItemRefId = ((*String)(v))
@@ -84819,6 +86206,7 @@ func (n *SuspensionContainerType) SetProperty(key string, value interface{}) *Su
         }
         switch key {
     case "AdvisementDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.suspensioncontainertype.AdvisementDate = ((*String)(v))
@@ -84829,21 +86217,25 @@ func (n *SuspensionContainerType) SetProperty(key string, value interface{}) *Su
       n.suspensioncontainertype.Duration = ((*Float)(v))
       }
     case "EarlyReturnDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.suspensioncontainertype.EarlyReturnDate = ((*String)(v))
       }
     case "ResolutionMeetingTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.suspensioncontainertype.ResolutionMeetingTime = ((*String)(v))
       }
     case "ResolutionNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.suspensioncontainertype.ResolutionNotes = ((*String)(v))
       }
     case "Status":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingStatusType_values")
       }
@@ -84852,6 +86244,7 @@ func (n *SuspensionContainerType) SetProperty(key string, value interface{}) *Su
       n.suspensioncontainertype.Status = ((*AUCodeSetsWellbeingStatusType)(v))
       }
     case "SuspensionCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSuspensionCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSuspensionCategoryType_values")
       }
@@ -84860,6 +86253,7 @@ func (n *SuspensionContainerType) SetProperty(key string, value interface{}) *Su
       n.suspensioncontainertype.SuspensionCategory = ((*AUCodeSetsSuspensionCategoryType)(v))
       }
     case "SuspensionNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.suspensioncontainertype.SuspensionNotes = ((*String)(v))
@@ -85031,6 +86425,7 @@ func (n *TeacherCoverType) SetProperty(key string, value interface{}) *TeacherCo
         }
         switch key {
     case "Credit":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsTeacherCoverCreditType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsTeacherCoverCreditType_values")
       }
@@ -85039,26 +86434,31 @@ func (n *TeacherCoverType) SetProperty(key string, value interface{}) *TeacherCo
       n.teachercovertype.Credit = ((*AUCodeSetsTeacherCoverCreditType)(v))
       }
     case "FinishTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachercovertype.FinishTime = ((*String)(v))
       }
     case "StaffLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachercovertype.StaffLocalId = ((*LocalIdType)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachercovertype.StaffPersonalRefId = ((*String)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachercovertype.StartTime = ((*String)(v))
       }
     case "Supervision":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsTeacherCoverSupervisionType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsTeacherCoverSupervisionType_values")
       }
@@ -85244,21 +86644,25 @@ func (n *TeachingGroup) SetProperty(key string, value interface{}) *TeachingGrou
         }
         switch key {
     case "Block":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.Block = ((*String)(v))
       }
     case "CurriculumLevel":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.CurriculumLevel = ((*String)(v))
       }
     case "GroupType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.GroupType = ((*String)(v))
       }
     case "KeyLearningArea":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsACStrandType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsACStrandType_values")
       }
@@ -85271,11 +86675,13 @@ func (n *TeachingGroup) SetProperty(key string, value interface{}) *TeachingGrou
       n.teachinggroup.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.LocalId = ((*LocalIdType)(v))
       }
     case "LongName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.LongName = ((*String)(v))
@@ -85291,6 +86697,7 @@ func (n *TeachingGroup) SetProperty(key string, value interface{}) *TeachingGrou
       n.teachinggroup.MinClassSize = ((*Int)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.RefId = ((*RefIdType)(v))
@@ -85304,26 +86711,31 @@ func (n *TeachingGroup) SetProperty(key string, value interface{}) *TeachingGrou
       n.teachinggroup.SIF_Metadata = v
       }
     case "SchoolCourseInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.SchoolCourseInfoRefId = ((*RefIdType)(v))
       }
     case "SchoolCourseLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.SchoolCourseLocalId = ((*LocalIdType)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.SchoolInfoRefId = ((*RefIdType)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.SchoolYear = ((*SchoolYearType)(v))
@@ -85334,11 +86746,13 @@ func (n *TeachingGroup) SetProperty(key string, value interface{}) *TeachingGrou
       n.teachinggroup.Semester = ((*Int)(v))
       }
     case "Set":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.Set = ((*String)(v))
       }
     case "ShortName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.ShortName = ((*String)(v))
@@ -85356,11 +86770,13 @@ func (n *TeachingGroup) SetProperty(key string, value interface{}) *TeachingGrou
       n.teachinggroup.TeachingGroupPeriodList = v
       }
     case "TimeTableSubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.TimeTableSubjectLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroup.TimeTableSubjectRefId = ((*RefIdType)(v))
@@ -85736,36 +87152,43 @@ func (n *TeachingGroupPeriodType) SetProperty(key string, value interface{}) *Te
         }
         switch key {
     case "CellType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupperiodtype.CellType = ((*String)(v))
       }
     case "DayId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupperiodtype.DayId = ((*LocalIdType)(v))
       }
     case "PeriodId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupperiodtype.PeriodId = ((*LocalIdType)(v))
       }
     case "RoomNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupperiodtype.RoomNumber = ((*HomeroomNumberType)(v))
       }
     case "StaffLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupperiodtype.StaffLocalId = ((*LocalIdType)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupperiodtype.StartTime = ((*String)(v))
       }
     case "TimeTableCellRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupperiodtype.TimeTableCellRefId = ((*String)(v))
@@ -85935,31 +87358,37 @@ func (n *TeachingGroupScheduleType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "Block":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.Block = ((*String)(v))
       }
     case "CurriculumLevel":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.CurriculumLevel = ((*String)(v))
       }
     case "EditorGUID":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.EditorGUID = ((*RefIdType)(v))
       }
     case "GroupType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.GroupType = ((*String)(v))
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.LocalId = ((*LocalIdType)(v))
       }
     case "LongName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.LongName = ((*String)(v))
@@ -85975,26 +87404,31 @@ func (n *TeachingGroupScheduleType) SetProperty(key string, value interface{}) *
       n.teachinggroupscheduletype.MinClassSize = ((*Int)(v))
       }
     case "SchoolCourseInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.SchoolCourseInfoRefId = ((*RefIdType)(v))
       }
     case "SchoolCourseLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.SchoolCourseLocalId = ((*LocalIdType)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.SchoolInfoRefId = ((*RefIdType)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.SchoolYear = ((*SchoolYearType)(v))
@@ -86005,11 +87439,13 @@ func (n *TeachingGroupScheduleType) SetProperty(key string, value interface{}) *
       n.teachinggroupscheduletype.Semester = ((*Int)(v))
       }
     case "Set":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.Set = ((*String)(v))
       }
     case "ShortName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.ShortName = ((*String)(v))
@@ -86027,11 +87463,13 @@ func (n *TeachingGroupScheduleType) SetProperty(key string, value interface{}) *
       n.teachinggroupscheduletype.TeachingGroupPeriodList = v
       }
     case "TimeTableSubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.TimeTableSubjectLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupscheduletype.TimeTableSubjectRefId = ((*RefIdType)(v))
@@ -86351,11 +87789,13 @@ func (n *TeachingGroupStudentType) SetProperty(key string, value interface{}) *T
       n.teachinggroupstudenttype.Name = v
       }
     case "StudentLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupstudenttype.StudentLocalId = ((*LocalIdType)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupstudenttype.StudentPersonalRefId = ((*String)(v))
@@ -86439,6 +87879,7 @@ func (n *TeachingGroupTeacherType) SetProperty(key string, value interface{}) *T
         }
         switch key {
     case "Association":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupteachertype.Association = ((*String)(v))
@@ -86448,11 +87889,13 @@ func (n *TeachingGroupTeacherType) SetProperty(key string, value interface{}) *T
       n.teachinggroupteachertype.Name = v
       }
     case "StaffLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupteachertype.StaffLocalId = ((*LocalIdType)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.teachinggroupteachertype.StaffPersonalRefId = ((*String)(v))
@@ -86543,6 +87986,7 @@ func (n *TechnicalRequirementsType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "TechnicalRequirement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.technicalrequirementstype.TechnicalRequirement = ((*String)(v))
@@ -86624,6 +88068,7 @@ func (n *TermInfo) SetProperty(key string, value interface{}) *TermInfo {
         }
         switch key {
     case "AttendanceTerm":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -86632,11 +88077,13 @@ func (n *TermInfo) SetProperty(key string, value interface{}) *TermInfo {
       n.terminfo.AttendanceTerm = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.Description = ((*String)(v))
       }
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.EndDate = ((*String)(v))
@@ -86646,6 +88093,7 @@ func (n *TermInfo) SetProperty(key string, value interface{}) *TermInfo {
       n.terminfo.LocalCodeList = v
       }
     case "MarkingTerm":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -86654,11 +88102,13 @@ func (n *TermInfo) SetProperty(key string, value interface{}) *TermInfo {
       n.terminfo.MarkingTerm = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.RefId = ((*RefIdType)(v))
       }
     case "RelativeDuration":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.RelativeDuration = ((*String)(v))
@@ -86672,6 +88122,7 @@ func (n *TermInfo) SetProperty(key string, value interface{}) *TermInfo {
       n.terminfo.SIF_Metadata = v
       }
     case "SchedulingTerm":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -86680,26 +88131,31 @@ func (n *TermInfo) SetProperty(key string, value interface{}) *TermInfo {
       n.terminfo.SchedulingTerm = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.StartDate = ((*String)(v))
       }
     case "TermCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.TermCode = ((*String)(v))
       }
     case "TermSpan":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsSessionTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSessionTypeType_values")
       }
@@ -86708,6 +88164,7 @@ func (n *TermInfo) SetProperty(key string, value interface{}) *TermInfo {
       n.terminfo.TermSpan = ((*AUCodeSetsSessionTypeType)(v))
       }
     case "Track":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.terminfo.Track = ((*String)(v))
@@ -86954,6 +88411,7 @@ func (n *TestDisruptionType) SetProperty(key string, value interface{}) *TestDis
         }
         switch key {
     case "Event":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.testdisruptiontype.Event = ((*String)(v))
@@ -87011,21 +88469,25 @@ func (n *TextDataType) SetProperty(key string, value interface{}) *TextDataType 
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.textdatatype.Description = ((*String)(v))
       }
     case "FileName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.textdatatype.FileName = ((*String)(v))
       }
     case "MIMEType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.textdatatype.MIMEType = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.textdatatype.Value = ((*String)(v))
@@ -87122,6 +88584,7 @@ func (n *TimeElementType) SetProperty(key string, value interface{}) *TimeElemen
         }
         switch key {
     case "EndDateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timeelementtype.EndDateTime = ((*String)(v))
@@ -87136,6 +88599,7 @@ func (n *TimeElementType) SetProperty(key string, value interface{}) *TimeElemen
       n.timeelementtype.SpanGaps = v
       }
     case "StartDateTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timeelementtype.StartDateTime = ((*String)(v))
@@ -87263,6 +88727,7 @@ func (n *TimeTable) SetProperty(key string, value interface{}) *TimeTable {
       n.timetable.DaysPerCycle = ((*Int)(v))
       }
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.EndDate = ((*String)(v))
@@ -87272,6 +88737,7 @@ func (n *TimeTable) SetProperty(key string, value interface{}) *TimeTable {
       n.timetable.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.LocalId = ((*LocalIdType)(v))
@@ -87282,6 +88748,7 @@ func (n *TimeTable) SetProperty(key string, value interface{}) *TimeTable {
       n.timetable.PeriodsPerDay = ((*Int)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.RefId = ((*RefIdType)(v))
@@ -87295,26 +88762,31 @@ func (n *TimeTable) SetProperty(key string, value interface{}) *TimeTable {
       n.timetable.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.SchoolName = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.StartDate = ((*String)(v))
@@ -87325,6 +88797,7 @@ func (n *TimeTable) SetProperty(key string, value interface{}) *TimeTable {
       n.timetable.TeachingPeriodsPerDay = ((*Int)(v))
       }
     case "TimeTableCreationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.TimeTableCreationDate = ((*String)(v))
@@ -87334,6 +88807,7 @@ func (n *TimeTable) SetProperty(key string, value interface{}) *TimeTable {
       n.timetable.TimeTableDayList = v
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetable.Title = ((*String)(v))
@@ -87633,11 +89107,13 @@ func (n *TimeTableCell) SetProperty(key string, value interface{}) *TimeTableCel
         }
         switch key {
     case "CellType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.CellType = ((*String)(v))
       }
     case "DayId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.DayId = ((*LocalIdType)(v))
@@ -87647,16 +89123,19 @@ func (n *TimeTableCell) SetProperty(key string, value interface{}) *TimeTableCel
       n.timetablecell.LocalCodeList = v
       }
     case "PeriodId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.PeriodId = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.RefId = ((*RefIdType)(v))
       }
     case "RoomInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.RoomInfoRefId = ((*String)(v))
@@ -87666,6 +89145,7 @@ func (n *TimeTableCell) SetProperty(key string, value interface{}) *TimeTableCel
       n.timetablecell.RoomList = v
       }
     case "RoomNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.RoomNumber = ((*HomeroomNumberType)(v))
@@ -87679,26 +89159,31 @@ func (n *TimeTableCell) SetProperty(key string, value interface{}) *TimeTableCel
       n.timetablecell.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "StaffLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.StaffLocalId = ((*LocalIdType)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.StaffPersonalRefId = ((*String)(v))
       }
     case "SubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.SubjectLocalId = ((*LocalIdType)(v))
@@ -87708,26 +89193,31 @@ func (n *TimeTableCell) SetProperty(key string, value interface{}) *TimeTableCel
       n.timetablecell.TeacherList = v
       }
     case "TeachingGroupLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.TeachingGroupLocalId = ((*LocalIdType)(v))
       }
     case "TeachingGroupRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.TeachingGroupRefId = ((*String)(v))
       }
     case "TimeTableLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.TimeTableLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.TimeTableRefId = ((*String)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecell.TimeTableSubjectRefId = ((*String)(v))
@@ -88041,11 +89531,13 @@ func (n *TimeTableChangeReasonType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "TimeTableChangeNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablechangereasontype.TimeTableChangeNotes = ((*String)(v))
       }
     case "TimeTableChangeType":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsTimeTableChangeTypeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsTimeTableChangeTypeType_values")
       }
@@ -88129,6 +89621,7 @@ func (n *TimeTableContainer) SetProperty(key string, value interface{}) *TimeTab
       n.timetablecontainer.LocalCodeList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablecontainer.RefId = ((*RefIdType)(v))
@@ -88282,11 +89775,13 @@ func (n *TimeTableDayType) SetProperty(key string, value interface{}) *TimeTable
         }
         switch key {
     case "DayId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetabledaytype.DayId = ((*LocalIdType)(v))
       }
     case "DayTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetabledaytype.DayTitle = ((*String)(v))
@@ -88382,11 +89877,13 @@ func (n *TimeTablePeriodType) SetProperty(key string, value interface{}) *TimeTa
         }
         switch key {
     case "BellPeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableperiodtype.BellPeriod = ((*String)(v))
       }
     case "EndTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableperiodtype.EndTime = ((*String)(v))
@@ -88397,26 +89894,31 @@ func (n *TimeTablePeriodType) SetProperty(key string, value interface{}) *TimeTa
       n.timetableperiodtype.InstructionalMinutes = ((*Int)(v))
       }
     case "PeriodId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableperiodtype.PeriodId = ((*LocalIdType)(v))
       }
     case "PeriodTitle":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableperiodtype.PeriodTitle = ((*String)(v))
       }
     case "RegularSchoolPeriod":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableperiodtype.RegularSchoolPeriod = ((*String)(v))
       }
     case "StartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableperiodtype.StartTime = ((*String)(v))
       }
     case "UseInAttendanceCalculations":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableperiodtype.UseInAttendanceCalculations = ((*String)(v))
@@ -88591,21 +90093,25 @@ func (n *TimeTableScheduleCellType) SetProperty(key string, value interface{}) *
         }
         switch key {
     case "CellType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.CellType = ((*String)(v))
       }
     case "DayId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.DayId = ((*LocalIdType)(v))
       }
     case "PeriodId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.PeriodId = ((*LocalIdType)(v))
       }
     case "RoomInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.RoomInfoRefId = ((*String)(v))
@@ -88615,31 +90121,37 @@ func (n *TimeTableScheduleCellType) SetProperty(key string, value interface{}) *
       n.timetableschedulecelltype.RoomList = v
       }
     case "RoomNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.RoomNumber = ((*HomeroomNumberType)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "StaffLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.StaffLocalId = ((*LocalIdType)(v))
       }
     case "StaffPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.StaffPersonalRefId = ((*String)(v))
       }
     case "SubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.SubjectLocalId = ((*LocalIdType)(v))
@@ -88649,26 +90161,31 @@ func (n *TimeTableScheduleCellType) SetProperty(key string, value interface{}) *
       n.timetableschedulecelltype.TeacherList = v
       }
     case "TeachingGroupGUID":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.TeachingGroupGUID = ((*String)(v))
       }
     case "TeachingGroupLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.TeachingGroupLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.TimeTableLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableScheduleCellLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.TimeTableScheduleCellLocalId = ((*LocalIdType)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetableschedulecelltype.TimeTableSubjectRefId = ((*String)(v))
@@ -88957,11 +90474,13 @@ func (n *TimeTableScheduleType) SetProperty(key string, value interface{}) *Time
       n.timetablescheduletype.DaysPerCycle = ((*Int)(v))
       }
     case "EndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.EndDate = ((*String)(v))
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.LocalId = ((*LocalIdType)(v))
@@ -88972,26 +90491,31 @@ func (n *TimeTableScheduleType) SetProperty(key string, value interface{}) *Time
       n.timetablescheduletype.PeriodsPerDay = ((*Int)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.SchoolName = ((*String)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.SchoolYear = ((*SchoolYearType)(v))
       }
     case "StartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.StartDate = ((*String)(v))
@@ -89002,6 +90526,7 @@ func (n *TimeTableScheduleType) SetProperty(key string, value interface{}) *Time
       n.timetablescheduletype.TeachingPeriodsPerDay = ((*Int)(v))
       }
     case "TimeTableCreationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.TimeTableCreationDate = ((*String)(v))
@@ -89011,6 +90536,7 @@ func (n *TimeTableScheduleType) SetProperty(key string, value interface{}) *Time
       n.timetablescheduletype.TimeTableDayList = v
       }
     case "Title":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablescheduletype.Title = ((*String)(v))
@@ -89264,11 +90790,13 @@ func (n *TimeTableSubject) SetProperty(key string, value interface{}) *TimeTable
       n.timetablesubject.AcademicYearRange = v
       }
     case "CourseLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.CourseLocalId = ((*LocalIdType)(v))
       }
     case "Faculty":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.Faculty = ((*String)(v))
@@ -89292,6 +90820,7 @@ func (n *TimeTableSubject) SetProperty(key string, value interface{}) *TimeTable
       n.timetablesubject.ProposedMinClassSize = ((*Float)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.RefId = ((*RefIdType)(v))
@@ -89305,21 +90834,25 @@ func (n *TimeTableSubject) SetProperty(key string, value interface{}) *TimeTable
       n.timetablesubject.SIF_Metadata = v
       }
     case "SchoolCourseInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SchoolCourseInfoRefId = ((*RefIdType)(v))
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SchoolInfoRefId = ((*String)(v))
       }
     case "SchoolLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SchoolLocalId = ((*LocalIdType)(v))
       }
     case "SchoolYear":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SchoolYear = ((*SchoolYearType)(v))
@@ -89330,21 +90863,25 @@ func (n *TimeTableSubject) SetProperty(key string, value interface{}) *TimeTable
       n.timetablesubject.Semester = ((*Int)(v))
       }
     case "SubjectLocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SubjectLocalId = ((*LocalIdType)(v))
       }
     case "SubjectLongName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SubjectLongName = ((*String)(v))
       }
     case "SubjectShortName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SubjectShortName = ((*String)(v))
       }
     case "SubjectType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.timetablesubject.SubjectType = ((*String)(v))
@@ -89647,16 +91184,19 @@ func (n *TotalEnrollmentsType) SetProperty(key string, value interface{}) *Total
         }
         switch key {
     case "Boys":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.totalenrollmentstype.Boys = ((*String)(v))
       }
     case "Girls":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.totalenrollmentstype.Girls = ((*String)(v))
       }
     case "TotalStudents":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.totalenrollmentstype.TotalStudents = ((*String)(v))
@@ -89805,11 +91345,13 @@ func (n *TypedIdRefType) SetProperty(key string, value interface{}) *TypedIdRefT
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.typedidreftype.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.typedidreftype.Value = ((*RefIdType)(v))
@@ -89878,11 +91420,13 @@ func (n *ValidLetterMarkType) SetProperty(key string, value interface{}) *ValidL
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.validlettermarktype.Code = ((*String)(v))
       }
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.validlettermarktype.Description = ((*String)(v))
@@ -89993,26 +91537,31 @@ func (n *VendorInfo) SetProperty(key string, value interface{}) *VendorInfo {
         }
         switch key {
     case "ABN":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.ABN = ((*String)(v))
       }
     case "AccountName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.AccountName = ((*String)(v))
       }
     case "AccountNumber":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.AccountNumber = ((*String)(v))
       }
     case "BPay":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.BPay = ((*String)(v))
       }
     case "BSB":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.BSB = ((*String)(v))
@@ -90022,6 +91571,7 @@ func (n *VendorInfo) SetProperty(key string, value interface{}) *VendorInfo {
       n.vendorinfo.ContactInfo = v
       }
     case "CustomerId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.CustomerId = ((*String)(v))
@@ -90031,26 +91581,31 @@ func (n *VendorInfo) SetProperty(key string, value interface{}) *VendorInfo {
       n.vendorinfo.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.LocalId = ((*LocalIdType)(v))
       }
     case "Name":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.Name = ((*String)(v))
       }
     case "PaymentTerms":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.PaymentTerms = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.vendorinfo.RefId = ((*RefIdType)(v))
       }
     case "RegisteredForGST":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -90303,26 +91858,31 @@ func (n *VisaSubClassType) SetProperty(key string, value interface{}) *VisaSubCl
         }
         switch key {
     case "ATEExpiryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.visasubclasstype.ATEExpiryDate = ((*String)(v))
       }
     case "ATEStartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.visasubclasstype.ATEStartDate = ((*String)(v))
       }
     case "Code":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.visasubclasstype.Code = ((*VisaSubClassCodeType)(v))
       }
     case "VisaExpiryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.visasubclasstype.VisaExpiryDate = ((*String)(v))
       }
     case "VisaStatisticalCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.visasubclasstype.VisaStatisticalCode = ((*String)(v))
@@ -90456,26 +92016,31 @@ func (n *WellbeingAlert) SetProperty(key string, value interface{}) *WellbeingAl
         }
         switch key {
     case "AlertAudience":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.AlertAudience = ((*String)(v))
       }
     case "AlertKeyContact":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.AlertKeyContact = ((*String)(v))
       }
     case "AlertSeverity":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.AlertSeverity = ((*String)(v))
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.Date = ((*String)(v))
       }
     case "EnrolmentRestricted":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -90488,11 +92053,13 @@ func (n *WellbeingAlert) SetProperty(key string, value interface{}) *WellbeingAl
       n.wellbeingalert.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.LocalId = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.RefId = ((*RefIdType)(v))
@@ -90506,16 +92073,19 @@ func (n *WellbeingAlert) SetProperty(key string, value interface{}) *WellbeingAl
       n.wellbeingalert.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.SchoolInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.StudentPersonalRefId = ((*String)(v))
       }
     case "WellbeingAlertCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingAlertCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingAlertCategoryType_values")
       }
@@ -90524,16 +92094,19 @@ func (n *WellbeingAlert) SetProperty(key string, value interface{}) *WellbeingAl
       n.wellbeingalert.WellbeingAlertCategory = ((*AUCodeSetsWellbeingAlertCategoryType)(v))
       }
     case "WellbeingAlertDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.WellbeingAlertDescription = ((*String)(v))
       }
     case "WellbeingAlertEndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.WellbeingAlertEndDate = ((*String)(v))
       }
     case "WellbeingAlertStartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingalert.WellbeingAlertStartDate = ((*String)(v))
@@ -90806,16 +92379,19 @@ func (n *WellbeingAppeal) SetProperty(key string, value interface{}) *WellbeingA
         }
         switch key {
     case "AppealNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.AppealNotes = ((*String)(v))
       }
     case "AppealOutcome":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.AppealOutcome = ((*String)(v))
       }
     case "AppealStatusCode":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingAppealStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingAppealStatusType_values")
       }
@@ -90824,6 +92400,7 @@ func (n *WellbeingAppeal) SetProperty(key string, value interface{}) *WellbeingA
       n.wellbeingappeal.AppealStatusCode = ((*AUCodeSetsWellbeingAppealStatusType)(v))
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.Date = ((*String)(v))
@@ -90833,6 +92410,7 @@ func (n *WellbeingAppeal) SetProperty(key string, value interface{}) *WellbeingA
       n.wellbeingappeal.DocumentList = v
       }
     case "LocalAppealId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.LocalAppealId = ((*LocalIdType)(v))
@@ -90842,11 +92420,13 @@ func (n *WellbeingAppeal) SetProperty(key string, value interface{}) *WellbeingA
       n.wellbeingappeal.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.LocalId = ((*LocalIdType)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.RefId = ((*RefIdType)(v))
@@ -90860,16 +92440,19 @@ func (n *WellbeingAppeal) SetProperty(key string, value interface{}) *WellbeingA
       n.wellbeingappeal.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.SchoolInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.StudentPersonalRefId = ((*String)(v))
       }
     case "WellbeingResponseRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingappeal.WellbeingResponseRefId = ((*String)(v))
@@ -91140,6 +92723,7 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
         }
         switch key {
     case "Alert":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -91148,11 +92732,13 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.Alert = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "CharacteristicSeverity":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.CharacteristicSeverity = ((*String)(v))
       }
     case "ConfidentialFlag":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -91161,6 +92747,7 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.ConfidentialFlag = ((*AUCodeSetsYesOrNoCategoryType)(v))
       }
     case "DailyManagement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.DailyManagement = ((*String)(v))
@@ -91170,16 +92757,19 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.DocumentList = v
       }
     case "EmergencyManagement":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.EmergencyManagement = ((*String)(v))
       }
     case "EmergencyResponsePlan":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.EmergencyResponsePlan = ((*String)(v))
       }
     case "LocalCharacteristicCode":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.LocalCharacteristicCode = ((*LocalIdType)(v))
@@ -91189,6 +92779,7 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.LocalId = ((*LocalIdType)(v))
@@ -91198,11 +92789,13 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.MedicationList = v
       }
     case "PreferredHospital":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.PreferredHospital = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.RefId = ((*RefIdType)(v))
@@ -91216,11 +92809,13 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.SchoolInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.StudentPersonalRefId = ((*String)(v))
@@ -91230,16 +92825,19 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.SymptomList = v
       }
     case "Trigger":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.Trigger = ((*String)(v))
       }
     case "WellbeingCharacteristicCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.WellbeingCharacteristicCategory = ((*String)(v))
       }
     case "WellbeingCharacteristicClassification":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingCharacteristicClassificationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingCharacteristicClassificationType_values")
       }
@@ -91248,26 +92846,31 @@ func (n *WellbeingCharacteristic) SetProperty(key string, value interface{}) *We
       n.wellbeingcharacteristic.WellbeingCharacteristicClassification = ((*AUCodeSetsWellbeingCharacteristicClassificationType)(v))
       }
     case "WellbeingCharacteristicEndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.WellbeingCharacteristicEndDate = ((*String)(v))
       }
     case "WellbeingCharacteristicNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.WellbeingCharacteristicNotes = ((*String)(v))
       }
     case "WellbeingCharacteristicReviewDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.WellbeingCharacteristicReviewDate = ((*String)(v))
       }
     case "WellbeingCharacteristicStartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.WellbeingCharacteristicStartDate = ((*String)(v))
       }
     case "WellbeingCharacteristicSubCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingcharacteristic.WellbeingCharacteristicSubCategory = ((*String)(v))
@@ -91654,31 +93257,37 @@ func (n *WellbeingDocumentType) SetProperty(key string, value interface{}) *Well
         }
         switch key {
     case "DocumentDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingdocumenttype.DocumentDescription = ((*String)(v))
       }
     case "DocumentReviewDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingdocumenttype.DocumentReviewDate = ((*String)(v))
       }
     case "DocumentType":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingdocumenttype.DocumentType = ((*String)(v))
       }
     case "Location":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingdocumenttype.Location = ((*String)(v))
       }
     case "Sensitivity":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingdocumenttype.Sensitivity = ((*String)(v))
       }
     case "URL":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingdocumenttype.URL = ((*String)(v))
@@ -91839,6 +93448,7 @@ func (n *WellbeingEvent) SetProperty(key string, value interface{}) *WellbeingEv
         }
         switch key {
     case "ConfidentialFlag":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
       }
@@ -91851,6 +93461,7 @@ func (n *WellbeingEvent) SetProperty(key string, value interface{}) *WellbeingEv
       n.wellbeingevent.DocumentList = v
       }
     case "EventId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.EventId = ((*LocalIdType)(v))
@@ -91873,11 +93484,13 @@ func (n *WellbeingEvent) SetProperty(key string, value interface{}) *WellbeingEv
       n.wellbeingevent.PersonInvolvementList = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.RefId = ((*RefIdType)(v))
       }
     case "ReportingStaffRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.ReportingStaffRefId = ((*String)(v))
@@ -91891,11 +93504,13 @@ func (n *WellbeingEvent) SetProperty(key string, value interface{}) *WellbeingEv
       n.wellbeingevent.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.SchoolInfoRefId = ((*String)(v))
       }
     case "Status":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingStatusType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingStatusType_values")
       }
@@ -91904,11 +93519,13 @@ func (n *WellbeingEvent) SetProperty(key string, value interface{}) *WellbeingEv
       n.wellbeingevent.Status = ((*AUCodeSetsWellbeingStatusType)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.StudentPersonalRefId = ((*String)(v))
       }
     case "WellbeingEventCategoryClass":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingEventCategoryClassType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingEventCategoryClassType_values")
       }
@@ -91921,16 +93538,19 @@ func (n *WellbeingEvent) SetProperty(key string, value interface{}) *WellbeingEv
       n.wellbeingevent.WellbeingEventCategoryList = v
       }
     case "WellbeingEventCreationTimeStamp":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.WellbeingEventCreationTimeStamp = ((*String)(v))
       }
     case "WellbeingEventDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.WellbeingEventDate = ((*String)(v))
       }
     case "WellbeingEventDescription":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.WellbeingEventDescription = ((*String)(v))
@@ -91940,16 +93560,19 @@ func (n *WellbeingEvent) SetProperty(key string, value interface{}) *WellbeingEv
       n.wellbeingevent.WellbeingEventLocationDetails = v
       }
     case "WellbeingEventNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.WellbeingEventNotes = ((*String)(v))
       }
     case "WellbeingEventTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingevent.WellbeingEventTime = ((*String)(v))
       }
     case "WellbeingEventTimePeriod":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingEventTimePeriodType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingEventTimePeriodType_values")
       }
@@ -92292,6 +93915,7 @@ func (n *WellbeingEventCategoryType) SetProperty(key string, value interface{}) 
         }
         switch key {
     case "EventCategory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingeventcategorytype.EventCategory = ((*String)(v))
@@ -92364,11 +93988,13 @@ func (n *WellbeingEventLocationDetailsType) SetProperty(key string, value interf
         }
         switch key {
     case "Class":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingeventlocationdetailstype.Class = ((*String)(v))
       }
     case "EventLocation":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingEventLocationType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingEventLocationType_values")
       }
@@ -92377,6 +94003,7 @@ func (n *WellbeingEventLocationDetailsType) SetProperty(key string, value interf
       n.wellbeingeventlocationdetailstype.EventLocation = ((*AUCodeSetsWellbeingEventLocationType)(v))
       }
     case "FurtherLocationNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingeventlocationdetailstype.FurtherLocationNotes = ((*String)(v))
@@ -92486,11 +94113,13 @@ func (n *WellbeingPersonLink) SetProperty(key string, value interface{}) *Wellbe
       n.wellbeingpersonlink.FollowUpActionList = v
       }
     case "GroupId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.GroupId = ((*LocalIdType)(v))
       }
     case "HowInvolved":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.HowInvolved = ((*String)(v))
@@ -92500,16 +94129,19 @@ func (n *WellbeingPersonLink) SetProperty(key string, value interface{}) *Wellbe
       n.wellbeingpersonlink.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.LocalId = ((*LocalIdType)(v))
       }
     case "OtherPersonContactDetails":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.OtherPersonContactDetails = ((*String)(v))
       }
     case "OtherPersonId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.OtherPersonId = ((*LocalIdType)(v))
@@ -92519,11 +94151,13 @@ func (n *WellbeingPersonLink) SetProperty(key string, value interface{}) *Wellbe
       n.wellbeingpersonlink.PersonRefId = v
       }
     case "PersonRole":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.PersonRole = ((*String)(v))
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.RefId = ((*RefIdType)(v))
@@ -92537,16 +94171,19 @@ func (n *WellbeingPersonLink) SetProperty(key string, value interface{}) *Wellbe
       n.wellbeingpersonlink.SIF_Metadata = v
       }
     case "ShortName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.ShortName = ((*String)(v))
       }
     case "WellbeingEventRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.WellbeingEventRefId = ((*String)(v))
       }
     case "WellbeingResponseRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink.WellbeingResponseRefId = ((*String)(v))
@@ -92782,11 +94419,13 @@ func (n *WellbeingPersonLink_PersonRefId) SetProperty(key string, value interfac
         }
         switch key {
     case "SIF_RefObject":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink_personrefid.SIF_RefObject = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingpersonlink_personrefid.Value = ((*String)(v))
@@ -92853,11 +94492,13 @@ func (n *WellbeingPlanType) SetProperty(key string, value interface{}) *Wellbein
         }
         switch key {
     case "PersonalisedPlanRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingplantype.PersonalisedPlanRefId = ((*String)(v))
       }
     case "PlanNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingplantype.PlanNotes = ((*String)(v))
@@ -92962,6 +94603,7 @@ func (n *WellbeingResponse) SetProperty(key string, value interface{}) *Wellbein
       n.wellbeingresponse.Award = v
       }
     case "Date":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.Date = ((*String)(v))
@@ -92979,6 +94621,7 @@ func (n *WellbeingResponse) SetProperty(key string, value interface{}) *Wellbein
       n.wellbeingresponse.LocalCodeList = v
       }
     case "LocalId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.LocalId = ((*LocalIdType)(v))
@@ -92996,6 +94639,7 @@ func (n *WellbeingResponse) SetProperty(key string, value interface{}) *Wellbein
       n.wellbeingresponse.PlanRequired = v
       }
     case "RefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.RefId = ((*RefIdType)(v))
@@ -93009,11 +94653,13 @@ func (n *WellbeingResponse) SetProperty(key string, value interface{}) *Wellbein
       n.wellbeingresponse.SIF_Metadata = v
       }
     case "SchoolInfoRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.SchoolInfoRefId = ((*String)(v))
       }
     case "StudentPersonalRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.StudentPersonalRefId = ((*String)(v))
@@ -93023,6 +94669,7 @@ func (n *WellbeingResponse) SetProperty(key string, value interface{}) *Wellbein
       n.wellbeingresponse.Suspension = v
       }
     case "WellbeingResponseCategory":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsWellbeingResponseCategoryType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsWellbeingResponseCategoryType_values")
       }
@@ -93031,16 +94678,19 @@ func (n *WellbeingResponse) SetProperty(key string, value interface{}) *Wellbein
       n.wellbeingresponse.WellbeingResponseCategory = ((*AUCodeSetsWellbeingResponseCategoryType)(v))
       }
     case "WellbeingResponseEndDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.WellbeingResponseEndDate = ((*String)(v))
       }
     case "WellbeingResponseNotes":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.WellbeingResponseNotes = ((*String)(v))
       }
     case "WellbeingResponseStartDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.wellbeingresponse.WellbeingResponseStartDate = ((*String)(v))
@@ -93336,31 +94986,37 @@ func (n *WithdrawalType) SetProperty(key string, value interface{}) *WithdrawalT
         }
         switch key {
     case "ScheduledActivityRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.withdrawaltype.ScheduledActivityRefId = ((*String)(v))
       }
     case "TimeTableCellRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.withdrawaltype.TimeTableCellRefId = ((*String)(v))
       }
     case "TimeTableSubjectRefId":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.withdrawaltype.TimeTableSubjectRefId = ((*String)(v))
       }
     case "WithdrawalDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.withdrawaltype.WithdrawalDate = ((*String)(v))
       }
     case "WithdrawalEndTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.withdrawaltype.WithdrawalEndTime = ((*String)(v))
       }
     case "WithdrawalStartTime":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.withdrawaltype.WithdrawalStartTime = ((*String)(v))
@@ -93493,46 +95149,55 @@ func (n *WorkingWithChildrenCheckType) SetProperty(key string, value interface{}
         }
         switch key {
     case "CheckDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.CheckDate = ((*String)(v))
       }
     case "Determination":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.Determination = ((*String)(v))
       }
     case "DeterminationDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.DeterminationDate = ((*String)(v))
       }
     case "ExpiryDate":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.ExpiryDate = ((*String)(v))
       }
     case "HolderName":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.HolderName = ((*String)(v))
       }
     case "Number":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.Number = ((*String)(v))
       }
     case "Reasons":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.Reasons = ((*String)(v))
       }
     case "StateTerritory":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.StateTerritory = ((*StateProvinceType)(v))
       }
     case "Type":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.workingwithchildrenchecktype.Type = ((*String)(v))
@@ -93690,11 +95355,13 @@ func (n *XMLDataType) SetProperty(key string, value interface{}) *XMLDataType {
         }
         switch key {
     case "Description":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.xmldatatype.Description = ((*String)(v))
       }
     case "Value":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.xmldatatype.Value = ((*String)(v))
@@ -93761,11 +95428,13 @@ func (n *YearLevelEnrollmentType) SetProperty(key string, value interface{}) *Ye
         }
         switch key {
     case "Enrollment":
+    value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.yearlevelenrollmenttype.Enrollment = ((*String)(v))
       }
     case "Year":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYearLevelCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYearLevelCodeType_values")
       }
@@ -93833,6 +95502,7 @@ func (n *YearLevelType) SetProperty(key string, value interface{}) *YearLevelTyp
         }
         switch key {
     case "Code":
+    value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsYearLevelCodeType_map, value) {
       log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYearLevelCodeType_values")
       }

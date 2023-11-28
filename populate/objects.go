@@ -94,11 +94,9 @@ func copyTeachingGroupPeriodFromCell(group *sifxml.TeachingGroup, cell *sifxml.T
 //
 // The student has a parent 1 with probability 0.8, and has a parent 2 with probability 0.8, or if parent 1 is not provided.
 //
-// Only a legal name (Type: "LGL") is provided for the student.
+// A legal name (Type: "LGL") is provided for the student.
 //
-// * FamilyName, GivenName, Sex are randomised as a bundle (https://github.com/brianvoe/gofakeit). Sex is binary.
-//
-// * MiddleName is randomised separately (gofakeit does not support middle names), and may not be of the same gender as the GivenName.
+// * FamilyName, GivenName, Sex, MiddleName are randomised as a bundle (https://github.com/brianvoe/gofakeit). Sex is binary.  MiddleName is randomised separately (gofakeit does not support middle names), but is of the same gender as the GivenName.
 //
 // * Email is only a single entry, of type "01" (Primary), and is generated using the first name, the middle initial, the surname, and the domain "example.edu.au". (Overridden in Create_StudentSchoolEnrollment().)
 //
@@ -115,13 +113,26 @@ func copyTeachingGroupPeriodFromCell(group *sifxml.TeachingGroup, cell *sifxml.T
 // * Parent1Language and Parent2Language are fixed at "1201" (English).
 //
 // * Parent1EmploymentType, Parent1SchoolEducationLevel, Parent1NonSchoolEducation, Parent2EmploymentType, Parent2SchoolEducationLevel, Parent2NonSchoolEducation are set randomly to a valid value.
+//
+//	The following attributes have been added for STDX:
+//
+// * PlaceOfBirth is a random city name.
+//
+// * StateOfBirth is a random choice of Australian State
+//
+// * With probability 0.1, a previous name is added for the student, of the same gender as the legal name. The surname is kept the same with probability 0.5.
+//
+// * Citizenship is "1101" (Australia) with probability 0.9, and is otherwise a random choice of 1201, 1302, 1402, 1502, 2100 (New Zealand, Papua New Guinea, Kiribati, Fiji, United Kingdom). With probability 0.1, a second random citizenship is added at random, out of 2201, 2301, 2401, 3101, 3201 (Ireland, Austria, Denmark, Andora, Albania)
+//
+// * If the Citizenship is other than 1101, VisaStatus is picked at random out of 100, 200, 300, 400, 500 (Partner (migrant), Refugee, Prospective marriage, Temporary work (Short stay specialist), Student)
+//
+// *LBOTE: "Yes" with probability 0.2
 func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	if yearlevel == "" {
 		yearlevel = strconv.Itoa(rand.Intn(12) + 1)
 	}
 	gofakeit.Seed(0)
-	person := gofakeit.Person()
-	middlename := gofakeit.FirstName()
+	person := FakePerson()
 	hasParent1 := rand.Float64() < 0.8
 	hasParent2 := rand.Float64() < 0.8
 	if !hasParent1 {
@@ -133,21 +144,45 @@ func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", strconv.Itoa(seq_gen("localId")))
 	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 99999999)+1))
+	ret.SetProperty("NationalUniqueStudentIdentifier", strconv.Itoa(random_seq_gen("nationalUniqueStudentIdentifier", 99999999)+1))
 	ret.PersonInfo().Name().SetProperty("Type", "LGL")
 	ret.PersonInfo().Name().SetProperty("FamilyName", person.LastName)
 	ret.PersonInfo().Name().SetProperty("GivenName", person.FirstName)
-	ret.PersonInfo().Name().SetProperty("MiddleName", middlename)
+	ret.PersonInfo().Name().SetProperty("MiddleName", person.MiddleName)
+	if rand.Float64() < 0.1 {
+		p := GenderedFakePerson(person.Gender)
+		ret.PersonInfo().OtherNames().AddNew()
+		ret.PersonInfo().OtherNames().Last().SetProperty("Type", "PRV")
+		ret.PersonInfo().OtherNames().Last().SetProperty("FamilyName", threshold_rand_strings([]float64{0.5, 0}, []string{p.LastName, person.LastName}))
+		ret.PersonInfo().OtherNames().Last().SetProperty("GivenName", p.FirstName)
+		person2 := GenderedFakePerson(person.Gender)
+		ret.PersonInfo().OtherNames().Last().SetProperty("MiddleName", person2.FirstName)
+	}
+	ret.PersonInfo().Demographics().SetProperty("Gender", sex_seeded(person.Gender))
 	ret.PersonInfo().Demographics().SetProperty("Sex", sex_seeded(person.Gender))
 	if birthyr_err == nil {
 		ret.PersonInfo().Demographics().SetProperty("BirthDate", birthyr)
 	}
+	ret.PersonInfo().Demographics().SetProperty("PlaceOfBirth", gofakeit.City())
+	ret.PersonInfo().Demographics().SetProperty("StateOfBirth", create_state())
 	ret.PersonInfo().Demographics().SetProperty("IndigenousStatus",
 		threshold_rand_strings([]float64{0.2, 0.15, 0.1, 0.05, 0}, []string{"4", "1", "2", "3", "9"}))
 	ret.PersonInfo().Demographics().SetProperty("CountryOfBirth", "1101")
+	ret.PersonInfo().Demographics().CountriesOfCitizenship().Append(
+		(sifxml.CountryType)(threshold_rand_strings([]float64{0.1, 0.08, 0.06, 0.04, 0.02, 0}, []string{"1101", "1201", "1302", "1402", "1502", "2100"})))
+	if rand.Float64() < 0.1 {
+		ret.PersonInfo().Demographics().CountriesOfCitizenship().Append(
+			(sifxml.CountryType)(threshold_rand_strings([]float64{0.8, 0.6, 0.4, 0.2, 0}, []string{"2201", "2301", "2401", "3101", "3201"})))
+	}
+	if *ret.PersonInfo().Demographics().CountriesOfCitizenship().Index(0) != "1101" {
+		ret.PersonInfo().Demographics().SetProperty("VisaSubClass",
+			threshold_rand_strings([]float64{0.8, 0.6, 0.4, 0.2, 0}, []string{"100", "200", "300", "400", "500"}))
+	}
+	ret.PersonInfo().Demographics().SetProperty("LBOTE", threshold_rand_strings([]float64{0.2, 0}, []string{"N", "Y"}))
 	ret.PersonInfo().EmailList().AddNew()
 	ret.PersonInfo().EmailList().Last().SetProperty("Type", "01")
 	ret.PersonInfo().EmailList().Last().SetProperty("Value",
-		create_email(person.FirstName, middlename, person.LastName, "example.edu.au"))
+		create_email(person.FirstName, person.MiddleName, person.LastName, "example.edu.au"))
 	if hasParent1 {
 		ret.MostRecent().SetProperty("Parent1Language", "1201")
 		ret.MostRecent().SetProperty("Parent1EmploymentType",
@@ -179,6 +214,160 @@ func Create_StudentPersonals(count int, yearlevels []string) *sifxml.StudentPers
 	return ret
 }
 
+// Create a Student Data Transfer Note object for the given student, with the nominated school as the departure school
+//
+// * The Arrival School is another random school from the list of schools
+//
+// * With probability 0.2, a distinct random school is given as a Previous School
+//
+// * FollowupRequest, ChildSubjectToOrders, Attendance are set randomly
+//
+// * Where present, the VisaExpiryDate is set to July 30 next year, the ATEStartDate to July 30 two years ago, the ATEExpiryDate to July 30 one year ago
+//
+// * With probability 0.2, student has a single NCCD; Level of Adjustment and Category of Disability are assigned randomly. With probability 0.5, the Category of Disability and a second Category of Disability is added to the Disability Category Considered List. The Date of Assessment is given as today.
+//
+// * With probability 0.3, student has a single Educational Assessment, the "General Early Literacy Test", with a random score.
+//
+// * The student is given a Student Grade for each of Maths, English, Science, and History, with a random letter grade.
+//
+// * The student is given a score for each NAPLAN test, assessed in the previous year or the year before that, based on their current year level. Their participation is P with 0.8 probability, F with 0.06 probability, and evenly distributed among all remaining options.
+func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *sifxml.SchoolInfos, departureschool_idx int) *sifxml.StudentDataTransferNote {
+	departureschool := schools.Index(departureschool_idx)
+	arrivalschool_idx := rand.Intn(schools.Len())
+	for ; arrivalschool_idx == departureschool_idx; arrivalschool_idx = rand.Intn(schools.Len()) {
+	}
+	arrivalschool := schools.Index(arrivalschool_idx)
+	prevschool_idx := rand.Intn(schools.Len())
+	for ; prevschool_idx == departureschool_idx || prevschool_idx == arrivalschool_idx; prevschool_idx = rand.Intn(schools.Len()) {
+	}
+	previousschool := schools.Index(prevschool_idx)
+
+	ret := sifxml.NewStudentDataTransferNote()
+	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("NationalUniqueStudentIdentifier", student.NationalUniqueStudentIdentifier())
+	ret.Name().SetProperty("Type", "LGL")
+	ret.Name().SetProperty("FamilyName", student.PersonInfo().Name().FamilyName())
+	ret.Name().SetProperty("GivenName", student.PersonInfo().Name().GivenName())
+	n := student.PersonInfo().Name().MiddleName()
+	if n != nil {
+		ret.Name().SetProperty("MiddleName", n)
+	}
+	for _, n := range student.PersonInfo().OtherNames().ToSlice() {
+		ret.OtherNames().AddNew()
+		ret.OtherNames().Last().SetProperty("Type", (n.Type()))
+		ret.OtherNames().Last().SetProperty("FamilyName", n.FamilyName())
+		ret.OtherNames().Last().SetProperty("GivenName", n.GivenName())
+		x := n.MiddleName()
+		if x != nil {
+			ret.OtherNames().Last().SetProperty("MiddleName", x)
+		}
+	}
+	ret.SetProperty("Gender", (student.PersonInfo().Demographics().Gender()))
+	ret.SetProperty("BirthDate", (student.PersonInfo().Demographics().BirthDate()))
+	ret.SetProperty("PlaceOfBirth", student.PersonInfo().Demographics().PlaceOfBirth())
+	ret.SetProperty("StateOfBirth", (student.PersonInfo().Demographics().StateOfBirth()))
+	ret.SetProperty("CountryOfBirth", (student.PersonInfo().Demographics().CountryOfBirth()))
+	for _, n := range student.PersonInfo().Demographics().CountriesOfCitizenship().ToSlice() {
+		ret.CountriesOfCitizenship().Append(*n)
+	}
+	n1 := student.PersonInfo().Demographics().VisaSubClass()
+	if n1 != nil && len(*n1) != 0 {
+		ret.VisaStatus().SetProperty("Code", (n1))
+		ret.VisaStatus().SetProperty("VisaExpiryDate", strconv.Itoa(time.Now().Year()+1)+"-07-30")
+		ret.VisaStatus().SetProperty("ATEExpiryDate", strconv.Itoa(time.Now().Year()-1)+"-07-30")
+		ret.VisaStatus().SetProperty("ATEStartDate", strconv.Itoa(time.Now().Year()-2)+"-07-30")
+	}
+	ret.SetProperty("IndigenousStatus", (student.PersonInfo().Demographics().IndigenousStatus()))
+	ret.SetProperty("LBOTE", (student.PersonInfo().Demographics().LBOTE()))
+	ret.YearLevel().SetProperty("Code", student.MostRecent().YearLevel().Code())
+	ret.DepartureSchool().SetProperty("ACARAId", departureschool.ACARAId())
+	ret.DepartureSchool().SetProperty("CommonwealthId", departureschool.CommonwealthId())
+	ret.DepartureSchool().SetProperty("Name", departureschool.SchoolName())
+	ret.DepartureSchool().SetProperty("City", departureschool.AddressList().Last().City())
+	ret.DepartureSchool().SetProperty("SchoolContactList", departureschool.SchoolContactList())
+	ret.ArrivalSchool().SetProperty("ACARAId", arrivalschool.ACARAId())
+	ret.ArrivalSchool().SetProperty("CommonwealthId", arrivalschool.CommonwealthId())
+	ret.ArrivalSchool().SetProperty("Name", arrivalschool.SchoolName())
+	ret.ArrivalSchool().SetProperty("City", arrivalschool.AddressList().Last().City())
+	if rand.Float64() < 0.2 {
+		ret.PreviousSchoolList().AddNew()
+		ret.PreviousSchoolList().Last().SetProperty("ACARAId", previousschool.ACARAId())
+		ret.PreviousSchoolList().Last().SetProperty("CommonwealthId", previousschool.CommonwealthId())
+		ret.PreviousSchoolList().Last().SetProperty("Name", previousschool.SchoolName())
+		ret.PreviousSchoolList().Last().SetProperty("City", previousschool.AddressList().Last().City())
+	}
+	ret.SetProperty("FollowupRequest", create_boolean())
+	ret.SetProperty("ChildSubjectToOrders", create_boolean())
+	ret.SetProperty("Attendance", create_boolean())
+	if rand.Float64() < 0.2 {
+		ret.NCCDList().AddNew()
+		ret.NCCDList().Last().SetProperty("LevelOfAdjustment", randomStringFromSlice([]string{"Extensive", "QDTP", "Substantial", "Supplementary"}))
+		disability := randomStringFromSlice([]string{"Cognitive", "Physical", "Sensory", "Social-Emotional"})
+		ret.NCCDList().Last().SetProperty("CategoryOfDisability", disability)
+		if rand.Float64() < 0.5 {
+			second_disability := randomStringFromSlice([]string{"Cognitive", "Physical", "Sensory", "Social-Emotional"})
+			for ; disability == second_disability; second_disability = randomStringFromSlice([]string{"Cognitive", "Physical", "Sensory", "Social-Emotional"}) {
+			}
+			ret.NCCDList().Last().DisabilityCategoryConsideredList().AppendString(disability)
+			ret.NCCDList().Last().DisabilityCategoryConsideredList().AppendString(second_disability)
+		}
+		ret.NCCDList().Last().SetProperty("DateOfAssessment", time.Now().Format("2006-01-02"))
+	}
+	if rand.Float64() < 0.3 {
+		ret.EducationalAssessmentList().AddNew()
+		ret.EducationalAssessmentList().Last().SetProperty("Name", "General Early Literacy Test")
+		ret.EducationalAssessmentList().Last().SetProperty("Content", fmt.Sprintf("The student received a score of %d on the test", rand.Intn(50)+50))
+	}
+	for _, s := range []string{"Maths", "English", "Science", "History"} {
+		ret.StudentGradeList().AddNew()
+		ret.StudentGradeList().Last().SetProperty("Subject", s)
+		ret.StudentGradeList().Last().LearningArea().SetProperty("ACStrand", fmt.Sprintf("%s", s[0:1]))
+		ret.StudentGradeList().Last().Grade().SetProperty("Letter", randomStringFromSlice([]string{"A", "B", "C", "D", "E", "F"}))
+	}
+	yrlvl, _ := strconv.Atoi((string)(*student.MostRecent().YearLevel().Code()))
+	if yrlvl > 3 {
+		testyear := time.Now().Year()
+		for !(yrlvl == 9 || yrlvl == 7 || yrlvl == 5 || yrlvl == 3) {
+			yrlvl--
+			testyear--
+		}
+		for _, s := range []string{"Grammar and Punctuation", "Numeracy", "Reading", "Spelling", "Writing"} {
+			ret.NAPLANScoreList().AddNew()
+			ret.NAPLANScoreList().Last().SetProperty("Domain", s)
+			ret.NAPLANScoreList().Last().SetProperty("TestYear", strconv.Itoa(testyear))
+			ret.NAPLANScoreList().Last().TestLevel().SetProperty("Code", strconv.Itoa(yrlvl))
+			participation := threshold_rand_strings([]float64{0.2, 0.14, 0.12, 0.1, 0.08, 0.06, 0.04, 0.02, 0}, []string{"P", "F", "A", "C", "E", "R", "S", "W", "X"})
+			ret.NAPLANScoreList().Last().SetProperty("ParticipationCode", participation)
+			switch participation {
+			case "A":
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("RawScore", 0.0)
+			case "P", "F", "S":
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("RawScore", 400*rand.Float64())
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("ScaledScoreValue", 400*rand.Float64())
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("ScaledScoreLogitValue", rand.Float64())
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("ScaledScoreStandardError", rand.Float64())
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("ScaledScoreLogitStandardError", rand.Float64())
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("StudentDomainBand", rand.Intn(5))
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("StudentProficiency", randomStringFromSlice([]string{"Proficient", "Developing", "Bad"}))
+				for i := 0; i < 5; i++ {
+					ret.NAPLANScoreList().Last().DomainScore().PlausibleScaledValueList().Append(400 * rand.Float64())
+				}
+			}
+		}
+	}
+	return ret
+
+}
+
+// Create a Student Data Transfer Note object for each student in students, and for a set of schools, with the nominated school as the departure school
+func Create_StudentDataTransferNotes(students *sifxml.StudentPersonals, schools *sifxml.SchoolInfos, departureschool_idx int) *sifxml.StudentDataTransferNotes {
+	ret := sifxml.NewStudentDataTransferNotes()
+	for _, s := range students.ToSlice() {
+		ret.Append(Create_StudentDataTransferNote(s, schools, departureschool_idx))
+	}
+	return ret
+}
+
 // Create a school with its school of SchoolType schooltype. If schooltype is empty, a random value will be selected (drawn from the codeset AUCodeSetsSchoolLevelType).
 //
 // Each school has a campus type populated. The SchoolCampusId is a random number between 1 and 4. The ParentSchoolId is the same as the school LocalId. The CampusType is the same as the SchoolType. The AdminStatus is set with weighted probability: "N" (0.2), "Y" (0.8).
@@ -186,6 +375,8 @@ func Create_StudentPersonals(count int, yearlevels []string) *sifxml.StudentPers
 // * LocalId is a sequence number shared between all objects.
 //
 // * StateProvinceId is a unique random number between 1 and 10000.
+//
+// * AcaraId is a unique random number between 1 and 10000.
 //
 // * CommonwealthId is a unique random number between 1 and 10000.
 //
@@ -202,6 +393,8 @@ func Create_StudentPersonals(count int, yearlevels []string) *sifxml.StudentPers
 // * Entity_Open is set to "1990-01-01".
 //
 // * AddressList is populated by a single entry from Create_Address().
+//
+// * SchoolContactList is populated with a single randomised person, with a PositionTitle of "Principal", a Role of "Primary Contact". Their email is a single Email of type "01" (Primary), and is generated using the first name, the middle initial, the surname, and a domain name based on the school name. Their phone number is a single entry of Type "0096" (Main Telephone Number), and is a mobile phone number.
 func Create_SchoolInfo(schooltype string) *sifxml.SchoolInfo {
 	gofakeit.Seed(0)
 	local_id := strconv.Itoa(seq_gen("localId"))
@@ -209,13 +402,15 @@ func Create_SchoolInfo(schooltype string) *sifxml.SchoolInfo {
 	if schooltype == "" {
 		schooltype = randomStringFromSlice(sifxml.AUCodeSetsSchoolLevelType_values)
 	}
+	schoolname := school_name(schooltype)
 
 	ret := sifxml.NewSchoolInfo()
 	ret.SetProperty("RefId", create_GUID())
 	ret.SetProperty("LocalId", local_id)
 	ret.SetProperty("StateProvinceId", strconv.Itoa(random_seq_gen("stateProvinceId", 9999)+1))
+	ret.SetProperty("ACARAId", strconv.Itoa(random_seq_gen("schoolACARAId", 9999)+1))
 	ret.SetProperty("CommonwealthId", strconv.Itoa(random_seq_gen("schoolCommonwealthId", 9999)+1))
-	ret.SetProperty("SchoolName", school_name(schooltype))
+	ret.SetProperty("SchoolName", schoolname)
 	ret.Campus().SetProperty("ParentSchoolId", local_id)
 	ret.Campus().SetProperty("SchoolCampusId", strconv.Itoa(rand.Intn(4)+1))
 	ret.Campus().SetProperty("AdminStatus", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
@@ -227,6 +422,22 @@ func Create_SchoolInfo(schooltype string) *sifxml.SchoolInfo {
 	ret.SetProperty("ARIA", 1.0)
 	ret.SetProperty("Entity_Open", "1990-01-01")
 	ret.AddressList().Append(Create_Address(state))
+	ret.SchoolContactList().AddNew()
+	person := FakePerson()
+	ret.SchoolContactList().Last().ContactInfo().Name().SetProperty("Type", "LGL")
+	ret.SchoolContactList().Last().ContactInfo().Name().SetProperty("FamilyName", person.LastName)
+	ret.SchoolContactList().Last().ContactInfo().Name().SetProperty("GivenName", person.FirstName)
+	ret.SchoolContactList().Last().ContactInfo().Name().SetProperty("MiddleName", person.MiddleName)
+	ret.SchoolContactList().Last().ContactInfo().SetProperty("PositionTitle", "Principal")
+	ret.SchoolContactList().Last().ContactInfo().SetProperty("Role", "Primary Contact")
+	ret.SchoolContactList().Last().ContactInfo().EmailList().AddNew()
+	ret.SchoolContactList().Last().ContactInfo().EmailList().Last().SetProperty("Type", "01")
+	ret.SchoolContactList().Last().ContactInfo().EmailList().Last().SetProperty("Value",
+		create_email(person.FirstName, person.MiddleName, person.LastName,
+			create_school_email_domain(ret)))
+	ret.SchoolContactList().Last().ContactInfo().PhoneNumberList().AddNew()
+	ret.SchoolContactList().Last().ContactInfo().PhoneNumberList().Last().SetProperty("Type", "0096")
+	ret.SchoolContactList().Last().ContactInfo().PhoneNumberList().Last().SetProperty("Number", create_phone_number(nil))
 	return ret
 }
 
@@ -300,9 +511,7 @@ func Create_StudentSchoolEnrollments(students *sifxml.StudentPersonals,
 //
 // Only a legal name (Type: "LGL") is provided for the staff member.
 //
-// * FamilyName, GivenName, Sex are randomised as a bundle (https://github.com/brianvoe/gofakeit). Sex is binary.
-//
-// * MiddleName is randomised separately (gofakeit does not support middle names), and may not be of the same gender as the GivenName.
+// * FamilyName, GivenName, Sex, MiddleName are randomised as a bundle (https://github.com/brianvoe/gofakeit). Sex is binary.  MiddleName is randomised separately (gofakeit does not support middle names), but is of the same gender as the GivenName.
 //
 // * PreferredGivenName is set to be the same as GivenName.
 //
@@ -324,8 +533,7 @@ func Create_StudentSchoolEnrollments(students *sifxml.StudentPersonals,
 // * CountryOfBirth is fixed at "1101" (Australia).
 func Create_StaffPersonal() *sifxml.StaffPersonal {
 	gofakeit.Seed(0)
-	person := gofakeit.Person()
-	middlename := gofakeit.FirstName()
+	person := FakePerson()
 
 	ret := sifxml.NewStaffPersonal()
 	ret.SetProperty("RefId", create_GUID())
@@ -342,7 +550,7 @@ func Create_StaffPersonal() *sifxml.StaffPersonal {
 	ret.PersonInfo().Name().SetProperty("FamilyName", person.LastName)
 	ret.PersonInfo().Name().SetProperty("GivenName", person.FirstName)
 	ret.PersonInfo().Name().SetProperty("PreferredGivenName", person.FirstName)
-	ret.PersonInfo().Name().SetProperty("MiddleName", middlename)
+	ret.PersonInfo().Name().SetProperty("MiddleName", person.MiddleName)
 	ret.PersonInfo().Name().SetProperty("Title", create_salutation(person.Gender))
 	ret.PersonInfo().Demographics().SetProperty("Sex", sex_seeded(person.Gender))
 	ret.PersonInfo().Demographics().SetProperty("CountryOfBirth", "1101")
@@ -351,7 +559,7 @@ func Create_StaffPersonal() *sifxml.StaffPersonal {
 	ret.PersonInfo().EmailList().AddNew()
 	ret.PersonInfo().EmailList().Last().SetProperty("Type", "01")
 	ret.PersonInfo().EmailList().Last().SetProperty("Value",
-		create_email(person.FirstName, middlename, person.LastName, "example.edu.au"))
+		create_email(person.FirstName, person.MiddleName, person.LastName, "example.edu.au"))
 	return ret
 }
 
@@ -421,10 +629,7 @@ func Create_StaffAssignments(staff *sifxml.StaffPersonals, school *sifxml.School
 //
 // Only a legal name (Type: "LGL") is provided for the contact.
 //
-// * FamilyName, GivenName, Sex are randomised as a bundle (https://github.com/brianvoe/gofakeit). Sex is binary. With probability 0.8, the family name
-// is updated to match that of the student.
-//
-// * MiddleName is randomised separately (gofakeit does not support middle names), and may not be of the same gender as the GivenName.
+// * FamilyName, GivenName, Sex, MiddleName are randomised as a bundle (https://github.com/brianvoe/gofakeit). Sex is binary.  MiddleName is randomised separately (gofakeit does not support middle names), but is of the same gender as the GivenName. With probability 0.8, the family name is updated to match that of the student.
 //
 // * PreferredGivenName is set to the same as GivenName.
 //
@@ -440,12 +645,17 @@ func Create_StaffAssignments(staff *sifxml.StaffPersonals, school *sifxml.School
 //
 // * AddressList is a single entry set by Create_Address(). If the student has an address, the address is set to be in the same state.
 //
-// * Phonelist is a single entry of Type "0096" (Main Telephone Number), and is a mobile phone number.
+// * PhoneNumberList is a single entry of Type "0096" (Main Telephone Number), and is a mobile phone number.
 //
 // * LanguageList has one entry of Type "1" (Main Language Spoken At Home), set to "1201" (English).
 //
 // With probability 0.2, a second language is added to LanguageList, of Type "2" (Main Language Other Than English Spoken at Home),
 // set to a random selection of "0002", "7101", "2401", "2201", "5203", "4202" (Not Stated, Cantonese, Italian, Greek, Hindi, Arabic).
+
+// For STDP, following fields added:
+// * Sex, identical to Gender (differentiated as of 3.6.0)
+// * PlaceOfBirth, randomised
+// * OtherName (0.1 possibility: Type: "PRV")
 func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int) *sifxml.StudentContactPersonal {
 	if student != nil && student.MostRecent().Parent1Language_IsNil() && ordinal == 1 {
 		return nil
@@ -459,8 +669,7 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 	}
 
 	gofakeit.Seed(0)
-	person := gofakeit.Person()
-	middlename := gofakeit.FirstName()
+	person := FakePerson()
 
 	ret := sifxml.NewStudentContactPersonal()
 	ret.SetProperty("RefId", create_GUID())
@@ -470,7 +679,7 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 	ret.PersonInfo().Name().SetProperty("GivenName", person.FirstName)
 	ret.PersonInfo().Name().SetProperty("PreferredGivenName", person.FirstName)
 	ret.PersonInfo().Name().SetProperty("PreferredFamilyName", person.LastName)
-	ret.PersonInfo().Name().SetProperty("MiddleName", gofakeit.FirstName())
+	ret.PersonInfo().Name().SetProperty("MiddleName", person.MiddleName)
 	ret.PersonInfo().Name().SetProperty("Title", create_salutation(person.Gender))
 	ret.PersonInfo().Demographics().SetProperty("Sex", sex_seeded(person.Gender))
 	ret.PersonInfo().Demographics().SetProperty("CountryOfBirth", "1101")
@@ -486,7 +695,7 @@ func Create_StudentContactPersonal(student *sifxml.StudentPersonal, ordinal int)
 	ret.PersonInfo().EmailList().AddNew()
 	ret.PersonInfo().EmailList().Last().SetProperty("Type", "01")
 	ret.PersonInfo().EmailList().Last().SetProperty("Value",
-		create_email(person.FirstName, middlename, person.LastName, create_commercial_email_domain()))
+		create_email(person.FirstName, person.MiddleName, person.LastName, create_commercial_email_domain()))
 	ret.PersonInfo().PhoneNumberList().AddNew()
 	ret.PersonInfo().PhoneNumberList().Last().SetProperty("Type", "0096")
 	ret.PersonInfo().PhoneNumberList().Last().SetProperty("Number", create_phone_number(nil))
@@ -910,10 +1119,9 @@ func Create_ChargedLocationInfos(count int, schools *sifxml.SchoolInfos) *sifxml
 // with a landline corresponding to the address state.
 func Create_VendorInfo() *sifxml.VendorInfo {
 	gofakeit.Seed(0)
-	person := gofakeit.Person()
+	person := FakePerson()
 	companytype := randomStringFromSlice([]string{"Company", "Pty Ltd", "Ltd", "Pty", "Inc"})
 	companyname := gofakeit.Company()
-	middlename := gofakeit.FirstName()
 	emaildomain := strings.ToLower(companyname) + "." +
 		randomStringFromSlice([]string{"com.au", "com", "com.au", "org.au"})
 
@@ -939,7 +1147,7 @@ func Create_VendorInfo() *sifxml.VendorInfo {
 	ret.ContactInfo().EmailList().AddNew()
 	ret.ContactInfo().EmailList().Last().SetProperty("Type", "01")
 	ret.ContactInfo().EmailList().Last().SetProperty("Value",
-		create_email(person.FirstName, middlename, person.LastName, emaildomain))
+		create_email(person.FirstName, person.MiddleName, person.LastName, emaildomain))
 	ret.ContactInfo().PhoneNumberList().AddNew()
 	ret.ContactInfo().PhoneNumberList().Last().SetProperty("Type", "0096")
 	ret.ContactInfo().PhoneNumberList().Last().SetProperty("Number", create_phone_number(nil))

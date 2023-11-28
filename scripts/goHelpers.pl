@@ -274,7 +274,8 @@ func (t *$n) Len() int {
 func (t *$n) ToSlice() []*$list{$n}{TYPE} {
   ret := make([]*$list{$n}{TYPE}, 0)
   for _, x:= range t.$list{$n}{KEY} {
-    ret = append(ret, &x)
+    dup := x
+    ret = append(ret, &dup)
   }
   return ret
 }
@@ -681,6 +682,11 @@ END
   if ($alias{$t}) {
     $cr = typecreate($alias{$t});
     $cv = codeset_validate($t);
+    if ($alias{$t} eq "string") {
+    print <<"END";
+    value = fmt.Sprintf("%s", value)
+END
+  }
     print <<"END";
     $cv
     if v, ok:= ${cr}Pointer(value); ok {

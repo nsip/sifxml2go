@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/brianvoe/gofakeit/v5"
+	"github.com/brianvoe/gofakeit/v6"
 	"github.com/google/uuid"
 	"github.com/nsip/sifxml2go/sifxml"
 )
@@ -57,6 +57,14 @@ func randomStringFromSlice(slice []string) string {
 
 func this_year() string {
 	return strconv.Itoa(time.Now().Year())
+}
+
+func create_boolean() bool {
+	r := rand.Float64()
+	if r < 0.5 {
+		return true
+	}
+	return false
 }
 
 func sex_seeded(sex string) string {
@@ -241,10 +249,11 @@ func create_commercial_email_domain() string {
 }
 
 func create_phone_number(state *string) string {
-	if state == nil {
-		return "04"
-	}
 	var areacode string
+	if state == nil {
+		val := "Other"
+		state = &val
+	}
 	switch *state {
 	case "ACT":
 		areacode = "02"
@@ -467,10 +476,12 @@ func Term_end_date(year string, semester int) string {
 	}
 }
 
+// List of all codes for Australian Government Collections, to iterate through
 func All_AGCollections() []string {
 	return ([]string{"COI", "FQ", "SES", "STATS"})
 }
 
+// Map Australian Government Collection code to human-readable name
 func CollectionCode2Name(code string) string {
 	switch code {
 	case "COI":
@@ -485,10 +496,12 @@ func CollectionCode2Name(code string) string {
 	return "XXX"
 }
 
+// Generate a code for the given collection round
 func CollectionRoundCode(collection string, year string, round int) string {
 	return fmt.Sprintf("%s %s-%02d", collection, year, round)
 }
 
+// Map supported HTTP status code to human-readable title
 func HTTPStatus2Text(code string) string {
 	switch code {
 	case "201":
@@ -499,4 +512,27 @@ func HTTPStatus2Text(code string) string {
 		return "Internal Server Error"
 	}
 	return "XXX"
+}
+
+// Use the fake person generator to generate a person with the given gender
+// Supported genders: "male", "female"
+func GenderedFakePerson(gender string) *gofakeit.PersonInfo {
+	var p *gofakeit.PersonInfo
+	for ok := true; ok; ok = (p.Gender != gender) {
+		p = gofakeit.Person()
+	}
+	return p
+}
+
+type PersonInfo struct {
+	gofakeit.PersonInfo
+	MiddleName string
+}
+
+func FakePerson() *PersonInfo {
+	person := gofakeit.Person()
+	person2 := GenderedFakePerson(person.Gender)
+	ret := PersonInfo{PersonInfo: *person}
+	ret.MiddleName = person2.FirstName
+	return &ret
 }

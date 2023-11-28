@@ -18,6 +18,7 @@ var teacherjudgement = flag.Bool("teacherjudgement", false, "Generate teacher ju
 var timetable = flag.Bool("timetable", false, "Generate timetable use case input data")
 var wellbeing = flag.Bool("wellbeing", false, "Generate wellbeing use case input data")
 var agcollections = flag.Bool("agcollections", false, "Generate AG collections use case input data")
+var stdn = flag.Bool("stdn", false, "Generate Student Data Transfer Note use case input data")
 var studentcount = flag.Int("studentcount", 400, "Number of StudentPersonal objects to generate")
 var staffcount = flag.Int("staffcount", 40, "Number of StaffPersonal objects to generate")
 var schoolcount = flag.Int("schoolcount", 10, "Number of SchoolInfo objects to generate")
@@ -26,7 +27,7 @@ var vendorcount = flag.Int("vendorcount", 10, "Number of VendorInfo objects to g
 func main() {
 	flag.Parse()
 
-	usecases := populate.MakeUsecases{Enrolment: *enrolment, Provisioning: *provisioning, DailyAttendance: *dailyattendance, Financial: *financial, Gradebook: *gradebook, StudentAttendanceTimeList: *studentattendancetimelist, TeacherJudgement: *teacherjudgement, Timetable: *timetable, Wellbeing: *wellbeing, AGCollections: *agcollections}
+	usecases := populate.MakeUsecases{Enrolment: *enrolment, Provisioning: *provisioning, DailyAttendance: *dailyattendance, Financial: *financial, Gradebook: *gradebook, StudentAttendanceTimeList: *studentattendancetimelist, TeacherJudgement: *teacherjudgement, Timetable: *timetable, Wellbeing: *wellbeing, AGCollections: *agcollections, StudentDataTransferNote: *stdn}
 	counts := populate.MakeUsecaseCounts{Students: *studentcount, Staff: *staffcount, Schools: *schoolcount, Vendors: *vendorcount}
 	log.Printf("%+v", usecases)
 	log.Printf("%+v", counts)
