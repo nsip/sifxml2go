@@ -241,9 +241,14 @@ func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *si
 	for ; prevschool_idx == departureschool_idx || prevschool_idx == arrivalschool_idx; prevschool_idx = rand.Intn(schools.Len()) {
 	}
 	previousschool := schools.Index(prevschool_idx)
+	prevschool2_idx := rand.Intn(schools.Len())
+	for ; prevschool2_idx == departureschool_idx || prevschool2_idx == arrivalschool_idx || prevschool2_idx == prevschool_idx; prevschool2_idx = rand.Intn(schools.Len()) {
+	}
+	previousschool2 := schools.Index(prevschool_idx)
 
 	ret := sifxml.NewStudentDataTransferNote()
 	ret.SetProperty("RefId", create_GUID())
+	ret.SetProperty("RequestID", fmt.Sprintf("STDN%07d", seq_gen("localId")))
 	ret.SetProperty("NationalUniqueStudentIdentifier", student.NationalUniqueStudentIdentifier())
 	ret.Name().SetProperty("Type", "LGL")
 	ret.Name().SetProperty("FamilyName", student.PersonInfo().Name().FamilyName())
@@ -267,38 +272,80 @@ func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *si
 	ret.SetProperty("PlaceOfBirth", student.PersonInfo().Demographics().PlaceOfBirth())
 	ret.SetProperty("StateOfBirth", (student.PersonInfo().Demographics().StateOfBirth()))
 	ret.SetProperty("CountryOfBirth", (student.PersonInfo().Demographics().CountryOfBirth()))
-	for _, n := range student.PersonInfo().Demographics().CountriesOfCitizenship().ToSlice() {
-		ret.CountriesOfCitizenship().Append(*n)
-	}
-	n1 := student.PersonInfo().Demographics().VisaSubClass()
-	if n1 != nil && len(*n1) != 0 {
-		ret.VisaStatus().SetProperty("Code", (n1))
-		ret.VisaStatus().SetProperty("VisaExpiryDate", strconv.Itoa(time.Now().Year()+1)+"-07-30")
-		ret.VisaStatus().SetProperty("ATEExpiryDate", strconv.Itoa(time.Now().Year()-1)+"-07-30")
-		ret.VisaStatus().SetProperty("ATEStartDate", strconv.Itoa(time.Now().Year()-2)+"-07-30")
+	ret.SetProperty("AustralianCitizenship", create_boolean())
+	if *ret.AustralianCitizenship() == ((sifxml.Bool)(true)) {
+		n1 := student.PersonInfo().Demographics().VisaSubClass()
+		if n1 != nil && len(*n1) != 0 {
+			ret.VisaStatus().SetProperty("Code", (n1))
+			ret.VisaStatus().SetProperty("VisaExpiryDate", strconv.Itoa(time.Now().Year()+1)+"-07-30")
+			ret.VisaStatus().SetProperty("ATEExpiryDate", strconv.Itoa(time.Now().Year()-1)+"-07-30")
+			ret.VisaStatus().SetProperty("ATEStartDate", strconv.Itoa(time.Now().Year()-2)+"-07-30")
+		}
 	}
 	ret.SetProperty("IndigenousStatus", (student.PersonInfo().Demographics().IndigenousStatus()))
-	ret.SetProperty("LBOTE", (student.PersonInfo().Demographics().LBOTE()))
+	ret.SetProperty("LBOTE", sifxml.Bool(*(student.PersonInfo().Demographics().LBOTE()) == sifxml.AUCodeSetsYesOrNoCategoryType("Y")))
 	ret.YearLevel().SetProperty("Code", student.MostRecent().YearLevel().Code())
 	ret.DepartureSchool().SetProperty("ACARAId", departureschool.ACARAId())
-	ret.DepartureSchool().SetProperty("CommonwealthId", departureschool.CommonwealthId())
 	ret.DepartureSchool().SetProperty("Name", departureschool.SchoolName())
 	ret.DepartureSchool().SetProperty("City", departureschool.AddressList().Last().City())
+	ret.DepartureSchool().SetProperty("State", departureschool.AddressList().Last().StateProvince())
+	ret.DepartureSchool().SetProperty("Sector", departureschool.SchoolSector())
+	if *departureschool.System() != sifxml.AUCodeSetsSchoolSystemType("") {
+		ret.DepartureSchool().SetProperty("System", departureschool.System())
+	}
+	ret.DepartureSchool().SetProperty("StartedAtSchoolDate", strconv.Itoa(time.Now().Year()-rand.Intn(3))+"-02-01")
+	ret.DepartureSchool().SetProperty("ExitDate", strconv.Itoa(time.Now().Year())+"-06-30")
 	ret.DepartureSchool().SetProperty("SchoolContactList", departureschool.SchoolContactList())
 	ret.ArrivalSchool().SetProperty("ACARAId", arrivalschool.ACARAId())
-	ret.ArrivalSchool().SetProperty("CommonwealthId", arrivalschool.CommonwealthId())
 	ret.ArrivalSchool().SetProperty("Name", arrivalschool.SchoolName())
 	ret.ArrivalSchool().SetProperty("City", arrivalschool.AddressList().Last().City())
-	if rand.Float64() < 0.2 {
+	if rand.Float64() < 0.4 {
 		ret.PreviousSchoolList().AddNew()
 		ret.PreviousSchoolList().Last().SetProperty("ACARAId", previousschool.ACARAId())
-		ret.PreviousSchoolList().Last().SetProperty("CommonwealthId", previousschool.CommonwealthId())
 		ret.PreviousSchoolList().Last().SetProperty("Name", previousschool.SchoolName())
 		ret.PreviousSchoolList().Last().SetProperty("City", previousschool.AddressList().Last().City())
+		ret.PreviousSchoolList().Last().SetProperty("State", previousschool.AddressList().Last().StateProvince())
+		ret.PreviousSchoolList().Last().SetProperty("Sector", previousschool.SchoolSector())
+		if *previousschool.System() != sifxml.AUCodeSetsSchoolSystemType("") {
+			ret.PreviousSchoolList().Last().SetProperty("System", previousschool.System())
+		}
+		ret.PreviousSchoolList().Last().SetProperty("ExitReason", "got bored")
+	}
+	if rand.Float64() < 0.2 {
+		ret.PreviousSchoolList().AddNew()
+		ret.PreviousSchoolList().Last().SetProperty("ACARAId", previousschool2.ACARAId())
+		ret.PreviousSchoolList().Last().SetProperty("Name", previousschool2.SchoolName())
+		ret.PreviousSchoolList().Last().SetProperty("City", previousschool2.AddressList().Last().City())
+		ret.PreviousSchoolList().Last().SetProperty("State", previousschool2.AddressList().Last().StateProvince())
+		ret.PreviousSchoolList().Last().SetProperty("Sector", previousschool2.SchoolSector())
+		if *previousschool2.System() != sifxml.AUCodeSetsSchoolSystemType("") {
+			ret.PreviousSchoolList().Last().SetProperty("System", previousschool2.System())
+		}
+		ret.PreviousSchoolList().Last().SetProperty("ExitReason", "got bored")
 	}
 	ret.SetProperty("FollowupRequest", create_boolean())
 	ret.SetProperty("ChildSubjectToOrders", create_boolean())
 	ret.SetProperty("Attendance", create_boolean())
+	ret.SetProperty("Healthcare", create_boolean())
+	ret.SetProperty("Attendance", create_boolean())
+	ret.SetProperty("DisciplinaryAbsences", create_boolean())
+	ret.SetProperty("InterestTalents", randomStringFromSlice([]string{"Needlepoint", "Model Trains", "Amateur Theatrics"}))
+	ret.SetProperty("IndividualBehaviourManagementPlan", create_boolean())
+	ret.SupportNeeds().SetProperty("NegotiatedCurriculumPlan", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.SupportNeeds().SetProperty("AdjustedEducationProgram", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.SupportNeeds().SetProperty("CareerGuidanceFileHeld", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.SupportNeeds().SetProperty("SchoolCounsellorFileHeld", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.SupportNeeds().SetProperty("OtherLearningSupport", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	if *ret.SupportNeeds().OtherLearningSupport() == sifxml.AUCodeSetsYesOrNoCategoryType("Y") {
+		ret.SupportNeeds().SetProperty("OtherLearningSupportText", "General support")
+	}
+	ret.SupportNeeds().SetProperty("AcceleratedProgram", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.SupportNeeds().SetProperty("YoungCarersRole", threshold_rand_strings([]float64{0.8, 0}, []string{"N", "Y"}))
+	ret.SetProperty("LatestReportAvailable", create_boolean())
+	ret.SetProperty("Consent", create_boolean())
+	if rand.Float64() < 0.3 {
+		ret.SetProperty("AdditionalNotes", randomStringFromSlice([]string{"Needlepoint", "Model Trains", "Amateur Theatrics"}))
+	}
 	if rand.Float64() < 0.2 {
 		ret.NCCDList().AddNew()
 		ret.NCCDList().Last().SetProperty("LevelOfAdjustment", randomStringFromSlice([]string{"Extensive", "QDTP", "Substantial", "Supplementary"}))
@@ -322,7 +369,7 @@ func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *si
 		ret.StudentGradeList().AddNew()
 		ret.StudentGradeList().Last().SetProperty("Subject", s)
 		ret.StudentGradeList().Last().LearningArea().SetProperty("ACStrand", fmt.Sprintf("%s", s[0:1]))
-		ret.StudentGradeList().Last().Grade().SetProperty("Letter", randomStringFromSlice([]string{"A", "B", "C", "D", "E", "F"}))
+		ret.StudentGradeList().Last().Grade().SetProperty("ProgressLevel", randomStringFromSlice([]string{"BelowLevel", "AtLevel", "AboveLevel"}))
 	}
 	yrlvl, _ := strconv.Atoi((string)(*student.MostRecent().YearLevel().Code()))
 	if yrlvl > 3 {
@@ -355,6 +402,10 @@ func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *si
 			}
 		}
 	}
+	ret.STDNAttachmentList().AddNew()
+	ret.STDNAttachmentList().Last().SetProperty("FileName", "doc.txt")
+	ret.STDNAttachmentList().Last().SetProperty("Field", threshold_rand_strings([]float64{0.8, 0.6, 0.4, 0.2, 0}, []string{"Attendance", "Healthcare", "DisciplinaryAbsences", "SupportNeeds", "InterestTalents"}))
+	ret.STDNAttachmentList().Last().SetProperty("Description", "Further details")
 	return ret
 
 }

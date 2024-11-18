@@ -257,8 +257,8 @@ func MakeUsecaseObjects(usecases MakeUsecases, counts MakeUsecaseCounts, appendm
 		if appendmode {
 			ret = appendUseCaseObjects(ret, add)
 		} else {
-			/*printAllJSON(add)*/
-			printAll(add)
+			printAllJSON(add)
+			/*printAll(add)*/
 		}
 	}
 	if usecases.AGCollections {
@@ -271,6 +271,9 @@ func MakeUsecaseObjects(usecases MakeUsecases, counts MakeUsecaseCounts, appendm
 		} else {
 			printAll(add)
 		}
+	}
+	if appendmode {
+		printAllJSON(ret)
 	}
 	return ret
 }

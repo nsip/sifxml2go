@@ -1207,6 +1207,7 @@ type gradetype struct {
         Percentage *Float `xml:"Percentage,omitempty" json:"Percentage,omitempty"`
       Numeric *Float `xml:"Numeric,omitempty" json:"Numeric,omitempty"`
       Letter *String `xml:"Letter,omitempty" json:"Letter,omitempty"`
+      ProgressLevel *AUCodeSetsGradeProgressLevelType `xml:"ProgressLevel,omitempty" json:"ProgressLevel,omitempty"`
       Narrative *String `xml:"Narrative,omitempty" json:"Narrative,omitempty"`
       MarkInfoRefId *String `xml:"MarkInfoRefId,omitempty" json:"MarkInfoRefId,omitempty"`
       
@@ -4160,7 +4161,6 @@ type signatorytype struct {
 type arrivalschooltype struct {
 
         ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
-      CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
       Name *String `xml:"Name,omitempty" json:"Name,omitempty"`
       City *String `xml:"City,omitempty" json:"City,omitempty"`
       
@@ -4173,9 +4173,13 @@ type arrivalschooltype struct {
 type departureschooltype struct {
 
         ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
-      CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
       Name *String `xml:"Name" json:"Name"`
       City *String `xml:"City" json:"City"`
+      State *StateProvinceType `xml:"State,omitempty" json:"State,omitempty"`
+      Sector *AUCodeSetsSchoolSectorCodeType `xml:"Sector,omitempty" json:"Sector,omitempty"`
+      System *AUCodeSetsSchoolSystemType `xml:"System,omitempty" json:"System,omitempty"`
+      StartedAtSchoolDate *String `xml:"StartedAtSchoolDate,omitempty" json:"StartedAtSchoolDate,omitempty"`
+      ExitDate *String `xml:"ExitDate,omitempty" json:"ExitDate,omitempty"`
       SchoolContactList *SchoolContactListType `xml:"SchoolContactList" json:"SchoolContactList"`
       
       }
@@ -4197,9 +4201,12 @@ type previousschoollisttype struct {
 type previousschooltype struct {
 
         ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
-      CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
       Name *String `xml:"Name" json:"Name"`
       City *String `xml:"City" json:"City"`
+      State *StateProvinceType `xml:"State,omitempty" json:"State,omitempty"`
+      Sector *AUCodeSetsSchoolSectorCodeType `xml:"Sector,omitempty" json:"Sector,omitempty"`
+      System *AUCodeSetsSchoolSystemType `xml:"System,omitempty" json:"System,omitempty"`
+      ExitReason *String `xml:"ExitReason,omitempty" json:"ExitReason,omitempty"`
       
       }
     
@@ -4246,6 +4253,23 @@ type naplanscorewithyearstype struct {
       DomainScore *DomainScoreSDTNType `xml:"DomainScore,omitempty" json:"DomainScore,omitempty"`
       TestLevel *YearLevelType `xml:"TestLevel,omitempty" json:"TestLevel,omitempty"`
       TestYear *SchoolYearType `xml:"TestYear,omitempty" json:"TestYear,omitempty"`
+      
+      }
+    
+    type STDNSupportNeedsType struct {
+  stdnsupportneedstype 
+}
+
+type stdnsupportneedstype struct {
+
+        NegotiatedCurriculumPlan *AUCodeSetsYesOrNoCategoryType `xml:"NegotiatedCurriculumPlan,omitempty" json:"NegotiatedCurriculumPlan,omitempty"`
+      AdjustedEducationProgram *AUCodeSetsYesOrNoCategoryType `xml:"AdjustedEducationProgram,omitempty" json:"AdjustedEducationProgram,omitempty"`
+      CareerGuidanceFileHeld *AUCodeSetsYesOrNoCategoryType `xml:"CareerGuidanceFileHeld,omitempty" json:"CareerGuidanceFileHeld,omitempty"`
+      SchoolCounsellorFileHeld *AUCodeSetsYesOrNoCategoryType `xml:"SchoolCounsellorFileHeld,omitempty" json:"SchoolCounsellorFileHeld,omitempty"`
+      OtherLearningSupport *AUCodeSetsYesOrNoCategoryType `xml:"OtherLearningSupport,omitempty" json:"OtherLearningSupport,omitempty"`
+      OtherLearningSupportText *String `xml:"OtherLearningSupportText,omitempty" json:"OtherLearningSupportText,omitempty"`
+      AcceleratedProgram *AUCodeSetsYesOrNoCategoryType `xml:"AcceleratedProgram,omitempty" json:"AcceleratedProgram,omitempty"`
+      YoungCarersRole *AUCodeSetsYesOrNoCategoryType `xml:"YoungCarersRole,omitempty" json:"YoungCarersRole,omitempty"`
       
       }
     
@@ -4400,6 +4424,28 @@ type calculationruletype struct {
           Type *String `xml:"Type,attr" json:"Type"`
       
         Value *String `xml:",chardata" json:"value"`
+      }
+    
+    type STDNAttachmentListType struct {
+  stdnattachmentlisttype 
+}
+
+type stdnattachmentlisttype struct {
+
+        STDNAttachment []STDNAttachmentType `xml:"STDNAttachment" json:"STDNAttachment"`
+      
+      }
+    
+    type STDNAttachmentType struct {
+  stdnattachmenttype 
+}
+
+type stdnattachmenttype struct {
+
+        FileName *String `xml:"FileName" json:"FileName"`
+      Field *String `xml:"Field,omitempty" json:"Field,omitempty"`
+      Description *String `xml:"Description,omitempty" json:"Description,omitempty"`
+      
       }
     
 type PersonInvolvementType_PersonRefId struct {

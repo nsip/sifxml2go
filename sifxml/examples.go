@@ -175,7 +175,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0875 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0824 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -1002,7 +1002,7 @@ var test_SchoolInfo = `    <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A16
       <IndependentSchool>Y</IndependentSchool>
       <NonGovSystemicStatus>S</NonGovSystemicStatus>
       <System>0003</System>
-      <ReligiousAffiliation>2171</ReligiousAffiliation>
+      <ReligiousAffiliation>2525</ReligiousAffiliation>
         <SchoolGeographicLocation>10</SchoolGeographicLocation>
         <LocalGovernmentArea>Cardinia</LocalGovernmentArea>
         <JurisdictionLowerHouse>Unknown</JurisdictionLowerHouse>
@@ -1176,7 +1176,7 @@ var test_StaffPersonal = `    <StaffPersonal RefId="D3E34F41-9D75-101A-8C3D-00AA
             <Code>1671</Code>
           </DwellingArrangement>
           <Religion>
-            <Code>2013</Code>
+            <Code>2513</Code>
           </Religion>
           <ReligiousEventList>
             <ReligiousEvent>
@@ -1575,7 +1575,7 @@ var test_StudentContactPersonalExample = `    <StudentContactPersonal RefId='7C8
             <Code>1671</Code>
           </DwellingArrangement>
           <Religion>
-            <Code>2013</Code>
+            <Code>2513</Code>
           </Religion>
           <ReligiousEventList>
             <ReligiousEvent>
@@ -1735,7 +1735,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0545 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0017 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -1803,7 +1803,7 @@ var test_example0545 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E
 						<Code>1671</Code>
 					</DwellingArrangement>
 					<Religion>
-						<Code>2013</Code>
+						<Code>2513</Code>
 					</Religion>
 					<ReligiousEventList>
 						<ReligiousEvent>
@@ -4343,7 +4343,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0329 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0947 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>
@@ -4547,11 +4547,10 @@ var test_StudentAttendanceCollectionExample2 = `<StudentAttendanceCollection Ref
 </StudentAttendanceCollection>
 `
 var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34B35-9D75-101A-8C3D-00AA001A1654">
+  <RequestID>SDT000001</RequestID>
   <Name Type="LGL">
     <FamilyName>Smith</FamilyName>
     <GivenName>Fred</GivenName>
-    <MiddleName>Ebenezer</MiddleName>
-	<PreferredFamilyName>Smith</PreferredFamilyName>
 	<PreferredGivenName>Freddy</PreferredGivenName>
   </Name>
   <Gender>1</Gender>
@@ -4559,19 +4558,21 @@ var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34
   <PlaceOfBirth>Clayton</PlaceOfBirth>
   <StateOfBirth>VIC</StateOfBirth>
   <CountryOfBirth>1101</CountryOfBirth>
- <CountriesOfCitizenship>
-    <CountryOfCitizenship>8104</CountryOfCitizenship>
-    <CountryOfCitizenship>1101</CountryOfCitizenship>
-  </CountriesOfCitizenship>
+ <AustralianCitizenship>false</AustralianCitizenship>
   <ArrivalSchool>
-    <CommonwealthId>12345</CommonwealthId>
+    <ACARAId>12345</ACARAId>
 	<Name>Buchanan Secondary College</Name>
   </ArrivalSchool>
   <DepartureSchool>
     <ACARAId>30000</ACARAId>
 	<Name>Lincoln Secondary College</Name>
 	<City>Lincoln</City>
-  <SchoolContactList>
+	<State>WA</State>
+	<Sector>NG</Sector>
+	<System>0001</System>
+    <StartedAtSchoolDate>2007-03-01</StartedAtSchoolDate>
+    <ExitDate>2009-10-01</ExitDate>
+ <SchoolContactList>
     <SchoolContact>
       <PublishInDirectory>Y</PublishInDirectory>
       <ContactInfo>
@@ -4618,11 +4619,16 @@ var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34
     <ACARAId>30001</ACARAId>
 	<Name>Lincoln Primary School</Name>
 	<City>Lincolnville</City>
+	<State>WA</State>
+	<Sector>Gov</Sector>
   </PreviousSchool> 
   <PreviousSchool>
     <ACARAId>30002</ACARAId>
 	<Name>Buchanan Primary School</Name>
 	<City>Lincolnville</City>
+	<State>WA</State>
+	<Sector>NG</Sector>
+	<System>0001</System>
   </PreviousSchool> 
   </PreviousSchoolList>
   <NAPLANScoreList>
@@ -4678,26 +4684,34 @@ var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34
  <FollowupRequest>true</FollowupRequest>
  <ChildSubjectToOrders>true</ChildSubjectToOrders>
  <Attendance>false</Attendance>
+ <Healthcare>true</Healthcare>
+ <InterestTalents>Plays the viola da gamba</InterestTalents>
+ <DisciplinaryAbsences>false</DisciplinaryAbsences>
+ <IndividualBehaviourManagementPlan>false</IndividualBehaviourManagementPlan>
+ <SupportNeeds>
+   <NegotiatedCurriculumPlan>N</NegotiatedCurriculumPlan>
+   <AdjustedEducationProgram>N</AdjustedEducationProgram>
+   <CareerGuidanceFileHeld>U</CareerGuidanceFileHeld>
+   <SchoolCounsellorFileHeld>N</SchoolCounsellorFileHeld>
+   <OtherLearningSupport>Y</OtherLearningSupport>
+   <OtherLearningSupportText>Student needs online tutoring</OtherLearningSupportText>
+   <AcceleratedProgram>N</AcceleratedProgram>
+   <YoungCarersRole>N</YoungCarersRole>
+ </SupportNeeds>
  <NationalUniqueStudentIdentifier>0001001</NationalUniqueStudentIdentifier>
  <YearLevel>
     <Code>10</Code>
   </YearLevel>
   <IndigenousStatus>1</IndigenousStatus>
-  <LBOTE>Y</LBOTE>
+  <LBOTE>true</LBOTE>
 <VisaStatus>
     <Code>101</Code>
 	<VisaExpiryDate>2025-12-31</VisaExpiryDate>
  </VisaStatus>
    <OtherNames>
-    <Name Type="AKA">
-      <FamilyName>Anderson</FamilyName>
-      <GivenName>Samuel</GivenName>
-      <FullName>Samuel Anderson</FullName>
-    </Name>
-    <Name Type="PRF">
+    <Name Type="PRV">
       <FamilyName>Rowinski</FamilyName>
       <GivenName>Sam</GivenName>
-      <FullName>Sam Rowinski</FullName>
     </Name>
   </OtherNames>
   <EducationalAssessmentList>
@@ -4718,8 +4732,7 @@ var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34
 	  <SubjectArea><Code>Australian History</Code></SubjectArea>
 	  </LearningArea>
 	  <Grade>
-	    <Letter>B</Letter>
-		<Narrative>Could do better</Narrative>
+	    <ProgressLevel>AtLevel</ProgressLevel>
 	  </Grade>
 	</StudentGrade>
     <StudentGrade>
@@ -4729,11 +4742,25 @@ var test_StudentDataTransferNoteExample = `<StudentDataTransferNote RefId="D3E34
 	  <SubjectArea><Code>World History</Code></SubjectArea>
 	  </LearningArea>
 	  <Grade>
-	    <Letter>A</Letter>
-		<Narrative>Could not do better</Narrative>
+	    <ProgressLevel>BelowLevel</ProgressLevel>
 	  </Grade>
 	</StudentGrade>
   </StudentGradeList>
+  <LatestReportAvailable>true</LatestReportAvailable>
+  <AdditionalNotes>Please follow up.</AdditionalNotes>
+  <Consent>true</Consent>
+  <STDNAttachmentList>
+	<STDNAttachment>
+	  <FileName>ConsentQualifications.doc</FileName>
+	  <Field>Consent</Field>
+	  <Description>Qualified consent provided to sharing information, as detailed in document.</Description>
+	</STDNAttachment>
+	<STDNAttachment>
+	  <FileName>Hobbies.txt</FileName>
+	  <Field>InterestTalents</Field>
+	  <Description>Listing of hobbies the student has.</Description>
+	</STDNAttachment>
+  </STDNAttachmentList>
  </StudentDataTransferNote>
 `
 var test_VendorInfo = `    <VendorInfo RefId="AB3647C5-6865-4CF4-5678-DD34EF564E22">

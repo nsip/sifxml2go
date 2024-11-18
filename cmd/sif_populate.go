@@ -31,7 +31,7 @@ func main() {
 	counts := populate.MakeUsecaseCounts{Students: *studentcount, Staff: *staffcount, Schools: *schoolcount, Vendors: *vendorcount}
 	log.Printf("%+v", usecases)
 	log.Printf("%+v", counts)
-	populate.MakeUsecaseObjects(usecases, counts, false)
+	populate.MakeUsecaseObjects(usecases, counts, true)
 	/*
 		err = populate.PrintXML(ret.Schools)
 		populate.Errcheck(err)

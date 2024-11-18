@@ -9518,6 +9518,62 @@ func NewSIF_MetadataType() *SIF_MetadataType {
         }
   }
 // Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *STDNAttachmentListType) Clone() (*STDNAttachmentListType) {
+return reprint.This(t).(*STDNAttachmentListType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func STDNAttachmentListTypePointer(value interface{}) (*STDNAttachmentListType, bool) {
+switch t := value.(type) {
+        case *STDNAttachmentListType:
+                return value.(*STDNAttachmentListType), true
+        case STDNAttachmentListType:
+                v, _ := value.(STDNAttachmentListType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to STDNAttachmentListType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSTDNAttachmentListType() *STDNAttachmentListType {
+  if out, ok := STDNAttachmentListTypePointer(STDNAttachmentListType{}); !ok {
+                log.Fatalf("Could not create pointer to STDNAttachmentListType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *STDNAttachmentType) Clone() (*STDNAttachmentType) {
+return reprint.This(t).(*STDNAttachmentType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func STDNAttachmentTypePointer(value interface{}) (*STDNAttachmentType, bool) {
+switch t := value.(type) {
+        case *STDNAttachmentType:
+                return value.(*STDNAttachmentType), true
+        case STDNAttachmentType:
+                v, _ := value.(STDNAttachmentType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to STDNAttachmentType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSTDNAttachmentType() *STDNAttachmentType {
+  if out, ok := STDNAttachmentTypePointer(STDNAttachmentType{}); !ok {
+                log.Fatalf("Could not create pointer to STDNAttachmentType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
   func (t *STDNGradeListType) Clone() (*STDNGradeListType) {
 return reprint.This(t).(*STDNGradeListType)
 }
@@ -9568,6 +9624,34 @@ switch t := value.(type) {
 func NewSTDNGradeType() *STDNGradeType {
   if out, ok := STDNGradeTypePointer(STDNGradeType{}); !ok {
                 log.Fatalf("Could not create pointer to STDNGradeType\n")
+                return nil
+        } else {
+                return out
+        }
+  }
+// Performs a deep clone on the type, and is used to duplicate an element into another container (particularly if the element is itself nested)
+  func (t *STDNSupportNeedsType) Clone() (*STDNSupportNeedsType) {
+return reprint.This(t).(*STDNSupportNeedsType)
+}
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches X.
+  func STDNSupportNeedsTypePointer(value interface{}) (*STDNSupportNeedsType, bool) {
+switch t := value.(type) {
+        case *STDNSupportNeedsType:
+                return value.(*STDNSupportNeedsType), true
+        case STDNSupportNeedsType:
+                v, _ := value.(STDNSupportNeedsType)
+                return &v, true
+        default:
+                fmt.Printf("Warning: cannot resolve %T (%v) to STDNSupportNeedsType\n", t, value)
+        }
+        return nil, false
+  }
+
+// Generates a new object as a pointer to a struct
+func NewSTDNSupportNeedsType() *STDNSupportNeedsType {
+  if out, ok := STDNSupportNeedsTypePointer(STDNSupportNeedsType{}); !ok {
+                log.Fatalf("Could not create pointer to STDNSupportNeedsType\n")
                 return nil
         } else {
                 return out
@@ -21491,6 +21575,73 @@ func (t *SIF_ExtendedElementsType) Len() int {
 func (t *SIF_ExtendedElementsType) ToSlice() []*SIF_ExtendedElementsType_SIF_ExtendedElement {
   ret := make([]*SIF_ExtendedElementsType_SIF_ExtendedElement, 0)
   for _, x:= range t.SIF_ExtendedElement {
+    dup := x
+    ret = append(ret, &dup)
+  }
+  return ret
+}
+
+
+
+// Appends value to the list. Creates list if it is empty. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+  func (t *STDNAttachmentListType) Append(values ...STDNAttachmentType) *STDNAttachmentListType {
+    
+        if t == nil {
+                t, _ = STDNAttachmentListTypePointer(STDNAttachmentListType{})
+        }
+        if t.STDNAttachment == nil {
+                t.STDNAttachment = make([]STDNAttachmentType, 0)
+        }
+        for _, value := range values {
+        t.STDNAttachment = append(t.STDNAttachment, value)
+        }
+        return t
+}
+
+// Appends an empty value to the list. This value can then be populated through accessors on Last().
+func (t *STDNAttachmentListType) AddNew() *STDNAttachmentListType {
+        if t == nil {
+                t, _ = STDNAttachmentListTypePointer(STDNAttachmentListType{})
+        }
+        if t.STDNAttachment == nil {
+                t.STDNAttachment = make([]STDNAttachmentType, 0)
+        }
+        t.STDNAttachment = append(t.STDNAttachment, STDNAttachmentType{})
+        return t
+}
+
+// Retrieve the last value of the list. Calls AddNew() if the list is empty.
+func (t *STDNAttachmentListType) Last() *STDNAttachmentType {
+  if t.STDNAttachment == nil {
+    t = t.AddNew()
+    }
+        return &(t.STDNAttachment[len(t.STDNAttachment)-1])
+}
+
+// Retrieves the nth value in the list. Aborts if index is out of bounds.
+func (t *STDNAttachmentListType) Index(n int) (*STDNAttachmentType) {
+  if (n >= t.Len() || n < 0) {
+    log.Fatalf("STDNAttachmentListType.Index(): subscript %d out of range on list\n", n)
+    }
+  if t.STDNAttachment == nil {
+    t = t.AddNew()
+    }
+        return &(t.STDNAttachment[n])
+}
+
+// Length of the list.
+func (t *STDNAttachmentListType) Len() int {
+  if t.STDNAttachment == nil {
+    t = t.AddNew()
+    }
+        return len(t.STDNAttachment)
+}
+
+// Convert list object to slice
+func (t *STDNAttachmentListType) ToSlice() []*STDNAttachmentType {
+  ret := make([]*STDNAttachmentType, 0)
+  for _, x:= range t.STDNAttachment {
     dup := x
     ret = append(ret, &dup)
   }
@@ -34119,6 +34270,35 @@ switch t := value.(type) {
 
 
 // Return string value
+func (t *AUCodeSetsGradeProgressLevelType) String() string {
+  return fmt.Sprint(reflect.ValueOf(*t))
+  }
+
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches AUCodeSetsGradeProgressLevelType. In the case of aliased types, accepts primitive values and converts them to the required alias.
+func AUCodeSetsGradeProgressLevelTypePointer(value interface{}) (*AUCodeSetsGradeProgressLevelType, bool) {
+switch t := value.(type) {
+ 	case *AUCodeSetsGradeProgressLevelType:
+ 		return value.(*AUCodeSetsGradeProgressLevelType), true
+        case AUCodeSetsGradeProgressLevelType:
+ 		v, _ := value.(AUCodeSetsGradeProgressLevelType)
+ 		return &v, true
+ 	case *string:
+ 		vstr, _ := value.(*string)
+ 		v := AUCodeSetsGradeProgressLevelType(*vstr)
+ 		return &v, true
+ 	case string:
+ 		vstr, _ := value.(string)
+ 		v := AUCodeSetsGradeProgressLevelType(vstr)
+ 		return &v, true
+ 	default:
+ 		fmt.Printf("Warning: cannot resolve %T (%v) to AUCodeSetsGradeProgressLevelType\n", t, value)
+ 	}
+ 	return nil, false
+  }
+
+
+// Return string value
 func (t *AUCodeSetsGroupCategoryCodeType) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
@@ -40924,8 +41104,6 @@ func (n *ArrivalSchoolType) Unset(key string) *ArrivalSchoolType {
    n.arrivalschooltype.ACARAId = nil
   case "City":
    n.arrivalschooltype.City = nil
-  case "CommonwealthId":
-   n.arrivalschooltype.CommonwealthId = nil
   case "Name":
    n.arrivalschooltype.Name = nil
         default:
@@ -40960,12 +41138,6 @@ func (n *ArrivalSchoolType) SetProperty(key string, value interface{}) *ArrivalS
     
     if v, ok:= StringPointer(value); ok {
       n.arrivalschooltype.City = ((*String)(v))
-      }
-    case "CommonwealthId":
-    value = fmt.Sprintf("%s", value)
-    
-    if v, ok:= StringPointer(value); ok {
-      n.arrivalschooltype.CommonwealthId = ((*String)(v))
       }
     case "Name":
     value = fmt.Sprintf("%s", value)
@@ -41004,19 +41176,6 @@ func (n *ArrivalSchoolType) SetProperty(key string, value interface{}) *ArrivalS
 // Returns whether the element value for City is nil in the container ArrivalSchoolType.
   func (s *ArrivalSchoolType) City_IsNil() bool {
     return s.arrivalschooltype.City == nil
-    }
-// Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *ArrivalSchoolType) CommonwealthId() *String {
-    if s.arrivalschooltype.CommonwealthId == nil {
-    if v, ok:= StringPointer(""); ok {
-      s.arrivalschooltype.CommonwealthId = ((*String)(v))
-      }
-      }
-      return s.arrivalschooltype.CommonwealthId
-    }
-// Returns whether the element value for CommonwealthId is nil in the container ArrivalSchoolType.
-  func (s *ArrivalSchoolType) CommonwealthId_IsNil() bool {
-    return s.arrivalschooltype.CommonwealthId == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *ArrivalSchoolType) Name() *String {
@@ -48052,12 +48211,20 @@ func (n *DepartureSchoolType) Unset(key string) *DepartureSchoolType {
    n.departureschooltype.ACARAId = nil
   case "City":
    n.departureschooltype.City = nil
-  case "CommonwealthId":
-   n.departureschooltype.CommonwealthId = nil
+  case "ExitDate":
+   n.departureschooltype.ExitDate = nil
   case "Name":
    n.departureschooltype.Name = nil
   case "SchoolContactList":
    n.departureschooltype.SchoolContactList = nil
+  case "Sector":
+   n.departureschooltype.Sector = nil
+  case "StartedAtSchoolDate":
+   n.departureschooltype.StartedAtSchoolDate = nil
+  case "State":
+   n.departureschooltype.State = nil
+  case "System":
+   n.departureschooltype.System = nil
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "DepartureSchoolType")
         }
@@ -48091,11 +48258,11 @@ func (n *DepartureSchoolType) SetProperty(key string, value interface{}) *Depart
     if v, ok:= StringPointer(value); ok {
       n.departureschooltype.City = ((*String)(v))
       }
-    case "CommonwealthId":
+    case "ExitDate":
     value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
-      n.departureschooltype.CommonwealthId = ((*String)(v))
+      n.departureschooltype.ExitDate = ((*String)(v))
       }
     case "Name":
     value = fmt.Sprintf("%s", value)
@@ -48106,6 +48273,36 @@ func (n *DepartureSchoolType) SetProperty(key string, value interface{}) *Depart
     case "SchoolContactList":
     if v, ok:= SchoolContactListTypePointer(value); ok {
       n.departureschooltype.SchoolContactList = v
+      }
+    case "Sector":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsSchoolSectorCodeType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSectorCodeType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.departureschooltype.Sector = ((*AUCodeSetsSchoolSectorCodeType)(v))
+      }
+    case "StartedAtSchoolDate":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.departureschooltype.StartedAtSchoolDate = ((*String)(v))
+      }
+    case "State":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.departureschooltype.State = ((*StateProvinceType)(v))
+      }
+    case "System":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsSchoolSystemType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSystemType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.departureschooltype.System = ((*AUCodeSetsSchoolSystemType)(v))
       }
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "DepartureSchoolType")
@@ -48140,17 +48337,17 @@ func (n *DepartureSchoolType) SetProperty(key string, value interface{}) *Depart
     return s.departureschooltype.City == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *DepartureSchoolType) CommonwealthId() *String {
-    if s.departureschooltype.CommonwealthId == nil {
+  func (s *DepartureSchoolType) ExitDate() *String {
+    if s.departureschooltype.ExitDate == nil {
     if v, ok:= StringPointer(""); ok {
-      s.departureschooltype.CommonwealthId = ((*String)(v))
+      s.departureschooltype.ExitDate = ((*String)(v))
       }
       }
-      return s.departureschooltype.CommonwealthId
+      return s.departureschooltype.ExitDate
     }
-// Returns whether the element value for CommonwealthId is nil in the container DepartureSchoolType.
-  func (s *DepartureSchoolType) CommonwealthId_IsNil() bool {
-    return s.departureschooltype.CommonwealthId == nil
+// Returns whether the element value for ExitDate is nil in the container DepartureSchoolType.
+  func (s *DepartureSchoolType) ExitDate_IsNil() bool {
+    return s.departureschooltype.ExitDate == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *DepartureSchoolType) Name() *String {
@@ -48177,6 +48374,58 @@ func (n *DepartureSchoolType) SetProperty(key string, value interface{}) *Depart
 // Returns whether the element value for SchoolContactList is nil in the container DepartureSchoolType.
   func (s *DepartureSchoolType) SchoolContactList_IsNil() bool {
     return s.departureschooltype.SchoolContactList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DepartureSchoolType) Sector() *AUCodeSetsSchoolSectorCodeType {
+    if s.departureschooltype.Sector == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.departureschooltype.Sector = ((*AUCodeSetsSchoolSectorCodeType)(v))
+      }
+      }
+      return s.departureschooltype.Sector
+    }
+// Returns whether the element value for Sector is nil in the container DepartureSchoolType.
+  func (s *DepartureSchoolType) Sector_IsNil() bool {
+    return s.departureschooltype.Sector == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DepartureSchoolType) StartedAtSchoolDate() *String {
+    if s.departureschooltype.StartedAtSchoolDate == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.departureschooltype.StartedAtSchoolDate = ((*String)(v))
+      }
+      }
+      return s.departureschooltype.StartedAtSchoolDate
+    }
+// Returns whether the element value for StartedAtSchoolDate is nil in the container DepartureSchoolType.
+  func (s *DepartureSchoolType) StartedAtSchoolDate_IsNil() bool {
+    return s.departureschooltype.StartedAtSchoolDate == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DepartureSchoolType) State() *StateProvinceType {
+    if s.departureschooltype.State == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.departureschooltype.State = ((*StateProvinceType)(v))
+      }
+      }
+      return s.departureschooltype.State
+    }
+// Returns whether the element value for State is nil in the container DepartureSchoolType.
+  func (s *DepartureSchoolType) State_IsNil() bool {
+    return s.departureschooltype.State == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *DepartureSchoolType) System() *AUCodeSetsSchoolSystemType {
+    if s.departureschooltype.System == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.departureschooltype.System = ((*AUCodeSetsSchoolSystemType)(v))
+      }
+      }
+      return s.departureschooltype.System
+    }
+// Returns whether the element value for System is nil in the container DepartureSchoolType.
+  func (s *DepartureSchoolType) System_IsNil() bool {
+    return s.departureschooltype.System == nil
     }
 
 // Set the value of a property to nil
@@ -52086,6 +52335,8 @@ func (n *GradeType) Unset(key string) *GradeType {
    n.gradetype.Numeric = nil
   case "Percentage":
    n.gradetype.Percentage = nil
+  case "ProgressLevel":
+   n.gradetype.ProgressLevel = nil
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "GradeType")
         }
@@ -52134,6 +52385,15 @@ func (n *GradeType) SetProperty(key string, value interface{}) *GradeType {
     
     if v, ok:= FloatPointer(value); ok {
       n.gradetype.Percentage = ((*Float)(v))
+      }
+    case "ProgressLevel":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsGradeProgressLevelType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsGradeProgressLevelType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.gradetype.ProgressLevel = ((*AUCodeSetsGradeProgressLevelType)(v))
       }
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "GradeType")
@@ -52205,6 +52465,19 @@ func (n *GradeType) SetProperty(key string, value interface{}) *GradeType {
 // Returns whether the element value for Percentage is nil in the container GradeType.
   func (s *GradeType) Percentage_IsNil() bool {
     return s.gradetype.Percentage == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *GradeType) ProgressLevel() *AUCodeSetsGradeProgressLevelType {
+    if s.gradetype.ProgressLevel == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.gradetype.ProgressLevel = ((*AUCodeSetsGradeProgressLevelType)(v))
+      }
+      }
+      return s.gradetype.ProgressLevel
+    }
+// Returns whether the element value for ProgressLevel is nil in the container GradeType.
+  func (s *GradeType) ProgressLevel_IsNil() bool {
+    return s.gradetype.ProgressLevel == nil
     }
 
 // Set the value of a property to nil
@@ -67844,10 +68117,16 @@ func (n *PreviousSchoolType) Unset(key string) *PreviousSchoolType {
    n.previousschooltype.ACARAId = nil
   case "City":
    n.previousschooltype.City = nil
-  case "CommonwealthId":
-   n.previousschooltype.CommonwealthId = nil
+  case "ExitReason":
+   n.previousschooltype.ExitReason = nil
   case "Name":
    n.previousschooltype.Name = nil
+  case "Sector":
+   n.previousschooltype.Sector = nil
+  case "State":
+   n.previousschooltype.State = nil
+  case "System":
+   n.previousschooltype.System = nil
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "PreviousSchoolType")
         }
@@ -67881,17 +68160,41 @@ func (n *PreviousSchoolType) SetProperty(key string, value interface{}) *Previou
     if v, ok:= StringPointer(value); ok {
       n.previousschooltype.City = ((*String)(v))
       }
-    case "CommonwealthId":
+    case "ExitReason":
     value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
-      n.previousschooltype.CommonwealthId = ((*String)(v))
+      n.previousschooltype.ExitReason = ((*String)(v))
       }
     case "Name":
     value = fmt.Sprintf("%s", value)
     
     if v, ok:= StringPointer(value); ok {
       n.previousschooltype.Name = ((*String)(v))
+      }
+    case "Sector":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsSchoolSectorCodeType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSectorCodeType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.previousschooltype.Sector = ((*AUCodeSetsSchoolSectorCodeType)(v))
+      }
+    case "State":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.previousschooltype.State = ((*StateProvinceType)(v))
+      }
+    case "System":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsSchoolSystemType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsSchoolSystemType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.previousschooltype.System = ((*AUCodeSetsSchoolSystemType)(v))
       }
         default:
           log.Fatalf("%s is not a valid element name in %s\n", key, "PreviousSchoolType")
@@ -67926,17 +68229,17 @@ func (n *PreviousSchoolType) SetProperty(key string, value interface{}) *Previou
     return s.previousschooltype.City == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *PreviousSchoolType) CommonwealthId() *String {
-    if s.previousschooltype.CommonwealthId == nil {
+  func (s *PreviousSchoolType) ExitReason() *String {
+    if s.previousschooltype.ExitReason == nil {
     if v, ok:= StringPointer(""); ok {
-      s.previousschooltype.CommonwealthId = ((*String)(v))
+      s.previousschooltype.ExitReason = ((*String)(v))
       }
       }
-      return s.previousschooltype.CommonwealthId
+      return s.previousschooltype.ExitReason
     }
-// Returns whether the element value for CommonwealthId is nil in the container PreviousSchoolType.
-  func (s *PreviousSchoolType) CommonwealthId_IsNil() bool {
-    return s.previousschooltype.CommonwealthId == nil
+// Returns whether the element value for ExitReason is nil in the container PreviousSchoolType.
+  func (s *PreviousSchoolType) ExitReason_IsNil() bool {
+    return s.previousschooltype.ExitReason == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *PreviousSchoolType) Name() *String {
@@ -67950,6 +68253,45 @@ func (n *PreviousSchoolType) SetProperty(key string, value interface{}) *Previou
 // Returns whether the element value for Name is nil in the container PreviousSchoolType.
   func (s *PreviousSchoolType) Name_IsNil() bool {
     return s.previousschooltype.Name == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PreviousSchoolType) Sector() *AUCodeSetsSchoolSectorCodeType {
+    if s.previousschooltype.Sector == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.previousschooltype.Sector = ((*AUCodeSetsSchoolSectorCodeType)(v))
+      }
+      }
+      return s.previousschooltype.Sector
+    }
+// Returns whether the element value for Sector is nil in the container PreviousSchoolType.
+  func (s *PreviousSchoolType) Sector_IsNil() bool {
+    return s.previousschooltype.Sector == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PreviousSchoolType) State() *StateProvinceType {
+    if s.previousschooltype.State == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.previousschooltype.State = ((*StateProvinceType)(v))
+      }
+      }
+      return s.previousschooltype.State
+    }
+// Returns whether the element value for State is nil in the container PreviousSchoolType.
+  func (s *PreviousSchoolType) State_IsNil() bool {
+    return s.previousschooltype.State == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *PreviousSchoolType) System() *AUCodeSetsSchoolSystemType {
+    if s.previousschooltype.System == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.previousschooltype.System = ((*AUCodeSetsSchoolSystemType)(v))
+      }
+      }
+      return s.previousschooltype.System
+    }
+// Returns whether the element value for System is nil in the container PreviousSchoolType.
+  func (s *PreviousSchoolType) System_IsNil() bool {
+    return s.previousschooltype.System == nil
     }
 
 // Set the value of a property to nil
@@ -70681,6 +71023,100 @@ func (n *SIF_MetadataType) SetProperty(key string, value interface{}) *SIF_Metad
     }
 
 // Set the value of a property to nil
+func (n *STDNAttachmentType) Unset(key string) *STDNAttachmentType {
+        switch key {
+  case "Description":
+   n.stdnattachmenttype.Description = nil
+  case "Field":
+   n.stdnattachmenttype.Field = nil
+  case "FileName":
+   n.stdnattachmenttype.FileName = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "STDNAttachmentType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *STDNAttachmentType) SetProperties(props ...Prop) *STDNAttachmentType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *STDNAttachmentType) SetProperty(key string, value interface{}) *STDNAttachmentType {
+        if n == nil {
+                n, _ = STDNAttachmentTypePointer(STDNAttachmentType{})
+        }
+        switch key {
+    case "Description":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.stdnattachmenttype.Description = ((*String)(v))
+      }
+    case "Field":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.stdnattachmenttype.Field = ((*String)(v))
+      }
+    case "FileName":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.stdnattachmenttype.FileName = ((*String)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "STDNAttachmentType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNAttachmentType) Description() *String {
+    if s.stdnattachmenttype.Description == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnattachmenttype.Description = ((*String)(v))
+      }
+      }
+      return s.stdnattachmenttype.Description
+    }
+// Returns whether the element value for Description is nil in the container STDNAttachmentType.
+  func (s *STDNAttachmentType) Description_IsNil() bool {
+    return s.stdnattachmenttype.Description == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNAttachmentType) Field() *String {
+    if s.stdnattachmenttype.Field == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnattachmenttype.Field = ((*String)(v))
+      }
+      }
+      return s.stdnattachmenttype.Field
+    }
+// Returns whether the element value for Field is nil in the container STDNAttachmentType.
+  func (s *STDNAttachmentType) Field_IsNil() bool {
+    return s.stdnattachmenttype.Field == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNAttachmentType) FileName() *String {
+    if s.stdnattachmenttype.FileName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnattachmenttype.FileName = ((*String)(v))
+      }
+      }
+      return s.stdnattachmenttype.FileName
+    }
+// Returns whether the element value for FileName is nil in the container STDNAttachmentType.
+  func (s *STDNAttachmentType) FileName_IsNil() bool {
+    return s.stdnattachmenttype.FileName == nil
+    }
+
+// Set the value of a property to nil
 func (n *STDNGradeType) Unset(key string) *STDNGradeType {
         switch key {
   case "Grade":
@@ -70768,6 +71204,226 @@ func (n *STDNGradeType) SetProperty(key string, value interface{}) *STDNGradeTyp
 // Returns whether the element value for Subject is nil in the container STDNGradeType.
   func (s *STDNGradeType) Subject_IsNil() bool {
     return s.stdngradetype.Subject == nil
+    }
+
+// Set the value of a property to nil
+func (n *STDNSupportNeedsType) Unset(key string) *STDNSupportNeedsType {
+        switch key {
+  case "AcceleratedProgram":
+   n.stdnsupportneedstype.AcceleratedProgram = nil
+  case "AdjustedEducationProgram":
+   n.stdnsupportneedstype.AdjustedEducationProgram = nil
+  case "CareerGuidanceFileHeld":
+   n.stdnsupportneedstype.CareerGuidanceFileHeld = nil
+  case "NegotiatedCurriculumPlan":
+   n.stdnsupportneedstype.NegotiatedCurriculumPlan = nil
+  case "OtherLearningSupport":
+   n.stdnsupportneedstype.OtherLearningSupport = nil
+  case "OtherLearningSupportText":
+   n.stdnsupportneedstype.OtherLearningSupportText = nil
+  case "SchoolCounsellorFileHeld":
+   n.stdnsupportneedstype.SchoolCounsellorFileHeld = nil
+  case "YoungCarersRole":
+   n.stdnsupportneedstype.YoungCarersRole = nil
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "STDNSupportNeedsType")
+        }
+        return n
+}
+
+// Set a sequence of properties
+func (n *STDNSupportNeedsType) SetProperties(props ...Prop) *STDNSupportNeedsType {
+ 	for _, p := range props {
+ 		n.SetProperty(p.Key, p.Value)
+ 	}
+ 	return n
+ }
+
+// Set a property to a value. Aborts if property name is undefined for the type. Aborts if the list is a list of codeset values,
+// and the value does not match the codeset.
+func (n *STDNSupportNeedsType) SetProperty(key string, value interface{}) *STDNSupportNeedsType {
+        if n == nil {
+                n, _ = STDNSupportNeedsTypePointer(STDNSupportNeedsType{})
+        }
+        switch key {
+    case "AcceleratedProgram":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.AcceleratedProgram = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+    case "AdjustedEducationProgram":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.AdjustedEducationProgram = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+    case "CareerGuidanceFileHeld":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.CareerGuidanceFileHeld = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+    case "NegotiatedCurriculumPlan":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.NegotiatedCurriculumPlan = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+    case "OtherLearningSupport":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.OtherLearningSupport = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+    case "OtherLearningSupportText":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.OtherLearningSupportText = ((*String)(v))
+      }
+    case "SchoolCounsellorFileHeld":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.SchoolCounsellorFileHeld = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+    case "YoungCarersRole":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.stdnsupportneedstype.YoungCarersRole = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+        default:
+          log.Fatalf("%s is not a valid element name in %s\n", key, "STDNSupportNeedsType")
+        }
+        return n
+}
+
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) AcceleratedProgram() *AUCodeSetsYesOrNoCategoryType {
+    if s.stdnsupportneedstype.AcceleratedProgram == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.AcceleratedProgram = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.stdnsupportneedstype.AcceleratedProgram
+    }
+// Returns whether the element value for AcceleratedProgram is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) AcceleratedProgram_IsNil() bool {
+    return s.stdnsupportneedstype.AcceleratedProgram == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) AdjustedEducationProgram() *AUCodeSetsYesOrNoCategoryType {
+    if s.stdnsupportneedstype.AdjustedEducationProgram == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.AdjustedEducationProgram = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.stdnsupportneedstype.AdjustedEducationProgram
+    }
+// Returns whether the element value for AdjustedEducationProgram is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) AdjustedEducationProgram_IsNil() bool {
+    return s.stdnsupportneedstype.AdjustedEducationProgram == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) CareerGuidanceFileHeld() *AUCodeSetsYesOrNoCategoryType {
+    if s.stdnsupportneedstype.CareerGuidanceFileHeld == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.CareerGuidanceFileHeld = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.stdnsupportneedstype.CareerGuidanceFileHeld
+    }
+// Returns whether the element value for CareerGuidanceFileHeld is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) CareerGuidanceFileHeld_IsNil() bool {
+    return s.stdnsupportneedstype.CareerGuidanceFileHeld == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) NegotiatedCurriculumPlan() *AUCodeSetsYesOrNoCategoryType {
+    if s.stdnsupportneedstype.NegotiatedCurriculumPlan == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.NegotiatedCurriculumPlan = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.stdnsupportneedstype.NegotiatedCurriculumPlan
+    }
+// Returns whether the element value for NegotiatedCurriculumPlan is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) NegotiatedCurriculumPlan_IsNil() bool {
+    return s.stdnsupportneedstype.NegotiatedCurriculumPlan == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) OtherLearningSupport() *AUCodeSetsYesOrNoCategoryType {
+    if s.stdnsupportneedstype.OtherLearningSupport == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.OtherLearningSupport = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.stdnsupportneedstype.OtherLearningSupport
+    }
+// Returns whether the element value for OtherLearningSupport is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) OtherLearningSupport_IsNil() bool {
+    return s.stdnsupportneedstype.OtherLearningSupport == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) OtherLearningSupportText() *String {
+    if s.stdnsupportneedstype.OtherLearningSupportText == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.OtherLearningSupportText = ((*String)(v))
+      }
+      }
+      return s.stdnsupportneedstype.OtherLearningSupportText
+    }
+// Returns whether the element value for OtherLearningSupportText is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) OtherLearningSupportText_IsNil() bool {
+    return s.stdnsupportneedstype.OtherLearningSupportText == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) SchoolCounsellorFileHeld() *AUCodeSetsYesOrNoCategoryType {
+    if s.stdnsupportneedstype.SchoolCounsellorFileHeld == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.SchoolCounsellorFileHeld = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.stdnsupportneedstype.SchoolCounsellorFileHeld
+    }
+// Returns whether the element value for SchoolCounsellorFileHeld is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) SchoolCounsellorFileHeld_IsNil() bool {
+    return s.stdnsupportneedstype.SchoolCounsellorFileHeld == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *STDNSupportNeedsType) YoungCarersRole() *AUCodeSetsYesOrNoCategoryType {
+    if s.stdnsupportneedstype.YoungCarersRole == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.stdnsupportneedstype.YoungCarersRole = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      }
+      }
+      return s.stdnsupportneedstype.YoungCarersRole
+    }
+// Returns whether the element value for YoungCarersRole is nil in the container STDNSupportNeedsType.
+  func (s *STDNSupportNeedsType) YoungCarersRole_IsNil() bool {
+    return s.stdnsupportneedstype.YoungCarersRole == nil
     }
 
 // Set the value of a property to nil
@@ -80126,30 +80782,44 @@ func (n *StudentDailyAttendance) SetProperty(key string, value interface{}) *Stu
 // Set the value of a property to nil
 func (n *StudentDataTransferNote) Unset(key string) *StudentDataTransferNote {
         switch key {
+  case "AdditionalNotes":
+   n.studentdatatransfernote.AdditionalNotes = nil
   case "ArrivalSchool":
    n.studentdatatransfernote.ArrivalSchool = nil
   case "Attendance":
    n.studentdatatransfernote.Attendance = nil
+  case "AustralianCitizenship":
+   n.studentdatatransfernote.AustralianCitizenship = nil
   case "BirthDate":
    n.studentdatatransfernote.BirthDate = nil
   case "ChildSubjectToOrders":
    n.studentdatatransfernote.ChildSubjectToOrders = nil
-  case "CountriesOfCitizenship":
-   n.studentdatatransfernote.CountriesOfCitizenship = nil
+  case "Consent":
+   n.studentdatatransfernote.Consent = nil
   case "CountryOfBirth":
    n.studentdatatransfernote.CountryOfBirth = nil
   case "DepartureSchool":
    n.studentdatatransfernote.DepartureSchool = nil
+  case "DisciplinaryAbsences":
+   n.studentdatatransfernote.DisciplinaryAbsences = nil
   case "EducationalAssessmentList":
    n.studentdatatransfernote.EducationalAssessmentList = nil
   case "FollowupRequest":
    n.studentdatatransfernote.FollowupRequest = nil
   case "Gender":
    n.studentdatatransfernote.Gender = nil
+  case "Healthcare":
+   n.studentdatatransfernote.Healthcare = nil
   case "IndigenousStatus":
    n.studentdatatransfernote.IndigenousStatus = nil
+  case "IndividualBehaviourManagementPlan":
+   n.studentdatatransfernote.IndividualBehaviourManagementPlan = nil
+  case "InterestTalents":
+   n.studentdatatransfernote.InterestTalents = nil
   case "LBOTE":
    n.studentdatatransfernote.LBOTE = nil
+  case "LatestReportAvailable":
+   n.studentdatatransfernote.LatestReportAvailable = nil
   case "LocalCodeList":
    n.studentdatatransfernote.LocalCodeList = nil
   case "NAPLANScoreList":
@@ -80168,14 +80838,20 @@ func (n *StudentDataTransferNote) Unset(key string) *StudentDataTransferNote {
    n.studentdatatransfernote.PreviousSchoolList = nil
   case "RefId":
    n.studentdatatransfernote.RefId = nil
+  case "RequestID":
+   n.studentdatatransfernote.RequestID = nil
   case "SIF_ExtendedElements":
    n.studentdatatransfernote.SIF_ExtendedElements = nil
   case "SIF_Metadata":
    n.studentdatatransfernote.SIF_Metadata = nil
+  case "STDNAttachmentList":
+   n.studentdatatransfernote.STDNAttachmentList = nil
   case "StateOfBirth":
    n.studentdatatransfernote.StateOfBirth = nil
   case "StudentGradeList":
    n.studentdatatransfernote.StudentGradeList = nil
+  case "SupportNeeds":
+   n.studentdatatransfernote.SupportNeeds = nil
   case "VisaStatus":
    n.studentdatatransfernote.VisaStatus = nil
   case "YearLevel":
@@ -80201,6 +80877,12 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
                 n, _ = StudentDataTransferNotePointer(StudentDataTransferNote{})
         }
         switch key {
+    case "AdditionalNotes":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentdatatransfernote.AdditionalNotes = ((*String)(v))
+      }
     case "ArrivalSchool":
     if v, ok:= ArrivalSchoolTypePointer(value); ok {
       n.studentdatatransfernote.ArrivalSchool = v
@@ -80209,6 +80891,11 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     
     if v, ok:= BoolPointer(value); ok {
       n.studentdatatransfernote.Attendance = ((*Bool)(v))
+      }
+    case "AustralianCitizenship":
+    
+    if v, ok:= BoolPointer(value); ok {
+      n.studentdatatransfernote.AustralianCitizenship = ((*Bool)(v))
       }
     case "BirthDate":
     value = fmt.Sprintf("%s", value)
@@ -80221,9 +80908,10 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     if v, ok:= BoolPointer(value); ok {
       n.studentdatatransfernote.ChildSubjectToOrders = ((*Bool)(v))
       }
-    case "CountriesOfCitizenship":
-    if v, ok:= CountryListTypePointer(value); ok {
-      n.studentdatatransfernote.CountriesOfCitizenship = v
+    case "Consent":
+    
+    if v, ok:= BoolPointer(value); ok {
+      n.studentdatatransfernote.Consent = ((*Bool)(v))
       }
     case "CountryOfBirth":
     value = fmt.Sprintf("%s", value)
@@ -80237,6 +80925,11 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     case "DepartureSchool":
     if v, ok:= DepartureSchoolTypePointer(value); ok {
       n.studentdatatransfernote.DepartureSchool = v
+      }
+    case "DisciplinaryAbsences":
+    
+    if v, ok:= BoolPointer(value); ok {
+      n.studentdatatransfernote.DisciplinaryAbsences = ((*Bool)(v))
       }
     case "EducationalAssessmentList":
     if v, ok:= EducationalAssessmentListTypePointer(value); ok {
@@ -80256,6 +80949,11 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.Gender = ((*AUCodeSetsSexCodeType)(v))
       }
+    case "Healthcare":
+    
+    if v, ok:= BoolPointer(value); ok {
+      n.studentdatatransfernote.Healthcare = ((*Bool)(v))
+      }
     case "IndigenousStatus":
     value = fmt.Sprintf("%s", value)
         if !CodesetContains(AUCodeSetsIndigenousStatusType_map, value) {
@@ -80265,14 +80963,26 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.IndigenousStatus = ((*AUCodeSetsIndigenousStatusType)(v))
       }
-    case "LBOTE":
-    value = fmt.Sprintf("%s", value)
-        if !CodesetContains(AUCodeSetsYesOrNoCategoryType_map, value) {
-      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsYesOrNoCategoryType_values")
+    case "IndividualBehaviourManagementPlan":
+    
+    if v, ok:= BoolPointer(value); ok {
+      n.studentdatatransfernote.IndividualBehaviourManagementPlan = ((*Bool)(v))
       }
-
+    case "InterestTalents":
+    value = fmt.Sprintf("%s", value)
+    
     if v, ok:= StringPointer(value); ok {
-      n.studentdatatransfernote.LBOTE = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      n.studentdatatransfernote.InterestTalents = ((*String)(v))
+      }
+    case "LBOTE":
+    
+    if v, ok:= BoolPointer(value); ok {
+      n.studentdatatransfernote.LBOTE = ((*Bool)(v))
+      }
+    case "LatestReportAvailable":
+    
+    if v, ok:= BoolPointer(value); ok {
+      n.studentdatatransfernote.LatestReportAvailable = ((*Bool)(v))
       }
     case "LocalCodeList":
     if v, ok:= LocalCodeListTypePointer(value); ok {
@@ -80316,6 +81026,12 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     if v, ok:= StringPointer(value); ok {
       n.studentdatatransfernote.RefId = ((*RefIdType)(v))
       }
+    case "RequestID":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.studentdatatransfernote.RequestID = ((*String)(v))
+      }
     case "SIF_ExtendedElements":
     if v, ok:= SIF_ExtendedElementsTypePointer(value); ok {
       n.studentdatatransfernote.SIF_ExtendedElements = v
@@ -80323,6 +81039,10 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     case "SIF_Metadata":
     if v, ok:= SIF_MetadataTypePointer(value); ok {
       n.studentdatatransfernote.SIF_Metadata = v
+      }
+    case "STDNAttachmentList":
+    if v, ok:= STDNAttachmentListTypePointer(value); ok {
+      n.studentdatatransfernote.STDNAttachmentList = v
       }
     case "StateOfBirth":
     value = fmt.Sprintf("%s", value)
@@ -80333,6 +81053,10 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     case "StudentGradeList":
     if v, ok:= STDNGradeListTypePointer(value); ok {
       n.studentdatatransfernote.StudentGradeList = v
+      }
+    case "SupportNeeds":
+    if v, ok:= STDNSupportNeedsTypePointer(value); ok {
+      n.studentdatatransfernote.SupportNeeds = v
       }
     case "VisaStatus":
     if v, ok:= VisaSubClassTypePointer(value); ok {
@@ -80348,6 +81072,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
         return n
 }
 
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) AdditionalNotes() *String {
+    if s.studentdatatransfernote.AdditionalNotes == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentdatatransfernote.AdditionalNotes = ((*String)(v))
+      }
+      }
+      return s.studentdatatransfernote.AdditionalNotes
+    }
+// Returns whether the element value for AdditionalNotes is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) AdditionalNotes_IsNil() bool {
+    return s.studentdatatransfernote.AdditionalNotes == nil
+    }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) ArrivalSchool() *ArrivalSchoolType {
     if s.studentdatatransfernote.ArrivalSchool == nil {
@@ -80373,6 +81110,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
 // Returns whether the element value for Attendance is nil in the container StudentDataTransferNote.
   func (s *StudentDataTransferNote) Attendance_IsNil() bool {
     return s.studentdatatransfernote.Attendance == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) AustralianCitizenship() *Bool {
+    if s.studentdatatransfernote.AustralianCitizenship == nil {
+    if v, ok:= BoolPointer(false); ok {
+      s.studentdatatransfernote.AustralianCitizenship = ((*Bool)(v))
+      }
+      }
+      return s.studentdatatransfernote.AustralianCitizenship
+    }
+// Returns whether the element value for AustralianCitizenship is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) AustralianCitizenship_IsNil() bool {
+    return s.studentdatatransfernote.AustralianCitizenship == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) BirthDate() *BirthDateType {
@@ -80401,17 +81151,17 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     return s.studentdatatransfernote.ChildSubjectToOrders == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *StudentDataTransferNote) CountriesOfCitizenship() *CountryListType {
-    if s.studentdatatransfernote.CountriesOfCitizenship == nil {
-     if v, ok:= CountryListTypePointer(CountryListType{}); ok {
-      s.studentdatatransfernote.CountriesOfCitizenship = v
+  func (s *StudentDataTransferNote) Consent() *Bool {
+    if s.studentdatatransfernote.Consent == nil {
+    if v, ok:= BoolPointer(false); ok {
+      s.studentdatatransfernote.Consent = ((*Bool)(v))
       }
       }
-      return s.studentdatatransfernote.CountriesOfCitizenship
+      return s.studentdatatransfernote.Consent
     }
-// Returns whether the element value for CountriesOfCitizenship is nil in the container StudentDataTransferNote.
-  func (s *StudentDataTransferNote) CountriesOfCitizenship_IsNil() bool {
-    return s.studentdatatransfernote.CountriesOfCitizenship == nil
+// Returns whether the element value for Consent is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) Consent_IsNil() bool {
+    return s.studentdatatransfernote.Consent == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) CountryOfBirth() *CountryType {
@@ -80438,6 +81188,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
 // Returns whether the element value for DepartureSchool is nil in the container StudentDataTransferNote.
   func (s *StudentDataTransferNote) DepartureSchool_IsNil() bool {
     return s.studentdatatransfernote.DepartureSchool == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) DisciplinaryAbsences() *Bool {
+    if s.studentdatatransfernote.DisciplinaryAbsences == nil {
+    if v, ok:= BoolPointer(false); ok {
+      s.studentdatatransfernote.DisciplinaryAbsences = ((*Bool)(v))
+      }
+      }
+      return s.studentdatatransfernote.DisciplinaryAbsences
+    }
+// Returns whether the element value for DisciplinaryAbsences is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) DisciplinaryAbsences_IsNil() bool {
+    return s.studentdatatransfernote.DisciplinaryAbsences == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) EducationalAssessmentList() *EducationalAssessmentListType {
@@ -80479,6 +81242,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     return s.studentdatatransfernote.Gender == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) Healthcare() *Bool {
+    if s.studentdatatransfernote.Healthcare == nil {
+    if v, ok:= BoolPointer(false); ok {
+      s.studentdatatransfernote.Healthcare = ((*Bool)(v))
+      }
+      }
+      return s.studentdatatransfernote.Healthcare
+    }
+// Returns whether the element value for Healthcare is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) Healthcare_IsNil() bool {
+    return s.studentdatatransfernote.Healthcare == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) IndigenousStatus() *AUCodeSetsIndigenousStatusType {
     if s.studentdatatransfernote.IndigenousStatus == nil {
     if v, ok:= StringPointer(""); ok {
@@ -80492,10 +81268,36 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     return s.studentdatatransfernote.IndigenousStatus == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
-  func (s *StudentDataTransferNote) LBOTE() *AUCodeSetsYesOrNoCategoryType {
-    if s.studentdatatransfernote.LBOTE == nil {
+  func (s *StudentDataTransferNote) IndividualBehaviourManagementPlan() *Bool {
+    if s.studentdatatransfernote.IndividualBehaviourManagementPlan == nil {
+    if v, ok:= BoolPointer(false); ok {
+      s.studentdatatransfernote.IndividualBehaviourManagementPlan = ((*Bool)(v))
+      }
+      }
+      return s.studentdatatransfernote.IndividualBehaviourManagementPlan
+    }
+// Returns whether the element value for IndividualBehaviourManagementPlan is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) IndividualBehaviourManagementPlan_IsNil() bool {
+    return s.studentdatatransfernote.IndividualBehaviourManagementPlan == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) InterestTalents() *String {
+    if s.studentdatatransfernote.InterestTalents == nil {
     if v, ok:= StringPointer(""); ok {
-      s.studentdatatransfernote.LBOTE = ((*AUCodeSetsYesOrNoCategoryType)(v))
+      s.studentdatatransfernote.InterestTalents = ((*String)(v))
+      }
+      }
+      return s.studentdatatransfernote.InterestTalents
+    }
+// Returns whether the element value for InterestTalents is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) InterestTalents_IsNil() bool {
+    return s.studentdatatransfernote.InterestTalents == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) LBOTE() *Bool {
+    if s.studentdatatransfernote.LBOTE == nil {
+    if v, ok:= BoolPointer(false); ok {
+      s.studentdatatransfernote.LBOTE = ((*Bool)(v))
       }
       }
       return s.studentdatatransfernote.LBOTE
@@ -80503,6 +81305,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
 // Returns whether the element value for LBOTE is nil in the container StudentDataTransferNote.
   func (s *StudentDataTransferNote) LBOTE_IsNil() bool {
     return s.studentdatatransfernote.LBOTE == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) LatestReportAvailable() *Bool {
+    if s.studentdatatransfernote.LatestReportAvailable == nil {
+    if v, ok:= BoolPointer(false); ok {
+      s.studentdatatransfernote.LatestReportAvailable = ((*Bool)(v))
+      }
+      }
+      return s.studentdatatransfernote.LatestReportAvailable
+    }
+// Returns whether the element value for LatestReportAvailable is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) LatestReportAvailable_IsNil() bool {
+    return s.studentdatatransfernote.LatestReportAvailable == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) LocalCodeList() *LocalCodeListType {
@@ -80622,6 +81437,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     return s.studentdatatransfernote.RefId == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) RequestID() *String {
+    if s.studentdatatransfernote.RequestID == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.studentdatatransfernote.RequestID = ((*String)(v))
+      }
+      }
+      return s.studentdatatransfernote.RequestID
+    }
+// Returns whether the element value for RequestID is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) RequestID_IsNil() bool {
+    return s.studentdatatransfernote.RequestID == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) SIF_ExtendedElements() *SIF_ExtendedElementsType {
     if s.studentdatatransfernote.SIF_ExtendedElements == nil {
      if v, ok:= SIF_ExtendedElementsTypePointer(SIF_ExtendedElementsType{}); ok {
@@ -80648,6 +81476,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
     return s.studentdatatransfernote.SIF_Metadata == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) STDNAttachmentList() *STDNAttachmentListType {
+    if s.studentdatatransfernote.STDNAttachmentList == nil {
+     if v, ok:= STDNAttachmentListTypePointer(STDNAttachmentListType{}); ok {
+      s.studentdatatransfernote.STDNAttachmentList = v
+      }
+      }
+      return s.studentdatatransfernote.STDNAttachmentList
+    }
+// Returns whether the element value for STDNAttachmentList is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) STDNAttachmentList_IsNil() bool {
+    return s.studentdatatransfernote.STDNAttachmentList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) StateOfBirth() *StateProvinceType {
     if s.studentdatatransfernote.StateOfBirth == nil {
     if v, ok:= StringPointer(""); ok {
@@ -80672,6 +81513,19 @@ func (n *StudentDataTransferNote) SetProperty(key string, value interface{}) *St
 // Returns whether the element value for StudentGradeList is nil in the container StudentDataTransferNote.
   func (s *StudentDataTransferNote) StudentGradeList_IsNil() bool {
     return s.studentdatatransfernote.StudentGradeList == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *StudentDataTransferNote) SupportNeeds() *STDNSupportNeedsType {
+    if s.studentdatatransfernote.SupportNeeds == nil {
+     if v, ok:= STDNSupportNeedsTypePointer(STDNSupportNeedsType{}); ok {
+      s.studentdatatransfernote.SupportNeeds = v
+      }
+      }
+      return s.studentdatatransfernote.SupportNeeds
+    }
+// Returns whether the element value for SupportNeeds is nil in the container StudentDataTransferNote.
+  func (s *StudentDataTransferNote) SupportNeeds_IsNil() bool {
+    return s.studentdatatransfernote.SupportNeeds == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *StudentDataTransferNote) VisaStatus() *VisaSubClassType {
