@@ -122,7 +122,7 @@ func copyTeachingGroupPeriodFromCell(group *sifxml.TeachingGroup, cell *sifxml.T
 //
 // * With probability 0.1, a previous name is added for the student, of the same gender as the legal name. The surname is kept the same with probability 0.5.
 //
-// * Citizenship is "1101" (Australia) with probability 0.9, and is otherwise a random choice of 1201, 1302, 1402, 1502, 2100 (New Zealand, Papua New Guinea, Kiribati, Fiji, United Kingdom). With probability 0.1, a second random citizenship is added at random, out of 2201, 2301, 2401, 3101, 3201 (Ireland, Austria, Denmark, Andora, Albania)
+// * Citizenship is "1101" (Australia) with probability 0.8, and is otherwise a random choice of 1201, 1302, 1402, 1502, 2100 (New Zealand, Papua New Guinea, Kiribati, Fiji, United Kingdom). With probability 0.1, a second random citizenship is added at random, out of 2201, 2301, 2401, 3101, 3201 (Ireland, Austria, Denmark, Andora, Albania)
 //
 // * If the Citizenship is other than 1101, VisaStatus is picked at random out of 100, 200, 300, 400, 500 (Partner (migrant), Refugee, Prospective marriage, Temporary work (Short stay specialist), Student)
 //
@@ -149,6 +149,8 @@ func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	ret.PersonInfo().Name().SetProperty("FamilyName", person.LastName)
 	ret.PersonInfo().Name().SetProperty("GivenName", person.FirstName)
 	ret.PersonInfo().Name().SetProperty("MiddleName", person.MiddleName)
+	p := GenderedFakePerson(person.Gender)
+	ret.PersonInfo().Name().SetProperty("PreferredGivenName", threshold_rand_strings([]float64{0.1, 0}, []string{person.FirstName, p.FirstName}))
 	if rand.Float64() < 0.1 {
 		p := GenderedFakePerson(person.Gender)
 		ret.PersonInfo().OtherNames().AddNew()
@@ -170,7 +172,7 @@ func Create_StudentPersonal(yearlevel string) *sifxml.StudentPersonal {
 	ret.PersonInfo().Demographics().SetProperty("CountryOfBirth", "1101")
 	ret.PersonInfo().Demographics().CountriesOfCitizenship().Append(
 		(sifxml.CountryType)(threshold_rand_strings([]float64{0.1, 0.08, 0.06, 0.04, 0.02, 0}, []string{"1101", "1201", "1302", "1402", "1502", "2100"})))
-	if rand.Float64() < 0.1 {
+	if rand.Float64() < 0.2 {
 		ret.PersonInfo().Demographics().CountriesOfCitizenship().Append(
 			(sifxml.CountryType)(threshold_rand_strings([]float64{0.8, 0.6, 0.4, 0.2, 0}, []string{"2201", "2301", "2401", "3101", "3201"})))
 	}
@@ -253,6 +255,7 @@ func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *si
 	ret.Name().SetProperty("Type", "LGL")
 	ret.Name().SetProperty("FamilyName", student.PersonInfo().Name().FamilyName())
 	ret.Name().SetProperty("GivenName", student.PersonInfo().Name().GivenName())
+	ret.Name().SetProperty("PreferredGivenName", student.PersonInfo().Name().PreferredGivenName())
 	n := student.PersonInfo().Name().MiddleName()
 	if n != nil {
 		ret.Name().SetProperty("MiddleName", n)
@@ -272,15 +275,18 @@ func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *si
 	ret.SetProperty("PlaceOfBirth", student.PersonInfo().Demographics().PlaceOfBirth())
 	ret.SetProperty("StateOfBirth", (student.PersonInfo().Demographics().StateOfBirth()))
 	ret.SetProperty("CountryOfBirth", (student.PersonInfo().Demographics().CountryOfBirth()))
-	ret.SetProperty("AustralianCitizenship", create_boolean())
-	if *ret.AustralianCitizenship() == ((sifxml.Bool)(true)) {
+	citizenship := student.PersonInfo().Demographics().CountriesOfCitizenship().Index(0).String() != "1101"
+	ret.SetProperty("AustralianCitizenship", citizenship)
+	if !citizenship {
 		n1 := student.PersonInfo().Demographics().VisaSubClass()
 		if n1 != nil && len(*n1) != 0 {
 			ret.VisaStatus().SetProperty("Code", (n1))
-			ret.VisaStatus().SetProperty("VisaExpiryDate", strconv.Itoa(time.Now().Year()+1)+"-07-30")
-			ret.VisaStatus().SetProperty("ATEExpiryDate", strconv.Itoa(time.Now().Year()-1)+"-07-30")
-			ret.VisaStatus().SetProperty("ATEStartDate", strconv.Itoa(time.Now().Year()-2)+"-07-30")
+		} else {
+			ret.VisaStatus().SetProperty("Code", threshold_rand_strings([]float64{0.8, 0.6, 0.4, 0.2, 0}, []string{"100", "200", "300", "400", "500"}))
 		}
+		ret.VisaStatus().SetProperty("VisaExpiryDate", strconv.Itoa(time.Now().Year()+1)+"-07-30")
+		ret.VisaStatus().SetProperty("ATEExpiryDate", strconv.Itoa(time.Now().Year()-1)+"-07-30")
+		ret.VisaStatus().SetProperty("ATEStartDate", strconv.Itoa(time.Now().Year()-2)+"-07-30")
 	}
 	ret.SetProperty("IndigenousStatus", (student.PersonInfo().Demographics().IndigenousStatus()))
 	ret.SetProperty("LBOTE", sifxml.Bool(*(student.PersonInfo().Demographics().LBOTE()) == sifxml.AUCodeSetsYesOrNoCategoryType("Y")))
@@ -394,7 +400,7 @@ func Create_StudentDataTransferNote(student *sifxml.StudentPersonal, schools *si
 				ret.NAPLANScoreList().Last().DomainScore().SetProperty("ScaledScoreLogitValue", rand.Float64())
 				ret.NAPLANScoreList().Last().DomainScore().SetProperty("ScaledScoreStandardError", rand.Float64())
 				ret.NAPLANScoreList().Last().DomainScore().SetProperty("ScaledScoreLogitStandardError", rand.Float64())
-				ret.NAPLANScoreList().Last().DomainScore().SetProperty("StudentDomainBand", rand.Intn(5))
+				ret.NAPLANScoreList().Last().DomainScore().SetProperty("StudentDomainBand", rand.Intn(9)+1)
 				ret.NAPLANScoreList().Last().DomainScore().SetProperty("StudentProficiency", randomStringFromSlice([]string{"Proficient", "Developing", "Bad"}))
 				for i := 0; i < 5; i++ {
 					ret.NAPLANScoreList().Last().DomainScore().PlausibleScaledValueList().Append(400 * rand.Float64())

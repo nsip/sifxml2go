@@ -175,7 +175,7 @@ var test_GradingAssignmentScore = `    <GradingAssignmentScore RefId="359D7510-1
       <ScorePoints>45</ScorePoints> 
     </GradingAssignmentScore>
 `
-var test_example0824 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
+var test_example0727 = `    <Identity RefId="4286194F-43ED-43C1-8EE2-F0A27C4BEF86">
       <SIF_RefId SIF_RefObject="StudentPersonal">23B08571-E4D6-45C3-B82A-3E52E5349925</SIF_RefId>
       <AuthenticationSource>AUAccessShibboleth</AuthenticationSource>
       <IdentityAssertions>
@@ -501,6 +501,18 @@ var test_MarkValueInfo = `		<MarkValueInfo RefId="11737E21-4A7C-46BD-BA43-01CADC
 	     <Narrative>A Narrative about this Grade, letters and their numeric equivalent</Narrative>
 	  </MarkValueInfo>
 `
+var test_PersonalisedPlan = `    <PersonalisedPlan RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
+      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
+      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
+      <PersonalisedPlanCategory>M</PersonalisedPlanCategory>
+      <PersonalisedPlanStartDate>2017-11-01</PersonalisedPlanStartDate>
+      <PersonalisedPlanEndDate>2019-11-10</PersonalisedPlanEndDate>
+      <PersonalisedPlanReviewDate>2018-11-10</PersonalisedPlanReviewDate>
+      
+      <PersonalisedPlanNotes>This Student is allergic to cashews.</PersonalisedPlanNotes>
+    </PersonalisedPlan>
+
+`
 var test_PersonPicture = `    <PersonPicture RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
       <ParentObjectRefId SIF_RefObject="StudentPersonal">AA648462-8886-24AA-5294-BC638017320B</ParentObjectRefId>
       <SchoolYear>2007</SchoolYear>
@@ -765,18 +777,6 @@ var test_PersonPrivacyObligationDocument = `    <PersonPrivacyObligationDocument
       </ApplicableLawList>
     </PersonPrivacyObligationDocument>
 `
-var test_PersonalisedPlan = `    <PersonalisedPlan RefId="2FFB63B4-CFEF-4820-8501-E7D1E54555CB">
-      <StudentPersonalRefId>D3E34B35-9D75-101A-8C3D-00AA001A1652</StudentPersonalRefId>
-      <SchoolInfoRefId>CA285746-359D-7510-1A8C-36432A901A16</SchoolInfoRefId>
-      <PersonalisedPlanCategory>M</PersonalisedPlanCategory>
-      <PersonalisedPlanStartDate>2017-11-01</PersonalisedPlanStartDate>
-      <PersonalisedPlanEndDate>2019-11-10</PersonalisedPlanEndDate>
-      <PersonalisedPlanReviewDate>2018-11-10</PersonalisedPlanReviewDate>
-      
-      <PersonalisedPlanNotes>This Student is allergic to cashews.</PersonalisedPlanNotes>
-    </PersonalisedPlan>
-
-`
 var test_ResourceBookingExample = `    <ResourceBooking RefId="B5739375-800A-C4CC-6385-0BB2754114AA">
       <ResourceRefId SIF_RefObject="LearningResource">B7A34E56-1C97-345C-0A4E-11BB112B2753</ResourceRefId>
       <ResourceLocalId>ZXY789</ResourceLocalId>
@@ -1012,6 +1012,106 @@ var test_SchoolInfo = `    <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A16
           <SchoolGroup>YVC</SchoolGroup>
             <SchoolGroup>EastSec01</SchoolGroup>
         </SchoolGroupList>
+      </SchoolInfo>
+`
+var test_SchoolInfoEarlyChildhood = `    <SchoolInfo RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
+      <LocalId>01011234</LocalId>
+      <ACECQAServiceId>012345</ACECQAServiceId>
+      <ACECQAProviderId>012347</ACECQAProviderId>
+      <EarlyChildhoodProviderName>Rabbiton City Council</EarlyChildhoodProviderName>
+      <SchoolName>Lincoln Day Care</SchoolName>
+      <SchoolType>EarlyCh</SchoolType>
+      <SchoolFocusList>
+        <SchoolFocus>11</SchoolFocus>
+      </SchoolFocusList>
+	  <EarlyChildhoodProviderType>GovernmentChildcare</EarlyChildhoodProviderType>
+      <SchoolURL>http://www.lincolndaycare.vic.gov.au</SchoolURL>
+      <PrincipalInfo>
+        <ContactName Type="LGL">
+            <Title>Mr</Title>
+            <FamilyName>Mason</FamilyName>
+            <GivenName>Francis</GivenName>
+            <MiddleName>Frank</MiddleName>
+            <Suffix>Jr.</Suffix>
+            <FullName>Mr Frank Mason Jr.</FullName>
+        </ContactName>
+        <ContactTitle>Senior School Principal</ContactTitle>
+      </PrincipalInfo>
+      <SchoolContactList>
+        <SchoolContact>
+          <PublishInDirectory>Y</PublishInDirectory>
+          <ContactInfo>
+            <Name Type="LGL">
+              <Title>Mr</Title>
+              <FamilyName>Miller</FamilyName>
+              <GivenName>James</GivenName>
+              <MiddleName>Mark</MiddleName>
+              <Suffix>Jr.</Suffix>
+                <FullName>Mr James Mark Miller Jr.</FullName>
+              </Name>
+            <PositionTitle>Business Manager</PositionTitle>
+            <Role>School Information Contact Point</Role>
+            <Address Type="0123" Role="012B">
+              <Street>
+                <Line1>23 Nicholson Street</Line1>
+                </Street>
+                  <City>Carnegie</City>
+                  <StateProvince>VIC</StateProvince>
+                  <Country>1101</Country>
+                  <PostalCode>3004</PostalCode>
+                  <GridLocation>
+                    <Latitude>23.9876</Latitude>
+                    <Longitude>-98.8765</Longitude>
+                  </GridLocation>
+                </Address>
+            <EmailList>
+              <Email Type="01">jmiller@lsc.vic.edu.au</Email>
+              <Email Type="02">jmiller@yahoo.com.au</Email>
+            </EmailList>
+            <PhoneNumberList>
+              <PhoneNumber Type="0096">
+                <Number>03 9637-2000</Number>
+                <Extension>72345</Extension>
+                <ListedStatus>Y</ListedStatus>
+              </PhoneNumber>
+            </PhoneNumberList>
+          </ContactInfo>
+        </SchoolContact>
+      </SchoolContactList>
+	  <AddressList>
+	             <Address Type="0123" Role="012B">
+              <Street>
+                <Line1>23 Nicholson Street</Line1>
+                </Street>
+                  <City>Carnegie</City>
+                  <StateProvince>VIC</StateProvince>
+                  <Country>1101</Country>
+                  <PostalCode>3004</PostalCode>
+                  <GridLocation>
+                    <Latitude>23.9876</Latitude>
+                    <Longitude>-98.8765</Longitude>
+                  </GridLocation>
+                </Address>
+	  </AddressList>
+      <PhoneNumberList>
+        <PhoneNumber Type="0096">
+          <Number>03 9637-2000</Number>
+        </PhoneNumber>
+      </PhoneNumberList>
+      <YearLevels>
+        <YearLevel>
+          <Code>CC</Code>
+        </YearLevel>
+      </YearLevels>
+      <ARIA>1.0</ARIA>
+      <OperationalStatus>O</OperationalStatus>
+      <FederalElectorate>216</FederalElectorate>
+      <SchoolSector>NG</SchoolSector>
+        <SchoolGeographicLocation>10</SchoolGeographicLocation>
+        <LocalGovernmentArea>Cardinia</LocalGovernmentArea>
+        <JurisdictionLowerHouse>Unknown</JurisdictionLowerHouse>
+        <SLA>205801452</SLA>
+        <SchoolCoEdStatus>C</SchoolCoEdStatus>
       </SchoolInfo>
 `
 var test_SchoolPrograms = `    <SchoolPrograms RefId="D3E34B35-9D75-101A-8C3D-00AA001A1652">
@@ -1735,7 +1835,7 @@ var test_StudentPeriodAttendanceExample = `    <StudentPeriodAttendance RefId="9
       <AttendanceStatus>01</AttendanceStatus>
     </StudentPeriodAttendance>
 `
-var test_example0017 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
+var test_example0689 = `		<StudentPersonal RefId="7C834EA9-EDA1-2090-347F-83297E1C290C">
 			<AlertMessages>
 				<AlertMessage Type="Legal">Mother is legal guardian</AlertMessage>
 			</AlertMessages>
@@ -4244,18 +4344,6 @@ var test_NAPTestItem = `<NAPTestItem RefId="31CA1A02-4E53-4A29-AE1E-807489C30827
 </NAPTestItem>
 
 `
-var test_NAPTestScoreSummary = `<NAPTestScoreSummary RefId="E2721E52-7661-4A51-BF16-B4CAF12DC2F8">
-  <SchoolInfoRefId>A35CE161-BFDB-4460-952B-7F87789A739C</SchoolInfoRefId>
-  <SchoolACARAId>21212</SchoolACARAId>
-  <NAPTestRefId>FBB8A444-1891-4701-B306-F3CED219369C</NAPTestRefId>
-  <NAPTestLocalId>NAPLAN-2017-0004-Language Conventions: Grammar and Punctuation</NAPTestLocalId>
-  <DomainNationalAverage>399</DomainNationalAverage>
-  <DomainSchoolAverage>404</DomainSchoolAverage>
-  <DomainJurisdictionAverage>402</DomainJurisdictionAverage>
-  <DomainTopNational60Percent>416</DomainTopNational60Percent>
-  <DomainBottomNational60Percent>376</DomainBottomNational60Percent>
-</NAPTestScoreSummary>
-`
 var test_NAPTestlet = ` <NAPTestlet RefId="42DE5F3F-DA32-4DA6-8966-4C8FA176E4B4">
   <NAPTestRefId>FBB8A444-1891-4701-B306-F3CED219369C</NAPTestRefId>
   <NAPTestLocalId>NAPLAN-2017-0004-Language Conventions: Grammar and Punctuation</NAPTestLocalId>
@@ -4331,6 +4419,18 @@ var test_NAPTestlet = ` <NAPTestlet RefId="42DE5F3F-DA32-4DA6-8966-4C8FA176E4B4"
 </NAPTestlet>
 
 `
+var test_NAPTestScoreSummary = `<NAPTestScoreSummary RefId="E2721E52-7661-4A51-BF16-B4CAF12DC2F8">
+  <SchoolInfoRefId>A35CE161-BFDB-4460-952B-7F87789A739C</SchoolInfoRefId>
+  <SchoolACARAId>21212</SchoolACARAId>
+  <NAPTestRefId>FBB8A444-1891-4701-B306-F3CED219369C</NAPTestRefId>
+  <NAPTestLocalId>NAPLAN-2017-0004-Language Conventions: Grammar and Punctuation</NAPTestLocalId>
+  <DomainNationalAverage>399</DomainNationalAverage>
+  <DomainSchoolAverage>404</DomainSchoolAverage>
+  <DomainJurisdictionAverage>402</DomainJurisdictionAverage>
+  <DomainTopNational60Percent>416</DomainTopNational60Percent>
+  <DomainBottomNational60Percent>376</DomainBottomNational60Percent>
+</NAPTestScoreSummary>
+`
 var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-493AB3812345">
       <TransactionType>GL payment</TransactionType>
       <InvoiceRefId>CA123458-47DE-A974-63FE-B238759FD123</InvoiceRefId>
@@ -4343,7 +4443,7 @@ var test_PaymentReceipt = `    <PaymentReceipt RefId="EDF4985A-BC34-58FE-DA75-49
     </PaymentReceipt>
     
 `
-var test_example0947 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
+var test_example0115 = `    <PurchaseOrder RefId="ED12345F-DA84-9727-5BC2-8AA349DD3721">
       <FormNumber>00342</FormNumber>
       <VendorInfoRefId>BD12345F-DA84-9727-5BC2-8AA349DD3723</VendorInfoRefId>
       <ChargedLocationInfoRefId>ED12345F-DA84-9727-5BC2-8AA349DD3722</ChargedLocationInfoRefId>

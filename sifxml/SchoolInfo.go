@@ -21,6 +21,9 @@ package sifxml
       CommonwealthId *String `xml:"CommonwealthId,omitempty" json:"CommonwealthId,omitempty"`
       ParentCommonwealthId *String `xml:"ParentCommonwealthId,omitempty" json:"ParentCommonwealthId,omitempty"`
       ACARAId *String `xml:"ACARAId,omitempty" json:"ACARAId,omitempty"`
+      ACECQAServiceId *String `xml:"ACECQAServiceId,omitempty" json:"ACECQAServiceId,omitempty"`
+      ACECQAProviderId *String `xml:"ACECQAProviderId,omitempty" json:"ACECQAProviderId,omitempty"`
+      EarlyChildhoodProviderName *String `xml:"EarlyChildhoodProviderName,omitempty" json:"EarlyChildhoodProviderName,omitempty"`
       OtherIdList *OtherIdListType `xml:"OtherIdList,omitempty" json:"OtherIdList,omitempty"`
       SchoolName *String `xml:"SchoolName" json:"SchoolName"`
       LEAInfoRefId *RefIdType `xml:"LEAInfoRefId,omitempty" json:"LEAInfoRefId,omitempty"`
@@ -29,6 +32,7 @@ package sifxml
       SchoolDistrictLocalId *LocalIdType `xml:"SchoolDistrictLocalId,omitempty" json:"SchoolDistrictLocalId,omitempty"`
       SchoolType *AUCodeSetsSchoolLevelType `xml:"SchoolType,omitempty" json:"SchoolType,omitempty"`
       SchoolFocusList *SchoolFocusListType `xml:"SchoolFocusList,omitempty" json:"SchoolFocusList,omitempty"`
+      EarlyChildhoodProviderType *AUCodeSetsEarlyChildhoodProviderTypeType `xml:"EarlyChildhoodProviderType,omitempty" json:"EarlyChildhoodProviderType,omitempty"`
       SchoolURL *SchoolURLType `xml:"SchoolURL,omitempty" json:"SchoolURL,omitempty"`
       SchoolEmailList *EmailListType `xml:"SchoolEmailList,omitempty" json:"SchoolEmailList,omitempty"`
       PrincipalInfo *PrincipalInfoType `xml:"PrincipalInfo,omitempty" json:"PrincipalInfo,omitempty"`

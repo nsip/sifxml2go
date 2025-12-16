@@ -323,6 +323,25 @@ type Identity_SIF_RefId {
       }
     
 
+    type PersonalisedPlan {
+        RefId: RefIdType 
+      LocalId: LocalIdType OPT 
+      StudentPersonalRefId: String 
+      SchoolInfoRefId: String 
+      PersonalisedPlanCategory: AUCodeSetsPersonalisedPlanType 
+      PersonalisedPlanStartDate: String 
+      PersonalisedPlanEndDate: String OPT 
+      PersonalisedPlanReviewDate: String OPT 
+      PersonalisedPlanNotes: String OPT 
+      DocumentList: WellbeingDocumentListType OPT 
+      AssociatedAttachment: String OPT 
+      LocalCodeList: LocalCodeListType OPT 
+      SIF_Metadata: SIF_MetadataType OPT 
+      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
+      
+      }
+    
+
     type PersonPicture {
         RefId: RefIdType 
       ParentObjectRefId: PersonPicture_ParentObjectRefId 
@@ -354,25 +373,6 @@ type PersonPicture_ParentObjectRefId {
       ConsentToSharingOfData: ConsentToSharingOfDataContainerType 
       PermissionToParticipateList: PermissionToParticipateListType 
       ApplicableLawList: ApplicableLawListType OPT 
-      LocalCodeList: LocalCodeListType OPT 
-      SIF_Metadata: SIF_MetadataType OPT 
-      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
-      
-      }
-    
-
-    type PersonalisedPlan {
-        RefId: RefIdType 
-      LocalId: LocalIdType OPT 
-      StudentPersonalRefId: String 
-      SchoolInfoRefId: String 
-      PersonalisedPlanCategory: AUCodeSetsPersonalisedPlanType 
-      PersonalisedPlanStartDate: String 
-      PersonalisedPlanEndDate: String OPT 
-      PersonalisedPlanReviewDate: String OPT 
-      PersonalisedPlanNotes: String OPT 
-      DocumentList: WellbeingDocumentListType OPT 
-      AssociatedAttachment: String OPT 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
@@ -489,6 +489,9 @@ type ResourceBooking_ResourceRefId {
       CommonwealthId: String OPT 
       ParentCommonwealthId: String OPT 
       ACARAId: String OPT 
+      ACECQAServiceId: String OPT 
+      ACECQAProviderId: String OPT 
+      EarlyChildhoodProviderName: String OPT 
       OtherIdList: OtherIdListType OPT 
       SchoolName: String 
       LEAInfoRefId: RefIdType OPT 
@@ -497,6 +500,7 @@ type ResourceBooking_ResourceRefId {
       SchoolDistrictLocalId: LocalIdType OPT 
       SchoolType: AUCodeSetsSchoolLevelType OPT 
       SchoolFocusList: SchoolFocusListType OPT 
+      EarlyChildhoodProviderType: AUCodeSetsEarlyChildhoodProviderTypeType OPT 
       SchoolURL: SchoolURLType OPT 
       SchoolEmailList: EmailListType OPT 
       PrincipalInfo: PrincipalInfoType OPT 
@@ -1619,6 +1623,19 @@ type Journal_OriginatingTransactionRefId {
       }
     
 
+    type NAPTestlet {
+        RefId: RefIdType 
+      NAPTestRefId: String OPT 
+      NAPTestLocalId: LocalIdType 
+      TestletContent: NAPTestletContentType 
+      TestItemList: NAPTestItemListType 
+      LocalCodeList: LocalCodeListType OPT 
+      SIF_Metadata: SIF_MetadataType OPT 
+      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
+      
+      }
+    
+
     type NAPTestScoreSummary {
         RefId: RefIdType 
       SchoolInfoRefId: String OPT 
@@ -1630,19 +1647,6 @@ type Journal_OriginatingTransactionRefId {
       DomainJurisdictionAverage: float64 OPT 
       DomainTopNational60Percent: float64 OPT 
       DomainBottomNational60Percent: float64 OPT 
-      LocalCodeList: LocalCodeListType OPT 
-      SIF_Metadata: SIF_MetadataType OPT 
-      SIF_ExtendedElements: SIF_ExtendedElementsType OPT 
-      
-      }
-    
-
-    type NAPTestlet {
-        RefId: RefIdType 
-      NAPTestRefId: String OPT 
-      NAPTestLocalId: LocalIdType 
-      TestletContent: NAPTestletContentType 
-      TestItemList: NAPTestItemListType 
       LocalCodeList: LocalCodeListType OPT 
       SIF_Metadata: SIF_MetadataType OPT 
       SIF_ExtendedElements: SIF_ExtendedElementsType OPT 

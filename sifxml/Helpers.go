@@ -33806,6 +33806,35 @@ switch t := value.(type) {
 
 
 // Return string value
+func (t *AUCodeSetsEarlyChildhoodProviderTypeType) String() string {
+  return fmt.Sprint(reflect.ValueOf(*t))
+  }
+
+// Generates a pointer to the given value (unless it already is a pointer), and returns an error in case
+// the value mismatches AUCodeSetsEarlyChildhoodProviderTypeType. In the case of aliased types, accepts primitive values and converts them to the required alias.
+func AUCodeSetsEarlyChildhoodProviderTypeTypePointer(value interface{}) (*AUCodeSetsEarlyChildhoodProviderTypeType, bool) {
+switch t := value.(type) {
+ 	case *AUCodeSetsEarlyChildhoodProviderTypeType:
+ 		return value.(*AUCodeSetsEarlyChildhoodProviderTypeType), true
+        case AUCodeSetsEarlyChildhoodProviderTypeType:
+ 		v, _ := value.(AUCodeSetsEarlyChildhoodProviderTypeType)
+ 		return &v, true
+ 	case *string:
+ 		vstr, _ := value.(*string)
+ 		v := AUCodeSetsEarlyChildhoodProviderTypeType(*vstr)
+ 		return &v, true
+ 	case string:
+ 		vstr, _ := value.(string)
+ 		v := AUCodeSetsEarlyChildhoodProviderTypeType(vstr)
+ 		return &v, true
+ 	default:
+ 		fmt.Printf("Warning: cannot resolve %T (%v) to AUCodeSetsEarlyChildhoodProviderTypeType\n", t, value)
+ 	}
+ 	return nil, false
+  }
+
+
+// Return string value
 func (t *AUCodeSetsEducationAgencyTypeType) String() string {
   return fmt.Sprint(reflect.ValueOf(*t))
   }
@@ -72823,6 +72852,10 @@ func (n *SchoolInfo) Unset(key string) *SchoolInfo {
         switch key {
   case "ACARAId":
    n.schoolinfo.ACARAId = nil
+  case "ACECQAProviderId":
+   n.schoolinfo.ACECQAProviderId = nil
+  case "ACECQAServiceId":
+   n.schoolinfo.ACECQAServiceId = nil
   case "ARIA":
    n.schoolinfo.ARIA = nil
   case "AddressList":
@@ -72833,6 +72866,10 @@ func (n *SchoolInfo) Unset(key string) *SchoolInfo {
    n.schoolinfo.Campus = nil
   case "CommonwealthId":
    n.schoolinfo.CommonwealthId = nil
+  case "EarlyChildhoodProviderName":
+   n.schoolinfo.EarlyChildhoodProviderName = nil
+  case "EarlyChildhoodProviderType":
+   n.schoolinfo.EarlyChildhoodProviderType = nil
   case "Entity_Close":
    n.schoolinfo.Entity_Close = nil
   case "Entity_Open":
@@ -72940,6 +72977,18 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.ACARAId = ((*String)(v))
       }
+    case "ACECQAProviderId":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.schoolinfo.ACECQAProviderId = ((*String)(v))
+      }
+    case "ACECQAServiceId":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.schoolinfo.ACECQAServiceId = ((*String)(v))
+      }
     case "ARIA":
     
     if v, ok:= FloatPointer(value); ok {
@@ -72967,6 +73016,21 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
     
     if v, ok:= StringPointer(value); ok {
       n.schoolinfo.CommonwealthId = ((*String)(v))
+      }
+    case "EarlyChildhoodProviderName":
+    value = fmt.Sprintf("%s", value)
+    
+    if v, ok:= StringPointer(value); ok {
+      n.schoolinfo.EarlyChildhoodProviderName = ((*String)(v))
+      }
+    case "EarlyChildhoodProviderType":
+    value = fmt.Sprintf("%s", value)
+        if !CodesetContains(AUCodeSetsEarlyChildhoodProviderTypeType_map, value) {
+      log.Fatalf("%s is not present in %s\n", value, "AUCodeSetsEarlyChildhoodProviderTypeType_values")
+      }
+
+    if v, ok:= StringPointer(value); ok {
+      n.schoolinfo.EarlyChildhoodProviderType = ((*AUCodeSetsEarlyChildhoodProviderTypeType)(v))
       }
     case "Entity_Close":
     value = fmt.Sprintf("%s", value)
@@ -73236,6 +73300,32 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
     return s.schoolinfo.ACARAId == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SchoolInfo) ACECQAProviderId() *String {
+    if s.schoolinfo.ACECQAProviderId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.schoolinfo.ACECQAProviderId = ((*String)(v))
+      }
+      }
+      return s.schoolinfo.ACECQAProviderId
+    }
+// Returns whether the element value for ACECQAProviderId is nil in the container SchoolInfo.
+  func (s *SchoolInfo) ACECQAProviderId_IsNil() bool {
+    return s.schoolinfo.ACECQAProviderId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SchoolInfo) ACECQAServiceId() *String {
+    if s.schoolinfo.ACECQAServiceId == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.schoolinfo.ACECQAServiceId = ((*String)(v))
+      }
+      }
+      return s.schoolinfo.ACECQAServiceId
+    }
+// Returns whether the element value for ACECQAServiceId is nil in the container SchoolInfo.
+  func (s *SchoolInfo) ACECQAServiceId_IsNil() bool {
+    return s.schoolinfo.ACECQAServiceId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *SchoolInfo) ARIA() *Float {
     if s.schoolinfo.ARIA == nil {
     if v, ok:= FloatPointer(0); ok {
@@ -73299,6 +73389,32 @@ func (n *SchoolInfo) SetProperty(key string, value interface{}) *SchoolInfo {
 // Returns whether the element value for CommonwealthId is nil in the container SchoolInfo.
   func (s *SchoolInfo) CommonwealthId_IsNil() bool {
     return s.schoolinfo.CommonwealthId == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SchoolInfo) EarlyChildhoodProviderName() *String {
+    if s.schoolinfo.EarlyChildhoodProviderName == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.schoolinfo.EarlyChildhoodProviderName = ((*String)(v))
+      }
+      }
+      return s.schoolinfo.EarlyChildhoodProviderName
+    }
+// Returns whether the element value for EarlyChildhoodProviderName is nil in the container SchoolInfo.
+  func (s *SchoolInfo) EarlyChildhoodProviderName_IsNil() bool {
+    return s.schoolinfo.EarlyChildhoodProviderName == nil
+    }
+// Return the element value (as a pointer to the container, list, or primitive representing it).
+  func (s *SchoolInfo) EarlyChildhoodProviderType() *AUCodeSetsEarlyChildhoodProviderTypeType {
+    if s.schoolinfo.EarlyChildhoodProviderType == nil {
+    if v, ok:= StringPointer(""); ok {
+      s.schoolinfo.EarlyChildhoodProviderType = ((*AUCodeSetsEarlyChildhoodProviderTypeType)(v))
+      }
+      }
+      return s.schoolinfo.EarlyChildhoodProviderType
+    }
+// Returns whether the element value for EarlyChildhoodProviderType is nil in the container SchoolInfo.
+  func (s *SchoolInfo) EarlyChildhoodProviderType_IsNil() bool {
+    return s.schoolinfo.EarlyChildhoodProviderType == nil
     }
 // Return the element value (as a pointer to the container, list, or primitive representing it).
   func (s *SchoolInfo) Entity_Close() *String {
